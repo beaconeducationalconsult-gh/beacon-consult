@@ -135,6 +135,32 @@ Notes and known gaps:
 * The bundle's `extra` field is empty for every indicator in every grade, so
   subject-specific callouts render as `n/a`.
 
+### When a dropdown is empty
+
+**No build step, and no Python, is involved in serving this layer.** The 44 files
+in `public/curriculum/` are committed to git and served verbatim by Vite in dev
+and copied into `dist/` by `yarn build`. The generators only re-derive them from
+the NaCCA sources when the *data* changes — never on `yarn dev`.
+
+So an empty **grade** dropdown is impossible (that list is the static `GRADES`
+array in `src/lib/grades.js`), and an empty **subject** dropdown means the fetch
+of `<grade>_subjects.json` failed. `SubjectSelect` now reports that failure on
+screen instead of rendering a silent "Choose…". Check, in order:
+
+1. **Browser console / Network tab** — look for the `/curriculum/…_subjects.json`
+   request. A 404 or a `net::ERR_FAILED` names the cause directly.
+2. **A stale service worker.** The worker caches curriculum JSON
+   stale-while-revalidate, so a copy cached by an older build is served *before*
+   the network answers. Bump `CACHE_VERSION` in `public/sw.js` (or clear site
+   data) to drop it. This only exists in `yarn build && yarn preview`, never dev.
+3. **Serving from a sub-path.** `/curriculum/…` resolves against
+   `import.meta.env.BASE_URL`, so a deploy under `/app/` works — but only if Vite
+   was *built* with that `base`. `vite.config.js` sets no `base`, so a sub-path
+   deploy needs `--base=/app/` (see `docs/build-deploy.md`).
+4. **A stale checkout.** `git status` should show all 44 files present under
+   `public/curriculum/`; a branch that predates the portal rebuild will not have
+   them.
+
 ## The `data/reference/` problem
 
 `scripts/_paths.py` documents `data/reference/` as "a second, partly-divergent copy"

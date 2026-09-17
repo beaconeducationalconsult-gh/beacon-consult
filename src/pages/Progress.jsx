@@ -4,6 +4,7 @@ import { db } from '../firebase'
 import { useAuth } from '../context/AuthContext'
 import { useToast } from '../context/ToastContext'
 import { useCurriculum, useSchedules } from '../hooks/useCurriculum'
+import SubjectSelect from '../components/SubjectSelect'
 import { GRADES, TERMS, gradeLabel } from '../lib/grades'
 import { getAcademicStatus, termWeek } from '../lib/academicCalendar'
 
@@ -20,7 +21,7 @@ export default function Progress() {
   const [term, setTerm] = useState(1)
   const [weeks, setWeeks] = useState([])
   const [loading, setLoading] = useState(true)
-  const { subjects } = useCurriculum(grade)
+  const { subjects, loading: loadingSubjects, error: subjectsError } = useCurriculum(grade)
   const { lessons } = useSchedules(grade)
 
   const key = `${grade}|${subjectId}|T${term}`
@@ -73,10 +74,16 @@ export default function Progress() {
         </div>
         <div>
           <label className="label-caps" htmlFor="p-subject">Subject</label>
-          <select id="p-subject" className="input" value={subjectId} onChange={(e) => setSubjectId(e.target.value)}>
-            <option value="">Choose…</option>
-            {subjects.map((s) => <option key={s.id} value={s.id}>{s.name}</option>)}
-          </select>
+          <SubjectSelect
+            id="p-subject"
+            className="input"
+            grade={grade}
+            subjects={subjects}
+            loading={loadingSubjects}
+            error={subjectsError}
+            value={subjectId}
+            onChange={(e) => setSubjectId(e.target.value)}
+          />
         </div>
         <div>
           <label className="label-caps" htmlFor="p-term">Term</label>

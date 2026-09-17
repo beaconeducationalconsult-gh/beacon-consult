@@ -11,6 +11,17 @@ import { useEffect, useState } from 'react'
 const cache = new Map()
 const scheduleCache = new Map()
 
+/*
+ * Resolve against the deploy base, not the domain root. Vite serves `public/`
+ * at `BASE_URL` (always trailing-slashed: '/' at the root, '/app/' under a
+ * sub-path such as a GitHub Pages project site or a reverse proxy). Hard-coding
+ * '/curriculum/…' silently 404s anywhere but the root, and every dropdown fed
+ * from it then renders empty — see src/components/SubjectSelect.jsx.
+ */
+const BASE_URL = import.meta.env.BASE_URL || '/'
+
+const curriculumFile = (name) => `${BASE_URL}curriculum/${name}`
+
 function loadJson(path, store) {
   if (store.has(path)) return store.get(path)
   const promise = fetch(path).then((res) => {
@@ -23,7 +34,7 @@ function loadJson(path, store) {
   return promise
 }
 
-const gradeFile = (grade, kind) => `/curriculum/${String(grade).toLowerCase()}_${kind}.json`
+const gradeFile = (grade, kind) => curriculumFile(`${String(grade).toLowerCase()}_${kind}.json`)
 
 export function useGrades() {
   const [state, setState] = useState({ loading: true, grades: [], error: null })
@@ -32,7 +43,7 @@ export function useGrades() {
     let active = true
     // Only the async callback touches state — no synchronous setState in the
     // effect body (react-hooks/set-state-in-effect).
-    loadJson('/curriculum/grades.json', cache)
+    loadJson(curriculumFile('grades.json'), cache)
       .then((grades) => active && setState({ loading: false, grades, error: null }))
       .catch((error) => active && setState({ loading: false, grades: [], error }))
     return () => {

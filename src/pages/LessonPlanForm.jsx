@@ -5,6 +5,7 @@ import { db } from '../firebase'
 import { useAuth } from '../context/AuthContext'
 import { useToast } from '../context/ToastContext'
 import { useCurriculum, useSchedules } from '../hooks/useCurriculum'
+import SubjectSelect from '../components/SubjectSelect'
 import { GRADES, TERMS, gradeLabel } from '../lib/grades'
 import Stepper from '../components/Stepper'
 import IndicatorPicker from '../components/IndicatorPicker'
@@ -83,7 +84,7 @@ export default function LessonPlanForm() {
   const [saving, setSaving] = useState(false)
   const [prefilling, setPrefilling] = useState(false)
 
-  const { subjects, indicators } = useCurriculum(form.grade)
+  const { subjects, indicators, loading: loadingSubjects, error: subjectsError } = useCurriculum(form.grade)
   const { lessons } = useSchedules(form.grade)
 
   // Deep link from the curriculum browser: ?indicator=B1.1.1.1.1&grade=B5
@@ -209,10 +210,16 @@ export default function LessonPlanForm() {
             </div>
             <div>
               <label className="label-caps" htmlFor="subject">Subject</label>
-              <select id="subject" className="input" value={form.subjectId} onChange={(e) => setForm({ ...form, subjectId: e.target.value, indicatorIds: [] })}>
-                <option value="">Choose…</option>
-                {subjects.map((s) => <option key={s.id} value={s.id}>{s.name}</option>)}
-              </select>
+              <SubjectSelect
+                id="subject"
+                className="input"
+                grade={form.grade}
+                subjects={subjects}
+                loading={loadingSubjects}
+                error={subjectsError}
+                value={form.subjectId}
+                onChange={(e) => setForm({ ...form, subjectId: e.target.value, indicatorIds: [] })}
+              />
             </div>
             <div>
               <label className="label-caps" htmlFor="term">Term</label>

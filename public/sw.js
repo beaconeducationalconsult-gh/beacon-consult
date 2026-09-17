@@ -5,10 +5,19 @@
  * behaviour with `yarn build && yarn preview`, never `yarn dev`.
  *
  * Bump CACHE_VERSION whenever the curriculum, quotes, or shell change and you
- * want existing installs to pick the new copies up immediately.
+ * want existing installs to pick the new copies up immediately. Bumping also
+ * drops every older cache on activate, which is the cure when a stale copy of
+ * the curriculum JSON is being served from an earlier build.
  */
-const CACHE_VERSION = 'beacon-v1'
-const SHELL = ['/', '/index.html', '/manifest.webmanifest', '/favicon.svg']
+const CACHE_VERSION = 'beacon-v2'
+
+// Resolve the shell against the deploy base, not the domain root, so this
+// worker also works when the app is served from a sub-path. `self.location` is
+// the worker's own URL, so './' is the base the app was built with —
+// the same value as import.meta.env.BASE_URL in src/hooks/useCurriculum.js.
+const BASE = new URL('./', self.location).pathname
+const SHELL_INDEX = `${BASE}index.html`
+const SHELL = [BASE, SHELL_INDEX, `${BASE}manifest.webmanifest`, `${BASE}favicon.svg`]
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
@@ -39,10 +48,10 @@ self.addEventListener('fetch', (event) => {
       fetch(request)
         .then((response) => {
           const copy = response.clone()
-          caches.open(CACHE_VERSION).then((c) => c.put('/index.html', copy))
+          caches.open(CACHE_VERSION).then((c) => c.put(SHELL_INDEX, copy))
           return response
         })
-        .catch(() => caches.match('/index.html'))
+        .catch(() => caches.match(SHELL_INDEX))
     )
     return
   }

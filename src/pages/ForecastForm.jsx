@@ -5,6 +5,7 @@ import { db } from '../firebase'
 import { useAuth } from '../context/AuthContext'
 import { useToast } from '../context/ToastContext'
 import { useCurriculum, useSchedules } from '../hooks/useCurriculum'
+import SubjectSelect from '../components/SubjectSelect'
 import { GRADES, TERMS, gradeLabel } from '../lib/grades'
 import Stepper from '../components/Stepper'
 
@@ -28,7 +29,7 @@ export default function ForecastForm() {
   const [notes, setNotes] = useState('')
   const [saving, setSaving] = useState(false)
 
-  const { subjects } = useCurriculum(grade)
+  const { subjects, loading: loadingSubjects, error: subjectsError } = useCurriculum(grade)
   const { lessons, loading: loadingSchedule } = useSchedules(grade)
 
   // Editing: load the stored scheme instead of the template.
@@ -150,10 +151,16 @@ export default function ForecastForm() {
             </div>
             <div>
               <label className="label-caps" htmlFor="subject">Subject</label>
-              <select id="subject" className="input" value={subjectId} onChange={(e) => setSubjectId(e.target.value)}>
-                <option value="">Choose…</option>
-                {subjects.map((s) => <option key={s.id} value={s.id}>{s.name}</option>)}
-              </select>
+              <SubjectSelect
+                id="subject"
+                className="input"
+                grade={grade}
+                subjects={subjects}
+                loading={loadingSubjects}
+                error={subjectsError}
+                value={subjectId}
+                onChange={(e) => setSubjectId(e.target.value)}
+              />
             </div>
             <div>
               <label className="label-caps" htmlFor="term">Term</label>

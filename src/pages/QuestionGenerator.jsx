@@ -5,6 +5,7 @@ import { db } from '../firebase'
 import { useAuth } from '../context/AuthContext'
 import { useToast } from '../context/ToastContext'
 import { useCurriculum, useSchedules } from '../hooks/useCurriculum'
+import SubjectSelect from '../components/SubjectSelect'
 import { GRADES, gradeLabel } from '../lib/grades'
 import { isoWeekKey } from '../lib/week'
 import IndicatorPicker from '../components/IndicatorPicker'
@@ -44,7 +45,7 @@ export default function QuestionGenerator() {
   const [indicatorIds, setIndicatorIds] = useState([])
   const [drafts, setDrafts] = useState([])
   const [saving, setSaving] = useState(false)
-  const { subjects } = useCurriculum(grade)
+  const { subjects, loading: loadingSubjects, error: subjectsError } = useCurriculum(grade)
   const { lessons } = useSchedules(grade)
 
   const generate = () => {
@@ -119,10 +120,16 @@ export default function QuestionGenerator() {
           </div>
           <div>
             <label className="label-caps" htmlFor="g-subject">Subject</label>
-            <select id="g-subject" className="input" value={subjectId} onChange={(e) => { setSubjectId(e.target.value); setIndicatorIds([]) }}>
-              <option value="">Choose…</option>
-              {subjects.map((s) => <option key={s.id} value={s.id}>{s.name}</option>)}
-            </select>
+            <SubjectSelect
+              id="g-subject"
+              className="input"
+              grade={grade}
+              subjects={subjects}
+              loading={loadingSubjects}
+              error={subjectsError}
+              value={subjectId}
+              onChange={(e) => { setSubjectId(e.target.value); setIndicatorIds([]) }}
+            />
           </div>
           <div>
             <label className="label-caps" htmlFor="g-type">Question type</label>

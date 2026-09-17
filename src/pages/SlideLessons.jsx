@@ -6,6 +6,7 @@ import { useAuth } from '../context/AuthContext'
 import { useToast } from '../context/ToastContext'
 import { useCollection } from '../hooks/useCollection'
 import { useCurriculum, useSchedules } from '../hooks/useCurriculum'
+import SubjectSelect from '../components/SubjectSelect'
 import { GRADES, TERMS, gradeLabel } from '../lib/grades'
 import { downloadLessonSlidesPptx } from '../lib/lessonSlidesPptx'
 import { SkeletonList } from '../components/Skeleton'
@@ -20,7 +21,7 @@ export default function SlideLessons() {
   const [term, setTerm] = useState(1)
   const [week, setWeek] = useState(1)
   const [busy, setBusy] = useState(false)
-  const { subjects } = useCurriculum(grade)
+  const { subjects, loading: loadingSubjects, error: subjectsError } = useCurriculum(grade)
   const { lessons } = useSchedules(grade)
   const { rows: decks, loading } = useCollection('lesson_slides', { max: 40 })
 
@@ -117,10 +118,16 @@ export default function SlideLessons() {
           </div>
           <div>
             <label className="label-caps" htmlFor="s-subject">Subject</label>
-            <select id="s-subject" className="input" value={subjectId} onChange={(e) => setSubjectId(e.target.value)}>
-              <option value="">Choose…</option>
-              {subjects.map((s) => <option key={s.id} value={s.id}>{s.name}</option>)}
-            </select>
+            <SubjectSelect
+              id="s-subject"
+              className="input"
+              grade={grade}
+              subjects={subjects}
+              loading={loadingSubjects}
+              error={subjectsError}
+              value={subjectId}
+              onChange={(e) => setSubjectId(e.target.value)}
+            />
           </div>
           <div>
             <label className="label-caps" htmlFor="s-term">Term</label>
