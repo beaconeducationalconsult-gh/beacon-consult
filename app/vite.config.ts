@@ -26,8 +26,8 @@ export default defineConfig({
         ],
       },
       manifest: {
-        name: 'NCOS — Beacon Teaching Materials',
-        short_name: 'NCOS',
+        name: 'Beacon Consult — Teaching Materials',
+        short_name: 'Beacon',
         theme_color: '#1e40af',
         icons: [
           { src: '/icon-192.png', sizes: '192x192', type: 'image/png' },

@@ -8,7 +8,7 @@ export function Navbar() {
   return (
     <nav className="bg-[#1B4332] text-[#F1E9D8] px-4 py-3 flex items-center justify-between">
       <Link to="/" className="font-display font-bold text-lg">
-        NCOS
+        Beacon Consult
       </Link>
       <div className="flex items-center gap-4">
         <Link to="/curriculum" className="text-sm hover:text-[#C89B3C]">Curriculum</Link>
