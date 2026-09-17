@@ -1,0 +1,22 @@
+{
+  "grade": "B4",
+  "subject": "math",
+  "indicators": [
+    {
+      "code": "B4.1.1.1",
+      "strand": "Number",
+      "sub_strand": "Number and Numeration",
+      "content_standard": "Demonstrate understanding of place value up to 10,000",
+      "text": "Read and write numbers up to 10,000 in figures and words",
+      "extra": {"sub_skill": "place_value"}
+    },
+    {
+      "code": "B4.1.2.1",
+      "strand": "Number",
+      "sub_strand": "Fractions",
+      "content_standard": "Demonstrate understanding of simple fractions",
+      "text": "Identify and represent fractions with denominators 2, 3, 4, 5, 10",
+      "extra": {"sub_skill": "fractions"}
+    }
+  ]
+}

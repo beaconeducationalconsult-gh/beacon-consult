@@ -1,0 +1,19 @@
+[
+  {
+    "indicatorCode": "B4.1.1.1.1",
+    "questions": [
+      {
+        "prompt": "What is the place value of 5 in 5,432?",
+        "options": ["Ones", "Tens", "Hundreds", "Thousands"],
+        "answer": "Thousands",
+        "difficulty": "core"
+      },
+      {
+        "prompt": "Write five thousand four hundred and thirty two in figures.",
+        "options": null,
+        "answer": "5,432",
+        "difficulty": "reinforcement"
+      }
+    ]
+  }
+]

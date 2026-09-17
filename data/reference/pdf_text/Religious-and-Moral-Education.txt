@@ -1,0 +1,5350 @@
+NATIONAL COUNCIL FOR
+CURRICULUM & ASSESSMENT
+(MINISTRY OF EDUCATION)
+
+RELIGIOUS AND MORAL EDUCATION
+COMMON CORE PROGRAMME (CCP)
+CURRICULUM FOR JHS1 (B7) - JHS3 (B9)
+SEPTEMBER, 2020
+
+MINISTRY OF EDUCATION
+REPUBLIC OF GHANA
+
+Religious and Moral Education Curriculum for B7- B9
+Enquiries and comments on this Curriculum should be addressed to:
+The Director-General
+National Council for Curriculum and Assessment (NaCCA)
+Ministry of Education
+P. O. Box CT PMB 77Cantonments Accra
+Telephone: 0302909071, 0302909862
+Email: info@nacca.gov.gh
+Website: www.nacca.gov.gh
+
+©2020 National Council for Curriculum and Assessment (NaCCA)
+This publication is not for sale. All rights reserved. No part of this
+publication may be reproduced without prior written permission
+from the Ministry of Education, Ghana.
+Ministry of EducationGhana
+
+© NaCCA, Ministry of Education 2021
+
+i
+
+FOREWORD
+The Ministry of Education, acting through the National Council for Curriculum and Assessment (NaCCA) has, in recent times, been working on curriculum and
+assessment reforms to improve the quality and relevance of learning experiences in pre-tertiary schools in Ghana. This curriculum, known as theCommon Core
+Programme (CCP), is a sequel to the Kindergarten-Primary standards-based school curriculum, the implementation of which commencedwith the 2019/2020 academic
+year. The CCP is carefully designed for learnersin Basic 7 to Basic 9 (JHS 1 – JHS 3) as part of a holistic learning experiencethat prepares them for post-secondary
+education, the world of work or both.The curriculum focuses on building character and nurturing values, in additionto ensuring a seamless progression for all learners
+from JHS1 to JHS3 and creates clear pathways for academic and career-related programmes from Basic10 - 12 (SHS1 – SHS3).
+In the twenty-first century, memorisation of facts and figures is no longer a sufficient learner attribute. Therefore, the CCP focuses on the acquisition ofthe 4Rs
+(Reading, wRiting, aRithmetic and cReativity) and core competenciesto afford learners the ability to apply knowledge innovatively to solve everydayproblems. Personal
+projects, community projects and community service have been integrated into the CCP as part of a comprehensive assessment programme, including assessment
+of knowledge, skills, attitudes and values that mainly emphasise what learners can do. It is hoped that the contentof this curriculum will promote better high
+school education that meetsthe varied learning needs of the young people in the country and addresses the shortfalls in the current school curriculum in relation
+to learning and assessment.
+The Ministry of Education is committed to ensuring that our schools develop globally competitive high school graduates who have the requisite
+employable skills and workplace ethos. The CCP curriculum will, therefore, play an important role in this regard. The Ministry will support the
+effective implementation of the CCP to include capacity development of all teachers toensure improved learning experiences and outcomes for our
+young people.
+
+Dr Matthew Opoku Prempeh (MP)
+The Honourable Minister of Education
+
+© NaCCA, Ministry of Education 2021
+
+ii
+
+ACKNOWLEDGEMENTS
+This Common Core Programme (CCP) curriculum was developed togetherwith the National Pre-Tertiary Learning Assessment Framework (NPLAF) andTeacher’s
+and Learner’s Resource Packs. All these documents were developedby the National Council for Curriculum and Assessment (NaCCA), under the oversight and
+strategic direction of the Ministry of Education (MoE) withsupport from some agencies of the MoE and other relevant stakeholders.
+NaCCA, acting on behalf of the Ministry of Education (MoE), would liketo express its sincere gratitude to all its partners who participated inthe professional
+conversations and discussions during the course of the development of the CCP curriculum.
+NaCCA also extends special commendations to the leadership of the GhanaEducation Service (GES), National School Inspectorate Authority (NaSIA), National
+Teaching Council (NTC), Commission for Technical and Vocational Education and Training (Commission for TVET) and other agencies of the MoE.
+Additionally, NaCCA acknowledges the contributions of staff from various Universities and Colleges of Education as well as teachers and learners withinthe Ghana
+Education Service.
+Special thanks go to those who also contributed to shaping this curriculum content through the consultation process, including the national stakeholderengagement
+conducted in Accra in February, 2020.
+
+© NaCCA, Ministry of Education 2021
+
+iii
+
+Contents
+FOREWORD ...............................................................................................................................................................................................................................................................................iii
+ACKNOWLEDGEMENTS...........................................................................................................................................................................................................................................................iii
+INTRODUCTION........................................................................................................................................................................................................................................................................vii
+RATIONALE
+
+............................................................................................................................................................................................................................................................................... x
+
+PHILOSOPHY .............................................................................................................................................................................................................................................................................. xi
+AIMS ............................................................................................................................................................................................................................................................................................... xii
+PROFILE OF EXPECTED LEARNINGBEHAVIOURS ........................................................................................................................................................................................................ xiii
+ASSESSMENT ........................................................................................................................................................................................................................................................................... xvii
+CREATIVE PEDAGOGICAL APPROACHES ......................................................................................................................................................................................................................... xxi
+CORE COMPETENCIES .......................................................................................................................................................................................................................................................... xxv
+INSTRUCTIONAL EXPECTATIONS ................................................................................................................................................................................................................................. xxvii
+ORGANISATION OF THE CURRICULUM ..................................................................................................................................................................................................................... xxviii
+SCOPE AND SEQUENCE ....................................................................................................................................................................................................................................................... xxx
+BASIC 7
+
+....................................................................................................................................................................................................................................................................................... 1
+
+STRAND 1: GOD, HIS CREATION AND ATTRIBUTES ............................................................................................................................................ 2
+SUB-STRAND 1: GOD, HIS NATURE AND ATTRIBUTES ......................................................................................................................................................................................... 2
+© NaCCA, Ministry of Education 2021
+
+iv
+
+STRAND 2: RELIGIOUS PRACTICES ........................................................................................................................................................................... 4
+SUB-STRAND 1: WORSHIP................................................................................................................................................................................................................................................ 4
+SUB-STRAND 2: RELIGIOUS SONGS AND RECITATIONS...................................................................................................................................................................................... 8
+STRAND 3: THE FAMILY AND THE COMMUNITY.................................................................................................................................................. 10
+SUB-STRAND 1: FAMILY SYSTEMS ................................................................................................................................................................................................................................ 10
+STRAND 4: RELIGIOUS LEADERS AND PERSONALITIES ..................................................................................................................................... 13
+SUB-STRAND 1: RELIGIOUS LEADERS ......................................................................................................................................................................................................................... 13
+STRAND 5: ETHICS AND MORAL LIFE ..................................................................................................................................................................... 15
+SUB-STRAND 1: MANNERS AND DECENCY ............................................................................................................................................................................................................. 15
+SUB-STRAND 2: SUBSTANCE ABUSE ............................................................................................................................................................................................................................. 18
+STRAND 6: RELIGION AND ECONOMIC LIFE ......................................................................................................................................................... 21
+SUB-STRAND 1: WORK, ENTREPRENEURSHIP AND SOCIAL SECURITY....................................................................................................................................................... 21
+BASIC 8
+
+..................................................................................................................................................................................................................................................................................... 26
+
+STRAND 1: GOD, HIS CREATION AND ATTRIBUTES ............................................................................................................................................ 26
+SUB-STRAND 1: THE CREATION STORIES OF THE THREE MAJOR RELIGIONS IN GHANA .................................................................................................................. 26
+STRAND 2: RELIGIOUS PRACTICES ......................................................................................................................................................................... 28
+SUB-STRAND 1: RITES OF PASSAGE ............................................................................................................................................................................................................................. 28
+STRAND 3: THE FAMILY AND THE COMMUNITY.................................................................................................................................................. 36
+SUB-STRAND 1: AUTHORITY AND OBEDIENCE..................................................................................................................................................................................................... 36
+STRAND 4: RELIGIOUS LEADERS AND PERSONALITIES ..................................................................................................................................... 39
+SUB-STRAND 1: PROPHETS AND CALIPHS................................................................................................................................................................................................................... 39
+STRAND 5: ETHICS AND MORAL LIFE ..................................................................................................................................................................... 42
+© NaCCA, Ministry of Education 2021
+
+v
+
+SUB-STRAND 1: MORAL TEACHINGS IN THE THREE MAJOR RELIGIONS IN GHANA.............................................................................................................................. 42
+STRAND 6: RELIGION AND ECONOMIC LIFE ......................................................................................................................................................... 45
+SUB-STRAND 1: MONEY .................................................................................................................................................................................................................................................... 45
+BASIC 9
+
+..................................................................................................................................................................................................................................................................................... 55
+
+STRAND 1: GOD, HIS CREATION AND ATTRIBUTES ............................................................................................................................................ 54
+SUB-STRAND 1: THE PURPOSE AND USEFULNESS OF GOD’S CREATION .................................................................................................................................................. 54
+SUB-STRAND 2: THE ENVIRONMENT ........................................................................................................................................................................................................................ 56
+Strand 2: RELIGIOUS PRACTICES .............................................................................................................................................................................. 60
+SUB-STRAND 1: RELIGIOUS FESTIVALS ........................................................................................................................................................................................................................ 60
+STRAND 3: THE FAMILY AND THE COMMUNITY.................................................................................................................................................. 63
+SUB-STRAND 1: RELIGION AND SOCIAL COHESION............................................................................................................................................................................................ 63
+STRAND 4: RELIGIOUS LEADERS AND PERSONALITIES ..................................................................................................................................... 66
+SUB-STRAND 1: WOMEN IN RELIGION AND LEADERSHIP POSITIONS ....................................................................................................................................................... 66
+STRAND 5: ETHICS AND MORAL LIFE ..................................................................................................................................................................... 69
+SUB-STRAND 1: REWARD, PUNISHMENT AND REPENTANCE ......................................................................................................................................................................... 69
+
+© NaCCA, Ministry of Education 2021
+
+vi
+
+INTRODUCTION
+In the f irst t h r e e years of high school education, learners are expected totake a Common Core Programme (CCP) that emphasises a set of high, internationallybenchmarked career and tertiary education readiness standards. Learners need to acquire these for post-secondary education, theworkplace or both. The standards
+articulate what learners are expected to know, understand and be able to do by focusing on their social, emotional, cognitive and physical development. The CCP
+runs from Basic 7 through Basic9.
+The common core attributes of the learner, which describe the essential outcomes in the three domains of learning (i.e. cognitive, psychomotor and affective), are
+at the centre of the CCP (see Figure 1). Inspired by the values which are important to the Ghanaian society, the CCP provides an educationof the heart, mind and
+hands in relation to the learner’s lifetime values, well-being, physical development, metacognition and problem-solving abilities. Ultimately, this will produce characterminded learners who can play active roles in dealing with the increasing challenges facing Ghana and the global society. The features that shape the common core
+programme are shown in Figure 1.
+These are:
+•
+
+learning and teaching approaches – the core competencies, 4Rs and pedagogical approaches
+
+•
+
+learning context – engagement service and projects
+
+•
+
+learning areas – mathematics, science, computing, languages (English, Ghanaian Languages, French and Arabic), career technology, social studies, physical and
+health education, creative arts and design and religious and moral education.
+
+© NaCCA, Ministry of Education 2021
+
+vii
+
+Figure 1: Common Core Learner Attributes
+
+Learning and Teaching Approaches
+•
+
+The core competencies: Describe the relevant global skills for learningthat the CCP helps learners to develop in addition to the 4Rs.The
+global skills for learning allow learners to become critical thinkers, problem- solvers, creators, innovators, good communicators,
+collaborators, digitally literate, and culturally and globally sensitive citizens who are life-long learners with a keen interest in their personal
+development.
+
+•
+
+Pedagogical approaches: The CCP emphasises creative and inclusive pedagogies that are anchored on authentic and enquiry-based learning,
+collaborative and cooperative learning, differentiated learning, and holistic learning as well as cross disciplinary learning.
+
+•
+
+The 4Rs across the Curriculum: The 4Rs refer to Reading, wRiting, aRithmetic and cReativity, which all learners must become fluent in.
+
+© NaCCA, Ministry of Education 2021
+
+viii
+
+Learning Context
+The CCP places emphasis on engagement of learners in the classroom activities, projects (in and outside classroom). These projects can involve individual or
+group tasks which all learners are required to complete bythe end of Basic 9. The CCP project provides learners with contexts to demonstrate creativity
+and inventiveness in various areas of human endeavour.Community service offers opportunity for learners to nurture, love, care for,and solve problems in their
+community.
+
+Learning Areas
+The CCP comprises the following learning areas:
+1. Languages (English Language, Ghanaian Languages, French, Arabic)
+2. Mathematics
+3. Science
+4. Creative Arts and Design (CAD)
+5. Career Technology
+6. Social Studies
+7. Computing
+8. Religious and Moral Education (RME)
+9. Physical and Health Education (PHE)
+This document sets out the standards for learning RME in the Common Core Programme (CCP). The standards in the document are posited in the expectation
+that the CCP (B7 – B9) will offer quality education for all typesof learners. The design of this curriculum is based on the features of the CCPas shown in Figure
+1.
+It emphasises a set of high internationally-benchmarked career and tertiary education readiness standards. Learners need to acquire these competenciesin RME
+for post-secondary education, workplace training or both. The curriculum has been designed to be user friendly because it provides a detailed preamble that
+covers the rationale, philosophy, aims, profile of expected learning behaviours (i.e. knowledge, skills, attitudes and values), pedagogical approaches, core
+competencies and the 4Rs, assessment practices and instructional expectations.
+
+© NaCCA, Ministry of Education 2021
+
+ix
+
+RATIONALE
+The issue of morality and religion has engaged human attention over the centuries. This is because of their effects on the co-existence of human beings with one
+another and the world they live in and ideas concerning their relationship with forces beyond the known world. Religious and Moral Education is a vital and
+indispensable part of human growth and developmentin the Ghanaian society. The subject reinforces the informal religious and moral training young people acquire
+from their homes and communities.
+The nation is confronted with major moral issues including corruption,poor attitude to the environment and blanket imbibing of foreign values andcultures.
+Education must make learners aware of the dangers these pose to themselves as individuals and the nation as a whole and help them acquire values and attitudes
+that would address these challenges.
+Many homes and communities may be unable to provide this type of trainingadequately due to demands of the modern environment. It has therefore become
+necessary for the school to provide education to help learners become morally responsible and patriotic citizens. The changes in the way oflife as a result of
+education, population growth, and contacts with the outsideworld, have introduced both positive and negative influences, affecting the moral fabric of the society.
+
+© NaCCA, Ministry of Education 2021
+
+x
+
+PHILOSOPHY
+The learning and teaching of Religious and Moral Education reflect the beliefthat irrespective of the diverse needs of learners in Ghana’s classrooms,
+eachcan be nurtured into an honest, creative and responsible citizen.
+
+Teaching Philosophy
+The teaching of Religious and Moral Education (RME) should be learner- centred rather than teacher-centred. There is a Chinese proverb that states “I hear, and I
+forget; I see, and I remember; and I do, and I understand.” This is interpreted to mean that when learners are fully involved in teaching and learning processes, they
+tend to develop great interest and subsequently contribute actively to lessons. In the same vein, it is expected that the teachingand learning of Religious and Moral
+Education would be participatory, and notbe turned into preaching sessions. Learners would become passive learners when RME teachers attempt to impart every
+information solely by themselves,and this may not encourage effective teaching and learning.
+Teaching resources play key roles in teaching and learning processes. Withoutthem, learners are likely to find it difficult to understand various themes andconcepts
+(topics/strands/sub-strands) they study. Teaching resources suchas charts, real objects and drawings help to make lessons interesting and practical. The RME teacher
+should therefore be resourceful and be able to find the relevant teaching materials that may be needed for the lessons. It willbe highly essential for teachers to use
+audio-visual resources in their lessonsfor learners to acquire the needed knowledge, values, attitudes and skills. Learners will also acquire some language skills and
+other core competenciesfrom the topics they study and this will facilitate their learning of RME and other subjects in the school curriculum. In addition, the teacher
+is expected to relate the various topics to practical situations in their daily lives.
+Teaching RME demands cultural and religious sensitivity. For example, teachersmust be sensitive to the use of images to depict stories in Islam. For example,teachers
+must consistently be aware of the need to avoid depicting Allah or the Prophet Muhammad (SAW) visually.
+
+Learning Philosophy
+The best way of learning Religious and Moral Education is through practical activities like demonstrations, role plays, recitals, games, group work and visitingimportant
+religious and historic sites. There should be more demonstrationsthroughout the lessons. Learners can get a clearer picture of lessons and store facts in their
+memory and practice when they are encouraged to take active part in the lessons that involve demonstrations and other practical activities.
+In educational principles, the learner’s generic skills are fully developedonly when enough demonstrations and activities are undertaken. Some of them have the
+ability to dance, sing, draw, dramatise or make models; and allthese potentials are to be developed through the teacher’s assistance and resourcefulness. Games
+arouse the interest of learners to take active part inlessons. They may include chain games whereby a learner may ask another learner a question and continue in the
+same order throughout the class. Theteacher is at liberty to introduce appropriate games in the lesson.
+Learners are to be encouraged to work in groups, carry out some of the functions of the teacher, and act as leaders of groups. The teacher should guide learners
+working in groups so that there is a balance between teacher-centred lessons, and the lesson which gets out of hand because of lack of control.
+The rationale of this philosophy is to inculcate in learners the spirit of teamwork, consensus building and tolerance in order to ensure peace and unity.
+© NaCCA, Ministry of Education 2021
+
+xi
+
+AIMS
+General Aims
+The curriculum is aimed at developing individuals who are literate, effective problem solvers, have the ability to think creatively and have both the
+confidence and competence to participate fully in the Ghanaian society as responsible local and global citizens.
+
+Specific Aims
+The aims of teaching and learning Religious and Moral Education are to encourage and enable learners to:
+•
+
+develop an awareness of their Creator and the purpose of their very existence;
+
+•
+
+develop an understanding and tolerance of other people’s faiths and cultures;
+
+•
+
+draw the difference between acceptable and unacceptable behaviours so that they can make the right decisions in any situation and thus become
+responsible citizens;
+
+•
+
+acquire the socio-cultural values inherent in the three major religions in Ghana (i.e. Christianity, Islam and Indigenous African Religion) which
+will help them cope with the variety of moral choices they have to make in today’s rapidly changing world;
+
+•
+
+develop the spirit of teamwork, collaboration and togetherness in nation-building; and
+
+•
+
+increasingly develop the ability to respond to religious beliefs and practices in an informed, rational and responsible way.
+
+•
+
+Instil in learners the ability to challenge stereotypes about gender, disability, religion, ethnicity, among others that limit learners socio-cultural
+development.
+
+© NaCCA, Ministry of Education 2021
+
+xii
+
+PROFILE OF EXPECTED LEARNINGBEHAVIOURS
+A central aspect of this curriculum is the concept of three integral learning domains that should be the basis for instruction and assessment. These are:
+•
+
+Knowledge, Understanding and Application
+
+•
+
+Process Skills
+
+•
+
+Attitudes and Values
+
+Knowledge, Understanding and Application
+Under this domain, learners may acquire some knowledge through learning experiences. They may also show understanding of concepts by comparing, summarising,
+re-writing etc. in their own words and constructing meaning from instruction. The learner may also apply the knowledge acquired in somenew contexts. At a higher
+level of learning behaviour, the learner may be required to analyse an issue or a problem.
+At a much higher level, the learner may be required to synthesise knowledgeby integrating a number of ideas to formulate a plan, solve a problem, composea story, or
+a piece of music. Further, the learners may be required to evaluate,estimate and interpret a concept. At the last level, which is the highest, learners may be required
+to create, invent, compose, design and construct. These learning behaviours “knowing”, “understanding”, “applying”, “analysing”,“synthesising”, “evaluating” and
+“creating” fall under the domain “Knowledge,Understanding and Application”.
+In this curriculum, learning indicators are stated with action verbs to show what the learner should know and be able to do. For example, the learner will be able
+to describe something. Being able to “describe” something afterteaching and learning has been completed means that the learner has acquired“knowledge”. Being able
+to explain, summarise, and give examples etc. meansthat the learner has understood the concept taught.
+Similarly, being able to develop, defend, etc. means that the learner can “apply”the knowledge acquired in some new context. It should be noted that
+each ofthe indicators in the curriculum contains an “action word” that describes thebehaviour the learner will be able to demonstrate after teaching
+and learninghas taken place. “Knowledge, Understanding and Application” is a domain thatshould be the prime focus of teaching and learning in schools.
+Teaching in most cases has tended to stress knowledge acquisition to the detriment of other higher-level behaviours such as applying knowledge.
+Each action word in any indicator outlines the underlying expected outcome.Each indicator must be read carefully to know the learning domain
+towards teaching happens. The focus is to move teaching and learning from the didacticacquisition of “knowledge” where there is fact memorisation,
+heavy relianceon formulae, remembering facts without critiquing them or relating them to the real world – surface learning – to a new position called
+– deep learning. Learners are expected to deepen their learning by knowledge applicationto develop critical thinking skills, explain reasoning, and
+to generate creative ideas to solve real life problems in their school lives and later in their adult lives. This is the position where learning becomes
+beneficial to the learner.
+The keywords and the explanations involved in the “Knowledge, Understanding and Application” domain are as follows:
+© NaCCA, Ministry of Education 2021
+
+xiii
+
+Knowing: The ability to remember, recall, identify, define, describe, list, name,match, state principles, facts, concepts. Knowledge is the ability to
+rememberor recall material already learned and this constitutes the lowest level of learning.
+Understanding: The ability to explain, summarise, translate, rewrite, paraphrase, give examples, generalise, estimate or predict consequences based
+upon a trend. Understanding is generally the ability to grasp the meaning of some material that may be verbal, pictorial, or symbolic.
+Applying: This dimension is also referred to as “Use of Knowledge” andit is the ability to use knowledge or apply knowledge, apply rules, methods
+principles, theories, etc. to situations that are new and unfamiliar. It also involves the ability to produce, solve, plan, demonstrate, discover, etc.
+Analysis: The ability to break down material/information into its componentparts; to differentiate, compare, distinguish, outline, separate, identify significantpoints etc.,
+ability to recognise unstated assumptions and logical fallacies; ability to recognise inferences from facts etc.
+Synthesising: The ability to put parts together to form a new whole. It involves the ability to combine, compile, compose, devise, plan, revise, organise,create, generate
+new ideas and solutions etc.
+Evaluating: The ability to appraise, compare features of different things andmake comments or judgement, compare, contrast, criticise, justify, support, discuss,
+conclude, make recommendations etc. Evaluation refers to the abilityto judge the worth or value of some material based on some criteria.
+Creating: The ability to use information or materials to plan, compose, produce, manufacture or construct other products. From the foregoing, creation is the
+highest form of the thinking and learning skill and is thereforethe most important behaviour. This unfortunately is the area where most learners perform poorly. In
+order to get learners to develop critical thinking and behavioural skills beginning right from the lower primary level, it is advised that the teachers do their best to
+help learners develop analytic andapplication skills as stated already.
+
+Skills and Processes
+These are specific activities or tasks that indicate performance or proficiencyin a given learning area. They are useful benchmarks for planning lessons, developing
+exemplars and are the core of inquiry-based learning.
+Observing: This is the skill of using our senses to gather information aboutobjects or events. This also includes the use of instruments to extend the range of our
+senses.
+Classifying: This is the skill of grouping objects or events based on commoncharacteristics.
+Comparing: This is the skill of identifying the similarities and differences between two or more objects, concepts or processes.
+Communicating (Reporting): This is the skill of transmitting, receiving and presenting information in concise, clear and accurate forms – verbal,
+written, pictorial, tabular or graphical.
+Predicting: This is the skill of assessing the likelihood of an outcome basedon prior knowledge of how things usually turn out.
+© NaCCA, Ministry of Education 2021
+
+xiv
+
+Analysing: This is the skill of identifying the parts of objects, information orprocesses, and the patterns and relationships between these parts.
+Generating possibilities: This is the skill of exploring all the options, possibilities and alternatives beyond the obvious or preferred one.
+Evaluating: This is the skill of assessing the reasonableness, accuracy and quality of information, processes or ideas. This is also the skill of assessing
+thequality and feasibility of objects.
+Designing: This is the skill of visualising and drawing new objects or gadgetsfrom imagination.
+Interpreting: This is the skill of evaluating data in terms of its worth: good,bad, reliable, unreliable; making inferences and predictions from written
+or graphical data; extrapolating and deriving conclusions. Interpretation is also referred to as “Information Handling”.
+Recording: This is the skill of drawing or making graphical representation boldly and clearly, well labelled and pertinent to the issue at hand.
+Generalising: This is the skill of using the conclusions arrived at in an activityto point to what could happen in similar situations.
+
+Attitudes and Values
+To be effective, competent and reflective citizens, who will be willing and capable of solving personal and societal problems, learners should be exposed
+to situations that challenge them to raise questions and attempt to solve problems. Learners therefore need to acquire positive attitudes, values and
+psychosocial skills that will enable them participate in debates and take a stand on issues affecting them and others. The RME curriculum thus
+focuseson the development of attitudes and values.
+Attitudes
+i.
+
+Curiosity: The inclination or feeling toward seeking information abouthow things work in a variety of fields.
+
+ii.
+
+Perseverance: The ability to pursue a problem until a satisfying solution is found.
+
+iii. Flexibility in Ideas: Willingness to change one’s opinion in the face of moreplausible evidence.
+iv. Respect for Evidence: Willingness to collect and use data in one’s investigation, and have respect for data collected by other.
+v.
+
+Reflection: The habit of critically reviewing ways in which an investigation has been carried out to see possible faults and other waysby which the investigation
+could be improved upon.
+
+Values
+At the heart of this curriculum is the belief in nurturing honest, creativeand responsible citizens. As such, every part of this curriculum, including therelated
+pedagogy should be consistent with the following set of values:
+•
+
+Respect: This includes respect for the nation of Ghana, its institutionsand laws and the culture and respect among its citizens and friends of Ghana.
+
+© NaCCA, Ministry of Education 2021
+
+xv
+
+•
+
+Diversity: Ghana is a multicultural society in which every citizen enjoys fundamental rights and responsibilities. Learners must be taughtto respect the views
+of all persons and to see national diversity asa powerful force for nation development. The curriculum promotes social cohesion.
+
+•
+
+Equity: The socio-cultural and economic development across the country is uneven. Consequently, it is necessary to be deliberate in addressing the specific
+needs of learners and to ensure an equitable distribution of the resources. Ghana’s learners have varied needs influenced by their gender, ability, economic
+status, geographical background among others which requires the provision of equal opportunities for all.
+Learners are from diverse backgrounds, which require the provision ofequal opportunities to all, and that all strive to care for each other both
+personally and professionally.
+
+•
+
+Commitment to achieving excellence: Learners as global citizens,must be taught to appreciate the opportunities provided through the
+curriculum and persist in doing their best in whatever field of endeavouras global citizens. The curriculum encourages innovativeness through
+creative and critical thinking and the use of contemporary technology.
+
+•
+
+Teamwork/Collaboration: Learners are encouraged to be committed to team-oriented working and learning environments. Thisalso means
+that learners should have an attitude of tolerance to be ableto live peacefully with all persons.
+
+•
+
+Truth and Integrity: Learners are encouraged to consistently tell the truth irrespective of the consequences and be morally upright withthe
+attitude of doing the right thing even when no one is watching;be true to themselves and be willing to live the values of honestyand
+compassion. Equally important, the ethos or culture of the work place, including integrity and perseverance, must underpin the learning
+processes to allow learners apply skills and competencies in the worldof work.
+
+The action words provided under the various profile dimensions shouldhelp teachers structure their teaching to achieve desired learning
+outcomes.Selection from the action words provided will help in teaching, for evaluationexercises and for test construction. The weights of the profile
+dimensions must be checked to ensure the required emphasis has been given to each ofthe dimensions in your teaching and assessment.
+The teacher should endeavour to ensure that learners cultivate the above attitudes as a prelude to effective work in RME.
+
+© NaCCA, Ministry of Education 2021
+
+xvi
+
+ASSESSMENT
+Assessment is a process of collecting and evaluating information aboutlearners and using the information to make decisions to improve their learning. Assessment
+may be formative, summative, diagnostic, or evaluative depending on its purpose. It is integral to the teaching-learning process, promotes student learning and
+improves instruction. In CCP, it is suggested that assessment involves assessment for learning, assessment of learning andassessment as learning, which are described
+in the subsequent paragraphs.
+
+Assessment for Learning (AFL)
+Assessment for Learning (AfL) is the process of seeking and interpreting evidence for use by learners and their teachers to decide where the learneris in their
+learning, where they need to be (the desired goal), and how best toget them there. AfL is one of the most suitable methods for improving learningand raising standards
+(Black and William, 1998). Assessment for Learning alsorefers to all their activities undertaken by teachers and/or by their learners, which provide information to be
+used as feedback to modify the teaching and learning activities in which they are engaged. AfL can be achieved throughprocesses such as sharing criteria with learners,
+effective questioning, and feedback.
+AfL, therefore, provides timely feedback to ensure individual learners are assisted during the teaching and learning process using various strategiesand questioning
+to measure the learning that has actually taken place. It is a continuous process that happens at all stages of the instructional process tomonitor the progress of a
+learner and to offer feedback or change teaching strategies to achieve performance standards of a lesson.
+
+Assessment as Learning (AaL)
+Assessment as Learning develops and supports students’ sense of ownershipand efficacy about their learning through reflective practices. This form of self-assessment
+helps in building the competencies of learners to achieve deeperunderstanding of their own learning and what they are taught.
+Assessment of Learning (AoL)
+Assessment of Learning provides a picture of the achieved standards of the teacher and performance of students at the terminal stage of the learning
+process. This information provides data for accountability and educational decisions such as grading, selection and placement, promotion and
+certification. Through AoL, stakeholders such as parents and guardians are informed about the extent students have attained expected learning
+outcomes at the end of their grade or programme.
+What do we assess?
+•
+
+Emphasis in assessment in the CCP is on the Common Core Learner Attributes, which are essential outcomes in the three domains of learning
+(i.e. cognitive, psychomotor and affective).
+
+© NaCCA, Ministry of Education 2021
+
+xvii
+
+•
+
+Knowledge and skills with emphasis on the 4Rs in the learning areas
+
+•
+
+Core competencies with emphasis on attitudes and values developed through the learning and its context as well as the pedagogical approaches.
+The process is illustrated diagrammatically in Figure 2.
+
+Figure 2: Essential Assessment Features
+
+How do we Monitor Progress?
+School-Based Assessment (SBA) covers all forms/modes of assessment including AfL, AaL and AoL (see Table 1), that can be undertaken by any school-level actor
+(learner, teacher, head teacher) to monitor the learner’s achievement over a period of time. Data collection and keeping records of the data are central to the
+conduct of SBA.
+
+© NaCCA, Ministry of Education 2021
+
+xviii
+
+Table 1: Modes of Assessment
+
+Assessment for
+Learning
+
+Assessment as
+Learning
+
+Assessment of
+Learning
+
+Class exercises
+
+Portfolio
+
+Class Assessment Task
+(CAT)
+
+Quizzes
+
+Journal entries
+
+End of term test
+
+Class tests (written,
+oral, aural and/or
+practical)
+
+Project work
+
+End of year test
+
+Class Assessment Task
+(CAT)
+
+Checklist
+Questionnaire
+
+The following are samples of relevant records that can be kept on the learner’slearning.
+• Learner’s Progress Record (Cumulative Record)
+• Learner’s Report Card
+• School-Based Assessment Termly Recording Register
+Details of guidelines on SBA can be found in the National Pre-tertiary LearningAssessment Framework (NPLAF) document (Ministry of Education,
+2020a) and the School-Based Assessment Guidelines (Ministry of Education, 2020b) .
+
+Reporting School-Based Assessment (SBA) in the CCP
+The CCP uses a criterion-referenced model of presenting and reporting school-based assessment data. School-based assessment throughout the
+three-year duration of CCP is done against criteria linked to performance standards and not against the work of other learners. The CCP provides
+levels of proficiency to be attained and descriptors for all grade levels of theprogramme (see Table 2). These levels and descriptors cannot be
+changed by individual schools and are, therefore, common to all learners as well as learning areas nationwide. For each assessment criterion or
+(benchmark for the level of proficiency), a number of descriptors are defined as shown in Table 2.
+
+© NaCCA, Ministry of Education 2021
+
+xix
+
+Table 2: Benchmarks, levels of proficiency and the grade level descriptors
+Level of
+Proficiency
+
+Benchmark
+
+Grade Level Descriptor
+
+1: Highly
+proficient
+(HP)
+
+80% +
+
+Learner shows high level of proficiency
+in knowledge, skills and values and can
+transfer them automatically and flexibly
+through authentic performance tasks
+
+2: Proficient
+(P)
+
+68-79%
+
+Learner demonstrates sufficient level
+of proficient knowledge, skills and
+core understanding; can transfer them
+independently through authentic
+performance tasks
+
+3: Approaching
+Proficiency
+(AP)
+
+54-67%
+
+Learner is approaching proficiency in
+terms of knowledge, skills and values
+with little guidance and can transfer
+understanding through authentic
+performance tasks
+
+4: Developing
+(D)
+
+40-53%
+
+Learner demonstrates developing
+level of knowledge, skills and values
+but needs help throughout the
+performance of authentic tasks
+
+5: Emerging (E)
+
+39% and
+below
+
+Learner is emerging with minimal
+understanding in terms of knowledge,
+skills, and values but needs a lot of help
+
+The grading system presented, shows the letter grade system and equivalentgrade boundaries. In assigning grades to pupils’ test results, or any form of
+evaluation, the above grade boundaries and the descriptors may be applied. The descriptors (Highly Proficient [HP], Proficient [P], Approaching
+Proficiency [AP], Developing [D], Emerging [E]), indicate the meaning of each grade.
+In addition to the school-based assessment (SBA), a national standardsassessment test is conducted in Basic 8 to provide national level indicators on
+learners’ achievement.
+© NaCCA, Ministry of Education 2021
+
+xx
+
+CREATIVE PEDAGOGICAL APPROACHES
+The CCP emphasises creative and inclusive pedagogies that are anchored onauthentic and enquiry-based learning, collaborative and cooperative learning,differentiated
+learning, and holistic learning, cross disciplinary learning (i.e. the4Rs across the curriculum) as well as developing the core competencies. Thissection describes some
+of the creative pedagogical approaches required for the CCP. The curriculum emphasises:
+•
+
+The creation of learning-centred classrooms through the use of creativeapproaches to teaching and learning as strategies to ensuring learner empowerment and
+independent learning.
+
+•
+
+The positioning of inclusion and equity at the centre of quality teachingand learning. Inclusion involves addressing the varied needs of learners based on gender,
+ability, economic status, religious affiliation, geographical location etc
+
+•
+
+The use of differentiation and scaffolding as teaching and learning strategies for ensuring that no learner is left behind.
+
+•
+
+The use of Information Communication Technology (ICT) as a pedagogical tool.
+
+•
+
+The identification of subject-specific instructional expectations neededfor making learning in the subject relevant to learners.
+
+•
+
+The integration of assessment for learning and of learning into the teaching and learning process and as an accountability strategy.
+
+•
+
+The use of questioning techniques that promotes deep learning.
+
+Learning-Centred Pedagogy
+The learner is at the centre of learning. At the heart of the curriculum is learning progression and improvement of learning outcomes for Ghana’s young people with
+a focus on – Reading, wRiting, aRithmetic and cReativity (4Rs). It is expected that at each curriculum phase, learners would be offeredthe essential learning experiences
+to progress seamlessly to the next phase. Where there are indications that a learner is not sufficiently ready for the nextphase a compensatory provision through
+differentiation should be provided to ensure that such a learner is ready to progress with their classmates. At the primary school, the progression phases are: prebasic (KG1 – 2), basic phases (B1 – B3 and B4 to B6).
+The curriculum encourages the creation of a learning-centred classroom withthe opportunity for learners to engage in meaningful “hands-on” activities that bring
+home to the learner what they are learning in school and what theyknow from outside of school. The learning-centred classroom is a place for thelearners to discuss
+ideas and through the inspiration of the teacher actively engage in looking for answers through working in groups to solve problems.This also includes researching
+for information and analysing and evaluating theinformation obtained. The aim of the learning-centred classroom approach isto develop learner autonomy so that
+learners can take ownership of their learning. It provides the opportunity for deep and profound learning to take place.
+The teacher should create a learning atmosphere that ensures:
+•
+
+Learners feel safe, accepted and encouraged to actively participate in the learning process.
+
+•
+
+Learners are given frequent opportunities to interact with variedsources of information, teaching and learning materials and ideas in a
+
+© NaCCA, Ministry of Education 2021
+
+xxi
+
+variety of ways.
+•
+
+The teacher assumes the position of a facilitator or coach who: Helps learners to identify a problem suitable for investigation via project
+work.
+
+•
+
+Problems are connected to the context of the learners’ world so thatit presents authentic opportunities for learning.
+
+•
+
+Subject matter around the problem, not the discipline.
+
+•
+
+Learners responsibly define their learning experience and draw up a plan to solve the problem in question.
+
+•
+
+Learners collaborate whilst learning.
+
+•
+
+Learners demonstrate the results of their learning through a product or performance.
+
+It is more productive for learners to find answers to their own questions rather than for teachers to provide the answers and their opinions in a learning-centred
+classroom.
+
+Inclusion
+Inclusion is recognizing that learners come from diverse background with varied needs and must be uniquely supported through the learning process. Learners can
+be disadvantaged based on their gender, ability, ethnic background, economic status, religious affiliation etc. All learners are therefore entitled to a broad and
+balanced curriculumin every school in Ghana. The daily learning activities to which learners are exposed should ensure that the learners’ right to equal access to
+quality education is being met.
+The curriculum suggests a variety of approaches that address learners’diversity and their special needs in the learning process. These approaches when used in
+lessons, will contribute to the full development of the learning potential of every learner. Learners have individual needs and different learningstyles, learning experiences
+and different levels of motivation for learning. Planning, delivery and reflection on daily learning episodes should take thesedifferences into consideration. The
+curriculum therefore promotes:
+•
+
+learning that is linked to the learner’s background and to their prior experiences, interests, potential and capacities;
+
+•
+
+learning that is meaningful because it aligns with learners’ ability (e.g. learning that is oriented towards developing general capabilities and solving the practical
+problems of everyday life); and
+
+•
+
+active involvement of the learners in the selection and organisation oflearning experiences, making them aware of their importance in the process and also
+enabling them assesses their own learning outcomes.
+
+Differentiation and Scaffolding
+© NaCCA, Ministry of Education 2021
+
+xxii
+
+This curriculum is to be delivered through the use of creative approaches. Differentiation and Scaffolding are pedagogical approaches to be used withinthe context
+of the creative approaches.
+Differentiation is a process by which differences between learners, (learningstyles, interests and readiness to learn etc.) are accommodated so that
+all students in a group have the best possible chance of learning. Differentiationcould be by task, support or outcome. Differentiation as a way of
+ensuring each learner benefits adequately from the delivery of the curriculum and canbe achieved in the classroom through:
+•
+
+Task
+
+•
+
+One-on-one support
+
+•
+
+Outcome
+
+Differentiation by task involves teachers setting different tasks for learnersof different ability e.g. in sketching the plan and shape of their classroom somelearners
+could be made to sketch free hand while others would be made totrace the outline of the plan of the classroom.
+Differentiation by support involves the teacher providing a targeted support to learners who are seen as performing below expected standards or at risk of not
+reaching the expected level of learning outcome. This supportmay include a referral to a Guidance and Counselling Officer for academic support.
+Differentiation by outcome involves the teacher allowing learners to respond at different levels. In this case, identified learners are allowed moretime to complete
+a given task.
+Scaffolding in education refers to the use of a variety of instructional techniques aimed at moving learners progressively towards stronger understanding and
+ultimately greater independence in the learning process.
+It involves breaking up the learning episode, experience or concepts into smaller parts and then providing learners with the support they need to learneach part. The
+process may require a teacher assigning an excerpt of a longertext to learners to read, engage them to discuss the excerpt to improve comprehension of its rationale,
+then guiding them through the key words/ vocabulary to ensure learners have developed a thorough understanding of the text before engaging them to read the full
+text.
+Common scaffolding strategies available to the teacher include:
+•
+
+Giving learners a simplified version of a lesson, assignment, or reading,and then gradually increasing the complexity, difficulty, or sophisticationover time.
+
+•
+
+Describing or illustrating a concept, problem, or process in multiple ways to ensure understanding.
+
+•
+
+Giving learners an exemplar or model of an assignment, they will be asked to complete.
+
+•
+
+Giving learners a vocabulary lesson before they read a difficult text.
+
+•
+
+Clearly describing the purpose of a learning activity, the directions learners need to follow, and the learning goals they are expected to achieve.
+
+•
+
+Explicitly describing how the new lesson builds on the knowledge andskills learners were taught in a previous lesson.
+
+© NaCCA, Ministry of Education 2021
+
+xxiii
+
+Information and Communication Technology (ICT)
+ICT has been integrated into this curriculum as a teaching and learning tool to enhance deep and independent learning. Some of the expected outcomesthat this
+curriculum aims to achieve through ICT use for teaching and learningare:
+•
+
+Improved teaching and learning processes.
+
+•
+
+Improved consistency and quality of teaching and learning.
+
+•
+
+Increased opportunities for more learner-centred pedagogicalapproaches.
+
+•
+
+Improved inclusive education practices by addressing inequalities ingender, language, ability.
+
+•
+
+Improved collaboration, creativity, higher order thinking skills.
+
+•
+
+Enhanced flexibility and differentiated approach of delivery.
+
+The use of ICT as a teaching and learning tool is to provide learners an accessto large quantities of information online. It also provides the framework for analysing
+data to investigate patterns and relationships in a geographical context. Once pupils have made their findings, ICT can then help them organise, edit and present
+information in many different ways.
+Learners need to be exposed to the various ICT tools around them includingcalculators, radios, cameras, telephones, television sets and computers and related
+software like Microsoft Office packages – Word, PowerPoints and Excel as teaching and learning tools.
+The exposure that learners are given at the Basic School level to use ICTin exploring learning will build their confidence and will increase their level of motivation
+to apply ICT use in later years, both within and outside of education.
+ICT use for teaching and learning is expected to enhance the quality and learners’ level of competency in the 4Rs.
+
+© NaCCA, Ministry of Education 2021
+
+xxiv
+
+CORE COMPETENCIES
+The core competencies describe a body of skills that teachers at the basic level should seek to develop in their learners. The competencies describe a connected
+body of core skills that are acquired throughout the processesof teaching and learning. They are the relevant global skills for learningthat allow learners to
+develop, in addition to the 4Rs, to become critical thinkers, problem-solvers, creators, innovators, good, collaborators, culturallyidentified individuals, digitally literate
+and global citizens who have keen interest in their personal development. In using this curriculum, we hope thecore competencies will be developed in learners to
+help them develop our country, Ghana. These competencies include the following;
+
+Critical Thinking and Problem Solving (CP)
+This skill develops learners’ cognitive and reasoning abilities to enable them analyse and solve problems. Critical thinking and problem-solving skills enablelearners to
+draw on their own experiences to analyse situations and choosethe most appropriate, out of a number of possible solutions. It requires thatlearners embrace the
+problem at hand, persevere and take responsibility fortheir own learning.
+
+Creativity and Innovation (CI)
+Creativity and Innovation promotes entrepreneurial skills in learners through their ability to think of new ways of solving problems and developingtechnologies for
+addressing the problem at hand. It requires ingenuity of ideas,arts, technology and enterprise. Learners having this skill are also able to think independently and
+creatively.
+
+Communication and Collaboration (CC)
+This competence promotes in learners the skills to make use of languages, symbols and texts to exchange information about themselves and their life experiences.
+Learners actively participate in sharing their ideas. They engage in dialogue with others by listening to and learning from them. They also respect and value the views
+of others.
+
+Cultural Identity and Global Citizenship (CG)
+This competence involves developing learners to put country and service foremost through an understanding of what it means to be active citizens. This is done by
+inculcating in learners a strong sense of social and economic awareness. Learners make use of the knowledge, skills, competencies and attitudes acquired to contribute
+effectively towards the socioeconomic development of the country and on the global stage. Learners build skills to critically identify and analyse cultural and global
+trends that enable them to contribute to the global community.
+
+© NaCCA, Ministry of Education 2021
+
+xxv
+
+Personal Development and Leadership (PL)
+This competence involves improving self-awareness and building self- esteem. It also entails identifying and developing talents, fulfilling dreamsand aspirations.
+Learners are able to learn from mistakes and failures ofthe past. They acquire skills to develop other people to meet their needs. It involves recognising the
+importance of values such as honesty and empathy and seeking the well-being of others. Personal development and leadership enables learners to distinguish between
+right and wrong. The skill helps them to foster perseverance, resilience and self-confidence. PL helps them acquire the skill of leadership, self- regulation and
+responsibility necessary for lifelonglearning.
+For effective lesson planning for teaching, learning and assessment, it is suggested that teachers refer to Appendix A for details of the components of the core
+competencies. These details comprise the unpacked skills such as:listening, presenting and team work for collaboration.
+
+Digital Literacy (DL)
+Digital Literacy develops learners to discover, acquire, and communicate through ICT to support their learning. It also helps them use digital media responsibly.
+
+© NaCCA, Ministry of Education 2021
+
+xxvi
+
+INSTRUCTIONAL EXPECTATIONS
+1.
+
+Guide and facilitate learning of RME by generating discourse among learners and challenging them to accept and share responsibility for their own learning
+based on their unique individual differences.
+
+2.
+
+Select RME content, adapt and plan lessons to meet the interests, knowledge, understanding, abilities, and experiences of learners.
+
+3.
+
+Work together as colleagues within and across disciplines and grade levels to develop communities of learners who exhibit the skills of inquiry and the attitudes
+and social values conducive to learning of RME.
+
+4.
+
+Use multiple methods and systematically gather data about learners’ understanding and ability, to guide teaching and learning of RME with arrangements to
+provide feedback to both learners and parents.
+
+5.
+
+Design and manage learning environments that provide learners with the time, space, and resources needed for learning RME.
+
+Above all, RME should be taught in such a way that the learners increasingly develop the ability to respond to religious beliefs and practices in an informed,rational and
+responsible way. Thus learners should be able to draw the differences between acceptable and understandable behaviours so that they can make the right decisions
+in any situation and thus become responsible citizens.
+SUGGESTED TIME ALLOCATION
+A total of three periods a week, each period consisting of 50 minutes, is allocated to the teaching of RME at the basic level.
+
+© NaCCA, Ministry of Education 2021
+
+xxvii
+
+ORGANISATION OF THE CURRICULUM
+Curriculum Reference Numbers
+The curriculum has been structured into four columns which are Strands, Sub-strands, Content Standards and Indicators and Exemplars. A unique annotation is used
+for numbering the learning indicators in the curriculum forthe purpose of easy referencing. The notation is indicated in Table 2. Example:B7.2.3.4.5
+ANNOTATION
+
+MEANING / REPRESENTATION
+
+B7
+
+Year or Class
+
+2.
+
+Strand Number
+
+3.
+
+Sub-Strand Number
+
+4.
+
+CONTENT STANDARD Number
+
+5.
+
+Learning / Performance indicator Number
+
+Strands are the broad learning areas or domains of the Religious and MoralEducation content to be studied.
+Sub-strands are the sub-divisions of the broad of the broad learning areas or strands.
+Content Standards are the expected level of knowledge, skill and/or attitude that a learner must attain at each grade level.
+Indicators are the distinct outcomes that learners must exhibit for each content standard at each level of learning.
+Exemplars clearly explain the distinct outcomes or indicators. They supportand guide the facilitator/teacher in helping learners achieve the content standards.
+
+© NaCCA, Ministry of Education 2021
+
+xxviii
+
+Annotation
+A unique annotation is used to label the class, strands, sub-strands, content standards and learning indicators in the curriculum for the purpose of
+easy referencing. The annotation is defined in figure 3:
+
+Strand Number
+Class/Year
+
+B7.1.1.1.1
+
+Sub-strand Number
+
+Learning indicator
+
+Content Standard Number
+
+Figure 3: Curriculum Reference Numbers
+
+© NaCCA, Ministry of Education 2021
+
+xxix
+
+SCOPE AND SEQUENCE
+STRANDS
+
+SUB-STRANDS
+
+B7
+
+B8
+
+B9
+
+GOD, HIS CREATION AND
+ATTRIBUTES
+
+God, His Nature and Attributes
+The Creation Stories of the Three Major Religions in Ghana
+The Purpose and Usefulness of God’s Creation and the
+Environment
+
+
+
+
+
+
+
+RELIGIOUS PRACTICES
+
+Worship, Religious Songs and Recitations
+Rites of Passage
+Religious Festivals
+
+
+
+
+
+
+
+THE FAMILY AND THE
+COMMUNITY
+
+Family Systems
+Authority and Obedience
+Religion and Social Cohesion
+
+
+
+
+
+
+
+RELIGIOUS LEADERS AND
+PERSONALITIES
+
+Religious Leaders
+Prophets and Caliphs
+Women in Religion and Leadership Positions
+
+
+
+
+
+
+
+ETHICS AND MORAL LIFE
+
+Manners, Decency and Substance Abuse
+Moral Teachings in the Three Major Religions in Ghana
+Reward, Punishment and Repentance
+
+
+
+
+
+
+
+RELIGION AND ECONOMIC LIFE
+
+Work and Entrepreneurship
+Money, Bribery and Corruption
+Time and Leisure
+
+
+
+
+
+
+
+© NaCCA, Ministry of Education 2021
+
+xxx
+
+BASIC 7
+
+© NaCCA, Ministry of Education 2021
+
+1
+
+STRAND 1: GOD, HIS CREATION AND ATTRIBUTES
+SUB-STRAND 1: GOD, HIS NATURE AND ATTRIBUTES
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B7 1.1.1: Explain the
+nature of God seen
+through His attributes
+
+CG 5.2: Develop and exhibit ability to defend
+one’s cultural beliefs, practices and norms;
+CG 5.3: Develop and express respect and
+appreciation of others’ culture.
+CP 5.6: Demonstrate a thorough
+understanding of a generalised concept or facts
+to task or situation.
+DL 5.5: Evaluate the quality and validity of
+information
+DL 6.4: Adhere to behavioural protocols that
+prevail in cyberspace
+DL 6.6: Knowledge and recognition of ethical
+use of information
+
+B7 1.1.1.1: Explain the nature of God through His attributes in
+the three major religions
+Exemplars:
+1. Identify the attributes of God. E.g. omnipotent, omnipresent,
+omniscient, love, patience.
+2. Explain the attributes of God in English and in their local languages.
+E.g., Amowia – giver of sunlight (Akan); Binnamdanaa – the Creator
+of all creatures (Dagbani); Mawu Kitikata – God is the source of life
+(Ewe)
+3. Write an essay on the attributes of God and present your works for
+class discussion. Learners are encouraged to make use of resources
+on the internet for more of the attributes of God from the three
+major religions.
+B7 1.1.1.2: Describe ways in which you demonstrate attributes
+of God in your life
+Exemplars:
+1. In groups, ask learners to identify the attributes of God that are found
+in humankind and present to class for discussion E.g. love, patience,
+merciful.
+
+CC 9.1: Demonstrate behaviour and skills of
+working towards group goals
+CC 9.4: Help group work on relevant activities.
+
+2. Role play how they relate the attributes of God to their life.
+
+© NaCCA, Ministry of Education 2021
+
+2
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B7 1.1.1 (CONTINUED): B 7.1.1.1.3: Identify the similarities in the way that the nature
+of God is understood through His attributes in the three major
+Explain the nature of
+religions in Ghana
+God seen through His
+attributes
+Exemplars:
+1. Using Think-Pair-Share, learners identify the similarities in the way
+the nature of God is understood in His attributes in the three major
+religions.
+
+CC 9.1: Demonstrate behaviour and skills of
+working towards group goals.
+CC 9.4: Help group work on relevant activities.
+
+Examples
+The nature of God as everlasting can be found from the following
+attributes giving to God by the three major religions.
+Tetekwaframoa (the ancient of days) – indigenous Akan religion; Alpha
+and Omega (the beginning and end) - Christianity and Al-Awwalu wal
+A’khirun (the beginner and the end) - Islam.
+The nature of God as omnipotent can be found in the following
+attributes.
+Mawu (Almighty) - indigenous Ewe religion or Otumfour (Almighty) indigenous Akan religion; El-Shaddai (God Almighty) - Christianity and
+Azza wa Jalla (Almighty God) – Islam.
+The nature of God as the sustainer of all creations are found in
+attributes such as:
+Amosu (giver of rain) - indigenous Akan religion or Amowia (giver of
+sunlight) - indigenous Akan religion; Jehovah-Jireh (God the Provider) –
+Christianity and Al-Razak (the Provider) – Islam.
+
+© NaCCA, Ministry of Education 2021
+
+3
+
+STRAND 2: RELIGIOUS PRACTICES
+SUB-STRAND 1: WORSHIP
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B7 2.1.1: Explain how
+worship is performed
+in the three major
+religions in Ghana and
+apply the moral lessons
+in the worship in their
+life.
+
+CC 9.1: Demonstrate behaviour and skills of
+working towards group goals
+CC 9.4: Help group work on relevant activities.
+CG 5.2: Develop and exhibit ability to defend
+one’s cultural beliefs, practices and norms
+CG 5.3: Develop and express respect and
+appreciation of others’ culture.
+CG 5.3: Develop and express respect and
+appreciation of others’ culture.
+CG 6.1: Understanding of influencing of
+globalisation on traditions, languages and
+cultures.
+CP 5.6: Demonstrate a thorough understanding
+of a generalised concept or facts to task or
+situation.
+DL 5.5: Evaluate the quality and validity of
+information
+DL 6.4: Adhere to behavioural protocols that
+prevail in cyberspace
+DL 6.6: Knowledge and recognition of ethical
+use of information
+
+B7 2.1.1.1: Identify the types of worship in the three major
+religions
+Exemplars:
+1. Through questions and answers learners explain the meaning of
+worship. E.g. worship is the submission to the will of God or Allah.
+2. Show pictures or video clip of people at worship
+3. Through Think-Pair Share, learners discuss the religion each worship
+belongs to.
+4. Identify the types of worship in Christianity, Islam and Indigenous
+African Religions. E.g. private (individual or family) and congregational.
+5. In three mixed ability groups, learners dramatise the types of worship
+in the three major religions.
+
+© NaCCA, Ministry of Education 2021
+
+4
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B7 2.1.1 (CONTINUED): B7 2.1.1.2: Describe the modes of worship in the three major
+religions
+Explain how worship is
+performed in the three
+major religions in Ghana Exemplars:
+1. In groups, learners to identify activities that take place during worship
+and apply the moral
+and report to class.
+lessons in the worship in
+their life.
+• Christianity – Meditation, Bible reading, prayer, singing and
+dancing, offertory, sermon, communion, baptism, etc.
+• Islam – Niyyat (intention), ablution, genuflections in prayers, the
+five pillars of Islam, Qur’anic recitation, sermon, glorification to
+Allah, sadaqah, offertory, etc
+• Indigenous African Religion – offer of libation, sacrifice, prayer,
+drumming, singing and dancing, incantations, spirit possession,
+divination, etc.
+
+CC 9.1: Demonstrate behaviour and skills of
+working towards group goals
+CC 9.4: Help group work on relevant activities.
+
+B7 2.1.1.3: Identify and explain the moral lessons from worship
+
+CC 9.1: Demonstrate behaviour and skills of
+working towards group goals
+CC 9.4: Help group work on relevant activities.
+CG 6.1: Understanding of influencing of
+globalisation on traditions, languages and
+cultures.
+CG 5.2: Develop and exhibit ability to defend
+one’s cultural beliefs, practices and norms
+CG 5.3: Develop and express respect and
+appreciation of others’ culture.
+
+Exemplars:
+1. Through questions and answers, learners identify the moral lessons
+from worship. E.g., It encourages discipline in society, it encourages
+togetherness and unity of people, it gives confidence to face life, etc.
+2. Learners to dramatise how they relate the moral lessons from
+worship to their life.
+Project Work: Consult a pastor/priest/an Imam and parents to discuss
+why we need to be in constant touch with God.
+
+© NaCCA, Ministry of Education 2021
+
+5
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B7 2.1.1 (CONTINUED): B7. 2.1.1.4: Explain the significance of prayer
+Explain how worship is
+Exemplars:
+performed in the three
+major religions in Ghana 1. Learners to explain the meaning of prayer. E.g. the act of
+communication between the worshipper and the object of worship
+and apply the moral
+lessons in the worship in
+their life.
+
+CC 9.1: Demonstrate behaviour and skills of
+working towards group goals
+CC 9.4: Help group work on relevant activities.
+CG 6.1: Understanding of influencing of
+globalisation on traditions, languages and
+cultures.
+
+2. In groups, learners to identify the types of prayer in the three major
+religions and present findings for discussion in class.
+Christianity – thanksgiving, intercession, supplication, confession
+etc.
+• Islam – Fard prayers (the five daily obligatory prayers – Subhi/Fajr,
+Zuhr, Asr, Magrib and Isha’i).
+Special/Occasional Prayer
+• Friday congregational prayer (Ju’muah) in place of Zuhr
+• Tarawih prayer – special prayer in Ramadan
+• Janazah prayer - prayer for the dead before interment
+• Eid-ul-Fitr – the prayer after the end of Ramadan
+• Eid-ul-Adha – commemoration of the grand sacrifice of Prophet
+Ibrahim
+• Tahajju – midnight prayer
+• Kusuf – prayer for the eclipse of the sun
+• Khusuf – pray for the eclipse of the moon, etc.
+Indigenous African Religion – thanksgiving, intercession,
+supplication, confession, etc.
+•
+
+CG 5.2: Develop and exhibit ability to defend
+one’s cultural beliefs, practices and norms
+CG 5.3: Develop and express respect and
+appreciation of others’ culture.
+
+3. Learners use skits to demonstrate how prayer is performed in the
+three major religions.
+
+© NaCCA, Ministry of Education 2021
+
+6
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+B7 2.1.1 (CONTINUED):
+Explain how worship is
+performed in the three
+major religions in Ghana
+and apply the moral
+lessons in the worship in
+their life
+
+CORE COMPETENCIES
+
+4. Learners should compare the use of prayer across the three major
+religions in Ghana and identify similarities and differences. E.g. some
+of the similarities are to communicate with God; to put needs before
+God and give thanks to God. Among the difference are: while in
+Indigenous African Religion the act of cursing one’s enemies and the
+enemies of society is formally accepted, it is forbidden in Islam and
+Christianity; in Islam and Christianity prayer is used for confession
+and forgiveness of sin but in indigenous African religion, forgiveness of
+sinis achieved through sacrifice and not prayer alone.
+In groups, learners to discuss the significance of prayer in their daily
+life. E.g., it is a command from God/Allah, prayer brings us closer to
+our Creator, etc.
+
+© NaCCA, Ministry of Education 2021
+
+7
+
+STRAND 2: RELIGIOUS PRACTICES
+SUB-STRAND 2: RELIGIOUS SONGS AND RECITATIONS
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B7 2.2.1: Analyse and
+apply the moral values
+in religious songs and
+recitations
+
+CG 6.1: Understanding of influences of globalisation on traditions, languages and cultures.
+CG 6.3: Know the global discourse about the
+role of men and women.
+CG 6.4: Exhibit a sense of nationality and
+global identity.
+CI 5.1: Examine alternatives in creating new
+things.
+CI 5.2: Ability to merge simple/complex ideas
+to create novel situations or things.
+CI 5.7: Putting forward constructive comments,
+ideas, explanations and new ways of doing things
+CI 6.4: Imagining and seeing things in a different
+way
+DL 5.5: Evaluate the quality and validity of
+information
+DL 6.4: Adhere to behavioural protocols that
+prevail in cyberspace
+DL 6.6: Knowledge and recognition of ethical
+use of information
+PL 5.2: Demonstrate a sense of feeling or
+belongingness to a group
+PL 5.5: Desire to accept one’s true self and
+overcome weaknesses
+PL 5.6: Ability to set and maintain standards
+and values
+PL 6.1: Ability to serve group members
+effectively
+PL 6.3: Ability to manage time effectively
+
+B7 2.2.1.1: Differentiate between religious songs and nonreligious songs.
+Exemplars:
+1. Explain the differences between religious songs and non-religious
+songs.
+Religious songs - are music that express the belief of worshippers and
+their dependence on God or the Supreme being while non-religious
+songs deal with social, political and economic matters.
+2. State the characteristic of religious songs. Learners listen to a variety
+of songs and identify if they are religious songs or not.
+Characteristics
+• Express religious beliefs
+• Draw worshippers to God
+• Give hope to the hopeless, etc.
+3. In groups, learners compose their own religious songs, sing in class
+and discuss the key message the songs convey.
+
+© NaCCA, Ministry of Education 2021
+
+8
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B7 2.2.1 (CONTINUED): B7 2.2.1.2: Demonstrate understanding of basic scripture
+recitations/oral traditions in the three major religions
+Analyse and apply the
+moral values in religious
+Exemplars:
+songs and recitations
+4. Recite basic texts from the Bible, Qur’an and Oral traditions
+
+PL 6.4: Ability to manage and resolve conflicts
+CI 6.1: Strong intuitive memory, intuitive
+thinking and respond appropriately
+CP 5.1: Ability to combine information
+and ideas from several sources to reach a
+conclusion
+CP 6.4: Ability to identify important and
+appropriate criteria and use them to evaluate
+available alternatives
+CP 5.6: Demonstrate a thorough understanding
+of a generalised concept or facts to task or
+situation.
+
+•
+•
+
+Bible – Psalm 23 (RSV), Exodus 20 (The Ten Commandments), etc.
+Qur’an- Al- Fatihah (Qur’an chapter 1), Al-Ikhlas (Qur’an Chapter
+112), etc.
+• Oral tradition – Okwan twa asuo; asuo twa okwan (literally,“The
+path crosses the river; the river crosses the path”)
+Naazorabataa bin (Dagaari proverb) which literally means “a rolling
+stone gathers no moss”), etc.
+B7 2.2.1.3: Identify the moral values in religious songs and
+recitations.
+Exemplars:
+1. Discuss the moral values in religious songs and recitations. E.g.
+• motivation
+• humility
+• contentment
+• acknowledgement of the power of God.
+With the help of role play, learners demonstrate how they apply the
+moral values in their daily life
+
+© NaCCA, Ministry of Education 2021
+
+PL 6.1: Ability to serve group members
+effectively.
+PL 6.3: Ability to manage time effectively.
+PL 6.4: Ability to manage and resolve conflicts
+CI 5.1: Examine alternatives in creating new
+things.
+CI 5.2: Ability to merge simple/complex ideas
+to create novel situations or things.
+CI 5.4: Ability to visualise alternatives,
+seeing possibilities and identify problems and
+challenges.
+CI 5.5: Ability to try new alternatives and fresh
+different approaches.
+
+9
+
+STRAND 3: THE FAMILY AND THE COMMUNITY
+SUB-STRAND 1: FAMILY SYSTEMS
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B7 3.1.1: Identify and
+Explain the Importance
+of the Family Systems
+
+CC7.4: Identify underlying themes and issues
+when listening.
+CC7.5: Identify and analyse different point of
+views of speakers
+CC8.3: Apply appropriate diction and structure
+sentences correctly for narrative, persuasive,
+imaginative, imaginative and expository
+purposes
+CC8.4: Anticipate different responses from the
+audience.
+CC 9.1: Demonstrate behaviour and skills of
+working towards group goals
+CC 9.4: Help group work on relevant activities.
+CG 5.2: Develop and exhibit ability to defend
+one’s cultural beliefs, practices and norms
+CG 5.3: Develop and express respect and
+appreciation of others’ culture.
+CG 6.1: Understanding of influencing of
+globalisation on traditions, languages and
+cultures.
+CP 5.2: Analyse and make distinct judgement
+about viewpoints expressed in an argument.
+
+B7.3.1.1.1: Explain the concept and types of family systems in
+Ghana
+Exemplars:
+1. Learners to explain the concept of family. E.g. It is a social unit whose
+members are bound by blood ties, marriage or covenant.
+2. Learners identify the types of family systems in Ghana. E. g., Nuclear
+and Extended.
+3. Describe the two-family systems in Ghana. E.g. the nuclear family
+system consists of the father, mother and children (if any).
+The nuclear family can also consist of one of the parents and the
+children. Extended family system consists of all relatives from the
+paternal and maternal family relations.
+4. With the help of parents, learners create/draw a poster to show their
+family tree indicating both the nuclear and extended families.
+5. Discuss the merits and demerits of both family systems.
+Nuclear family system – Merits
+i. Easy to take care of the family members.
+ii. Effective supervision, etc.
+Demerits
+i. Inadequate or lack of support in the absence of parents.
+ii. Members suffer if the breadwinner dies (or passes on), etc.
+Extended Family System – Merits
+i. Family support in terms of economic assistance and moral
+guidance
+ii. Ensures security and protection of family members, etc.
+
+© NaCCA, Ministry of Education 2021
+
+10
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B7 3.1.1 (CONTINUED):
+Identify and Explain
+the Importance of the
+Family Systems
+
+CP 5.3: Identify important and appropriate
+alternatives.
+CP 5.6: Demonstrate a thorough understanding
+of a generalised concept or facts to task or
+situation.
+DL 5.5: Evaluate the quality and validity of
+information.
+DL 6.4: Adhere to behavioural protocols that
+prevail in cyberspace.
+DL 6.6: Knowledge and recognition of ethical
+use of information.
+
+Demerits
+i. Encourages laziness
+ii. Less privacy, etc.
+Project Work
+Divide class into two and ask them to debate on the motion “The
+extended family system is more important than the nuclear family
+system.” There are many resources on the family systems and their
+current changes on the internet. Learners can make use of such
+resources.
+
+B7 3.1.1.2: Identify the role of family members.
+Exemplars:
+1. In a discussion, learners identify the roles of children, parents and
+grandparents in the family. For example:
+•
+•
+•
+
+© NaCCA, Ministry of Education 2021
+
+Children – running errands, performing household chores
+Parents – provision of basic needs (e.g. food, shelter, education
+and security)
+Grandparents – play advisory role to the family; help in
+character formation
+
+CG 5.4: Develop and exhibit a sense of cultural
+identity.
+CG 5.5: Adjust to the demands of customs,
+traditions, values and attitudes of society.
+CG 6.1: Understanding of influences of
+globalisation on traditions, languages and
+cultures.
+CG 6.2: Recognise resistance to global practice
+that are inimical to our culture.
+CI 6.7: Look and think about things differently
+and from different perspectives.
+
+11
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B7 3.1.1 (CONTINUED): B7 3.1.1.3: Describe ways of promoting good relationships
+among family members
+Identify and Explain
+the Importance of the
+Exemplars
+Family Systems
+1. Identify factors that promote good relationships in the family. E.g.
+patience, respect, obedience, tolerance, transparency, accountability,
+forgiveness, support to family members
+
+CG 5.5: Adjust to the demands of customs,
+traditions, values and attitudes of society.
+CG 6.1: Understanding of influences of
+globalisation on traditions, languages and
+cultures
+CP 5.2: Analyse and make distinct judgement
+about viewpoints expressed in an argument.
+CG 5.5: Adjust to the demands of customs,
+traditions, values and attitudes of society.
+CG 6.1: Understanding of influences of
+globalisation on traditions, languages and
+cultures
+CP 6 .4: Ability to identify appropriate criteria
+and used them to evaluate available alternatives
+CP 5.3: Identify important and appropriate
+alternatives.
+PL5.5: Desire to accept one’s true self and
+overcome weakness.
+PL6.1: Ability to serve group members
+effectively
+PL6.4: Ability to manage and resolve conflicts.
+
+2. Identify the need for healthy relationships among family members.
+Present findings to class for discussion. E.g. peaceful co-existence,
+unity of purpose, happiness, progress
+3. Analyse the need for self-examination when things go wrong in the
+family. E.g. avoidance of false accusations and counter accusations,
+avoid third party intervention (e.g. consultation of mediums such as
+pastors, mallams, diviners), taking full responsibility for one’s actions
+and inactions
+4. Discuss the importance of family systems in Ghana. E.g. conflicts and
+misunderstandings between families are resolved peacefully, the family
+ensures quality upbringing of family members
+5. Dramatise behaviours that show good relationships among family
+members
+
+© NaCCA, Ministry of Education 2021
+
+12
+
+STRAND 4: RELIGIOUS LEADERS AND PERSONALITIES
+SUB-STRAND 1: RELIGIOUS LEADERS
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B7 4.1.1: Identify the
+key features and moral
+messages of the call and
+ministry of Religious
+Leaders in the three
+major religions.
+
+CG 5.3: Develop and express respect and
+appreciation of others’ culture.
+CP 5.2: Analyse and make distinct judgement
+about viewpoints expressed in an argument.
+DL 5.3: Ability to find and utilise digital content
+DL 5.5: Evaluate the quality and validity of
+information.
+PL 6.1: Ability to serve group members
+effectively.
+PL 6.4: Ability to manage and resolve conflicts.
+
+B7 4.1.1.1: Discuss the early life and call of the religious leaders
+Exemplars:
+1. Show pictures or video clips to depict the birth and early life of
+religious leaders. E.g. Jesus Christ, Muhammad (SAW), Okomfo
+Anokye, Egya Ahor,Toha Zie,Togbe Tsali, etc. NOTE: Be sensitive in
+the use of visual images depicting Allah and the Prophet Muhammad
+(Sallahu Alaihi Wassalam). Sallahu Alaihi Wassalam (SAW.)) is an Arabic
+expression which means peace be upon him (PUBH) which Muslims
+use to show reverence to the Prophet Muhammad whenever his
+name is mentioned or written.
+2. Summarise the birth and early life of religious leaders in the three
+major religions.
+3. In groups, learners discuss the call of the religious leaders.
+Jesus Christ – His Baptism and Temptation
+Muhammad (SAW) – Born in Makkah; marriage to Khadija; call
+to prophethood; migration to Madinah (Hijra); forgiveness of the
+Quraysh and the farewell sermon.
+• The call of an indigenous religious leader – Okomfo Anokye,
+Egya Ahor,Toha Zie,TogbeTsali, Osofo Okomfo Damoah, etc.
+4. Role play the call of the religious leaders and show the moral lessons
+from the call.
+•
+•
+
+© NaCCA, Ministry of Education 2021
+
+13
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B7 4.1.1 (CONTINUED): B7 4. 1.1.2: Describe the ministries of the religious leaders
+Identify the key features and
+Exemplars:
+moral messages of the call
+1. Summarise the key events associated with the ministry of the leaders
+and ministry of Religious
+of the three major religions.
+Leaders in the three major
+religions.
+• Jesus Christ – call of the disciples, Sermon on the Mount,
+teaching and parables and miracles etc.
+• Muhammad (SAW) – triumphant entry to Makkah, forgiveness
+of the unbelieving folks, the farewell sermon etc.
+• Indigenous African Religious leader – teaching, sacrifice,
+miracles etc.
+Project Work
+In three groups, learners to pick one of the following and create a poster.
+1. Key events of the latter part of the life of Jesus Christ
+
+CG 5.1: Show a strong belongingness to one’s
+culture
+CG 5.4: Develop and exhibit a sense of cultural
+identity
+CG 6.1: Understanding of influence of
+globalisation on traditions, languages and
+cultures.
+CP 5.2: Analyse and make distinct judgement
+about viewpoints expressed in an argument.
+CP 6 .3: Identify important and appropriate
+alternatives.
+PL 5.4: Ability to understand one’s personality
+traits
+PL 5.5: Desire to accept one’s true self and
+overcome weakness.
+PL 6.1: Ability to serve group members
+effectively
+PL 6.4: Ability to manage and resolve conflicts.
+
+2. Key events of the latter part of the life of Muhammad (SAW.)
+3. Key events of the life of one selected indigenous religious leader
+
+B7 4.1.1.3: Discuss the moral lessons from the exemplary lives
+of the religious leaders.
+Exemplars:
+1. Identify the moral lessons from the religious leaders. E.g., humility,
+forgiveness, patriotism, obedience, perseverance, sacrifice.
+2. Role play the virtues from the exemplary life of religious leaders.
+
+CI 6.2: Ability to reflect on approaches to
+creative tasks and evaluate the effectiveness of
+tools used
+CI 6.7: Look and think about things differently
+and from different perspective.
+CP 5.2: Analyse and make distinct judgement
+about viewpoints expressed in an argument.
+
+Demonstrate how to apply the moral virtues in their life. E.g., obedience
+to authority, forgiving one another.
+
+© NaCCA, Ministry of Education 2021
+
+14
+
+STRAND 5: ETHICS AND MORAL LIFE
+SUB-STRAND 1: MANNERS AND DECENCY
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B7 5.1.1: Develop good
+manners and learn how
+to apply them in their
+daily lives.
+
+CP 5.6: Demonstrate a thorough understanding
+of generalised concepts and facts specific to
+task or situation.
+
+B7 5.1.1.1: Identify and explain behaviours considered to be
+good manners in the society.
+Exemplars:
+1. Explain the meaning of the concepts “manners” and “decency.”
+•
+•
+
+Manners – behaviour desirable in society. E.g. courtesy,
+comportment, mode of dressing, greetings, etc.
+Decency – acceptable behaviour in a given society. E.g. respect,
+obedience, tolerance, humility, etc.
+
+B7.5.1.1.2: Discuss the importance of good manners and
+decency
+Exemplars:
+1. Pick some examples of good manners and decent behaviours for
+discussion.
+•
+
+Greetings – expression of friendly or welcoming words to people
+when they meet.
+o Factors to consider when greeting – time of day, sex, status,
+age, etc.
+o The need to greet: a sign of respect and proper up-bringing; it
+creates friendship and cordial relationship; it removes fear and
+suspicion, etc.
+• Decent dressing – culturally acceptable way of dressing. Generally,
+wearing clothing to cover nakedness.
+o Factors to consider when dressing – occasion, the culture, etc.
+o The need for decent dressing – to cover nakedness; to win
+respect; a sign of respect and proper up-bringing, etc.
+
+© NaCCA, Ministry of Education 2021
+
+CG5.1: Show a strong belongingness to one’s
+culture.
+CG5.4: Develop and exhibit a sense of cultural
+identity.
+CG5.5: Adjust to the demands of customs,
+traditions, values and attitudes of society.
+CG6.1: Understanding of influences of
+globalisation on traditions, languages and
+cultures.
+CG6.2: Recognise resistance to global practice
+that are inimical to our culture.
+CP 5.2: Analyse and make distinct judgement
+about viewpoints expressed in an argument.
+CP6.3: Identify important and appropriate
+alternatives.
+PL5.6: Ability to set and maintain personal
+standards and values.
+
+15
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B7 5.1.1 (CONTINUED): B7 5.1.1.3: Discuss the significance of chastity
+Develop good manners
+Exemplars:
+and learn how to apply
+1. Explain the term “chastity”. E.g. Abstinence from pre-marital sex.
+them in their daily lives
+
+CP 5.6: Demonstrate a thorough understanding
+of generalised concepts and facts specific to
+task or situation
+CG 5.1: Show a strong belongingness to one’s
+culture
+CG 5.4: Develop and exhibit a sense of cultural
+identity
+CG 5.5: Adjust to the demands of customs,
+traditions, values and attitudes of society.
+CG 6.1: Understanding of influences of
+globalisation on traditions, languages and
+cultures
+CG 6.2: Recognise resistance to global practice
+that are inimical to our culture.
+PL 5.6: Ability to set and maintain personal
+standards and values.
+
+2. Indicate ways of leading a chaste life. E.g. avoid bad company, reading
+the Holy Scriptures often and practice its teachings, avoid watching
+pornographic films, etc.
+3. State the importance of living a chaste life. E.g., it is a religious
+command, makes one socially accepted and respected, avoids
+unwanted pregnancies, etc.
+4. Role play ways of leading a chaste life.
+
+© NaCCA, Ministry of Education 2021
+
+16
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B7 5.1.1 (CONTINUED): B7 5.1.1.4: Discuss the teachings of the three main religions on
+manners, decency and chastity
+Develop good manners
+and learn how to apply
+Exemplar:
+them in their daily lives.
+1. Through questions and answers learners identify and explain
+examples of such teachings. For example,
+
+CG 5.1: Show a strong belongingness to one’s
+culture
+CG 5.4: Develop and exhibit a sense of cultural
+identity
+CG 5.5: Adjust to the demands of customs,
+traditions, values and attitudes of society.
+CG 6.1: Understanding of influences of
+globalisation on traditions, languages and
+cultures
+CG 6.2: Recognise resistance to global practice
+that are inimical to our culture.
+CP 5.2: Analyse and make distinct judgement
+about viewpoints expressed in an argument.
+CP 6.3: Identify important and appropriate
+alternatives.
+PL 5.6: Ability to set and maintain personal
+standards and values.
+
+•
+
+•
+
+•
+•
+
+© NaCCA, Ministry of Education 2021
+
+Indigenous African Religion – Ghanaian culture frowns on premarital and extra marital sex. Adolescents are asked to refrain
+from sex before the performance of puberty rites. Ghanaian
+proverbs “Good name is better than riches” and “God hates evil”
+encourage general good behaviour.
+Christianity – Exodus 20:14 and Matthew 5: 28 - warning on
+adultery
+Corinthians 7 – encourages chastity and cautions against adultery
+Qur’an 49: 11 – cautions against insult
+Qur’an 25: 63 – encourages humility even in walking
+
+17
+
+STRAND 5: ETHICS AND MORAL LIFE
+SUB-STRAND 2: SUBSTANCE ABUSE
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B7 5.2.1: Demonstrate
+the need to stay away
+from immoral thoughts
+and actions, with a key
+focus on substance
+abuse
+
+CP 5.1: Ability to combine information
+and ideas from several sources to reach a
+conclusion
+CP 5.4: Generate hypothesis to help solve
+complex problems
+CP 6.4: Ability to identify important and
+appropriate criteria and use them to evaluate
+available alternatives
+CP 5.6: Demonstrate a thorough understanding
+of a generalised concept or facts to task or
+situation.
+PL 5.5: Desire to accept one’s true self and
+overcome weaknesses
+PL 5.6: Ability to set and maintain standards
+and values
+
+B7.5.2.1.1: Summarise the causes of substance abuse
+Exemplars:
+1. Brainstorm on the meaning of substance abuse.
+•
+
+Taking drugs without medical prescription or excessive use of
+drugs
+2. Identify the types of substances that are often abused.
+Types
+• Common drugs such as paracetamol and vitamin B complex.
+• Hard Drugs (these are legally banned) such as marijuana and
+cocaine.
+• Stimulants such as alcohol and tramadol etc.
+3. Discuss the causes of substance abuse.
+Causes
+• Ignorance
+• peer group influence
+• curiosity and adventure, etc.
+
+© NaCCA, Ministry of Education 2021
+
+18
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B7 5.2.1
+(CONTINUED):
+Demonstrate the need
+to stay away from
+immoral thoughts and
+actions, with a key focus
+on substance abuse
+
+CI 6.5: Anticipate and overcome difficulties
+relating to taking initiatives.
+CI 6.7: Look and think about things differently
+and from different perspectives.
+DL 5.5: Evaluate the quality and validity of
+information.
+DL 6.4: Adhere to behavioural protocols that
+prevail in cyberspace.
+DL 6.6: Knowledge and recognition of ethical
+use of information.
+PL 5.5: Desire to accept one’s true self and
+overcome weaknesses.
+PL 5.6: Ability to set and maintain standards
+and values.
+
+B7 5.2.1.2: Discuss the effects of substance abuse.
+.Exemplars:
+1. Show pictures/videos of effects of substance abuse.
+2. With the pictures/videos, learners identify and explain the effects of
+substance abuse.
+Effects
+• Abnormal behaviour
+• Ill-health
+• Economic problems
+• Burden and ridicule to the family, etc.
+
+© NaCCA, Ministry of Education 2021
+
+19
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B7 5.2.1
+(CONTINUED):
+Demonstrate the need
+to stay away from
+immoral thoughts and
+actions, with a key focus
+on substance abuse
+
+CC 9.1: Demonstrate behaviour and skills of
+working towards group goals
+CC 9.3: Understanding roles during group
+activities
+CC 9.4: Help group working on relevant
+activities.
+CC 9.5: Appreciate the importance of all team
+members in discussions and actively encourage
+contribution from their peers in their team.
+PL 5.5: Desire to accept one’s true self and
+overcome weaknesses.
+PL 5.6: Ability to set and maintain standards
+and values.
+PL 6.1: Ability to serve group members
+effectively.
+PL 6.3: Ability to manage time effectively.
+PL 6.4: Ability to manage and resolve conflicts.
+PL 6.7: Actively promote effective group
+interaction and the expression of ideas and
+opinions in way that is sensitive to the feelings
+and background of others.
+
+B7 5.2.1.3: Demonstrate knowledge of teachings from the
+three religions on defensive skills in protecting yourself against
+substance abuse
+Exemplars:
+1. Identify and explain the teachings of the major religions on the need
+to avoid substance abuse.
+Teachings:
+• Christianity Bible (Proverbs 20:1 and 1 Corinthians 6: 19-20)
+• Islam: Qur’an (2:219 and 5: 90-91)
+• Indigenous African Religion: Oral traditions “A man is called a
+drunkard when he misbehaves, not when he drinks” etc.
+Moral Lesson:
+• Adherence to the teachings of one’s religion
+• Say no to drugs when offered
+• Seek help from a counsellor, religious teacher, elders or any
+trusted adult
+• Avoid bad company of friends, etc.
+Learners dramatise the effects of drug abuse and how they will apply
+lessons from the religious teachings on substance abuse in their life.
+
+© NaCCA, Ministry of Education 2021
+
+20
+
+STRAND 6: RELIGION AND ECONOMIC LIFE
+SUB-STRAND 1: WORK, ENTREPRENEURSHIP AND SOCIAL SECURITY
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B7 6.1.1: Cultivate the
+need for hard work and
+develop the spirit of
+entrepreneurship
+
+CP 5.6: Demonstrate a thorough understanding
+of generalised concepts and facts specific to
+task or situation.
+
+B7 6.1.1.1: Explain the meaning of work and entrepreneurship
+Exemplars:
+1. Distinguish among the concepts; “work”, “entrepreneurship”
+and“social security.”
+Work – activity which has the aim of producing something or
+achieving a purpose or results.
+• Entrepreneurship – the process of setting up a new business
+and assuming control of it.
+• Social Security – a social protection programme often backed
+by law to provide monetary assistance to individuals in the event
+of unforeseen future circumstances or upon retirement from
+work.
+2. Identify and explain the various types of work
+•
+
+Types of Work
+• Domestic – washing, sweeping, cooking, etc.
+• Community – clean-up exercises, building of schools, clinics, etc.
+• School (academic and non-academic) – studying, sweeping, games,
+work of school prefects, etc.
+• Work for livelihood/Occupational – teaching, farming,
+carpentry, nursing, policing, etc.
+• Religious work — the work of priests/priestesses, imams,
+church administrators, evangelist etc.
+
+© NaCCA, Ministry of Education 2021
+
+21
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B7 6.1.1 (CONTINUED): B7 6.1.1.2: Discuss the relevance of work from the religious and
+ethical perspectives
+Cultivate the need
+for hard work and
+Exemplars:
+develop the spirit of
+1. Demonstrate knowledge of good work habits. E.g.,
+entrepreneurship
+
+CC 7.4: Identify underlying themes, implications
+and issues when listening.
+CC 9.1: Demonstrate behaviour and skills of
+working toward group objectives.
+CC 9.3: Understand roles during group
+activities.
+CI 5.1: Examine alternatives in creating new
+things.
+CI 5.4: Ability to visualise alternatives,
+seeing possibilities, and identify problems and
+challenges.
+CI 5.5: Ability to try new alternatives and fresh
+different approaches.
+CI 6.5: Anticipate and overcome difficulties
+relating to taking initiatives.
+CI 6.7: Look and think about things differently
+and from different perspectives.
+CP 5.1: Ability to combine information
+and ideas from several sources to reach a
+conclusion.
+CP 6.1: Ability to effectively define goals
+towards solving a problem.
+CP 6.2: Availability to explain plans to attaining
+goals.
+CP 6.3: Identify important and appropriate
+alternatives.
+CP 6.3: Identify important and appropriate
+alternatives.
+PL 5.6: Ability to set and maintain standards
+and values.
+PL 6.3: Ability to manage time effectively.
+
+•
+•
+
+be punctual to work
+avoid over dependence on religion. All three religions teach that a
+hand that does not work, should not eat.
+• eschew laziness and encourage hard work (Proverbs 6:6-11;
+Ghanaian proverbs: ‘Laziness leads to poverty’ and ‘Hard
+work does not break bones.’ Salih Bukhari 1401)
+• plan in advance
+• show dedication to work, etc. (E.g. the Parable of the talents
+(Matthew 25:14-30; Proverbs 10:4-5; Ghanaian proverb: ‘One
+achieves success by taking care of another person’s work.’)
+2. Demonstrate the need to work.
+Importance
+•
+•
+•
+
+© NaCCA, Ministry of Education 2021
+
+it enables us buy our basic needs
+work is good for our health and well-being.
+develop and use of talents, etc.
+
+22
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B7 6.1.1 (CONTINUED): B7 6.1.1.3: Identify steps to be taken to become a successful
+entrepreneur
+Cultivate the need
+for hard work and
+Exemplars:
+develop the spirit of
+1. State the various steps to become an entrepreneur.
+entrepreneurship
+
+CC 7.4: Identify underlying themes, implications
+and issues when listening.
+CC 9.1: Demonstrate behaviour and skills of
+working toward group objectives.
+CC 9.3: Understand roles during group
+activities.
+CI 5.1: Examine alternatives in creating new
+things.
+CI 5.4: Ability to visualise alternatives,
+seeing possibilities, and identify problems and
+challenges.
+CI 5.5: Ability to try new alternatives and fresh
+different approaches.
+CI 6.5: Anticipate and overcome difficulties
+relating to taking initiatives.
+CI 6.7: Look and think about things differently
+and from different perspectives.
+CP 5.1: Ability to combine information
+and ideas from several sources to reach a
+conclusion.
+CP 6.1: Ability to effectively define goals
+towards solving a problem.
+CP 6.2: Availability to explain plans to attaining
+goals.
+CP 6.3: Identify important and appropriate
+alternatives.
+CP 6.3: Identify important and appropriate
+alternatives.
+PL 5.6: Ability to set and maintain personal
+standards and values.
+PL 5.6: Ability to set and maintain standards
+and values.
+PL 6.3: Ability to manage time effectively.
+PL 6.4: Ability to manage and resolve conflicts.
+
+Steps to become an entrepreneur (invite a local successful
+entrepreneur as a resource person).
+•
+•
+•
+•
+•
+•
+•
+•
+
+© NaCCA, Ministry of Education 2021
+
+Setting personal goals and mission for the future
+One has to be innovative
+Calculative and risk taker
+Self-belief
+The nature of business
+Marketing strategy
+Capital
+Human resource, etc.
+
+23
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B7 6.1.1 (CONTINUED): B7 6.1.1.4: Justify the need to become an entrepreneur
+Cultivate the need
+Exemplars:
+for hard work and
+1. Discuss the benefits of entrepreneurship. E.g.
+develop the spirit of
+entrepreneurship
+• freedom to pursue one’s vision
+• flexibility of time
+• employment to other members of society
+• helps in nation-building
+• sense of pride when vision of business is achieved, etc.
+Project Work
+In three groups, learners should take a field research in their
+community into how to become a successful entrepreneur and
+present findings for class discussion.
+
+CI 5.1: Examine alternatives in creating new
+things.
+CI 5.4: Ability to visualise alternatives,
+seeing possibilities, and identify problems and
+challenges.
+CI 5.5: Ability to try new alternatives and fresh
+different approaches.
+CI 6.5: Anticipate and overcome difficulties
+relating to taking initiatives.
+CI 6.7: Look and think about things differently
+and from different perspectives.
+CP 6.1: Ability to effectively define goals
+towards solving a problem.
+CP 6.2: Availability to explain plans to attaining
+goals.
+CP 6.3: Identify important and appropriate
+alternatives.
+CP 6.3: Identify important and appropriate
+alternatives.
+PL 5.6: Ability to set and maintain personal
+standards and values.
+PL 5.6: Ability to set and maintain standards
+and values.
+
+© NaCCA, Ministry of Education 2021
+
+24
+
+BASIC 8
+
+© NaCCA, Ministry of Education 2021
+
+25
+
+STRAND 1: GOD, HIS CREATION AND ATTRIBUTES
+SUB-STRAND 1: THE CREATION STORIES OF THE THREE MAJOR RELIGIONS IN GHANA
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B8 1.1.1: Outline and
+explain the moral
+lessons in the creation
+stories of the three main
+religions in Ghana.
+
+CC 9.1: Demonstrate behaviour and skills of
+working towards group goals.
+CC 9.3: Understand roles during group
+activities.
+CC 9.4: Ability to help group work on relevant
+activities.
+CG 5.1: Show a strong sense of belongingness
+to one’s culture.
+CG 5.4: Develop and exhibit a sense of cultural
+identity.
+CG 6.1: Understanding of influences of
+globalisation on traditions, languages and
+cultures.
+CI 6.7: Look and think about things differently
+and from different perspectives.
+CP 5.1: Ability to combine information
+and ideas from several sources to reach a
+conclusion.
+CP 5.6: Demonstrate a thorough
+understanding of a generalised concept or facts
+to task or situation.
+CP 6.2: Ability to explain plans for attaining
+goals.
+PL 5.2: Demonstrate a sense of feeling or
+belongingness to a group.
+PL 6.2: Division of tasks into solvable units and
+assigning group members to task unit.
+PL 6.3: Ability to manage time effectively.
+
+B8 1.1.1.1: Discuss the creation stories of the three main
+religions in Ghana
+Exemplars:
+1. Give account of the creation stories in the various religions
+Christianity
+o Read the creation story as found in the Bible (Genesis chapter
+1)
+• Islam
+o Read the creation story as found in Qur’an 2:164, Qur’an
+3:190-191; Qur’an 10:3-4
+• Indigenous African Religion
+o Narrate from the oral traditions, the creation stories of
+learners’ indigenous society. For example, among the Akan,
+Ewe, Dagomba, Gonja, Kasem, etc.
+In three groups, learners dramatise their own interpretation of the
+creation stories.
+•
+
+© NaCCA, Ministry of Education 2021
+
+26
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B8 1.1.1 (CONTINUED): B8 1.1.1.2: Identify and explain the moral values in each of the
+creation stories
+Outline and explain the
+moral lessons in the
+Exemplars:
+creation stories of the
+1. Brainstorm to identify the moral values in each of the creation
+three main religions in
+stories. E.g. hard work, orderliness, creativity, responsibility, caring and
+Ghana.
+giving.
+
+CP 5.1: Ability to combine information
+and ideas from several sources to reach a
+conclusion.
+CP 5.6: Demonstrate a thorough
+understanding of a generalised concept or facts
+to task or situation.
+CP 5.8: Identify and explain a confusion,
+uncertainty, or a contradiction surrounding and
+event.
+CP 6.2: Ability to explain plans for attaining
+goals.
+PL 5.2: Demonstrate a sense of feeling or
+belongingness to a group.
+
+In groups, learners dramatise how they apply the moral values in their
+daily life.
+
+© NaCCA, Ministry of Education 2021
+
+27
+
+STRAND 2: RELIGIOUS PRACTICES
+SUB-STRAND 1: RITES OF PASSAGE
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B8 2.1.1: Explain rites
+of passage and identify
+the moral lessons in
+them
+
+CG 5.2: Develop and exhibit ability to defend
+one’s cultural beliefs, practices and norms.
+CG 5.3: Develop and express respect and
+appreciation of others’ culture.
+CG 6.1: Understanding of influence of
+globalisation on traditions, languages and
+cultures.
+
+B8 2.1.1.1: Describe the naming ceremonies/outdooring in the
+three major religions
+Exemplars:
+1. Explain the meaning of rites of passage
+2. Rites of passage refer to the rituals and ceremonies performed when
+a person is moving from one stage of life to another.
+3. Identify the various stages in human life
+Stages
+• Birth
+• Puberty
+• Marriage
+• Death
+4. Identify factors to be considered in choosing a name for a child
+Factors
+• The character of the person whom the child is named after
+• Circumstance surrounding the time of birth of the child
+• Religious affiliation or faith of parents, etc.
+o Look at pictures or view videos of a naming ceremony.
+o Learners watch video or pictures of a naming ceremony
+o Describe how the naming ceremony is performed in the three
+major religions
+Christianity
+A child is named on the eighth day in the church. The ceremony is
+attended by couple’s relatives, friends and church members. A name is
+chosen by the father and the ceremony is officiated by a priest.
+
+© NaCCA, Ministry of Education 2021
+
+28
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B8 2.1.1 (CONTINUED)
+Explain rites of passage
+and identify the moral
+lessons in them
+
+CP 6.1: Ability to effectively define goals
+towards solving a problem.
+CP 6.3: Identify important and appropriate
+alternatives.
+PL5.5: Desire to accept one’s true self and
+overcome weakness.
+
+Islam
+A child is given a name on the eighth day. A ceremony made up of
+couple’s relatives, community members and led by an imam or a
+mallam. A sheep is slaughtered to thank Allah for the health of the
+mother and child.
+Indigenous
+It differs from society to society but normally the child is given a
+name on the eighth day. The ceremony is done by a very
+responsibleand respectable member of the family.
+2. Discuss importance of naming ceremonies.
+Importance
+• Moral education
+• Acceptance of the child into human society
+• The child is given a name and identity
+• It brings people together and unites them etc.
+3. Learners to role play a naming ceremony in their community.
+
+© NaCCA, Ministry of Education 2021
+
+29
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B8 2.1.1 (CONTINUED): B8 2.1.1.2: Explain physical and emotional changes that
+characterise puberty
+Explain rites of passage
+and identify the moral
+Exemplars:
+lessons in them
+1. Explain the meaning of puberty
+•
+
+It is the transition from childhood to adulthood. It occurs
+between the ages of 10 to 19 (WHO).
+2. Discuss physical and emotional changes that occur at puberty
+Physical changes in girls at puberty:
+• Growing of pubic hair
+• Menstruation
+• Breasts develop and increase in size
+• Hips widen
+• Change in height, etc.
+Physical changes in boys at puberty:
+• Pubic hair
+• Break in voice
+• Sperms development
+• Penis grows bigger
+• Change in height etc.
+Emotional changes in both sexes:
+• Curiosity
+• Adventurous
+• Conflict of identity (not child, not adult)
+• Mood swings
+• Development of the urge to have sex, etc.
+Learners to write their concerns relating to puberty anonymously
+and place them in a box. The teacher discusses these concerns in
+classto address any fears or misconceptions about puberty.
+
+© NaCCA, Ministry of Education 2021
+
+30
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B8 2.1.1 (CONTINUED): B8 2.1.1.3: Describe how puberty rites are performed in
+traditional Ghanaian societies
+Explain rites of passage
+and identify the moral
+Exemplars:
+lessons in them
+1. Describe activities performed during puberty.
+
+CG 5.2: Develop and exhibit ability to defend
+one’s cultural beliefs, practices and norms
+CG 5.3: Develop and express respect and
+appreciation of others’ culture.
+CG 6.1: Understanding of influence of
+globalisation on traditions, languages and
+cultures.
+CP 6.1: Ability to effectively define goals
+towards solving a problem
+CP 6.2: Availability to explain plans to attaining
+goals
+PL 5.6: Ability to set and maintain standards
+and values
+PL 6.3: Ability to manage time effectively
+PL 6.4: Ability to manage and resolve conflicts
+
+Some Traditional Societies
+• Bragro of the Akan
+• Dipo of the Krobo
+• Baala of Sissala
+• Sodji-wi of the Chala, etc.
+2. Learners to role play how puberty rites are performed in their
+community.
+3. Identify the significance of puberty rites.
+Significance
+• Moral education
+• The rites prepare the person for married life
+• They equip the person with the skills and knowledge needed for
+adult life
+• They bring people together and unite them, etc.
+4. In two groups, learners debate the motion “Puberty rites are
+outmoded.”
+
+© NaCCA, Ministry of Education 2021
+
+31
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B8 2.1.1 (CONTINUED): B8 2.1.1.4: Describe how a marriage is contracted in the three
+main religions in Ghana
+Explain rites of passage
+and identify the moral
+Exemplars:
+lessons in them
+1. Explain the term marriage.
+
+CG 5.2: Develop and exhibit ability to defend
+one’s cultural beliefs, practices and norms
+CG 5.3: Develop and express respect and
+appreciation of others’ culture.
+CG 6.1: Understanding of influence of
+globalisation on traditions, languages and
+cultures.
+CP 6.1: Ability to effectively define goals
+towards solving a problem
+CP 6.2: Availability to explain plans to attaining
+goals
+PL 5.6: Ability to set and maintain standards
+and values
+PL 6.3: Ability to manage time effectively
+PL 6.4: Ability to manage and resolve conflicts
+
+•
+
+Marriage is a legal union between two adults (man and woman)
+and their families.
+• Types of Marriage Ceremonies (Rites).
+o Customary/Traditional Marriage,
+o Islamic marriage and
+o Christian marriage.
+2. Describe how marriage is performed in the three major religions.
+A. Indigenous African Religion
+Every ethnic group has its own way of performing the marriage
+ceremony. However, there is a general pattern to follow:
+•
+•
+•
+
+Expression of interest by the man’s family
+Background investigation by both families
+Giving of a list of items by the family of the female to the male’s
+family
+• Knocking ceremony
+• Fixing of date for the performance of the marriage ceremony
+• Payment of bride gift, etc.
+B. Christianity
+Christian marriage goes through the following procedure:
+•
+•
+•
+•
+
+© NaCCA, Ministry of Education 2021
+
+Expression of interest by the man’s family
+Courtship and counselling
+Traditional marriage rites
+Wedding/blessing ceremony (exchange of vows and rings).
+
+32
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+B8 2.1.1 (CONTINUED):
+Explain rites of passage
+and identify the moral
+lessons in them
+
+CORE COMPETENCIES
+
+C. Islam
+The process includes the following procedure:
+•
+•
+•
+•
+
+Proposal and acceptance of a woman in marriage (ijawal-qubal).
+Wali - consent of the two families
+Payment of dowry (mahr or sadiqat)
+Marriage (al-nikah) – Deliverance of a sermon by imam to bless
+the marriage. There should be two sincere honest witnesses
+fromeach family.
+• Merrymaking (walima), etc.
+3. In three groups, learners use a short sketch to demonstrate how
+marriage rites are performed in each of the three religions.
+4. Identify and explain the importance of marriage rites.
+Importance of marriage rites
+• Legitimacy to the marriage
+• Introduction of the couple to the community
+• Couple learns their roles and responsibilities in marriage
+• Discourage irresponsible sexual behaviour, etc.
+
+© NaCCA, Ministry of Education 2021
+
+33
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B8 2.1.1 (CONTINUED): B8 2.1.1.5: Describe how death rites are performed in the three
+major religions in Ghana
+Explain rites of passage
+and identify the moral
+Exemplars:
+lessons in them
+1. Explain the concept of death in the three major religions.
+
+CC 9.1: Demonstrate behaviour and skills of
+working toward group objectives
+CC 9.3: Understand roles during group
+activities
+CC 9.4: Help group work on relevant activities.
+CG 5.2: Develop and exhibit ability to defend
+one’s cultural beliefs, practices and norms
+CG 5.3: Develop and express respect and
+appreciation of others’ culture.
+CG 6.1: Understanding of influence of
+globalisation on traditions, languages and
+cultures.
+CP 6.1: Ability to effectively define goals
+towards solving a problem
+CP 6.2: Availability to explain plans to attaining
+goals
+PL 5.6: Ability to set and maintain standards
+and values
+PL 6.3: Ability to manage time effectively
+PL 6.4: Ability to manage and resolve conflicts
+
+Death is the departure of humankind from this earth to the next
+world.
+Indigenous
+Rituals differ from culture to culture, but generally, the process
+includes:
+• preparation of the corpse
+• pre-burial mourning
+• burial mourning
+• post-burial mourning
+Christianity
+The process varies from church to church but, generally, it includes
+bathing and dressing of the body, laying in state either in the family
+house or church premises, church services officiated by a priest, burial
+and funeral rites and memorial service.
+Islam
+The process includes
+• The corpse is given ritual bath (ghusl janaza)
+• Janazah prayer is then performed
+• burial at the cemetery without coffin
+• prayers are also said for the dead after burial
+• funeral rites 3rd day, 7th day, 40th day and a year)
+2. In three groups, learner’s role play how death rites are performed in
+the three religions.
+3. Identify and explain the importance of death rites.
+
+© NaCCA, Ministry of Education 2021
+
+34
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B8 2.1.1 (CONTINUED): Importance of death rites
+Explain rites of passage
+• They psychologically prepare and support the bereaved family.
+and identify the moral
+• They enable the dead to have a smooth entrance to the land of
+lessons in them
+the dead.
+• They remind the living of judgement after death and the need to
+prepare for it.
+• They celebrate the life of the deceased and offer the living
+counsel to learn from the moral qualities of the dead, etc.
+B8 2.1.1.6: Identify and explain the moral lessons in the rites of
+passage.
+Exemplars:
+1. Discuss the moral lessons in the rites of passage.
+Moral lessons
+• Truthfulness
+• Honesty
+• Hard work
+• Chastity before marriage
+• Faithfulness and responsibility in marriage, etc.
+Dramatise how to apply the moral lessons from rites of passage in
+their everyday life activities.
+
+© NaCCA, Ministry of Education 2021
+
+CC 9.1: Demonstrate behaviour and skills of
+working toward group objectives.
+CC 9.3: Understand roles during group
+activities.
+CC 9.4: Help group work on relevant activities.
+CG 5.2: Develop and exhibit ability to defend
+one’s cultural beliefs, practices and norms.
+CG 5.3: Develop and express respect and
+appreciation of others’ culture.
+CG 6.1: Understanding of influence of
+globalisation on traditions, languages and
+cultures.
+CI 5.1: Examine alternatives in creating new
+things.
+CI 5.4: Ability to visualise alternatives,
+seeing possibilities, and identify problems and
+challenges.
+CI 5.5: Ability to try new alternatives and fresh
+different approaches.
+CI 6.5: Anticipate and overcome difficulties
+relating to taking initiatives.
+
+35
+
+STRAND 3: THE FAMILY AND THE COMMUNITY
+SUB-STRAND 1: AUTHORITY AND OBEDIENCE
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B8 3.1.1: Identify and
+explain the importance
+of obeying authority
+
+CC 7.2: Interpret correctly and respond
+to non-verbal communication such as facial
+expression, cues and gestures.
+CC 9.1: Demonstrate behaviour and skills of
+working towards group goals.
+CC 9.3: Understanding roles during group
+activities.
+CC 9.5: Appreciate the importance of all team
+members in discussions and actively encourage
+contribution from their peers in their team.
+CP 5.1: Ability to combine information
+and ideas from several sources to reach a
+conclusion.
+CP 6.4: Ability to identify important and
+appropriate criteria and use them to evaluate
+available alternatives.
+CP 5.6: Demonstrate a thorough understanding
+of a generalised concept or facts to task or
+situation.
+CP 6.3: Identify important and appropriate
+alternative.
+PL 5.2: Demonstrate a sense of feeling or
+belongingness to a group.
+
+B8.3.1.1.1: Identify and explain the various sources of authority
+Exemplars:
+1. Identify the sources of authority at home, school and community
+Home – parents, uncles, aunties, elder siblings, etc.
+School – headteacher, teachers, prefects, etc.
+Community – chiefs, assembly members, priests, imams, opinion
+leaders, queenmothers, etc.
+2. Using a video clip or pictures, identify how people come to have
+authority. E.g., scriptures, elections, traditions, being a parent, old age,
+and constitution.
+•
+•
+•
+
+3. In groups learners dramatise the right and wrong use of authority
+Right use of authority
+• To promote the welfare of others, especially those in need
+• To direct people to have a good relationship with God
+• To seek the interests of those who give us power
+• To be a role model for others to emulate, etc.
+Wrong use of power
+• To amass wealth at the expense of others
+• To molest people
+• To help only our relatives and friends
+• To take advantage of the weak and vulnerable in society, etc.
+
+© NaCCA, Ministry of Education 2021
+
+36
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B8 3.1.1 (CONTINUED): B8 3.1.1.2: Explain the need to obey God, parents and those in
+authority
+Identify and explain the
+importance of obeying
+Exemplars:
+authority
+1. Learners to identify and discuss different reasons for obeying
+authority
+Reasons
+• It is a command from God (Ghanaian proverb: “Woe to a person
+who has no elder (authority)”; Deuteronomy. 6 and Qur’an 4:59)
+• We learn from the experience of people in authority
+• It makes us be law abiding
+• People in authority guide us to do the right and avoid the wrong
+• To promote peace in society
+• Obeying authority ensures progress, etc.
+Project Work
+Create a story to demonstrate the consequences of disobeying authority.
+Present it to class for discussion.
+
+© NaCCA, Ministry of Education 2021
+
+37
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B8 3.1.1 (CONTINUED): B8 3.1.1.3: Demonstrate how to apply the rules and regulations
+from authority in daily life
+Identify and explain the
+importance of obeying
+Exemplars:
+authority
+1. Dramatise how to apply rules and regulations from authority
+Home/family rules – performing household chores, respecting
+orders of parents and not bullying younger siblings, etc.
+• School rules and regulations – punctuality at and regularity
+to school, doing classwork and homework, sweeping the school
+compound, etc.
+• Communal rules and regulations – not littering our
+neighbourhood, respect for the elderly, involving oneself in
+communal work, etc.
+• Religious rules and regulations – going to church/mosque on
+time, dressing appropriately to religious meetings, paying church
+dues, paying zakat, and sadaqa, etc.
+• National rules and regulations – obeying traffic rules, singing
+the national anthem, showing respect to national symbols such
+as the flag and currency, punctuality to work, avoiding corruption,
+etc.
+Discuss lessons drawn out from the drama.
+•
+
+© NaCCA, Ministry of Education 2021
+
+38
+
+STRAND 4: RELIGIOUS LEADERS AND PERSONALITIES
+SUB-STRAND 1: PROPHETS AND CALIPHS
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B8 4.1.1: Identify and
+explain the moral
+lessons that can be
+learned from the
+exemplary lives of the
+prophets and caliphs
+
+CP 5.1: Ability to combine information
+and ideas from several sources to reach a
+conclusion
+CP 6.4: Ability to identify important and
+appropriate criteria and use them to evaluate
+available alternatives
+DL 5.5: Evaluate the quality and validity of
+information
+
+B8 4.1.1.1: Describe the mission of the prophets
+Exemplars:
+1. Explain the meaning of a prophet.
+A prophet is a person who serves as an intermediary between
+God and humans by delivering messages from God or teachings
+from God to humans. A prophet is a mouthpiece of God.
+2. Note: Watch video clips and/or pictures of prophets in both
+Christianity and Islam.
+•
+
+3. Identify some prophets in the video or the pictures.
+E.g.
+• Noah/Nuh
+• Abraham/Ibrahim and
+• Moses/Musah.
+4. Read part of the Qur’an and the Bible on the selected prophets and
+discuss their background, call and mission.
+A. Noah/Nuh
+(Qur’an 7:59; 17:3 and 26:116) and the Bible (Genesis 6:11-22; 7,
+8, 9:1-19)
+B. Abraham/Ibrahim
+(Qur’an 4:125; 16:120-122 and the Bible (Genesis12:1-9; 15; 17;
+18; 19 and 22)
+C. Moses/Musah
+Qur’an (20:9-99; 28:3-4; 9:39) and the Bible (Exodus 2-12; 13, 14,
+15 and 20, etc.)
+
+© NaCCA, Ministry of Education 2021
+
+39
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B8 4.1.1 (CONTINUED): B8 4.1.1.2: Outline the mission and exemplary lives of the
+Caliphs
+Identify and explain the
+moral lessons that can
+Exemplars:
+be learned from the
+1. Explain the meaning of Caliph in Islam.
+exemplary lives of the
+prophets and Caliphs
+-Caliphs are the successors of Holy Prophet Muhammad (SAW)
+
+CI 5.2: Ability to merge simple/complex ideas
+to create novel situations or things
+PL 6.1: Ability to serve group members
+effectively
+PL 6.3: Ability to manage time effectively
+PL 6.4: Ability to manage and resolve conflicts
+PL 6.7: Actively promote effective group
+interaction and the expression of ideas and
+opinions in way that is sensitive to the feelings
+and background of others.
+
+2. Identify the Caliphs.
+Caliphs – Abu Bakr Ibn Abi Quhaffah; Umar Ibn Khattab; Usman Ibn
+Affan; Ali Ibn Abi Talib.
+3. State the contributions of the Caliphs.
+Caliphs
+a. Conquered Arabia and reaffirmed the Islamic faith after the death
+of Prophet Muhammad (SAW).
+b. Compiled the Qur’an into one volume
+c. Organised public treasury and paid pensions to the companions
+of the prophet etc.
+
+© NaCCA, Ministry of Education 2021
+
+40
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B8 4.1.1 (CONTINUED): B8 4.1.1.3: Examine lessons from the exemplary lives of the
+Prophets and Caliphs
+Identify and explain the
+moral lessons that can
+Exemplars:
+be learned from the
+1. Identify and explain the moral lessons in the lives of the prophets and
+exemplary lives of the
+the Caliphs.
+prophets and Caliphs
+
+CP 5.1: Ability to combine information
+and ideas from several sources to reach a
+conclusion.
+CP 6.4: Ability to identify important and
+appropriate criteria and use them to evaluate
+available alternatives.
+CP 5.6: Demonstrate a thorough understanding
+of a generalised concept or facts to task or
+situation.
+CP 6.1: Ability to effectively define goals
+towards solving a problem.
+PL 5.5: Desire to accept one’s true self and
+overcome weaknesses.
+PL 5.6: Ability to set and maintain standards
+and values.
+PL 6.1: Ability to serve group members
+effectively.
+PL 6.3: Ability to manage time effectively.
+PL 6.4: Ability to manage and resolve conflicts.
+PL 6.7: Actively promote effective group
+interaction and the expression of ideas and
+opinions in way that is sensitive to the feelings
+and background of others.
+
+Moral Lessons
+• Patriotism
+• Perseverance
+• Courage
+• Hard work
+• Peace lovers
+• Led exemplary lives
+• Led people to righteousness (God/Allah)
+• Sacrifice
+• Humility
+2. Dramatise aspects of the lives of the prophet and the Caliphs.
+3. Learners to role play four moral lessons learned from the lives the
+prophets and the Caliphs.
+Project Work:
+In seven groups, write an essay on the mission of each of the three
+named prophets and the Caliphs. Present your essays toclass for
+discussion.
+
+© NaCCA, Ministry of Education 2021
+
+41
+
+STRAND 5: ETHICS AND MORAL LIFE
+SUB-STRAND 1: MORAL TEACHINGS IN THE THREE MAJOR RELIGIONS IN GHANA
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B8 5.1.1: Exemplify the
+moral teachings from
+the Bible, Qur’an and
+Oral Traditions
+
+CI 5.4: Ability to visualise alternatives,
+seeing possibilities, and identify problems and
+challenges.
+CI 5.5: Ability to try new alternatives and fresh
+different approaches.
+CI 5.7: Putting forward constructive comments,
+ideas, explanations and new ways of doing
+things.
+CP 5.1: Ability to combine information
+and ideas from several sources to reach a
+conclusion.
+CP 6.4: Ability to identify important and
+appropriate criteria and use them to evaluate
+available alternatives.
+CP 5.6: Demonstrate a thorough understanding
+of a generalised concept or facts to task or
+situation.
+CP 6.1: Ability to effectively define goals
+towards solving a problem.
+
+B8 5.1.1.1: Identify and explain the moral teachings from the
+Bible, Qur’an and Oral Traditions
+Exemplars:
+1. Learners discuss the examples below to identify key moral teachings of
+the three major religions.
+Christian:
+• The Ten Commandments (Exodus 20:1-17)
+• Moral Teachings found in the book of Proverbs (10-12)
+• The Teachings of Jesus e.g. Parables (Matthew 13:1-23 or Luke 8:4- 15;
+Matthew 13:24-52; Luke 15:11-31; Luke 16:1-13; Luke 10:25-37 etc.)
+• Sermon on the Mount (Matthew 5-7)
+• Moral Teachings as found in the Epistle of James (1-5).
+• Moral Teachings as found in the Letter to the Ephesians (15:21)
+Islam:
+• Social Justice (Qur’an 16:90; Qur’an 4:58); Qur’an 5:9)
+• Duty to parents (Qur’an 17:23-24)
+• Teasing people and being mischievous (Qur’an 33:58)
+• Patience (Qur’an 2:45)
+• Courage (Qur’an 2:178-179)
+• Cleanliness (Qur’an 5:6)
+• Humility (Qur’an 31:19-20)
+• Steadfastness (Qur’an 2:155)
+• Forbidding evil and enjoying good life (Qur’an 6:121; Qur’an 3:110)
+• Adultery and fornication (Qur’an 17:32)
+• Controlling anger (Qur’an 3:135)
+• Good life (Qur’an 11:115)
+• Mercy (Qur’an 42:41; Qur’an 7:157)
+
+© NaCCA, Ministry of Education 2021
+
+42
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B8 5.1.1 (CONTINUED): Indigenous African Religion:
+Exemplify the moral
+• Truthfulness and honesty
+teachings from the
+• Respect, especially for the elderly
+Bible, Qur’an and Oral
+• Patriotism
+Traditions
+• Good name
+• Humility and obedience
+• Communalism
+• Hard work
+• Courage and perseverance
+• Generosity and love for each other
+• Justice and fairness
+• Patience
+• Sexual purity
+• Peace
+• Tolerance
+• Care and reverence for human life, etc.
+Proverbs and Wise Sayings:
+• Unity is strength
+• Good name is better than riches
+• Had I known is always at last
+• Two heads are better than one
+• Patience moves mountains
+• A bird that does not fly out, stays hungry, etc.
+Moral Teachings from Taboos:
+• Occupational taboos
+• Food and drinks taboos
+• Royal taboos
+• Sacred places taboos
+• Environmental taboos
+• Sexual taboos, etc.
+© NaCCA, Ministry of Education 2021
+
+43
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B8 5.1.1 (CONTINUED): B8 5.1.1.2: Demonstrate how to apply the moral teachings from
+the three main religions in their daily life
+Exemplify the moral
+teachings from the
+Exemplars:
+Bible, Qur’an and Oral
+1. Discuss the application of the moral teachings in their daily life
+Traditions
+
+CC 9.1: Demonstrate behaviour and skills of
+working towards group goals.
+CC 9.3: Understanding roles during group
+activities.
+CC 9.4: Help group work on relevant activities.
+CC 9.5: Appreciate the importance of all team
+members in discussions and actively encourage
+contribution from their peers in their team.
+CI 5.1: Examine alternatives in creating new
+things.
+CI 5.2: Ability to merge simple/complex ideas
+to create novel situations or things.
+CI 5.4: Ability to visualise alternatives,
+seeing possibilities, and identify problems and
+challenges.
+CI 5.5: Ability to try new alternatives and fresh
+different approaches.
+CP 5.1: Ability to combine information
+and ideas from several sources to reach a
+conclusion.
+CP 6.1: Ability to effectively define goals
+towards solving a problem.
+CP 6.2: Availability to explain plans to attaining
+goals.
+CP 6.3: Identify important and appropriate
+alternatives.
+CP 6.4: Ability to identify important and
+appropriate criteria and use them to evaluate
+available alternatives.
+
+2. Dramatise the moral teachings of the three major religions.
+Project Work
+Divide class into three groups and ask each group to arrange the moral
+teachings of each of the three religions that have been discussed according
+to those that they find easy to apply in their daily lives and those they
+find difficult to apply. Learners should offer reasons for their choices and
+submit the work anonymously in a box. Teacher should use the choices
+oflearners in a discussion to help learners improve on the application of
+themoral teachings.
+
+© NaCCA, Ministry of Education 2021
+
+44
+
+STRAND 6: RELIGION AND ECONOMIC LIFE
+SUB-STRAND 1: MONEY
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B8 6.1.1: Plan the wise
+use of money
+
+CP 5.1: Ability to combine information
+and ideas from several sources to reach a
+conclusion.
+CP 5.6: Demonstrate a thorough understanding
+of a generalised concept or facts to task or
+situation.
+
+B8 6.1.1.1: Explain the term “money” and indicate its usefulness.
+Exemplars:
+1. Look at pictures of money or real Ghanaian currency notes and coins,
+and explain the meaning of money and its usefulness.
+Meaning of Money:
+• Money is anything accepted as legal tender and can be used as
+medium of exchange.
+Usefulness of Money:
+• used to promote God’s work
+• motivation to work
+• used to acquire our basic needs e.g. food, clothing, shelter,
+education
+• used to prepare for the future when we are not strong to work
+or we retire from work, e.g., social security
+• used to help the poor and needy in society, etc.
+
+© NaCCA, Ministry of Education 2021
+
+45
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B8 6.1.1 (CONTINUED): B8 6.1.1.2: Identify and explain honest ways of acquiring money
+Plan the wise use of
+Exemplars:
+money
+1. In groups, learners explain the honest ways of acquiring money as
+taught by the three major religions.
+
+CP 6.2: Availability to explain plans to attaining
+goals
+CP 6.3: Identify important and appropriate
+alternatives
+CP 6.4: Ability to identify important and
+appropriate criteria and use them to evaluate
+available alternatives
+PL 6.1: Ability to serve group members
+effectively
+PL 6.4: Ability to manage and resolve conflicts
+PL 6.7: Actively promote effective group
+interaction and the expression of ideas and
+opinions in way that is sensitive to the feelings
+and background of others.
+
+Generally, money is believed to be given to humankind by God. But, in
+addition, they teach the following:
+Islam
+• Hard work (Qur’an 53:39-41)
+• Collecting interest on loan (Qur’an 2:274-276)
+• Gambling (Qur’an 5:90-91).
+• Money should not be acquired through begging unless very
+necessary.
+Christianity
+• Hard work (Proverbs 14: 23-24; Proverbs 6:6-8; Colossians
+3:23-24; Romans 11: 12-13)
+• Money should be acquired through good stewardship (Parable of
+the Talent Matthew 25-14-30)
+• Money should be acquired honestly and not from the exploitation
+of the poor and the weak (Proverbs 22:22-23; Proverbs 28:8) and
+gambling (Amos 4; Exodus 20: 17 and Luke 12: 15).
+Indigenous African Religion
+• Hard work
+• Prudence: Akan Proverb - “One cannot be feasting and at the
+same time become rich”.
+• Creativity brings wealth - ‘Poverty causes one to think creatively’
+• Good stewardship: “If one takes good care of
+another’spossession, one also gets possession”.
+• Money must not be acquired dishonestly, for example through
+robbery and the exploitation of the poor and the weak in society:
+If the wind tries to pick an object with speed, it leaves it behind.
+
+© NaCCA, Ministry of Education 2021
+
+46
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+B8 6.1.1 (CONTINUED):
+Plan the wise use of
+money
+
+2. Give reasons for acquiring money honestly.
+•
+
+It is sin to dishonestly acquire money, e.g. from sakawa. (cyber
+fraud)
+• It is not good to take something which does not belong to you.
+• Dishonest acquisition of money brings chaos to society, etc.
+• Dishonest acquisition of money such as not paying the social
+security of employees deprives them of income when they retire
+from active work.
+3. Develop habit of saving money for future use.
+•
+•
+•
+
+•
+
+© NaCCA, Ministry of Education 2021
+
+CORE COMPETENCIES
+
+Get a place you can safely save money (e.g. in a saving box
+Decide on an amount of money you can save either daily or
+weekly from your pocket money.
+At the end of the term and with the help of your parents count
+all your savings and open an account with a financial institution to
+save the money.
+Start the daily or weekly saving again.
+
+47
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B8 6.1.1 (CONTINUED): B8 6.1.1.3: Discuss the appropriate ways of using money
+Plan the wise use of
+Exemplars:
+money
+1. Learners brainstorm to identify good ways of using money from the
+perspective of the three major religions:
+
+CP 6.4: Ability to identify important and
+appropriate criteria and use them to evaluate
+available alternatives.
+PL 5.5: Desire to accept one’s true self and
+overcome weaknesses.
+PL 5.6: Ability to set and maintain standards
+and values.
+PL 6.1: Ability to serve group members
+effectively.
+PL 6.3: Ability to manage time effectively.
+PL 6.4: Ability to manage and resolve conflicts.
+PL 6.7: Actively promote effective group
+interaction and the expression of ideas and
+opinions in way that is sensitive to the feelings
+and background of others.
+
+•
+
+Helping the poor and the needy (Bible teachings 1 Peter 4:10;
+Deuteronomy 15:7-11); Qur’anic teachings on zakat and sadaqa
+(Qur’an 2:215, 3:134; Qur’an 9:30; Qur’an 9:60 and 9:103).
+• Earning money from unlawful sources (fraud, armed robbery;
+sakawa; embezzlement and corruption) is not appropriate
+• From Oral traditions, “The person who gives to the poor
+receivesa reward from God.”
+• Taking care of the family (Qur’an 17:23-4; 46:15); (Bible
+Deuteronomy 15: 7-11; 1 Timothy 5: 8); Oral traditions: “If
+someone takes care for you to grow teeth, you also must take
+care for the one to lose the teeth” and “the father is a shield for
+the family.”
+• For charitable work such as building of schools, hospitals,
+mosques, palaces, etc.
+2. Discuss bad ways of using money from the perspective of the three
+religions.
+• Using money to exploit others
+• Lavish spending of money
+• Squandering money for heirs to pay off indebtedness
+• Using money to make others suffer etc.
+3. Put learners into two groups to come out with a sketch to
+demonstrate a good way and a bad way of using money.
+Project Work
+Write an essay on the wise ways of using money..
+
+© NaCCA, Ministry of Education 2021
+
+48
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B8 6.1.1 (CONTINUED): B8 6.1.1.4. Discuss the benefits of the SSNIT pension scheme
+and people who are qualified to benefit.
+Plan the wise use of
+money
+The SSNIT Pension Scheme
+The Social Security and National Insurance Trust (SSNIT)is the institution
+established by law to collect and manage the social security contributions
+of workers. Its main objective is to “ensure the provision of social
+protection for the working population for various contingencies including
+old age, invalidity and emigration and death” (Ref. Act 766 and Act 883).
+Those qualified for SSNIT benefits
+1. The worker upon retirement or invalidity (e.g., sickness or accident)
+
+CC 9.1: Demonstrate behaviour and skills of
+working towards group goals.
+CC 9.3: Understanding roles during group
+activities.
+CC 9.4: Help group work on relevant activities.
+CC 9.5: Appreciate the importance of all team
+members in discussions and actively encourage
+contribution from their peers in their team.
+DL 5.5: Evaluate the quality and validity of
+information.
+DL 6.4: Adhere to behavioural protocols that
+prevail in cyberspace.
+DL 6.6: Knowledge and recognition of ethical
+use of information.
+PL 6.1: Ability to serve group members
+effectively.
+PL 6.3: Ability to manage time effectively.
+PL 6.4: Ability to manage and resolve conflicts.
+PL 6.7: Actively promote effective group
+interaction and the expression of ideas and
+opinions in way that is sensitive to the feelings
+and background of others.
+
+2. Dependents upon death of worker
+3. Foreigners when permanently leaving Ghana
+Exemplar
+In groups, learners identify the role of the employer and the employee in
+social security contributions and present findings to class for discussion.
+Employer
+Ensures that all employees have registered with SSNIT
+Prompt and regular payments of social security of employees
+Keeps records of all workers’ social security contributions
+Employee
+Must register with SSNIT and obtain his/her social security number
+which must not be transferred to anybody whatsoever
+Prompt and regular payment of his or her social security
+Ensures that his/her social security contributions is regularly and
+promptly paid by the employer
+In groups, learners dramatise the effects of payment and non-payment
+of SSNIT contributions on a) the employer, b) employee and c) the
+family of the employee
+
+© NaCCA, Ministry of Education 2021
+
+49
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B8 6.1.1 (CONTINUED): Project Work: Learners to visit the internet website of SSNIT and
+search for information on its functions and benefits workers get from
+Plan the wise use of
+social security contributions for class discussions.
+money
+
+© NaCCA, Ministry of Education 2021
+
+50
+
+STRAND 6: RELIGION AND ECONOMIC LIFE
+SUB-STRAND 2: BRIBERY AND CORRUPTION
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+CORE COMPETENCIES
+B8 6.2.1: Explain the
+need to avoid bribery
+and corruption and the
+ways to do so.
+
+B8 6.2.1.1: Explain the terms “bribery” and “corruption”.
+Exemplars:
+1. Differentiate between ‘bribery’ and ‘corruption’.
+Bribery – phenomenon of offering something (usually money) in
+order to gain unfair advantage for private gain
+Corruption – the use of one’s position to amass illegal wealth for
+personal gain.
+Examples of acts considered as bribery and corruption include:
+•
+•
+
+•
+•
+•
+
+Not paying taxes to the state
+Not paying social security contributions of workers to SSNIT, the
+official body mandated by law to manage the money on behalf of
+workers
+Connivance between the employer and the employee to pay less
+or not to pay social security contributions at all
+Employing somebody not qualified to do a job
+Collecting money before performing assigned functions
+
+B8 6.2.1.2: Identify the causes and effects of bribery and
+corruption
+Exemplars
+1. In groups, learners identify the causes of bribery and corruption. E.g.,
+•
+•
+•
+•
+•
+© NaCCA, Ministry of Education 2021
+
+CP 5.4: Generate hypothesis to help solve
+complex problems.
+CP 6.4: Ability to identify important and
+appropriate criteria and use them to evaluate
+available alternatives.
+PL 5.5: Desire to accept one’s true self and
+overcome weaknesses.
+PL 5.6: Ability to set and maintain standards
+and values.
+
+get-rich-quick attitude
+low wages and salaries
+excessive/high dependency ratio
+greed
+inadequate supervision at the work place, etc.
+
+CP 5.4: Generate hypothesis to help solve
+complex problems
+CP 5.6: Demonstrate a thorough understanding
+of a generalised concept or facts to task or
+situation.
+CP 5.8: Identify and prove misconceptions
+about a generalised concept or fact specific to a
+task or situation
+CP 6.1: Ability to effectively define goals
+towards solving a problem
+51
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B8 6.2.1 (CONTINUED):
+Explain the need to
+avoid bribery and
+corruption and the ways
+to do so.
+
+CP 6.2: Availability to explain plans to attaining
+goals.
+CP 6.3: Identify important and appropriate
+alternatives.
+CP 6.4: Ability to identify important and
+appropriate criteria and use them to evaluate
+available alternatives.
+CP 6.4: Ability to identify important and
+appropriate criteria and use them to evaluate
+available alternatives.
+CP 6.4: Ability to identify important and
+appropriate criteria and use them to evaluate
+available alternatives.
+PL 5.5: Desire to accept one’s true self and
+overcome weaknesses.
+PL 5.6: Ability to set and maintain standards
+and values
+PL 5.2: Demonstrate a sense of feeling or
+belongingness to a group.
+PL 5.5: Desire to accept one’s true self and
+overcome weaknesses.
+PL 5.6: Ability to set and maintain standards
+and values.
+PL 6.1: Ability to serve group members
+effectively.
+PL 6.3: Ability to manage time effectively
+PL 6.4: Ability to manage and resolve conflicts
+PL 6.7: Actively promote effective group
+interaction and the expression of ideas and
+opinions in way that is sensitive to the feelings
+and background of others.
+
+2. Using Think-Pair and Share, learners discuss the effects of bribery and
+corruption on the state
+Effects
+• misuse of state resources
+• leads to low productivity
+• retards national development
+• tarnishes the reputation of the country home and abroad.
+3. Explain the need to avoid bribery and corruption.
+• corruption is against the will of God/Allah
+• it does not encourage honesty and hard work
+• in order to live a flawless life
+• promote justice in the country
+bribery and corruption in the form of employers failing to pay
+workers’ social security contributions to SSNIT prevents workers or
+their dependents from benefiting from their income when needed.
+4. Examine the moral values that can be used to address bribery and
+corruption
+•
+•
+•
+
+Leadership by example
+Blend moral and academic training as a basis to employ workers
+Be content with what you have honestly earned (see Proverbs
+10:2-3; Exodus 20:19 (the tenth Commandment); Deuteronomy
+25: 13-16. Qur’an 2:188; Qur’an 2:275; Qur’an 3:130; Qur’an
+89:10-13)
+• Proverb: Good name is better than riches.
+• Love thy neighbour as thyself, etc.
+Project Work
+In groups, learners research into the consequences of bribery and
+corruption from the internet, newspaper, etc. on the society. The groups’
+findings are discussed in class.
+© NaCCA, Ministry of Education 2021
+
+52
+
+BASIC 9
+
+© NaCCA, Ministry of Education 2021
+
+53
+
+STRAND 1: GOD, HIS CREATION AND ATTRIBUTES
+SUB-STRAND 1: THE PURPOSE AND USEFULNESS OF GOD’S CREATION
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B9 1.1.1: Describe and
+explain the purpose
+and usefulness of God’s
+creation
+
+CP 5.1: Ability to combine information
+and ideas from several sources to reach a
+conclusion
+CP 6.4: Ability to identify important and
+appropriate criteria and use them to evaluate
+available alternatives
+CI 6.7: Look and think about things differently
+and from different perspectives
+CI 6.8: Recognise and generalise information
+and experience; search for trends and patterns
+CI 6.9: Interpret and apply learning in new
+context
+CI 7.4: Imagining and seeing things in a different
+way
+
+B9 1.1.1.1: Identify the purpose and usefulness of God’s creation
+Exemplars:
+1. Guide learners to recall the creation stories they learned at B8.
+•
+
+With Think-Pair Share, learners recollect lessons learned from the
+creation stories.
+2. Identify the purpose and usefulness of God’s creation. E.g.
+•
+•
+•
+•
+•
+•
+
+Humankind – to serve/worship God, care for other creatures
+(stewardship), etc.
+Animals – security, companionship, food, clothing
+Plants – food, medicine, shelter, beautification.
+Water bodies – food, transportation, irrigation, electricity,
+domestic and industrial use.
+Heavenly bodies – light, energy, time and seasons.
+Note: In science you discussed diversity of matter where you
+learned that each organism in nature plays a role in nature.
+Learners must come to the realisation that all creation of God is
+for a purpose.
+
+Project Work
+Draw a table indicating four things created by God and the purpose
+of each.
+
+© NaCCA, Ministry of Education 2021
+
+54
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B9 1.1.1 (CONTINUED): B9 1.1.1.2: Explain how the complex nature of things created by
+Describe and explain the God reveals His nature
+purpose and usefulness
+Exemplars
+of God’s creation
+1. Learners brainstorm on how creation reveals God’s complex nature.
+E.g.
+
+CP 5.1: Ability to combine information
+and ideas from several sources to reach a
+conclusion.
+CP 6.4: Ability to identify important and
+appropriate criteria and use them to evaluate
+available alternatives.
+CI 6.7: Look and think about things differently
+and from different perspectives.
+CI 6.8: Recognise and generalise information
+and experience; search for trends and patterns
+CI 6.9: Interpret and apply learning in new
+context.
+CI 7.4: Imagining and seeing things in a different
+way.
+PL 6.1: Ability to serve group members
+effectively.
+PL 6.3: Ability to manage time effectively.
+PL 6.4: Ability to manage and resolve conflicts.
+PL 6.7: Actively promote effective group
+interaction and the expression of ideas and
+opinions in way that is sensitive to the feelings
+and background of others.
+CG 6.1: Understanding of influences of
+globalisation on traditions, languages and
+cultures.
+CG 6.4: Exhibit a sense of nationality and
+global identity.
+
+•
+
+There is design in nature as can be seen from changes in seasons
+and what is done in each season, and the beauty in nature e.g.
+flowers, birds, rivers etc.). These show God as a planner and
+designer.
+• All things created depend on each other for survival. This
+showsthe caring nature of God.
+2. In groups, learners discuss what the world would be like without key
+elements of God’s creation and present it in class.
+
+© NaCCA, Ministry of Education 2021
+
+55
+
+STRAND 1: GOD, HIS CREATION AND ATTRIBUTES
+SUB-STRAND 2: THE ENVIRONMENT
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B9 1.2.1: Explain why it is
+important to care for the
+environment and how to
+do so
+
+B9 1.2.1.1: Describe human activities that destroy the
+environment
+
+CC 7.1: Identify words or sentences in context
+appropriately.
+CC 7.5: Identify and analyse different point of
+views of speaker.
+CC 8.3: Apply appropriate diction and
+structure sentences correctly for narratives,
+persuasive, imaginative and expository purposes.
+CC 8.4: Anticipate different responses from
+theaudience and plan for them.
+CC 9.3: Understanding roles during group
+activities.
+CC 9.4: Help group working on relevant
+activities.
+CC 9.5: Appreciate the importance of all team
+members in discussions and actively encourage
+contribution from their peers in their team.
+DL 5.5: Evaluate the quality and validity of
+information.
+DL 6.4: Adhere to behavioural protocols that
+prevail in cyberspace.
+DL 6.6: Knowledge and recognition of ethical
+use of information.
+PL 5.2: Demonstrate a sense of feeling or
+belongingness to a group.
+PL 6.1: Ability to serve group members
+effectively.
+PL 6.3: Ability to manage time effectively.
+PL 6.4: Ability to manage and resolve conflicts.
+
+Exemplars:
+1. Take learners on a nature walk. Learners to observe and note down
+human activities that destroy the environment.
+2. Learners look at pictures and video on the negative effects of human
+activities on the environment. Such pictures and videos are available
+on the internet.
+3. Based on findings from the nature walk and the video/pictures
+learners identify human activities that destroy the environment. For
+example,
+Human Activities
+• Illegal tree felling
+• Illegal sand winning
+• Illegal mining
+• Bush burning
+• Over grazing
+• Over hunting
+• Hunting when hunting is banned
+• Water pollution
+• Weeding around water bodies
+• Improper fishing methods
+• Fishing at a time fishes are laying eggs for hatching
+
+© NaCCA, Ministry of Education 2021
+
+56
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B9 1.2.1 (CONTINUED):
+Explain why it is
+important to care for the
+environment and how to
+do so
+
+4. Discuss how the above human activities destroy the environment.
+
+PL 6.7: Actively promote effective group
+interaction and the expression of ideas and
+opinions in way that is sensitive to the feelings
+and background of others.
+
+E.g.,
+• Illegal tree felling leads to the removal of the forest cover, thereby
+exposing land to direct sunshine and erosion.
+• Illegal mining, especially in rivers and along river banks, destroys
+water bodies and poisons fishes and other organisms that live in
+water
+• Ploughing/weeding around water bodies exposes water bodies to
+direct sunshine leading to evaporation that causes the rivers to
+dry up.
+• Over grazing leaves the land bare and exposing land to direct
+sunshine and erosion
+• All these lead to climate change: poor rainfall patterns, floods,
+rainstorms, drought, famine, etc.
+5. Debate on the motion “The benefits of tree felling outweighthe
+negative effects.”
+9.1.2.1.2: Identify and describe how indigenous Ghanaian
+culture helps in taking care of the environment
+Exemplar:
+1. Identify aspects of the environment in learners’ locality regarded as
+sacred, and the rationale behind it.
+Indigenous Ghanaian understanding of the environment
+Humans live in a religious environment and aspects of the
+environment are closely related to God, the gods, the ancestors and
+humans. Thus, the environment has both a physical aspect that can
+be seenand an unseen spiritual aspect.
+Reasons for the sacredness of aspects of the environment
+Land
+The earth has a spiritual part regarded as a goddess called Asase Yaa
+by the Asante and Asase Afua by the Fante. The Ewe call her Nyibgla.
+
+© NaCCA, Ministry of Education 2021
+
+57
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+B10 1.1.1 (CONTINUED):
+Explain why it is
+important to care for the
+environment and how to
+do so
+
+Water bodies
+• The sea Bosompo (Akan), Nai (Ga)
+• Lagoons – Naa Korley (Korley Lagoon), Naa Sakumono
+(Sakumono Lagoon) both among the Ga; Benya (Elmina)
+• Lakes – Bosomtwe
+• Rivers – Pra, Ankobra, Tano
+• Stones – the mystic stone at Larabanga
+• Animals – Some animals have totemic relations with humankind.
+Totems are objects from the plant and animal kingdom that
+humans being are related with. All the seven or eight Akan clans
+have animals as their totems. For example, Bretuo or Etwina has
+the leopard as its totem, Kasenas have the crocodile, etc.
+• Some heavenly bodies are associated with God. To the Akan
+thesky is the eyes of God. The Ewe believe God expresses his
+angerthrough thunder, so thunder is a deity revered in the Yeve
+cult ofthe Anlo.
+• Forest and plant life – Parts of forests where the founders of
+communities were buried and where royals are buried are
+regarded as sacred. For example, Nananompo of the Fantes
+at Mankesim and Dodowa Forest.
+• Because of the above beliefs, there are taboos associated with
+nature which help to preserve it.
+Discuss the importance of the environment
+Importance
+• Aspects of nature are revered or respected.
+• Trees around water bodies are not felled helping to preserve the
+water bodies
+• Hunting is not allowed in sacred forests so animals use them as
+sanctuary
+
+© NaCCA, Ministry of Education 2021
+
+CORE COMPETENCIES
+
+58
+
+CONTENT STANDARD
+B9 1.2.1 (CONTINUED):
+Explain why it is
+important to care for the
+environment and how to
+do so
+
+INDICATORS AND EXEMPLARS
+•
+•
+•
+
+Days and seasons are set aside where fishing is not allowed
+allowing the fish to hatch and increase their stock
+Farming is not allowed around water bodies which help to
+preserve them.
+Types of fish and animals are not killed for human consumption
+thereby conserving them
+
+B9 1.2.1.3: Discuss reasons for taking care for the environment.
+Exemplars:
+1. Demonstrate ways of protecting the environment
+• Reforestation
+• Proper farming practices
+• Proper disposal of waste
+• Proper mining practices, etc.
+2. Explain why indigenous Ghanaians take care of the environment.
+Care of the environment
+•
+•
+•
+•
+
+God reveals Himself to humans through the environment
+Humans are related to the environment.
+The gods reside in nature.
+Aspects of the environment is linked to the history of
+communities.
+• Humans depend on the environment for their survival, etc.
+3. Dramatise how to apply lessons from indigenous Ghanaian attitudes
+towards the environment.
+Project Work
+Divide learners into groups to take care for the school’s environment,
+e.g. planting trees, growing grass and desilting gutters. Each group
+should keep records of their activities and how they are affecting the
+school’s environment.
+
+© NaCCA, Ministry of Education 2021
+
+CORE COMPETENCIES
+
+CC 9.1: Demonstrate behaviour and skills of
+working towards group goals.
+CC 9.3: Understanding roles during group
+activities.
+CC 9.4: Help group working on relevant
+activities.
+CC 9.5: Appreciate the importance of all team
+members in discussions and actively encourage
+contribution from their peers in their team.
+CG 6.4: Exhibit a sense of nationality and
+global identity.
+CI 5.1: Examine alternatives in creating new
+things.
+CI 5.2: Ability to merge simple/complex ideas
+to create novel situations or things.
+CI 5.4: Ability to visualise alternatives,
+seeing possibilities, and identify problems and
+challenges.
+CI 5.5: Ability to try new alternatives and fresh
+different approaches.
+CI 5.7: Putting forward constructive comments,
+ideas, explanations and new ways of doing
+things.
+
+59
+
+Strand 2: RELIGIOUS PRACTICES
+SUB-STRAND 1: RELIGIOUS FESTIVALS
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B9 2.1.1: Understand
+the relevance of, and the
+need to participate in,
+religious festivals
+
+CP 5.1: Ability to combine information
+and ideas from several sources to reach a
+conclusion.
+CP 5.6: Demonstrate a thorough understanding
+of a generalised concept or facts to task or
+situation.
+
+B9 2.1.1.1: State the meaning and types of festivals
+Exemplars:
+1. Brainstorm and explain the meaning of festivals.
+1. Festivals are special occasions at which rituals are performed
+to honour and give thanks to God and other spirit forces for
+their past favours and make request for more favours. They
+areoccasions to remember past important events.
+2. Identify and explain the types of festivals in Ghana.
+Types of Festivals
+1. Agricultural Festivals: Celebrated to thank God, the gods and
+ancestors for a good harvest and ask for more in the coming year.
+Examples are Bakatue (Elmina) and Yam Festival (Tedudu - Peki)
+2. Ancestral/Historical Festivals: Celebrated in remembrance of the
+past deeds of heroes and heroines and to remember past events
+in the life of the community. Examples are Odwira (Akuapem),
+Bugumchugu (Dagomba/Mamprusi) and Hogbetsotsoza (Anlo);
+Christmas and Eid-Adha.
+
+© NaCCA, Ministry of Education 2021
+
+60
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B9 2.1.1
+(CONTINUED):
+Understand the
+relevance of, and the
+need to participate in,
+religious festivals
+
+CG 5.1: Show a strong sense of belongingness
+to one’s culture.
+CG 5.2: Develop and exhibit ability to defend
+one’s cultural beliefs, practices and norms.
+CG 5.3: Develop and express respect and
+appreciation of others’ culture.
+CG 5.4: Develop and exhibit a sense of cultural
+identity.
+CG 5.5: Develop and express respect,
+recognition and appreciation of others’ cultures.
+CG 6.1: Understanding of influences of
+globalisation on traditions, languages and
+cultures.
+CG 6.3: Know the global discourse about the
+role of men and women.
+CG 6.4: Exhibit a sense of nationality and
+global identity.
+CI 5.1: Examine alternatives in creating new
+things.
+CI 5.2: Ability to merge simple/complex ideas
+to create novel situations or things.
+PL 6.3: Ability to manage time effectively.
+PL 6.4: Ability to manage and resolve conflicts.
+PL 6.7: Actively promote effective group
+interaction and the expression of ideas and
+opinions in way that is sensitive to the feelings
+and background of others.
+
+B9 2.1.1.2: Describe the activities in festivals celebrated in the
+three main religions in Ghana
+Exemplars:
+1. Discuss the acts of preparation towards the celebration of festivals in
+Ghana.
+2. List and explain the preparatory acts. They include ban on noise
+making, public appearance of religious leaders, organising cleaning up
+exercises and abstinence from sex.
+3. Describe the main activities in the festivals. Some are:
+• Family re-union
+• Exchange of gifts and greetings
+• Public worship, etc.
+4. Dramatise the main activities that take place in one festival.
+
+© NaCCA, Ministry of Education 2021
+
+61
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B9 2.1.1
+(CONTINUED):
+Understand the
+relevance of, and the
+need to participate in,
+religious festivals
+
+CG 5.1: Show a strong sense of belongingness
+to one’s culture.
+CG 5.2: Develop and exhibit ability to defend
+one’s cultural beliefs, practices and norms.
+CG 5.3: Develop and express respect and
+appreciation of others’ culture.
+CG 5.4: Develop and exhibit a sense of cultural
+identity.
+CG 5.5: Develop and express respect,
+recognition and appreciation of others’ cultures.
+CG 6.1: Understanding of influences of
+globalisation on traditions, languages and
+cultures.
+CG 6.3: Know the global discourse about the
+role of men and women.
+CG 6.4: Exhibit a sense of nationality and
+global identity.
+CI 5.1: Examine alternatives in creating new
+things.
+CI 5.2: Ability to merge simple/complex ideas
+to create novel situations or things.
+PL 6.3: Ability to manage time effectively
+PL 6.4: Ability to manage and resolve conflicts
+PL 6.7: Actively promote effective group
+interaction and the expression of ideas and
+opinions in way that is sensitive to the feelings
+and background of others.
+
+B9 2.1.1.3: Identify and explain the social, religious and moral
+relevance of festivals in the three main religions and relate
+them to daily life
+Exemplars:
+1. Identify and explain the importance of festivals
+Social Importance
+• It brings people together
+• Occasion to plan and implement developmental projects, etc.
+Religious
+• Reminds humans of the need to have good relationship with God,
+the gods and ancestors.
+• Time to show appreciation to the spirit world for favours
+received and ask for more favours etc.
+Moral
+• Time to remember the exemplary life of past leaders/heroes/
+heroines and learn from them.
+• Period to share with the poor and the needy.
+2. Learners dramatise how they apply religious and moral lessons from
+festivals in their daily life.
+
+© NaCCA, Ministry of Education 2021
+
+62
+
+STRAND 3: THE FAMILY AND THE COMMUNITY
+SUB-STRAND 1: RELIGION AND SOCIAL COHESION
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B9 3.1.1: Identify and
+apply ways people with
+different religions can
+co-exist peacefully
+
+CC 7.2: Interpret correct and respond to
+non-verbal communication such as cues and
+gestures.
+CC 9.1: Demonstrate behaviour and skills of
+working towards group goals.
+CC 9.3: Understand roles during
+groupactivities.
+CC 9.4: Help group working on relevant
+activities.
+CP 5.8: Identify and prove misconceptions
+about a generalised concept or fact specific to a
+task or situation.
+
+B9 3.1.1.1 Identify and explain examples of tolerant and
+intolerant communities
+Exemplars
+1. Show pictures or video clips to learners on a) a community which
+has experienced religious tolerance and b) a community, which has
+experienced religious intolerance. Such pictures and videos are
+available on the internet.
+2. From the pictures or video clips learners discuss characteristics of
+the two communities.
+Characteristics of a tolerant community, e.g.
+Peaceful relationship among members
+Development in unity
+Inter-religious marriages
+Characteristics of an intolerant community, e.g.
+Quarrels and mistrust among members
+Lack of or poor development
+Lack of or poor inter-personal relationship
+
+© NaCCA, Ministry of Education 2021
+
+63
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B9 3.1.1 (CONTINUED):
+Identify and apply ways
+people with different
+religions can co-exist
+peacefully
+
+CC 9.1: Demonstrate behaviour and skills of
+working towards group goals.
+CC 9.3: Understanding roles during group
+activities.
+CC 9.4: Help group working on relevant
+activities.
+CG 5.4: Develop and exhibit a sense of cultural
+identity.
+CG 5.5: Develop and express respect,
+recognition and appreciation of others’ cultures.
+CG 6.1: Understanding of influences of
+globalisation on traditions, languages and
+cultures.
+CG 6.3: Know the global discourse about the
+role of men and women.
+CG 6.4: Exhibit a sense of nationality and
+global identity.
+
+B9 3.1.1.2 Explain reasons why religious intolerance occurs and
+their effects on society and the individual
+Exemplars:
+In groups, learners identify the causes of religious intolerance and its
+effects and present their findings for class discussion
+• Causes, e.g.
+o Not learning about each other’s religion
+o Undermining the religious beliefs and practices of others
+o State being biased against one religion
+• Forming political parties along religious lines
+• Effects, e.g.
+o It can lead to intra- and inter-religious wars
+o Destruction of life and property
+o Hatred and disunity in society
+
+© NaCCA, Ministry of Education 2021
+
+64
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B9 3.1.1 (CONTINUED): B9 3.1.1.3 Identify and explain ways in which people with diverse
+religious backgrounds can live peacefully
+Identify and apply ways
+people with different
+Exemplar
+religions can co-exist
+1. In groups, learners talk about ways people with diverse religious
+peacefully
+background can live peacefully and present findings for class
+discussion.
+
+CC 9.1: Demonstrate behaviour and skills of
+working towards group goals.
+CC 9.3: Understanding roles during group
+activities.
+CC 9.4: Help group working on relevant
+activities.
+CG 5.4: Develop and exhibit a sense of cultural
+E.g.
+identity.
+• learn about each other’s religion, e.g. RME
+CG 5.5: Develop and express respect,
+• respect for other people’s religions
+recognition and appreciation of others’ cultures.
+• religious tolerance
+CG 6.1: Understanding of influences of
+• participate in other people’s religious ceremonies and festivals etc. globalisation on traditions, languages and
+cultures.
+2. In groups, learners discuss the need for people of diverse religious
+backgrounds to live in harmony and present it in class.
+CG 6.3: Know the global discourse about the
+role of men and women.
+E.g.
+CG 6.4: Exhibit a sense of nationality and
+• prevents religious tension and conflict
+global identity.
+• ensures development of community
+• respects the rights of all groups in the community.
+
+© NaCCA, Ministry of Education 2021
+
+65
+
+STRAND 4: RELIGIOUS LEADERS AND PERSONALITIES
+SUB-STRAND 1: WOMEN IN RELIGION AND LEADERSHIP POSITIONS
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B9 4.1.1: Recognise
+leadership role of
+women in society
+
+CG 5.4: Develop and exhibit a sense of cultural
+identity
+CG 5.5: Develop and express respect,
+recognition and appreciation of others’ cultures
+CG 6.1: Understanding of influences of
+globalisation on traditions, languages and
+cultures.
+CG 6.3: Know the global discourse about the
+role of men and women.
+CG 6.4: Exhibit a sense of nationality and
+global identity.
+CP 5.1: Ability to combine information
+and ideas from several sources to reach a
+conclusion.
+CP 5.4: Generate hypothesis to help solve
+complex problems.
+CP 6.4: Ability to identify important and
+appropriate criteria and use them to evaluate
+available alternatives.
+CP 5.6: Demonstrate a thorough understanding
+of a generalised concept or facts to task or
+situation.
+CP 5.8: Identify and prove misconceptions
+about a generalised concept or fact specific to a
+task or situation.
+
+B9 4.1.1.1: Discuss the contributions of key women in the three
+major religions
+Exemplar:
+1. Identify key women in the three major religions
+Examples are:
+•
+•
+•
+•
+•
+•
+•
+•
+
+© NaCCA, Ministry of Education 2021
+
+Christianity: Deborah and Mary, mother of Jesus
+Islam: Khadijah and Aisha bint Abu Bakr
+Indigenous African Religion: Okomfo Oparebea of Akonnedi Shrine
+of Larteh and Yaa Asantewaa
+Describe the roles played by these women
+Mary, mother of Jesus interceded for the wedding couple whose
+wine ran out, prompting Jesus first miracle in Canaan.
+Khadijah, wife of the Prophet Muhammad and who financed and
+protected the Prophet
+Okomfo Oparebea who established the Akonnedi Shrine in the
+US and trained priest and priestesses among the African Diaspora
+Yaa Asantewaa led the Asante Army to fight the British Army to
+protect the Golden Stool and the Asante Kingdom
+
+66
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B9 4.1.1
+(CONTINUED):
+Recognise leadership
+role of women in society
+
+CC 9.1: Demonstrate behaviour and skills of
+working towards group goals.
+CC 9.3: Understanding roles during group
+activities.
+CC 9.4: Help group working on relevant
+activities.
+CC 9.5: Appreciate the importance of all team
+members in discussions and actively encourage
+contribution from their peers in their team.
+CG 5.1: Show a strong sense of belongingness
+to one’s culture.
+CG 5.2: Develop and exhibit ability to defend
+one’s cultural beliefs, practices and norms.
+CG 5.3: Develop and express respect and
+appreciation of others’ culture.
+CG 5.4: Develop and exhibit a sense of cultural
+identity.
+CG 5.5: Develop and express respect,
+recognition and appreciation of others’ cultures.
+CG 6.1: Understanding of influences of
+globalisation on traditions, languages and
+culture.
+CG 6.3: Know the global discourse about the
+role of men and women.
+CG 6.4: Exhibit a sense of nationality and
+global identity.
+CP 5.1: Ability to combine information
+and ideas from several sources to reach a
+conclusion.
+CP 5.4: Generate hypothesis to help solve
+complex problems.
+
+B9 4.1.1.2: Discuss how to apply the moral lessons from the
+lives of these women in daily life
+Exemplars:
+1. Identify the role played by these women
+Role:
+• Medium used by God to manifest himself
+• Helped in the spread of their religions
+• Provided practical assistance to religious leaders, etc.
+• Helped to protect their people
+2. In three groups, learners make a skit to demonstrate the life of a
+woman from each of the three religions
+
+© NaCCA, Ministry of Education 2021
+
+67
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B9 4.1.1
+(CONTINUED):
+Recognise leadership
+role of women in society
+
+CC 9.1: Demonstrate behaviour and skills of
+working towards group goals.
+CC 9.3: Understanding roles during group
+activities.
+CC 9.4: Help group working on relevant
+activities.
+CC 9.5: Appreciate the importance of all team
+members in discussions and actively encourage
+contribution from their peers in their team.
+CG 5.1: Show a strong sense of belongingness
+to one’s culture.
+CG 5.2: Develop and exhibit ability to defend
+one’s cultural beliefs, practices and norms.
+CG 5.3: Develop and express respect and
+appreciation of others’ culture.
+CG 5.4: Develop and exhibit a sense of cultural
+identity.
+CG 5.5: Develop and express respect,
+recognition and appreciation of others’ cultures.
+CG 6.1: Understanding of influences of
+globalisation on traditions, languages and
+cultures.
+CG 6.3: Know the global discourse about the
+role of men and women.
+CG 6.4: Exhibit a sense of nationality and
+global identity.
+CI 5.1: Examine alternatives in creating new
+things.
+CI 5.2: Ability to merge simple/complex ideas
+to create novel situations or things.
+
+B9 4.1.1.3: Identify and explain the contributions of women to
+the development of Ghana
+Exemplar
+1. Learners brainstorm to identify key women and their contributions in
+national development
+•
+
+Politics: as MPs, Speaker of Parliament, ministers of state, assembly
+women, etc.
+• Legal/Judicial: as Attorney General, Chief Justice, judges, lawyers,
+etc.
+• Education: as teachers, headmistress, directors, etc.
+• Health: as doctors, nurses, pharmacists, administrators, etc.
+• Sports: as coaches, referees, footballers, athletes, etc.
+• Agriculture: as farmers, veterinary doctors, agronomists,
+horticulturists, extension officers, etc.
+2. Create a poster about a woman who has/has had a prominent role in
+the development of Ghanaian society to celebrate her achievements
+and share with the class.
+
+© NaCCA, Ministry of Education 2021
+
+68
+
+STRAND 5: ETHICS AND MORAL LIFE
+SUB-STRAND 1: REWARD, PUNISHMENT AND REPENTANCE
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B9 5.1.1: Demonstrate
+an understanding that
+good deeds attract
+reward but bad deeds
+attract punishment
+
+CG 6.4: Exhibit a sense of nationality and
+global identity.
+CI 5.2: Ability to merge simple/complex ideas
+to create novel situations or things
+PL 6.1: Ability to serve group members
+effectively
+PL 6.3: Ability to manage time effectively
+PL 6.4: Ability to manage and resolve conflicts
+PL 6.7: Actively promote effective group
+interaction and the expression of ideas and
+opinions in way that is sensitive to the feelings
+and background of others.
+
+B9 5.1.1.1: Describe the basis for good deeds and reward
+Exemplars:
+1. Guide learners to recollect the moral teachings of the three religions
+learned at Indicator 8.5.2.1.1
+2. Explain the concepts “good deeds” and “reward”
+•
+
+Good deeds – actions that are desirable or have positive effects
+on society
+• Reward – incentives for worthy acts received from others in
+appreciation of good deeds or acceptable behaviours
+3. Identify acts or behaviours considered as good deeds. E.g.
+•
+
+Assisting the elderly or the weak in society to carry or transport
+load
+• Relinquishing one’s seat to the pregnant, elderly, challenged or sick
+in society
+• Assisting children, the weak and people with disability to cross the
+road, give them direction to places, etc.
+4. Explain the need for performance of good deeds.
+•
+•
+
+•
+
+© NaCCA, Ministry of Education 2021
+
+Rendering service to humankind is service to God/Allah
+It draws us closer to God and attracts God’s blessings (see
+Mathew 25: 34 -36; Luke 17:11-16 and Qur’an 99: 7-8; Qur’an
+7:165; Qur’an 18:2; Qur’an 2:183; 2:197; Qur’an 29:45; Qur’an
+11:114)
+Proverbs – “If you are in the habit of doing what is just, you live
+long”;” Good name is better than riches.”
+
+69
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+B9 5.1.1 (CONTINUED):
+Demonstrate an
+understanding that good
+deeds attract reward
+but bad deeds attract
+punishment
+
+CORE COMPETENCIES
+
+5. Identify and explain types of rewards for doing a good deed. E.g.,
+•
+•
+•
+•
+
+saying “thank you” and “God/Allah bless you”
+commendation and good name in society
+physical rewards e.g. certificate, good testimonial,
+a pat on the shoulder/embracing/hugging to show love,
+appreciation, etc.
+6. Discuss the importance of rewarding people.
+Importance
+• it encourages the individual to do more good deeds
+• it ensures hard work, dedication, commitment and selflessness
+• it encourages other persons in society to emulate the
+performance of good deeds, etc.
+7. In a school event, learners should act a play on the theme ‘good deeds
+have rewards.’
+
+© NaCCA, Ministry of Education 2021
+
+70
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B9 5.1.1 (CONTINUED): B9.5.1.1.2: Identify and explain acts that attract punishment
+Demonstrate an
+understanding that good Exemplars:
+1. Explain the meanings of “bad deed” and punishment.
+deeds attract reward
+but bad deeds attract
+• Bad deeds – are traits that attract undesirable or negative
+punishment
+reaction from God and society
+• Punishment – an act of imposing or inflicting sanctions or
+discomfort on someone for an offence committed.
+2. Identify acts that are considered as bad deeds. E.g.,
+
+CI 5.2: Ability to merge simple/complex ideas
+to create novel situations or things
+CP 5.4: Generate hypothesis to help solve
+complex problems
+PL 5.5: Desire to accept one’s true self and
+overcome weaknesses
+PL 5.6: Ability to set and maintain standards
+and values
+PL 6.3: Ability to manage time effectively
+
+• telling lies
+• bearing false witness
+• stealing
+• disobedience to authority
+3. Mention the various types of punishment.
+•
+•
+•
+•
+
+Reprimanding
+Physical/corporal punishment
+Bad testimonial
+Psychological or emotional punishment (withdrawal of support
+from family)
+• Imprisonment
+• Fines, etc.
+4. State and explain the reasons for punishment:
+• for purposes of reformation
+• fitting retribution
+• deterrence
+• protection
+• maintenance of law and order, etc.
+Project Work: Do a research in your community on the life of one
+person the community punished for a bad deed. Explain three moral
+lessons you learn from the life of the person.
+© NaCCA, Ministry of Education 2021
+
+71
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B9 5.1.1 (CONTINUED): B9 5.1.1.3: Outline the stages of repentance
+Demonstrate an
+understanding that good Exemplars:
+1. Explain the term repentance:
+deeds attract reward
+but bad deeds attract
+Repentance – remorseful, realisation and resolve not to repeat past
+punishment
+misconduct
+
+CP 5.1: Ability to combine information
+and ideas from several sources to reach a
+conclusion
+CP 5.6: Demonstrate a thorough understanding
+of a generalised concept or facts to task or
+situation
+CP 5.6: Demonstrate a thorough understanding
+of a generalised concept or facts to task or
+situation.
+CI 6.1: Strong intuitive memory, intuitive
+thinking and respond appropriately
+
+2. Identify stages of repentance:
+•
+
+Realisation and acceptance of one’s fault (1 John 1: 8-9) and
+Qur’an 25:70-71; Qur’an 66:8. Proverb: “An honest confession is
+difficult to make but it brings peace of mind”.
+• regret for doing wrong
+• request for pardon
+• promise never to repeat same bad deed(s), etc.
+3. Discuss the importance of repentance:
+• promote good relationship
+• draws humankind to God
+• it reliefs the conscience of the individual, etc.
+4. Use the story of the prodigal son in the Bible to dramatise the need
+for repentance, forgiveness and reconciliation.
+
+© NaCCA, Ministry of Education 2021
+
+72
+
+STRAND 6: RELIGION AND ECONOMIC LIFE
+SUB-STRAND 1: TIME AND LEISURE
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B9 6.1.1: Develop skills
+in managing time
+profitably
+
+CP 5.1: Ability to combine information
+and ideas from several sources to reach a
+conclusion
+CC 9.1: Demonstrate behaviour and skills of
+working towards group goals
+CC 9.3: Understanding roles during group
+activities
+CC 9.4: Help group working on relevant
+activities.
+CC 9.5: Appreciate the importance of all team
+members in discussions and actively encourage
+contribution from their peers in their team.
+CI 5.7: Putting forward constructive comments,
+ideas, explanations and new ways of doing things
+
+B9 6.1.1.1: Explain the meaning of the terms “time”, “leisure”
+and “idleness”.
+Exemplars:
+1. Through Think-Pair-Share explain the meaning of “time”, “leisure” and
+“idleness”.
+
+© NaCCA, Ministry of Education 2021
+
+•
+
+Time is the indefinite continued progress of existence and events
+in the past, present, and future. Time is measured in hours,
+minutes,seconds, past, present, future, etc. It is a duration during
+which all things happen, or the instance when something happens.
+
+•
+
+Leisure: Break from normal work or school in the form of vacation,
+time for engaging in hobbies and recreational activities.
+
+•
+
+Idleness means whiling away time or doing nothing when there is
+something to be done.
+
+73
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B9 6.1.1
+(CONTINUED):
+Develop skills in
+managing time
+profitably
+
+CP 6.4: Ability to identify important and
+appropriate criteria and use them to evaluate
+available alternatives.
+CP 5.6: Demonstrate a thorough understanding
+of a generalised concept or facts to task or
+situation.
+CP 5.8: Identify and prove misconceptions
+about a generalised concept or fact specific to a
+task or situation.
+CP 6.1: Ability to effectively define goals
+towards solving a problem.
+CP 6.2: Availability to explain plans to attaining
+goals.
+CP 6.3: Identify important and appropriate
+alternatives.
+CP 6.4: Ability to identify important and
+appropriate criteria and use them to evaluate
+available alternatives.
+PL 5.5: Desire to accept one’s true self and
+overcome weaknesses.
+PL 5.6: Ability to set and maintain standards
+and values.
+PL 6.3: Ability to manage time effectively.
+
+B9 6.1.1.2: Demonstrate how to plan and use time wisely:
+Exemplars:
+1. Learners identify and discuss the teachings of the three religions on
+time.
+Christianity
+• Everything must be done at the right time (Ecclesiastes 3:1)
+• There is the need to make good use of time (John 9:14)
+• Make use of opportunities (Ephesians 5:15-17)
+• There is the need to plan for the future (Proverbs 6:6-8) etc.
+Islam
+• Avoid procrastination (A-Tirmidhi)
+• Do things at the right time before it is too late (Musnad Imam
+Ahmad)
+• Time must be planned (Qur’an 103), etc.
+Indigenous African Religion
+• Things must be done a bit at a time (“The best way to eat an
+elephant in your path is to cut it up in pieces”)
+• Idleness does not bring success (“A lazy man’s farm is the
+breeding grounds for snakes”)
+• One must avoid procrastination (“It is because of ‘I will do it
+tomorrow’, ‘I will do it tomorrow’ (procrastination) that is
+whythe vulture could not build a house”)
+• Planning is important (“One does not step into a river before one
+takes in breath”).
+• Folktales, proverbs, wise sayings, etc.
+Learners to prepare personal comprehensive time table on their daily
+activities (both at home and school) for one month. At the end of each
+week, learners assess the level of compliance to the time table and what
+made them to comply or not to comply.
+
+© NaCCA, Ministry of Education 2021
+
+74
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B9 6.1.1
+(CONTINUED):
+Develop skills in
+managing time
+profitably
+
+CP 6.1: Ability to effectively define goals
+towards solving a problem.
+CP 6.2: Availability to explain plans to attaining
+goals.
+CP 6.3: Identify important and appropriate
+alternatives.
+CP 6.4: Ability to identify important and
+appropriate criteria and use them to evaluate
+available alternatives.
+PL 5.5: Desire to accept one’s true self and
+overcome weaknesses.
+PL 5.6: Ability to set and maintain standards
+and values.
+PL 6.3: Ability to manage time effectively.
+
+B9 6.4.1.3: Explain the need for leisure
+1. Discuss how to use your leisure profitably.
+• To play football, hockey and other sporting activities
+• To read story books
+• To do backyard gardening
+• Visits to historical sites (tourism)
+• Listening to “good” music, etc.
+2. Explain the need to have leisure.
+Importance
+• Relaxation and recovery of energy
+• It is a divine law
+• For reflection on personal life
+• For meditation and reading scriptures
+• For helping others etc.
+3. Prepare personal programmes for hobbies and others out of school
+activities.
+
+© NaCCA, Ministry of Education 2021
+
+75
+
+APPENDICES
+APPENDIX 1: CORE COMPETENCIES AND SUBSKILLS OF THE COMMON CORE PROGRAMME (CCP)
+1. COMMUNICATION AN COLLABORATION (CC)
+B7-B9
+CC7: LISTENING
+
+CC8: PRESENTING
+
+CC9:TEAMWORK
+
+CC7.1: Identify words or sentences in context
+appropriately
+
+CC8.1: Speak clearly and explain ideas. Share a
+narrative or extended answer while speaking to a
+group
+
+CC9.1: Demonstrate behaviour and skills of
+working towards group goals
+
+CC7.2: Interpret correctly and respond to nonverbal communication such as facial expressions,
+cues and gestures
+
+CC8.2: Explain ideas in a clear order with relevant CC9.2: Understand and use interpersonal skills
+detail, using correct construction and structure of
+speech
+
+CC7.3: Provide feedback in areas of ideas,
+organisation, voice, word choice and sentence
+fluency in communication
+
+CC8.3: Apply appropriate diction, and structure
+sentences correctly for narrative, persuasive,
+imaginative and expository purposes
+
+CC9.3: Understand roles during group activities
+
+CC7.4: Identify underlying themes, implications
+and issues when listening
+
+CC8.4: Anticipate different responses from the
+audience and plan for them
+
+CC9.4: Help group work on relevant activities
+
+CC7.5: Identify and analyse different points of
+view of speaker
+
+CC8.5:Vary the level of detail and the language
+used when presenting to make it appropriate to
+the audience
+
+CC9.5: Appreciate the importance of including
+all team members in discussions and actively
+encourage contributions from them
+CC9.6: Ability to work with all group members to
+complete a task successfully
+CC9.7: Effectively perform multiple roles within
+the group
+CC9.8: Demonstrate an awareness of the wider
+team dynamics and work to minimise conflicts in
+the team
+
+© NaCCA, Ministry of Education 2021
+
+76
+
+2. CRITICAL THINKING AND PROBLEM SOLVING (CP)
+B7-B9
+CP5: CRITICAL THINKING
+
+CP6: PROBLEM SOLVING
+
+CP 5.1: Ability to combine information and ideas from several sources to
+reach a conclusion
+
+CP 6.1: Ability to effectively define goals towards solving a problem
+
+CP 5.2: Analyse and make distinct judgement about viewpoints expressed in CP 6.2: Ability to explain plans for attaining goals
+an argument
+CP 5.3: Create simple logic trees to think through problems
+
+CP 6.3: Identify important and appropriate alternatives
+
+CP 5.4: Generate hypothesis to help answer complex problems
+
+CP 6.4: Ability to identify important and appropriate criteria and use them
+to evaluate available alternatives
+
+CP 5.5: Effectively evaluate the success of solutions used in an attempt to
+solve a complex problem
+
+CP 6.5: Ability to select alternative(s) that adequately meet selected criteria
+
+CP 5.6: Demonstrate a thorough understanding of a generalised concept
+and facts specific to task or situation
+
+CP 6.6: Preparedness to recognise and explain results after implementation
+of plans
+
+CP 5.7: Provide new insight into controversial situation or task
+
+CP 6.7: Implement strategies with accuracy
+
+CP 5.8: Identify and prove misconceptions about a generalised concept or
+fact specific to a task or situation
+CP 5.9: Identify and explain a confusion, uncertainty, or a contradiction
+surrounding an event
+CP 5.10: Develop and defend a logical plausible resolution to a confusion,
+uncertainty or contradiction surrounding an event
+
+© NaCCA, Ministry of Education 2021
+
+77
+
+3. PERSONAL DEVELOPMENT AND LEADERSHIP (PL)
+B7-B9
+PL5: PERSONAL DEVELOPMENT
+
+PL6: LEADERSHIP
+
+PL5.1: Understanding oneself (strengths, weaknesses, goals and aspirations),
+in reacting and adjusting to novel situations
+
+PL6.1: Ability to serve group members effectively
+
+PL5.2: Demonstrate a sense of belongingness to a group
+
+PL6.2: Division of tasks into solvable units and assigning group members to
+task units
+
+PL5.3: Recognise one’s emotional state and their preparedness to apply
+emotional intelligence
+
+PL6.3: Ability to manage time effectively
+
+PL5.4: Ability to understand one’s personality traits
+
+PL6.4: Ability to manage and resolve conflicts
+
+PL5.5: Desire to accept one’s true self and overcome weaknesses
+
+PL6.5: Ability to monitor team members to ascertain progress
+
+PL5.6: Ability to set and maintain personal standards and values
+
+PL6.6: Ability to mentor peers
+PL6.7: Actively promote effective group interaction and the expression of
+ideas and opinions in a way that is sensitive to the feelings and background of
+others
+PL6.8: Actively assist group identify changes or modifications necessary in
+the group activities and work towards carrying out those changes
+
+© NaCCA, Ministry of Education 2021
+
+78
+
+4. CULTURAL IDENTITY AND GLOBAL CITIZENSHIP (CG)
+B7-B9
+CG5: CULTURAL IDENTITY
+
+CG6: GLOBAL CITIZENSHIP
+
+CG5.1: Show a strong sense of belongingness to one’s culture
+
+CG6.1: Understanding of influences of globalisation on traditions, languages
+and cultures
+
+CG5.2: Develop and exhibit ability to defend one’s cultural beliefs, practices
+and norms
+
+CG6.2: Recognise resistance to global practices that are inimical to our
+culture
+
+CG5.3: Develop and express respect, recognition and appreciation of
+others’ cultures
+
+CG6.3: Know the global discourse about the roles of males and females
+
+CG5.4: Develop and exhibit a sense of cultural identity
+
+CG6.4: Exhibit a sense of nationality and global identity
+
+CG5.5: Adjust to the demands of customs, traditions, values and attitudes of
+society
+
+© NaCCA, Ministry of Education 2021
+
+79
+
+5. CREATIVITY AND INNOVATION (CI)
+B7-B9
+CI5: KNOWLEDGE, UNDERSTANDING, SKILLS AND
+STRATEGIES
+
+CI6: REFLECTION AND EVALUATION
+
+CI 5.1: Examine alternatives in creating new things
+
+CI 6.1: Exhibit strong memory, intuitive thinking, and respond appropriately
+
+CI 5.2: Ability to merge simple/complex ideas to create novel situations or
+things
+
+CI 6.2: Ability to reflect on approaches to creative tasks and evaluate the
+effectiveness of tools used
+
+CI 5.3: Identification of requirements of a given situation and justification of
+more than one creative tool that will be suitable
+
+CI 6.3: Ability to select the most effective creative tools for work, and give
+reasons for the choice
+
+CI 5.4: Ability to visualise alternatives, see possibilities, and identify problems CI 6.4: Imagining and seeing things in a different way
+and challenges
+CI 5.5: Ability to try new alternatives and different approaches
+
+CI 6.5: Anticipate and overcome difficulties relating to taking initiatives
+
+CI 5.6: Understand and use analogies and metaphors
+
+CI 6.6: Being open-minded, adapting and modifying ideas to achieve creative
+results
+
+CI 5.7: Putting forward constructive comments, ideas, explanations and new
+ways of doing things
+
+CI 6.7: Look and think about things differently and from different
+perspectives
+CI 6.8: Recognise and generalise information and experience; search for
+trends and patterns
+CI 6.9: Interpret and apply learning in new contexts
+CI 6.10: Reflect on work and explore the thinking behind thoughts and
+processes
+
+© NaCCA, Ministry of Education 2021
+
+80
+
+6. DIGITAL LITERACY (DL)
+B7-B9
+DL5: PHOTO-VISUAL AND INFORMATION LITERACY
+
+DL6: SOCIO-EMOTIONAL AND REPRODUCTION LITERACY
+
+DL5.1: Ability to ascertain when information is needed and be able to
+identify, locate, evaluate and effectively use it to solve a problem
+
+DL 6.1: Understand the sociological and emotional aspects of cyberspace
+
+DL5.2: Ability to recognise and avoid traps in cyberspace
+
+DL 6.2: Create a meaningful and original piece of work, or its interpretation
+by integrating existing information
+
+DL5.3: Ability to find and utilise digital content
+
+DL6.3: Use digital tools to create novel things
+
+DL5.4: Ability to construct knowledge from a non-linear hyper-textual
+navigation
+
+DL6.4: Adhere to behavioural protocols that prevail in cyberspace
+
+DL5.5: Evaluate the quality and validity of information
+
+DL6.5: Recognition of societal issues emanating from the use of digital
+technologies
+
+DL5.6: Preparedness to make better decisions using available information
+
+DL6.6: Knowledge and recognition of ethical use of information
+
+Please note these inclusivity issues
+The core competencies outlined in this document must be
+assessed taking into consideration learners with special needs
+(physical disabilities, learning disabilities, etc.).Consider the use of
+realia for visual and visually challenged learners.
+A system of creating alternatives for tasks must also be adopted.
+
+© NaCCA, Ministry of Education 2021
+
+81
+
+BIBLIOGRAPHY
+1.
+
+Agyakwa, K. O. (1979). The educational wisdom of our fathers. University of Cape Coast Press.
+
+2.
+
+Asante, E. (1994). Ecological crisis: A Christian answer. Journal of Church and Theology. No. 4, pp 1-21.
+
+3.
+
+Al-Shaar, N. A. (2015). Ethics in Islam: Friendship in the political thought of al-Tawhidi and his contemporaries. Routledge.
+
+4.
+
+Ali,Y. A. (2001). The meaning of the Holy Qur’an (English Arabic Text). Amana Publishers.
+
+5.
+
+Ayubi, Z. (2019). Gendered morality: Classical Islamic ethics of the self, family, and society. Colombia University Press.
+
+6.
+
+Gyekye, K. (2003). African cultural values: An introduction. Sankofa Publishing.
+
+7.
+
+Opoku, A. K. (1997). Hearing and keeping Akan proverbs. Asempa Publishers.
+
+8.
+
+Opoku, A. K. (1978). West African traditional religion. F.E.P. International Private Ltd.
+
+9.
+
+The Holy Bible. Revised Standard Version.
+
+10. White, J. R. (2013). What every Christian needs to know about the Qur’an. Bethany House Publishers.
+11. Zamir, I. & Abass, M. (2017). Ethical dimensions of Islamic finance.Theory and practice. Springer Science and Business Media.
+
+© NaCCA, Ministry of Education 2021
+
+82
+
+RELIGIOUS AND MORAL EDUCATION SUBJECT PANEL MEMBERS AND REVIEWERS
+SN
+
+WRITING PANEL
+
+NAME
+
+INSTITUTION
+
+Dr Bonsu Osei-Owusu (PhD)
+
+Dept. of Religious Studies and Ethics, MUCG
+
+Dr Braimah Imurana Awaisu (PhD)
+
+Dept of Political Science, UEW
+
+Evelyn Yaa Denteh (MPhil)
+
+West Africa Senior High School
+
+Dr Yaw Sarkodie Agyemang (PhD)
+
+Dept. of Religion and Human Values, UCC
+
+Cambridge International
+REVIEWERS
+
+Dr R. Addai-Mununkum
+
+University of Education, Winneba
+
+Dr Hajj Sule
+
+University of Ghana, Legon
+
+Dr Funke Baffour-Awuah
+
+Al-Rayan International School
+
+SUPERVISORS AND COORDINATING TEAM
+
+SUPERVISORS
+
+COORDINATING
+TEAM
+
+GRAPHIC DESIGNER
+
+NAME
+Dr Prince H. Armah
+Prof. Kwame Osei Kwarteng
+
+INSTITUTION
+Director-General (Ag.), NaCCA
+Council Chairman, NaCCA
+
+Mr. Johnson Boakye Yiadom
+
+NaCCA/EDT
+
+Mr. John Mensah Anang
+
+NaCCA
+
+Mr. Cosmos Eminah
+
+NaCCA
+
+Mrs.Wilma S.Titus-Glover
+
+NaCCA
+
+Eugene Offei Tettey
+
+NaCCA
+
+© NaCCA, Ministry of Education 2021
+
+83
+
+

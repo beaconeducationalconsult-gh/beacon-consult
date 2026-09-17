@@ -1,0 +1,13 @@
+# Beacon Material Service
+#
+# Note: python-docx is not optional — the two generators build documents with
+# it, and /health reports 503 without it.
+
+Flask>=3.0.0
+gunicorn>=22.0.0
+
+# Required by tools/generate_schemes.py and tools/generate_records_of_work.py
+python-docx>=1.1.0
+
+# Only imported when REQUIRE_AUTH=1, to verify Firebase ID tokens.
+firebase-admin>=6.5.0

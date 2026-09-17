@@ -1,0 +1,172 @@
+[
+ {
+  "id": "KG1",
+  "name": "KG 1",
+  "available": true,
+  "subjects": 1,
+  "indicators": 169,
+  "hasSchedules": []
+ },
+ {
+  "id": "KG2",
+  "name": "KG 2",
+  "available": true,
+  "subjects": 1,
+  "indicators": 170,
+  "hasSchedules": []
+ },
+ {
+  "id": "B1",
+  "name": "Basic 1",
+  "available": true,
+  "subjects": 8,
+  "indicators": 287,
+  "hasSchedules": [
+   "creative-arts",
+   "english-language",
+   "ghanaian-language",
+   "history",
+   "mathematics",
+   "owop",
+   "rme",
+   "science"
+  ]
+ },
+ {
+  "id": "B2",
+  "name": "Basic 2",
+  "available": true,
+  "subjects": 7,
+  "indicators": 249,
+  "hasSchedules": [
+   "creative-arts",
+   "english-language",
+   "ghanaian-language",
+   "history",
+   "mathematics",
+   "rme",
+   "science"
+  ]
+ },
+ {
+  "id": "B3",
+  "name": "Basic 3",
+  "available": true,
+  "subjects": 7,
+  "indicators": 276,
+  "hasSchedules": [
+   "creative-arts",
+   "english-language",
+   "ghanaian-language",
+   "history",
+   "mathematics",
+   "rme",
+   "science"
+  ]
+ },
+ {
+  "id": "B4",
+  "name": "Basic 4",
+  "available": true,
+  "subjects": 10,
+  "indicators": 517,
+  "hasSchedules": [
+   "creative-arts",
+   "english-language",
+   "ghanaian-language",
+   "history",
+   "mathematics",
+   "rme",
+   "science"
+  ]
+ },
+ {
+  "id": "B5",
+  "name": "Basic 5",
+  "available": true,
+  "subjects": 10,
+  "indicators": 590,
+  "hasSchedules": [
+   "creative-arts",
+   "english-language",
+   "ghanaian-language",
+   "history",
+   "mathematics",
+   "rme",
+   "science"
+  ]
+ },
+ {
+  "id": "B6",
+  "name": "Basic 6",
+  "available": true,
+  "subjects": 10,
+  "indicators": 572,
+  "hasSchedules": [
+   "creative-arts",
+   "english-language",
+   "ghanaian-language",
+   "history",
+   "mathematics",
+   "rme",
+   "science"
+  ]
+ },
+ {
+  "id": "B7",
+  "name": "Basic 7",
+  "available": true,
+  "subjects": 10,
+  "indicators": 454,
+  "hasSchedules": [
+   "career-technology",
+   "computing",
+   "creative-arts-design",
+   "english-language",
+   "french",
+   "ghanaian-language",
+   "mathematics",
+   "rme",
+   "science",
+   "social-studies"
+  ]
+ },
+ {
+  "id": "B8",
+  "name": "Basic 8",
+  "available": true,
+  "subjects": 10,
+  "indicators": 379,
+  "hasSchedules": [
+   "career-technology",
+   "computing",
+   "creative-arts-design",
+   "english-language",
+   "french",
+   "ghanaian-language",
+   "mathematics",
+   "rme",
+   "science",
+   "social-studies"
+  ]
+ },
+ {
+  "id": "B9",
+  "name": "Basic 9",
+  "available": true,
+  "subjects": 10,
+  "indicators": 377,
+  "hasSchedules": [
+   "career-technology",
+   "computing",
+   "creative-arts-design",
+   "english-language",
+   "french",
+   "ghanaian-language",
+   "mathematics",
+   "rme",
+   "science",
+   "social-studies"
+  ]
+ }
+]

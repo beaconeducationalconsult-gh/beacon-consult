@@ -1,0 +1,43 @@
+feat: NaCCA question bank PRD + Phase 1-4 implementation
+- docs/QUESTION_BANK_PRD.md: unified PRD (problem, current state, SaaS vs ordinary, MVP scope, system design, data model with contentStandardCode critical rule, generation engine, access control Ghana MoMo + manual grant, content ops, roadmap Phase1-5, metrics, risks, decisions)
+
+Phase 1 Foundation:
+- firestore.rules: questions requires contentStandardCode, new collections generated_tests, test_templates, access_grants, payment_transactions, helpers hasAccessGrant/hasActiveSubscription
+- firestore.indexes.json: 8 new composites for grade+subject+contentStandard+status etc.
+- QuestionForm.jsx rewritten: curriculum alignment required CS*, objectiveType/essayType, difficulty, bloom, source, status, schoolId nullable, version+auditLog
+- questionQueries.js extended: fetchQuestionsByFilters, fetchQuestionsByContentStandard, fetchQuestionsForReview, fetchQuestionCoverage
+- questionSelection.js new: shuffle, selectQuestions with difficulty/bloom/coverage balancing, generatePaperSections no repeats
+- testTemplate.js new: ges_basic_v1 + bece_mock_v1, getTemplate, buildHeader, buildSectionInstructions, formatMarks
+- generatedTests.js new: saveGeneratedTest snapshot immutable for audit
+- QuestionGenerator.jsx rewritten: curriculum path resolution, selection engine, template, history save
+- QuestionAdmin.jsx new: /portal/questions/admin review queue
+- GeneratedTests.jsx new: /portal/questions/history
+- import_questions.py new: CSV/JSON bulk import with CS required validation, orphan check, audit
+- sample_b4_mathematics.csv: 6 rows sample
+- seed_test_templates.py new: seeds test_templates collection
+
+Phase 2 Core product:
+- QuestionBank.jsx rewritten: filters grade/subject/strand/subStrand/contentStandard/type/difficulty/bloom/status/mineOnly, coverage dashboard byGrade/bySubject/byCS/byDifficulty/byType/byBloom/byStatus, well-covered >=5, missing CS warning, batched 50
+- audit_questions.py new: coverage audit against 670 CS, orphan check, invalid samples
+
+Phase 3 Access gating:
+- accessGrants.js new: isGrantActive, fetchMyGrants, fetchAllGrants, createAccessGrant (doc id = uid/schoolId fast path), revokeGrant
+- paymentTransactions.js new: createPaymentTransaction Ghana MTN/Telecel/AT/card, fetchMy/All
+- subscriptions.js extended: PAYMENT_INSTRUCTIONS with 3 MoMo numbers, PLANS school GHS4500/yr + institutional perpetual, requestUpgrade creates payment_transactions audit, recordExport bypass if grant
+- SubscriptionContext.jsx rewritten: fetches access_grants for user+school, hasGrant, grantPlan, isPro = paidSub || hasGrant
+- Plans.jsx extended: grant status box, channel selector, institutional note, institutional card
+- Billing.jsx rewritten: manual/institutional grant form (userId/schoolId, plan, type, expiry perpetual, note), grants list revoke, payment_transactions audit table, requested/active/inactive with channel/schoolId
+- QuestionGenerator gating: amber banner if !isPro with upgrade link
+
+Phase 4 Output & quality:
+- questionPaper.js rewritten: template configurability via testTemplate, school name locked, coverage summary if bece_mock, separate answer key PDFs downloadAnswerKeyPdf/Docx teacher-only red warning, footer page numbers, DOCX same
+- QuestionGenerator extended: schoolLocked from schools/{schoolId}, disabled input, template selector, 4 download buttons student PDF vs teacher-only key PDF/Word, genTimeMs, trackGeneration analytics, coverage summary preview
+- analytics.js new: trackGeneration, getLocalAnalytics (successRate, avgTime, fulfillment, recent 7d), timeOperation, trackQuestionContribution
+- GeneratedTests.jsx rewritten: local analytics card (successRate, avgTime, fulfillment, recent 7d) + firestore stats (total papers, total Qs, avg, byTemplate/byGrade), fulfilled/partial badges, genTimeMs, audit snapshot
+- seed_test_templates.py: ges_basic_v1 + bece_mock_v1
+
+Docs: PHASE1.md, PHASE2.md, PHASE3.md, PHASE4.md
+
+Verified: import dry-run 6 valid 0 orphans, audit 670 CS, seed templates dry-run 2 templates, rules version 2
+
+Co-authored-by: arena-agent <297053741+arena-agent@users.noreply.github.com>

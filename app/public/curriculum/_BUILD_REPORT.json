@@ -1,0 +1,265 @@
+{
+ "grades": [
+  {
+   "id": "KG1",
+   "name": "KG 1",
+   "available": true,
+   "subjects": 1,
+   "indicators": 169,
+   "hasSchedules": []
+  },
+  {
+   "id": "KG2",
+   "name": "KG 2",
+   "available": true,
+   "subjects": 1,
+   "indicators": 170,
+   "hasSchedules": []
+  },
+  {
+   "id": "B1",
+   "name": "Basic 1",
+   "available": true,
+   "subjects": 8,
+   "indicators": 287,
+   "hasSchedules": [
+    "creative-arts",
+    "english-language",
+    "ghanaian-language",
+    "history",
+    "mathematics",
+    "owop",
+    "rme",
+    "science"
+   ]
+  },
+  {
+   "id": "B2",
+   "name": "Basic 2",
+   "available": true,
+   "subjects": 7,
+   "indicators": 249,
+   "hasSchedules": [
+    "creative-arts",
+    "english-language",
+    "ghanaian-language",
+    "history",
+    "mathematics",
+    "rme",
+    "science"
+   ]
+  },
+  {
+   "id": "B3",
+   "name": "Basic 3",
+   "available": true,
+   "subjects": 7,
+   "indicators": 276,
+   "hasSchedules": [
+    "creative-arts",
+    "english-language",
+    "ghanaian-language",
+    "history",
+    "mathematics",
+    "rme",
+    "science"
+   ]
+  },
+  {
+   "id": "B4",
+   "name": "Basic 4",
+   "available": true,
+   "subjects": 10,
+   "indicators": 517,
+   "hasSchedules": [
+    "creative-arts",
+    "english-language",
+    "ghanaian-language",
+    "history",
+    "mathematics",
+    "rme",
+    "science"
+   ]
+  },
+  {
+   "id": "B5",
+   "name": "Basic 5",
+   "available": true,
+   "subjects": 10,
+   "indicators": 590,
+   "hasSchedules": [
+    "creative-arts",
+    "english-language",
+    "ghanaian-language",
+    "history",
+    "mathematics",
+    "rme",
+    "science"
+   ]
+  },
+  {
+   "id": "B6",
+   "name": "Basic 6",
+   "available": true,
+   "subjects": 10,
+   "indicators": 572,
+   "hasSchedules": [
+    "creative-arts",
+    "english-language",
+    "ghanaian-language",
+    "history",
+    "mathematics",
+    "rme",
+    "science"
+   ]
+  },
+  {
+   "id": "B7",
+   "name": "Basic 7",
+   "available": true,
+   "subjects": 10,
+   "indicators": 454,
+   "hasSchedules": [
+    "career-technology",
+    "computing",
+    "creative-arts-design",
+    "english-language",
+    "french",
+    "ghanaian-language",
+    "mathematics",
+    "rme",
+    "science",
+    "social-studies"
+   ]
+  },
+  {
+   "id": "B8",
+   "name": "Basic 8",
+   "available": true,
+   "subjects": 10,
+   "indicators": 379,
+   "hasSchedules": [
+    "career-technology",
+    "computing",
+    "creative-arts-design",
+    "english-language",
+    "french",
+    "ghanaian-language",
+    "mathematics",
+    "rme",
+    "science",
+    "social-studies"
+   ]
+  },
+  {
+   "id": "B9",
+   "name": "Basic 9",
+   "available": true,
+   "subjects": 10,
+   "indicators": 377,
+   "hasSchedules": [
+    "career-technology",
+    "computing",
+    "creative-arts-design",
+    "english-language",
+    "french",
+    "ghanaian-language",
+    "mathematics",
+    "rme",
+    "science",
+    "social-studies"
+   ]
+  }
+ ],
+ "detail": [
+  {
+   "grade": "KG1",
+   "subjects": 1,
+   "indicators": 169,
+   "lessons": 0,
+   "scheme_subjects": 0,
+   "kb": 135
+  },
+  {
+   "grade": "KG2",
+   "subjects": 1,
+   "indicators": 170,
+   "lessons": 0,
+   "scheme_subjects": 0,
+   "kb": 149
+  },
+  {
+   "grade": "B1",
+   "subjects": 8,
+   "indicators": 287,
+   "lessons": 1440,
+   "scheme_subjects": 8,
+   "kb": 4045
+  },
+  {
+   "grade": "B2",
+   "subjects": 7,
+   "indicators": 249,
+   "lessons": 1260,
+   "scheme_subjects": 7,
+   "kb": 3504
+  },
+  {
+   "grade": "B3",
+   "subjects": 7,
+   "indicators": 276,
+   "lessons": 1260,
+   "scheme_subjects": 7,
+   "kb": 3583
+  },
+  {
+   "grade": "B4",
+   "subjects": 10,
+   "indicators": 517,
+   "lessons": 1260,
+   "scheme_subjects": 7,
+   "kb": 3775
+  },
+  {
+   "grade": "B5",
+   "subjects": 10,
+   "indicators": 590,
+   "lessons": 1260,
+   "scheme_subjects": 7,
+   "kb": 3868
+  },
+  {
+   "grade": "B6",
+   "subjects": 10,
+   "indicators": 572,
+   "lessons": 1260,
+   "scheme_subjects": 7,
+   "kb": 3807
+  },
+  {
+   "grade": "B7",
+   "subjects": 10,
+   "indicators": 454,
+   "lessons": 1800,
+   "scheme_subjects": 10,
+   "kb": 5279
+  },
+  {
+   "grade": "B8",
+   "subjects": 10,
+   "indicators": 379,
+   "lessons": 1800,
+   "scheme_subjects": 10,
+   "kb": 5295
+  },
+  {
+   "grade": "B9",
+   "subjects": 10,
+   "indicators": 377,
+   "lessons": 1800,
+   "scheme_subjects": 10,
+   "kb": 5304
+  }
+ ],
+ "totalKb": 38751
+}

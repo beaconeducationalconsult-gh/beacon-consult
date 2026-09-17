@@ -1,0 +1,9 @@
+{
+  "id": "math",
+  "display_name": "Mathematics",
+  "grades": ["B4"],
+  "interface_version": "1.0",
+  "module_version": "0.1.0",
+  "curriculum_source": "NaCCA Mathematics Curriculum 2019",
+  "capabilities": ["lesson_plan", "scheme_of_work"]
+}

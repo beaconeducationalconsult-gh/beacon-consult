@@ -1,0 +1,4483 @@
+NATIONAL COUNCIL FOR
+CURRICULUM & ASSESSMENT
+(MINISTRY OF EDUCATION)
+
+GHANAIAN LANGUAGE
+COMMON CORE PROGRAMME (CCP)
+CURRICULUM FOR JHS1 (B7) - JHS3 (B9)
+SEPTEMBER, 2020
+
+MINISTRY OF EDUCATION
+REPUBLIC OF GHANA
+
+© NaCCA, Ministry of Education 2021
+
+i
+
+Ghanaian Language Curriculum for B7- B9
+Enquiries and comments on this Curriculum should be addressed to:
+The Director-General
+National Council for Curriculum and Assessment (NaCCA)
+Ministry of Education
+P. O. Box CT PMB 77Cantonments Accra
+Telephone: 0302909071, 0302909862
+Email: info@nacca.gov.gh
+Website: www.nacca.gov.gh
+
+©2020 National Council for Curriculum and Assessment (NaCCA)
+This publication is not for sale. All rights reserved. No part of this
+publication may be reproduced without prior written permission
+from the Ministry of Education, Ghana.
+Ministry of Education
+Ghana
+
+© NaCCA, Ministry of Education 2021
+
+ii
+
+FOREWORD
+The Ministry of Education, acting through the National Council for Curriculum and Assessment (NaCCA) has, in recent times, been working on curriculum and
+assessment reforms to improve the quality and relevance of learning experiences in pre-tertiary schools in Ghana. This curriculum, known as theCommon Core
+Programme (CCP), is a sequel to the Kindergarten-Primary standards-based school curriculum, the implementation of which commencedwith the 2019/2020 academic
+year. The CCP is carefully designed for learnersin Basic Year 7 to Basic Year 9 (JHS 1 – JHS 3) as part of a holistic learning experiencethat prepares them for postsecondary education, the world of work or both.The curriculum focuses on building character and nurturing values, in additionto ensuring a seamless progression for
+all learners from JHS to SHS and creates clear pathways for academic and career-related programmes from Basic Year 11 to Basic Year 12 (SHS2 - SHS3).
+In the twenty-first century, memorisation of facts and figures is no longer a sufficient learner attribute. Therefore, the CCP focuses on the acquisition ofthe 4Rs
+(Reading, wRiting, aRithmetic and cReativity) and core competenciesto afford learners the ability to apply knowledge innovatively to solve everydayproblems. Personal
+projects, community projects and community service have been integrated into the CCP as part of a comprehensive assessment programme, including assessment
+of knowledge, skills, attitudes and values that mainly emphasise what learners can do. It is hoped that the contentof this curriculum will promote better high
+school education that meetsthe varied learning needs of the young people in the country and addresses the shortfalls in the current school curriculum in relation
+to learning and assessment.
+The Ministry of Education is committed to ensuring that our schools develop globally competitive high school graduates who have the requisite employable skills
+and workplace ethos. The CCP curriculum will, therefore, play an important role in this regard. The Ministry will support the effective implementation of the CCP
+to include capacity development of all teachers toensure improved learning experiences and outcomes for our young people.
+
+Dr Matthew Opoku Prempeh (MP)
+The Honourable Minister of Education
+
+© NaCCA, Ministry of Education 2021
+
+iii
+
+ACKNOWLEDGEMENTS
+This Common Core Programme (CCP) curriculum was developed togetherwith the National Pre-tertiary Learning Assessment Framework (NPLAF) andTeacher’s
+and Learner’s Resource Packs. All these documents were developedby the National Council for Curriculum and Assessment (NaCCA), under the oversight and
+strategic direction of the Ministry of Education (MoE) withsupport from some agencies of the MoE and other relevant stakeholders.
+NaCCA, acting on behalf of the Ministry of Education (MoE), would liketo express its sincere gratitude to all its partners who participated inthe professional
+conversations and discussions during the course of the development of the CCP curriculum.
+NaCCA also extends special commendations to the leadership of the GhanaEducation Service (GES), National School Inspectorate Authority (NaSIA), National
+Teaching Council (NTC), Commission for Technical and Vocational Education and Training (Commission for TVET) and other agencies of the MoE.
+Additionally, NaCCA acknowledges the contributions of staff from various Universities and Colleges of Education as well as teachers and learners withinthe Ghana
+Education Service.
+Special thanks go to those who also contributed to shaping this curriculum content through the consultation process, including the national stakeholderengagement
+conducted in Accra in February, 2020.
+
+© NaCCA, Ministry of Education 2021
+
+iv
+
+Contents
+
+FOREWORD ..................................................................................................................................................................................................................................................................................iii
+ACKNOWLEDGEMENTS ...........................................................................................................................................................................................................................................................iii
+CONTENTS ....................................................................................................................................................................................................................................................................................iv
+RATIONALE ................................................................................................................................................................................................................................................................................. xii
+PHILOSOPHY ............................................................................................................................................................................................................................................................................... xii
+AIMS .... .......................................................................................................................................................................................................................................................................................... xiii
+PROFILE OF EXPECTED LEARNING BEHAVIOURS ...................................................................................................................................................................................................... xv
+ATTITUDES,VALUES AND PROCESS SKILLS ................................................................................................................................................................................................................. xviii
+ASSESSMENT IN THE CCP ..................................................................................................................................................................................................................................................... xix
+CREATIVE PEDAGOGICAL APPROACHES..................................................................................................................................................................................................................... xxiii
+CORE COMPETENCIES ........................................................................................................................................................................................................................................................ xxvii
+INSTRUCTIONAL EXPECTATIONS .................................................................................................................................................................................................................................. xxix
+STRUCTURE OF THE CURRICULUM ............................................................................................................................................................................................................................. xxxiii
+SCOPE AND SEQUENCE .................................................................................................................................................................................................................................................... xxxiv
+BASIC 7 ............................................................................................................................................................................................................................................................................................ 1
+STRAND 1: B7.1 CUSTOMS AND INSTITUTIONS ................................................................................................................................................... 2
+SUB-STRAND 1: B7.1.1 RITES OF PASSAGE - CHILDHOOD RITES ................................................................................................................................................................... 2
+SUB-STRAND 2: B7.1.2 NAMING SYSTEMS: DAY NAMES, ORDER OF BIRTH NAMES ................................................................................................................................ 5
+SUB-STRAND 3: B7.1.3 THE CLAN SYSTEM ................................................................................................................................................................................................................ 7
+SUB-STRAND 4: B7.1.4 CHIEFTAINCY — INSTALLMENT AND DESTOOLMENT ........................................................................................................................................ 8
+STRAND 2: B7.2 LISTENING AND SPEAKING .......................................................................................................................................................... 11
+SUB-STRAND 1:B7.2.1: CONVERSATION/EVERYDAY DISCOURSE ................................................................................................................................................................ 11
+SUB-STRAND 2: B7.2.2 LISTENING COMPREHENSION....................................................................................................................................................................................... 13
+SUB-STRAND 3: B7.2.3 SPEECH SOUNDS — VOWELS, CONSONANTS AND SYLLABLES .................................................................................................................... 14
+
+© NaCCA, Ministry of Education 2021
+
+v
+
+SUB-STRAND 4: B7.2.4 TONE ........................................................................................................................................................................................................................................ 17
+STRAND 2: B7.2 LISTENING AND SPEAKING........................................................................................................................................................... 18
+SUB-STRAND 6: B7.2.6 PRESENTATION — EVERYDAY EXPERIENCE ............................................................................................................................................................ 19
+STRAND 3: B7.3 READING ........................................................................................................................................................................................... 20
+SUB-STRAND 1: B7.3.1 READING ................................................................................................................................................................................................................................ 20
+STRAND 3: B7.3 READING ........................................................................................................................................................................................... 21
+STRAND 4: B7.4 LANGUAGE AND USAGE ............................................................................................................................................................... 22
+SUB-STRAND 1: B7.4.1 SENTENCES — SIMPLE, COMPOUND AND COMPLEX ......................................................................................................................................... 22
+STRAND 4: B7.4 LANGUAGE AND USAGE ............................................................................................................................................................. 23
+SUB-STRAND 2: B7.4.2 INTEGRATING GRAMMAR IN WRITTEN LANGUAGE (NOUNS, PRONOUNS AND ADJECTIVES)....................................................... 23
+SUB-STRAND 3: B7.4.3 INTEGRATING GRAMMAR IN WRITTEN LANGUAGE (VERBS, ADVERBS, CONJUNCTIONS,POSTPOSITIONS/PREPOSITIONS)
+................................................................................................................................................................................................................................................................................................. 24
+SUB-STRAND 4: B7.4.4 VOCABULARY, SPELLING AND PUNCTUATION...................................................................................................................................................... 26
+STRAND 5: B7.5 COMPOSITION WRITING .............................................................................................................................................................. 27
+SUB-STRAND 1: B7.5.1 STRUCTURE AND ORGANISE IDEAS IN COMPOSITION WRITING ................................................................................................................ 27
+STRAND 6: B7.6 LITERATURE ..................................................................................................................................................................................... 28
+SUB-STRAND 1: B7.6.1 FOLKTALES, SONGS, PROSE, DRAMA, POETRY ........................................................................................................................................................ 28
+BASIC 8 .......................................................................................................................................................................................................................................................................................... 29
+STRAND 1: B8.1 CUSTOMS AND INSTITUTIONS................................................................................................................................................... 30
+SUB-STRAND 1: B8.1.1 RITES OF PASSAGE: PUBERTY RITES ............................................................................................................................................................................. 30
+SUB-STRAND 2: B8.1.2 NAMING SYSTEMS — FAMILY NAMES, KINSHIP TERMS, PROVERBIAL AND INSINUATION NAMES .................................................... 32
+SUB-STRAND 3: B8.1.3 THE CLAN SYSTEM .............................................................................................................................................................................................................. 36
+SUB-STRAND 4: B8.1.4 CHIEFTAINCY: DESTOOLMENT ..................................................................................................................................................................................... 37
+STRAND 2: B8.2 LISTENING AND SPEAKING........................................................................................................................................................... 39
+SUB-STRAND 1: B8.2.1— CONVERSATION/EVERYDAY DISCOURSE ........................................................................................................................................................... 39
+
+© NaCCA, Ministry of Education 2021
+
+vi
+
+SUB-STRAND 2: B8.2.2 LISTENING COMPREHENSION......................................................................................................................................................................................... 40
+SUB-STRAND 4: B8.2.4 TONE ........................................................................................................................................................................................................................................ 41
+SUB-STRAND 6: B8.2.6 PRESENTATION — EVERYDAY EXPERIENCE ............................................................................................................................................................ 42
+STRAND 3: B8.3 READING ............................................................................................................................................................................................ 43
+SUB-STRAND 1: B8.3.1 READING ................................................................................................................................................................................................................................ 43
+STRAND 3: B8.3 READING............................................................................................................................................................................................ 44
+SUB-STRAND 2: B8.3.2 TRANSLATION...................................................................................................................................................................................................................... 44
+STRAND 4: B8.4 LANGUAGE AND USAGE ............................................................................................................................................................... 45
+SUB-STRAND 2: B8.4.2 INTEGRATING GRAMMAR IN WRITTEN LANGUAGE (USE OF NOUNS, PRONOUNS AND ADJECTIVES) ...................................... 45
+SUB-STRAND 3: B8.4.3 INTEGRATING GRAMMAR IN WRITTEN LANGUAGE (VERBS, ADVERBS AND CONJUNCTIONS)...................................................... 46
+STRAND 5: B8.5 COMPOSITION WRITING............................................................................................................................................................... 47
+SUB-STRAND: B8.5.1 STRUCTURE AND ORGANISE IDEAS IN COMPOSITION WRITING .................................................................................................................... 47
+STRAND 6: B8.6 LITERATURE ..................................................................................................................................................................................... 48
+SUB-STRAND 1: B8.6.1 PROVERBS, IDIOMS, PROSE, DRAMA, POETRY .......................................................................................................................................................... 48
+BASIC 9 .......................................................................................................................................................................................................................................................................................... 49
+STRAND 1: B9.1 CUSTOMS AND INSTITUTIONS .................................................................................................................................................. 50
+SUB-STRAND 1: B9.1.1 RITES OF PASSAGE: MARRIAGE ......................................................................................................................................................................................... 50
+SUB-STRAND 2: B9.1.2 NAMING SYSTEMS — CIRCUMSTANTIAL, REINCARNATION, DEITY NAMES ............................................................................................... 51
+SUB-STRAND 3: B9.1.3 THE CLAN SYSTEM ................................................................................................................................................................................................................ 53
+SUB-STRAND 4: B9.1.4 CHIEFTAINCY:TRADITIONAL GOVERNMENT ........................................................................................................................................................... 54
+STRAND 2: B9.2 LISTENING AND SPEAKING.......................................................................................................................................................... 55
+SUB-STRAND 1: B9.2.1: CONVERSATION/EVERYDAY DISCOURSE ................................................................................................................................................................ 55
+SUB-STRAND 2: B9.2.2: LISTENING COMPREHENSION ........................................................................................................................................................................................ 57
+SUB-STRAND 4: B9.2.4 TONES ...................................................................................................................................................................................................................................... 58
+SUB-STRAND 4: B9.2.6 PRESENTATION: EVERYDAY EXPERIENCES ............................................................................................................................................................... 59
+© NaCCA, Ministry of Education 2021
+
+vii
+
+STRAND 3: B9.3 READING ........................................................................................................................................................................................... 60
+SUB-STRAND 1: B9.3.1 READING ................................................................................................................................................................................................................................ 60
+SUB-STRAND 2: B9.3.2 TRANSLATION...................................................................................................................................................................................................................... 61
+STRAND 4: B9.4 LANGUAGE AND USAGE ............................................................................................................................................................... 62
+SUB-STRAND 2: B9.4.2 INTEGRATING GRAMMAR IN WRITTEN LANGUAGE (NOUNS, ADJECTIVES) ............................................................................................ 62
+SUB-STRAND 3: B9.4.3 INTEGRATING GRAMMAR IN WRITTEN LANGUAGE (VERBS, ADVERBS) ..................................................................................................... 63
+STRAND 5: B9.5 COMPOSITION WRITING .............................................................................................................................................................. 64
+SUB-STRAND 1: B9.5.1 STRUCTURE AND ORGANISE IDEAS IN COMPOSITION WRITING ................................................................................................................ 64
+STRAND 6: B9.6 LITERATURE ..................................................................................................................................................................................... 65
+SUB-STRAND 1: B9.6.1 DRUM/HORN/XYLOPHONE LANGUAGE, PROSE, POETRY AND DRAMA .................................................................................................... 65
+APPENDICES ......................................................................................................................................................................................................................... 66
+BIBLIOGRAPHY ..................................................................................................................................................................................................................... 71
+GHANAIAN LANGUAGE SUBJECT PANEL MEMBERS AND REVIEWERS .............................................................................................................................. 73
+SUPERVISORS AND COORDINATING TEAM ....................................................................................................................................................................... 73
+
+© NaCCA, Ministry of Education 2021
+
+viii
+
+INTRODUCTION
+In the first three years of high school education, learners are expected to take a Common Core Programme (CCP) that emphasises a set of high, internationallybenchmarked career and tertiary education readiness standards. Learners need to acquire these for post-secondary education, the workplace or both. The standards
+articulate what learners are expected to know, understand and be able to do by focusing on their social, emotional, cognitive and physical development. The CCP runs
+from Basic Year 7 through Basic Year 9 (JHS 1-JHS 3).
+The common core attributes of the learner, which describe the essential outcomes in the three domains of learning (i.e. cognitive, psychomotor and affective), are
+at the centre of the CCP (see Figure 1). Inspired by the values which are important to the Ghanaian society, the CCP provides an educationof the heart, mind and
+hands in relation to the learner’s lifetime values, well-being, physical development, metacognition and problem-solving abilities. Ultimately, this will produce characterminded learners who can play active roles in dealing with the increasing challenges facing Ghana and the global society.
+The features that shape the common core programme are shown in Figure
+1. These are:
+•
+
+learning and teaching approaches – the core competencies, pedagogical approaches and 4Rs
+
+•
+
+learning context – engagement, service and projects
+
+•
+
+learning areas – mathematics, science, computing, languages (English, Ghanaian Language, French and Arabic), career technology, social studies, physical and
+health education, creative arts and design, and religious and moral education.
+
+© NaCCA, Ministry of Education 2021
+
+ix
+
+Figure 1: CCP learner attributes
+
+Learning and Teaching Approaches
+•
+
+The core competencies: The core competencies describe the relevant global skills for learning that the CCP helps learners to develop in addition
+to the 4Rs. The global skills for learning allow learners to become critical thinkers, problem-solvers, creators, innovators, good communicators,
+collaborators, digitally literate, and culturally and globally sensitive citizens who are lifelong learners with a keen interestin their personal
+development.
+
+•
+
+Pedagogical approaches: The CCP emphasises creative and inclusive pedagogies that are anchored on authentic and enquiry-based learning,
+collaborative and cooperative learning, differentiated learning, and holistic learning as well as cross disciplinary learning.
+
+© NaCCA, Ministry of Education 2021
+
+x
+
+•
+
+The 4Rs across the Curriculum: The 4Rs refer to Reading, wRiting, aRithmetic and cReativity, which all learners must become competent in.
+
+Learning context
+The CCP places emphasis on engagement of learners in the classroom activities,projects (in and outside classroom). These projects can involve individualor group
+tasks, which all learners are required to complete by the end of Basic Year 9. The CCP project provides learners with contexts to demonstrate creativity and
+inventiveness in various areas of human endeavour. Community service offers opportunities for learners to nurture, love and care for, and solve problems in their
+community.
+
+Learning Areas
+The CCP comprises the following learning areas:
+1.
+
+Languages (English Language, Ghanaian Languages, French, Arabic)
+
+2.
+
+Mathematics
+
+3.
+
+Science
+
+4.
+
+Creative Arts and Design(CAD)
+
+5.
+
+Career Technology
+
+6.
+
+Social Studies
+
+7.
+
+Computing
+
+8.
+
+Religious and Moral Education (RME)
+
+9.
+
+Physical and Health Education (PHE)
+
+© NaCCA, Ministry of Education 2021
+
+xi
+
+RATIONALE
+Language is both a medium of communication and a library in which the elements of culture are stored. It remains the most reliable means through which elements
+of culture are preserved and transmitted from generationto generation. First, the study of learners’ first language and culture will make them conscious about their
+identity and equip them with effective communication skills that will provide them with the ability to appreciate thevalues embodied in their language and culture.
+They will know their cultural values and practices to help them become honest and responsible citizens intheir communities.
+Again, learners must be made to learn Ghanaian Language in their schools toenable them to access indigenous and educational knowledge. In the light of the current
+global development and technological advancement, the learning of a Ghanaian Language will help learners maintain their identity as Ghanaians.It will also help learners
+to integrate their knowledge in Ghanaian languages to the present-day global development and technological advancement.
+In addition, research has proven that learners who are very good in their firstlanguage are able to learn a second language faster and better. This implies thatemphasis
+must be put on the teaching and learning of Ghanaian Languages toserve as a foundation for the effective learning of English as a second language.This will therefore
+make learners bilingual, which is crucial in the current global world.
+
+© NaCCA, Ministry of Education 2021
+
+xii
+
+PHILOSOPHY
+Teaching Philosophy
+The Ghanaian language curriculum is informed by two main philosophical viewpoints explained below.
+Children go through developmental stages as they learn language and research. It is clear that children develop language at their own pace as they interact with the
+social environment around them. Therefore, when childrenare provided with a good social environment, they develop their language and culture faster.
+In teaching language and culture, the dimension to learning that this curriculum adopts is that reading and writing are active processes of constructing meaning from
+print. This is because children have in-built potentials to develop and acquire new language while approximating grammatical structures as they learn to speak. They
+invent names for the objects in their world from the beginning but gradually as they interact, they learn the appropriate language of the community
+Therefore, this view holds that in teaching language and culture, teachers must use the favourite phrase “meaning making” to describe how active the learner is in
+learning a first language and comprehending what they read or hear. In this way, the teacher serves as a guide and a facilitator to enhance the learners’ ability to
+decode text and support them to engage and make sense of what they read. This is to ensure that good readers constantly make hypothesis and predictions and
+modify them as they read along.
+This calls for participatory and thematic approaches to help children to connect Ghanaian language learning in the classroom to solving real world problems. The
+teacher should therefore promote interaction and make learners to become active in constructing their own knowledge, thoughts andexperiences. In this approach,
+teachers should recognise individual differencesin language learning to ensure effective teaching of language in the classroom.
+
+Learning Philosophy
+Language learning is not just listening, speaking, reading and writing. It involves the appropriate use of the language in an appropriate context. Teachers should
+therefore develop the linguistic and sociolinguistic competencies of the learners. Teachers should also promote effective use of verbal and non- verbal strategies in
+their communication. The Ghanaian language curriculum, therefore, assumes that learners who are knowledgeable in their first language are able to access indigenous
+and educational information effectively, construct their knowledge, thoughts and experiences efficiently, and appreciate their language, culture, and that of others
+and contribute meaningfully in the development of their communities as honest and responsible citizens.
+
+© NaCCA, Ministry of Education 2021
+
+xiii
+
+AIMS
+General Aim
+The curriculum aims to develop individuals who are literate, good problem solvers, have the ability to think creatively and have both the confidenceand
+competence to participate fully in the affairs of the Ghanaian society as responsible local and global citizens.
+
+Specific Aims
+The overriding aim of the Ghanaian Language curriculum is to develop the linguistic and cultural awareness of the learner. The following aims may culminate into
+the achievement of this broad aim:
+1.
+
+Heighten learners’ sensitivity in their Ghanaian Language.
+
+2.
+
+Acquire the basic skills that will help them decode appropriate age leveltext in the Ghanaian Language.
+
+3.
+
+Read age level/appropriate text with ease, fluency, and with comprehension.
+
+4.
+
+Cultivate a life-long habit of reading widely for information and pleasure.
+
+5.
+
+Acquire a wide stock of vocabulary and understand grammatical structures as well as linguistic conventions for easy listening, speaking,reading and writing.
+
+6.
+
+Cultivate in learners the ability to embrace diversity and to challenge stereotypes by giving everyone equal opportunity.
+
+© NaCCA, Ministry of Education 2021
+
+xiv
+
+PROFILE OF EXPECTED LEARNING BEHAVIOURS
+A central aspect of this curriculum is the concept of three integral learning domains that should be the basis for instruction and assessment. A learner may acquire
+knowledge through some learning experience. They may also show understanding of concepts by comparing, summarising, re-writing in their own words, and
+constructing meaning from instructions.
+
+Profile of learning behaviour dimension
+The learner may also learn to apply the knowledge acquired in some new context. At a higher level of learning behaviour, the learner may be required to analyse
+an issue or problem. At a much higher level, the learner may be required to synthesise knowledge by integrating a number of ideas to formulate a plan, solve a
+problem, pose a problem, or compose a story problem. Further, the learner may be required to evaluate, estimate, and interpret a concept. At the last level, which
+is the highest, learners may be required to create, invent, compose, construct, and design. These six learning behaviours (“knowing”, “understanding”, “analysis”,
+“synthesis”, “evaluation” and “creation”) described are referred to as dimensions of learning. “Knowing” is a dimension, “applying knowledge” is also a dimension.
+More than one dimension forms a profile of learning behaviour dimensions.
+In this curriculum, learning indicators are stated with action verbs to show what the learner should know and be able to do (e.g. “Identify the processes
+involved in naming a child.” etc.) The learner being able to “identify”the process after obtaining several experiences means that they have acquired “knowledge”.
+Being able to explain, summarise, and give examples, etc., means that the learner has understood the concepts taught.
+Similarly, being able to develop, defend, etc., means that the learner can “apply” the knowledge acquired in some new context. “Knowing”, “applying knowledge”
+etc., are dimensions that should be the prime focus of teaching and learning in schools. Teaching, in most cases, tends to stress on knowledge acquisition to the
+detriment of other higher level behaviours such as application of knowledge.
+Each action verb in an indicator shows the underlying learning outcomeor standard. It is therefore necessary for teachers to carefully read and comprehend the
+standards they plan developing in their learners each week,and identify the group of indicators learners have to demonstrate in achievingthese standards. Teachers
+must ensure the group of indicators selectedfor the week reflect the whole range of the profile of learning behaviour dimensions, that is, from the low level
+(knowing”, “understanding, etc.) to the high level (solve or pose a problem, create a pattern, etc.). The focus is to move learning from the didactic acquisition of
+“knowledge, where thereis fact memorisation, heavy reliance on formulae, remembering facts withoutcritiquing them or relating them to the real world (surface
+learning) to a newposition called deep learning. Learners are expected to deepen their learningthrough knowledge application to develop critical thinking skills, explain
+reasoning, and generate creative ideas that solve real life problems in their school lives, and later in their adult lives. This is the point at which learning becomes
+beneficial to the learner.
+
+© NaCCA, Ministry of Education 2021
+
+xv
+
+Weighting of profile of learning behaviour dimensions
+As already stated, it is important to consider the underlying behaviours for teaching, learning, and assessment. In basic level school Ghanaian Language, the three
+profiles of learning behaviour dimensions that have been specified for teaching, learning, and assessment are:
+•
+
+Knowledge and Understanding 30%
+
+•
+
+Application of Knowledge 40%
+
+•
+
+Attitudes, Values and Process Skills 30%
+
+Each of the learning behaviour dimensions has been given a percentage weightthat should be considered in teaching, learning and assessment. The weights indicated
+on the right of the dimensions show the relative emphasis that theteacher should give in the teaching, learning and assessment processes.
+Emphasising the three domains of learning (cognitive, affective and psychomotor) in your teaching will ensure that Ghanaian Language will not only be taught and
+studied at the cognitive level but will also lead learners tothe acquisition of positive attitudes and skills that will enable them to deal effectively with life in general.
+The explanation of the keywords involved in each profile of learning behaviour dimensions are as follows:
+
+Knowledge and Understanding (KU)
+Knowing refers to the ability to remember, recall, identify, define, describe, list,name, match, state principles, facts, and concepts. Knowledge is the ability toremember
+or recall material already learnt and this constitutes the lowest level of learning.
+Understanding is the ability to explain, outline, summarise, translate, rewrite,paraphrase, give examples, generalise, estimate or predict consequences basedupon a
+trend. Understanding is generally the ability to grasp the meaning of some material or concept that may be verbal, pictorial, or symbolic.
+
+Applying Knowledge (AK)
+This dimension is also referred to as “Use of Knowledge”. It refers to the ability to use knowledge or apply knowledge, apply rules, methods, principles,theories, etc.
+to situations that are new and unfamiliar. It also involves the ability to produce, solve, plan, demonstrate, discover, etc.
+Applying knowledge as used in this curriculum has a number of learning behaviour levels. These include analysis, synthesis, evaluation, and creation. These may be
+considered and taught separately, paying attention to eachof them equally in your teaching. The dimension “Applying Knowledge” is a summary dimension for all
+four learning sub-levels. Details of each of the foursub-levels are as follows:
+Analysing: The ability to break down material into its component parts; to differentiate, compare, distinguish, outline, separate, identify significant points, etc.; the
+ability to recognise unstated assumptions and logical fallacies; abilityto recognise inferences from facts, etc.
+
+© NaCCA, Ministry of Education 2021
+
+xvi
+
+Synthesising: The ability to put parts together to form a new whole. It involves the ability to combine, compile, compose, devise, plan, revise, organise,create, generate
+new ideas and solutions, etc.
+Evaluating: The ability to appraise, compare features of different things andmake comments or judgment, compare, contrast, criticise, justify, argue, support, discuss,
+prove, conclude, prioritise, theorise, make recommendations,etc. Evaluation refers to the ability to judge the worth or value of some material, based on some criteria.
+Creating: The ability to use information or materials, combine ideas or elements to create, form, produce, manufacture, invent, discover, design, orconstruct,
+formulate other (new) products. Creation is the highest form of thinking and learning skill and is, therefore, a very critical behaviour. This, unfortunately, is the area
+where most learners perform poorly. It is thereforenecessary to help learners develop a high level of thinking right from the Basiclevel. To be effective, competent, and
+reflective citizens, who will be willing and capable of solving personal and societal problems, learners should be exposed to situations that challenge them to raise
+questions and attempt to solve problems.
+
+© NaCCA, Ministry of Education 2021
+
+xvii
+
+ATTITUDES,VALUES AND PROCESS SKILLS
+At the heart of the curriculum is the belief in nurturing honest, creative, and responsible citizens with the requisite skills for national development. Learners,
+therefore, need to acquire positive attitudes, values, and psychosocial skills that will enable them to participate actively in lessons and take a stand on issues affecting
+them and others. The Ghanaian Language curriculum thus focuses on the development of attitudes, values, and skills.
+Values: As such, every part of this curriculum, including the related pedagogy is consistent with the following set of values:
+Respect: This includes respect for Ghana, its institutions and laws, and the culture and respect among its citizens and friends.
+Diversity: Ghana is a multicultural society in which every citizen enjoys fundamental rights and responsibilities. Learners must be taught to respect the views of all
+persons and to see national diversity as a powerful force for national development. The curriculum promotes social cohesion.
+Equity: Socio-cultural and economic environment across the country is uneven. Consequently, it is necessary to be deliberate in addressing the specific need of
+learners and to ensure an equitable distribution of resources. Ghana’s learners have varied needs influenced by their gender, abilities, economic status, geographical
+background, etc. which requires the provision of equal opportunities to all.
+Commitment to achieving excellence: Learners must be taught to appreciate the opportunities provided through the curriculum and persist in doing their
+best in whatever fields of endeavour as global citizens. The curriculum encourages innovativeness through creative and critical thinking, and the use of contemporary
+technology. Ghana will instil the value of excellent service above self.
+Teamwork/Collaboration: Schools are to be dedicated to a constructive and team-oriented working and learning environment. This also means that learners
+should live peacefully with all persons with an attitude of tolerance and collaboration.
+Truth and Integrity: The curriculum aims to develop learners into individuals who will consistently tell the truth irrespective of the consequences, be morally
+upright and have the attitude of doing the right thing even when no one is watching, be true to themselves and lawful beliefs, and be willing to live the values of
+honesty and compassion. Equally important, the ethos of the workplace, including integrity and grit, must underpin the learning processes to allow learners to see
+and apply academic skills and competencies in the world of work.
+Values of honesty and compassion: Equally important, the ethos of the workplace, including integrity and grit, must underpin the learning processes to allow
+learners to see and apply academic skills and competencies in the world of work.
+
+© NaCCA, Ministry of Education 2021
+
+xviii
+
+ASSESSMENT IN THE CCP
+Assessment is a process of collecting and evaluating information about learners and using the information to make decisions to improve their learning. Assessment
+may be formative, summative, diagnostic, or evaluative depending on its purpose. It is integral to the teaching-learning process, promotes learner learning, and
+improves instruction. In CCP, it is suggested that assessment involves assessment for learning, assessment of learning, and assessment as learning, which are described
+in the subsequent paragraphs.
+
+Assessment for Learning (AfL)
+Assessment for Learning (AfL) is the process of seeking and interpreting evidence for use by learners and their teachers to decide where the learner is in their
+learning, where they need to be (the desired goal), and how best to get them there. AfL is one of the most suitable methods for improving learning and raising
+standards (Black and William, 1998). Assessment for Learning also refers to all the activities undertaken by teachers and/or by their learners, which provide
+information to be used as feedback to modify teaching and learning activities in which they are engaged. AfL can be achieved through processes such as sharing
+criteria with learners, effective questioning, and feedback.
+AfL, therefore, provides timely feedback to ensure individual learners are assisted during the teaching and learning process using various strategies and questioning
+to measure the learning that has actually taken place. It is a continuous process that happens at all stages of the instructional process to monitor the progress of a
+learner and to offer feedback or change teaching strategies to achieve performance standards of a lesson.
+
+Assessment as Learning (AaL)
+Assessment as Learning develops and supports learners’ sense of ownership and efficacy about their learning through reflective practices. This form of self-assessment
+helps in building the competencies of learners to achieve a deeper understanding of their own learning and what they are taught.
+
+Assessment of Learning (AoL)
+Assessment of learning provides a picture of the achieved standards of the teacher and performance of learners at the terminal stage of the learning process. This
+information provides data for accountability and educational decisions such as grading, selection, and placement, promotion, and certification. Through AoL,
+stakeholders such as parents and guardians are informed about the extent learners have attained expected learning outcomes at the end of their grade or programme.
+
+What do we assess?
+Emphasis in assessment in the CCP is on the Common Core Learner Attributes, which are essential outcomes in the three domains of learning (i.e.cognitive,
+psychomotor, and affective).
+© NaCCA, Ministry of Education 2021
+
+xix
+
+Knowledge and skills with emphasis on the 4Rs in the learning areas.
+Core competencies with emphasis on attitudes and values developed throughthe learning and its context as well as the pedagogical approaches.
+The process is illustrated diagrammatically in Figure 2.
+
+Figure 2 Essential Assessment Features
+
+How do we monitor progress?
+School Based Assessments (SBA) covers all forms/modes of assessment including AfL, AaL and AoL (see Table 1), that can be undertaken by any school-level actor
+(learner, teacher, head teacher) to monitor the learner’s achievement over a period of time. Data collection and keeping records of the data are central to the
+conduct of SBA.
+
+© NaCCA, Ministry of Education 2021
+
+xx
+
+Table 1 Modes of Assessment
+
+Assessment for
+Learning
+
+Assessment of
+Learning
+
+Assessment as
+Learning
+
+Class exercises
+
+Class Assessment Task
+(CAT)
+
+Portfolio
+
+Quizzes
+
+End of term tests
+
+Journal entries
+
+Class tests (written,
+oral, aural and/or
+practical)
+
+End of year tests
+
+Project work
+
+Class Assessment Task
+(CAT)
+
+Checklist
+Questionnaire
+
+The following are samples of relevant records that can be kept on the learner’slearning.
+•
+
+Learner’s Progress Record (Cumulative Record)
+
+•
+
+Learner’s Report Card
+
+•
+
+School-Based Assessment Termly Recording Register
+
+Details of guidelines on SBA can be found in the National Pre-tertiary LearningAssessment Framework (NPLAF) document (Ministry of Education, 2020a) andthe SchoolBased Assessment Guidelines (Ministry of Education, 2020b).
+
+Reporting School-Based Assessment (SBA) in the CCP
+The CCP uses a criterion-referenced model of presenting and reporting school-based assessment data. School-based assessment throughout the four-year duration
+of CCP is done against criteria linked to performance standards and not against the work of other learners. The CCP provides levels of proficiency to be attained
+and descriptors for all grade levels of theprogramme (see Table 2). These levels and descriptors cannot be changed by individual schools and are, therefore,
+common to all learners as well as learning areas nationwide. For each assessment criterion (or benchmark for the level of proficiency), a number of descriptors are
+defined as shown in Table 2.
+
+© NaCCA, Ministry of Education 2021
+
+xxi
+
+Table 2 Benchmarks, levels of proficiency and the grade level descriptors
+
+Level of Proficiency
+
+Benchmark
+
+Grade Level Descriptor
+
+1: Highly Proficient (HP)
+
+80% +
+
+Learner shows high level of proficiency in knowledge, skills
+and values and can transfer them automatically and flexibly
+through authentic performance tasks.
+
+2: Proficient (P)
+
+68-79%
+
+Learner demonstrates sufficient level of proficient
+knowledge, skills and core understanding; can transfer them
+independently through authentic performance tasks.
+
+3: Approaching
+Proficiency (AP)
+
+54-67%
+
+Learner is approaching proficiency in terms of knowledge,
+skills and values with little guidance and can transfer
+understanding through authentic performance tasks.
+
+4: Developing (D)
+
+40-53%
+
+Learner demonstrates developing level of knowledge, skills
+and values but needs help throughout the performance of
+authentic tasks.
+
+5: Emerging (E)
+
+39% and below Learner is emerging with minimal understanding in terms of
+knowledge, skills, and values but needs a lot of help.
+
+The grading system presented shows the letter grade system and equivalent grade boundaries. In assigning grades to pupils’ test results, or any form of evaluation,
+the above grade boundaries and the descriptors may be applied. The descriptors (Highly Proficient [HP], Proficient [P], Approaching Proficiency [AP], Developing
+[D], Emerging [E], indicate the meaning of each grade.
+In addition to the school-based assessment (SBA), a national standards assessment test is conducted in Basic 8 to provide national level indicators on learners’
+achievement.
+
+Suggested Time Allocation
+Three periods a week, consisting of fifty minutes each, is allocated to the teaching of Ghanaian Language at the B7-B9 level.
+
+© NaCCA, Ministry of Education 2021
+
+xxii
+
+CREATIVE PEDAGOGICAL APPROACHES
+The CCP emphasises creative and inclusive pedagogies that are anchored on authentic and enquiry-based learning, collaborative and cooperative learning,
+differentiated learning, holistic learning, cross-disciplinary learning (i.e. the 4Rs across the Curriculum) as well as developing the core competencies. This section
+describes some of the creative pedagogical approaches required for the CCP.
+
+Pedagogical Approaches
+These include the approaches, methods and strategies for ensuring that every learner benefits from appropriate and relevant teaching and learning episodes, which
+are timely, assessed, and feedback provided to the learner and other stakeholders such as parents and education authorities. It includes the type and use of appropriate
+and relevant teaching and learning resources to ensure that all learners attain the expected level of learning outcomes. The curriculum emphasises:
+•
+
+the creation of learning-centred classrooms through the use of creative approaches to teaching and learning as strategies to ensuring learner empowerment
+and independent learning.
+
+•
+
+the positioning of inclusion and equity at the centre of quality teaching and learning. Inclusion includes addressing the varied needs of learners based on their
+gender, disability, economic status, religious affiliation, geographical location, etc.
+
+•
+
+the use of differentiation and scaffolding as teaching and learning strategies for ensuring that no learner is left behind.
+
+•
+
+the use of Information Communications Technology (ICT) as a pedagogical tool.
+
+•
+
+the identification of subject specific instructional expectations needed for making learning in the subject relevant to learners.
+
+•
+
+the integration of assessment for learning, as learning and of learning into the teaching and learning process and as an accountability strategy.
+
+•
+
+use questioning techniques that promote and deepen learning.
+
+Inclusion
+Inclusion is recognising that learners come from diverse background with varied needs and must be uniquely supported through the learning process. Learners can
+be disadvantaged based on their gender, ability, ethnic background, economic status, religious affiliation etc. Inclusion entails access and learning for all learners
+especially those disadvantaged. All learners are entitled to a broad and balanced curriculum in every school in Ghana. The daily learning activities to which learners
+are exposed should ensure that the learners’ right to equal access to quality education is being met. The curriculum suggests a variety of approaches that address
+learners’ diversity and their special needs in the learning process including addressing stereotypes that seek to limit the learner’s interests and abilities. These
+approaches when used in lessons, will contribute to the full development of the learning potential of every learner. Learners have individual needs and different
+learning styles, learning experiences and different levels of motivation for learning. Planning, delivery and reflection on daily learning episodes should take these
+© NaCCA, Ministry of Education 2021
+
+xxiii
+
+differences into consideration. The curriculum therefore promotes:
+•
+
+learning that is linked to the learner’s background and to their prior experiences, interests, potential and capacities; taking into consideration socially
+constructed role and expectations of the various groups in society and the limitations they come with.
+
+•
+
+learning that is meaningful because it aligns with learners’ abilities (e.g. learning that is oriented towards developing general capabilities and solving the practical
+problems of everyday life); and
+
+•
+
+the active involvement of the learners in the selection and organisation of learning experiences, making them aware of their importance in the process, and
+also enabling them to assess their own learning outcomes.
+
+•
+
+equal access and opportunity given to all learners irrespective of social, economic, religious background.
+
+Learning-Centred Pedagogy
+The learner is at the centre of learning. At the heart of the curriculum is learning progression and improvement of learning outcomes for Ghana’s young people with
+a focus on the 4Rs – Reading, wRiting, aRithmetic and cReativity. It is expected that at each curriculum phase, learners would be offered the essential learning
+experiences to progress seamlessly to the next phase. Where there are indications that a learner is not sufficiently ready for the next phase (B11-B12) a compensatory
+provision through differentiation should be provided to ensure that such a learner is ready to progress with their classmates.
+The curriculum encourages the creation of a learning-centred classroom with the opportunity for learners to engage in meaningful “hands-on” activities that bring
+home to the learner what they are learning in school, and what they know from outside of the school. The learning centred classroom is a place for the learners to
+discuss ideas and through the inspiration of the teacher, actively engage in looking for answers through working in groups to solve problems. This also includes
+researching for information and analysing and evaluating the information obtained. The aim of the learning-centred classroom approach is to develop learner
+autonomy so that learners can take ownership of their learning. It provides the opportunity for deep and profound learning to take place.
+The teacher should create a learning atmosphere that ensures:
+•
+
+all learners feel safe, accepted and encouraged to actively participate in the learning process.
+
+•
+
+learners are given frequent opportunities to interact with varied sources of information, teaching and learning materials and ideas in a variety of ways.
+
+•
+
+the teacher assumes the position of a facilitator or coach who helps learners to identify a problem suitable for investigation via project work.
+
+•
+
+problems are connected to the context of the learners’ world so that it presents authentic opportunities for learning.
+
+•
+
+subject matter around the problem, not the discipline.
+
+•
+
+learners responsibly define their learning experience and draw up a plan to solve the problem in question.
+
+© NaCCA, Ministry of Education 2021
+
+xxiv
+
+•
+
+learners collaborate whilst learning.
+
+•
+
+demonstrate the results of their learning through a product or performance.
+
+It is more productive for learners to find answers to their own questions rather than for teachers to provide the answers and their opinions in a learning-centred
+classroom.
+
+Differentiation and scaffolding
+This curriculum is to be delivered through the use of creative approaches. Differentiation and Scaffolding are pedagogical approaches to be used within the context
+of the creative approaches.
+Differentiation is a process by which differences between learners (learning styles, interest and readiness to learn etc.) are accommodated so that all learners in
+a group have the best possible chances of learning. Differentiation could be by task, support and outcome. Differentiation as a way of ensuring each learner benefits
+adequately from the delivery of the curriculum can be achieved in the classroom through:
+•
+
+Task
+
+•
+
+One-on-one support
+
+•
+
+Outcome
+
+Differentiation by task involves teachers setting different tasks for learners with different abilities e.g. in sketching the plan and shape of their classroom some
+learners could be made to sketch with free hand while others would be made to trace the outline of the plan of the classroom.
+Differentiation by support involves the teacher providing a targeted support to learners who are seen as performing below expected standards or at risk of not
+reaching the expected level of learning outcome. This support may include a referral to a guidance and counselling officer for psychological and emotional support.
+Differentiation by outcome involves the teacher allowing learners to respond at different levels. In this case, identified learners are allowed more time to
+complete a given task.
+Scaffolding in education refers to the use of a variety of instructional techniques aimed at moving learners progressively towards stronger understanding and
+ultimately greater independence in the learning process.
+It involves breaking up the learning episode, experience or concepts into smaller parts and then providing learners with the support they need to learn each part.
+The process may require a teacher assigning an excerpt of a longer text to learners to read, engage them to discuss the excerpt to improve comprehension of its
+rationale, then guiding them through the key words/ vocabulary to ensure learners have developed a thorough understanding of the text before engaging them to
+read the full text. Common scaffolding strategies available to the teacher include:
+•
+
+giving learners a simplified version of a lesson, assignment, or reading, and then gradually increasing the complexity, difficulty, or sophistication
+
+© NaCCA, Ministry of Education 2021
+
+xxv
+
+over time.
+•
+
+describing or illustrating a concept, problem, or process in multiple ways to ensure understanding.
+
+•
+
+giving learners an exemplar or model of an assignment, they will be asked to complete.
+
+•
+
+giving learners a vocabulary lesson before they read a difficult text.
+
+•
+
+clearly describing the purpose of a learning activity, the directions learners need to follow, and the learning goals they are expected to achieve.
+
+•
+
+explicitly describing how the new lesson builds on the knowledge and skills learners were taught in a previous lesson.
+
+Information Communication Technology
+ICT has been integrated into this curriculum as a teaching and learning tool to enhance deep and independent learning. Some of the expected
+outcomes that this curriculum aims to achieve through ICT use for teaching and learning are:
+•
+
+improved teaching and learning processes.
+
+•
+
+improved consistency and quality of teaching and learning.
+
+•
+
+Increased opportunities for more learner-centred pedagogical approaches.
+
+•
+
+improved inclusive education practices by addressing inequalities in gender, language, ability.
+
+•
+
+improved collaboration, creativity, higher order thinking skills.
+
+•
+
+enhanced flexibility and differentiated approach of delivery.
+
+The use of ICT as a teaching and learning tool is to provide learners an access to large quantities of information online. It also provides the framework for analysing
+data to investigate patterns and relationships in a geographical con- text. Once pupils have made their findings, ICT can then help them organise, edit and present
+information in many different ways.
+Learners need to be exposed to the various ICT tools around them such as calculators, radios, cameras, phones, television sets and computer and related software
+like Microsoft Office packages - Word, PowerPoint and Excel as teaching and learning tools. The exposure that learners are given at the CCP level to use ICT in
+exploring learning will build their confidence, and will increase their level of motivation to apply ICT use in later years, both within and outside of education. ICT
+use for teaching and learning is expected to enhance the quality and learners’ level of competence in the 4Rs.
+
+© NaCCA, Ministry of Education 2021
+
+xxvi
+
+CORE COMPETENCIES
+The core competencies describe a body of skills that teachers at the basic level should seek to develop in their learners. The competencies describe a connected
+body of core skills that are acquired throughout the processes of teaching and learning. They are the relevant global skills for learning that allow learners to develop,
+in addition to the 4Rs, to become critical thinkers, problem-solvers, creators, innovators, good communicators, collaborators, culturally identified individuals, digitally
+literate and global citizens who are have keen interest in their personal development. In using this curriculum, we hope the core competencies will be developed in
+learners to help them develop our country, Ghana. These competencies include:
+
+Critical Thinking and Problem Solving (CP)
+This skill develops learners’ cognitive and reasoning abilities to enable them analyse and solve problems. Critical thinking and problem-solving skills enable learners
+to draw on their own experiences to analyse situations and choose the most appropriate out of a number of possible solutions. It requires that learners embrace
+the problem at hand, persevere and take responsibility for their own learning.
+
+Creativity and Innovation (CI)
+Creativity and Innovation promotes the development of entrepreneurial skills in learners through their ability to think of new ways of solving problems and developing
+technologies for addressing the problem at hand. It requires ingenuity of ideas, arts, technology and enterprise. Learners having this skill are also able to think
+independently and creatively.
+
+Communication and Collaboration (CC)
+This competence promotes in learners the skills to make use of languages, symbols and texts to exchange information about themselves and their life experiences.
+Learners actively participate in sharing their ideas. They engage in dialogue with others by listening to and learning from them. They also respect and value the views
+of others.
+
+Cultural Identity and Global Citizenship (CG)
+This competence involves guiding learners to put country and service foremost through an understanding of what it means to be active citizens. This is done by
+inculcating in learners a strong sense of social and economic awareness. Learners make use of the knowledge, skills, competencies and attitudes acquired to contribute
+effectively towards the socioeconomic development of the country and on the global stage. Learners build skills to critically identify and analyse cultural and global
+trends that enable them to contribute to the global community.
+
+© NaCCA, Ministry of Education 2021
+
+xxvii
+
+Personal Development and Leadership (PL)
+This competence involves improving self-awareness and building self-esteem. It also entails identifying and developing talents, fulfilling dreams and aspirations. Learners
+are able to learn from mistakes and failures of the past. They acquire the skills to develop themselves and lead other people to meet their needs. It involves recognising
+the importance of values such as honesty and empathy and seeking the well-being of others. Personal development and leadership enable learners to distinguish
+between right and wrong. The skill helps them to foster perseverance, resilience and self-confidence. PL helps them acquire the skill of leadership, self-regulation and
+responsibility necessary for lifelong learning.
+
+Digital Literacy (DL)
+Digital Literacy helps learners to discover, acquire skills, and communicate through ICT to support their learning. It also makes them use digital media responsibly.
+For effective lesson planning for teaching, learning and assessment, it is suggested that teachers refer to Appendix A for details of the components of the core
+competencies.
+
+© NaCCA, Ministry of Education 2021
+
+xxviii
+
+INSTRUCTIONAL EXPECTATIONS
+Teachers are expected to:
+•
+
+Guide and facilitate learning by creating a communicative environment for learners and challenging them to acquire the language based on their unique individual
+differences.
+
+•
+
+Use of teaching and learning materials depicting real life communicative situations (authentic materials) as well as modern technologies (ICT).
+
+•
+
+Use the task-oriented approach to learning foreign languages with the view to developing communicative competencies in the learner.
+
+Integration of Skills
+A fundamental component of this curriculum is the integrated approach to the teaching of language skills and cultural values, in the sense that Listening, Speaking
+(cultural values), Reading and Writing are integral in building the grammatical and communicative competence of the learner. Grammar simply sets the rules for
+speaking, reading and writing correctly. This is not to shift the focus of language lessons to preaching grammatical rules. Small doses of these grammatical rules are
+fused into literature and composition as well as reading and oral work. It is, therefore, advantageous at this level to adopt an integrated approach in the teaching of
+language skills and cultural values. This means, for example, that as you teach a writing/composition lesson, relevant grammatical and cultural issues must be raised
+and explained in relation to the writing task. Similarly, such a lesson must have significant aural and oral components.
+Approach to Language and Usage
+It is important to point out that at B7-B9, language and usage is basically internalised. It must be seen as an integral part of listening and speaking and treated as such.
+The main task is to assist learners to learn to use the listed language/grammatical items correctly and fluently. These should be introduced in meaningful situations
+in the context of everyday activities, modelled adequately and practiced orally by every learner. As much as is possible, the learner must not be bothered with
+grammatical terminologies, definitions and lengthy explanation of abstract grammatical concepts.
+Listening and Speaking
+The section on Listening and Speaking in this curriculum has the following segments: conversation/everyday discourse, listening comprehension, speech sounds,
+tones, vocabulary development and presentation. The purpose of each of these segments is to encourage learners to listen carefully and carry out instructions and
+initiate a conversation in the Ghanaian language. The teacher must give the segments their due weight, balance and influence in the teaching process.
+Reading Material
+To help the teacher achieve the indicators of the strand “Reading”, a list of themes for reading has been provided below. The themes have been carefully selected
+to help learners acquire vital information on health issues, as well as information on issues of current interest. The text developed must also touch on Gender
+© NaCCA, Ministry of Education 2021
+
+xxix
+
+Equality and Social Inclusion (GESI). The teacher is further encouraged to use his/her initiative in improvising and planning new reading materials. It is a requirement
+that each learner should read three books on different themes each term, that is, nine books per year. Apart from the prescribed books, the teacher should also
+encourage learners to read any book they find interesting and written in his or her language of study.
+Supplementary Reading Material
+The teacher is further encouraged to constantly look for other supplementary reading materials which will enhance the teaching/learning especially of the sections
+on “Listening and Speaking” and “Reading” Reading materials that focus on moral, ethical and social values such as honesty, diligence and integrity are particularly
+recommended.
+List of Themes for Reading
+The following themes have been selected to be used in developing materials for reading from B7 to B9. The teacher is encouraged to look for reading materials that
+may be relevant to these themes, or select passages from other sources that will be of interest to learners at each level. Reading materials must also include the
+basic types of prose: narrative, creative, persuasive, descriptive, informative/academic writing, literary writing, letter writing and argumentative as well as bits of
+drama and poetry.
+BASIC YEAR 7 (JHS 1)
+1. Drug Abuse
+2. Natural Disasters - Earthquakes, floods, tremors, hurricanes, etc.
+3. Road Accidents - Causes and Prevention
+4. Water - Sources, importance and uses
+5. Leisure
+6. Gender Equality and Social Inclusion (GESI)
+7. Computers/Technology
+8. Forest Depletion
+BASIC YEAR 8 (JHS 2)
+1. Historical events - Independence Day, February shootings, Formation of the UGCC and the struggle for independence
+2. Communication - Letters, telephones, E-mail, print and electronic media
+3. Social, moral and cultural values such as honesty, diligence, patriotism, commitment respect for elders, and care for public properties.
+© NaCCA, Ministry of Education 2021
+
+xxx
+
+4. Teenage Pregnancy
+5. Marriage and Gender Equality and Social Inclusion (GESI)
+6. HIV/AIDS
+7. Energy - Sources, importance, and conservation
+BASIC YEAR 9 (JHS 3)
+1. Inventions
+2. Computers/Technology
+3. Forest Depletion
+4. Entrepreneurship
+5. Adolescent Reproductive Health
+6. Marriage and Gender Equality and Social Inclusion (GESI)
+
+Curriculum Reference Numbers
+The curriculum has been structured into four columns which are Strands, Sub-strands, Content standards, Indicators and Exemplars. A unique annotation isused for
+numbering the learning indicators in the curriculum for the purpose of easy referencing. The notation is indicated in Table 2.
+Example: B7.4.2.3.1
+
+ANNOTATION
+
+MEANING / REPRESENTATION
+
+B7
+
+Year or Class
+
+4
+
+Strand Number
+
+2
+
+Sub-Strand Number
+
+3
+
+Content Standard Number
+
+1
+
+Learning / Performance Indicator Number
+
+© NaCCA, Ministry of Education 2021
+
+xxxi
+
+Strands are the broad learning areas or domains of the Ghanaian Languagecontent to be studied.
+Sub-strands are the sub-divisions of the broad learning areas or strands.
+Content standard refers to the pre-determined level of knowledge, skill and/or attitude that a learner attains by a set stage of education.
+Indicators are clear outcomes or milestones that learners have to exhibit ineach year to meet the content standard expectation. The indicators
+representthe minimum expected standard in a year.
+Exemplars clearly explain the expected outcomes of indicators and serve as support and guidance to the facilitator/teacher in the delivery of the
+curriculum.
+
+© NaCCA, Ministry of Education 2021
+
+xxxii
+
+STRUCTURE OF THE CURRICULUM
+
+© NaCCA, Ministry of Education 2021
+
+xxxiii
+
+SCOPE AND SEQUENCE
+STRAND
+
+SUB-STRAND
+
+B7
+
+B8
+
+B9
+
+1. Rites of Passage: childhood, puberty, marriage, death and funeral rites
+
+
+
+
+
+
+
+2. Naming Systems: Day names, family names, kinship terms, order of birth,
+circumstantial names, reincarnation, nicknames, insinuation names, etc.
+
+
+
+
+
+
+
+3. The Clan System
+
+
+
+
+
+
+
+4. Chieftaincy: Chieftaincy Installation and destoolment, Traditional
+Government, Judicial Systems (Traditional and Contemporary)
+
+
+
+
+
+
+
+1. Conversation/Everyday discourse
+
+
+
+
+
+
+
+2. Listening Comprehension
+
+
+
+
+
+
+
+3. Speech sounds
+
+
+
+4. Tone
+
+
+
+5. Vocabulary development
+
+
+
+6. Presentation
+
+
+
+
+
+
+
+1. Reading
+
+
+
+
+
+
+
+2. Translation
+
+
+
+
+
+
+
+1. Sentence: simple, compound, complex
+
+
+
+2. Integrating grammar in written language (nouns, pronouns, adjectives)
+
+
+
+
+
+
+
+3. Integrating grammar in written language (verbs, adverbs, conjunctions,
+postpositions/prepositions)
+
+
+
+
+
+
+
+4. Vocabulary (spelling and punctuations)
+
+
+
+5. COMPOSITION WRITING
+
+1. Structure and organise ideas in composition writing
+
+
+
+
+
+
+
+6. LITERATURE
+
+1. Oral and written literature
+
+
+
+
+
+
+
+1. CUSTOMS AND INSTITUTIONS
+
+2. LISTENING AND SPEAKING
+
+3. READING
+
+4. LANGUAGE AND USAGE
+
+© NaCCA, Ministry of Education 2021
+
+
+
+xxxiv
+
+BASIC 7
+
+© NaCCA, Ministry of Education 2021
+
+1
+
+STRAND 1: B7.1 CUSTOMS AND INSTITUTIONS
+SUB-STRAND 1: B7.1.1 RITES OF PASSAGE - CHILDHOOD RITES
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B7.1.1.1 Demonstrate
+knowledge and
+understanding of the
+childhood rites of their
+culture and compare
+with other Ghanaian
+cultures
+
+Communication and Collaboration
+(CC)
+CC 9.1: Demonstrate behaviour and skills of
+working towards group goals.
+CC 7.5: Identify and analyse different points
+of views of a speaker.
+Digital Literacy
+DL 5.3: Ability to find and use digital
+content.
+
+B7.1.1.1.1 Identify the processes involved in naming a child.
+Exemplars:
+1. Discuss the outdooring and the naming process of a child in their
+community.
+•
+
+E.g. outdooring/ushering the baby, invitation of ancestors, giving the
+baby a name, blessing, presentation of gifts (father, person child was
+named after, family, community), and so on. NB: Let learners
+watch a video on the traditional naming process and
+discuss it.
+2. Identify the items used in the naming process and write them. E.g.: water,
+basket, bucket, beads, basin, mat, powder, lantern, clothes (baby and
+mother).
+3. Explain the significance of the items used for the naming ceremony.
+NB: In some communities the outdooring and the naming process
+are two different things.
+B7.1.1.1.2 Discuss the significance of the processes in naming a
+child.
+Exemplars:
+1. Read a words on naming ceremony in their culture.
+2. Discuss the significance of the processes involved in naming a child as
+raised in the passage. E.g.
+• Welcomes the child into the family and community.
+• The child gets an identity.
+3. Discuss a libation text used during naming ceremony.
+
+Communication and Collaboration
+(CC)
+CC 9.1: Demonstrate behaviour and skills of
+working towards group goals.
+CC 7.5: Identify and analyse different points
+of view of speaker.
+
+4. Write the three main parts of a libation text.
+
+© NaCCA, Ministry of Education 2021
+
+2
+
+© NaCCA, Ministry of Education 2021
+
+3
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B7.1.1.1 Demonstrate
+knowledge and
+understanding of the
+childhood rites of their
+culture and compare
+with other Ghanaian
+cultures
+
+Communication and Collaboration
+(CC)
+
+B7.1.1.1.3 Compare and contrast the naming processes in their
+culture to other Ghanaian cultures.
+Exemplars:
+1. Discuss the naming process of one other culture of Ghana and compare
+with the naming process of their people.
+2. Write about commonalities and differences among the cultures.
+B7.1.1.1.4 Compare and contrast the traditional naming process to
+the contemporary naming process.
+Exemplars:
+1. Discuss the contemporary naming processes and compare it with the
+traditional naming processes in Ghana.
+2. Show the similarities and differences.
+
+B7.1.1.1 Demonstrate
+knowledge and
+understanding of the
+childhood rites of their
+culture and compare
+with other Ghanaian
+cultures
+
+CC 8.2: Explain ideas in a clear order with
+relevant detail, using correct construction
+and structure of speech.
+Communication and Collaboration
+(CC)
+CC 8.2: Explain ideas in a clear order with
+relevant detail, using correct construction
+and structure of speech.
+
+Similarities: e.g.
+• It is organised
+• Family members are involved.
+• Presentation of gifts, etc.
+Differences: e.g.
+• Organised in the family house but now organised at other places,
+e.g. church, in front of houses, event places, etc.
+• Items used are different from the contemporary process.
+• Baby named eight days after birth (but these days it is not always
+the case), etc.
+
+Cultural Identity and Global
+Citizenship (CG)
+
+B7.1.1.1.5 Role play a naming ceremony session in their culture.
+Exemplars:
+1. Role play a naming ceremony among their people.
+
+Communication and Collaboration
+(CC)
+CC 9.7: Effectively perform multiple roles
+within the group.
+CC 8.1: Speak clearly and explain ideas.
+Share a narrative or an extended answer
+while speaking to a group.
+
+2. Discuss the role play and what they have learnt from it.
+NB: The facilitator should make sure that ALL learners get equal
+chance to participate in the role play not forgetting gender roles.
+
+© NaCCA, Ministry of Education 2021
+
+CG 5.2: Develop and exhibit the ability
+to defend one’s cultural beliefs, practices
+and norms
+
+4
+
+STRAND 1: B7.1 CUSTOMS AND INSTITUTIONS
+SUB-STRAND 2: B7.1.2 NAMING SYSTEMS: DAY NAMES, ORDER OF BIRTH NAMES
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+B7.1.2.1 Exhibit
+understanding of dayborn names and order of
+birth names and relate
+the names to the days
+and order of birth
+
+CORE COMPETENCIES
+
+B7.1.2.1.1 State the names of the days of the week and relate their Communication and Collaboration
+(CC)
+names to the days.
+CC 7.3: Provide feedback in areas of
+Exemplars:
+ideas, organisation, voice, word choice and
+1. State the names of the days of the week and important occasion (e.g.
+sentence fluency in communication
+festival) months of the year in the Ghanaian language of study.
+2. Relate the names of the days of the week or months of the year to
+human names.
+Monday
+
+Female
+
+Male
+
+Akan:
+
+•
+
+Adwoa
+
+•
+
+Kodwo/Kwadwo
+
+Dangme/Ga:
+
+•
+
+Ajo
+
+•
+
+Kojo
+
+Ewe:
+
+•
+
+Adzo
+
+•
+
+Kɔdzo/Kudzo
+
+Gonja:
+
+•
+
+Atani
+
+•
+
+N/A
+
+Cultural Identity and Global
+Citizenship (CG)
+CG 5.4: Develop and exhibit the sense
+of cultural identity.
+
+NB: The day naming system is not applicable to all cultures of
+Ghana. It is language specific. The teacher should watch out
+for cultural shocks and address it skilfully.
+
+© NaCCA, Ministry of Education 2021
+
+5
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B7.1.2.1 Exhibit an
+understanding of day
+names and order of
+birth names and relate
+the names to the days
+and order
+
+Communication and Collaboration
+(CC)
+CC 7.4: Identify underlying themes,
+implications and issues when listening
+
+B7.1.2.1.2 State the order of birth (i.e. first, second, and so on.) and
+relate the names accordingly.
+Exemplars:
+1. State the order of birth of their culture.
+• E.g. first born, second born, and so on.
+2. Relate the names to the order of birth.
+•
+
+E.g.:
+First born
+
+•
+•
+•
+•
+Second born
+
+Female
+Piesie (Akan)
+Gogo (Ewe-Peki)
+Dede (Dangme)
+Ayele (Ga)
+
+Male
+Piesie (Akan)
+Foli (Ewe-Peki)
+Tɛte (Dangme)
+Ayite (Ga)
+
+NB: The order of birth names is not applicable to all cultures of
+Ghana. It is language specific. The teacher should watch out for
+cultural shocks and address it skilfully.
+B7.1.2.1.3 Compare and contrast the day names and order of birth
+names in their culture to other cultures in Ghana.
+Exemplars:
+1. Compare the day names and order of birth names in their culture with
+those of other cultures in Ghana.
+
+Communication and Collaboration
+(CC)
+CC 9.1: Demonstrate behaviour and skills of
+working towards group goals
+
+2. Discuss the similarities and differences.
+Similarities:
+• E.g.: Both are done in order, etc.
+Differences:
+• E.g.: Same names for both sexes in some cultures but not same in
+other cultures, etc.
+© NaCCA, Ministry of Education 2021
+
+6
+
+STRAND 1: B7.1 CUSTOMS AND INSTITUTIONS
+SUB-STRAND 3: B7.1.3 THE CLAN SYSTEM
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B7.1.3.1 Demonstrate
+an understanding of the
+clan system among their
+people
+
+B7.1.3.1.1 Describe the clan system and state some clans in theirethnic
+community.
+Exemplars:
+1. Explain what a clan is.
+
+Communication and
+Collaboration(CC)
+
+B7.1.3.1.2 Discuss the features of the clan system in relation totheir
+community.
+Exemplars:
+1. Discuss the features of their clan system. E.g. symbols, taboos, totems, names,
+etc.
+2. Relate their clan system to another clan system.
+
+Communication and
+Collaboration(CC)
+CC 9.1: Demonstrate behaviour
+and skills ofworking towards
+group goals.
+
+CC 8.2: Explain ideas in a clear
+order withrelevant detail, using
+2. State some clans you know. NB: Learners associate themselves with the clans
+correct construction and
+stated.
+structure of speech.
+Cultural Identity and Global
+E.g.:
+Citizenship (CG)
+• Akan: Aduana, Agona, etc.
+CG 5.1: Show a strong sense of
+• Dangme: Dangmebiawɛ, Piɛngua, Kabubiawɛ, Jebiam, etc.
+belongingness to one’s culture
+• Ewe (Aŋlɔ): Bateawo, Adzɔviawo, etc.
+• Ga: Sempe (Ga Mashi), Kinkawe (Osu), Abese (La), Agbawe (Tɛshi), Nii Moi
+We(Nuŋua), Jɔɔshi(Tɛma) etc.
+• Gonja: Nsuwa, Ngbanyabia, etc.
+• Dagaare: Emoala/Ewaala, Kusiele, etc.
+
+3. Read a passage on a clan system.
+4. Write the main ideas in the passage read in their own words.
+
+© NaCCA, Ministry of Education 2021
+
+7
+
+STRAND 1: B7.1 CUSTOMS AND INSTITUTIONS
+SUB-STRAND 4: B7.1.4 CHIEFTAINCY — INSTALLMENT AND DESTOOLMENT
+
+© NaCCA, Ministry of Education 2021
+
+8
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B7.1.4.1 Demonstrate
+knowledge in and
+an understanding
+of how chiefs and
+queenmothers are
+selected, enstooled/
+enskinned and compare
+their duties and
+responsibilities
+
+Communication and Collaboration
+(CC)
+CC 9.1: Demonstrate behaviour and skills of
+working towards group goals.
+Cultural Identity and Global Citizenship
+(CG)
+CG 5.5: Adjust to the demands of customs,
+traditions, values and attitudes of society.
+
+B7.1.4.1.1 Discuss how chiefs and queenmothers are selected in
+their ethnic community.
+Exemplars:
+1. Read a passage on how chiefs and queenmothers are selected in
+their community.
+2. Identify the traditional leaders mentioned in the passage. E.g. chiefs, subchiefs, and so on.
+3. Relate how chiefs and queenmothers are selected among their people to
+the passage read.
+B7.1.4.1.2 Discuss the processes involved in enstooling/enskinning
+chiefs and queenmothers.
+Exemplars:
+1. Discuss the qualities of a person who qualifies to be a chief or a
+queenmother among your people.
+
+Communication and Collaboration
+(CC)
+CC 9.1: Demonstrate behaviour and skills of
+working towards group goals.
+
+2. Create a profile of the qualities of a chief or queenmother.
+3. Identify those who select the chief and queenmother among your people.
+4. Role play the enstoolment/enskinment of chiefs and queenmothers.
+Learners watch a video on the topic before the role play.
+NB: Some cultures of Ghana do not have queenmothers but have
+female chiefs. The facilitator should make sure that ALL learners
+take active part in the role play.
+B7.1.4.1.3 Discuss the duties and responsibilities of chiefs and
+queenmothers among their people.
+Exemplars:
+1. Identify the duties of a chief and queenmother in their community.
+
+Digital Literacy (DL)
+DL 5.3: Ability to find and utilise digital
+content
+
+Communication and Collaboration
+(CC)
+CC 9.1: Demonstrate behaviour and skills of
+working towards group goals.
+
+2. Evaluate the duties of a chief and queenmother among your people.
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+© NaCCA, Ministry of Education 2021
+
+CORE COMPETENCIES
+9
+
+B7.1.4.1 Demonstrate
+knowledge in and
+an understanding
+of how chiefs and
+queenmothers are
+selected, enstooled/
+enskinned and compare
+their duties and
+responsibilities
+
+B7.1.4.1.4 Discuss and compare modern trends affecting the
+enstoolment/enskinement of chiefs and queenmothers.
+Exemplars:
+1. Discuss some modern trends affecting the enstoolment/enskinement
+of chiefs/queenmothers among your people. E.g. Monetary influence,
+political influence, etc.
+
+Communication and Collaboration
+(CC)
+CC 9.1: Demonstrate behaviour and skills of
+working towards group goals.
+
+2. Explain how the trends mentioned affect the chieftaincy institution.
+3. Compare the modern ways of enstooling/enskinning chiefs/
+queenmothers with the traditional ways of enstooling/enskinning chiefs/
+queenmothers.
+
+© NaCCA, Ministry of Education 2021
+
+10
+
+STRAND 2: B7.2 LISTENING AND SPEAKING
+SUB-STRAND 1:B7.2.1: CONVERSATION/EVERYDAY DISCOURSE
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B7.2.1.1 Demonstrate
+use of appropriate
+language orally in
+specific situations
+
+Communication and Collaboration
+(CC)
+CC 7.3: Provide feedback in areas of
+ideas, organisation, voice, word choice and
+sentence fluency in communication.
+CC 8.2: Explain ideas in a clear order with
+relevant detail, using correct construction
+and structure of speech.
+Digital Literacy (DL)
+DL 5.3: Ability to find and utilise digital
+content
+
+B7.2.1.1.1 Use appropriate register in everyday communication
+(informal and formal) with diverse partners on grade-level topics/
+texts/issues
+Exemplars:
+1. Identify formal situations. E.g. interactions between strangers on varied
+themes, announcements, standard for work, school and public gathering
+and offices, at the palace and business settings, and hospitals.
+2. Use appropriate language to participate in formal interactions. e.g. no
+slang/jargon, no contracted forms. Learner should go online and
+read on the topic.
+3. Identify informal situations: E.g. casual or intimate relationship between
+friends and acquaintances, family and team mates, etc.
+4. Use appropriate language to participate in conversations in the following
+situations: Greetings, requests, encouragements, partings, etc.
+(Examples of informal language include slang words, jargons, contracted
+forms, non-verbal communication)
+B7.2.1.1.2 Ask questions that elicit elaboration and respond to
+others’ questions in a conversation
+Exemplars:
+1. Identify words that can help give elaborate responses to questions in
+conversation (e.g. why, how, for what reason).
+
+Communication and Collaboration
+(CC)
+CC 7.4: Identify underlying themes,
+implications and issues when listening.
+
+2. Engage in conversation using these words to elicit elaboration. E.g.
+Ama: Do you think babies should talk?
+Dɛre: Yes
+Ama: Why do you think so?
+© NaCCA, Ministry of Education 2021
+
+11
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B7.2.1.1 Demonstrate
+use of appropriate
+language orally in
+specific situations
+
+Communication and Collaboration
+(CC)
+CC 7.3: Provide feedback in areas of
+ideas, organisation, voice, word choice and
+sentence fluency in communication.
+
+B7.2.1.1.3 Use appropriate language orally to describe experiences
+about oneself and others
+Exemplars:
+1. Use appropriate language: tense structures, variety of sentences,
+figurative expressions, etc.
+2. Use appropriate vocabulary: nouns, adjectives, adverbs, etc. to talk about
+one’s experiences and those of others in specific situations e.g. at the
+hospital, shopping in a market/supermarket, at a bus terminal/station, etc.
+B7.2.1.1.4 Listen to and give accurate directions to familiar places
+Exemplars:
+1. Use appropriate language (e.g. opposite, adjacent, a few metres away,
+ten minute-walk /drive, turn left/right) and landmarks (church, mosque,
+hospital, filling station etc.) to show direction.
+2. Direct people using a range of these vocabulary and expressions
+appropriately to given locations.
+
+Communication and Collaboration
+(CC)
+CC 7.3: Provide feedback in areas of
+ideas, organisation, voice, word choice and
+sentence fluency in communication.
+CC 8.2: Explain ideas in a clear order with
+relevant detail, using correct construction
+and structure of speech.
+
+B7.2.1.1.5 Use techniques (voice modulation and eye contact) for
+effective oral communication
+Exemplars:
+1. Converse using appropriate voice (pace, volume, tone)
+2. Maintain eye contact (look at the person speaking, maintain appropriate
+posture and facial expression in conversation.
+3. Engage in conversation using the right tone and maintaining eye contact.
+Monitor how your partner shows this in the conversation.
+
+© NaCCA, Ministry of Education 2021
+
+12
+
+STRAND 2: B7.2 LISTENING AND SPEAKING
+SUB-STRAND 2: B7.2.2 LISTENING COMPREHENSION
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B7.2.2.1 Demonstrate
+the ability to listen to
+extended reading and
+identify key information
+
+Communication and Collaboration
+(CC)
+
+B7.2.2.1.1 Listen to a level-appropriate text attentively and identify
+key information.
+Exemplars:
+1. Identify key points:
+• Intent or purpose of the message (e.g. to inform, persuade, instruct).
+• Assess the speaker’s enthusiasm and passion for the topic.
+• Identify main ideas and supporting points in the text.
+2. Read out and cross check the information written.
+B7.2.2.1.2 Listen to, discuss ideas and share opinions from a levelappropriate text.
+Exemplars:
+1. Listen to and write key points from texts/speeches/presentations.
+2. Discuss key points identified and share opinions with peers.
+
+© NaCCA, Ministry of Education 2021
+
+CC 7.3: Provide feedback in areas of
+ideas, organisation, voice, word choice and
+sentence fluency in communication.
+
+Communication and Collaboration
+(CC)
+CC 7.5: Identify and analyse different points
+of views of speaker.
+
+13
+
+STRAND 2: B7.2 LISTENING AND SPEAKING
+SUB-STRAND 3: B7.2.3 SPEECH SOUNDS — VOWELS, CONSONANTS AND SYLLABLES
+
+© NaCCA, Ministry of Education 2021
+
+14
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B7.2.3.1 Recognise
+and sound vowels and
+consonants and read one
+syllable words of their
+linguistic community
+
+Communication and Collaboration
+(CC)
+CC7.1: Identify words or sentences in
+context appropriately.
+
+B7.2.3.1.1 Identify and produce the vowels in the language
+of study.
+Exemplars:
+1 Identify vowels in words.
+2 Produce the vowel sounds of your language. e.g. /a/, /e/, /ɛ/. etc.
+3 Record the vowel sounds of your language.
+4 Pronounce vowel sounds correctly in connected speech.
+B7.2.3.1.2 Identify and produce the consonants in the language
+of study.Exemplars:
+1. Identify consonants in words.
+2. Produce the consonant sounds of your language. E.g. /b/, /f/, /g/. etc.
+
+Communication and Collaboration
+(CC)
+CC 7.1: Identify words or sentences in
+context appropriately.
+
+3. Record the consonant sounds of your language.
+4. Pronounce consonant sounds correctly and fluently in connected speech.
+B7.2.3.1.3 Identify and produce one to four syllable words of the
+language of study.
+Exemplars:
+1. Read one syllable words.
+•
+
+© NaCCA, Ministry of Education 2021
+
+Communication and Collaboration
+(CC)
+CC 7.1: Identify words or sentences in
+context appropriately.
+
+E.g.:
+Akan: Kɔ, ba, tu, etc.
+Dagaare: Kɔ, ba, tu, etc.
+Dangme: Kɔ, ba, tu, etc.
+Ewe: Kɔ, ba, tu, etc.
+Ga: Kɔ, ba, tu, etc.
+Gonja: Kɔ, ba, tu, etc.
+
+15
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B7.2.3.1 (CONTINUED):
+Recognise and sound
+vowels and consonants
+and read one syllable
+words of their linguistic
+community
+
+CC 7.1: Identify words or sentences in
+context appropriately.
+
+2. Read two to three syllable words.
+E.g.:
+Akan/Nzema: bɛ + fa = bɛfa, ku + be = kube, etc.
+n + su + wa = nsuwa, a + ku + tu = akutu, etc.
+Dagaare: ba + ma = bama, dɔ + bɔ = dɔbɔ, etc.
+tu + gi + ta = tugita, bi + bi + le =bibile
+Dangme: du + mi = dumi, bi + yo = biyo, etc.
+ko + ko + te = kokote, a + gbe +li = agbeli
+Ewe: fe + tu = fetu, ga + li = gali, etc.
+ko + to + ku= kotoku, a + ɖi + ba= aɖiba, etc.
+Ga: ka + ko = kako, ta + ko = tako, etc.
+to + ko + ta = tokota, a + de + ka = adeka, etc.
+Gonja: ka + bɛ = kabɛ, ku + lɔ = kulɔ
+be + ni + mu = benimu, ka + se + so = kaseso, etc
+3. Read four syllable words
+4. Pronounce polysyllabic words correctly and fluently in connected speech.
+
+© NaCCA, Ministry of Education 2021
+
+16
+
+STRAND 2: B7.2 LISTENING AND SPEAKING
+SUB-STRAND 4: B7.2.4 TONE
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B7.2.4.1 Recognise the
+basic tones in their
+language
+
+Communication and Collaboration
+(CC)
+CC 7.1: Identify words or sentences in
+context appropriately.
+
+B7.2.4.1.1 Identify and produce the basic tones in their language.
+Exemplars:
+1. Identify the tones on syllables in their language. E.g.: low ( ˋ ), high ( ʹ ), and
+mid ( ˉ ).
+2. Pronounce words with tones correctly and fluently in connected speech.
+3. Use the knowledge of tone to pronounce same words that have different
+tones in context.
+
+© NaCCA, Ministry of Education 2021
+
+17
+
+STRAND 2: B7.2 LISTENING AND SPEAKING
+SUB-STRAND 5: B7.2.5 VOCABULARY DEVELOPMENT (SIGHT AND CONTENT VOCABULARY)
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+CORE COMPETENCIES
+B7.2.5.1 Exhibit
+an understanding
+of recognising and
+producing words and
+using them in sentences
+
+B7.2.5.1.1 Identify and produce words in the home and school
+environments and use them to form meaningful sentences.
+Exemplars:
+1. Identify vocabulary items in relation to the home.
+
+Communication and Collaboration
+(CC)
+CC 7.1: Identify words or sentences in
+context appropriately.
+
+• E.g. dining, cooking, bathing, etc. (the vocabulary items should be
+mentioned in the language of study)
+2. Identify vocabulary items in relation to the school.
+
+3.
+
+© NaCCA, Ministry of Education 2021
+
+• E.g. classroom, headteacher’s office, school compound, etc. (the
+vocabulary items should be mentioned in the language of study)
+Use the vocabularies identified to form meaningful sentences.
+
+18
+
+STRAND 2: B7.2 LISTENING AND SPEAKING
+SUB-STRAND 6: B7.2.6 PRESENTATION — EVERYDAY EXPERIENCE
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B7.2.6.1 Present
+information effectively
+on familiar topics using
+appropriate language
+
+Communication and Collaboration
+(CC)
+CC 8.1: Speak clearly and explain ideas.
+Share a narrative or extended answer while
+speaking to a group.
+
+B7.2.6.1.1 Describe daily activities using appropriate register,
+structure and gestures for the contest being presented.
+Exemplars:
+1. Outline some activities that you do on a daily basis.
+2. Narrate with gestures what you do in the morning before school, at
+school and after school.
+3. Develop a daily activity calendar.
+4. Converse with others about daily activities.
+5. Make a presentation on other familiar topics, e.g. family, school, holidays,
+weather, hobbies, animals, hometown or village, favourite time of the year
+and festival.
+
+© NaCCA, Ministry of Education 2021
+
+19
+
+STRAND 3: B7.3 READING
+SUB-STRAND 1: B7.3.1 READING
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B7.3.1.1 Understand
+the main ideas and
+supporting points in
+texts
+
+Communication and Collaboration
+(CC)
+CC 8.3: Apply appropriate diction and
+structure sentences correctly for narrative,
+persuasive, imaginative and expository
+purposes.
+
+B7.3.1.1.1 Read and understand main ideas and supporting points
+in a range of texts on familiar and unfamiliar topics.
+Exemplars:
+1. Skim a given passage of about one hundred and fifty words and state the
+main ideas.
+2. Identify the supporting ideas in texts on themes from other subject
+areas. (E.g. Social Studies, Science, Religious and Moral Education, Physical
+Education, ICT, etc.)
+3. Explain the relationship between the main ideas and supporting ideas.
+4. Answer recall and inferential questions concerning the text read.
+NB: As learners read, watch out for those with speech impairment
+and assist them to avoid being mocked at.
+B7.3.1.1.2 Read to understand and summarise the main ideas in a
+given grade level passage.
+Exemplars:
+1. Identify and write main ideas in passages read from a range of subject
+areas.
+
+Communication and Collaboration
+(CC)
+CC8.5: Vary the level of detail and the
+language used when presenting to make it
+appropriate to the audience.
+
+2. List the ideas identified in the order in which they occur in a passage.
+3. Summarise a passage of about one hundred and fifty words in fifty words
+using your own words.
+
+© NaCCA, Ministry of Education 2021
+
+20
+
+STRAND 3: B7.3 READING
+SUB-STRAND 2: B7.3.2 TRANSLATION
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B7.3.2.1 Demonstrate
+knowledge of translating
+words. Phrases and
+simple sentences
+
+Communication and Collaboration
+(CC)
+
+B7.3.2.1.1 Translate words and phrases in his/her language.
+Exemplars:
+1. Translate given words and simple phrases from the source language to a
+target language.
+2. Translate phrases simple sentences from the source language of study to
+a target language.
+3. Translate simple sentences from the source language to a target language.
+
+© NaCCA, Ministry of Education 2021
+
+CC 8.3: Apply appropriate diction and
+structure sentences correctly for narrative,
+persuasive, imaginative and expository
+purposes.
+
+21
+
+STRAND 4: B7.4 LANGUAGE AND USAGE
+SUB-STRAND 1: B7.4.1 SENTENCES — SIMPLE, COMPOUND AND COMPLEX
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B7.4.1.1 Demonstrate
+knowledge and
+understanding of
+the components of
+sentences
+
+Communication and Collaboration
+(CC)
+
+B7.4.1.1.1 Discuss the components of sentences.
+Exemplars:
+1. Explain what a sentence is.
+3. Discuss the components of a sentence in their language.
+
+CC 8.2: Explain ideas in a clear order
+with relevant detail, using construction and
+structure of speech.
+
+B7.4.1.1.2 Discuss the types of sentence structure (simple,
+compound and complex).
+Exemplars:
+1. Identify the components of a simple sentence in their language and give
+examples.
+
+Communication and Collaboration
+(CC)
+CC 8.2: Explain ideas in a clear order
+with relevant detail, using construction and
+structure of speech.
+
+2. Give examples of sentences and their component parts in their language.
+
+2. Identify the components of a compound sentence in their language and
+give examples.
+3. Identify the components of a complex sentence in your language and give
+examples.
+B7.4.1.1.3 Classify sentences according to functions (declarative,
+imperative and interrogative).
+Exemplars:
+1. Identify the functions of a sentence.
+2. Construct some sentences in relation to their functions.
+•
+
+© NaCCA, Ministry of Education 2021
+
+Communication and Collaboration
+(CC)
+CC 8.2: Explain ideas in a clear order
+with relevant detail, using construction and
+structure of speech.
+
+E.g. To ask a question, etc.
+
+22
+
+STRAND 4: B7.4 LANGUAGE AND USAGE
+SUB-STRAND 2: B7.4.2 INTEGRATING GRAMMAR IN WRITTEN LANGUAGE (NOUNS, PRONOUNS AND ADJECTIVES)
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B7.4.2.1 Demonstrate
+knowledge of identifying
+and using the various
+forms of nouns
+(common, proper,
+collective), pronouns and
+adjectives in sentences
+and passages
+
+Communication and Collaboration
+(CC)
+CC 8.2: Explain ideas in a clear order
+with relevant detail, using construction and
+structure of speech
+
+B7.4.2.1.1 Categorise nouns under common, proper and collective
+and use them correctly in speech and in texts.
+Exemplars:
+1. Identify nouns in a passages.
+2. Classify the nouns identified into common, proper and collective nouns.
+3. Pronounce the nouns and use them correctly in speech and texts.
+4. Construct simple and compound sentences (orally and in written
+forms)with the types of nouns identified.
+B7.4.2.1.2 Categorise pronouns according to their types and
+construct sentences with them.
+Exemplars:
+1. Identify pronouns in a passage.
+2. Classify the pronouns into their types.
+
+Communication and Collaboration
+(CC)
+CC 8.3: Apply appropriate diction and
+structure sentences correctly for narrative,
+persuasive, imaginative and expository
+purposes
+
+3. Construct sentences with the types of pronouns in speaking and writing
+individually and in mixed ability groups.
+4. Replace nouns with the appropriate pronoun in a passage.
+B7.4.2.1.3 Categorise adjectives into their types and construct
+simple sentences with them.
+Exemplars.
+1. Identify adjectives from passages.
+2. Classify the adjectives into their types.
+
+Communication and Collaboration
+(CC)
+CC 8.3: Apply appropriate diction and
+structure sentences correctly for narrative,
+persuasive, imaginative and expository
+purposes
+
+3. Use the adjectives to form simple and compound sentences in speaking
+and writing.
+© NaCCA, Ministry of Education 2021
+
+23
+
+STRAND 4: B7.4 LANGUAGE AND USAGE
+SUB-STRAND 3: B7.4.3 INTEGRATING GRAMMAR IN WRITTEN LANGUAGE (VERBS, ADVERBS, CONJUNCTIONS,
+POSTPOSITIONS/PREPOSITIONS)
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B7.4.3.1 Recognise
+the use of verbs,
+adverbs, conjunctions
+and postpositions/
+Prepositions in
+sentences
+
+Communication and Collaboration
+(CC)
+CC 8.2: Explain ideas in a clear order
+with relevant detail, using construction and
+structure of speech.
+
+B7.4.3.1.1 Identify and classify verbs into their types.
+Exemplars:
+1. Identify and use verbs appropriately and correctly in passages and in
+speaking and writing.
+2. Categorise the verbs into types and use them to construct simple and
+compound sentences.
+B7.4.3.1.2 Identify and classify adverbs into their various types.
+Exemplars:
+1. Identify and use adverbs appropriately and correctly in simple sentences
+in speaking and writing.
+2. Categorise the verb into types and use them to construct simple and
+compound sentences in speaking and writing individually and in mixed
+ability groups.
+B7.4.3.1.3 Identify and classify conjunctions and use them
+appropriately in a range of texts.
+Exemplars:
+1. Identify and use conjunctions appropriately and correctly in simple and
+compound sentences in speaking and writing.
+
+Communication and Collaboration
+(CC)
+CC 8.2: Explain ideas in a clear order
+with relevant detail, using construction and
+structure of speech.
+
+Communication and Collaboration
+(CC)
+CC 8.2: Explain ideas in a clear order
+with relevant detail, using construction and
+structure of speech.
+
+2. Categorise the conjunctions into types and use them to construct simple
+and compound sentences.
+
+© NaCCA, Ministry of Education 2021
+
+24
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+B7.4.3.1.4 Explore the use of postpositions/prepositions
+appropriately and correctly in a range of texts.
+Exemplars:
+1. Identify and use postpositions/prepositions appropriately in simple and
+compound sentences in speaking and writing.
+
+© NaCCA, Ministry of Education 2021
+
+CORE COMPETENCIES
+Communication and Collaboration
+(CC)
+CC 8.2: Explain ideas in a clear order
+with relevant detail, using construction and
+structure of speech.
+
+25
+
+STRAND 4: B7.4 LANGUAGE AND USAGE
+SUB-STRAND 4: B7.4.4 VOCABULARY, SPELLING AND PUNCTUATION
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B7.4.4.1 Demonstrate
+knowledge and
+understanding of
+vocabulary, spelling and
+punctuations in writing
+
+Communication and Collaboration
+(CC)
+CC 7.1: Identify words or sentences in
+context appropriately.
+
+B7.4.4.1.1 Use vocabulary appropriately and correctly in writing
+Exemplars:
+1. Identify and write vocabulary related to home and school.
+2. Use the vocabulary of identified items to construct appropriate and
+correct sentences.
+B7.4.4.1.2 Spell words related to home and school correctly.
+Exemplars:
+3. Write down vocabulary items related to home and school dictated
+correctly.
+
+Communication and Collaboration
+(CC)
+CC 7.1: Identify words or sentences in
+context appropriately.
+
+4. Construct sentences with the vocabulary items written down.
+B7.4.4.1.3 Identify and use punctuations appropriately and
+correctly in writing.
+Exemplars:
+1. Use punctuation marks appropriately in about a fifty-word paragraph.
+
+© NaCCA, Ministry of Education 2021
+
+Communication and Collaboration
+(CC)
+CC 7.1: Identify words or sentences in
+context appropriately.
+
+26
+
+STRAND 5: B7.5 COMPOSITION WRITING
+SUB-STRAND 1: B7.5.1 STRUCTURE AND ORGANISE IDEAS IN COMPOSITION WRITING
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B7.5.1.1 Demonstrate
+knowledge and
+understanding of the
+features of a paragraph
+and the various text
+types (narrative,
+descriptive, creative/free
+writing)
+
+Communication and Collaboration
+(CC)
+CC 8.3: Apply appropriate diction and
+structure sentences correctly for narrative,
+persuasive, imaginative and expository
+purposes
+
+B7.5.1.1.1 Discuss the features of a paragraph.
+Exemplars:
+1. Ability to write the topic and supporting sentences of a paragraph.
+2. Develop the skills of expressing and organising ideas in paragraphs.
+3. Identify the salient points/ideas in a given paragraph.
+4. Write a paragraph of about fifty words on a given topic taking into
+consideration the features and skills of paragraph writing.
+B7.5.1.1.2 Develop a three-paragraph essay using the features of a
+given text type.
+Exemplars:
+1. Discuss the features of narrative, descriptive, creative/free writing.
+2. Write a three-paragraph essay on a topic on the text types above.
+
+© NaCCA, Ministry of Education 2021
+
+Communication and Collaboration
+(CC)
+CC 8.3: Apply appropriate diction and
+structure sentences correctly for narrative,
+persuasive, imaginative and expository
+purposes
+
+27
+
+STRAND 6: B7.6 LITERATURE
+SUB-STRAND 1: B7.6.1 FOLKTALES, SONGS, PROSE, DRAMA, POETRY
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B7.5.1.1 Demonstrate
+the knowledge and
+understanding of
+literature (Oral and
+Written)
+
+Communication and Collaboration
+(CC)
+CC 9.4: Help group work on relevant
+activities.
+
+B7.6.1.1.1 Discuss the components of literature.
+Exemplars:
+1. Discuss the characteristics of literature.
+2. Classify literature into types.
+3. Give examples and relate to the types
+4. Develop the skills of appreciating and analysing literary texts.
+B7.6.1.1.2 Discuss the components of oral literature (folktales and
+songs-lullabies and play songs).
+Exemplars:
+1. Explain what oral literature is.
+2. Describe the structure of a folktale and a song.
+
+Communication and Collaboration
+(CC)
+CC 8.5: Vary the level of detail and the
+language used when presenting to make it
+appropriate to the audience.
+
+3. Analyse a folktale and a song.
+4. Appreciate the significance of a folktale and a song.
+B7.6.1.1.3 Discuss the components of written literature (prose,
+drama and poetry).
+Exemplars:
+1. Discuss the structure of the various genres of written literature.
+2. Discuss how characters are created in a range of prose, poetry and
+drama texts.
+
+Communication and Collaboration
+(CC)
+CC 8.5: Vary the level of detail and the
+language used when presenting to make it
+appropriate to the audience.
+
+3. Explore ways that writers use literary devices, mood and tone in a range
+of prose, poetry and drama texts.
+
+© NaCCA, Ministry of Education 2021
+
+28
+
+BASIC 8
+
+© NaCCA, Ministry of Education 2021
+
+29
+
+STRAND 1: B8.1 CUSTOMS AND INSTITUTIONS
+SUB-STRAND 1: B8.1.1 RITES OF PASSAGE: PUBERTY RITES
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B8.1.1.1 Demonstrate
+understanding of how
+puberty rites are
+performed in their
+linguistic community,
+its significance and
+compare with other
+cultures of Ghana
+
+Communication and Collaboration
+(CC), Cultural Identity and Global
+Citizen (CG)
+CC 7.4: Identify underlying themes,
+implications and issues when listening.
+CG 5.1: Show a strong sense of
+belongingness to one’s culture.
+
+B8.1.1.1.1 Identify the processes involved in performing puberty
+rites in your culture.
+Exemplars:
+1. Explain what puberty rites are.
+2. Talk about the items needed for the performance of puberty rites among
+their people and their significance.
+3. Discuss the processes involved in performing puberty rites for boys/girls
+among their people.
+4. Read and discuss a two-hundred-word passage on puberty rites.
+5. Explain the significance of puberty rites.
+6. Role play a puberty rite activity.
+NB: The facilitator should ensure equal participation of ALL
+learners.
+B8.1.1.1.2 Compare and contrast the processes involved in
+performing puberty rites in their culture to other cultures of
+Ghana.
+Exemplars:
+1. Discuss the similarities in the performance of puberty rites among their
+people and those of other Ghanaian cultures.
+2. Discuss the differences in the performance of puberty rites among their
+people and those of other Ghanaian cultures.
+
+Communication and Collaboration
+(CC), Cultural Identity and Global
+Citizen (CG)
+CC 7.4: Identify underlying themes,
+implications and issues when listening.
+CG 5.3: Develop and express respect,
+recognition and appreciation of others’
+culture.
+
+3. Write the summary of the similarities and differences.
+
+© NaCCA, Ministry of Education 2021
+
+30
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B8.1.1.1 Demonstrate
+understanding of how
+puberty rites are
+performed in their
+linguistic community,
+its significance and
+compare with other
+cultures of Ghana
+
+Communication and Collaboration
+(CC), Cultural Identity and Global
+Citizen (CG)
+CC 7.4: Identify underlying themes,
+implications and issues when listening.
+CG 5.5: Adjust to the demands of customs,
+traditions, values and attitudes of society.
+
+B8.1.1.1.3 Discuss the changes that has occurred in puberty rites
+performance over time.
+Exemplars:
+1. Assess the current ways puberty rites are performed among his/her
+people.
+2. Compare the contemporary ways to the traditional ways by which your
+people were performing puberty rites.
+E.g.
+i. It is now done by the church.
+ii. Duration for the rites has changed.
+iii.
+Done for all ages.
+3. Identify the threats to puberty rites in contemporary times.
+E.g.: technology, migration, education and religion
+
+© NaCCA, Ministry of Education 2021
+
+31
+
+STRAND 1: B8.1 CUSTOMS AND INSTITUTIONS
+SUB-STRAND 2: B8.1.2 NAMING SYSTEMS — FAMILY NAMES, KINSHIP TERMS, PROVERBIAL AND INSINUATION NAMES
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B8.1.2.1 Recognise
+and understand family
+names, kinship terms
+and proverbial and
+insinuation names.
+
+Communication and Collaboration
+(CC), Cultural Identity and Global
+Citizen (CG)
+CC 9.1: Demonstrate behaviour and skills of
+working towards group goals.
+CG 5.4: Develop and exhibit the sense of
+cultural identity.
+
+B8.1.2.1.1 Discuss the sources of family names in your language
+and use them appropriately.
+Exemplars:
+1. Read a text on names and their sources.
+2. Mention family names and their sources. E.g. clan, grand and great-grand
+parents, etc.
+3. Discuss the importance of family names.
+4. Make a documentation on family names for male and female and indicate
+their sources.
+
+B8.1.2.1 Recognise
+and understand family
+names, kinship terms
+and proverbial and
+insinuation names.
+
+B8.1.2.1.2 Examine kinship terms in their community.
+Exemplars:
+1. Read a passage (200 words) on kinship terms.
+2. Cite the kinship terms that are used to address your family members.
+E. g. father, mother, uncle, aunt, niece, nephew, grandparents, etc.
+3. Discuss and document the importance of kinship terms.
+
+© NaCCA, Ministry of Education 2021
+
+Communication and Collaboration
+(CC), Cultural Identity and Global
+Citizen (CG)
+CC 9.1: Demonstrate behaviour and skills of
+working towards group goals.
+CG 5.4: Develop and exhibit the sense of
+cultural identity.
+
+32
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+B8.1.2.1.3 State and discuss the effects of the modern trends of
+naming on family names and kinship terms.
+Exemplars:
+1. Identify and talk about modern ways of naming babies among your
+people.
+E..g.
+i. Naming is done after anybody instead of from the
+family line/lineage.
+ii. Naming from other cultures.
+iii. Giving Christian/Muslim names instead of names from
+the familylineage, etc.
+2. Explain how the modern ways of naming affect the family names among
+your people.
+
+CORE COMPETENCIES
+Communication and Collaboration
+(CC), Cultural Identity and Global
+Citizen (CG)
+CC 9.1: Demonstrate behaviour and skills of
+working towards group goals.
+CG 5.5: Adjust to the demands of customs,
+traditions, values and attitudes of society.
+
+E.g.
+i. Loss of identity.
+ii. Belittling the indigenous culture.
+B8.1.2.1 Recognise
+and understand family
+names, kinship terms
+and proverbial and
+insinuation names.
+
+B8.1.2.1.4 Discuss proverbial and insinuation names.
+Exemplars:
+1. Explain proverbial and insinuation names.
+2. Discuss the characteristics of proverbial and insinuation names.
+E.g. They are one-word names that represent whole sentences.
+3. Identify situations that lead to proverbial and insinuation names.
+
+Communication and Collaboration
+(CC), Cultural Identity and Global
+Citizen (CG)
+CC 9.1: Demonstrate behaviour and skills of
+working towards group goals.
+CG 5.5: Adjust to the demands of customs,
+traditions, values and attitudes of society.
+
+E.g. To cast insinuations.
+To show appreciation
+
+© NaCCA, Ministry of Education 2021
+
+33
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+B8.1.2.1 Recognise
+and understand family
+names, kinship terms
+and proverbial and
+insinuation names
+
+CORE COMPETENCIES
+
+4. Give examples of proverbial and insinuation names used among your
+people. E.g.:
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+Akan: Obimpɛ, Obinim.
+Gonja: Dukulubi, Ndefoso.
+Dagaare: Dɔmɔnaaŋmene, Kannyiri
+Dangme: Koodimɛ, Zogbemɛ
+Ga: Ayeayeefɛɛ, Kaajɛmi.
+Ewe: Akpeleasi, Aɖukonu, Dɔmelevo.
+Nzema: Bɛzenɛ, Ɛkpɔlɛgyɛne
+Dagbani: Mbaŋba, Bɛjema.
+Kasem: Ayerjoa, Ajoawora.
+
+B8.1.2.1.5 Explore and discuss appellations that go with names.
+Exemplars:
+1. Explain appellation.
+2. Give examples of day names and their appellations.
+•
+
+E.g.
+
+People
+
+Day Name/ Appellation
+Male
+
+© NaCCA, Ministry of Education 2021
+
+Communication and Collaboration
+(CC), Cultural Identity and Global
+Citizen (CG)
+CC 9.1: Demonstrate behaviour and skills of
+working towards group goals.
+CG 5.5: Adjust to the demands of customs,
+traditions, values and attitudes of society.
+
+Female
+
+•
+
+Akan
+
+•
+
+Kwadwo - Okoto,
+
+•
+
+Adwoa - Badwo
+
+•
+
+Nzema
+
+•
+
+Kodwo - Asɛla,
+
+•
+
+Adwoba - Mɔlɛsa
+
+•
+
+Dangme
+
+•
+
+Kueku, Aku - Nyumu
+
+•
+
+Ajoyo - Ajo
+
+•
+
+Ga
+
+•
+
+Kojo - Okuŋtswa
+
+•
+
+Ajoa - Ajo
+
+•
+
+Ewe
+
+•
+
+Kɔmla - Dzamfosu
+
+•
+
+Akua - Sabia (Peki)
+
+34
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+B8.1.2.1 Recognise
+and understand family
+names, kinship terms
+and proverbial and
+insinuation names
+
+CORE COMPETENCIES
+
+3. Identify and discuss appellations that go with family and other names
+where applicable.
+•
+
+© NaCCA, Ministry of Education 2021
+
+E. g.
+People
+• Akan:
+• Dangme
+• Ewe:
+• Gonja
+• Ga:
+• Dagbani:
+• Nzema
+
+Name
+• Asante
+• Tɛtɛ
+• Xɔɖasi
+• Awari
+• Lante
+• Andani
+• Awɔkɛ
+
+Appellation
+• Korɔbea
+• Ogbetee
+• Menyeametɔ o
+• Janjina
+• Okuŋka
+• Dandani
+• Ɛkyelebenle
+
+35
+
+STRAND 1: B8.1 CUSTOMS AND INSTITUTIONS
+SUB-STRAND 3: B8.1.3 THE CLAN SYSTEM
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B8.1.3.1 Exhibit
+knowledge of the clan
+system in their locality
+by discussing the
+importance and threats
+to the clan systems
+
+Communication and Collaboration
+(CC), Cultural Identity and Global
+Citizen (CG)
+CC 9.1: Demonstrate behaviour and skills of
+working towards group goals.
+CG 5.4: Develop and exhibit the sense of
+cultural identity.
+
+B8.1.3.1.1 Discuss the importance and threats to the clan system.
+Exemplars:
+1. Read and discuss a passage on clan system of their culture.
+2. Discuss and write the importance of the clan system of their culture.
+3. Discuss the threats to the clan system.
+
+© NaCCA, Ministry of Education 2021
+
+36
+
+STRAND 1: B8.1 CUSTOMS AND INSTITUTIONS
+SUB-STRAND 4: B8.1.4 CHIEFTAINCY: DESTOOLMENT
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B8.1.4.1 Discuss the
+processes involved in the
+destooling/deskining of a
+chief or queenmother.
+
+Communication and Collaboration
+(CC), Cultural Identity and Global
+Citizen (CG)
+CC 9.1: Demonstrate behaviour and skills of
+working towards group goals.
+CG 5.4: Develop and exhibit the sense of
+cultural identity.
+
+B8.1.4.1.1 Examine some behaviours that can lead to the
+destoolment/deskinment of chiefs and queenmothers.
+Exemplars:
+1. Read and discuss a text on destoolment/deskinment in their traditional
+area.
+2. Examine and write behaviours that lead to the destoolment/deskinment
+of a chief or queenmother among their people.
+• E.g.
+i. Misuse of property of the people.
+ii. Disrespect for kingmakers and subjects.
+iii. Neglect/abuse of tradition.
+
+B8.1.4.1.1 Discuss the
+processes involved in the
+destooling/deskining of a
+chief or queenmother
+
+B8.1.4.1.2 Discuss the processes involved in the destoolment/
+deskinment of a chief or a queenmother.
+Exemplars:
+1. Examine and write the process of destooling/deskining a chief and
+queenmother among their people.
+• E.g.
+i. Complaints by subjects
+ii. Cautioning by kingmaker
+iii. Summoning the chief/queenmother for arbitration, etc.
+NB: The processes involved differ from culture to culture.
+2. Write the advantages and disadvantages of destoolment/deskinment.
+
+Communication and Collaboration
+(CC), Cultural Identity and Global
+Citizen (CG)
+CC 9.1: Demonstrate behaviour and skills of
+working towards group goals.
+CG 5.5: Adjust to the demands of customs,
+traditions, values and attitudes of society.
+
+3. Role play destoolment/deskinment of a chief among their people.
+
+© NaCCA, Ministry of Education 2021
+
+37
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+B8.1.4.1.3 Compare and contrast the destoolment/deskinment
+processes among their people and other cultures of Ghana.
+Exemplars:
+1. Discuss and write the similarities and differences of the destoolment/
+deskinment process of your people and that of other Ghanaian cultures.
+2. Write the similarities and differences.
+
+© NaCCA, Ministry of Education 2021
+
+CORE COMPETENCIES
+Communication and Collaboration
+(CC), Cultural Identity and Global
+Citizen (CG)
+CC 7.4: Identify underlying themes,
+implications and issues when listening.
+CG 5.3: Develop and express respect,
+recognition and appreciation of others’
+cultures.
+
+38
+
+STRAND 2: B8.2 LISTENING AND SPEAKING
+SUB-STRAND 1: B8.2.1— CONVERSATION/EVERYDAY DISCOURSE
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B8.2.1.1 Demonstrate
+knowledge of
+presentational skills in
+listening, following daily
+conversation, speaking
+clearly and explaining
+ideas
+
+B8.2.1.1.1 Develop and modify their language in narrating some
+selected daily activities.
+Exemplars:
+1. Narrate what you do at home every Saturday.
+
+Communication and
+collaboration (CC)
+CC 8.1: Speak clearly and
+explain ideas. Share a narrative or
+extended answer while speaking to
+a group.
+
+2. Describe what you saw on your last visit to a market.
+3. Draw and discuss a scenery on a given topic (e.g.: fishing, farming, weaving, etc.).
+4. Describe a visit to a hospital.
+5. Describe a scene at a lorry station.
+
+© NaCCA, Ministry of Education 2021
+
+39
+
+STRAND 2: B8.2 LISTENING AND SPEAKING
+SUB-STRAND 2: B8.2.2 LISTENING COMPREHENSION
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B8.2.2.1 Demonstrate
+the ability to listen to
+extended reading and
+identify key information
+
+Communication and Collaboration
+(CC)
+CC 7.4: Identify underlying themes,
+implications and issues when listening.
+
+B8.2.2.1.1. Listen to a level-appropriate dialogue attentively and
+identify key information
+1. Listen to and note important issues in a dialogue e.g. message, mood,
+tone.
+2. Listen and compare the issues noted in the dialogue with peers.
+B8.2.2.1.2. Listen to and discuss the ideas and share opinions from
+a level-appropriate text
+1. Listen and write down key information from texts/talk shows/news.
+2. Discuss the key information from texts and add opinions.
+
+© NaCCA, Ministry of Education 2021
+
+Communication and Collaboration
+(CC)
+CC 7.4: Identify underlying themes,
+implications and issues when listening.
+
+40
+
+STRAND 2: B8.2 LISTENING AND SPEAKING
+SUB-STRAND 4: B8.2.4 TONE
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B8.2.4.1 Recognise
+changes in meaning due
+to tone contrast
+
+Communication and Collaboration
+(CC)
+
+B8.2.4.1.1 Establish the meaning of words when the tone on the
+syllables in a word changes.
+Exemplars:
+1. Pronounce words with high tone.
+2. Pronounce words with mid-tone (where applicable).
+3. Pronounce words with low tone.
+4. Read same words with different tone in context.
+
+CC 7.4: Identify underlying themes,
+implications and issues when listening.
+CC 7.1: Identify words or sentences in
+context appropriately.
+
+5. State the differences of those words as used in context.
+
+© NaCCA, Ministry of Education 2021
+
+41
+
+STRAND 2: B8.2 LISTENING AND SPEAKING
+SUB-STRAND 6: B8.2.6 PRESENTATION — EVERYDAY EXPERIENCE
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B8.2.6.1
+Demonstrate knowledge
+of presentational skills in
+listening, following daily
+conversation, speaking
+clearly and explaining
+ideas
+
+Communication and collaboration
+(CC)
+
+B8.2.6.1.1 Develop and modify their language in narrating some
+selected daily activities.
+Exemplars:
+1. Narrate what you do at home every Saturday.
+2. Describe what you saw on your last visit to a market.
+3. Draw and discuss a scenery on a given topic (e.g.: fishing, farming,
+weaving, etc.).
+
+CC 8.1: Speak clearly and explain ideas.
+Share a narrative or extended answer while
+speaking to a group.
+
+4. Describe a visit to the hospital.
+5. Describe a scene at a lorry station.
+
+© NaCCA, Ministry of Education 2021
+
+42
+
+STRAND 3: B8.3 READING
+SUB-STRAND 1: B8.3.1 READING
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B8.3.1.1 Understand
+the main ideas and
+supporting points in
+texts
+
+Communication and Collaboration
+(CC)
+
+B8.3.1.1.1 Understand the main ideas and supporting points in a
+range of extended texts on familiar and unfamiliar topics.
+Exemplar:
+1. Read a three-paragraph passage from different subject areas (Science,
+Social Studies, RME, ICT, etc.) and answer questions to identify specific
+information and details.
+B8.3.1.1.2 Summarise long passages read.
+Exemplar:
+1. Read longer texts and summarise main and supporting ideas.
+
+© NaCCA, Ministry of Education 2021
+
+CC 8.3: Apply appropriate diction and
+structure sentences correctly for narrative,
+persuasive, imaginative and expository
+purposes.
+Communication and Collaboration
+(CC)
+CC 8.5: Vary the level of detail and the
+language used when presenting to make it
+appropriate to the audience.
+
+43
+
+STRAND 3: B8.3 READING
+SUB-STRAND 2: B8.3.2 TRANSLATION
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B8.3.2.1 Demonstrate
+knowledge of translating
+words, phrases and
+sentences.
+
+Communication and Collaboration
+(CC)
+CC 8.3: Apply appropriate diction and
+structure sentences correctly for narrative,
+persuasive, imaginative and expository
+purposes.
+
+B8.3.2.1.1 Establish the meaning of words, phrases and sentences
+in their various languages.
+Exemplars:
+1. Translate given words, phrases and sentences from source language to
+target language.
+
+© NaCCA, Ministry of Education 2021
+
+44
+
+STRAND 4: B8.4 LANGUAGE AND USAGE
+SUB-STRAND 2: B8.4.2 INTEGRATING GRAMMAR IN WRITTEN LANGUAGE (USE OF NOUNS, PRONOUNS AND ADJECTIVES)
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B8.4.2.1 Demonstrate
+knowledge and
+understanding of nouns,
+pronouns and adjectives.
+
+Communication and Collaboration
+(CC)
+CC 8.2: Explain ideas in a clear order with
+relevant detail, using correct construction
+and structure of speech.
+
+B8.4.2.1.1 Explore the use of nouns and pronouns in an increasing
+range of texts and classify them.
+Exemplars:
+1. Write down nouns and pronouns in their language.
+2. Classify nouns under the various types (abstract, concrete, countable and
+uncountable).
+3. Construct compound sentences with nouns and pronouns in speech and
+in texts.
+4. Replace nouns with the appropriate pronouns in a given text.
+B8.4.2.1.2 Determine and categorise adjectives under size, colour,
+shape, quantity, etc. in their language.
+Exemplars:
+1. Determine the role of an adjective in a variety of texts.
+2. Identify and classify adjectives in a given text.
+
+© NaCCA, Ministry of Education 2021
+
+Communication and Collaboration
+(CC)
+CC 8.2: Explain ideas in a clear order with
+relevant detail, using correct construction
+and structure of speech.
+
+45
+
+STRAND 4: B8.4 LANGUAGE AND USAGE
+SUB-STRAND 3: B8.4.3 INTEGRATING GRAMMAR IN WRITTEN LANGUAGE (VERBS, ADVERBS AND CONJUNCTIONS)
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B8.4.3.1 Demonstrate
+knowledge and
+understanding of verbs,
+adverb, conjunctions.
+
+Communication and Collaboration
+(CC)
+CC 8.2: Explain ideas in a clear order with
+relevant detail, using correct construction
+and structure of speech.
+
+B8.4.3.1.1 Recognise and use the tense and aspectual (habitual,
+progressive, future) forms of verbs in sentences.
+Exemplars:
+1. Identify the types of tense and aspectual forms in their language.
+2. Form sentences with the various types of tense and aspectual forms.
+B8.4.3.1.2 Identify and use adverbs appropriately in sentences.
+Exemplars:
+1. Determine the functions of adverbs in sentences.
+2. Identify and classify adverbs in a given text.
+
+Communication and Collaboration
+(CC)
+CC 8.2: Explain ideas in a clear order with
+relevant detail, using correct construction
+and structure of speech.
+
+3. Construct compound sentences using adverbs.
+B8.4.3.1.3 Identify and use conjunctions in an increasing range of
+texts appropriately and correctly.
+Exemplars:
+1. Use appropriate conjunctions to link simple and compound sentences in
+texts.
+
+© NaCCA, Ministry of Education 2021
+
+Communication and Collaboration
+(CC)
+CC 8.2: Explain ideas in a clear order with
+relevant detail, using correct construction
+and structure of speech.
+
+46
+
+STRAND 5: B8.5 COMPOSITION WRITING
+SUB-STRAND: B8.5.1 STRUCTURE AND ORGANISE IDEAS IN COMPOSITION WRITING
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B8.5.1.1 Demonstrate
+knowledge and
+understanding in
+the ability to write
+meaningful compositions
+on the various text
+types (persuasive/
+argumentative writing,
+informative/ academic/
+expository and
+letterwriting).
+
+Communication and Collaboration
+(CC)
+
+B8.5.1.1.1 Develop coherent essays using the features of given text
+types.
+Exemplars:
+1. Discuss the features of persuasive/argumentative writing, informative/
+academic/expository and letter writing.
+2. Write a composition on a topic on the text types above.
+
+© NaCCA, Ministry of Education 2021
+
+CC 8.3: Apply appropriate diction and
+structure sentences correctly for narrative,
+persuasive, imaginative and expository
+purposes.
+
+47
+
+STRAND 6: B8.6 LITERATURE
+SUB-STRAND 1: B8.6.1 PROVERBS, IDIOMS, PROSE, DRAMA, POETRY
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B8.6.1.1 Demonstrate
+knowledge and
+understanding of
+proverbs and idioms.
+
+Communication and Collaboration
+(CC), Cultural Identity and Global
+Citizen (CG)
+CC 9.1: Demonstrate behaviour and skills of
+working towards group goals.
+CG 5.5: Adjust to the demands of customs,
+traditions, values and attitudes of society.
+
+B8.6.1.1.1 Discuss the features of proverbs and idioms
+Exemplars:
+1. Describe the features of proverbs and idioms and give examples of each.
+2. Identify and interpret proverbs and idioms in your language.
+3. State the occasions and situations in which the given proverbs and
+idioms are used.
+4. State the importance of proverbs and idioms.
+
+B8.6.1.2 Demonstrate
+knowledge and
+understanding in theuse
+of language in a prose,
+poetry and drama texts
+
+B8.6.1.2.1Discuss how writers use language to create effect in
+prose, poetry and drama.
+Exemplars:
+1. Discuss how writers use language to create character in prose, poetry
+and drama texts, giving examples from the text.
+2. Explore ways in which writers use a wide range of literary devices
+(simile, metaphor, repetition, idioms and proverbs) in a range of prose,
+poetry and drama texts.
+
+Communication and Collaboration
+(CC), Cultural Identity and Global
+Citizen (CG)
+CC 9.1: Demonstrate behaviour and skills of
+working towards group goals.
+CG 5.5: Adjust to the demands of customs,
+traditions, values and attitudes of society.
+
+3. Discuss the ways writers use language to create settings for different
+effects in prose, poetry and drama.
+4. Discuss how writers use language to create mood and tone in prose,
+poetry and drama
+5. Discuss the ways writers structure texts in prose, poetry and drama.
+
+© NaCCA, Ministry of Education 2021
+
+48
+
+BASIC 9
+
+© NaCCA, Ministry of Education 2021
+
+49
+
+STRAND 1: B9.1 CUSTOMS AND INSTITUTIONS
+SUB-STRAND 1: B9.1.1 RITES OF PASSAGE: MARRIAGE
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B9.1.1.1 Demonstrate
+an understanding of
+marriage of their culture
+and compare with other
+cultures of Ghana
+
+Communication and Collaboration
+(CC), Cultural Identity and Global
+Citizenship (CG)
+CC 7.3: Provide feedback in areas of
+ideas, organisation, voice, word choice and
+sentence fluency in communication.
+CG 5.4: Develop and exhibit the sense of
+cultural identity.
+
+B9.1.1.1.1 Discuss the processes involved in performing marriage
+rites in their culture.
+Exemplars:
+1. Explain what marriage is.
+2. Read and discuss a text on marriage.
+3. Identify types of marriage.
+4. Identify some of the marriage rites in their culture and write them.
+5. Discuss marriage rites performance.
+6. Explore the significance of the processes involved in performing marriage
+rites.
+B9.1.1.1.2 Compare and contrast the marriage rites in their
+culture to other cultures in Ghana.
+Exemplar:
+1. Present marriage rites among their people.
+2. Relate the marriage rites of their culture to those of other Ghanaian
+cultures.
+
+B9.1.1.1
+Demonstrate an
+understanding of
+marriage of their culture
+and compare with other
+cultures of Ghana
+
+B9.1.1.1.3 Compare and contrast the traditional marriage rites to
+the contemporary marriage rites and dramatise both.
+Exemplars:
+1. Explain some of the contemporary marriage rites in their culture.
+2. Compare and contrast the traditional to the contemporary marriage
+rites.
+3. Dramatise marriage rites session of their culture.
+
+© NaCCA, Ministry of Education 2021
+
+Communication and Collaboration
+(CC), Cultural Identity and Global
+Citizenship (CG)
+CC 7.3: Provide feedback in areas of
+ideas, organisation, voice, word choice and
+sentence fluency in communication.
+CG 5.5: Adjust to the demands of customs,
+traditions, values and attitudes of society.
+Communication and Collaboration
+(CC), Cultural Identity and Global
+Citizenship (CG)
+CC 7.3: Provide feedback in areas of
+ideas, organisation, voice, word choice and
+sentence fluency in communication.
+CG 5.5: Adjust to the demands of customs,
+traditions, values and attitudes of society.
+50
+
+STRAND 1: B9.1 CUSTOMS AND INSTITUTIONS
+SUB-STRAND 2: B9.1.2 NAMING SYSTEMS — CIRCUMSTANTIAL, REINCARNATION, DEITY NAMES
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B9.1.2.1. Exhibit
+knowledge of the
+understanding
+and application
+of circumstantial,
+reincarnation and deity
+names
+
+Communication and Collaboration,
+Cultural Identity and Global
+Citizenship (CG)
+CC 7.3: Provide feedback in areas of
+ideas, organisation, voice, word choice and
+sentence fluency in communication.
+CG 5.5: Adjust to the demands of customs,
+traditions, values and attitudes of society.
+
+B9.1.2.1.1 Identify and discuss circumstances that result in naming
+children in their community.
+Exemplars:
+1. Explain circumstances that lead to circumstantial names.
+2. Write some of the names and relate them to the circumstances.
+3. Discuss the significance of circumstantial names.
+B9.1.2.1.2 Discuss reincarnation names and their meanings.
+Exemplars:
+1. Identify reincarnation names and discuss their meanings.
+2. Discuss the significance of reincarnation names.
+
+© NaCCA, Ministry of Education 2021
+
+Communication and Collaboration,
+Cultural Identity and Global
+Citizenship (CG)
+CC 7.3: Provide feedback in areas of
+ideas, organisation, voice, word choice and
+sentence fluency in communication.
+CG 5.5: Adjust to the demands of customs,
+traditions, values and attitudes of society.
+
+51
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B9.1.2.1. Exhibit
+knowledge of the
+understanding
+and application
+of circumstantial,
+reincarnation and deity
+names
+
+Communication and Collaboration,
+Cultural Identity and Global
+Citizenship (CG)
+CC 7.3: Provide feedback in areas of
+ideas, organisation, voice, word choice and
+sentence fluency in communication.
+CG 5.5: Adjust to the demands of customs,
+traditions, values and attitudes of society.
+
+B9.1.2.1.3 Identify and discuss deity names.
+Exemplars:
+1. Explain circumstances that lead to giving new borns deity names.
+E.g.
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+Akan:Tutu, Antoa, etc
+Dagaare: Gyebuni, Kala
+Dagbani:Yabdoo,Tidoo
+Dangme: Agbee, Nadu
+Ewe: Afram, Klu
+Ga: Nai, Dzan
+Gonja: Kipo, Lansa
+Nzema:Tanoɛ, Botokule
+Kasem: Kukula
+
+2. Discuss the significance of deity names.
+
+© NaCCA, Ministry of Education 2021
+
+52
+
+STRAND 1: B9.1 CUSTOMS AND INSTITUTIONS
+SUB-STRAND 3: B9.1.3 THE CLAN SYSTEM
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B9.1.3.1
+Demonstrate
+understanding and
+knowledge of the factors
+that militate against the
+clan system
+
+Communication and Collaboration,
+Cultural Identity and Global
+Citizenship (CG)
+CC 7.3: Provide feedback in areas of
+ideas, organisation, voice, word choice and
+sentence fluency in communication.
+CG 5.5: Adjust to the demands of customs,
+traditions, values and attitudes of society.
+
+B9.1.3.1.1 Discuss trends affecting the clan system.
+Exemplars:
+1. Identify and discuss the trends affecting the clan system.
+2. Discuss ways by which the clan system can be strengthened.
+3. Discuss the similarities and differences between the various clan systems
+in their locality.
+
+© NaCCA, Ministry of Education 2021
+
+53
+
+STRAND 1: B9.1 CUSTOMS AND INSTITUTIONS
+SUB-STRAND 4: B9.1.4 CHIEFTAINCY:TRADITIONAL GOVERNMENT
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B9.1.4.1 Exhibit
+knowledge and
+understanding of the
+traditional governing
+structure (chief/
+queenmother, chief
+priest, traditional
+military, sub chiefs, king
+makers) of their society
+and their duties.
+
+Communication and Collaboration,
+Cultural Identity and Global
+Citizenship (CG)
+CC 7.3: Provide feedback in areas of
+ideas, organisation, voice, word choice and
+sentence fluency in communication.
+CG 5.5: Adjust to the demands of customs,
+traditions, values and attitudes of society.
+
+B9.1.4.1.1 Explore the traditional governing structure of their
+community and discuss the duties of the functionaries.
+Exemplars:
+1. Read and discuss a text on traditional governance.
+2. Identify the traditional governing structure of their community.
+3. Discuss and write down the duties of the functionaries.
+4. Discuss and write the importance of the functionaries.
+
+© NaCCA, Ministry of Education 2021
+
+54
+
+STRAND 2: B9.2 LISTENING AND SPEAKING
+SUB-STRAND 1: B9.2.1: CONVERSATION/EVERYDAY DISCOURSE
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B9.2.1.1 Demonstrate
+use of appropriate
+language orally in
+specific situations
+
+Communication and Collaboration
+(CC)
+
+B9.2.1.1.1 Use appropriate register in everyday communication
+(informal and formal) with diverse partners on grade-level topics/
+texts/issues.
+Exemplars:
+1. Identify some slang words and jargons accepted locally and
+internationally.
+
+CC 7.4: Identify underlying themes,
+implications and issues when listening.
+
+2. Use everyday, informal topics and situations that are more appropriate
+for the use of slang and jargon e.g. going out with friends, talking about
+music, hobbies, sport, and so on.
+3. Create and act scenes on texts/issues/topics using both formal and
+informal register to distinguish characters.
+B9.2.1.1.2 Ask questions that link the ideas of several speakers and
+respond to others’ questions in a discussion
+Exemplars:
+1. Use open ended questions to enable speaker link ideas of other speakers
+on topics/issues e.g. In your opinion what are the views of people on
+bush fires, corruption, sanitation, energy conservation, ‘galamsey’, corona
+virus, Gender Equality and Social Inclusion (GESI), etc.?
+
+Communication and Collaboration
+(CC)
+CC 7.4: Identify underlying themes,
+implications and issues when listening
+
+2. Listen attentively to view points on topics/issues in a conversation and
+respond appropriately.
+3. Engage in conversations on topics/issues with several speakers and
+respond to different views.
+
+© NaCCA, Ministry of Education 2021
+
+55
+
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B9.2.1.1 Demonstrate
+use of appropriate
+language orally in
+specific situations
+
+Communication and Collaboration
+(CC)
+
+B9.2.1.1.3 Use appropriate language orally to discuss grade-level
+national issues fluently
+Exemplars:
+1. Identify grade-level national issues (the youth in agriculture, sanitation,
+life style diseases, free SHS, etc.)
+
+CC 7.4: Identify underlying themes,
+implications and issues when listening.
+
+2. Discuss grade-level national issues in detail using appropriate register.
+B9.2.1.1.4 Express opinions and advice on a range of everyday
+issues and situations clearly.
+Exemplars:
+1. Identify a range of everyday issues e.g. road/domestic accidents, domestic
+violence, child abuse.
+
+Communication and Collaboration
+(CC)
+CC 7.4: Identify underlying themes,
+implications and issues when listening.
+
+2. Engage in conversations on these issues giving your opinion and advice.
+B9.2.1.1.5 Demonstrate appropriate turn taking and use
+techniques for effective argument (debate).
+Exemplars:
+1. Identify interesting topics/issues appropriate for argument and debate
+e.g.‘Children should be allowed to take decisions on matters concerning
+them.’
+
+Communication and Collaboration
+(CC)
+CC 7.4: Identify underlying themes,
+implications and issues when listening.
+
+2. Observe and use the skills of turn taking in arguments and debates.
+
+© NaCCA, Ministry of Education 2021
+
+56
+
+STRAND 2: B9.2 LISTENING AND SPEAKING
+SUB-STRAND 2: B9.2.2: LISTENING COMPREHENSION
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B9.2.2.1: Demonstrate
+the ability to listen to
+extended reading and
+identify key information
+
+Communication and Collaboration
+(CC)
+
+B9.2.2.1.1 Listen to a more natural level-appropriate interactions
+with multiple speakers for example, TV shows, dramas, films,
+etc.
+Exemplars:
+1. Discuss and write key information e.g. message, theme, tone, mood in
+level appropriate texts/speeches.
+
+CC 7.4: Identify underlying themes,
+implications and issues when listening.
+
+2. Listen to and compare information written from texts/speeches.
+B9.2.2.1.2 Initiate and participate in meaningful and collaborative
+discussions on texts and related materials building on others’ ideas
+and expressing their own clearly and persuasively.
+Exemplars:
+1. Listen to and identify key issues in level appropriate texts/speeches/
+dialogues e.g. argumentative texts, news, presentations.
+
+Communication and Collaboration
+(CC)
+CC 7.4: Identify underlying themes,
+implications and issues when listening.
+
+2. Initiate discussions on ideas and share opinions on level appropriate
+texts/ speeches/dialogues
+3. Engage in conferences to discuss ideas noted from texts/speeches/
+dialogues and express their own clearly and persuasively
+
+© NaCCA, Ministry of Education 2021
+
+57
+
+STRAND 2: B9.2 LISTENING AND SPEAKING
+SUB-STRAND 4: B9.2.4 TONES
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B9.2.4.1 Demonstrate
+knowledge and
+understanding in the
+use of the basic tones
+correctly in speaking and
+reading.
+
+Communication and Collaboration
+(CC)
+
+B9.2.4.1.1 Apply the idea of tones correctly when speaking and
+reading in contexts.
+Exemplars:
+1. Engage in a conversation on a given topic using the basic tones correctly.
+2. Read sentences using the correct tones.
+
+CC 7.4: Identify underlying themes,
+implications and issues when listening.
+
+3. Read a passage using the correct tone patterns to depict the right
+context.
+
+© NaCCA, Ministry of Education 2021
+
+58
+
+STRAND 2: B9.2 LISTENING AND SPEAKING
+SUB-STRAND 4:B9.2.6 PRESENTATION: EVERYDAY EXPERIENCES
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B9.2.6.1 Describe their
+everyday experiences
+on more complex
+topics using appropriate
+presentational skills.
+
+Communication and Collaboration
+(CC)
+.
+CC 7.4: Identify underlying themes,
+implications and issues when listening.
+
+B9.2.6.1.1 Discuss complex topics related to everyday activities.
+Exemplars:
+1. Read a text on deforestation in Ghana, same sex marriage, insecurity, etc.
+2. Discuss some of the everyday activities in the factory, traditional
+occupational shops, settlement of cases at the palace, etc.
+B9.2.6.1.2 Compose their own group report on some topical issues.
+Exemplars:
+1. Develop their own report on a range of suitable familiar and unfamiliar,
+concrete and abstract topics. Examples, pollution in Ghana, food
+production in Ghana, main industries in Ghana.
+
+Communication and Collaboration
+(CC)
+CC 7.4: Identify underlying themes,
+implications and issues when listening.
+
+2. Make a presentation on the topics above to the class for discussion.
+
+© NaCCA, Ministry of Education 2021
+
+59
+
+STRAND 3: B9.3 READING
+SUB-STRAND 1: B9.3.1 READING
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B9.3.1.1 Read longer
+passages silently,
+identify main ideas,
+answer questions and
+summarise the passage.
+
+Communication and Collaboration
+(CC)
+CC 7.4: Identify underlying themes,
+implications and issues when listening.
+CC 7.2: Interpret correctly and respond to
+non- verbal communication such as facial
+expressions, cues and gestures.
+
+B9.3.1.1.1 Locate the main and subsidiary points in a range of texts
+and rewrite logically with accuracy in their own words.
+Exemplars:
+1. Read and understand a passage of between 200-250 words from
+different subject areas silently.
+2. Identify the main ideas in the passage.
+3. Rewrite the ideas logically in their own words.
+4. Answer recall, meaning and inferential questions based on the passage.
+B9.3.1.1.2 Summarise passages read in given number of sentences.
+Exemplars:
+1. Arrange the main ideas in a range of passages logically and coherently.
+2. Summarise a passage of two hundred words in fifty words.
+
+© NaCCA, Ministry of Education 2021
+
+Communication and Collaboration
+(CC)
+CC 7.4: Identify underlying themes,
+implications and issues when listening.
+CC 7.2: Interpret correctly and respond to
+non- verbal communication such as facial
+expressions, cues and gestures.
+
+60
+
+STRAND 3: B9.3 READING
+SUB-STRAND 2: B9.3.2 TRANSLATION
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B9.3.2.1 Demonstrate
+knowledge of translating
+texts from source
+language to the target
+language.
+
+Communication and Collaboration
+(CC)
+CC 8.3: Apply appropriate diction and
+structure sentences correctly for narrative,
+persuasive, imaginative and expository
+purposes.
+
+B9.3.2.1.1 Decode the meaning of texts and translate from source
+to target language.
+Exemplars:
+1. Translate texts of about one hundred words from source to a target
+language.
+2. Read and discuss the translated text.
+
+© NaCCA, Ministry of Education 2021
+
+61
+
+STRAND 4: B9.4 LANGUAGE AND USAGE
+SUB-STRAND 2: B9.4.2 INTEGRATING GRAMMAR IN WRITTEN LANGUAGE (NOUNS, ADJECTIVES)
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B9.4.2.1 Demonstrate
+knowledge of the use
+of singular and plural
+nouns in sentences and
+passages.
+
+Communication and Collaboration
+(CC)
+CC 7.4: Identify underlying themes,
+implications and issues when listening.
+
+B9.4.2.1.1 Discuss nouns under singular and plural forms in an
+increasing and abstract range of texts.
+Exemplars:
+1. Identify and classify nouns in a passage according to their singular and
+plural forms.
+2. Construct simple and compound sentences with the singular and plural
+nouns in speech and in writing.
+
+B9.4.2.2 Demonstrate
+knowledge of how
+adjectives are combined
+in a sentence.
+
+B9.4.2.2.1 Discuss how adjectives follow each other in a sentence.
+Exemplars:
+1. Identify adjectives in texts.
+2. Form sentences with two or three adjectives.
+
+© NaCCA, Ministry of Education 2021
+
+Communication and Collaboration
+(CC)
+CC 7.1: Identify words or sentences in
+context appropriately.
+
+62
+
+STRAND 4: B9.4 LANGUAGE AND USAGE
+SUB-STRAND 3: B9.4.3 INTEGRATING GRAMMAR IN WRITTEN LANGUAGE (VERBS, ADVERBS)
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B9.4.3.1 Exhibit
+knowledge and
+understanding of the use
+of auxiliary verbs.
+
+Communication and Collaboration
+(CC)
+CC 7.4: Identify underlying themes,
+implications and issues when listening.
+
+B9.4.3.1.1 Discuss auxiliary verbs in sentences.
+Exemplars:
+1. Identify types of verbs in a recorded/read passage.
+2. Discuss auxiliary verbs (where applicable).
+3. Construct sentences with auxiliary verbs.
+
+B9.4.3.2 Demonstrate
+knowledge of how
+adverbs are combined in
+a sentence.
+
+B9.4.3.1.3 Discuss how adverbs follow each other in a sentence.
+Exemplars:
+1. Identify adverbs in texts.
+2. Construct sentences with two or three adverbs correctly.
+
+© NaCCA, Ministry of Education 2021
+
+Communication and Collaboration
+(CC)
+CC 7.1: Identify words or sentences in
+context appropriately.
+
+63
+
+STRAND 5: B9.5 COMPOSITION WRITING
+SUB-STRAND 1: B9.5.1 STRUCTURE AND ORGANISE IDEAS IN COMPOSITION WRITING
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B9.5.1.1 Demonstrate
+knowledge and
+understanding of the
+features of the various
+text types discussed and
+use the knowledge to
+write a coherent essay
+on the text types.
+
+Communication and Collaboration
+(CC), Critical thinking and Problem
+solving (CP)
+CC 7.4: Identify underlying themes,
+implications and issues when listening.
+CP 5.2: Analyse and make distinct
+judgement about viewpoints expressed in an
+argument.
+
+B9.5.1.1.1 Plan and structure a range of extended texts using
+paragraphs to show progression from one idea to the next and
+linking paragraphs using cohesive language.
+Exemplar:
+1. Write a coherent essay on any of the text types (e.g. narrative,
+descriptive, creative, academic, and argumentative and letter writing) on a
+given topic.
+2. Identify and write the topic and supporting sentences in the paragraphs.
+
+© NaCCA, Ministry of Education 2021
+
+64
+
+STRAND 6: B9.6 LITERATURE
+SUB-STRAND 1: B9.6.1 DRUM/HORN/XYLOPHONE LANGUAGE, PROSE, POETRY AND DRAMA
+CONTENT STANDARD INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+B9.6.1.1 Demonstrate an
+understanding of drum
+language, appellations
+and war songs.
+
+Cultural identity and Global
+Citizenship(CG)
+CG 5.1: Show a strong sense of
+belongingness to one’s culture.
+CG 6.1: Understanding of influences of
+globalisation on traditions, languages and
+cultures.
+
+B9.6.1.1.1 Explore drum language/appellations and war songs
+respectively.
+Exemplars:
+1. Describe the features of drum language/appellation.
+2. Discuss drum language/appellation.
+3. Discuss the occasions/situations on/in which drum language/appellation is
+used.
+4. State the importance of drum language/appellation.
+5. Appreciate war songs in your language.
+6. Discuss the importance of war songs.
+
+B9.6.1.2 Demonstrate
+knowledge and
+understanding in the
+writer’s use of language
+in a prose, poetry and
+drama texts.
+
+B9.6.1.2.1 Discuss how writers use language to create effect in an
+increasing range of prose, poetry and drama.
+Exemplars:
+1. Discuss characterisation in relation to prose, poetry and drama texts and
+give examples from texts.
+
+Communication and Collaboration
+(CC)
+CC 7.4: Identify underlying themes,
+implications and issues when listening.
+
+2. Explore ways that writers use a wide range of literary devices
+(personification, alliteration, assonance) in a range of prose, poetry and
+drama texts.
+3. Discuss how writers use settings to create different effects in a range of
+prose, poetry and drama.
+4. Discuss how writers use language to create mood and tone in an
+increasing range of prose, poetry and drama
+5. Discuss the ways writers structure texts in a range of prose, poetry and
+drama texts.
+
+© NaCCA, Ministry of Education 2021
+
+65
+
+APPENDICES
+APPENDIX 1: CORE COMPETENCIES AND SUBSKILLS OF THE COMMON CORE PROGRAMME (CCP)
+1. COMMUNICATION AND COLLABORATION (CC)
+B7-B9
+CC7: LISTENING
+
+CC8: PRESENTING
+
+CC9:TEAMWORK
+
+CC7.1: Identify words or sentences in context
+appropriately
+
+CC8.1: Speak clearly and explain ideas. Share a
+narrative or extended answer while speaking to a
+group
+
+CC9.1: Demonstrate behaviour and skills of
+working towards group goals
+
+CC7.2: Interpret correctly and respond to nonverbal communication such as facial expressions,
+cues and gestures
+
+CC8.2: Explain ideas in a clear order with relevant CC9.2: Understand and use interpersonal skills
+detail, using correct construction and structure of
+speech
+
+CC7.3: Provide feedback in areas of ideas,
+organisation, voice, word choice and sentence
+fluency in communication
+
+CC8.3: Apply appropriate diction, and structure
+sentences correctly for narrative, persuasive,
+imaginative and expository purposes
+
+CC9.3: Understand roles during group activities
+
+CC7.4: Identify underlying themes, implications
+and issues when listening
+
+CC8.4: Anticipate different responses from the
+audience and plan for them
+
+CC9.4: Help group work on relevant activities
+
+CC7.5: Identify and analyse different points of
+views of speaker
+
+CC8.5:Vary the level of detail and the language
+used when presenting to make it appropriate to
+the audience
+
+CC9.5: Appreciate the importance of including
+all team members in discussions and actively
+encourage contributions from them
+CC9.6: Ability to work with all group members to
+complete a task successfully
+CC9.7: Effectively perform multiple roles within
+the group
+CC9.8: Demonstrate an awareness of the wider
+team dynamics and work to minimise conflicts in
+the team
+
+© NaCCA, Ministry of Education 2021
+
+66
+
+2. CRITICAL THINKING AND PROBLEM SOLVING (CP)
+B7-B9
+CP5: CRITICAL THINKING
+
+CP6: PROBLEM SOLVING
+
+CP 5.1: Ability to combine information and ideas from several sources to
+reach a conclusion
+
+CP 6.1: Ability to effectively define goals towards solving a problem
+
+CP 5.2: Analyse and make distinct judgement about viewpoints expressed in CP 6.2: Ability to explain plans for attaining goals
+an argument
+CP 5.3: Create simple logic trees to think through problems
+
+CP 6.3: Identify important and appropriate alternatives
+
+CP 5.4: Generate hypothesis to help answer complex problems
+
+CP 6.4: Ability to identify important and appropriate criteria and use them
+to evaluate available alternatives
+
+CP 5.5:Effectively evaluate the success of solutions used in an attempt to
+solve a complex problem
+
+CP 6.5: Ability to select alternative(s) that adequately meet selected criteria
+
+CP 5.6: Demonstrate a thorough understanding of a generalised concept
+and facts specific to task or situation
+
+CP 6.6: Preparedness to recognise and explain results after implementation
+of plans
+
+CP 5.7:Provide new insight into controversial situation or task
+
+CP 6.7: Implement strategies with accuracy
+
+CP 5.8: Identify and prove misconceptions about a generalised concept or
+fact specific to a task or situation
+CP 5.9: Identify and explain a confusion, uncertainty, or a contradiction
+surrounding an event
+CP 5.10: Develop and defend a logical plausible resolution to a confusion,
+uncertainty or contradiction surrounding an event
+
+© NaCCA, Ministry of Education 2021
+
+67
+
+3. PERSONAL DEVELOPMENT AND LEADERSHIP (PL)
+B7-B9
+PL5: PERSONAL DEVELOPMENT
+
+PL6: LEADERSHIP
+
+PL5.1:Understanding oneself (strengths, weaknesses, goals and
+aspirations),in reacting and adjusting to novel situations
+
+PL6.1: Ability to serve group members effectively
+
+PL5.2: Demonstrate a sense of belongingness to a group
+
+PL6.2: Division of tasks into solvable units and assigning group members to
+task units
+
+PL5.3: Recognise one’s emotional state and their preparedness to apply
+emotional intelligence
+
+PL6.3: Ability to manage time effectively
+
+PL5.4: Ability to understand one’s personality traits
+
+PL6.4: Ability to manage and resolve conflicts
+
+PL5.5: Desire to accept one’s true self and overcome weaknesses
+
+PL6.5: Ability to monitor team members to ascertain progress
+
+PL5.6: Ability to set and maintain personal standards and values
+
+PL6.6: Ability to mentor peers
+PL6.7: Actively promote effective group interaction and the expression of
+ideas and opinions in a way that is sensitive to the feelings and background of
+others
+PL6.8: Actively assist group identify changes or modifications necessary in
+the group activities and work towards carrying out those changes
+
+© NaCCA, Ministry of Education 2021
+
+68
+
+4. CULTURAL IDENTITY AND GLOBAL CITIZENSHIP (CG)
+B7-B9
+CG5: CULTURAL IDENTITY
+
+CG6: GLOBAL CITIZENSHIP
+
+CG5.1:Show a strong sense of belongingness to one’s culture
+
+CG6.1:Understanding of influences of globalisation on traditions, languages
+and cultures
+
+CG5.2:Develop and exhibit ability to defend one’s cultural beliefs, practices
+and norms
+
+CG6.2:Recognise resistance to global practices that are inimical to our
+culture
+
+CG5.3:Develop and express respect, recognition and appreciation of others’ CG6.3:Know the global discourse about the roles of males and females
+cultures
+CG5.4:Develop and exhibit a sense of cultural identity
+
+CG6.4:Exhibit a sense of nationality and global identity
+
+CG5.5:Adjust to the demands of customs, traditions, values and attitudes of
+society
+
+© NaCCA, Ministry of Education 2021
+
+69
+
+5. CREATIVITY AND INNOVATION (CI)
+B7-B9
+CI5: KNOWLEDGE, UNDERSTANDING, SKILLS AND
+STRATEGIES
+
+CI6: REFLECTION AND EVALUATION
+
+CI 5.1:Examine alternatives in creating new things
+
+CI 6.1: Exhibit strong memory, intuitive thinking, and respond appropriately
+
+CI 5.2: Ability to merge simple/complex ideas to create novel situations or
+things
+
+CI 6.2: Ability to reflect on approaches to creative tasks and evaluate the
+effectiveness of tools used
+
+CI 5.3: Identification of requirements of a given situation and justification of
+more than one creative tool that will be suitable
+
+CI 6.3: Ability to select the most effective creative tools for work, and give
+reasons for the choice
+
+CI 5.4: Ability to visualise alternatives, see possibilities, and identify problems CI 6.4: Imagining and seeing things in a different way
+and challenges
+CI 5.5: Ability to try new alternatives and different approaches
+
+CI 6.5: Anticipate and overcome difficulties relating totaking initiatives
+
+CI 5.6: Understand and use analogies and metaphors
+
+CI 6.6: Being open-minded, adapting and modifying ideas to achieve creative
+results
+
+CI 5.7: Putting forward constructive comments, ideas, explanations and new
+ways of doing things
+
+CI 6.7: Look and think about things differently and from different
+perspectives
+CI 6.8: Recognise and generalise information and experience; search for
+trends and patterns
+CI 6.9: Interpret and apply learning in new contexts
+CI 6.10: Reflect on work and explore the thinking behind thoughts and
+processes
+
+© NaCCA, Ministry of Education 2021
+
+70
+
+6. DIGITAL LITERACY (DL)
+B7-B9
+DL5: PHOTO-VISUAL AND INFORMATION LITERACY
+
+DL6: SOCIO-EMOTIONAL AND REPRODUCTION LITERACY
+
+DL5.1:Ability to ascertain when information is needed and be able to
+identify, locate, evaluate and effectively use it to solve a problem
+
+DL 6.1: Understand the sociological and emotional aspects of cyberspace
+
+DL5.2:Ability to recognise and avoid traps in cyberspace
+
+DL 6.2: Create a meaningful and original piece of work, or its interpretation
+by integrating existing information
+
+DL5.3:Ability to find and utilise digital content
+
+DL6.3:Use digital tools to create novel things
+
+DL5.4:Ability to construct knowledge from a non-linear hyper-textual
+navigation
+
+DL6.4:Adhere to behavioural protocols that prevail in cyberspace
+
+DL5.5:Evaluate the quality and validity of information
+
+DL6.5:Recognition of societal issues emanating from the use of digital
+technologies
+
+DL5.6:Preparedness to make better decisions using available information
+
+DL6.6:Knowledge and recognition of ethical use of information
+
+Please note these inclusivity issues
+The core competencies outlined in this document must be
+assessed taking into consideration learners with special needs
+(physical disabilities, learning disabilities, etc.).Consider the use of
+realia for visual and visually challenged learners.
+A system of creating alternatives for tasks must also be adopted.
+
+© NaCCA, Ministry of Education 2021
+
+71
+
+BIBLIOGRAPHY
+1.
+
+Boyle, B. & Marie, C. (2016). Curriculum development: A guide for educators. SAGE
+
+2.
+
+Ghana Education Service (2019). Ghanaian language curriculum for primary schools. Accra: NaCCA
+
+3.
+
+Glatthom, A. A. (1994). Developing a quality curriculum. Waveland Press
+
+4.
+
+Jacobs, H. H. (2010). Curriculum 21: Essential education for a changing world. ASCD
+
+5.
+
+Owu-Ewie, C. (2012). Language teaching skills. Vision Xpress Service
+
+6.
+
+Pinar,W. (2013). International handbook of curriculum research. Taylor & Francis
+
+7.
+
+Richards, J. C. (2017). Curriculum development in language teaching. Cambridge University Press
+
+8.
+
+Wiles, J. (2008). Leading curriculum development. Corwin Press
+
+© NaCCA, Ministry of Education 2021
+
+72
+
+GHANAIAN LANGUAGE SUBJECT PANEL MEMBERS AND REVIEWERS
+
+WRITING PANEL
+
+NAME
+
+INSTITUTION
+
+Mr. David Sarpei Nunoo (Panel Lead)
+
+UEW, College of Languages Education, Ajumako
+
+Dr. Regina Oforiwah Caesar
+
+UEW, College of Languages Education, Ajumako
+
+Dr. Emmanuel Amo Ofori
+
+University of Cape Coast, Cape Coast
+
+Dr. Kafui Aku Genevieve Ofori
+
+UEW, College of Languages Education, Ajumako
+
+Ms. Cecilia Tomekyin
+
+UEW, College of Languages Education, Ajumako
+
+Mr. Mark Kamengtanye Kuufaaleru Ali
+
+UEW, College of Languages Education, Ajumako
+
+Mr. Henry Kwamena Afari Twako
+
+UEW, College of Languages Education, Ajumako
+
+Mr. Al-Hassan Issahaku
+
+UEW, College of Languages Education, Ajumako
+
+Mr. Edward Kwadzo Agyapong
+
+Asamankese Senior High School
+
+Mr. J.S. Korang
+
+Retired Educationist
+
+Mrs. Joana Vanderpuije
+
+NaCCA
+
+Cambridge International
+REVIEWERS
+
+Prof. Charles Owu-Ewie
+
+University of Education,Winneba
+
+Dr.Yvonne A.A. Ollennu
+
+University of Education,Winneba
+
+SUPERVISORS AND COORDINATING TEAM
+SUPERVISORS
+
+COORDINATING
+TEAM
+
+GRAPHIC DESIGNER
+
+NAME
+Dr. Prince H. Armah
+Prof. Kwame Osei Kwarteng
+
+INSTITUTION
+Director-General (Ag.), NaCCA
+Council Chairman, NaCCA
+
+Mr. Johnson Boakye Yiadom
+
+NaCCA/EDT
+
+Mr. John Mensah Anang
+
+NaCCA
+
+Mr. Cosmos Eminah
+
+NaCCA
+
+Mrs.Wilma S.Titus-Glover
+
+NaCCA
+
+Eugene Offei Tettey
+
+© NaCCA, Ministry of Education 2021
+
+73
+
+

@@ -1,0 +1,46 @@
+{
+ "B2.2.1.1.1": {
+  "strand": "MY COUNTRY GHANA",
+  "sub_strand": "Sub-strand B2.2.1",
+  "cs_code": "B2.2.1.1",
+  "cs_desc": "Show understanding of the characteristics of some of the ethnic groups in Ghana",
+  "ind_desc": "State the characteristics of the ethnic groups in Ghana understanding of the",
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA approved textbook; TLM; teaching aids; ICT tools",
+  "keywords": "history, b2, curriculum",
+  "assessment": "Class exercises; oral questions; practical task; SBA"
+ },
+ "B2.2.4.1.1": {
+  "strand": "MY COUNTRY GHANA",
+  "sub_strand": "Sub-strand B2.2.4",
+  "cs_code": "B2.2.4.1",
+  "cs_desc": "Exhibit knowledge of the history of the major historical locations in Ghana",
+  "ind_desc": "Discuss the history of Ghana’s major historical locations. Examples include Kumasi military museum, Komfo Anokye Sword, Assin Manso slave site, Gbewa Palace",
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA approved textbook; TLM; teaching aids; ICT tools",
+  "keywords": "history, b2, curriculum",
+  "assessment": "Class exercises; oral questions; practical task; SBA"
+ },
+ "B2.2.5.1.1": {
+  "strand": "MY COUNTRY GHANA",
+  "sub_strand": "Sub-strand B2.2.5",
+  "cs_code": "B2.2.5.1",
+  "cs_desc": "History Content Standard B2.2.5.1",
+  "ind_desc": "Exhibit understanding of Ghanaian women who have contributed significantly to Ghana’s development",
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA approved textbook; TLM; teaching aids; ICT tools",
+  "keywords": "history, b2, curriculum",
+  "assessment": "Class exercises; oral questions; practical task; SBA"
+ },
+ "B2.3.2.1.1": {
+  "strand": "EUROPEANS IN GHANA",
+  "sub_strand": "Sub-strand B2.3.2",
+  "cs_code": "B2.3.2.1",
+  "cs_desc": "Understand that trade was the major reason why the Europeans settled in Ghana © NaCCA, Ministry of Education 2019",
+  "ind_desc": "Describe how early trade was carried out between Ghanaians and Europeans",
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA approved textbook; TLM; teaching aids; ICT tools",
+  "keywords": "history, b2, curriculum",
+  "assessment": "Class exercises; oral questions; practical task; SBA"
+ }
+}

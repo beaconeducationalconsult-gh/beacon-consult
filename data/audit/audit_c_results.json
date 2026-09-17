@@ -1,0 +1,110 @@
+{
+ "json": [
+  {
+   "subject": "math",
+   "n": 180,
+   "status": "PASS",
+   "issues": []
+  },
+  {
+   "subject": "science",
+   "n": 180,
+   "status": "PASS",
+   "issues": []
+  },
+  {
+   "subject": "english",
+   "n": 180,
+   "status": "PASS",
+   "issues": []
+  },
+  {
+   "subject": "ghanaian_language",
+   "n": 180,
+   "status": "PASS",
+   "issues": []
+  },
+  {
+   "subject": "history",
+   "n": 180,
+   "status": "PASS",
+   "issues": []
+  },
+  {
+   "subject": "owop",
+   "n": 180,
+   "status": "PASS",
+   "issues": []
+  },
+  {
+   "subject": "rme",
+   "n": 180,
+   "status": "PASS",
+   "issues": []
+  },
+  {
+   "subject": "creative_arts",
+   "n": 180,
+   "status": "PASS",
+   "issues": []
+  }
+ ],
+ "docx": [
+  {
+   "subject": "math",
+   "docx": "Basic1_Mathematics_Lesson_Plans_Full_Year.docx",
+   "size_kb": 238,
+   "status": "PASS",
+   "issues": []
+  },
+  {
+   "subject": "science",
+   "docx": "Basic1_Science_Lesson_Plans_Full_Year.docx",
+   "size_kb": 215,
+   "status": "PASS",
+   "issues": []
+  },
+  {
+   "subject": "english",
+   "docx": "Basic1_English_Lesson_Plans_Full_Year.docx",
+   "size_kb": 225,
+   "status": "PASS",
+   "issues": []
+  },
+  {
+   "subject": "ghanaian_language",
+   "docx": "Basic1_Ghanaian_Language_Lesson_Plans_Full_Year.docx",
+   "size_kb": 193,
+   "status": "PASS",
+   "issues": []
+  },
+  {
+   "subject": "history",
+   "docx": "Basic1_History_Lesson_Plans_Full_Year.docx",
+   "size_kb": 131,
+   "status": "PASS",
+   "issues": []
+  },
+  {
+   "subject": "owop",
+   "docx": "Basic1_OWOP_Lesson_Plans_Full_Year.docx",
+   "size_kb": 118,
+   "status": "PASS",
+   "issues": []
+  },
+  {
+   "subject": "rme",
+   "docx": "Basic1_RME_Lesson_Plans_Full_Year.docx",
+   "size_kb": 118,
+   "status": "PASS",
+   "issues": []
+  },
+  {
+   "subject": "creative_arts",
+   "docx": "Basic1_Creative_Arts_Lesson_Plans_Full_Year.docx",
+   "size_kb": 106,
+   "status": "PASS",
+   "issues": []
+  }
+ ]
+}

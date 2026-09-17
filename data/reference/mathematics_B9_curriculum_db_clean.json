@@ -1,0 +1,708 @@
+{
+ "B9.1.1.1.1": {
+  "strand": "NUMBER",
+  "sub_strand": "Number and Numeration System",
+  "cs_code": "B9.1.1.1",
+  "cs_desc": "Apply the understanding of place value in solving real life problems involving integers of any size, rounding this to given decimal places and significant figures",
+  "ind_desc": "Express integers to a given number of significant and decimal places",
+  "exemplars": [
+   "E.g.1. Express integers to a number of significant figures. (i) 857,386,321 -five significant figures -four significant figures -three significant figures.",
+   "E.g.2. Express decimal numbers to a given number of decimal places. (i) Write 98745.9674 correct to - three decimal places -two decimal places -one decimal place"
+  ],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.1.1.1.2.": {
+  "strand": "NUMBER",
+  "sub_strand": "Number and Numeration System",
+  "cs_code": "B9.1.1.1",
+  "cs_desc": "Apply the understanding of place value in solving real life problems involving integers of any size, rounding this to given decimal places and significant figures",
+  "ind_desc": "Use knowledge and understanding of place value to solve real life problems",
+  "exemplars": [
+   "E.g.1. Create and solve a real-life problem or a story problem and write the answer in standard form. (I) I am a 6-digit number. My first digit is 5 more than the last digit, but 2 less than my second digit. My second digit is the third multiple of 3, while my fourth digit is the second multiple of 3. My third digit is the quotient when the fourth digit is divided by my last digit. However, my fourth and fifth digits are consecutive numbers. What number am I? 165 Think second digit: 3x3=9 fourth digit: 2x3=6 first digit: 9-2=7 last digit: 7-5=2 fifth digit: 6- 1=5 third digit: 6 105 So, the number is 793652 = 7.93652 x",
+   "E.g.2 Create similar real story problems and solve"
+  ],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.1.1.2.1": {
+  "strand": "NUMBER",
+  "sub_strand": "Number and Numeration System",
+  "cs_code": "B9.1.1.2",
+  "cs_desc": "Demonstrate an understanding of the relationship between members of the rational number system and solve real life problems involving union and intersection of three sets",
+  "ind_desc": "Solve problems on relationship between members of the rational number system using knowledge and understanding of the concept of union and intersection of two sets.",
+  "exemplars": [
+   "E.g. 1 Use sets diagrams to show the relationship among the Real numbers namely (QI) -Irrational numbers -Rational numbers (Q) - Integers (Z) -Whole numbers (W) -Natural or Counting numbers (N) 166",
+   "E.g. 2 Write the factors of 12 and 15 and represent them on a Venn diagram. 12={1, 2, 3, 4, 6, 12} 15={1, 3, 5, 15}"
+  ],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.1.1.2.2": {
+  "strand": "NUMBER",
+  "sub_strand": "Number and Numeration System",
+  "cs_code": "B9.1.1.2",
+  "cs_desc": "Demonstrate an understanding of the relationship between members of the rational number system and solve real life problems involving union and intersection of three sets",
+  "ind_desc": "Apply the concept of sets to solve problems on relationship between members of rational number system and solve real life problems involving union and intersection of two sets",
+  "exemplars": [
+   "E.g.1 Create and solve real life problems to show the union and intersection of two sets. i. There are 80 farmers in a certain village who grow either maize or beans. Fifty of them grow beans while sixty grow maize. If each farmer grows at least one of the two crops, represent the information on a Venn diagram and hence find the number of farmers who grow: a. both crops. b. only one crop. 167"
+  ],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.1.2.1.1": {
+  "strand": "NUMBER",
+  "sub_strand": "Number Operations",
+  "cs_code": "B9.1.2.1",
+  "cs_desc": "Apply mental mathematics and properties to determine answers for addition and subtraction of basic facts.",
+  "ind_desc": "Multiply and divide given numbers by powers of 10 including decimals and benchmark fractions",
+  "exemplars": [
+   "E.g.1. Recall multiplication facts up to 144 and related division facts.",
+   "E.g.2. Recall decimal names of given benchmark fractions converted to decimals or percentages (and vice versa)",
+   "E.g. 3. Find the product of a given decimal number when it is multiplied by 10, 100, 1000, , , etc. 1 1 1 10,100 1000"
+  ],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.1.2.1.2": {
+  "strand": "NUMBER",
+  "sub_strand": "Number Operations",
+  "cs_code": "B9.1.2.1",
+  "cs_desc": "Apply mental mathematics and properties to determine answers for addition and subtraction of basic facts.",
+  "ind_desc": "Demonstrate the ability to determine commutative properties of addition and multiplication.",
+  "exemplars": [
+   "E.g1. Recognise that for any two numbers and b; a i. a + b = b + a i.e. 25 + 32 = 32 + 25 = 57 ii. a × b = b × a i.e. 17 × 8 = 8 × 17 = 136"
+  ],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.1.2.1.3": {
+  "strand": "NUMBER",
+  "sub_strand": "Number Operations",
+  "cs_code": "B9.1.2.1",
+  "cs_desc": "Apply mental mathematics and properties to determine answers for addition and subtraction of basic facts.",
+  "ind_desc": "Use the associative property of addition and multiplication.",
+  "exemplars": [
+   "E.g1. Recognise that for any three numbers a, b and c; i. a + (b + c) = (a + b) + c or a + (b + c) = (a + c) + b i.e. 15 + (6 + 9) = (15 + 6) + 9 = 30 ii. (a × b) × c = a × (b × c) i.e. (12 × 5) × 4 = 12 × (5 × 4) = 240"
+  ],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.1.2.1.4": {
+  "strand": "NUMBER",
+  "sub_strand": "Number Operations",
+  "cs_code": "B9.1.2.2",
+  "cs_desc": "Apply the understanding of addition, subtraction, multiplication and division of decimal numbers to solve problems, and round answers to given decimal places and significant figures",
+  "ind_desc": "Use the distributive property in solving problems.",
+  "exemplars": [
+   "E.g1. Recognise that for any three numbers a, b and c; i. a × (b + c) = (a × b) + (a × c) i.e. 5 × (10 + 7) = (5 × 10) + (5 × 7) = 85 ii. a × (b - c) = (a × b) - (a × c) i.e. 5 × (10 - 7) = (5 × 10) - (5 × 7) = 15"
+  ],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.1.2.2.1": {
+  "strand": "NUMBER",
+  "sub_strand": "Number Operations",
+  "cs_code": "B9.1.2.2",
+  "cs_desc": "Apply the understanding of addition, subtraction, multiplication and division of decimal numbers to solve problems, and round answers to given decimal places and significant figures",
+  "ind_desc": "Solve operations involving addition, subtraction, multiplication and division using word problems.",
+  "exemplars": [
+   "E.g. Create and solve story problems involving a combination of two or more of the basic operations. (×, ÷, ─,+). i) A trader sells oranges from two baskets, A and B. Basket A contained 85 oranges and she sold 48. She sold 59 oranges from basket B and was left with the same number of oranges as in Basket A. How many oranges were originally in Basket B?"
+  ],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.1.2.2.2": {
+  "strand": "NUMBER",
+  "sub_strand": "Number Operations",
+  "cs_code": "B9.1.2.2",
+  "cs_desc": "Apply the understanding of addition, subtraction, multiplication and division of decimal numbers to solve problems, and round answers to given decimal places and significant figures",
+  "ind_desc": "Solve word problems involving the four basic operations and round the answers to the nearest two decimal figures or to some significant figures. ii) The price of a jacket is three times that of a shirt. The price of a jacket is GH₵560.65. Mr Mensa bought two of the jackets and four shirts for his twin sons. Calculate the total amount Mr Mensa paid for the items, correct your answer to: ) two decimal places three significant figures 𝛼𝛼 𝛽𝛽) 169",
+  "exemplars": [],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.1.2.4.1": {
+  "strand": "NUMBER",
+  "sub_strand": "Number Operations",
+  "cs_code": "B9.1.2.4",
+  "cs_desc": "Demonstrate understanding of surds as real numbers, the process of adding and subtracting of surds as well as determining (using a calculator) the approximate square root of a number that is not a perfect square.",
+  "ind_desc": "Identify simple and compound surds.",
+  "exemplars": [
+   "E.g. i.√2, ii.7√3, iii. 2√5 iBv9.(.1√.32.+4.√2 7E−xp√la5i)n the identities/rules of surds Rule 1 Rule 4 5𝑎𝑎 √𝑎𝑎±𝑎𝑎√𝑎𝑎 = (𝑎𝑎±𝑎𝑎)√𝑎𝑎 √R𝑎𝑎ul×e 𝑎𝑎2 = √𝑎𝑎×√𝑎𝑎 Rule 𝑎𝑎 𝑎𝑎 𝑎𝑎−𝑎𝑎√𝑚𝑚 𝑎𝑎 √𝑎𝑎 √ = = × R𝑎𝑎ule Rul𝑎𝑎e +6 𝑎𝑎√𝑚𝑚 𝑎𝑎+𝑎𝑎√𝑚𝑚 𝑎𝑎−𝑎𝑎√𝑚𝑚 3√ 𝑎𝑎 𝑎𝑎 𝑎𝑎 𝑎𝑎+𝑎𝑎√𝑚𝑚 𝑎𝑎 𝑎𝑎 √𝑎𝑎 𝑎𝑎√𝑎𝑎 = × = × = 𝑎𝑎 √𝑎𝑎 √𝑎𝑎 √𝑎𝑎 𝑎𝑎−𝑎𝑎√𝑚𝑚 𝑎𝑎−𝑎𝑎√𝑚𝑚 𝑎𝑎+𝑎𝑎√𝑚𝑚"
+  ],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.1.2.4.3": {
+  "strand": "NUMBER",
+  "sub_strand": "Number Operations",
+  "cs_code": "B9.1.2.4",
+  "cs_desc": "Demonstrate understanding of surds as real numbers, the process of adding and subtracting of surds as well as determining (using a calculator) the approximate square root of a number that is not a perfect square.",
+  "ind_desc": "Simplify given surds",
+  "exemplars": [
+   "E.g.1 Simplify: i. √27 i. √72 ii. √8 16 iii. √12 121 2 iv. (√2) 170"
+  ],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.1.2.3.4": {
+  "strand": "NUMBER",
+  "sub_strand": "Number Operations",
+  "cs_code": "B9.1.2.4",
+  "cs_desc": "Demonstrate understanding of surds as real numbers, the process of adding and subtracting of surds as well as determining (using a calculator) the approximate square root of a number that is not a perfect square.",
+  "ind_desc": "Approximate the square roots of non-perfect squares with calculators/tables.",
+  "exemplars": [
+   "E.g.1 Square roots of non-perfect squares i. ii. √2 iii. √5 iv. √12 √30 171"
+  ],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.1.3.1.1": {
+  "strand": "NUMBER",
+  "sub_strand": "Fractions, Decimals and Percentages",
+  "cs_code": "B9.1.3.1",
+  "cs_desc": "Apply the understanding of operations on fractions to solve problems involving fractions of given quantities and round the results to given decimal and significant places",
+  "ind_desc": "Review fractions and solve problems involving basic operations on fractions",
+  "exemplars": [
+   "E.g. 1. Review the concept of fraction. i. Shade the fraction of squares in the rectangle that is equal to the shaded portion of the circle. ii. Write down 3 fractions equivalent to 2 iii. Express the fraction in its simplest form: 5 15 15 iv. Express as a mixed number: 10 10 12 12 v. Express 2 as an improper fraction: 2 5 5 5 5 9 9",
+   "E.g. 2. Review the basic operations on fractions. i. Adding and subtracting fractions: Work out answers to the following: a) b) − 3 7 1 4 5 Multiply4i+ng dividin1g2 f+rac5tio6ns. 8and ii. Work out answers to the following: a) × − b) ÷ 2 3 3 5 1 2 22+3 3 4 8 8 172"
+  ],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.1.3.1.2": {
+  "strand": "NUMBER",
+  "sub_strand": "Fractions, Decimals and Percentages",
+  "cs_code": "B9.1.3.1",
+  "cs_desc": "Apply the understanding of operations on fractions to solve problems involving fractions of given quantities and round the results to given decimal and significant places",
+  "ind_desc": "Add and/or subtract, multiply and/or divide given fractions, using the principle of order of operations including the use of the BODMAS or PEMDAS rule, and apply the understanding of these to solve problems.",
+  "exemplars": [
+   "E.g. 1. Use the order of operations (BODMAS or PEDMAS) to simplify whole number expressions with more than two operations. PEDMAS is Parenthesis, Exponents, Multiply/Divide (going from left to right)and Add/subtract (going from left to right). 34 32 23 32 i. ÷ + 40 – × ÷ 9 ii. 18 ÷ 6 × (4 - 3) + 6 32 iii. 18 ÷ × (4 - 3) ×",
+   "E.g. 2. Use the order of operations (BODMAS or PEDMAS) to simplify fractions with more than two operations. a) × − ÷ 2 3 5 1 2 3 4 8 −2 b) ) 3 3 4 1 ÷ 8+(5 4 2 c) ( − 3 5 4 1 4+ 8) ×11 2 173"
+  ],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.1.3.1.3.": {
+  "strand": "NUMBER",
+  "sub_strand": "Fractions, Decimals and Percentages",
+  "cs_code": "B9.1.3.1",
+  "cs_desc": "Apply the understanding of operations on fractions to solve problems involving fractions of given quantities and round the results to given decimal and significant places",
+  "ind_desc": "Review word problems involving basic operations on fractions.",
+  "exemplars": [
+   "E.g. 1. Solve word problems based on fractions. i. A test is made up of 20 questions, how many questions must you answer correctly to get a score of 80%? ii. By what percentage was a television set reduced if it was marked GH₵2,250 and sold for GH₵2,025? iii. In an election involving two contestants, one candidate claimed 52% of the votes, while the other candidate claimed 2,681 votes. If 5000 people voted, how do you know the election results are invalid? iv. Esi and Fusena prepared orange drink by mixing orange squash and water. Esi’s drink was made of orange squash and Fusena’s was 3 made up of orange squash. Whose drink tasted stronger of orange? 8 2 5 174"
+  ],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.1.4.1.1": {
+  "strand": "NUMBER",
+  "sub_strand": "Number: Ratios and Proportion",
+  "cs_code": "B9.1.4.1",
+  "cs_desc": "Apply the understanding of ratio, rate and proportions to solve problems that involve rates, ratios, and proportional reasoning and use it to solve real- world mathematical problems.",
+  "ind_desc": "Represent proportional relationships by equations.",
+  "exemplars": [
+   "E.g.1 If total cost (t) is proportional to the number of items (n) purchased at a constant price the relationship between the total cost and the number of items (p), can be expressed as pn. t ="
+  ],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.1.4.1.2": {
+  "strand": "NUMBER",
+  "sub_strand": "Number: Ratios and Proportion",
+  "cs_code": "B9.1.4.1",
+  "cs_desc": "Apply the understanding of ratio, rate and proportions to solve problems that involve rates, ratios, and proportional reasoning and use it to solve real- world mathematical problems.",
+  "ind_desc": "Use proportional relationships to solve multistep ratio and percent problems, examples: simple interest, tax, discount and commissions, NHIL, depreciation, insurance, etc.",
+  "exemplars": [
+   "E.g.1 Solve problems on simple interest. i. A girl deposited GH₵ 4500 at the bank at a rate of 3% per annum for three years. Find the simple interest. What is the amount at the end of the fifth year?",
+   "E.g.2 Solve problems on tax (VAT). i. The VAT rate of Ghana is 12.5%. A man bought an item at GH₵ 4500.00, VAT inclusive. Calculate: b) the basic cost of the item. c) the VAT paid by the man.",
+   "E.g.3 Solve problems on discount. If a car costs GH₵ 80,500.00,what is its new value if there is a discount of i. 10%?",
+   "E.g.4 Solve problems on commission. ii. A car agent’s commission on the sale of a car is %. Calculate the 1 commission on a car sold for GH₵68,000.00. 32 175",
+   "E.g.5 solve problems involving depreciation. The value of a mobile phone depreciates at the following rate: Year of Depreciation on manufacture the original value In the first year 5% In the second year 10% In the third year 15% In the fourth year 22% The original value of the mobile phone is GH₵ 1800.00. Find the value of the mobile phone at the end of each of the first four years.",
+   "E.g.6 Solve problems involving NHIL. i. The NHIL inclusive price of a television set is GH₵1200.00. If the NHIL is charged at a rate of 2.5%, find b) the cost of the television set (NHIL exclusive). c) the NHIL charged.",
+   "E.g.7 Solve problems involving insurance. i. Kofi Mereku insured his house and paid a premium of GH₵ 30,000.00. If the insurance company fixed the rate at 5% of the value of the house, calculate the insured value of the house."
+  ],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.1.4.1.3": {
+  "strand": "NUMBER",
+  "sub_strand": "Number: Ratios and Proportion",
+  "cs_code": "B9.1.4.1",
+  "cs_desc": "Apply the understanding of ratio, rate and proportions to solve problems that involve rates, ratios, and proportional reasoning and use it to solve real- world mathematical problems.",
+  "ind_desc": "Use knowledge of rates and proportional reasoning to solve problems involving SSNIT benefits and contributions.",
+  "exemplars": [
+   "E.g.1 Describe the obligations of the employer/employee and the contribution rates. Act 766 PNDC Law 247 Employer 13.0% of basic salary 12.5 of basic salary Worker 5.5% of basic salary 5.0% of basic salary 18.5% of basic salary 17.5% of basic Total salary 176 Calculate employee/employer contributions to SSNIT under Act 766. E.g.2 A worker’s basic monthly salary is GH₵3,256.50. b. Calculate the SSNIT contributions under Act 766; i) by the employer ii) by the employee What is the total SSNIT contributions at the end of every month? Calculate employee/employer contributions to SSNIT under PNDCL 247. E.g.3 Mr Bediako’s monthly SSNIT contribution under PNDCL 247 is GH₵440.54. How much does his employer contribute to SSNIT on his salary? Hence, calculate his basic salary per month. Calculate employee benefits from SSNIT under Act 766. E.g.4 The table shows the pension rights for SSNIT contributors under Act 766 … … Years of 15 16 17 18 30 31 32 35 contributions Pension 37.500 38.625 39.750 40.875 … 54.375 55.500 56.625 … 60.000 Rights (%) a. Mr Addai retired at age 60 last year after working and contributing for 20years. If the average of his best salary for 3 years (36 months) over the 20-year period was GH₵15,000.00, calculate his full pension under the National Pension Act 2008, (Act 766). Calculation for full pension Qualifying age = 60years Average best 3years’ salary = GH₵15,000 Pension right for 20years = 43.13% (refer to the table on Pension Rights above) Annual pension to Mr. Addai = 43.13/100 × 15,000 177 = GH₵6,469.50 Monthly pension to Mr Addai = GH₵6,469.5 12 =GH₵ 539.13 b. A worker contributed for 7 years before being rendered incapacitated. If the best 1 salary for over the 3-year (36 months) period was GH₵ 8,450.40, calculate the 2 invalidity benefit for the worker. c. Mr Mensah’s total SSNIT contribution stood at GH₵ 112,426.29 at the time of his demise. Calculate his survivor’s benefit if the current interest rate is 15%.",
+   "E.g.5 Calculate employee benefits from SSNIT under PNDCL 247. The table shows the pension rights for SSNIT contributors under PNDCL 247. Years of 20 21 22 23 24 25 26 27 28 29 30 … 40 & abov contributio e ns Pension 50. 51. 53. 54. 56. 57. 59. 60. 62. 63. 65. 80.0 0 5 0 5 0 5 0 5 0 5 0 Rights (%) Mr Bema, a history teacher at Academicals Senior High School, retired in 2009 after 25 years of service. Throughout this 25-year period he had been an active contributor to the SSNIT Pension Scheme. As the student who has learnt about social security, you are to help Mr Bema to calculate his annual pension using his best three years’ salary of GH₵19,500. Calculation for full pension Qualifying age = 60years Average best 3years’ salary = GH₵19,500 Pension right for 25years = 57.5% (refer to the table on Pension Rights above) Annual pension to Mr. Bema = 57.5 GH₵11,212.5 × GH₵19,500 = = 𝐆𝐆𝐆𝐆₵𝟗𝟗𝟑𝟑𝟓𝟓.𝟑𝟑𝟖𝟖 100 12 178"
+  ],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.1.4.1.4": {
+  "strand": "NUMBER",
+  "sub_strand": "Number: Ratios and Proportion",
+  "cs_code": "B9.1.4.1",
+  "cs_desc": "Apply the understanding of ratio, rate and proportions to solve problems that involve rates, ratios, and proportional reasoning and use it to solve real- world mathematical problems.",
+  "ind_desc": "Recognise and graph proportional relationships, interpreting the unit rate as the slope of the graph and use these to solve problems. E.g.1The graph below shows the cost of avocados. The unit rate, from the data, is ₵1.50 per avocado, which is the same as the slope of the line connecting the data points ( 3 i. From the graph, how much does eight avocados cost? 2). ii. Also, using the graph how much does 15 avocados cost? 179",
+  "exemplars": [],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.2.1.1.1": {
+  "strand": "ALGEBRA",
+  "sub_strand": "Patterns and Relations",
+  "cs_code": "B9.2.1.1",
+  "cs_desc": "Demonstrate the ability to construct tables of values for pairs of linear relations, graph the relations in a number plane and determine the intersection of the lines to solve simultaneous linear equations.",
+  "ind_desc": "Construct a table of values for two linear relations and graph the relation E.g.1Construct a table of values for two linear E.g.2 Draw graph for two linear relations and draw the graphs of the relations. relations Copy and complete the table of values for the relations and for from - 1 4 to 3. 𝑦𝑦1 𝑦𝑦2 = −𝑥𝑥+5; = 2𝑥𝑥−3 𝑥𝑥 -3 -2 -1 0 1 2 3 8 4 𝑥𝑥 𝑦𝑦1 -4 - = −𝑥𝑥+5 1.5 1 𝑦𝑦2 = 𝑥𝑥−3 2 E.g.3Construct a table of values for two linear Draw a graph for two linear E.g.4 relations. relations. (i) Copy and complete the table of values for the relations and for from -2 to 2. 𝑥𝑥−2𝑦𝑦 = −2 𝑥𝑥−2𝑦𝑦 = 2 𝑥𝑥 x -2 -1 0 1 2 𝑥𝑥 y 0 2 𝑥𝑥−2𝑦𝑦 = (𝑥𝑥+2)/ 0 = −2 2 - 1 𝑥𝑥−2𝑦𝑦 =2 = (𝑥𝑥−2)/2 12 180",
+  "exemplars": [],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.2.1.1.2": {
+  "strand": "ALGEBRA",
+  "sub_strand": "Patterns and Relations",
+  "cs_code": "B9.2.1.1",
+  "cs_desc": "Demonstrate the ability to construct tables of values for pairs of linear relations, graph the relations in a number plane and determine the intersection of the lines to solve simultaneous linear equations.",
+  "ind_desc": "Use graphs of two linear relations to determine subsequent missing elements in ordered pairs of the relation.",
+  "exemplars": [
+   "E.g.1 Find the missing elements of ordered pairs on graphs of two linear relations. The graph below is drawn from two linear relations: 𝑦𝑦 = −𝑥𝑥+ 4 i. 𝑦𝑦D=e𝑥𝑥te−rm2ine the coordinates for the intersection of the two lines. ii. Determine the corresponding values for y for both straight lines if x = -1. iii. Use the graph to find the values for y for the two relations. 1 2 6-3 7-2 8-1 90 𝑥𝑥 𝑦𝑦 =−𝑥𝑥+4 𝑦𝑦 = 𝑥𝑥−2 181"
+  ],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.2.1.1.3": {
+  "strand": "ALGEBRA",
+  "sub_strand": "Patterns and Relations",
+  "cs_code": "B9.2.1.1",
+  "cs_desc": "Demonstrate the ability to construct tables of values for pairs of linear relations, graph the relations in a number plane and determine the intersection of the lines to solve simultaneous linear equations.",
+  "ind_desc": "Use graphs to solve equations involving two linear relations. Solve two linear equations simultaneously E.g.1 using the graph shown. i. Solve the following equations simultaneously using a graph. 𝑦𝑦 = −𝑥𝑥+7 Hin𝑦𝑦t: =Dr2a𝑥𝑥w+ th1e graph and find the coordinates for the intersection of the two lines. In the graph shown the values of (x, y) = (2, 5)",
+  "exemplars": [
+   "E.g.2 Solve two linear equations simultaneously using the graph. From the graph, determine the values of x and y that makes the linear equations true. 𝑦𝑦 = 𝑥𝑥+4 𝑦𝑦 = 6−𝑥𝑥 182"
+  ],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.2.2.1.1": {
+  "strand": "ALGEBRA",
+  "sub_strand": "Algebraic Expressions",
+  "cs_code": "B9.2.2.1",
+  "cs_desc": "Demonstrate an understanding of (i) change of subject (ii) substituting values to evaluate expressions, and (iii) factorize expressions that have simple binomial as a factor.",
+  "ind_desc": "Perform change of subject of a given formula and use it to solve problems. Perform change of subject for given formulae E.g.1 (i) Make the subject of the following formulae 𝑥𝑥 183",
+  "exemplars": [
+   "E.g.2 Use the concept of change of subject to solve problems involving formulae i. The area of a rectangle is . If the length is 8cm, find the value of the width. 2 24cm ii. The formula for calculating the area of a circle is given as . If a circle 2 has an area of , what is its radius? 𝜋𝜋𝑜𝑜 22 2 bel1o5w4 𝑎𝑎h𝑚𝑚as F[𝑎𝑎in𝑎𝑎d𝑘𝑘 𝑚𝑚t h𝜋𝜋e= va7lu]e iii. The triangle an area of . of the height of the triangle. 2 54cm iv. The cylinder below has a volume of . Find the value of the height 3 of the cylinder. 330cm 22 [𝑎𝑎𝑎𝑎𝑘𝑘𝑚𝑚 𝜋𝜋 = 7] 184"
+  ],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.2.2.1.2": {
+  "strand": "ALGEBRA",
+  "sub_strand": "Algebraic Expressions",
+  "cs_code": "B9.2.2.1",
+  "cs_desc": "Demonstrate an understanding of (i) change of subject (ii) substituting values to evaluate expressions, and (iii) factorize expressions that have simple binomial as a factor.",
+  "ind_desc": "Substitute values into given formulae to evaluate it and use it to solve problems.",
+  "exemplars": [
+   "E.g.1 i. Find the value of 𝟐𝟐 (𝒙𝒙−𝒃𝒃) –𝟑𝟑(𝒙𝒙−𝒃𝒃) 𝒊𝒊𝒊𝒊𝒙𝒙= 𝟐𝟐 𝒂𝒂𝒂𝒂𝒂𝒂 𝒃𝒃= −𝟓𝟓 ii. Make the subject of the formula: 𝒌𝒌 𝟐𝟐 𝟐𝟐 𝟏𝟏 𝒌𝒌 +𝒂𝒂 = √( ) 𝒂𝒂 𝒉𝒉𝒉𝒉 If 8 𝒂𝒂 = 5, 𝑎𝑎 = 3, ℎ = 2, 𝑔𝑔 =32,find the value of k. iii. The formula for finding the volume of the shape below is given as Find the volume 1 22 2 3𝜋𝜋𝑜𝑜 ℎ . if r= 7, h = 21,and π= 7 185"
+  ],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.2.2.1.3": {
+  "strand": "ALGEBRA",
+  "sub_strand": "Algebraic Expressions",
+  "cs_code": "B9.2.2.1",
+  "cs_desc": "Demonstrate an understanding of (i) change of subject (ii) substituting values to evaluate expressions, and (iii) factorize expressions that have simple binomial as a factor.",
+  "ind_desc": "Factorise expressions that have simple binomial.",
+  "exemplars": [
+   "E.g. Factorise the following expressions. i. 3x + 4xy = x (3 +4y) ii. 12ab + 16b = 4b (3a + 4) iii. -13xy + 39x= -13x(y-3) 5y-2y2+3y=-3y+3y iv. 8y-2y2= v. 2y(4-y) vi. -6x+12=-3(2x-4) 186"
+  ],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.2.2.1.4": {
+  "strand": "ALGEBRA",
+  "sub_strand": "Algebraic Expressions",
+  "cs_code": "B9.2.2.1",
+  "cs_desc": "Demonstrate an understanding of (i) change of subject (ii) substituting values to evaluate expressions, and (iii) factorize expressions that have simple binomial as a factor.",
+  "ind_desc": "Use the knowledge of simplifying and factorising expressions to solve real world problems.",
+  "exemplars": [
+   "E.g.1 You purchased 10 items from a shopping plaza, and now you need plastic bags to carry them home. If each bag can hold only 3 items, how many plastic bags will you need to accommodate the10 items? Solution: We use simple algebraic formula to calculate the number of bags. 𝑥𝑥 𝑦𝑦 x = Number of items purchased = 10 y = Capacity of 1 bag = 3 Hence, = 3.333 bags 10 3= 4 bags So, we need 4 shopping bags to carry 10 items.",
+   "E.g.2 You have to buy two dozen of eggs priced at GH₵10, three loaves breads (each bread is GH₵5), and five bottles of juice (each bottle is GH₵8). How much money you will need to take to the grocery store? The prices are a = Price of two dozen eggs = GH₵10 b = Price of one bread = GH₵5 c = Price of one bottle of juice = GH₵8 => Money needed = a + 3b + 5c => Money needed = GH₵10 + 3(GH₵5) + 5(GH₵8) = GH₵10 + GH₵15 + GH₵40 = GH₵65 188 cm2. The area of a rectangle is 72 The length is twice its width. What is E.g.3 the length and width of the rectangle? Let “x” be the width and “2x” be the length. Length × Width = Area = Area 2 𝑥𝑥 ×(2𝑥𝑥) = 2𝑥𝑥 = Area = 72 2 2𝑥𝑥 2 2𝑥𝑥 2 2𝑥𝑥 72 = 2 2 2= 6 𝑥𝑥 = 36 width = 6cm 𝑥𝑥 2x = 2 x 6 = 12 So, the length is 12 cm 189"
+  ],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.2.3.1.1": {
+  "strand": "ALGEBRA",
+  "sub_strand": "Variables and Equations",
+  "cs_code": "B9.2.3.1",
+  "cs_desc": "Demonstrate understanding of single variable linear inequalities with rational coefficients including: • solving inequalities • verifying • comparing • graphing",
+  "ind_desc": "Solve single variable linear inequalities with rational coefficients. i. v. 𝟓𝟓 𝟏𝟏 𝟓𝟓 𝟐𝟐𝒙𝒙+𝟕𝟕 > 𝟑𝟑> 𝑥𝑥−𝟓𝟓 𝟐𝟐 ii. vi. 𝟓𝟓 𝟏𝟏 𝟐𝟐 𝟏𝟏 𝟐𝟐(𝟐𝟐𝒙𝒙+𝟑𝟑)≤ 𝟓𝟓−𝟓𝟓𝒙𝒙 > 𝒙𝒙+𝟏𝟏 𝟕𝟕 iii. vii. 𝟑𝟑 𝟐𝟐 𝟓𝟓 𝟏𝟏 𝟑𝟑 𝟐𝟐𝒚𝒚−𝟓𝟓< 𝒙𝒙+𝟐𝟐≥ −𝟐𝟐 𝟓𝟓 viii. iv. 𝟐𝟐 𝟏𝟏 𝟏𝟏𝟏𝟏 𝟐𝟐(𝟓𝟓𝒙𝒙−𝟓𝟓)< −𝟑𝟑𝒙𝒙+𝟑𝟑 ≥ 𝟑𝟑 𝑥𝑥+𝟐𝟐𝟓𝟓",
+  "exemplars": [],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.2.3.1.2": {
+  "strand": "ALGEBRA",
+  "sub_strand": "Variables and Equations",
+  "cs_code": "B9.2.3.1",
+  "cs_desc": "Demonstrate understanding of single variable linear inequalities with rational coefficients including: • solving inequalities • verifying • comparing • graphing",
+  "ind_desc": "Illustrate solution sets of linear inequalities on the number line Illustrate and explain the inequality signs E.g.1 190 Graph linear inequalities in one variable on a number line. E.g.2",
+  "exemplars": [
+   "E.g.3 Solve and graph linear inequalities on a number line. i. ii. −3𝑥𝑥−8 > −26 2𝑥𝑥−3 ≤ 19 2𝑥𝑥 ≤ 22 2𝑥𝑥 22 ≤ 2 2 𝑥𝑥 ≤ 11 191",
+   "E.g.4 Solve and graph linear inequalities on a cartesian plane. i. ii. iii. 7𝑥𝑥 7𝑥𝑥 2𝑥𝑥 ≥ 8 5𝑦𝑦+3 < 6+ < 7 →3× < 3 3 2𝑦𝑦 7×3 2𝑥𝑥 8 ≥ 2 2 5𝑦𝑦−2𝑦𝑦 < 6 −3 7𝑥𝑥 21 < 𝑥𝑥 ≥ 4 7 7 3𝑦𝑦 < 3 𝑥𝑥 < 3 ∴ 𝑦𝑦 < 1 192"
+  ],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.2.3.1.3": {
+  "strand": "ALGEBRA",
+  "sub_strand": "Variables and Equations",
+  "cs_code": "B9.2.3.1",
+  "cs_desc": "Demonstrate understanding of single variable linear inequalities with rational coefficients including: • solving inequalities • verifying • comparing • graphing",
+  "ind_desc": "Solve real-life problems involving linear equations and inequalities. Solve real-life problems involving linear equations. E.g.1 i. A man has 260metres of fencing which he is going to put around a rectangular field which is 50metres wide. How long is the field? Solution: Since we need to find the length of the field, let be x metres the length. 𝑥𝑥+50+𝑥𝑥+50 𝑜𝑜𝑜𝑜 2(𝑥𝑥+50) But this expression is given as 260m 2(𝑥𝑥+50)= ∴ 260 𝑥𝑥+50= 130 𝑥𝑥 = 80m 193 ii. A man paid GH₵ 290 for 11 books. Some of the books were geography books, and the rest were history books. If each geography book cost GH₵ 30 and each history book cost GH₵20, how many geography books did he buy? Solution: i. Total cost of the books is GH₵290; total number of books is 11. ii. 1 geography book costs GH₵30; 1 history book costs GH₵20, Total cost of all the books is 30𝑥𝑥+20(11−𝑥𝑥)= 290 𝟑𝟑𝟑𝟑𝒙𝒙+𝟐𝟐𝟑𝟑(𝟏𝟏𝟏𝟏−𝒙𝒙)= ∴ 𝟐𝟐𝟗𝟗𝟑𝟑 𝟑𝟑𝟑𝟑𝒙𝒙+𝟐𝟐𝟐𝟐𝟑𝟑−𝟐𝟐𝟑𝟑𝒙𝒙= 𝟐𝟐 𝟗𝟗𝟑𝟑 𝟏𝟏𝟑𝟑𝒙𝒙+𝟐𝟐𝟐𝟐𝟑𝟑= 𝟐𝟐𝟗𝟗𝟑𝟑 Hence the number of geography book𝒙𝒙s= bo𝟕𝟕ught is 7.",
+  "exemplars": [
+   "E.g.2 Solve real-life problems involving linear inequalities. i. Two sides of a triangle have lengths 6 cm and 8 cm. What is the length of the third side? Note: The sum of the lengths of the two sides of a triangle is greater than the length of the third side. 194 If the third side is cm long then, giving 𝑥𝑥 6Al+so8, > 𝑥𝑥 𝑥𝑥 < 14. [Also,6 +𝑥𝑥 < 8 𝑔𝑔𝑖𝑖𝑣𝑣𝑖𝑖𝑚𝑚𝑔𝑔 𝑥𝑥 > 2. Hence8, whitchhagti vise,s txh>e t−hi2rd. side +𝑥𝑥 > 6 has length between 2cm and 14cm. 2 < 𝑥𝑥 < 14. ii. A student scores 70 and 76 marks in two tests. How many marks must she score in the third test to be put in Grade A if all students scoring an average of 80 or higher in three tests are put in grade A?"
+  ],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.3.1.1.1": {
+  "strand": "GEOMETRY AND MEASUREMENT",
+  "sub_strand": "Shapes and Space",
+  "cs_code": "B9.3.1.1",
+  "cs_desc": "Apply the properties of angles at a point, angles on a straight line, vertically opposite angles, corresponding, angles to` solve problems.",
+  "ind_desc": "Derive the formula for calculating the sum of angles in any polygon and use this to calculate the value of missing angles in polygons Identify and name the various polygons such as a triangle, E.g.1. quadrilaterals, pentagons, and hexagons, etc. 196",
+  "exemplars": [
+   "E.g.2. Derive and use the formula (n - 2) × 180 ° and calculate the value of x (interior and angles of a triangle).",
+   "E.g.3. Derive and use the formula (n - 2) × 180 ° and calculate the interior angles of a quadrilateral.",
+   "E.g.4. Derive and use the formula (n - 2) × 180 ° and calculate the interior angles of polygons, pentagons, hexagons, etc. (i) Find the value of x and the various angles in the hexagon. 197"
+  ],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.3.1.1.2": {
+  "strand": "GEOMETRY AND MEASUREMENT",
+  "sub_strand": "Shapes and Space",
+  "cs_code": "B9.3.1.1",
+  "cs_desc": "Apply the properties of angles at a point, angles on a straight line, vertically opposite angles, corresponding, angles to` solve problems.",
+  "ind_desc": "Identify similar and congruent triangles and use the knowledge to solve related problems",
+  "exemplars": [
+   "E.g.1. Recognise similar triangles and solve for the values of the indicated angles in the diagram below:",
+   "E.g.2. Recognise congruent triangles and solve for the values of the indicated angles in the diagram below:",
+   "E.g. 3. Determine the value of x (using knowledge in similarity and congruency). 198"
+  ],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.3.1.2.1": {
+  "strand": "GEOMETRY AND MEASUREMENT",
+  "sub_strand": "Shapes and Space",
+  "cs_code": "B9.3.1.2",
+  "cs_desc": "Construct inscribed and circumscribed triangles and parallelograms with given dimensions.",
+  "ind_desc": "Draw inscribed and circumscribed circles for triangles under given conditions E.g.1: Use a pair of compasses and a ruler to construct a triangle (say ABC) under a given condition and locate the incentre of the triangle (the incentre is the point of concurrency of the three angle bisectors of a ∆ triangle); measure the shortest distance from the incentre to the line segments AB, AC and BC. What do you observe about the lengths? 199 E.g..2: Use a pair of compasses and a ruler to construct a triangle (say ABC) under a given condition, bisect at least any two angles ( BAC and BCA); locate the intersection of the two angle bisectors (L) and draw a locus of ∆ ∆ points equidistant from the fixed point (L) to touch the edges of the triangle. E.g.3: Construct a triangle (say ); bisect all three sides (i.e. line segments ); locate the intersection (circumcentre) of the three 𝐴𝐴𝐴𝐴𝐶𝐶 perpendicular bisectors ; Measure the distance from the intersecting centre 𝐴𝐴𝐴𝐴,𝐴𝐴𝐶𝐶 𝑎𝑎𝑚𝑚𝑎𝑎 𝐴𝐴𝐶𝐶 (S) to points A, B and C. What do you observe about the lengths? (𝑆𝑆) 200 E.g.4: Perform a geometric construction of a triangle (say ) under a given condition; bisect at least any two sides ( ); locate the intersection of 𝐴𝐴𝐴𝐴𝐶𝐶 the two perpendicular bisectors and draw a locus of points equidistant 𝐴𝐴𝐴𝐴 and 𝐴𝐴𝐶𝐶 from the fixed point to circumscribe the triangle. (𝐵𝐵) (𝐵𝐵)",
+  "exemplars": [],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.3.1.2.2": {
+  "strand": "GEOMETRY AND MEASUREMENT",
+  "sub_strand": "Shapes and Space",
+  "cs_code": "B9.3.1.2",
+  "cs_desc": "Construct inscribed and circumscribed triangles and parallelograms with given dimensions.",
+  "ind_desc": "Construct parallelograms (i.e. square, rectangle, rhombus) under given conditions. E.g.1: Perform geometric construction of a square with a given side. 201 E.g.2: Construct a square ABCD with =6.5cm. Measure and record the diagonal of the square. A\u0000\u0000\u0000\u0000B\u0000⃗ E.g.3: Perform geometric construction of a square with a given diagonal. E.g.4: Perform geometric construction of a rectangle with given side. 202 E.g.5: Perform geometric construction of a rectangle with a given side and diagonal. E.g.6: Perform geometric construction of a parallelogram with given sides and given angle(s). 203 E.g.7: Perform geometric construction of regular compound plane shapes with given sides and angles. 204",
+  "exemplars": [],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.3.2.1.1": {
+  "strand": "GEOMETRY AND MEASUREMENT",
+  "sub_strand": "Measurement",
+  "cs_code": "B9.3.2.1",
+  "cs_desc": "Derive the formulas for determining the surface area of prisms (i.e. cuboid and triangular prism) and use to solve problems.",
+  "ind_desc": "Identify cuboids and triangular prisms; draw their nets to construct the 3-D shapes and use it to determine the surface area.",
+  "exemplars": [
+   "E.g.1 Sort out shapes that are triangular prisms and cuboids.",
+   "E.g.2 Identify each of the nets below: A net of…………….. A net of…………….. 205",
+   "E.g.3 Measure and find the area of each of the sections in the net and adding all together to give the surface area."
+  ],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.3.2.1.2": {
+  "strand": "GEOMETRY AND MEASUREMENT",
+  "sub_strand": "Measurement",
+  "cs_code": "B9.3.2.1",
+  "cs_desc": "Derive the formulas for determining the surface area of prisms (i.e. cuboid and triangular prism) and use to solve problems.",
+  "ind_desc": "Use the net of a cuboid to determine its surface area.",
+  "exemplars": [
+   "E.g.1 Find the surface area of each of the cuboids"
+  ],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.3.2.1.3": {
+  "strand": "GEOMETRY AND MEASUREMENT",
+  "sub_strand": "Measurement",
+  "cs_code": "B9.3.2.1",
+  "cs_desc": "Derive the formulas for determining the surface area of prisms (i.e. cuboid and triangular prism) and use to solve problems.",
+  "ind_desc": "Use the net of a triangular prism to determine its surface area. E.g.1Find the surface area of each of the triangular prims. Z 206",
+  "exemplars": [],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.3.2.1.4": {
+  "strand": "GEOMETRY AND MEASUREMENT",
+  "sub_strand": "Measurement",
+  "cs_code": "B9.3.2.1",
+  "cs_desc": "Derive the formulas for determining the surface area of prisms (i.e. cuboid and triangular prism) and use to solve problems.",
+  "ind_desc": "Express points in the Cartesian plane as position vectors",
+  "exemplars": [
+   "E.g.1 Identity the following using the diagram below: (i) the origin (ii) the position vector",
+   "E.g.2 Draw and write the position vectors of the following with 0 as the origin: (i) M(2,3) (ii) N(-1,2)"
+  ],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.3.2.2.1": {
+  "strand": "GEOMETRY AND MEASUREMENT",
+  "sub_strand": "Measurement",
+  "cs_code": "B9.3.2.2",
+  "cs_desc": "Solve problems involving bearings and addition/subtraction of vectors",
+  "ind_desc": "Show an understanding of parallel vectors and perpendicular vectors",
+  "exemplars": [
+   "E.g.1 Investigate conditions for parallel vectors and perpendicular vectors.",
+   "E.g.2 Use the result from the investigation to solve the following questions: (i) Find the value(s) of x, if the vectors and are parallel. 3𝑥𝑥 6 perpendicul\u0000a2r \u0000to \u0000𝑥𝑥\u0000 (ii) Which of the vectors is 3 \u0000 4\u0000 (a) (b) (c) (d) −3 −3 −4 −4 \u00004 \u0000−4\u0000 \u00003 \u0000−3\u0000 \u0000 \u0000"
+  ],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.3.2.2.2": {
+  "strand": "GEOMETRY AND MEASUREMENT",
+  "sub_strand": "Measurement",
+  "cs_code": "B9.3.2.2",
+  "cs_desc": "Solve problems involving bearings and addition/subtraction of vectors",
+  "ind_desc": "Apply the triangular and parallelogram laws of addition to resolve vectors",
+  "exemplars": [
+   "E.g.1 Deduce the triangle law of vector addition. + = Where ABC are points in the 0xy plane.",
+   "E.g.2 The vertices of a triangle are P(1,-3), Q(7,5) and R(-3,5) 𝐴𝐴\u0000\u0000\u0000\u0000𝐴𝐴\u0000⃗ \u0000𝐴𝐴\u0000\u0000\u0000𝐶𝐶\u0000⃗ \u0000𝐴𝐴\u0000\u0000\u0000𝐶𝐶\u0000⃗ (i) Express , and as column vectors. (ii) Show tha𝑃𝑃\u0000\u0000\u0000t\u0000𝑃𝑃 \u0000\u0000t⃗,ri𝑃𝑃\u0000\u0000a\u0000\u0000𝑃𝑃n\u0000⃗gle PQ𝑃𝑃\u0000\u0000\u0000R\u0000𝑃𝑃\u0000⃗ is an isosceles. (iii) Find the equation of the line .",
+   "Eg3 Investigate the parallelogra𝑃𝑃\u0000m\u0000\u0000\u0000𝑃𝑃\u0000⃗ law of vector addition. Eg.4P,Q,R,S is a parallelogram whose vertices are P (x ,y), Q (5,7), R(2,4) and S(1,3) (i) Find and hence find the values of x and y. 𝑃𝑃\u0000\u0000\u0000\u0000𝑃𝑃\u0000\u0000⃗, 𝑆𝑆\u0000\u0000\u0000\u0000𝑃𝑃\u0000⃗ 208"
+  ],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.3.3.1.1": {
+  "strand": "GEOMETRY AND MEASUREMENT",
+  "sub_strand": "Position and Transformation",
+  "cs_code": "B9.3.3.1",
+  "cs_desc": "Demonstrate understanding of how to perform an enlargement on a geometrical shape given a scale factor and describe the properties of the image under the transformation (i.e. congruence, similarity, etc.)",
+  "ind_desc": "Know examples of situations in everyday life that depict enlargement situations in everyday life.",
+  "exemplars": [
+   "E.g. 1. Know examples of situations that relate to enlargement situations in everyday life and the nature of movements – vertical and horizontal. 209"
+  ],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.3.3.1.2": {
+  "strand": "GEOMETRY AND MEASUREMENT",
+  "sub_strand": "Position and Transformation",
+  "cs_code": "B9.3.3.1",
+  "cs_desc": "Demonstrate understanding of how to perform an enlargement on a geometrical shape given a scale factor and describe the properties of the image under the transformation (i.e. congruence, similarity, etc.)",
+  "ind_desc": "Understand enlargement and identify real-life situations involving enlargement.",
+  "exemplars": [
+   "E.g. 1. Draw an enlargement of shapes using a given scale factor. i. State the single transformation that maps triangle P onto Q. ii. State the single transformation that maps triangle P onto R. iii. Investigate the characteristics of enlargements under the following conditions of scale factor: • if the scale factor (K) is negative • if the scale factor (K) is greater than 1 or less than –1 • if the scale factor (K) is between –1 and 1 (i.e., fraction)",
+   "E.g. 2. Using an object, and its image, determine the scale factor in a transformation?"
+  ],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.3.3.1.3": {
+  "strand": "GEOMETRY AND MEASUREMENT",
+  "sub_strand": "Position and Transformation",
+  "cs_code": "B9.3.3.1",
+  "cs_desc": "Demonstrate understanding of how to perform an enlargement on a geometrical shape given a scale factor and describe the properties of the image under the transformation (i.e. congruence, similarity, etc.)",
+  "ind_desc": "Investigate the concept of congruent and similar shapes",
+  "exemplars": [
+   "E.g. 1. Using multiple and varied examples of enlargement on a coordinate plane, verify congruent and similar shapes using their properties. 210"
+  ],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.4.1.1.1": {
+  "strand": "HANDLING DATA",
+  "sub_strand": "Data",
+  "cs_code": "B9.4.1.1",
+  "cs_desc": "Select, justify, and use appropriate methods of collecting data (grouped/ungrouped), use the data to construct and interpret frequency tables and histogram and use it to determine the mode and to solve and/or pose problems.",
+  "ind_desc": "Select and justify a method to collect data (quantitative and qualitative) to answer a given question.",
+  "exemplars": [
+   "E. g. 1 Discuss and decide (i) from where/whom to collect data for the studies presented below; (ii) which data collection methods to use; and (iii) justify the choices for (i) and (ii) above Areas of study are described as follows: a. Musa has started a book club for Ayisha and her friends. He wants Ayisha to find out books that are most popular among her friends. Find the most common mode of travel by learners in Oyoko Junior and b. Senior High Schools. Indicator B9.4.1.1.2.Organise: data (grouped/ungrouped) present it in frequency tables, line graphs, pie graphs, bar graphs and/or pictographs (representations include infographics, waffle diagrams, box and whisker plots and stem and leaf plots) and analyse it to solve and/or pose problems.",
+   "E.g. 1 -Thirty bulbs were life-tested and their lifespan to the nearest hour are as follows: 211 i. Present the raw data in a frequency table by completing the table below: Lifespan of Bulbs Tally Frequency (hours) 164 - 167 168 – 171 172 - 175 176 – 179 ii. What is the modal group? Justify your decision for that choice. iii. Complete the stem and leaf plots below to display the raw data. Use the plot to solve the following problems. a. Find the range of the lifespan of bulbs b. What is the mode lifespan? c. What is the median lifespan? What other problems can you pose? d. 212",
+   "E.g. 2 The pictograph below describes the number of boys and girls in each class in Kojokrom Junior High School i. What is the percentage of boys and of girls in the school? ii. Use your answers in (i) to represent the data by copying and completing the following infographic 213"
+  ],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.4.1.1.3": {
+  "strand": "HANDLING DATA",
+  "sub_strand": "Data",
+  "cs_code": "B9.4.1.1",
+  "cs_desc": "Select, justify, and use appropriate methods of collecting data (grouped/ungrouped), use the data to construct and interpret frequency tables and histogram and use it to determine the mode and to solve and/or pose problems.",
+  "ind_desc": "Use a histogram to determine the mode of a given data to solve and/or pose real life cases.",
+  "exemplars": [
+   "E.g. 1- The waiting times, x minutes, for 60 patients at a certain clinic are as follows i. Construct a frequency table using class intervals 0 – 10.5; 10.5 – 20.5; 20.5– 30.5, and so on. ii. Construct a frequency table using class intervals , and so on. 0 <×≤ 10;10<×≤20; iv. Draw a histogram and find the modal class. 20<×≤30"
+  ],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.4.1.2.1": {
+  "strand": "HANDLING DATA",
+  "sub_strand": "Data",
+  "cs_code": "B9.4.1.2",
+  "cs_desc": "Select, justify, and use appropriate methods of collecting data (quantitative and qualitative), organise and analyse the data (grouped/ungrouped) to interpret the results using the descriptive statistics (measures of central tendency and range).",
+  "ind_desc": "- Select a method for collecting data (quantitative and qualitative), taking into consideration how bias (use of language, ethics, cost, time and timing, privacy or cultural sensitivity) may influence data.",
+  "exemplars": [
+   "E. g. 1 Suppose in a school survey form the following question was asked: Overall, don’t you think the teaching of mathematics is very good? The designer of the survey form has a bias for the methodology used in math lessons and the bias influences how the question was written. The used in writing the question may lead people to just answer or language yes no. A better question would be: Overall, how will you rate the teaching of mathematics? Very poor Fair Poor Good Very Good",
+   "E.g. 2 Ama Mereku in B9 wants to write an article for their school magazine on The responses for the survey question stated below sport-related injuries. were collected from only the schools’ football team. The influencing factors in this survey question are: time and bias. Football is a contact sport. The chances are that the answers from her targeted respondents will be high in favour of injuries and thus negatively affect the conclusion/report. In order to report on sport-related injuries Ama needs to ask accurately more people (time needed) who participate in a variety of sports, including contact and non-contact sports (e.g. athletics tennis, volleyball, and so on). 215",
+   "E.g. 3Learners in B9 are asked by their physical education teacher to complete a survey related to “Overall Health”. One question on the survey form is; Physical What is your current body weight? Identify the influencing factor in the survey and provide a solution.",
+   "E.g. 4 - Suppose you tell your classmates that the response to the question in the Class Survey Question Form is to help you plan remedial classes. What is your worst subject? If you then use the information collected to write an article for the school how would your actions be described and how would that influence magazine future surveys you conduct?",
+   "E.g. 5 -Suppose in a survey questionnaire you wanted to know the favourite method of cooking pork and you asked: Please tick the box against your favourite method of cooking pork Boiling Grilling Frying Please tick the box against your favourite method of cooking pork (Optional) Boiling Grilling Frying This question does not apply to everyone because some people do not eat pork (i.e. the question is not culturally sensitive.) A better question would be you eat pork please name the favourite method you cook it. If Boiling Grilling Frying 216 OR If you eat pork please name the favourite method you cook it. Boiling Grilling Frying"
+  ],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.4.1.2.2": {
+  "strand": "HANDLING DATA",
+  "sub_strand": "Data",
+  "cs_code": "B9.4.1.2",
+  "cs_desc": "Select, justify, and use appropriate methods of collecting data (quantitative and qualitative), organise and analyse the data (grouped/ungrouped) to interpret the results using the descriptive statistics (measures of central tendency and range).",
+  "ind_desc": "Organise and analyse data and interpret the results using the descriptive statistics (i.e. minimum, maximum, measures of central tendency and range) to answer a given question. Refer to E.g. 1 of and find (minimum, maximum, measures of central B9.4.1.1.2 tendency and range) i. The minimum lifespan, to the nearest hour, of the bulbs tested. ii. The maximum lifespan, to the nearest hour, of the bulbs tested. iii. The range of the data collected from the life-testing. iv. What is the mean lifespan of the bulbs? v. What is the median of the lifespan of the bulbs? vi. What is the mode of the lifespan of the bulbs? vii. When placing an order for the bulbs tested to sell in your shop, which of them will you consider buying? 217",
+  "exemplars": [],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.4.1.2.3": {
+  "strand": "HANDLING DATA",
+  "sub_strand": "Data",
+  "cs_code": "B9.4.1.2",
+  "cs_desc": "Select, justify, and use appropriate methods of collecting data (quantitative and qualitative), organise and analyse the data (grouped/ungrouped) to interpret the results using the descriptive statistics (measures of central tendency and range).",
+  "ind_desc": "Demonstrate the effect on the mean, median, and mode when extreme data is included in a data set",
+  "exemplars": [
+   "E.g.1 Refer to E.g. 1 of B9.4.1.1.2. i. Find the mean of the data, if one of the bulbs is replaced with a new bulb with lifespan of 300 hours, find the new mean of the bulbs and compare it to the original mean ii. In small groups, find the mean of the data, if the lifespan of one of the bulbs tested was 70 hours, and compare it to the original mean. iii. Continue to replace the values of the lifespan in the data with extreme values (small and large), calculate the mean, median, and mode and discuss the findings. 218"
+  ],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ },
+ "B9.4.2.1.2.": {
+  "strand": "HANDLING DATA",
+  "sub_strand": "Chance or Probability",
+  "cs_code": "B9.4.2.1",
+  "cs_desc": "Identify the sample space for a probability experiment involving two dependent events and express the probabilities of given events as fractions, decimals, percentages and/or ratios to solve problems. Indicator B9.4.2.1.1.Perform: a probability experiment involving two dependent events e.g. drawing coloured bottle tops from a bag without replacement",
+  "ind_desc": "Express the probabilities of the events as fractions, decimals, percentages and/or ratios; e.g. using a tree diagram, table or another graphic organiser",
+  "exemplars": [
+   "E.g. 1 Draw a probability tree diagram for the experiment in B9.4.2.1.1,",
+   "E.g. 1. Express the probabilities of the events (on their respective branches) as decimals, percentages and ratios.",
+   "E.g. 2: i. Consider the experiment of drawing two Aces (in two trials) in a standard deck of cards without replacement. ii. Calculate the probability of trial and express the probabilities of the each events as decimals, percentages and ratios. 219",
+   "E.g. 3: i. Consider the experiment of drawing an Ace and a Jack (in two trials) in a standard deck of cards without replacement. ii. Calculate the probability of trial and express the probabilities of the each events as decimals, percentages and ratios. 220"
+  ],
+  "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
+  "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
+  "keywords": "mathematics, b9, ccp, jhs",
+  "assessment": "Class exercises; project work; SBA; BECE-style"
+ }
+}

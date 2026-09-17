@@ -1,0 +1,53 @@
+{
+  "id": "science",
+  "name": "Science",
+  "grade": "B4",
+  "sourceTitle": "NaCCA Science Curriculum B4-B6",
+  "sourceUrl": "https://nacca.gov.gh/wp-content/uploads/2019/04/SCIENCE-UPPER-PRIMARY-B4-B6.pdf",
+  "counts": {
+    "strands": 5,
+    "subStrands": 14,
+    "standards": 19,
+    "indicators": 25
+  },
+  "strands": [
+    {
+      "code": "B4.1",
+      "name": "DIVERSITY OF MATTER",
+      "subStrands": 2,
+      "standards": 3,
+      "indicators": 5
+    },
+    {
+      "code": "B4.2",
+      "name": "CYCLES",
+      "subStrands": 3,
+      "standards": 6,
+      "indicators": 7
+    },
+    {
+      "code": "B4.3",
+      "name": "SYSTEMS",
+      "subStrands": 3,
+      "standards": 3,
+      "indicators": 3
+    },
+    {
+      "code": "B4.4",
+      "name": "FORCES AND ENERGY",
+      "subStrands": 3,
+      "standards": 4,
+      "indicators": 5
+    },
+    {
+      "code": "B4.5",
+      "name": "HUMANS AND THE ENVIRONMENT",
+      "subStrands": 3,
+      "standards": 3,
+      "indicators": 5
+    }
+  ],
+  "extraction_method": "pypdf regex B4.x.x.x.x, placeholder metadata",
+  "extraction_date": "2026-07-09",
+  "notes": "Upper Primary B4 – preliminary DB, indicator descriptions to be enriched from NaCCA exemplars"
+}

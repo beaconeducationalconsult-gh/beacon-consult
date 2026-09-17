@@ -1,0 +1,6 @@
+# Python dependencies for LOCAL DATA PIPELINE SCRIPTS ONLY (scripts/).
+# Nothing here is deployed — the app runs on Vercel (React) + Firestore.
+# Flask and gunicorn are intentionally absent; there is no server to run.
+
+python-docx>=1.1    # used by scripts/generate_schemes.py and generate_records_of_work.py
+firebase-admin>=6.5 # used by scripts/upload_to_firestore.py

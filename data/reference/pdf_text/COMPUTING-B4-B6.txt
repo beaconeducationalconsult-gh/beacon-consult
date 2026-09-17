@@ -1,0 +1,3424 @@
+MINISTRY OF EDUCATION
+
+REPUBLIC OF GHANA
+
+COMPUTING
+CURRICULUM FOR PRIMARY SCHOOLS
+(BASIC 4 - 6)
+SEPTEMBER 2019
+
+© NaCCA, Ministry of Education 2019
+
+Computing Curriculum for Primary Schools
+Enquiries and comments on this Curriculum should be addressed to:
+The Executive Secretary
+National Council for Curriculum and Assessment (NaCCA)
+Ministry of Education
+P. O. Box CT PM 77
+Cantonments
+Accra
+Telephone: 0302909071, 0302909862
+Email:
+info@nacca.gov.gh
+Website: www.nacca.gov.gh
+
+ii
+© NaCCA, Ministry of Education 2019
+
+FOREWORD
+The new curriculum for Ghana’s primary schools is standards-based, which is our demonstration of placing learning at the heart of every classroom and
+ensuring that every learner receives quality education. Provision of accessible quality education for all is non-negotiable if we are to meet the human capital
+needs of our country, required for accelerated sustainable national development. It is for this reason that the new curriculum sets out clearly the learning areas
+that need to be taught, how they should be taught and how they should be assessed. It provides a set of core competencies and standards that learners are to
+know, understand and demonstrate as they progress through the curriculum from one content standard to the other and from one phase to the next. The
+curriculum and its related teachers’ manual promote the use of inclusive and gender responsive pedagogy within the context of learning-centred teaching
+methods so that every learner can participate in every learning process and enjoy learning. The curriculum encourages the use of Information and
+Communication Technologies (ICTs) for teaching and learning – ICTs as teaching and learning materials.
+The new curriculum has at its heart the acquisition of skills in the 4Rs of Reading, wRiting, aRithmetic and cReativity by all learners. It is expected that at any
+point of exit from a formal education, all learners should be equipped with these foundational skills for life, which are also prerequisites for Ghana becoming a
+learning nation. The graduates from the school system should become functional citizens in the 4Rs and lifelong learners. They should be digital literates,
+critical thinkers and problem solvers. The education they receive through the study of the learning areas in the curriculum should enable them to collaborate
+and communicate well with others and be innovative. The graduates from Ghana’s schools should be leaders with a high sense of national and global identity.
+The curriculum therefore provides a good opportunity in its design to develop individuals with the right skills and attitudes to lead the transformation of Ghana
+into an industrialised learning nation.
+For this reason, the Ministry of Education expects that learners, as a result of the new knowledge, skills and values they have acquired through the new
+curriculum, will show a new sense of identity as creative, honest and responsible citizens. These are our core values that underpin the identification and
+selection of the learning areas for this curriculum. These core values serve as fundamental building blocks for developing into our learners the spirit of
+teamwork, respect, resilience and the commitment to achieving excellence. The Ministry endorses a quality learning experience as an entitlement for each of
+Ghana’s school-going girl and boy; the curriculum has rightly focused on learning and learning progression. The Ministry has also endorsed accountability as a
+critical domain for effective workings of standards-based curriculum.
+More importantly the role of the teacher is to make this curriculum work for the intended purpose - to inculcate in learners the core competencies and values
+and to make learning happen; improve learning outcomes – and the support that teachers need is duly recognised and endorsed by my Ministry. The Ministry
+will support the implementation of the curriculum to include capacity development of all teachers in the new curriculum. Teachers matter in the development
+and delivery of the standards-based curriculum and we will continue to support our teachers on this journey that we have started together to put learning at
+the centre of what we do best; teach!
+I thank all those who have contributed their time and expertise to the development of this curriculum for primary schools in Ghana.
+
+Dr. Matthew Opoku Prempeh (MP)
+The Honourable Minister of Education
+iii
+© NaCCA, Ministry of Education 2019
+
+TABLE OF CONTENT
+FOREWORD ........................................................................................................................................................................................................................................................................ VI
+PHILOSOPHY .................................................................................................................................................................................................................................................................... VIII
+CORE COMPETENCES .................................................................................................................................................................................................................................................... IX
+ORGANIZATION OF THE STANDARDS (BASIC 4 – 6) .................................................................................................................................................................................... XXI
+BASIC 4 ................................................................................................................................................................................................................................................................................... 1
+STRAND 1: WORD PROCESSING ................................................................................................................................................................................................................................. 2
+STRAND 2: PRESENTATION ........................................................................................................................................................................................................................................... 8
+STRAND3: WORD PROCESSING .................................................................................................................................................................................................................................. 9
+BASIC 5 ................................................................................................................................................................................................................................................................................. 10
+STRAND1: INTRODUCTION TO COMPUTING .................................................................................................................................................................................................... 11
+STRAND 2: PRESENTATION ......................................................................................................................................................................................................................................... 18
+STRAND 3: WORD PROCESSING ............................................................................................................................................................................................................................... 19
+STRAND 5: PROGRAMMING AND DATABASES .................................................................................................................................................................................................... 20
+STRAND 6: INTERNET AND SOCIAL MEDIA .......................................................................................................................................................................................................... 22
+STRAND 7: HEALTH AND SAFETY IN USING ICT TOOLS ................................................................................................................................................................................ 33
+BASIC 6 ................................................................................................................................................................................................................................................................................. 35
+STRAND 2: PRESENTATION ......................................................................................................................................................................................................................................... 42
+STRAND 3: WORD PROCESSING ............................................................................................................................................................................................................................... 43
+STRAND 5: PROGRAMMING AND DATABASES .................................................................................................................................................................................................... 44
+STRAND 6: INTERNET AND SOCIAL MEDIA .......................................................................................................................................................................................................... 48
+STRAND 7: HEALTH AND SAFETY IN USING ICT TOOLS ................................................................................................................................................................................ 60
+
+iv
+© NaCCA, Ministry of Education 2019
+
+RATIONALE FOR PRIMARY COMPUTING
+Computing is one of the essential school subjects that permeates and can be applied to all areas of learning. This is because it provides students with access to
+important computing ideas, knowledge and skills that they can draw on in their personal and work lives, as well as their learning of other school subjects.
+Computing learning provides the opportunity for students to develop essential skills and competencies, and motivates learners to become flexible problem
+solvers and life-long learners. In an increasingly technological age the possession of problem solving and decision-making skills is an essential pre-requisite and
+these are acquired in the learning of computing.
+PHILOSOPHY
+TEACHING PHILOSOPHY
+The teaching is focused around a supportive and inclusive learning environment by positively engaging teacher-student relationships. Teachers have the
+responsibility to create a cooperative learning environment where students feel safe and secure. In addition, appropriate improvisation techniques would be
+used to represent the actual devices when they are not available.
+Relevance, engagement and problem solving best describe the computing teaching philosophy. In other words, teaching of computing adopts the hands-on
+approach that is, the tactile/kinaesthetic approach. Students learn computing subject best when they are actively involved in the learning process, and that an
+engaging classroom best facilitates this. Students should be engaged in computing by using diverse teaching methods, encouraging the use of a variety of their
+cognitive skills. The more students process data, the more likely they would be to apply, analyse, synthesise, and evaluate the information.
+Teaching of computing should enable learners know how data can be used to understand themselves, explain situations they find themselves in, describe the
+why and how some things happened or predict what might happen in the future.
+LEARNING PHILOSOPHY
+Computing education develops a wide range of skills including problem solving, design construction, communication, critical thinking, analysis, synthesis and
+evaluation. The skills learnt can then be applied to other fields of endeavour. Learners should have freedom of expression and creativity. Learners should be
+able to experiment and to realize their strengths and weaknesses in the computing subject. Each learner’s learning style should be tie into the learning of
+computing so as to enable learners grow and learn on their own. Learners should be giving the chance to pose their own questions and try to answer them
+independently. Learners should be encouraged to find information in a variety of ways. Learners should also be encouraged to work on projects in groups to
+foster collaborative learning.
+
+v
+© NaCCA, Ministry of Education 2019
+
+SUBJECT AIMS
+The computing curriculum is designed to help learners to:
+1. acquire basic ICT literacy
+2. communicate effectively using ICT tools
+3. develop interest and acquire skills in the use of the internet
+4. develop basic ethics in using ICT tools
+5. acquire basic programming and database skills
+INSTRUCTIONAL EXPECTATIONS
+1.
+2.
+3.
+4.
+5.
+
+Guide and facilitate learning by generating discourse among learners and challenging them to accept and
+share responsibility for their own learning, based on their unique individual differences.
+Select computing content, adapt and plan lessons to meet the interests, knowledge, understanding,
+abilities, and experiences of learners.
+Work together as colleagues within and across disciplines and grade levels to develop communities of
+computing learners who exhibit the skills of computing inquiry and the attitudes and social values conducive to computing learning.
+Use multiple methods and systematically gather data about learner understanding and ability to guide
+computing teaching and learning, with arrangements to provide feedback to both learners and parents.
+Design and manage learning environments that provide learners with the time, space, and resources
+needed for learning computing
+
+CORE COMPETENCES
+The core competences for computing studies describe a body of skills that teachers in computing at all levels should seek to develop in their learners. They are
+ways in which teachers and learners in computing engage with the subject matter as they learn the subject. The competences presented here describe a
+connected body of core skills that are acquired throughout the processes of teaching and learning. These include:
+CRITICAL THINKING AND PROBLEM SOLVING
+This skill develops learners’ cognitive and reasoning abilities to enable them analyse and solve problems. Critical thinking and problem solving skill enables
+learners to draw on their own experiences to analyse situations and choose the most appropriate out of a number of possible solutions. It requires that
+learners embrace the problem at hand, persevere and take responsibility for their own learning.
+vi
+© NaCCA, Ministry of Education 2019
+
+CREATIVITY AND INNOVATION
+Creativity and Innovation promotes entrepreneurial in learners skills through their ability to think of new ways of solving problems and developing
+technologies for addressing the problem at hand. It requires ingenuity of ideas, arts, technology and enterprise. Learners having this skill are also able to
+think independently and creatively.
+COMMUNICATION AND COLLABORATION
+This competence promotes in learners the skills to make use of languages, symbols and texts to exchange information about themselves and their life
+experiences. Learners actively participate in sharing their ideas. They engage in dialogue with others by listening to and learning from them. They also respect
+and value the views of others.
+CULTURAL IDENTITY AND GLOBAL CITIZENSHIP
+This competence involves developing learners to put country and service foremost through an understanding of what it means to be active citizens. This is
+done by inculcating in learners a strong sense of social and economic awareness. Learners make use of the knowledge, skills, competences and attitudes
+acquired to contribute effectively towards the socioeconomic development of the country and on the global stage. Learners build skills to critically identify
+and analyse cultural and global trends that enable them to contribute to the global community.
+PERSONAL DEVELOPMENT AND LEADERSHIP
+This competence involves improving self-awareness and building self-esteem. It also entails identifying and developing talents, fulfilling dreams and aspirations.
+Learners are able to learn from mistakes and failures of the past. They acquire skills to develop other people to meet their needs. It involves recognising the
+importance of values such as honesty and empathy and seeking the well-being of others. Personal development and leadership enables learners to distinguish
+between right and wrong. The skill helps them to foster perseverance, resilience and self-confidence. PL helps them acquire the skill of leadership, selfregulation and responsibility necessary for lifelong learning.
+DIGITAL LITERACY
+Digital Literacy involves developing learners to discover, acquire, and communicate through ICT to support their learning. It also makes them use digital media
+responsibly.
+
+vii
+© NaCCA, Ministry of Education 2019
+
+LEARNING DOMAINS (EXPECTED LEARNING BEHAVIOURS)
+A central aspect of this curriculum is the concept of three integral learning domains that should be the basis for instruction and assessment. These are
+- Knowledge, Understanding and Application
+- Process Skills
+- Attitudes and Values
+KNOWLEDGE, UNDERSTANDING AND APPLICATION
+Under this domain, learners acquire knowledge through some learning experiences. They may also show understanding of concepts by comparing,
+summarising, re-writing etc. in their own words and constructing meaning from instruction. The learner may also apply the knowledge acquired in some new
+contexts. At a higher level of learning behaviour, the learner may be required to analyse an issue or a problem. At higher levels, the learner may be required to
+synthesize knowledge by integrating a number of ideas to formulate a plan, solve a problem, compose a story, or a piece of music. Further, the learners may be
+required to evaluate, estimate and interpret a concept. At the last level, which is the highest, learners may be required to create, invent, compose, design and
+construct. These learning behaviours “knowing”, “understanding”, “applying”, “analysing”, “synthesising”, “evaluating” and “creating” fall under the domain
+“Knowledge, Understanding and Application”.
+In this curriculum, learning indicators are stated with action verbs to show what the learner should know and be able to do. For example, the learner will be
+able to describe something. Being able to “describe” something after teaching and learning has been completed means that the learner has acquired
+“knowledge”. Being able to explain, summarise, and give examples etc. means that the learner has understood the concept taught.
+Similarly, being able to develop, defend, etc. means that the learner can “apply” the knowledge acquired in some new context. You will note that each of the
+indicators in the curriculum contains an “action verb” that describes the behaviour the learner will be able to demonstrate after teaching and learning has taken
+place. “Knowledge, Understanding and Application” is a domain that should be the prime focus of teaching and learning in schools. Teaching in most cases has
+tended to stress knowledge acquisition to the detriment of other higher level behaviours such as applying knowledge.
+Each action verb in any indicator outlines the underlying expected outcome. Each indicator must be read carefully to know the learning domain towards which
+you have to teach. The focus is to move teaching and learning from the didactic acquisition of “knowledge” where there is fact memorisation, heavy reliance on
+formulae, remembering facts without critiquing them or relating them to real world – surface learning – to a new position called – deep learning. Learners
+are expected to deepen their learning by knowledge application to develop critical thinking skills, explain reasoning, and to generate creative ideas to solve real
+viii
+© NaCCA, Ministry of Education 2019
+
+life problems in their school lives and later in their adult lives. This is the position where learning becomes beneficial to the learner.
+The explanation and the key words involved in the “Knowledge, Understanding and Application” domain are as follows:
+Knowing: The ability to remember, recall, identify, define, describe, list, name, match, state principles, facts and concepts. Knowledge is the ability to
+remember or recall
+material already learned and this constitutes the lowest level of learning.
+Understanding: The ability to explain, summarise, translate, rewrite, paraphrase, give examples, generalise, estimate or predict consequences based upon a
+trend.
+Understanding is generally the ability to grasp the meaning of some concepts that may be verbal, pictorial, or symbolic.
+Applying: This dimension is also referred to as “Use of Knowledge”. Ability to use knowledge or apply knowledge, apply rules, methods, principles, theories,
+etc. to situations that are new and unfamiliar. It also involves the ability to produce, solve, plan, demonstrate, discover etc.
+Analysing: The ability to break down material/information into its component parts; to differentiate, compare, distinguish, outline, separate, identify significant
+points etc.,
+ability to recognise unstated assumptions and logical fallacies; ability to recognise inferences from facts etc.
+Synthesising: The ability to put parts or ideas together to form a new whole. It involves the ability to combine, compile, compose, devise, plan, revise,
+organise, create,
+generate new ideas and solutions.
+Evaluating: The ability to appraise, compare features of different things and make comments or judgment, criticise, justify, support, discuss, conclude, make
+recommendations etc. Evaluation refers to the ability to judge the worth or value of some material based on some criteria.
+Creating: The ability to use information or materials to plan, compose, produce, manufacture or construct other products.
+From the foregoing, creating is the highest form of thinking and learning and is therefore the most important behaviour. This, unfortunately, is the area where
+most learners perform poorly. In order to get learners to develop critical thinking skills, beginning right from the lower primary level, it is advised that you do
+your best to help your learners to develop analytical skills and processes as we have said already.
+
+ix
+© NaCCA, Ministry of Education 2019
+
+SKILLS AND PROCESSES
+Computing is the means by which a learner solves problems or seeks to gain information using technological tools. Learners should be exposed to situations
+that challenge them to raise questions and attempt to solve problems using technological tools. The more often they are faced with these challenges, the more
+likely they are to develop a positive attitude toward computing, and the more likely they are to develop relevant computing skills. The skills and processes that
+learners need to develop in computing are as follows:
+Mouse skills
+This is the skill of using the mouse to perform various functions.
+Keyboarding skills
+This is the skill of using the keyboarding to perform various functions
+Comparing
+This is the skill of identifying the similarities and differences between two or more objects, concepts, information or processes.
+Communicating/Reporting
+This is the skill of transmitting, receiving and presenting information in concise, clear and accurate forms - verbal, written, pictorial, tabular or graphical.
+Analysing
+This is the skill of identifying the parts of objects, information or processes, and the patterns and relationships between these parts.
+Evaluating
+This is the skill of assessing the reasonableness, accuracy and quality of information, processes or ideas. This is also the skill of assessing the quality and
+feasibility of objects or information.
+Designing
+This is the skill of Visualizing and drawing new objects or gargets from imagination.
+Interpreting
+This is the skill of evaluating data in terms of its worth: good, bad, reliable, unreliable; making inferences and predictions from written or graphical data;
+extrapolating and deriving conclusions. Interpretation is also referred to as “Information Handling”.
+Learners therefore need to acquire positive attitudes, values and psychosocial skills that will enable them participate actively in lessons and take a stand on
+issues affecting them and others.
+x
+© NaCCA, Ministry of Education 2019
+
+ATTITUDES
+To be effective, competent and reflective citizens, who will be willing and capable of solving personal and societal problems, learners should be exposed to
+situations that challenge them to raise questions and attempt to solve problems. Learners therefore need to acquire positive attitudes, values and psychosocial
+skills that will enable them participate in debates and take a stand on issues affecting them and others. The computing curriculum thus focuses on the
+development of attitudes and values.
+The computing curriculum aims at helping learners to acquire the following:
+1.
+2.
+3.
+4.
+5.
+6.
+
+Commitment: determination to contribute to national development.
+Tolerance: willingness to respect the views of others.
+Patriotism: readiness to defend the nation.
+Flexibility in ideas: willingness to change opinion in the face of more plausible evidence.
+Respect for evidence: willingness to collect and use data on one’s investigation, and also have respect for data collected by others.
+Reflection: the habit of critically reviewing ways in which an investigation or observation has been carried out to see possible faults and other ways in
+which the investigation or observation can be improved upon.
+7. Comportment conforming to acceptable societal norms.
+8. Co-operation the ability to work effectively with others.
+9. Responsibility: the ability to act independently and make decisions; morally accountable for one’s action; capable of rational conduct.
+10. Environmental Awareness: being conscious of one’s physical and socio-economic surroundings.
+11. Respect for the Rule of Law: obeying the rules and regulations of the land.
+The teacher should ensure that learners cultivate the above attitudes and skills as basis for living in the nation as effective citizens.
+
+xi
+© NaCCA, Ministry of Education 2019
+
+VALUES:
+At the heart of this curriculum is the belief in nurturing honest, creative and responsible citizens. As such, every part of this curriculum, including the related
+pedagogy, should be consistent with the following set of values.
+Respect: This includes respect for the nation of Ghana, its institutions and laws and the culture and respect among its citizens and friends of Ghana.
+Diversity: Ghana is a multicultural society in which every citizen enjoys fundamental rights and responsibilities. Learners must be taught to respect the
+views of all persons and to see national diversity as a powerful force for nation development. The curriculum promotes social cohesion.
+Equity: The socio-economic development across the country is uneven. Consequently, it is necessary to ensure an equitable distribution of resources based
+on the unique needs of learners and schools. Ghana’s learners are from diverse backgrounds which require the provision of equal opportunities to all, and that,
+all strive to care for each other.
+Commitment to achieving excellence: Learners must be taught to appreciate the opportunities provided through the curriculum and persist in doing
+their best in whatever field of endeavour as global citizens. The curriculum encourages innovativeness through creative and critical thinking and the use of
+contemporary technology.
+Teamwork/Collaboration: Learners are encouraged to be committed to team-oriented working and learning environments. This also means that learners
+should have an attitude of tolerance to be able to live peacefully with all persons.
+Truth and Integrity: The curriculum aims to develop learners into individuals who will consistently tell the truth irrespective of the consequences, be
+morally upright with the attitude of doing the right thing even when no one is watching. Also, be true to themselves and be willing to live the values of honesty
+and compassion. Equally important is the practice of positive values as part of the ethos or culture of the work place, which includes integrity and
+perseverance. These values must underpin the learning processes to allow learners to apply skills and competences in the world of work.
+The action verbs provided in the learning indicators in each content standard, should help you to structure your teaching and learning to achieve the desired
+learning outcomes. Check the learning indicators to ensure that you have given the required emphasis to each learning domain in your instruction and
+assessment.
+
+xii
+© NaCCA, Ministry of Education 2019
+
+ASSESSMENT
+Assessment is a process of collecting and evaluating information about learners and using the information to make decisions to improve their learning.
+In this curriculum, it is suggested that assessment is used to promote learning. Its purpose is to identify the strengths and weaknesses of learners to enable
+teachers ascertain their learner’s response to instruction.
+Assessment is both formative and summative. Formative assessment is viewed in terms of Assessment as learning and Assessment for learning.
+Assessment as learning: Assessment as learning relates to engaging learners to reflect on the expectations of their learning. Information that learners provide
+the teacher forms the basis for refining teaching-learning strategies. Learners are assisted to play their roles and to take responsibility of their own learning to
+improve performance. Learners are assisted to set their own learning goals and monitor their own progress.
+Assessment for learning: It is an approach used to monitor learner’s progress and achievement. This occurs throughout the learning process.
+The teacher employs assessment for learning to seek and interpret evidence which serves as timely feedback to refine their teaching strategies and improve
+learners’ performance. Learners become actively involved in the learning process and gain confidence in what they are expected to learn.
+Assessment of learning: This is summative assessment. It describes the level learners have attained in the learning, what they know and can do over a period
+of time. The emphasis is to evaluate the learner’s cumulative progress and achievement.
+It must be emphasised that all forms of assessment should be based on the domains of learning. In developing assessment procedures, try to select indicators in
+such a way that you will be able to assess a representative sample from a given strand. Each indicator in the curriculum is considered a criterion to be achieved
+by the learners. When you develop assessment items or questions that are based on a representative sample of the indicators taught, the assessment is
+referred to as a “Criterion-Referenced Assessment”. In many cases, a teacher cannot assess all the indicators taught in a term or year. The assessment
+procedure you use i.e. class assessments, homework, projects etc. must be developed in such a way that the various procedures complement one another to
+provide a representative sample of indicators taught over a period.
+
+xiii
+© NaCCA, Ministry of Education 2019
+
+SUGGESTED TIME ALLOCATION
+A total of four periods a week, each period consisting of thirty minutes, is allocated to the teaching of computing at the Lower Primary level. It is
+recommended that the teaching periods be divided as follows:
+1(one) period per day (30-minutes per period)
+
+PEDAGOGICAL APPROACHES
+These are the approaches, methods, strategies, appropriate relevant teaching and learning resources for ensuring that every learner benefits from teaching
+and learning process. The curriculum emphasises the:
+1. creation of learning-centred classrooms through the use of creative approaches to ensure learner empowerment and independent learning.
+2. positioning of inclusion and equity at the centre of quality teaching and learning
+3. use of differentiation and scaffolding as teaching and learning strategies for ensuring that no learner is left behind
+4. use of Information Communications Technology (ICT) as a pedagogical tool
+5. identification of subject specific instructional expectations needed for making learning in the subject relevant to learners
+6. integration of assessment as learning, for learning and of learning into the teaching and learning processes and as an accountability strategy
+7. questioning techniques that promote deep learning
+LEARNING-CENTRED PEDAGOGY
+The learner is at the centre of learning. At the heart of the national curriculum for change and sustainable development is the learning progression and
+improvement of learning outcomes for Ghana’s young people with a focus on the 4Rs – Reading, wRiting, aRithmetic and cReativity. It is expected that at
+each curriculum phase, learners would be offered the essential learning experiences to progress seamlessly to the next phase. Where there are indications
+that a learner is not sufficiently ready for the next phase a compensatory provision through differentiation should be provided to ensure that such a
+learner is ready to progress with his/her cohort. At the primary school, the progression phases are KG1 to KG2 and B1 to B6.
+The Curriculum encourages the creation of a learning centred classroom with the opportunity for learners to engage in meaningful “hands-on” activities that
+bring home to the learner what they are learning in school and what they know from outside of school. The learning centred classroom is a place for the
+learners to discuss ideas through the inspiration of the teacher. The learners then become actively engaged in looking for answers, working in groups to solve
+problems. They also research for information, analyse and evaluate information. The aim of the learning-centred classroom is to enable learners take
+ownership of their learning. It provides the opportunity for deep and profound learning to take place.
+xiv
+© NaCCA, Ministry of Education 2019
+
+The teacher as a facilitator needs to create a learning environment that:
+1. makes learners feel safe and accepted
+2. helps learners to interact with varied sources of information in a variety of ways
+3. helps learners to identify a problem suitable for investigation through project work
+4. connects the problem with the context of the learners’ world so that it presents realistic opportunities for learning
+5. organises the subject matter around the problem, not the subject
+6. gives learners responsibility for defining their learning experience and planning to solve the problem
+7. encourages learners to collaborate in learning
+8. expects all learners to demonstrate the results of their learning through a product or performance
+It is more productive for learners to find answers to their own questions rather than teachers providing the answers and their opinions in a learningcentred classroom.
+INCLUSION
+Inclusion is ensuring access and learning for all learners, especially, those disadvantaged. All learners are entitled to a broad and balanced curriculum in
+every school in Ghana. The daily learning activities to which learners are exposed should ensure that the learners’ right to equal access and accessibility to
+quality education is met. The Curriculum suggests a variety of approaches that addresses learners’ diversity and their special needs in the learning process.
+When these approaches are effectively used in lessons, they will contribute to the full development of the learning potential of every learner. Learners
+have individual needs and learning experiences and different levels of motivation for learning. Planning, delivery and reflection on daily learning experiences
+should take these differences into consideration. The curriculum therefore promotes:
+1. learning that is linked to the learner’s background and to their prior experiences, interests, potential and capacities.
+2. learning that is meaningful because it aligns with learners’ ability (e.g. learning that is oriented towards developing general capabilities and solving the
+practical problems of everyday life); and
+3. the active involvement of the learners in the selection and organisation of learning experiences, making them aware of their importance and also
+enabling them to assess their own learning outcomes.
+DIFFERENTIATION AND SCAFFOLDING
+Differentiation is a process by which differences (learning styles, interest and readiness to learn) between learners are accommodated so that all learners
+in a group have best chance of learning. Differentiation could be by content, tasks, questions, outcome, groupings and support. Differentiation as a way of
+ensuring each learner benefits adequately from the delivery of the curriculum can be achieved in the classroom through i) Task ii) Support from the
+Guidance and Counselling Unit and iii) Learning outcomes.
+Differentiation by task involves teachers setting different tasks for learners of different abilities. E.g. in sketching the plan and shape of their classroom some
+learners could be made to sketch with free hand while others would be made to trace the outline of the plan.
+xv
+© NaCCA, Ministry of Education 2019
+
+Differentiation by support involves the teacher giving needed support and referring weak learners to the Guidance and Counselling Unit for academic
+support.
+Differentiation by outcome involves the teacher allowing learners to respond at different levels. Weaker learners are allowed more time for complicated
+tasks.
+Scaffolding in education refers to the use of variety of instructional techniques aimed at moving learners progressively towards stronger understanding and
+ultimately greater independence in the learning process.
+It involves breaking up the learning task, experience or concepts into smaller parts and then providing learners with the support they need to learn each
+part. The process may require a teacher assigning an excerpt of a longer text to learners to read and engaging them to discuss the excerpt to improve
+comprehension. The teacher goes ahead to guide them through the key words/vocabulary to ensure learners have developed a thorough understanding of
+the text before engaging them to read the full text. Common scaffolding strategies available to the teacher are:
+1.
+2.
+3.
+4.
+5.
+6.
+
+give learners a simplified version of a lesson, assignment, or reading, and then gradually increases the complexity, difficulty, or sophistication over time
+describe or illustrate a concept, problem, or process in multiple ways to ensure understanding
+give learners an exemplar or model of an assignment they will be asked to complete
+give learners a vocabulary lesson before they read a difficult text
+describe the purpose of a learning activity clearly and the learning goals they are expected to achieve
+describe explicitly how the new lesson builds on the knowledge and skills learners were taught in a previous lesson
+
+xvi
+© NaCCA, Ministry of Education 2019
+
+INFORMATION COMMUNICATIONS TECHNOLOGY
+Information Communications Technology (ICT) has been integrated into the computing curriculum as part of the core of education, alongside reading, writing
+and numeracy. Thus, the curriculum is designed to use ICT as a teaching and learning tool to enhance deep and independent learning. For instance, the teacher
+in certain instances is directed to use multimedia to support the teaching and learning process.
+ICT has the potential to innovate, accelerate, enrich, and deepen skills. It also motivates and engages learners to relate school experiences to work practices. It
+provides opportunities for learners to fit into the world of work. Some of the expected outcomes that this curriculum aims to achieve are:
+1. improved teaching and learning processes
+2. improved consistency and quality of teaching and learning
+3. increased opportunities for more learner-centered pedagogical approaches
+4. improved inclusive education practices.
+5. improved collaboration, creativity, higher order thinking skills
+6. enhanced flexibility and differentiated approach of delivery
+The use of ICT as a teaching and learning tool is to provide learners access to large quantities of information online and offline. It also provides the framework
+for analysing data to investigate patterns and relationships in the computing context. Once learners have made their findings, ICT can help them organize, edit
+and print the information in many different ways.
+Learners need to be exposed to various ICT tools around them including calculators, radios, cameras, phones, television sets and computers and related
+software like Microsoft Office packages - Word, PowerPoint and Excel as teaching and learning tools. The exposure that learners are given at the primary
+school level to use ICT in exploiting learning will build their confidence and will increase their level of motivation to apply ICT use in later years, both within
+and outside of education. ICT use for teaching and learning is expected to enhance the quality and competence level of learners.
+
+xvii
+© NaCCA, Ministry of Education 2019
+
+ANNOTATION
+A unique annotation is used to label the class, strands, sub-strands, content standards and learning indicators in the curriculum for the purpose of easy
+referencing. The annotation is defined in figure 1:
+Class
+
+Content Standard number
+
+B1. 1. 2. 1. 1
+Strand number
+
+Sub-strand number
+Figure 1: Curriculum Reference Numbers
+
+xviii
+© NaCCA, Ministry of Education 2019
+
+Learning Indicator number
+
+ORGANIZATION OF THE STANDARDS (Basic 4 – 6)
+The content standards in this document are organized by grade level. Within each grade level, the contents are grouped first by strands. Each strand is further
+subdivided into sub-strands of related indicators.
+ Indicators are learning outcomes that define what learners should know and be able to do.
+ Content Standards are groups of related indicators. Note that indicators from different standards may sometimes be closely related, because
+computing is a connected subject.
+ Sub-strands are larger groups of related indicators (or computing topics to be studied). Indicators from different sub-strands may sometimes be
+closely related.
+ Strands are the main branches of the computing content to be studied.
+The Standards are organized at the KG1 – B6 phase under seven strands:
+1. Introduction to computing
+2. Presentation
+3. Word processing
+4. Desktop Publishing
+5. Programming and databases
+6. Internet and social media
+7. Health and safety in using ICT tools
+The table below shows the scope and sequence of the strands addressed at the KG1 – B6 phase. The remaining part of the document presents the details of
+the standards and indicators for each grade level,
+
+xix
+© NaCCA, Ministry of Education 2019
+
+SCOPE AND SEQUENCE
+
+Sn Strand
+
+Sub-strands
+
+1
+
+Generation of computers and
+parts of a computer and other
+gadgets. ( Identify Parts of a
+Computer and Technology
+Tools
+
+Introduction to
+computing
+
+KG1 KG2 B1 B2 B3 B4 B5 B6 B7 B8 B9 B10 B11 B12
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+)
+Introduction to MS-Windows
+Interface (Desktop
+Background and locations of
+the computer.)
+Data, sources and usage
+Technology in the community
+(communication)
+2
+
+Presentation
+
+√
+
+√
+
+Introduction to MSPowerPoint
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+Tabs and ribbons of MSPowerPoint
+3
+
+Word processing
+
+Introduction to Word
+Processing
+
+√
+
+Tabs and ribbons of word
+processing
+4
+
+Desktop Publishing
+
+Introduction to MS-Publisher
+xx
+
+© NaCCA, Ministry of Education 2019
+
+5
+
+6
+
+7
+
+Programming and
+databases
+
+Internet and social
+media
+
+Health and safety in
+using ICT tools
+
+Introduction to databases,
+algorithm and programming.
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+Introduction to programming
+languages (e.g.MS- Excel,
+Scratch, VB dot Net etc.)
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+Introduction to Electronic
+Spreadsheet
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+Tabs and ribbons
+manipulation
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+Network Overview
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+Web browsers and Web Pages
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+Surfing the world wide web
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+Favourite places and Search
+engine
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+Using Online Forms
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+Customising your browser
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+Electronic Email
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+Internet of things (IoT)
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+Digital Literacy
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+Network Etiquette
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+Health and safety in using ICT
+tools
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+xxi
+© NaCCA, Ministry of Education 2019
+
+BASIC 4
+
+1
+© NaCCA, Ministry of Education 2019
+
+B4
+STRAND 1: WORD PROCESSING
+SUB-STRAND 1: GENERATION OF COMPUTERS AND PARTS OF A COMPUTER AND OTHER GADGETS
+CONTENT
+STANDARDS
+B4.1.1.1: Identify parts of a
+computer and technology
+tools
+
+INDICATORS AND EXEMPLARS
+B4.1.1.1.1. Identify parts of a computer and technology tools (the
+mouse, keyboard, monitor, system unit and its components (memory,
+hard disk drive, CD-ROM etc.), speakers, and peripherals.
+Bring items such as memory(i.e. memory cards, memory sticks),hard disk drive,
+CD-ROM etc. or pictures of these items to class and ask the learners to label
+selected items or computer parts in their note books.
+B4.1.1.1.2. Describe the types of input devices of a computer and their
+uses. E.g. joystick, light pen, mouse, pointing stick etc. Bring input
+devices to class.
+Guide learners to explore the types of input devices and their uses.
+B4.1.1.1.3. Differentiate between RAM and ROM.
+Bring a RAM or ROM to class or a picture of RAM and ROM to class.
+Guide learners to differentiate between ROM and RAM.
+B4.1.1.1.4. Type short phrases.
+Guide learners to type different phrases using any Word Processing Application.
+B4.1.1.1.5. Summarise the first generation of computers which used
+vacuum tubes as a major piece of technology.
+Guide learners to discuss about the first generation of computers. e.g. ENIAC,
+EDVAC, UNIVAC, IBM-701 etc.
+
+2
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation.
+2. Communication and
+collaboration
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+Subject Specific Practices
+1. Hardware Manipulation Skill
+
+SUB-STRAND 2: INTRODUCTION TO MS-WINDOWS INTERFACE
+(DESKTOP BACKGROUND AND LOCATIONS OF THE COMPUTER.)
+CONTENT
+STANDARDS
+B4.1.2.1: Demonstrate the
+use of the Desktop
+Background as well as
+working with folders.
+
+INDICATORS AND EXEMPLARS
+B4.1.2.1.1. Describe the desktop background and explain its features
+(e.g. image, icons and Taskbar of the background).
+NB. This is to help the learner with software knowledge such as in office
+applications.
+Guide learners to explore the desktop background and explain its features (i.e.
+wallpaper, icons of files and folders you have or may have saved to the desktop,
+taskbar etc.). Show different desktop background images to learners. Assist them
+to explain its features.
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation.
+2. Communication and
+collaboration
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+Subject Specific Practices
+1. Software Manipulation Skill
+
+B4.1.2.1.2. Demonstrate how to Personalise the Desktop Background
+using required tools and settings;
+Show projected examples of personalised Desktop Background to learners with
+the aid of a projector or pictures.
+Guide learners to personalise the Desktop Background using the required tools
+and settings.
+B4.1.2.1.3. Demonstrate the use of the Sections of the Taskbar; Start
+Menu (Location and Launching only), Pinned Applications (Launched /
+Minimised programmes) and Notification Area or system tray (Date &
+Time, and Volume).
+Guide learners to explore the use of the Taskbar, Start Menu, and Pinned
+Applications and Notification Area.
+B4.1.2.1.4. Adding and removing icons from the desktop.
+Guide learners to add and remove icons from the desktop
+3
+© NaCCA, Ministry of Education 2019
+
+1. Creativity and innovation.
+2. Communication and
+collaboration
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+Subject Specific Practices
+Hardware Manipulation Skill
+
+CONTENT
+STANDARDS
+SUB-STRAND 2
+CONTI’D
+B4.1.2.1: Demonstrate
+the use of the Desktop
+Background as well as
+working with folders.
+
+INDICATORS AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+
+.
+B4.1.2.1.5. Moving, selecting and hiding multiple icons on the
+desktop.
+Guide learners to move, select and hide icons on the desktop.
+B4.1.2.1.6. Creating, naming and renaming a folder.
+Guide learners to create, name and rename a folder.
+NB:
+1. Learners can practice with the keyboard only in the absence of
+the applications.
+2. Learners should be guided to play computer games to reenforce keyboard and mouse skills.
+
+4
+© NaCCA, Ministry of Education 2019
+
+1. Creativity and innovation.
+2. Communication and
+collaboration
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+Subject Specific Practices
+1. Hardware Manipulation
+Skill
+
+SUB-STRAND 3: DATA, SOURCES AND USAGE
+CONTENT
+STANDARDS
+B4.1.3.1. Identify Data and
+collect data from different
+sources.
+
+INDICATORS AND EXEMPLARS
+B4.1.3.1.1. Use strategies for identifying data in conversation and
+newspapers.
+Guide learners to discuss strategies, which can be used to identify data and
+information. Use different approaches to aid identify data in conversation and
+newspaper e.g. grouping students, role play etc.
+B4.1.3.1.2. Use strategies for classifying data into information (i.e.
+sorting and classifying)
+Guide learners to identify and record data in the different forms (e.g. age, shoe
+size, etc.) Assist learners to extract and classify the relevant data into information.
+B4.1.3.1.3. Identify primary sources of information (photographs, audio
+recordings, video recordings, film, letters and diaries, speeches,
+published books, newspapers and magazines, government publications,
+oral histories, etc.)
+Guide learners in groups to discuss where one can get data and information and
+make a presentation on it to the class.
+B4.1.3.1.4. Demonstrate Sending and sharing information to and from
+other gadgets. e.g., radio, fax, telephones calls, SMS etc.
+Guide learners to mention or talk about where one can receive or share
+information in the community and the world as a whole.
+NB: recall content in B3 and add to this activity.
+B4.1.3.1.5. Demonstrate basic calculations on sample data e.g. sum,
+percentage, average etc.
+Guide learners to perform basic calculations on sample data they have been made
+to collect using sum, average, percentages etc.
+NB: This is to help the learner with fundamental principles of problemsolving in computing and Computer science.
+5
+
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation.
+2. Communication and
+collaboration
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+Subject Specific Practices
+1. Communication
+2. Arithmetic
+
+CONTENT
+STANDARDS
+B4.1.3.2. Demonstrate data
+collection using Data
+collection tools.
+CONTI’D
+
+INDICATORS AND EXEMPLARS
+
+B4.1.3.2.1. Identify the steps and issues involved in data collection.
+Guide learners to explore
+I. the steps and issues involved in collection of data:
+a) identify the reason(s) for collecting data.
+b) select from the list of reasons for collecting the data and set goals.
+c) plan an approach and methods to collecting data and
+d. collect the data and interpret the data
+
+1. Creativity and innovation.
+2. Communication and collaboration
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+
+II. the issues involved in collection of data:
+a) Unavailability of data
+b) Intentional manipulation of data
+c) Random errors etc.
+B4.1.3.2.2. Describe various tools or techniques of data collection e.g.
+interview, observation, checklist etc.
+Guide learners to explore the tools for collecting data and aid them to make
+practical examples of the various tools.
+B4.1.3.2.3. Draw or sketch maps of the area to be surveyed.
+Bring diagrams or pictures of area(s) surveyed. Guide learners to sketch maps of
+an area to be surveyed by them.
+
+Subject Specific Practices
+1. Data Collection Skill
+
+6
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+
+SUB-STRAND 4: TECHNOLOGY IN THE COMMUNITY (COMMUNICATION)
+CONTENT
+STANDARDS
+B4.1.4.1. Demonstrate the
+use of technology in the
+community
+
+INDICATORS AND EXEMPLARS
+B4.1.4.1.1. Describe how digital systems are used and could be used at
+home, in school and the local community.
+Guide learners to mention and describe how digital systems (computers, mobile
+phones, megaphones etc.) are used and could be used at home, in school and the
+local community.
+B4.1.4.1.2. Identify and list common examples of energy-efficient
+gadgets and techniques used in homes, in schools and in the local
+communities e.g. using the appropriate energy-efficient gadgets energy saving bulbs …, choosing the right appliances, cleaning your
+stove often (soot removal), reducing overall cooking time etc.
+Bring pictures of energy-efficient gadgets or devices to class e.g. energy saving
+light bulbs, energy-efficient cooking stoves, toilet water saver, solar chargers,
+energy saving shower heads etc. to class. Guide learners to discuss in groups of
+five or less and present to the whole class examples of energy-efficient devices
+and techniques.
+B4.1.4.1.3. Describe how a range of digital systems (hardware and
+software) and their peripheral devices can be used for different
+purposes in the community.
+Guide learners to discuss in groups of three to five, the range of digital systems
+and their peripheral devices. How they can be used for different purposes in the
+community. Let learners present their findings to the class.
+NB: technological tools stated here should be different from those
+stated in B3.
+
+7
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation.
+2. Communication and collaboration.
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+Subject Specific Practices
+1.Phonics
+2.Skill development
+
+CONTENT
+STANDARDS
+B4.2.1.1. Demonstrate the
+use of MS- PowerPoint
+
+INDICATORS AND EXEMPLARS
+
+B4.1.4.1.4. Identify technological changes in the community (e.g. Using
+automated irrigation for farming, eco-friendly pesticides and manure,
+etc.)
+Guide learners to explore technological changes in the community or in the
+world. Let learners find examples of technological changes in the community or
+world around them. They should be encouraged to present their findings to the
+class.
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation
+2. Communication and collaboration
+3. Cultural identity and global
+citizenship
+4. Personal development and
+leadership
+5. Digital literacy.
+Subject Specific Practices
+1. Software Manipulation Skills
+
+STRAND 2: PRESENTATION
+SUB-STRAND 1: INTRODUCTION TO MS-POWERPOINT (TABS AND RIBBONS OF MS-POWERPOINT)
+CONTENT
+STANDARDS
+B4.2.1.1. Demonstrate the
+use of MS- PowerPoint
+
+INDICATORS AND EXEMPLARS
+B4.2.1.1.1. Demonstrate the use of clipboard, slides, fonts, paragraph
+and editing in the ribbons under the home ribbons section.
+Guide learners to explore the use of the clipboard, slides, fonts, paragraph, and
+editing features in MS- PowerPoint under the Home tab.
+B4.2.1.1.2. Show a 3-slide presentation using clipboard, slides, fonts,
+paragraph and editing of the ribbons studied.
+Guide learners to prepare and present a prepared project or exercise using
+clipboard, slides, fonts, paragraph and editing of the ribbons studied their work in
+MS-PowerPoint to the class.
+NB: This is to help the learners with software knowledge in
+Ms PowerPoint, office applications to grasp the concept well
+
+8
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation
+2. Communication and collaboration
+3. Cultural identity and global
+citizenship
+4. Personal development and
+leadership
+5. Digital literacy.
+Subject Specific Practices
+1. Software Manipulation Skills
+
+STRAND3: WORD PROCESSING
+SUB-STRAND 1: INTRODUCTION TO WORD PROCESSING (TABS AND RIBBONS OF WORD PROCESSING)
+CONTENT
+STANDARDS
+B4.3.1.1. Demonstrate
+understanding of the use of
+word processing application
+
+INDICATORS AND EXEMPLARS
+B4.3.1.1.1. Demonstrate how to use the clipboard, styles, fonts,
+paragraph and editing.
+Guide learners to use clipboard, styles, fonts, paragraph and editing in the Home
+Tab of MS –Word.
+B4.3.1.1.2. Illustrate the use of the clip board, styles, fonts, paragraph and
+editing.
+Guide learners to use the clipboard, styles, fonts, paragraph and editing feature
+under the Home tab and let learners explore on a simple word document.
+NB. This is to help the learners with software knowledge in office applications (word
+processing) to grasp the concept better.
+
+9
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation.
+2. Communication and collaboration.
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+Subject Specific Practices
+1 Software Manipulation Skills
+
+BASIC 5
+
+10
+© NaCCA, Ministry of Education 2019
+
+Basic 5
+STRAND1: INTRODUCTION TO COMPUTING
+SUB-STRAND 1: GENERATION OF COMPUTERS AND PARTS OF A COMPUTER AND OTHER GADGETS
+CONTENT
+STANDARDS
+B5.1.1.1: Identify parts of a
+computer and technology
+tools
+
+INDICATORS AND EXEMPLARS
+B5.1.1.1.1. Recognise and use output devices.
+Guide learners to recall what they learnt in the previous classes and ask them to
+mention computer devices that produce output
+Softcopy- computer monitor/projector, audio electrical signals etc.
+Hardcopy- printed images, pictures documents,
+NB: This is to help the learner with hardware knowledge.
+B5.1.1.1.2. Describe the types of output device and identify their uses.
+Guide learners to identify types of output devices and their uses. Assist them to list
+them on the board as well as their uses.
+B5.1.1.1.3. Distinguish the difference and similarities between analogue
+and digital devices e.g. telephone, mobile phone, radio, tablets, satellite
+etc.
+Guide the learners to identify the similarities and differences between analogue and
+digital devices. Present examples of analogue and digital devices to learners. Aid
+them to mention other examples of analogue devices and digital devices as well as
+noticing the differences.
+B5.1.1.1.4. Identify the left, right mouse button, holding of mouse,
+performing single, double and triple clicking and dragging object.
+Guide learners to use the mouse to perform performing single, double and triple
+clicking and dragging object into a folder or bring picture(s) describing the
+processes; single, double and triple clicking and dragging objects into a folder and ask
+leaners to point out a mentioned process.
+11
+
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation.
+2. Communication and
+collaboration.
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+Subject Specific Practices
+1 Software Manipulation Skills
+
+CONTENT
+STANDARDS
+B5.1.1.1: Identify parts of a
+computer and technology
+tools
+CONT’D
+
+INDICATORS AND EXEMPLARS
+B5.1.1.1.5. Identify home row keys, top row, bottom row keys, numerical
+pad and type (short sentences).
+Guide learners to type using top row keys (Q, W, E, R, and T keys for the left-hand
+and Y, U, I, O, and P keys for the right-hand), bottom row keys (Z, X, C, V, and B
+keys for the left-hand and N, M, comma, period, and forward slash keys for the
+right-hand), numerical pad (1, 2, 3, …9. etc.) and type an essay (50 words) using
+Word Processor or typing tutorial
+B5.1.1.1.6. Introduction to Windows Interface.
+Guide learners to list the features (i.e. Start Menu Returns, Cortana on Desktop,
+Xbox App, Project Spartan Browser, etc.) and compatibility issues of Windows 10.
+Do this by using leading questions, or any other method.
+B5.1.1.1.7. Summarise the generation of computers.
+Guide learners to recall what has been learnt in previous classes and ask leading
+questions, use scenarios to help learners identify the difference between the types of
+computers, their advantages and disadvantages.
+NB: Learners can practice with the keyboard only in the absence of the
+applications.
+Learners should be guided to play computer games to re-enforce
+keyboard and mouse skills.
+
+12
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+
+1. Creativity and innovation.
+2. Communication and
+collaboration.
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+Subject Specific Practices
+1. Software Manipulation Skills
+
+SUB-STRAND 2:
+INTRODUCTION TO MS-WINDOWS INTERFACE (DESKTOP BACKGROUND AND LOCATIONS OF THE COMPUTER)
+CONTENT
+STANDARDS
+
+INDICATORS AND EXEMPLARS
+
+B5.1.2.1. Demonstrate the
+use of the Desktop
+Background as well as
+working with folders.
+
+B5.1.2.1.1. Personalise the Desktop Background and edit its images (e.g.
+image, icons and Taskbar of the background).
+Guide learners to create their own background picture using any application (e.g.
+paints). Guide them to use it as background picture.
+B5.1.2.1.2. Recognise how to customise the Desktop Background using
+Change Background, Start menu and Pin to taskbar or start menu.
+Guide learners to identify and use task bar, start menu, etc.
+B5.1.2.1.3. Describe how to Personalise the Desktop Background using
+advance tools and settings.
+Guide learners to customize the Start Menu and the Notification Area.
+B5.1.2.1.4. Creating a short cut, adding or removing common icons on
+the desktop.
+Guide learners to create shortcuts of icons on the computers’ desktop.
+B5.1.2.1.5. Moving, copying and pasting a file or icon into and from a
+folder on the desktop
+Guide learners to copy and paste a file or icon into and from a folder on the
+desktop.
+B5.1.2.1.6. Demonstrate understanding of the File Explorer window and
+locations of the computer through the file explorer.
+Guide learners to use the file explorer to locate files.
+NB: This is to help the learner with the fundamental skills of creativity in
+computing and Computer Science.
+13
+
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation.
+2. Communication and
+collaboration.
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+Subject Specific Practices
+1. Software Manipulation Skills
+
+SUB-STRAND 3: DATA, SOURCES AND USAGE
+CONTENT
+STANDARDS
+B5.1.3.1. Illustrate the use of
+Data and identify their
+sources.
+
+INDICATORS AND EXEMPLARS
+B5.1.3.1.1. Use Strategies for identifying data from results of an
+experiment.
+Guide learners to identify the types of data (qualitative and quantitative) by asking
+leading questions. Task them to convert data from one format to another without
+losing its value.
+B5.1.3.1.2. Identify primary sources of information e.g. photographs,
+audio, video recordings, letters etc.
+Guide learners to mention or talk about primary sources of information. Task
+learners to record data from the primary source and bring them to class for
+discussion. List items recorded and ask learners to group according to their
+similarities.
+B5.1.3.1.3. Identify secondary sources of information e.g. radio, fax,
+telephones calls, SMS etc.
+Guide learners to mention or talk about where one can receive or send information
+by asking leading questions. Task learners to record data from the news on the
+radio and bring to class for discussion. List items recorded and ask learners to group
+according to their similarities.
+B5.1.3.1.4. Demonstrate sending and sharing information e.g. arranging
+data, sorting and calculations etc.
+Task learners to sort data in alphabetical order (increasing and decreasing order)
+and perform basic calculations such as multiplying, dividing and adding vales of
+sample data. Learners can also be guided to generate age data from their dates of
+birth.
+NB: recall content in B4 and add to it.
+B5.1.3.1.5. Demonstrate basic calculations on sample data e.g. arranging
+and summing and averaging data.
+Guide learners to add and find the average data collected and present their findings
+to the class
+
+14
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation
+2. Communication and collaboration
+3. Cultural identity and global
+citizenship
+4. Personal development and
+leadership
+5. Digital literacy.
+Subject Specific Practices
+1. Software Manipulation Skills
+2. Communication
+
+CONTENT
+STANDARDS
+
+INDICATORS AND EXEMPLARS
+
+B5.1.3.1. Illustrate the use of
+Data and identify their
+sources.
+
+B5.1.3.1.6. Recognise data types (integer, double, float).
+Divide learners into two groups and ask one group to mention a number and the
+other group to identify the type of data mentioned
+
+CONT’D
+
+B5.1.3.1.7. Demonstrate sending and sharing information.
+Guide learners to send messages to each other via SMS, email. etc.
+NB: This is to help the learner with fundamental principle of problem
+solving skills and creativity in computing and computer science.
+B5.1.3.1.8 Select the samples and collect data (e.g. listening to radio,
+newspaper, talking to people etc.)
+Put learners into groups, task them to interview teachers using simple questionnaire,
+and record the data in books.
+B5. 1.3.1.9 Make simple tables and diagrams from the collected data.
+Bring tools or pictures of the tools in a box or container and ask learners to select
+tools for collecting data out of the box or container. Alternatively, ask learners to
+bring tools for collecting data for a class discussion.
+B5. 1.3.1.10 Analyse tables, maps, diagrams, photographs and charts, and
+generalize the results and make suggestions (e.g. Finding sum or grand
+total).
+Task learners to calculate the average, mean, sum and difference between data
+collected in an earlier class. NB: This is to help the learner with fundamental
+principle of problem solving skills and creativity in computing and computer science.
+
+15
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation.
+2. Communication and
+collaboration.
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+Subject Specific Practices
+1. Arithmetic
+2. Data Manipulation Skill
+3. Communication
+4. Critical Thinking
+
+SUB-STRAND 4: TECHNOLOGY IN THE COMMUNITY (COMMUNICATION)
+CONTENT
+STANDARDS
+B5.1.4.1. Demonstrate the
+use of Technology in the
+community
+
+INDICATORS AND EXEMPLARS
+B5.1.4.1.1. List the effects of technology on the community.
+Guide learners to investigate the types and types importance of compression of
+document
+Positive effects – health care, education, manufacturing, agriculture etc.
+Negative effects – resource depletion ,pollution, privacy and security etc.,
+B5.1.4.1.2. Explain the fundamentals of digital system components
+(hardware, software and networks).
+Guide learners to brainstorm the basics of digital system components such as
+hardware, software and networks).
+B5.1.4.1.3. Discuss how technology is used to save lives in community and
+how they are used
+Guide learners to explore how technology is used to save lives in communities.
+Group them into groups of a maximum of five and let them present their findings to
+the class.
+B5.1.4.1.4. Discuss the effects of technology on the community.
+Guide learners to brainstorm the effects of technology on the community. Show
+learners videos or pictures of effects of technology on the community. Let them
+discuss in groups, the effects of technology on their own community.
+Positive effects – health care, education, manufacturing, agriculture etc.
+Negative effects – resource depletion, pollution, privacy and security etc.
+NB: This is to help the learners to have fundamental knowledge of
+hardware such as robots and sensors).
+
+16
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation
+2. Communication and
+collaboration
+3. Cultural identity and global
+citizenship
+4. Personal development and
+leadership
+5. Digital literacy.
+Subject Specific Practices
+1. Software Manipulation Skills
+2. Communication
+
+STRAND 2: PRESENTATION
+SUB-STRAND 1: INTRODUCTION TO MS-POWERPOINT (TABS AND RIBBONS OF MS-POWERPOINT)
+CONTENT
+STANDARDS
+B5.2.1.1. Demonstrate how
+to use Microsoft PowerPoint
+
+INDICATORS AND EXEMPLARS
+B5.2.1.1.1. Show the use of Insert, design, animation and transition in the
+ribbons section. (New, Open, Save, Save As, Print and Close) and the
+Insert and design ribbon.
+Ask learners to use “File menu”, “Insert” and “Design Ribbons” to create a new
+MS-PowerPoint slide and use shapes in the “Insert ribbon” to draw the Ghana flag”.
+B5.2.1.1.2. Show a 5-slide presentation using of Insert, design, animation
+and transition of the ribbons studied.
+Ask learners to use “File menu”, “Insert” and “Design Ribbons” to design a
+colourful 5-paged MS-PowerPoint on the topic “Myself”
+NB. This is to help learners with software knowledge). to understand the concept
+well in office applications (Microsoft PowerPoint)
+
+17
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation.
+2. Communication and
+collaboration.
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+Subject Specific Practices
+1. Software Manipulation Skills
+2. Communication
+
+STRAND 3: WORD PROCESSING
+SUB-STRAND 1: INTRODUCTION TO WORD PROCESSING (TABS AND RIBBONS OF WORD PROCESSING)
+CONTENT
+STANDARDS
+B5.3.1.1. Illustrate the use of
+word processing
+
+INDICATORS AND EXEMPLARS
+B5.3.1.1.1. Demonstrate the use of Insert, Design, and Layout (New,
+Open, Save, Save As, Print and Close) and Insert, Design, and Layout
+ribbons. (i.e. clipboard, slides, fonts and paragraph).
+Guide learners to use File menu, Insert, Design and Layout Ribbon.
+B5.3.1.1.2. Illustrate the use Insert, Design and Layout.
+Guide the learners to create and format a document.
+NB. This is to help learners with software knowledge such as office
+applications (word processing).
+
+18
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation.
+2. Communication and
+collaboration.
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+Subject Specific Practices
+1. Software Manipulation Skills
+
+STRAND 5: PROGRAMMING AND DATABASES
+SUB-STRAND 1: INTRODUCTION TO DATABASES, ALGORITHM AND PROGRAMMING.
+CONTENT
+STANDARDS
+B5.5.1.3. Demonstrate how
+to use Databases
+
+INDICATORS AND EXEMPLARS
+B5.5.1.3.1. Describe databases.
+Guide learners to identify the features of a database and the types of databases that
+exist. Ask learners to select the databases form a list of items written on the board.
+B5.5.1.3.2. Discuss the importance and uses of database.
+Play a video of the importance and uses of databases and ask learners to mention
+other uses of database and their importance. Assist learners to realise that Database
+designers typically organise the data to model aspects of reality in a way that
+supports processes requiring information.
+B5.5.1.3.3. Describe the types of database.
+Guide learners to describe the types of database.
+B5.5.1.3.4. Identify types of databases and data.
+Guide learners to investigate on the types of databases and data. Let learners
+present their findings to the class.
+B5.5.1.3.5. Explain fundamental database concepts.
+Guide learners to explore the fundamental database concepts e.g. tables and data
+types, data selection and manipulation, security, and backup and restore.
+B5.5.1.3.6 Discuss programming languages and their use
+(e.g. scratch, vb.net etc.)
+Guide learners to investigate in groups on the programming languages and their use
+(e.g. scratch, vb.net etc.) NB: This is to give a foundation to the learner in computing
+and Computer Science which is more concerned with uses of and development of
+programming together with fundamental principles of problem-solving and creativity.
+
+19
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation.
+2. Communication and
+collaboration.
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+Subject Specific Practices
+1. Data Manipulation Skills
+
+SUB-STRAND 2 : INTRODUCTION TO ELECTRONIC SPREADSHEET(TABS AND RIBBONS MANIPULATION)
+CONTENT
+STANDARDS
+B5.5.1.2. Demonstrate how
+to use Electronic
+Spreadsheet.
+
+INDICATORS AND EXEMPLARS
+B5.5.1.2.1. Identify Electronic Spreadsheets and their uses.
+Play video on Electronic Spreadsheets and their uses in society. Assist learners to
+list examples of Electronic Spreadsheets (MS Excel, Numbers, Google sheets, Lotus
+1-2-3 etc.). Guide learners to explore the uses of electronic spreadsheets.
+B5.5.1.2.2. Learners discuss the importance of Electronic Spreadsheets.
+Guide learners to discuss the importance of Electronic Spreadsheets and what they
+are used for.
+B5.5.1.2.3. Learners get familiar with the interface of MS-Excel
+Guide Learners to demonstrate how to access MS-Excel on any computer or
+gadget and display text in MS-Excel.
+NB. This is to help the learner with an understanding of application
+softwares (Electronic Spreadsheet application).
+
+20
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation.
+2. Communication and collaboration
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+Subject Specific Practices
+1. Software Manipulation Skills
+2. Communication skills
+
+STRAND 6: INTERNET AND SOCIAL MEDIA SUB-STRAND 1: NETWORK OVERVIEW
+CONTENT
+STANDARDS
+B5.6.1.1. Demonstrate how
+to Network computers.
+
+INDICATORS AND EXEMPLARS
+B5.6.1.1.1. Explain what a network is.
+Guide the learners to discuss how devices communicate. Demonstrate simple
+connectivity between nodes.
+B5.6.1.1.2. Describe how the internet works.
+Guide learners to distinguish between PAN, LAN, MAN, WAN and Internet.
+B5.6.1.1.3. Explain what the Internet is.
+Guide learners to discuss the inter-connection of the internet computers (learners
+should be made to realise that the internet is a network of networks).
+Also, guide learners to come out with examples of Internet Communication.
+
+21
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation.
+2. Communication and
+collaboration.
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+Subject Specific Practices
+1. Communication skills
+
+SUB-STRAND 2: WEB BROWSERS AND WEB PAGES
+CONTENT
+STANDARDS
+B5.6.2.1. Demonstrate how
+to use Web Pages.
+
+INDICATORS AND EXEMPLARS
+B5.6.2.1.1. Explain what a web browser is and its use.
+Guide learners to understand the concept and use of browsers through practical
+lessons. Show interfaces or images of browsers to learners.
+B5.6.2.1.2. Identify web browsers.
+Guide learners to list the various types of browsers e.g. Firefox, Internet Explorer,
+Chrome etc. through practical lessons or the use of pictures
+B5.6.2.1.3. Demonstrate the use of MS-Internet Explorer.
+Guide learners to launch MS-Internet Explorer and use the components (navigation,
+browse, etc.)
+B5.6.2.1.4. Show how to create and remove a favorites link.
+Guide learners to practice how to create or remove favorite links in practical
+session(s).
+B5.6.2.1.5. Create favorites folder.
+Guide learners to practice how to create a favorites folder through practical
+session(s)
+B5.6.2.1.6. Use the links toolbar.
+Guide learners to practice the use of link toolbar through practical session(s).
+NB: This is to help the learner with the fundamental skills of creativity in computing
+and Computer Science.
+
+22
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation.
+2. Communication and
+collaboration.
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+Subject Specific Practices
+1.Communication skills
+2. Internet skills
+
+CONTENT
+STANDARDS
+B5.6.2.1. Demonstrate how
+to use Web Pages
+CONT’D
+
+INDICATORS AND EXEMPLARS
+B5.6.2.1.7. Explain what a Web Page is.
+Guide learners to explore features of a Web Page (text, graphics, audio, video,
+animation etc. through practical lessons)
+B5.6.2.1.8. Explain what a home page is.
+Guide learners to identify a home page from other web pages, through practical
+lessons.
+B5.6.2.1.9. Movement within and between web pages using hyperlinks.
+Guide learners to practice clicking hyperlinks, through practical lessons. NB: This is
+to help the learner with the fundamental skills of creativity in computing and
+Computer Science.
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation.
+2. Communication and
+collaboration.
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+Subject Specific Practices
+1. Internet Skills
+2. Communication
+
+SUB-STRAND 3: SURFING THE WORLD WIDE WEB
+CONTENT
+STANDARDS
+B5.6.3.1. Demonstrate how
+to use Favorite places
+
+INDICATORS AND EXEMPLARS
+B5.6.3.1.1. Show how to create a favorite link.
+Guide learners to create a favorite link. .
+B5.6.3.1.2. Demonstrate deleting favorite links.
+Guide learners to delete favorite links they have created in the previous lesson.
+B5.6.3.1.3. Create favorite folder.
+Guide learners to create a favorite folder.
+B5.6.3.1.4. Use the links toolbar.
+Guide learners to use the links toolbar.
+NB: This is to help the learner with the fundamental skills of surfing and
+navigating the internet.
+23
+
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation.
+2. Communication and
+collaboration.
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+Subject Specific Practices
+1. Communication
+
+SUB-STRAND 4: FAVOURITE PLACES AND SEARCH ENGINE
+CONTENT
+STANDARDS
+B5.6.4.1. Demonstrate how
+to use Search Engines.
+
+INDICATORS AND EXEMPLARS
+B5.6.4.1.1. Identify common search engines.
+Guide learners to discuss search engines and the different types search engines
+(Google, DuckDuckGo, Yahoo etc.)
+B5.6.4.1.2 Explore how smart search engines work.
+Guide learners to how smart search engines work (i.e. how professionals or people
+seek information for their work or interests and what information they draw from
+it).
+B5.6.4.1.3. Demonstrate how to handle search results.
+Guide learners to explore how to handle search results from a search engine.
+NB: This is to help the learner with the fundamental skills of surfing and
+navigating the internet.
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation.
+2. Communication and
+collaboration.
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+Subject Specific Practices
+1. Communication Skills
+2. Research Skills
+
+SUB-STRAND 5: USING ONLINE FORMS
+CONTENT
+STANDARDS
+B5.6.5.1. Demonstrate the
+Usage of Forms
+
+INDICATORS AND EXEMPLARS
+B5.6.5.1.1. Identify and describe forms in a web page.
+Guide learners to fill out dropdown boxes, combo box, Text fields etc.
+B5.6.5.1.2. Demonstrate working on or offline.
+Guide learners to register or fill out online forms as well as offline through practical
+sessions. Learners can be guided to use created PDF or Word forms to practice
+filling out forms offline.
+B5.6.5.1.3. Demonstrate downloading of files (e.g. pictures, audio, pdf
+etc.).
+Guide learners to download a file through practical session(s).
+24
+
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation.
+2. Communication and
+collaboration.
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+Subject Specific Practices
+1. Communication
+2. Software Manipulation Skill
+development
+
+SUB-STRAND 6: CUSTOMIZING YOUR BROWSER
+CONTENT
+STANDARDS
+B5.6.6.1. Show how to
+Customize a Browser
+
+INDICATORS AND EXEMPLARS
+B5.6.6.1.1. Demonstrate how to set default search engines.
+Guide learners to set default search engines.
+B5.6.6.1.2. Show how to set homepages.
+Guide learners to set homepages.
+B5.6.6.1.3. Show how to make Browser apps, add-ons, plug-ins, and
+extensions.
+Guide learners to make Browser apps, add-ons, plug-ins, and extensions.
+B5.6.6.1.4. Illustrate how to customise the browser toolbar.
+Facilitate learners to customise the browser toolbar.
+B5.6.6.1.5. Identify cookies in web browsers.
+Aid learners to recognize cookies in web browsers.
+B5.6.6.1.6. Illustrate how to set disk space or cache usage.
+Guide learners to set disk space or cache usage.
+
+25
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation.
+2. Communication and
+collaboration.
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+Subject Specific Practices
+1. Internet Skill Development
+2. Communication
+
+SUB-STRAND 7: ELECTRONIC EMAIL
+CONTENT
+STANDARDS
+B5.6.7.1. Demonstrate the use
+of Electronic Mail
+
+INDICATORS AND EXEMPLARS
+B5.6.7.1.1. Identify the various e-mail service providers.
+Guide learners to explore on the various email service providers (email,
+outlook.com, icloud mail).
+B5.6.7.1.2. Demonstrate the use of internet e-mail addresses.
+Guide learners to start an email address. Assist learners to use email address.
+B5.6.7.1.3. Creating an email account e.g. Yahoo mail or Gmail account.
+(Yahoo Mail or Gmail account.).
+Guide learners to create email account (i.e. the possible steps).
+B5.6.7.1.4. Illustrate viewing received messages and Create or Compose
+messages. Guide learners to write messages, format text, etc.
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation
+2. Communication and
+collaboration
+3. Cultural identity and global
+citizenship
+4. Personal development and
+leadership
+5. Digital literacy.
+Subject Specific Practices
+1. Communication
+2. Software Manipulation Skill
+development
+
+SUB-STRAND 8: INTERNET OF THINGS (IOT)
+CONTENT
+STANDARDS
+B5.6.8.1. Demonstrate the use
+of Internet of Things (IoT)
+
+INDICATORS AND EXEMPLARS
+B5.6.8.1.1 Describe the purpose Internet of Things.
+Guide learners to discuss the IoT in groups.
+B5.6.8.1.2. Give examples of Internet of Things with a consumer part and
+an industrial/business segment.
+Guide learners to give, explore and present in class examples of Internet of Things
+with a consumer part and an industrial/business segment.
+B5.6.8.1.3. Identify components of Internet of Things.
+Guide learners to explore the components of the Internet of Things. e.g. Hardware,
+Data, Software and Connectivity.
+26
+
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation.
+2. Communication and
+collaboration.
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+
+CONTENT
+STANDARDS
+B5.6.8.1. Demonstrate the use
+of Internet of Things (IoT)
+CONT’D
+
+INDICATORS AND EXEMPLARS
+B5.6.8.1.4. Identify the role of smart sensors in the Internet of Things.
+Guide learners to the explore the role of smart sensors in the Internet of Things e.g.
+Sensing and data collection capability such as climatic change (e.g. Electronic Doors,
+RFID, CCTV camera, etc.), define at least five terms and acronyms of IoT.
+NB: This is to help the learner to fundamental knowledge of hardware such as
+robots and sensors).
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+Subject Specific Practices
+1. Communication
+2. Software Manipulation Skill
+development
+
+SUB-STRAND 9: DIGITAL LITERACY
+CONTENT
+STANDARDS
+B5.6.4.9.1. Demonstrate
+proficiency in Digital
+Literacy.
+
+INDICATORS AND EXEMPLARS
+B5.6.4.9.1.1. Describe private and personal information.
+Encourage learners to tell you what they know about private and personal
+information online. Ask leading questions to help them bring out points they could
+not make out
+B5.6.4.9.1.2. Discuss various techniques on online protection from online
+identity theft.
+Guide learners to discuss security measures online such as logging out after
+browsing, etc.
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation.
+2. Communication and
+collaboration.
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+Subject Specific Practices
+1.Communication
+2. Phonics
+3. Skill development
+
+27
+© NaCCA, Ministry of Education 2019
+
+SUB-STRAND 10: DIGITAL LITERACY
+CONTENT
+STANDARDS
+B5.6.10.1. Demonstrated the
+application of Network
+Etiquette
+(Netiquette).
+
+INDICATORS AND EXEMPLARS
+B5.6.10.1.1. Define digital footprint.
+Guide learners to explain digital footprint
+B5.6.10.1.2. Illustrate how to keep some information from public when
+using the internet.
+Guide learner to avoid posting personal information
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation.
+2. Communication and
+collaboration.
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+Subject Specific Practices
+1. Communication
+2. Phonics
+3. Skill development
+
+STRAND 7: HEALTH AND SAFETY IN USING ICT TOOLS
+SUB-STRAND 1: HEALTH AND SAFETY IN USING ICT TOOLS
+CONTENT
+STANDARDS
+
+INDICATORS AND EXEMPLARS
+
+B5.7.1.1. Demonstrate the
+application of Health and
+safety measures, in using ICT
+tools.
+
+B5.7.1.1.1. Identify some major health hazards associated with the use of
+ICT tools’ use.
+Guide the learners to discuss wrist pain and sitting posture (neck, back and waist
+pain).
+B5.7.1.1.2. Describe proper sitting posture.
+Guide learners in groups to discuss, identify and practise the proper sitting posture
+(i.e. siting at 90 degrees, wrist should be supported with a wrist pad, take short
+breaks etc.) when using the computer.
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation.
+2. Communication and
+collaboration.
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+Subject Specific Practices
+1. Communication
+
+28
+© NaCCA, Ministry of Education 2019
+
+BASIC 6
+
+29
+© NaCCA, Ministry of Education 2019
+
+Basic 6
+STRAND 1: INTRODUCTION TO COMPUTING
+SUB-STRAND 1: GENERATION OF COMPUTERS AND PARTS OF A COMPUTER AND OTHER GADGETS
+CONTENT
+STANDARDS
+B6.1.1.1: Identify parts of a
+computer,
+technology tools and history
+of computers
+
+INDICATORS AND EXEMPLARS
+B6.1.1.1.1. Learn about the Generation of Computers
+Guide learners to discuss the Generation of Computers.
+Microprocessors - Super Computers, Mainframe, Minicomputers and the main
+computer mixed Microcomputers, Mobile Phones, etc
+B6.1.1.1.2. Identify components of a Computer System: Hardware,
+Software and Liveware.
+Guide learners to identify Hardware (input, output, storage and communication),
+Software, Liveware and discuss the components and how they are used
+NB: the discussion should be limited to definition level.
+B6.1.1.1.3. Identify the left, right mouse button, holding of mouse,
+performing single, double and triple clicking, dragging object and using
+the scroll wheel
+Guide learners to master the use of mouse through practical sessions and games.
+B6.1.1.1.4 Demonstrate proper use of keyboarding technique.
+Guide learners to type stories using Word Processor or typing tutorial (e.g. Mavis
+Beacon) to improve typing speed
+B6.1.1.1.5. Summarise the generation of computers (second generation
+of computers.)
+Group learners into groups. Guide them to summarise the generation of computers.
+After, let them present their findings in groups to the class. eg. First generation,
+Second generation, Third generation etc.
+
+30
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation.
+2. Communication and
+collaboration.
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+Subject Specific Practices
+1.Communication
+2. Phonics
+3. Skill development
+
+SUB-STRAND 2: INTRODUCTION TO MS-WINDOWS INTERFACE
+(DESKTOP BACKGROUND AND LOCATIONS OF THE COMPUTER)
+CONTENT
+STANDARDS
+B6.1.2.1. Demonstrate the
+use of the Desktop
+Background as well as
+working with folders.
+
+INDICATORS AND EXEMPLARS
+B6.1.2.1.1. Explore the use of the desktop Background, changing the
+themes colours and User account. (e.g. classic, icons and Taskbar of the
+background)
+Guide learners to the use of the desktop Background, change the themes colours
+and the User account.
+B6.1.2.1.2. Demonstrate the use of the Recycle Bin or Trash Can.
+Guide learners to use the recycle bin by deleting and viewing deleted files.
+B6.1.1.1.3 Perform permanent delete or Empty Trash can and restoring
+files or icons in the recycle bin.
+Support learners to liken the Recycle bin and its use to the real-world office trash
+can.
+B6.1.2.1.4. Explore the use of Copy, Paste, Delete tools, the moving of
+folders by using the Desktop Pop-Up menu.
+Guide learners to the use of the Copy, Paste, Delete tools, the moving of folders by
+using the Desktop Pop-Up menu.
+B6.1.2.1.5. Illustrate the use of File Explorer window and locations of the
+computer through the file explorer.
+Guide learners to the use File Explorer window and locations of the computer
+through the file explorer.
+B6.1.2.1.6. Locate the hard drives, and other removable storage icons in
+the File explorer.
+Guide learners to locate the hard drives and other removable storage icons in the
+File explorer.
+31
+
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation.
+2. Communication and
+collaboration.
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+Subject Specific Practices
+1.Skill development
+2. Communication
+
+CONTENT
+STANDARDS
+B6.1.2.1. Demonstrate the
+use of the Desktop
+Background as well as
+working with folders.
+CONT’D
+
+INDICATORS AND EXEMPLARS
+B6.1.2.1.7. Use the File Explorer Ribbon (Home Ribbon only), that is, the
+use of the Clipboard and Organise tools of the Home Ribbon of the File
+Explorer, as well as the Open New Window and Close tools of the File
+Menu of the File Explorer.
+Guide learners to use the File Explorer Ribbon (Home Ribbon only); the use of the
+Clipboard and Organise tools of the Home Ribbon of the File Explorer, and Open
+New Window and Close tools of the File Menu of the File Explorer.
+B6.1.2.1.8. Demonstrate the use of the navigation Pane of the File
+Explorer to access different locations of the computer from the
+navigation pane.
+Guide learners to the use of the navigation Pane of the File Explorer to access
+different locations of the computer from the navigation pane.
+B6.1.2.1.9. Demonstrate the use of Frequent Folders Section of the File
+Explorer to access frequently used locations of the computer.
+Guide learners to explore the use of Frequent Folders Section of the File Explorer
+to access frequently used locations of the computer.
+B6.1.2.1.10. Demonstrate the use of Recent Files Section of the File
+Explorer to access frequently used files of the computer.
+Guide learners to explore the use of Recent Files Section of the File Explorer to
+access frequently used files of the computer.
+
+32
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation.
+2. Communication and
+collaboration.
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+Subject Specific Practices
+1.Skill development
+2. Communication
+3. Phonics
+
+SUB-STRAND 3: DATA, SOURCES AND USAGE
+CONTENT
+STANDARDS
+B6.1.3.1. Demonstrate the
+use of Data and identify
+sources of data
+
+INDICATORS AND EXEMPLARS
+B6.1.3.1.1. Identify types of data. (Integers, double, characters, float etc.)
+Guide learners to identify and record data in the different forms.
+B6.1.3.1.2. Identify more sources of data and information e.g. internet
+(emailing, Skype, SMS etc.)
+Guide learners to discuss where one can get data and information.
+B6.1.3.1.3. Demonstrate sending and receiving information from other
+gadgets e.g. Bluetooth, Infrared, Radio, Fax, Telephones calls, SMS etc.
+Guide learners to mention or talk about where one can receive or send
+information
+B6.1.3.1.4. Demonstrate basic manipulations on sample data e.g.
+arranging data in a matrix table, sorting and calculations etc.
+Guide learners to sort data in alphabetical order (increasing and decreasing order)
+and perform basic calculations such as multiplying, dividing and adding vales of
+sample data. Learners can also be guided to generate age data from dates of birth.
+B6.1.3.1.5. Demonstrate how to manage users of the Desktop
+Guide learners to brainstorm how to manage users of the Desktop. Use videos or
+pictures that show how to manage users of the Desktop. Facilitate learners to do
+same.
+NB: This is to help the learner with fundamental principle of problem solving skills
+and creativity in computing and computer science.
+
+33
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation.
+2. Communication and
+collaboration.
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+Subject Specific Practices
+1.Skill development
+2. Communication
+3. Phonics
+4. Arithmetic
+
+CONTENT
+STANDARDS
+B6.1.3.1. Demonstrate the
+use of Data and identify
+sources of data
+
+INDICATORS AND EXEMPLARS
+B6.1.3.1.6. Demonstrate how to collect data (e.g. listening to radio,
+reading newspapers, interviews use of questionnaires etc.)
+Lead learners to collect data the community using simple questionnaire, surveys,
+documents, observations, and record their findings data
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+
+B6.1.3.1.7. Demonstrate the use of the tools for collecting data.
+Bring tools or pictures of the tools for collecting data e.g. case studies, interviews,
+checklists, etc.
+
+1. Creativity and innovation
+2. Communication and
+collaboration
+3. Cultural identity and global
+citizenship
+4. Personal development and
+leadership
+5. Digital literacy.
+
+B6.1.3.1.8. Demonstrate data interpretation by computing data to gain
+required information (e.g. Finding sum or grand total using Electronic
+Spreadsheet).
+Guide learners to make meanings out of data collected using tables, charts or
+Spreadsheet.
+
+Subject Specific Practices
+1.Skill development
+2.Communication
+3.Phonics
+4. Arithmetic
+
+CONT’D
+
+B6.1.3.1.9. Demonstrate data presentation in different forms.
+Guide learners to write data in tables, pictures, charts, maps, words etc. as well as
+type them in a Spreadsheet.
+B6.1.3.1.10. Demonstrate how to store data.
+Guide learners to use the tools stated above to store data in different formats.
+eg. handwriting, phone recording, magnetic tapes, optical disc etc.
+
+34
+© NaCCA, Ministry of Education 2019
+
+CONTENT
+STANDARDS
+B6.1.3.1. Demonstrate the
+use of Data and identify
+sources of data
+
+INDICATORS AND EXEMPLARS
+B6.1.3.1.11. Manipulate data to gain required output (e.g. Finding sum,
+mean, grand totals, maximum, minimum, mode, division, multiplication
+etc.)
+Guide learners to find the mode, product, minimum value, maximum value etc.
+
+CONT’D
+NB: This is to help the learner with fundamental principle of problem
+solving skills and creativity in computing and Computer Science.
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation.
+2. Communication and
+collaboration.
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+Subject Specific Practices
+1. Arithmetic
+2. Skill development
+3. Communication
+
+35
+© NaCCA, Ministry of Education 2019
+
+SUB-STRAND 4: TECHNOLOGY IN THE COMMUNITY
+CONTENT
+STANDARDS
+B6.1.4.1. Demonstrate the
+use of Technology in the
+community.
+
+INDICATORS AND EXEMPLARS
+B6.1.4.1.1. Define communication.
+Put learners into groups, to discuss communication and present findings to the class.
+B6.1.4.1.2. Identify three more technological tools for communication in
+the community.
+Guide learners to mention and describe the importance of technology in
+communication
+B6.1.4.1.3. Demonstrate communication with others.
+Guide learners to demonstrate communication (explain how communication is done
+via TV, radio, phone call, satellite etc.).
+B6.1.4.1.4. Identify three more importance of technology in
+communication.
+Guide learners to mention the importance of technology in communication
+NB: Technological tools stated here should be different from those stated
+in B5.This is to help the learner to fundamental knowledge of hardware
+such as robots and sensors).
+
+36
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation.
+2. Communication and
+collaboration.
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+Subject Specific Practices
+1.Communication
+2. Phonics
+3. Skill development
+
+STRAND 2: PRESENTATION
+SUB-STRAND 1: INTRODUCTION TO MS-POWERPOINT
+CONTENT
+STANDARDS
+B6.2.1.1 Demonstrate how
+to use Microsoft PowerPoint
+
+INDICATORS AND EXEMPLARS
+B6.2.1.1.1. Demonstrate how to use the File menu, the Insert and Design
+Ribbon from B5.
+Guide learners to use File menu, Insert and Design Ribbons.
+B6.2.1.1.2. Demonstrate how to use icons in the Text group in the Insert
+Ribbon.
+Guide learners to properly use the icons in the Insert Ribbon.
+B6.2.1.1.3. Be able to give a 5-side presentation in MS-PowerPoint using
+the tools of the ribbons studied.
+Guide learners to present their work to the class
+NB. This is to help the learner with software knowledge such as in office
+applications (Presentation software).
+
+37
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation.
+2. Communication and collaboration
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+Subject Specific Practices
+1.Skill development
+2. Communication
+3. Phonics
+
+STRAND 3: WORD PROCESSING
+SUB-STRAND 1: INTRODUCTION TO MS-POWERPOINT
+CONTENT
+STANDARDS
+B6.3.1.1. Illustrate the use
+of word processing
+application
+
+INDICATORS AND EXEMPLARS
+B6.3.1.1.1. Demonstrate how to use the File menu and Insert, Design, and
+Layout Ribbons from B5.
+Guide learners to use File menu, Insert, Design and Layout Ribbon.
+B6.3.1.1.2 Demonstrate how to use icons in the Text group in the Insert
+Ribbon.
+Guide learners to properly use the icons in the Insert Ribbon.
+B6.3.1.1.3 Be able to use the attributes of the ribbons studied in a
+paragraph.
+Guide the learners to create and format text in a document
+NB. This is to help the learner with software knowledge such as in office
+applications (word processing).
+
+38
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation
+2. Communication and collaboration
+3. Cultural identity and global
+citizenship
+4. Personal development and
+leadership
+5. Digital literacy.
+Subject Specific Practices
+1.Skill development
+2.Communication
+3. Phonics
+
+STRAND 5: PROGRAMMING AND DATABASES
+SUB-STRAND 1: INTRODUCTION TO DATABASES, ALGORITHM AND PROGRAMMING. LANGUAGES
+(e.g. MS- EXCEL, SCRATCH, VB DOT NET ETC.)
+CONTENT
+STANDARDS
+B6.5.1.1. Demonstrate how
+to manipulate data in
+Databases
+
+INDICATORS AND EXEMPLARS
+B6.5.1.1.1 Describe Databases.
+Guide learners through discussion in groups, to list and describe databases.
+B6.5.1.1.2 Identify databases and data structures.
+Guide learners to identify databases structures. ie. database structure is the
+collection of record type and field type definitions that comprises of the database.
+B6.5.1.1.3. Explain Fundamental Database concepts.
+Guide learners apply the fundamental database concepts to a sample database in a
+class discussion
+B6.5.1.1.5. Describe the basics of Relational Data model.
+Lead learners to describe the basics of Relational Data model. ie. rows and columns
+B6.5.1.1.6. Identify the basics of logical Database Design.
+Guide learners to list the basics of logical database design and develop sample
+database design.
+B6.5.1.1.7. Illustrate basics of relational algebra.
+Guide learners apply the basics of relational algebra in a sample database.
+
+39
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation.
+2. Communication and
+collaboration.
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+Subject Specific Practices
+1.Skill development
+2. Communication
+
+CONTENT
+STANDARDS
+B6.5.1.1. Demonstrate how
+to manipulate data in
+Databases
+
+INDICATORS AND EXEMPLARS
+B6.5.1.1.8. Operate basics SQL: querying and manipulating data.
+Guide learners to write simple queries to retrieve specific names of students from a
+database of the names of all students in class database design. eg. CREATE
+DATABASE , SELECT and UPDATE
+
+CONT’D
+B6.5.1.1.9. Operate basics SQL: querying and manipulating data.
+Guide learners to write simple queries to retrieve specific names of students from a
+database of the names of all students in class. e.g CREATE TABLE, DELETE and
+INSERT INTO,
+NB: This is to give a foundation to the learner in computing and
+Computer Science which is more concerned with uses of and
+development of programming together with fundamental principles of
+problem-solving and creativity.
+
+40
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation.
+2. Communication and
+collaboration.
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+Subject Specific Practices
+1.Skill development
+2. Arithmetic
+3.Communication
+
+SUB-STRAND 2: INTRODUCTION TO ELECTRONIC SPREADSHEET
+(TABS AND RIBBONS MANIPULATION)
+CONTENT
+STANDARDS
+B6.5.3.1. Demonstrate how
+to use Spreadsheet.
+
+INDICATORS AND EXEMPLARS
+B6.5.3.1.1 Demonstrate how to use the ribbons under the home ribbons.
+(i.e. clip board, styles, fonts, paragraph and editing)
+Guide learners to do a presentation on the use of the ribbons under the home
+button.
+B6.5.3.1.2. Learners to create basic worksheets using Microsoft Excel
+2016.
+Guide learners to develop worksheet consisting of list of names ie. teachers,
+students, friends, families, etc.
+B6.5.3.1.3. Perform calculations in an MS-Excel worksheet.
+Guide learners to develop worksheet that will help in calculating multiplication,
+addition and subtraction
+B6.5.3.1.4. Modify an MS-Excel worksheet.
+Guide learners to modify worksheet by adding the age of learners in the class to the
+list of learners created in an earlier class.
+B6.5.3.1.5 Modify the appearance of data within a worksheet.
+Show examples of modified data in (a) worksheet(s), either on projected screens or
+pictures. Guide learners to modify the appearance of data within a worksheet.
+
+41
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation.
+2. Communication and
+collaboration.
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+Subject Specific Practices
+1. Skill development
+2. Arithmetic
+
+CONTENT
+STANDARDS
+B6.5.3.1. Demonstrate how
+to use Microsoft Excel
+
+INDICATORS AND EXEMPLARS
+B6.5.3.1.6. Manage Excel workbooks.
+Guide learners to properly name MS-Excel workbooks and store them in folders for
+retrieval later.
+
+CONT’D
+B6.5.3.1.7. Print the content of an MS-Excel worksheet.
+Guide learners to adjust margins to suit the A4 paper size for printing in landscape
+and portrait.
+NB. This is to help the learner with software knowledge such as in office
+applications (Electronic spreadsheet application).
+
+42
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation.
+2. Communication and
+collaboration.
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+
+STRAND 6: INTERNET AND SOCIAL MEDIA
+SUB-STRAND 1: NETWORK OVERVIEW
+CONTENT
+STANDARDS
+B6.6.1.1. Demonstrate how
+to Network computers.
+
+INDICATORS AND EXEMPLARS
+B6.6.1.1.1. Give examples of facilities the internet offers.
+Guide learners to give examples of internet facilities ie. e-mail, FTP’s, www, etc. for
+presentation
+B6.6.1.1.2. Describe the types of information available on the Internet.
+Guide learners to identify and describe the types of Information available on the
+Internet. eg. Educational, Financial, entertainment, etc. Group learners into groups
+to do this task.
+B6.6.1.1.3. Identify data duplication.
+Display list of names of learners on the board and ask them to identify the
+duplicated data.
+B6.6.1.1.4. Outline what one needs to connect to the Internet.
+Encourage learners to bring any device or pictures of devices that are needed. eg.
+desktop computers, Laptop computers, Mobile phones, etc.
+NB: This is to help the learner with fundamental principle of problem
+solving skills and creativity in computing and computer science.
+
+43
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation.
+2. Communication and
+collaboration.
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+
+SUB-STRAND 2: WEB BROWSERS AND WEB PAGES
+
+CONTENT
+STANDARDS
+B6.6.2.1. Demonstrate the
+use of a Web Browser
+
+INDICATORS AND EXEMPLARS
+B6.6.2.1.1 Identify the address or links window.
+Guide learners to identify the address or links window on phones other electronic
+gadgets with browsers,
+B6.6.2.1.2. Recognise the status bar and list its use.
+Bring a picture of a window that has the status bar and ask the learners to point out
+the status and mention its functions
+B6.6.2.1.3. Illustrate using help button.
+Guide learners to do an activity you have not tackle in class and ask them to use the
+help button to navigate and find the steps involved. Guide learners to carry out the
+stated steps.
+B6.6.2.1.4. Recognise internet explorer speed keys.
+Ask learners to use the speed keys to open a new browser, make font size bigger in
+a browser, etc.
+NB: This is to help the learner with fundamental principle of problem
+solving skills and creativity in computing and computer science.
+
+44
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation.
+2. Communication and collaboration
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+
+CONTENT
+STANDARDS
+B6.6.2.1. Demonstrate the
+use of a Web Browser
+CONT’D
+
+INDICATORS AND EXEMPLARS
+B6.6.2.1.5. Recognise Uniform Resource Locators (URLs).
+Guide learners to discuss the properties of URLs, their uses and where they are
+located.
+Learners can practise how to enter URLs in a browser.
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+
+B6.6.2.1.6. Demonstrate how to return to a URL.
+Guide the learners to navigate using the back button to go to a previous page
+
+1. Creativity and innovation.
+2. Communication and collaboration
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+
+B6.6.2.1.7. Show how to find items on a page.
+Guide learners to search for items using the search textbox
+
+Subject Specific Practices
+1.Skill development
+
+NB: This is to help the learner with fundamental principle of problem
+solving skills and creativity in computing and Computer Science.
+
+45
+© NaCCA, Ministry of Education 2019
+
+SUB-STRAND 3: SURFING THE WORLD WIDE WEB
+CONTENT
+STANDARDS
+B6.6.3.1. Demonstrate
+Surfing The World Wide
+Web
+
+B6.6.3.1.2. Illustrate how to jump directory to URLs.
+Give learners a project on how to jump directory to URLs.
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation.
+2. Communication and collaboration
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+
+B6.6.3.1.3. Demonstrate how to return to a URL.
+Guide learners to investigate how to return to a URL.
+
+Subject Specific Practices
+1.Skill development
+
+INDICATORS AND EXEMPLARS
+B6.6.3.1.1. Recognize resource locators (URLs).
+Guide learners to identify what URLs is. Group learners into groups of five or less,
+to explore on how to recognise URLs so as to aid learners to locate a resource on
+the web.
+
+B6.6.3.1.4. Show how to find items on a page.
+Guide learners to discuss on how to find items on a page. Guide learners present
+their ideas or findings to class.
+B6.6.3.1.5. Illustrate how to print pages.
+Guide learners on how to print pages e.g. selected pages, only selected pages etc.
+NB: This is to help the learner with fundamental principle of problem
+solving skills and creativity in computing and Computer Science.
+
+46
+© NaCCA, Ministry of Education 2019
+
+SUB-STRAND 4: FAVOURITE PLACES AND SEARCH ENGINE
+CONTENT
+STANDARDS
+B6.6.4.1. Demonstrate
+searching for information on
+the Web.
+
+INDICATORS AND EXEMPLARS
+B6.6.4.1.1. Show how to create a favourite link.
+Guide learners to create an Internet favourite link.
+B6.6.4.1.2. Demonstrate deleting favourite links.
+Guide learners to delete a favourite link they have created.
+B6.6.4.1.3. Create favourite folder.
+Guide learners to create a favourite folder or subfolder. Help learners by aiding
+them through the necessary steps to create a favourite folder.
+B6.6.4.1.4. Use the links toolbar and Favourite Places.
+Guide learners to use the links toolbar.
+NB: This is to help the learner with fundamental principle of problem
+solving skills and creativity in computing and computer science.
+
+47
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation.
+2. Communication and collaboration
+3. Cultural identity and global
+citizenship.
+4. Personal development and
+leadership.
+5. Digital literacy.
+Subject Specific Practices
+1.Skill development
+
+SUB-STRAND 5: USING ONLINE FORMS
+CONTENT
+STANDARDS
+B6.6.5.1. Demonstrate the
+Usage of Forms
+
+B6.6.5.1.2. Demonstrate the filing of forms offline.
+Guide learners to open and save a page. Lead them to fill the forms offline.
+
+SUBJECT SPECIFIC PRACTICES
+AND CORE COMPETENCES
+1. Creativity and innovation
+2. Communication and collaboration
+3. Cultural identity and global citizenship
+4. Personal development and leadership
+5. Digital literacy.
+
+B6.6.5.1.3. Demonstrate uploading of files.
+Lead learners to explore the upload button by adding pictures, audio, pdf etc.
+
+Subject Specific Practices
+1.Skill development
+
+INDICATORS AND EXEMPLARS
+B6.6.5.1.1. Demonstrate the types and uses of form elements.
+Explore the uses of check boxes, radio buttons, textboxes etc.
+
+B6.6.5.1.4. Illustrate retrieving text, pictures, sounds and programs.
+Lead learners to explore the download button by downloading pictures, audio, pdf
+etc.
+B6.6.5.1.5. Discuss more about security on the form submission.
+Guide learners to Investigate and identify security issues when typing account details
+online (Antivirus, Credit card details, personal passwords etc.)
+NB: This is to give a foundation to the learner in computing and
+computer science which is more concerned with uses of and development
+of programming together with fundamental principles of problem-solving
+and creativity.
+
+48
+© NaCCA, Ministry of Education 2019
+
+SUB-STRAND 6: CUSTOMIZING YOUR BROWSER
+CONTENT
+STANDARDS
+B6.6.6.1. Show how to
+Customize a Browser
+
+INDICATORS AND EXEMPLARS
+B6.6.6.1.1. Identify reasons for customising a web browser.
+Discuss the reasons needed for customising an item (i). to gain access to quick
+commands or information (ii) for side by side browsing (iii) for beautifications
+B6.6.6.1.2. Illustrate how to set themes.
+Explore on customisation , locate the more settings , Under appearance
+B6.6.6.1.3. Show how to customise the toolbar.
+Lead learners to explore in customising a browser… e.g. themes, wallpaper, tools
+etc.
+B6.6.6.1.4. Set bookmarks.
+Demonstrate the meaning of bookmarks - Bookmarks, makes you save shortcuts to
+your favourite webpages and navigate to them in seconds from anywhere.
+B6.6.6.1.5. Show how to set cookies demonstrate the steps in turning on
+cookies in a browser.
+Guide learners to turn on cookies in a browser :
+1. From the Tools menu, select Internet Options and enable session cookies,
+click the Privacy tab.
+2. From the Settings section of the tab, click Advanced.
+NB: Locate and click the checkbox next to Always allow session cookies.
+
+49
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC PRACTICES
+AND CORE COMPETENCES
+1. Creativity and innovation
+2. Communication and collaboration
+3. Cultural identity and global citizenship
+4. Personal development and leadership
+5. Digital literacy.
+Subject Specific Practices
+1. Communication
+2. Skill development
+
+SUB-STRAND 7: ELECTRONIC EMAIL
+CONTENT
+STANDARDS
+B6.6.7.1. Demonstrate the
+use of Electronic Mail
+
+INDICATORS AND EXEMPLARS
+B6.6.7.1.1. Show how to create and access e-mail messages.
+Guide learners to receive email
+B6.6.7.1.2. Illustrate how to reply to and forward received messages.
+Guide learners to use forward and reply buttons in email
+B6.6.7.1.3. Demonstrate how to delete messages.
+Guide leaners to delete email messages.
+B6.6.7.1.4. Illustrate filing of e-mail messages.
+Guide learners to create folders in the Inbox and sorting emails into them
+B6.6.7.1.5. Create address list.
+Guide learners to create an address list
+B6.6.7.1.6. Demonstrate attaching files to e-mail messages.
+Guide learners to attach files to email
+B6.6.7.1.7. Demonstrate some e-mail tips.
+Assist learners in writing email using techniques as NOT writing in caps. Check the
+extension of files before downloading and use the subject line for summary etc.
+NB: This is to help the learner with the fundamental skills of creativity in computing
+and computer science.
+
+50
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation
+2. Communication and
+collaboration
+3. Cultural identity and global
+citizenship
+4. Personal development and
+leadership
+5. Digital literacy.
+Subject Specific Practices
+1. Skill development
+2. Communication
+
+SUB-STRAND 8: INTERNET OF THINGS (IOT)
+CONTENT
+STANDARDS
+B6.6.8.1. Demonstrate the
+use of Internet of Things
+(IoT)
+
+INDICATORS AND EXEMPLARS
+B6.6.8.1.1. Describe other hardware used in IoT Internet of Things.
+Guide learners to discuss the IoT hardware in groups.
+B6.6.8.1.2. Give more examples of internet of things with a consumer
+part and an industrial/business segment.
+Guide learners to list at least five gadgets used for IoT (e.g. Nest Smart Thermostat,
+Samsung SmartThings Hub, August Smart Lock, etc.)
+B6.6.8.1.3. Mention at least five more terms and acronyms of IoT .
+Guide learners to describe IoT use.
+NB: This is to help the learner to fundamental knowledge of hardware
+such as robots and sensors).
+
+51
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC PRACTICES
+AND CORE COMPETENCES
+1. Creativity and innovation
+2. Communication and collaboration
+3. Cultural identity and global
+citizenship
+4. Personal development and leadership
+5. Digital literacy.
+Subject Specific Practices
+1. Communication
+2. Skill development
+
+SUB-STRAND 9: DIGITAL LITERACY
+CONTENT
+STANDARDS
+B6.6.9.1. Demonstrate
+proficiency in Digital
+Literacy
+
+INDICATORS AND EXEMPLARS
+B6.6.9.1.1. Demonstrate how to handle private and personal information.
+Guide learners on how not post detailed personal information online.
+B6.6.9.1.2. Devise various techniques on how to protect oneself from
+online identity theft.
+Guide learners to use strong passwords or passphrases in online sites, etc.
+B6.6.9.1.3. Debate a spam and solicited messages.
+Guide leaners to differentiate spam from solicited messages.
+B6.6.9.1.4. Differentiate between virtual friends and real friends.
+Guide leaners to characterise virtual and real friends
+
+52
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC PRACTICES
+AND CORE COMPETENCES
+1. Creativity and innovation
+2. Communication and collaboration
+3. Cultural identity and global
+citizenship
+4. Personal development and leadership
+5. Digital literacy.
+Subject Specific Practices
+1. Skill development
+2. Communication
+
+SUB-STRAND 10: INTERNET ETIQUETTE
+CONTENT
+STANDARDS
+B6.6.10.1. Demonstrate the
+application of Internet
+Etiquette
+
+INDICATORS AND EXEMPLARS
+B6.6.10.1.1. Explain Internet etiquette and how to deal with it.
+Guide learners to explain Internet etiquette and elaborate on some rules associated
+with it
+B6.6.10.1.2. Investigate on the responsible use of computers.
+Guide learners to investigate on the responsible use of computers.
+i. Information privacy
+ii. Copy right.
+Hardware, Software and information theft
+
+53
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC PRACTICES
+AND CORE COMPETENCES
+1. Creativity and innovation
+2. Communication and collaboration
+3. Cultural identity and global
+citizenship
+4. Personal development and
+leadership
+5. Digital literacy.
+Subject Specific Practices
+1. Communication
+2. Skill development
+
+STRAND 7: HEALTH AND SAFETY IN USING ICT TOOLS
+SUB-STRAND 1: HEALTH AND SAFETY IN USING ICT TOOLS
+CONTENT
+STANDARDS
+
+INDICATORS AND EXEMPLARS
+
+B6.7.1.1. Demonstrate how
+to apply Health and Safety
+measures in Using ICT
+Tools
+
+B6.7.1.1.1. Identify five (5) major health hazards associated with the
+use of ICT tools. Discuss Eye strain, Eye irritation and Eye fatigue.
+Guide learners to discuss some major health hazards associated with the use of
+ICT tools.
+B6.7.1.1.2. Demonstrate solutions for the health related problems in
+ICT. Guide learners to brainstorm to find the solutions to the health hazards
+associated with the use of ICT tools.
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+1. Creativity and innovation
+2. Communication and collaboration
+3. Cultural identity and global
+citizenship
+4. Personal development and
+leadership
+5. Digital literacy.
+Subject Specific Practices
+1. Communication
+2. Skill development
+
+54
+© NaCCA, Ministry of Education 2019
+
+COMPUTING SUBJECT PANEL MEMBERS AND REVIEWERS
+NAME
+
+INSTITUTION
+
+Writing panels
+Dr Kofi Ayebi-Arthur (Lead)
+
+College of Education, UCC
+
+Mr Frank Appoh
+
+NaCCA
+
+Mr Callistus Nakpih
+
+College of Education, UCC
+
+Mr Mark Anibrika
+
+Wesly Grammer School
+
+Samuel Kwame Arthur
+
+Achimota School
+
+Expert Reviewers
+Dr Patrick Ohemeng Gyaase
+
+Dep’t of Computer Science, CUC
+
+Mr Clifford Osei-Afriyie
+
+Kofi Annan ICT Centre
+
+Mr Francis Avugbey
+
+MoE, Head of ICT (Retired)
+
+Curriculum Adviser
+Dr. Sam K. Awuku
+
+OPM (Oxford Policy Management)
+
+Supervisors
+Felicia Boakye-Yiadom (Mrs)
+
+NaCCA, Outgoing Acting Executive Secretary
+
+Dr. Prince H. Armah
+
+NaCCA, Incoming Acting Executive Secretary
+
+55
+© NaCCA, Ministry of Education 2019
+
+

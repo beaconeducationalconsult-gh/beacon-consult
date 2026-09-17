@@ -1,0 +1,32 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap');
+
+/* v4 theming: these become real CSS variables *and* generate utility
+   classes — font-display/font-body, bg-ncos-green, text-ncos-gold, etc.
+   No tailwind.config.js needed. */
+@theme {
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+
+  --color-ncos-ink: #16201a;
+  --color-ncos-green: #1b4332;
+  --color-ncos-gold: #c89b3c;
+  --color-ncos-brick: #8c2f1b;
+  --color-ncos-sand: #f1e9d8;
+}
+
+/* A single structural accent, not a repeating decoration — one vertical
+   band standing in for kente's banded weave, used once at the page edge. */
+.kente-edge {
+  background-image: repeating-linear-gradient(
+    180deg,
+    var(--color-ncos-green) 0px,
+    var(--color-ncos-green) 28px,
+    var(--color-ncos-gold) 28px,
+    var(--color-ncos-gold) 40px,
+    var(--color-ncos-brick) 40px,
+    var(--color-ncos-brick) 52px,
+    var(--color-ncos-ink) 52px,
+    var(--color-ncos-ink) 60px
+  );
+}

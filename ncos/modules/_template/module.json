@@ -1,0 +1,9 @@
+{
+  "id": "REPLACE_ME",
+  "display_name": "Replace Me",
+  "grades": ["B1"],
+  "interface_version": "1.0",
+  "module_version": "0.1.0",
+  "curriculum_source": "NaCCA <Subject> Curriculum <year>",
+  "capabilities": ["lesson_plan"]
+}

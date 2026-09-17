@@ -1,0 +1,5767 @@
+GHANA EDUCATION SERVICE
+(MINISTRY OF EDUCATION)
+
+REPUBLIC OF GHANA
+
+FRENCH
+CURRICULUM FOR PRIMARY SCHOOLS
+(BASIC 4 - 6)
+SEPTEMBER 2019
+
+French Curriculum for Primary Schools
+Enquiries and comments on this Curriculum should be addressed to:
+The Executive Secretary
+National Council for Curriculum and Assessment (NaCCA)
+Ministry of Education
+P. O. Box CT PM 77
+Cantonments
+Accra
+Telephone: 0302909071, 0302909862
+Email:
+info@nacca.gov.gh
+Website: www.nacca.gov.gh
+
+FOREWORD
+This curriculum is Standards-Based. It sets out the French Standards for Basic one(1) to Basic six(6) in Ghanaian schools. The key learning outcomes in this curriculum
+(knowledge, skill and attitude/values) are referred to as Standards. Standards are long-term key learning outcomes that a learner attains by the end of a particular level of
+education (e.g. by the end of Basic 1) or of a phase (e.g. by the end of Basic 1-3). The previous curriculum was an ‘objectives-based curriculum’ because, the key learning
+outcomes were measured in terms of objectives that the learners were expected to attain by the end of each lesson or unit. The standards-based curriculum supports the
+provision of an inclusive educational system, where individual strengths and potentials are valued and maximized, regardless of ability, ethnicity, religion, gender, or
+geographical location. It promotes quality education for all through the use of creative approaches to teaching and a robust accountability system.
+In this standards-based French curriculum, a pre-determined body of knowledge has been designated as a Strand. The topics under each strand are the Sub-Strands. The
+sub-strands are the sub topics’, ‘content,’ or ‘essential learnings’ for which content standards are formulated.
+Standards, which are actually learning outcome statements, describe the specific knowledge, skills, and attitudes learners are expected to demonstrate as a result of their
+cumulative learning experiences in the sub-strand.
+Standards are used to set performance benchmarks that indicate the minimal levels of competency required to be successful in successive basic-school levels. The
+benchmarks allow key stakeholders (district officials, head teachers, teachers and parents) to determine whether learners at a given basic-school level are progressing in
+French as expected.
+The learning indicators of the standards are clear outcomes or milestones that learners have to exhibit in each year to meet the content standard expectation. They are
+also referred to as achievement indicators. They illustrate what the learners must demonstrate to show they have achieved the standard. The standards and their
+achievement indicators are statements that identify what learners are expectedtoknow and be able to do by the end of a particular class level in a sub-strand of the
+curriculum. Indicators represent the minimum expected standards in a year.
+Each indicator is supported by Exemplars. Exemplars are suggested teaching and learning activities. It provides support and guidance which clearly explains the expected
+outcomes of an indicator. In French, the exemplars reflect French content and French specific pedagogy.
+The standards in this curriculum are expected to promote quality basic education that is accessible to all. The curriculum is based on the belief that all learners can and
+should be proficient in all curriculum areas with special emphasis on the Reading, wRiting, aRithmetic and cReativity (4Rs). All learners should be supported to
+demonstrate the knowledge of mathematical concepts, skills and relationships with understanding. It is a requirement of this curriculum that all learners must be presented
+with opportunities to learn. It also means that the content standards set forth in this curriculum should offer learners at the Basic one (1) to Basic six (6) level with the
+competencies and proficiencies that are comparable with the best educational systems in the world.
+I approve this curriculum as the official French curriculum to be used in basic schools throughout Ghana.
+…………………………….
+Dr. Matthew Opoku-Prempeh
+Hon.Minister of Education
+January, 2019
+
+© NaCCA, Ministry of Education 2019
+
+iii
+
+TABLE OF CONTENTS
+FOREWORD .......................................................................................................................................................................................................................................................... i
+RATIONALE FOR FRENCH EDUCATION .............................................................................................................................................................................................. viii
+PHILOSOPHY .................................................................................................................................................................................................................................................... viii
+PHILOSOPHY OF TEACHING THE FRENCH LANGUAGE ............................................................................................................................................................... viii
+PHILOSOPHY OF LEARNING THE FRENCH LANGUAGE ..................................................................................................................................................................ix
+GENERAL AIM .....................................................................................................................................................................................................................................................ix
+SUBJECT AIMS ......................................................................................................................................................................................................................................................x
+CORE COMPETENCES......................................................................................................................................................................................................................................x
+LEARNING DOMAINS (EXPECTED LEARNING BEHAVIOURS) ........................................................................................................................................................xi
+ASSESSMENT......................................................................................................................................................................................................................................................xiv
+SUGGESTED TIME ALLOCATION ..............................................................................................................................................................................................................xv
+PEDAGOGICAL APPROACHES....................................................................................................................................................................................................................xv
+LEARNING-CENTRED PEDAGOGY ..........................................................................................................................................................................................................xvi
+INCLUSION .......................................................................................................................................................................................................................................................xvi
+DIFFERENTIATION AND SCAFFOLDING..............................................................................................................................................................................................xvii
+INFORMATION COMMUNICATIONS TECHNOLOGY .................................................................................................................................................................. xviii
+ORGANISATION OF THE CURRICULUM ............................................................................................................................................................................................. xix
+SCOPE AND SEQUENCE .............................................................................................................................................................................................................................. xx
+BASIC 4 ...................................................................................................................................................................................................................................................................1
+STRAND 1: L’IDENTITE ....................................................................................................................................................................................................................................1
+SUB–STRAND 1 : SALUER ET PRENDRE CONGE ...................................................................................................................................................................................1
+SUB–STRAND 2 : SE PRESENTER .................................................................................................................................................................................................................3
+© NaCCA, Ministry of Education 2019
+
+iv
+
+SUB–STRAND 3 :PRESENTERQUELQU’UN ...............................................................................................................................................................................................5
+SUB–STRAND 4: DECRIRE QUELQU’UN ...................................................................................................................................................................................................5
+SUB-STRAND 5: DECRIRE LA FAMILLE ET LES LIENS FAMILIAUX ....................................................................................................................................................6
+STRAND 2 : PARLER DE SON ENVIRONNEMENT .................................................................................................................................................................................7
+SUB-STRAND 1 : PARLER DE SA MAISON .................................................................................................................................................................................................7
+SUB-STRAND 2 : PARLER DE SON ECOLE ................................................................................................................................................................................................7
+STRAND 3 : EXPRIMER SES GOUTS ET SES PREFERENCES .................................................................................................................................................................9
+SUB-STRAND 1: DIRE CE QUE L’ON AIME ...............................................................................................................................................................................................9
+SUB-STRAND 2: DIRE CE QUE L’ON N’AIME PAS ............................................................................................................................................................................... 10
+STRAND 4: LES ACTIVITES ........................................................................................................................................................................................................................... 11
+SUB-STRAND 1: COMPTER ET FAIRE DES CALCULS SIMPLES ........................................................................................................................................................ 11
+SUB-STRAND 2: DEMANDER ET DONNER L’HEURE......................................................................................................................................................................... 13
+SUB-STRAND 3: PARLER DES JOURS DE LA SEMAINE ....................................................................................................................................................................... 15
+SUB-STRAND 4 : SITUER LES MOIS ET LES SAISONS DANS LE TEMPS ........................................................................................................................................ 17
+SUB-STRAND 5: ENTRER EN CONTACT PAR TELEPHONE............................................................................................................................................................ 19
+SUB-STRAND 6: IDENTIFIER LES PROFESSIONS ET LES METIERS .................................................................................................................................................. 21
+SUB-STRAND 7: IDENTIFIER LES PROFESSIONS ET LES METIERS .................................................................................................................................................. 22
+SUB-STRAND 8:DEMANDER ET EXPLIQUER LA POSITION DE PERSONNES OU D’OBJETS LES UNS PAR RAPPORT.............................................. 23
+SUB-STRAND 9:DONNER ET RÉPONDRE À DES ORDRES .............................................................................................................................................................. 23
+BASIC 5 ................................................................................................................................................................................................................................................................ 24
+STRAND 1: L’IDENTITE ................................................................................................................................................................................................................................. 24
+SUB-STRAND 1 : SALUER ET PRENDRE CONGE ................................................................................................................................................................................. 24
+SUB-STRAND 2: SE PRÉSENTER ................................................................................................................................................................................................................ 25
+SUB–STRAND 3 : PRÉSENTER QUELQU’UN ........................................................................................................................................................................................ 27
+© NaCCA, Ministry of Education 2019
+
+v
+
+SUB-STRAND 4: DÉCRIRE QUELQU’UN ................................................................................................................................................................................................. 27
+SUB-STRAND 5: DÉCRIRE LA FAMILLE ET LES LIENS FAMILIAUX ................................................................................................................................................. 28
+STRAND 2: PARLER DE SON ENVIRONNEMENT ............................................................................................................................................................................... 29
+SUB-STRAND 1: PARLER DE SA MAISON ............................................................................................................................................................................................... 29
+SUB-STRAND 2 : PARLER DE SON ECOLE ............................................................................................................................................................................................. 30
+STRAND 3: EXPRIMER SES GOUTS ET SES PREFERENCES ................................................................................................................................................................ 31
+SUB-STRAND 1 : DIRE CE QUE L’ON AIME ET CE QUE L’ON N’AIME PAS ............................................................................................................................... 31
+SUB-STRAND 2: DIRE CE QUE L’ON N’AIME PAS ............................................................................................................................................................................... 32
+STRAND 4: LES ACTIVITÉS ........................................................................................................................................................................................................................... 33
+SUB-STRAND 1:COMPTER ET FAIRE DES CALCULS SIMPLES ......................................................................................................................................................... 33
+SUB-STRAND 2:DEMANDER ET DONNER L’HEURE .......................................................................................................................................................................... 35
+SUB-STRAND 3:PARLER DES JOURS DE LA SEMAINE ........................................................................................................................................................................ 37
+SUB-STRAND 4 : SITUER LES MOIS ET LES SAISONS DANS LE TEMPS ........................................................................................................................................ 39
+SUB-STRAND 5: ENTRER EN CONTACT PAR TELEPHONE............................................................................................................................................................ 40
+SUB-STRAND 6:INVITER QUELQU’UN ET ACCEPTER UNE INVITATION................................................................................................................................. 42
+SUB-STRAND 7: IDENTIFIER LES PROFESSIONS ET LES MÉTIERS .................................................................................................................................................. 43
+SUB-STRAND 8:DEMANDER ET EXPLIQUER LA POSITION DES PERSONNES OU DES OBJETS LES UNS PAR RAPPORT AUX AUTRES........... 44
+SUB-STRAND 9:DONNER ET RÉPONDRE À DES ORDRE ................................................................................................................................................................ 44
+BASIC 6 ................................................................................................................................................................................................................................................................ 45
+STRAND 1: L’IDENTITÉ ................................................................................................................................................................................................................................. 45
+SUB-STRAND 1: SALUER ET PRENDRE CONGE .................................................................................................................................................................................. 45
+SUB-STRAND 2: SE PRÉSENTER ET PRÉSENTER QUELQU’UN ....................................................................................................................................................... 46
+SUB–STRAND 3 : PRÉSENTER QUELQU’UN ........................................................................................................................................................................................ 47
+SUB-STRAND 4: DÉCRIRE QUELQU’UN ................................................................................................................................................................................................. 47
+© NaCCA, Ministry of Education 2019
+
+vi
+
+SUB-STRAND 5: DÉCRIRE LA FAMILLE ET LES LIENS FAMILIAUX ................................................................................................................................................. 48
+STRAND 2: PARLER DE SON ENVIRONNEMENT .............................................................................................................................................................................. 49
+SUB-STRAND 1: PARLER DE SA MAISON ............................................................................................................................................................................................... 49
+SUB-STRAND: PARLER DE SON ÉCOLE................................................................................................................................................................................................. 50
+SUB-STRAND 1: DIRE CE QUE L’ON AIME ............................................................................................................................................................................................ 51
+STRAND 4 : LES ACTIVITES ......................................................................................................................................................................................................................... 54
+SUB-STRAND 1: COMPTER ET FAIRE DES CALCULS SIMPLES ........................................................................................................................................................ 54
+SUB-STRAND 2:DEMANDER ET DONNER L’HEURE .......................................................................................................................................................................... 56
+SUB-STRAND 3: PARLER DES JOURS DE LA SEMAINE ....................................................................................................................................................................... 58
+SUB-STRAND 4: SITUER LES MOIS ET LES SAISONS DANS LE TEMPS ......................................................................................................................................... 59
+SUB-STRAND 5: ENTRER EN CONTACT PAR TELEPHONE............................................................................................................................................................ 60
+SUB-STRAND 6: INVITER QUELQU’UN ET ACCEPTER UNE INVITATION ............................................................................................................................... 61
+SUB-STRAND 7: IDENTIFIER LES PROFESSIONS ET LES MÉTIERS .................................................................................................................................................. 62
+SUB-STRAND 8: DEMANDER ET EXPLIQUER LA POSITION DES PERSONNES OU DES OBJETS LES UNS PAR RAPPORT AUX AUTRES ........ 63
+SUB-STRAND 9: DONNER ET RÉPONDRE À DES ORDRES ............................................................................................................................................................ 63
+
+© NaCCA, Ministry of Education 2019
+
+vii
+
+RATIONALE FOR PRIMARY FRENCH
+The pace of development in the present world makes it important that we acquire more knowledge in a variety of subjects and also develop the capacity to communicate
+in more than one language.
+Some major international languages at the moment are English, French, Chinese and Spanish. Being able to communicate in at least two of these languages has strategic
+importance in such areas as business, international relations, personal development, etc.
+Besides, the current trend towards international co-operation, peaceful co-existence and technology transfer, necessitates that a person be able to communicate in a
+language that is understood by his/her neighbours. Given the geographical position of Ghana, surrounded, as it is, by French speaking countries, the ability of the Ghanaian
+to communicate effectively in French will promote as well as strengthen, socio-economic and political interaction with our neighbours, in particular, and indeed with other
+French-speaking countries, in general.
+PHILOSOPHY
+Philosophy of teaching the French language
+The philosophy of teaching French is based on the task-based approach of teaching and learning.
+The task-based approach involves the ability to perform language related tasks using the French language in the most appropriate manner to convey meaning. It is focused
+on preparing the learner more actively to become a social agent capable of engaging in any meaningful interaction in order to solve various problems of everyday life. As
+such, it recreates in the classroom and even outside the classroom, various communicative contexts in which learners can adopt appropriate language knowledge to
+address the issues.
+In the current dispensation, an eclectic method of teaching that combines all approaches helps to promote various kinds of interaction such as the personal, social,
+educational and professional problem solving as both the means and the ultimate goal of learning French. As such, they tend to emphasise activities such as real-life or
+simulated tasks, role-play, pair work, group work, interviews, information gap, opinion sharing, scavenger hunt, etc.
+There is a change from the traditional language teaching which places emphasis on grammar and teacher-centred classroom, to that of the active use of authentic language
+in learning and acquisition. Thus there is a link between classroom language learning and the language used outside the classroom.
+The teacher plays different roles. On one hand, he/she is a “facilitator, a guide and a helper,” and on the other hand a “coordinator, an ideal person and a cocommunicator”. (Oxford, 1990, p.10)
+Philosophy of Learning the French Language
+French language learning was originally considered a cognitive matter, mainly involving memorization. It was later thought to be socio-cognitive. This means it could be
+learned through the process of social interaction. Today, however, the dominant techniques of learning the French language are through the task-based, communicative as
+well as functional approaches. At this level, we propose the task-based approach which puts the learner in real-life language learning situations, but which equally includes
+some of the major characteristics of the communicative approach.
+
+© NaCCA, Ministry of Education 2019
+
+viii
+
+With the development of linguistic theories, French language acquisition evolved from placing emphasis on lexis and structure to carrying out tasks based on speech acts. It
+is no longer studied as an academic subject but as a tool for communication.
+Learners are to carry out activities or tasks that will enable them acquire the four basic communicative skills of listening, speaking (that promote basic oral understanding
+and practice), reading and writing (for the understanding and practice of basic written discourse).
+Activities and tasks such as introducing themselves or colleagues, identifying objects and describing them, listening to instructions and obeying them, filling out forms,
+making simple and short announcements, writing postal cards, engaging in simple telephone conversations, sending text messages, reading articles from children’s magazines
+or cartoons, listening to French songs and music, telling simple stories, etc. are what will constitute the basis for learning the French language.
+GENERAL AIM
+The curriculum is aimed at developing literacy so that the individuals become good problem solvers with the ability to think creatively and have both the confidence and
+competence to participate fully in the Ghanaian society as responsible local and global citizens.
+SUBJECT AIMS
+The general aim of teaching and learning French at the Key Phase 2 level (B4 – B6) is to enable pupils to communicate in basic French in day-to-day life situations.
+Therefore, the aims consist of:
+1.
+2.
+3.
+
+understanding and responding to basic spoken and written French,
+reading and writing simple messages and texts in French,
+attaining the basic linguistic skills for further learning of French in subsequent phases of their education.
+
+INSTRUCTIONAL EXPECTATIONS
+Teachers are expected to:
+•
+
+guide and facilitate learning by creating a communicative environment for learners and challenging them to acquire the language based on their unique individual
+differences.
+
+•
+
+use of teaching and learning materials depicting real life communicative situations (authentic materials) as well as modern technologies (ICT).
+
+•
+
+use task-oriented approach to learning foreign languages with the view to developing communicative competences in the learner.
+
+CORE COMPETENCES
+The core Competences describe a body of skills that teachers at all levels should seek to develop in their learners. They are ways in which teachers and learners engage
+with the subject matter. The Competences presented here describe a connected body of core skills that are acquired throughout the processes of teaching and learning.
+
+© NaCCA, Ministry of Education 2019
+
+ix
+
+Critical Thinking and Problem Solving (CP)
+This skill develops learners’ cognitive and reasoning abilities to enable them analyse and solve problems. Critical thinking and problem solving skill enables learners to draw
+on their own experiences to analyse situations and choose the most appropriate out of a number of possible solutions. It requires that learners embrace the problem at
+hand, persevere and take responsibility for their own learning.
+Creativity and Innovation (CI)
+Creativity and Innovation promotes the development of entrepreneurial skills in learners through their ability to think of new ways of solving problems and developing
+technologies for addressing the problem at hand. It requires ingenuity of ideas, arts, technology and enterprise. Learners having this skill are also able to think
+independently and creatively.
+Communication and Collaboration (CC)
+This competence promotes in learners the skills to make use of languages, symbols and texts to exchange information about themselves and their life experiences. Learners
+actively participate in sharing their ideas. They engage in dialogue with others by listening to and learning from them. They also respect and value the views of others.
+Cultural Identity and Global Citizenship (CG)
+This competence involves developing learners to put country and service foremost through an understanding of what it means to be active citizens. This is done by
+inculcating in learners a strong sense of social and economic awareness. Learners make use of the knowledge, skills, Competences and attitudes acquired to contribute
+effectively towards the socioeconomic development of the country and on the global stage. Learners build skills to critically identify and analyse cultural and global
+trends that enable them to contribute to the global community.
+Personal Development and Leadership (PL)
+This competence involves improving self-awareness and building self-esteem. It also entails identifying and developing talents, fulfilling dreams and aspirations. Learners are
+able to learn from mistakes and failures of the past. They acquire skills to develop other people to meet their needs. It involves recognising the importance of values such
+as honesty and empathy and seeking the well-being of others. Personal development and leadership enables learners to distinguish between right and wrong. The skill helps
+them to foster perseverance, resilience and self-confidence. PL helps them acquire the skill of leadership, self-regulation and responsibility necessary for lifelong learning.
+Digital Literacy (Dl)
+Digital Literacy develops learners to discover, acquire skills, and communicate through ICT to support their learning. It also makes them use digital media responsibly.
+LEARNING DOMAINS (EXPECTED LEARNING BEHAVIOURS)
+A central aspect of this curriculum is the concept of three integral learning domains that should be the basis for instruction and assessment. These are
+- Knowledge, Understanding and Application
+- Skills and Processes
+- Attitudes and Values
+
+© NaCCA, Ministry of Education 2019
+
+x
+
+Knowledge, Understanding and Application
+Under this domain, learners may acquire some knowledge through some learning experiences. They may also show understanding of concepts by comparing, summarising,
+re-writing etc. in their own words and constructing meaning from instruction. The learner may also apply the knowledge acquired in some new contexts. At a higher level
+of learning behaviour, the learner may be required to analyse an issue or a problem. At a much more higher level, the learner may be required to synthesize knowledge by
+integrating a number of ideas to formulate a plan, solve a problem, compose a story, or a piece of music. Further, the learners may be required to evaluate, estimate and
+interpret a concept. At the last level, which is the highest, learners may be required to create, invent, compose, design and construct. These learning behaviours “knowing
+”, “understanding”, “applying”, “analysing”, “synthesising”, “evaluating” and “creating” fall under the domain “Knowledge, Understanding and Application”.
+In this curriculum, learning indicators are stated with action verbs to show what the learner should know and be able to do. For example, the learner will be able to
+describe something. Being able to “describe” something after teaching and learning has been completed means that the learner has acquired “knowledge”. Being able to
+explain, summarise, and give examples etc. means that the learner has understood the concept taught.
+Similarly, being able to develop, defend, etc. means that the learner can “apply” the knowledge acquired in some new context. You will note that each of the indicators in
+the curriculum contains an “action verb” that describes the behaviour the learner will be able to demonstrate after teaching and learning has taken place. “Knowledge,
+Understanding and Application” is a domain that should be the prime focus of teaching and learning in schools. Teaching in most cases has tended to stress knowledge
+acquisition to the detriment of other higher level behaviours such as applying knowledge.
+Each action verb in any indicator outlines the underlying expected outcome. Each indicator must be read carefully to know the learning domain towards which you have to
+teach. The focus is to move teaching and learning from the didactic acquisition of “knowledge” where there is fact memorisation, heavy reliance on formulae, remembering
+facts without critiquing them or relating them to real world – surface learning – to a new position called – deep learning.Learners are expected to deepen their learning
+by knowledge application to develop critical thinking skills, explain reasoning, and to generate creative ideas to solve real life problems in their school lives and later in their
+adult lives. This is the position where learning becomes beneficial to the learner.
+The explanation and the key words involved in the “Knowledge, Understanding and Application” domain are as follows:
+Knowing:
+
+The ability to remember, recall, identify, define, describe, list, name, match, state principles, facts and concepts. Knowledge is
+the ability to remember or Recall concepts already learnt and this constitutes the lowest level of learning.
+
+Understanding:
+
+The ability to explain, summarise, translate, rewrite, paraphrase, give examples, generalise, estimate or predict consequences based upon a trend.
+Understanding is generally the ability to grasp the meaning of some concepts that may be verbal, pictorial, or symbolic.
+
+Applying:
+
+This dimension is also referred to as “Use of Knowledge”. Ability to use knowledge or apply knowledge, apply rules, methods,
+principles, theories, etc. to situations that are new and unfamiliar. It also involves the ability to produce, solve, plan, demonstrate,
+discover etc.
+The ability to appraise, compare features of different things and make comments or judgment, contrast, criticise, justify, support,
+discuss, conclude, make recommendations etc. Evaluation refers to the ability to judge the worth or value of some concepts based on some criteria.
+
+Evaluating:
+Creating:
+
+The ability to use information or materials to plan, compose, produce, manufacture or construct other products.
+From the foregoing, creating is the highest form of thinking and learning and is therefore a very important behaviour. This unfortunately, is the area
+where most learners perform poorly. In order to get learners to develop critical thinking, skills beginning right from the lower primary level, it is
+advised that you do your best to help your learners to develop analytic skills as we have said already.
+
+© NaCCA, Ministry of Education 2019
+
+xi
+
+Skills and
+Processes
+Attitudes and
+Values
+
+These are specific activities or tasks that indicate performance or proficiency in French. They are useful benchmarks for planning lessons, developing
+exemplars and are the core of tasked-based learning. These skills include Listening Comprehension, Reading Comprehension, Interaction, Oral
+Production and Written Production.
+To be effective, competent and reflective citizens, who will be willing and capable of solving personal and societal problems, learners should be exposed
+to situations that challenge them to raise questions and attempt to solve problems. Learners therefore need to acquire positive attitudes, values and
+psychosocial skills that will enable them participate in debates and take a stand on issues affecting them and others. The geography curriculum thus
+focuses on the development of attitudes and values.
+
+Attitudes
+i.
+
+Curiosity:
+The inclination or feeling toward seeking information about how things work in a variety of fields.
+
+ii.
+
+Perseverance:
+The ability to pursue a problem until a satisfying solution is found.
+
+iii.
+
+Flexibility in ideas:
+Willingness to change opinion in the face of more plausible evidence
+
+iv.
+
+Respect for Evidence:
+Willingness to collect and use data in one’s investigation, and also have respect for data collected by others.
+
+v.
+
+Reflection:
+The habit of critically reviewing ways in which an investigation has been carried out to see possible faults and other ways by which the investigation could be
+improved upon. The teacher should endeavour to ensure that learners cultivate the above attitudes and process skills as a prelude to effective academic work.
+
+Values: At the heart of this curriculum is the belief in nurturing honest, creative and responsible citizens. As such, every part of this curriculum, including the related
+pedagogy should be consistent with the following set of values.
+i. Respect: This includes respect for the nation of Ghana, its institutions and laws and the culture and respect among its citizens and friends of Ghana.
+ii. Diversity: Ghana is a multicultural society in which every citizen enjoys fundamental rights and responsibilities. Learners must be taught to respect the views
+of all persons and to see national diversity as a powerful force for nation development. The curriculum promotes social cohesion.
+iii. Equity: The socio-economic development across the country is uneven. Consequently, it is necessary to ensure an equitable distribution of resources based on
+the unique needs of learners and schools. Ghana’s learners are from diverse backgrounds, which require the provision of equal opportunities to all, and that all strive to
+care for each other both personally and professionally.
+
+© NaCCA, Ministry of Education 2019
+
+xii
+
+iv. Commitment to achieving excellence: Learners must be taught to appreciate the opportunities provided through the curriculum and persist in doing their best
+in whatever field of endeavour as global citizens. The curriculum encourages innovativeness through creative and critical thinking and the use of contemporary technology.
+v. Teamwork/Collaboration: Learners are encouraged to be become committed to team-oriented working and learning environments. This also means that
+learners should have an attitude of tolerance to be able to live peacefully with all persons.
+vi. Truth and Integrity: The curriculum aims to develop learners into individuals who will consistently tell the truth irrespective of the consequences. In addition, be
+morally upright with the attitude of doing the right thing even when no one is watching. Also, be true to themselves and be willing to live the values of honesty and
+compassion. Equally important, is the practice of positive values as part of the ethos or culture of the work place, which includes integrity and perseverance. These
+underpin the learning processes to allow learners to apply skills and Competences in the world of work.
+Assessment:
+In this curriculum, it is suggested that assessment is used to promote learning. Its purpose is to identify the strengths and weaknesses of
+learners to enable teachers ascertain their learner’s response to instruction.
+Assessment is both formative and summative. Formative assessment is viewed in terms of Assessment as learning and Assessment for
+learning.
+Assessment as learning:
+Assessment as learning relates to engaging learners to reflect on the expectations of their learning. Information that learners provide
+the teacher forms the basis for refining teaching-learning strategies. Learners are assisted to play their roles and to take responsibility of
+their own learning to improve performance. Learners are assisted to set their own goals and monitor their progress.
+Assessment for learning: It is an approach used to monitor learner’s progress and achievement. This occurs throughout the learning process. The teacher
+employs assessment for learning to seek and interpret evidence which serves as timely feedback to refine their teaching strategies and
+improve learners’ performance. Learners become actively involved in the learning process and gain confidence in what they are expected to
+learn.
+Assessment of learning:
+This is summative assessment. It describes the level learners have attained in the learning, what they know and can do over a period of
+time. The emphasis is to evaluate the learner’s cumulative progress and achievement.
+It must be emphasised that all forms of assessment should be based on the domains of learning. In developing assessment procedures, try to select indicators in such a way
+that you will be able to assess a representative sample from a given strand. Each indicator in the curriculum is considered a criterion to be achieved by the learners. When
+you develop assessment items or questions that are based on a representative sample of the indicators taught, the assessment is referred to as a “Criterion-Referenced
+Assessment”. In many cases, a teacher cannot assess all the indicators taught in a term or year. The assessment procedure you use i.e. class assessments, homework,
+projects etc. must be developed in such a way that the various procedures complement one another to provide a representative sample of indicators taught over a period.
+SUGGESTED TIME ALLOCATION
+Two periods a week, consisting of thirty minutes each, is allocated to the teaching of French at the Upper Primary level.
+PEDAGOGICAL APPROACHES
+These include the approaches, methods and strategies for ensuring that every learner benefits from appropriate and relevant teaching and learning episodes which are
+timely assessed and feedback provided to the learner and other stakeholders such as parents and education authorities. It includes the type and use of appropriate and
+relevant teaching and learning resources to ensure that all learners attain the expected level of learning outcomes. The curriculum emphasises:
+© NaCCA, Ministry of Education 2019
+
+xiii
+
+•
+•
+•
+•
+•
+•
+•
+
+the creation of learning-centred classrooms through the use of creative approaches to teaching and learning as strategies to ensuring learner empowerment
+and independent learning.
+the positioning of inclusion and equity at the centre of quality teaching and learning.
+the use of differentiation and scaffolding as teaching and learning strategies for ensuring that no learner is left behind
+the use of Information Communications Technology (ICT) as a pedagogical tool.
+the identification of subject specific instructional expectations needed for making learning in the subject relevant to learners
+the integration of assessment for learning, as learning and of learning into the teaching and learning process and as an accountability strategy
+use questioning techniques that promote and deepen learning
+
+LEARNING-CENTRED PEDAGOGY
+The learner is at the centre of learning. At the heart of the curriculum is learning progression and improvement of learning outcomes for Ghana’s young people with a
+focus on the 4Rs – Reading, wRiting, aRithmetic and cReativity. It is expected that at each curriculum phase, learners would be offered the essential learning experiences to
+progress seamlessly to the next phase. Where there are indications that a learner is not sufficiently ready for the next phase a compensatory provision through
+differentiation should be provided to ensure that such a learner is ready to progress with his/her cohort. At the primary school, the progression phases are: pre-primary
+(KG1 – 2), primary phases (B1 – B3 and B4 to B6).
+The curriculum encourages the creation of a learning-centred classroom with the opportunity for learners to engage in meaningful “hands-on” activities that bring home to
+the learner what they are learning in school and what they know from outside of school. The learning centred classroom is a place for the learners to discuss ideas and
+through the inspiration of the teacher actively engage in looking for answers through working in groups to solve problems. This also includes researching for information
+and analysing and evaluating the information obtained. The aim of the learning-centred classroom approach is to develop learner autonomy so that learners can take
+ownership of their learning. It provides the opportunity for deep and profound learning to take place.
+The teacher should create a learning atmosphere that ensures:
+• Learners feel safe and accepted.
+• Learners are given frequent opportunities to interact with varied sources of information, teaching and learning materials and ideas in a variety of ways.
+• The teacher assumes the position of a facilitator or coach who: Helps learners to identify a problem suitable for investigation via project work.
+• Problems are connected to the context of the learners’ world so that it presents authentic opportunities for learning.
+• Subject matter around the problem, not the discipline.
+• Learners responsibly define their learning experience and draw up a plan to solve the problem in question.
+• Learners collaborate whilst learning.
+• Demonstrate the results of their learning through a product or performance.
+It is more productive for learners to find answers to their own questions rather than for teachers to provide the answers and their opinions in a learning-centred
+classroom.
+
+© NaCCA, Ministry of Education 2019
+
+xiv
+
+INCLUSION
+Inclusion entails access and learning for all learners especially those disadvantaged. All learners are entitled to a broad and balanced curriculum in every school in Ghana.
+The daily learning activities to which learners are exposed should ensure that the learners’ right to equal access to quality education is being met. The curriculum suggests
+a variety of approaches that address learners’ diversity and their special needs in the learning process. These approaches when used in lessons, will contribute to the full
+development of the learning potential of every learner. Learners have individual needs and different learning styles, learning experiences and different levels of motivation
+for learning. Planning, delivery and reflection on daily learning episodes should take these differences into consideration. The curriculum therefore promotes:
+• learning that is linked to the learner’s background and to their prior experiences, interests, potential and capacities;
+• learning that is meaningful because it aligns with learners’ ability (e.g. learning that is oriented towards developing general capabilities and solving the practical
+problems of everyday life); and
+• The active involvement of the learners in the selection and organisation of learning experiences, making them aware of their importance in the process and also
+enabling them to assess their own learning outcomes.
+DIFFERENTIATION AND SCAFFOLDING
+This curriculum is to be delivered through the use of creative approaches. Differentiation and Scaffolding are pedagogical approaches to be used within the context of the
+creative approaches.
+Differentiationis a process by which differences between learners (learning styles, interest and readiness to learn etc.) are accommodated so that all students in a group
+have best possible chances of learning. Differentiation could be by task, support and outcome. Differentiation as a way of ensuring each learner benefits adequately from
+the delivery of the curriculum can be achieved in the classroom through:
+•
+•
+•
+
+Task
+One-on-one support
+Outcome
+
+Differentiation by task involves teachers setting different tasks for learners of different ability e.g. in sketching the plan and shape of their classroom some leaners could
+be made to sketch with free hand while others would be made to trace the outline of the plan of the classroom.
+Differentiation by support involves the teacher providing a targeted support to learners who are seen as performing below expected standards or at risk of not
+reaching the expected level of learning outcome. This support may include a referral to a Guidance and Counselling Officer for academic support.
+Differentiation by outcome involves the teacher allowing learners to respond at different levels. In this case, identified learners are allowed more time to complete a
+given task.
+Scaffolding in education refers to the use of a variety of instructional techniques aimed at moving learners progressively towards stronger understanding and ultimately
+greater independence in the learning process.
+
+© NaCCA, Ministry of Education 2019
+
+xv
+
+It involves breaking up the learning episode, experience or concepts into smaller parts and then providing learners with the support they need to learn each part. The
+process may require a teacher assigning an excerpt of a longer text to learners to read, engage them to discuss the excerpt to improve comprehension of its rationale,
+then guiding them through the key words/vocabulary to ensure learners have developed a thorough understanding of the text before engaging them to read the full text.
+Common scaffolding strategies available to the teacher include:
+•
+
+giving learners a simplified version of a lesson, assignment, or reading, and then gradually increasing the complexity, difficulty, or sophistication over time.
+
+•
+
+describing or illustrating a concept, problem, or process in multiple ways to ensure understanding.
+
+•
+
+giving learners an exemplar or model of an assignment, they will be asked to complete.
+
+•
+
+giving learners a vocabulary lesson before they read a difficult text.
+
+•
+
+clearly describing the purpose of a learning activity, the directions learners need to follow, and the learning goals they are expected to achieve.
+
+•
+
+explicitly describing how the new lesson builds on the knowledge and skills learners were taught in a previous lesson.
+
+INFORMATION COMMUNICATIONS TECHNOLOGY
+ICT has been integrated into this curriculum as a teaching and learning tool to enhance deep and independent learning. Some of the expected outcomes that this
+curriculum aims to achieve through ICT use for teaching and learning are:
+•
+•
+•
+•
+•
+•
+
+improved teaching and learning processes.
+improved consistency and quality of teaching and learning.
+increased opportunities for more learner-centred pedagogical approaches.
+improved inclusive education practices by addressing inequalities in gender, language, ability.
+improved collaboration, creativity, higher order thinking skills.
+enhanced flexibility and differentiated approach of delivery.
+
+The use of ICT as a teaching and learning tool is to provide learners an access to large quantities of information online. It also provides the framework for analysing data to
+investigate patterns and relationships in a geographical context. Once pupils have made their findings, ICT can then help them organize, edit and present information in
+many different ways.
+Learners need to be exposed to the various ICT tools around them including calculators, radios, cameras, phones, television sets and computer and related software like
+Microsoft Office packages – Word, PowerPoints and Excel as teaching and learning tools. The exposure that learners are given at the Primary School level to use ICT in
+exploring learning will build their confidence and will increase their level of motivation to apply ICT use in later years, both within and outside of education. ICT use for
+teaching and learning is expected to enhance the quality and learners’ level of competence in the 4Rs.
+
+© NaCCA, Ministry of Education 2019
+
+xvi
+
+ORGANISATION OF THE CURRICULUM
+Curriculum Reference Numbers
+The curriculum has been structured into four columns which are Strands, Sub-strands, Content standards and Indicators and exemplars. A unique annotation is used for
+numbering the learning indicators in the curriculum for the purpose of easy referencing. The notation is indicated in table 2.
+Example:B2.4.2.3.1
+ANNOTATION
+
+MEANING / REPRESENTATION
+
+B2
+
+Year Or Class
+
+4.
+
+Strand Number
+
+2.
+
+Sub-Strand Number
+
+3.
+
+Content Standard Number
+
+1.
+
+Learning / Performance Indicator Number
+
+Strands are the broad areas/sections of the subject content to be studied.
+Sub-strands are the topics within each strand under which the content is organised.
+Content standard refers to the pre-determined level of knowledge, skill and/or attitude that a learner attains by a set stage of education.
+Indicator is a clear outcome or milestone that learners have to exhibit in each year to meet the content standard expectation. The indicators represent the minimum
+expected standard in a year.
+Exemplar: support and guidance which clearly explains the expected outcomes of an indicator and suggests what teaching and learning activities could take to support the
+facilitators/teachers in the delivery of the curriculum.
+The action verbs provided in the learning domains in each content standard should help you to structure your teaching to achieve the desired learning outcomes. Select
+from the action verbs provided for your teaching, for evaluation exercises and for test construction. Check the learning indicators to ensure that you have given the
+required emphasis to each of the learning domains in your teaching and assessment.
+
+© NaCCA, Ministry of Education 2019
+
+xvii
+
+SCOPE AND SEQUENCE
+STRANDS
+1
+
+SUB-STRANDS
+1. Saluer et prendre congé
+
+L’identité
+2. Se présenter
+
+3. Présenter quelqu’un
+
+4. Décrire quelqu’un
+
+5. Décrire la famille et les liens familiaux
+
+2
+
+Parler de son
+environnement
+
+1. Parler de sa maison
+
+2. Parler de son école
+
+© NaCCA, Ministry of Education 2019
+
+CONTENT STANDARDS
+Compréhension Orale
+ProductionOrale
+Compréhension Écrite
+Production Écrite
+Compréhension Orale
+Production Orale
+Compréhension Écrite
+Production Écrite
+Compréhension Orale
+Production Orale
+Compréhension Écrite
+Production Écrite
+Compréhension Orale
+Production Orale
+Compréhension Écrite
+Production Écrite
+Compréhension Orale
+Production Orale
+Compréhension Écrite
+Production Écrite
+Compréhension Orale
+Production Orale
+Compréhension Écrite
+Production Écrite
+Compréhension Orale
+Production Orale
+Compréhension Écrite
+Production Écrite
+
+B4
+
+B5
+
+B6
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+xviii
+
+STRANDS
+3
+
+Exprimer ses goûts et
+ses préférences
+
+SUB-STRANDS
+1. Dire ce que l’on aime
+
+2. Dire ce que l’on n’aime pas
+
+1. Compter et faire des calculs simples
+
+4
+
+Les activités
+
+2. Demander et donner l’heure
+
+3. Parler des jours de la semaine
+
+4. Situer les mois et les saisons dans le
+temps
+5. Entrer en contact par téléphone
+
+6. Inviter quelqu’un et accepter une
+invitation
+STRANDS
+
+© NaCCA, Ministry of Education 2019
+
+7. Identifier les professions et les
+métiers
+
+CONTENT STANDARDS
+Compréhension Orale
+Production Orale
+Compréhension Écrite
+Production Écrite
+Compréhension Orale
+Production Orale
+Compréhension Écrite
+Production Écrite
+Compréhension Orale
+Production Orale
+Compréhension Écrite
+Production Écrite
+Compréhension Orale
+Production Orale
+Compréhension Écrite
+Production Écrite
+Compréhension Orale
+Production Orale
+Compréhension Écrite
+Production Écrite
+Compréhension Orale
+Production Orale
+Compréhension Écrite
+Production Écrite
+Compréhension Orale
+Production Orale
+Compréhension Écrite
+Production Écrite
+Compréhension Orale
+Production Orale
+Compréhension Écrite
+Production Écrite
+Compréhension Orale
+Production Orale
+Compréhension Écrite
+Production Écrite
+
+B4
+
+B5
+
+B6
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+xix
+
+STRANDS
+
+SUB-STRANDS
+
+CONTENT STANDARDS
+
+B4
+
+B5
+
+B6
+
+SUB-STRANDS
+
+CONTENT STANDARDS
+
+B4
+
+B5
+
+B6
+
+√
+
+√
+
+√
+
+√
+
+√
+
+√
+
+8. Demander et expliquer la position des
+personnes ou des objets les uns par
+rapport aux autres
+9. Donner et répondre à des ordres
+
+© NaCCA, Ministry of Education 2019
+
+Compréhension Orale
+Production Orale
+Compréhension Écrite
+Production Écrite
+Compréhension Orale
+Production Orale
+Compréhension Écrite
+Production Écrite
+
+xx
+
+BASIC 4
+
+© NaCCA, Ministry of Education 2019
+
+1
+
+Basic 4
+STRAND 1: L’IDENTITÉ
+Sub–Strand 1 : Saluer et prendre congé
+CONTENT
+STANDARDS
+
+Compréhension
+Orale
+
+INDICATOR AND EXEMPLARS
+
+B4.1.1.1.1 : Écouter/Regarder et comprendre un document audio-visuel dans lequel deux
+personnes se saluent
+Ex. Deux personnes se saluent à la maison/à l’école/au marché/à l’hôpital/etc.
+- Chercher des documents audio ou audio-visuel (sur YouTube/Documents aux CREF, Collection
+‘Chantez plus fort’, etc.)
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE
+COMPETENCES
+Communication and
+collaboration
+- Critical thinking
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+
+Production orale
+
+B4.1.1.2.1 : Saluer et répondre oralement aux salutations en respectant le code et les valeurs
+sociaux
+Ex.
+-
+
+Bonjour, Kofi.
+Bonjour, Ama. Comment vas-tu ?
+Je vais bien, et toi ?
+Au revoir, Kofi. A bientôt !
+Au revoir, Ama.
+
+© NaCCA, Ministry of Education 2019
+
+- Personal development
+and leadership
+- Digital literacy
+
+2
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+Compréhension
+Écrite
+
+Bonjour, Madame Owusu.
+Bonjour, Kofi. Comment ça va ?
+Ça va bien, merci. Et vous ?
+Ca va. Au revoir. À demain.
+Au revoir, Madame.
+
+B4.1.1.3.1 : Lire et comprendre un texte, regarder une image qui décrit une scène de personnes
+qui se saluent
+Ex. Des bandes dessinées, des dialogues fabriqués, etc.
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE
+COMPETENCES
+Communication and
+collaboration
+- Critical thinking
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+- Personal development
+and leadership
+
+Production
+Écrite
+
+B4.1.1.4.1 : Écrire des mots de salutation simples
+Ex. Écrire/copier des mots de salutations :
+Bonjour, Ça va ? Au revoir ; A bientôt ; A demain ; Madame ; Monsieur ;
+
+- Digital literacy
+- Communication and
+collaboration
+- Critical thinking
+- Creativity and innovation
+
+© NaCCA, Ministry of Education 2019
+
+3
+
+Sub–Strand 2 : Se présenter
+CONTENT
+STANDARDS
+Compréhension
+Orale
+
+Production orale
+
+INDICATOR AND EXEMPLARS
+
+B4.1.2.1.1 : Écouter et comprendre un dialogue dans lequel des personnes se présentent
+Ex:- Deux personnes se présentent : dans la cour de récréation, au marché, dans la rue, au
+stade, etc.
+- Identifiez oralement les personnes qui se présentent.
+- Écoutez le professeur se présenter à la classe
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+Communication and
+collaboration
+
+- Critical thinking
+
+B4.1.2.2.1 : Poser et répondre à des questions sur le nom, le prénom, la nationalité
+Ex.: - à la douane, à l’aéroport, à l’hôpital, à l’école, etc.
+Comment tu t’appelles ?
+Tu t’appelles comment ?
+Comment vous appelez-vous ?
+Je m’appelle...
+
+- Cultural identity and global
+citizenship
+
+Quel est ton/votre...
+• nom de famille ?
+• prénom
+Mon nom/prénom est...
+
+- Personal development and
+leadership
+
+Quelle est ta/votre...
+• nationalité ?
+je suis ghanéen/ghanéenne...
+
+- Creativity and innovation
+
+- Digital literacy
+
+Jeu de rôle : Deux personnes se présentent :
+- Bonjour, Je m’appelle Atsu, et toi, comment tu t’appelles ?
+- Moi, je m’appelle Juliette.
+- Qui est-ce ? C’est … ?
+- C’est mon ami Jean.
+
+© NaCCA, Ministry of Education 2019
+
+4
+
+CONTENT
+STANDARDS
+
+Compréhension
+écrite
+
+Production
+écrite
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+B4.1.2.2 : Se présenter à quelqu’un
+Ex.:
+Deux élèves se présentent en donnant: nom, prénom, nationalité :
+- Je m’appelle Baba Seidu. Mon nom c’est Seidu et mon prénom c’est Baba. Je suis ghanéen.
+- Moi, je m’appelle Amina. Je suis ghanéenne.
+B4.1.2.3.1 : Lire et comprendre un texte simple dans lequel quelqu’un se présente
+Ex. :- Complétez un texte
+- Répondre à 3 questions simples sur le texte lu.
+B4.1.2.4.1 : - Écrire à un correspondant ; donner son nom, son prénom, sa nationalité
+Ex. : Cher/Chère correspondant(e)
+Je m’appelle ……………
+-
+
+Donner son nom, son prénom, sa nationalité, Écrire une carte postale à son
+ami(e)/correspondant(e) pour se présenter.
+Dessiner une carte d’identité et la remplir avec les informations requises.
+
+© NaCCA, Ministry of Education 2019
+
+5
+
+Sub-Strand 3: Présenter quelqu’un
+CONTENT
+STANDARDS
+Compréhension
+Orale
+
+INDICATOR AND EXEMPLARS
+
+B4.1.3.1.1 : Écouter et comprendre un texte où l’on présente quelqu’un
+Ex:- Les apprenants remplissent une fiche d’identité ou répondent à des questions sur la
+personne
+- Comment il s’appelle ?
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+Communication and
+collaboration
+
+- Critical thinking
+
+- Quel est son prénom ?
+- Etc.
+
+- Creativity and innovation
+
+- Le professeur présente quelqu’un à la classe.
+
+Production orale B4.1.3.2.1 : Présenter quelqu’un en donnant
+
+- Cultural identity and global
+citizenship
+
+son nom, son prénom, sa nationalité
+Ex.:
+
+- Personal development and
+leadership
+
+Voici mon ami
+-
+
+Baba Seidu. Son nom c’est Seidu et son prénom c’est Baba. Il est ghanéen.
+
+- Digital literacy
+
+Ex. Présentez votre ami(e) à votre famille :
+-
+
+Voici mon ami. Il s’appelle Jean Konou. Il est commerçant.
+
+© NaCCA, Ministry of Education 2019
+
+6
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+B4.1.3.3.1 : Lire et comprendre un texte simple dans lequel on présente quelqu’un
+Compréhension
+écrite
+
+Ex. 1:- Exercices d’identification de personnalités (photos de personnalités)
+Ex. 2 :- Lire une carte postale qui présente quelqu’un et répondre à des questions simples sur le
+texte lu.
+
+B4.1.3.4.1 : Écrire une note pour présenter quelqu’un
+Production
+écrite
+
+Ex. : Chers amis, je vous présente Baba Yaro. Il est nigérian. Etc.
+Dessiner une carte d’identité et la remplir avec les informations requises.
+
+© NaCCA, Ministry of Education 2019
+
+7
+
+Sub-Strand 4: Décrire quelqu’un
+CONTENT
+STANDARDS
+Compréhension
+Orale
+
+INDICATOR AND EXEMPLARS
+
+B4.1.4.1.1 : Écouter/Regarder et comprendre un document dans lequel on décrit les
+caractéristiques physiques d’une personne
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+Communication and
+collaboration
+
+Ex. :
+-
+
+Regarder une vidéo sur YouTube/Documents aux CREF sur dans laquelle on mention les
+parties du corps en décrivant une personne.
+
+- Critical thinking
+
+- Creativity and innovation
+Production orale
+
+B4.1.4.2.1 : Poser et répondre à des questions sur les caractéristiques physiques d’une
+personne
+Ex.:
+-
+
+Kofi, comment est ton frère ?
+
+-
+
+Il est grand / Il est petit, etc.
+
+-
+
+Comment est-il/elle ?
+
+-
+
+Il/Elle a une grosse tête / le nez plat/ etc.
+
+B4.1.4.2.2 : Réciter un poème, chanter une chanson sur les caractéristiques physiques d’une
+personne
+
+- Cultural identity and global
+citizenship
+
+- Personal development and
+leadership
+
+- Digital literacy
+
+Des ressources sur YouTube/Documents aux CREF, dans la collection ‘Chantez plus fort’, etc.
+
+© NaCCA, Ministry of Education 2019
+
+8
+
+CONTENT
+STANDARDS
+Compréhension
+écrite
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+B4.1.4.3.1 : Lire et comprendre des textes simples qui décrivent les caractéristiques
+physiques d’une personne
+Ex.: Des photos des gens accompagnées de descriptions simples de leurs
+caractéristiques physiques
+
+Production
+écrite
+
+B4.1.4.4.1 : Décrire les caractéristiques physiques d’une personne
+Ex.: Un dessin du corps humain étiqueté
+
+© NaCCA, Ministry of Education 2019
+
+9
+
+STRAND 2 : PARLER DE SON ENVIRONNEMENT
+Sub-Strand 1 : Parler de sa maison
+INDICATOR AND EXEMPLARS
+
+CONTENT
+STANDARDS
+Compréhension
+Orale
+
+B4.2.1.1.1 : Écouter/Regarder et comprendre un document audio-visuel sur les pièces, les
+objets de la maison
+-
+
+Production orale
+
+Ex.
+- Dessiner un objet de la maison et demander à son camarade de le nommer
+- Montrer un objet de la maison et demander à son camarade de le nommer
+- Jeu : ‘La chasse au trésor’ (sur site internet)
+B4.2.1.2.2 : Réciter des poèmes, chanter des chansons sur des objets de la maison
+
+Production
+écrite
+
+- Critical thinking
+
+- Creativity and innovation
+
+- Cultural identity and global
+citizenship
+
+Documents sur YouTube/Documents aux CREF, etc. sur les objets, etc.
+
+B4.2.1.3.1 : Identifier les pièces et les objets de la maison
+Compréhension
+écrite
+
+Communication and
+collaboration
+
+Consulter YouTube/Documents aux CREF, sites internet, etc.
+
+B4.2.1.2.1 : Demander à quelqu’un de nommer un objet de la maison
+
+-
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+Activités :
+- Chasser l’intrus, exercice d’appariement, etc.
+- nommer les objets de la maison à partir des images.
+B4.2.1.4.1 : Écrire, dessiner et colorier des objets de la maison
+
+- Personal development and
+leadership
+
+- Digital literacy
+
+Ex.
+- - A l’aide de dessins ou images, compléter des noms d’objets/pièces de la maison avec les
+lettres manquantes
+- A l’aide d’images d’une maison, libeller les objets et pièces de la maison par leurs noms
+
+© NaCCA, Ministry of Education 2019
+
+10
+
+SUB-STRAND 2 : Parler de son école
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+Compréhension
+Orale
+
+B4.2.2.1.1 : Écouter/Regarder et comprendre un document audio-visuel sur les objets de la
+classe et
+
+Production orale
+
+- Critical thinking
+B4.2.2.1.2 : Écouter/Regarder et comprendre un document audio-visuel sur les personnes de
+l’école
+Ressources sur YouTube/Documents aux CREF, dans la collection ‘Chantez plus fort’, etc.
+- Creativity and innovation
+Ex.
+- Qu’est-ce qu’il y a dans ton école/la salle de classe/ton cartable, etc.
+- Il y a un tableau, des chaises, des tables, etc./Il y a une cantine, des salles de classe, une cour,
+etc.
+- Cultural identity and global
+citizenship
+
+B4.2.2.2.1 : Poser et répondre à des questions sur ce que l’on fait avec les objets de la classe
+Ex.
+- Jeux : 1. Le jeu de dé.
+Exemple :
+Les élèves disent le nom de l’objet selon le numéro du dé (C’est quel numéro ? C’est quel
+objet ?)
+
+Communication and
+collaboration
+
+- Personal development and
+leadership
+
+- Digital literacy
+
+Ex. - A partir des photos ou d’images, identifier et nommer les différentes parties ou objets
+d’une école
+Ex. – Dire ce qu’on a dans son cartable, dans la classe, etc.
+
+© NaCCA, Ministry of Education 2019
+
+11
+
+CONTENT
+STANDARDS
+
+Compréhension
+écrite
+
+Production
+écrite
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+B4.2.2.2.2 : Poser et répondre à des questions simples sur des endroits de l’école
+Ex. : la cantine, le terrain de sport, la salle des professeurs, le bureau du directeur, la
+bibliothèque, etc.
+- A l’aide de dessins ou d’images, libeller les différentes endroits ou objets d’une école.
+B4.2.2.2.3 : - Réciter des poèmes, chanter des chansons sur les objets de la classe
+-
+
+Apprendre et chanter des chansons sur YouTube/Documents aux CREF sur l’école.
+Dans mon cartable, il y a …
+
+B4.2.2.3.1 : Lire et comprendre des textes simples accompagnés d’images sur les objets de
+l’école
+- Créer/chercher des textes sur les objets de l’école
+
+B4.2.2.4.1 : A l’aide d’images compléter les noms des objets de l’école par les lettres
+manquantes
+Exemples A_RDO_SE = ARDOISE
+
+© NaCCA, Ministry of Education 2019
+
+12
+
+STRAND 3 : Exprimer ses goûts et ses préférences
+INDICATOR AND EXEMPLARS
+
+CONTENT
+STANDARDS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+SUB-STRAND 1 : Dire ce que l’on aime
+Compréhension
+Orale
+
+Production
+Orale
+
+B4.3.1.1.1 : Écouter/Regarder et comprendre un document audio-visuel sur les goûts de
+quelqu’un sur les fruits, les animaux, les couleurs et répondre à des questions
+- Un dialogue enregistré, des chansons, des poèmes, etc.
+- Qu’est-ce que tu aimes ?
+J’aime le football, la lecture, le fufu, etc
+
+-
+
+Quel sport aimes-tu ?
+J’aime le basketball.
+
+-
+
+Quelle matière aimes-tu ?
+J’aime le français/les mathématiques/les sciences/etc.
+
+-
+
+Tu aimes les animaux ?
+Oui, j’aime les animaux./J’aime le chien et la chat
+
+Communication and
+collaboration
+- Critical thinking
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+- Personal development and
+leadership
+- Digital literacy
+
+B4.3.1.2.1 : Poser et répondre à des questions sur les goûts
+Ex :
+- Questions et réponses entre un parent et son enfant
+B4.3.1.2.2 : Dire ce que l’on aime
+- Jeu : Boîte à secret (Les étiquettes)
+- Exemple :
+- Le professeur distribue des photos (sur les animaux, les sports, les couleurs, etc.) et les
+élèves choisissent et disentce qu’ils aiment
+
+© NaCCA, Ministry of Education 2019
+
+13
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+Compréhension
+Écrite
+
+B4.3.1.3.1 : Lire et comprendre un texte simple sur les goûts et des préférences des personnes
+- Dans des journaux des enfants, des journaux intimes des jeunes, des romans-photos des
+jeunes, des photos illustrées, etc.
+
+Production
+Écrite
+
+B4.3.1.4.1 : Faire une liste d’objets que l’on aime
+- Établir une liste de courses, choisir ses objets préférés parmi tant d’autres, etc.
+- Dessiner ses objets préférés, etc.
+
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+14
+
+CONTENT
+STANDARDS
+
+Compréhension
+Orale
+
+INDICATOR AND EXEMPLARS
+
+SUB-STRAND 2: Dire ce que l’on n’aime pas
+B4.3.2.1.1 : Écouter/Regarder et comprendre un document audio-visuel sur les goûts de
+quelqu’un sur les fruits, les animaux, les couleurs
+Ex. :- Qu’est-ce que tu n’aimes pas ?
+Je n’aime pas le football/la lecture/le fufu, etc
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+Communication and
+collaboration
+- Critical thinking
+
+-
+
+Quel sport aimes-tu ?
+Je n’aime pas le basketball.
+
+-
+
+Quelle matière détestes-tu ?
+
+-
+
+Je déteste le français/les mathématiques/les sciences/etc.
+
+- Personal development and
+leadership
+
+-
+
+Tu aimes les animaux ?
+
+- Digital literacy
+
+-
+
+Non, je déteste les animaux.
+
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+
+B4.3.2.2.1 : Poser et répondre à des questions sur les goûts
+Production
+Orale
+
+B4.3.2.2.2 : Dire ce que l’on n’aime pas
+B4.3.2.2.3 : Enumérerce qu’on aime et ceque l’on n’aime pas
+
+Compréhension
+Écrite
+
+B4.3.2.3.1 :Lire et comprendre un texte simple sur les goûts et préférences des personnes
+
+Production
+Écrite
+
+B4.3.1.4.1 : Faire une liste d’objets que l’on aime et que l’on n’aime pas
+
+© NaCCA, Ministry of Education 2019
+
+15
+
+STRAND 4: Les activités
+INDICATOR AND EXEMPLARS
+
+CONTENT
+STANDARDS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+SUB-STRAND 1: Compter et faire des calculs simples
+Compréhension
+Orale
+
+Production
+Orale
+
+B4.4.1.1.1 : Écouter/Regarder et comprendre un document audio-visuel sur les nombres
+
+Communication and
+collaboration
+
+-
+
+- Critical thinking
+
+des chansons/ poèmes sur les nombres sur YouTube/Documents aux CREF, dans la
+collection ‘Chantez plus fort’, etc.
+
+B4.4.1.2.1 : Compter à haute voix des objets, des personnes, de son environnement
+Jeux de compter : Décrire le jeu ici…
+Ex. 1:
+- Comptez les chaises, les tables, etc. Additionnez, Faites l’addition de…, Calculez-le…
+Trois plus quatre…,
+- C’est combien ?, etc.
+- C’est… Ca fait… Le total est…..
+
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+- Personal development and
+leadership
+- Digital literacy
+
+Ex. 2:
+1, 2, 3, 4, etc.- (Ils comptent à tour de rôle à débit progressivement ascendante. Un joueur est
+éliminé s’il se fauche à un chiffre)
+Ex. 3:
+Dans le bon ordre- les membres d’un groupe choisissent au hasard des chiffres et s’alignent aussi
+rapidement que possible dans le bon ordre des chiffres en annonçant leurs chiffres en même
+temps.
+B4.4.1.2.2 : Réciter un poème portant sur les nombres
+
+© NaCCA, Ministry of Education 2019
+
+16
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+B4.4.1.2.3 : Compter à haute voix des objets, des personnes de son environnement.
+- Chantez des chansons et réciter des poèmes sur les chiffres. Chansons de la collection
+‘Chantez plus fort’.
+- Comptez l’argent que maman vous donne
+- Il y a des balles de tennis dans une boîte. Comptez-les.
+- Choisissez un chiffre au hasard dans une boîte et le dire à haute voix
+- Etc.
+- 2 cedis + 5 cedis = 7 cedis
+8 cedis – 3 cedis = 5 cedis
+Compréhension
+Orale
+
+Production
+Écrite
+
+B4.4.1.3.1 : Lire à haute voixde 1 à 20
+Exemple :
+- Ma main
+Voici ma main
+Elle a cinq doigts ;
+En voici Deux
+En voici Trois, etc.
+- Calendrier, numéros de téléphone, des plaques d’immatriculation
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+Communication and
+collaboration
+- Critical thinking
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+- Personal development and
+leadership
+- Digital literacy
+
+B4.4.1.4.1 : Faire des calculs simples à l’écrit avec des chiffres en lettres
+3, 14, 4, 15, 5, 2, 0, 17, etc.
+Ex. : Mettez ‘six’ au lieu de ‘6’. six
+- Demander aux élèves d’écrire la somme des opérations en lettres
+Exemples : 2 + 5 = sept
+14 – 8 = quatre
+- Additionner, multiplier, soustraire, diviser
+Ex. :
+- deux plus deux également(=)4
+- quatre fois deux font (=) 8
+- 8 ÷ 2 = quatre
+- 10 – 5 = cinq
+
+© NaCCA, Ministry of Education 2019
+
+17
+
+CONTENT
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+SUB-STRAND 2: Demander et donner l’heure
+Compréhension
+Orale
+
+B4.4.2.1.1 : Écouter/Regarder et comprendre un document audio-visuel sur les horaires et
+répondre à des questions
+-
+
+Production
+Orale
+
+Chansons, dialogue simple, les annonces de vol à l’aéroport, etc.
+
+B4.4.2.2.1 : Poser et répondre à des questions sur l’heure qu’il est
+Ex. : A l’aide d’une horloge posez la question :
+- Quelle heure est-il ?
+- Il est 3 heures.
+Il est une heure.
+Il est 2/3/4/5/6/7/8/9/10/11 heures du matin.
+Il est midi
+Il est une heure de l’après-midi
+Il est2/3/4/5 heures de l’après-midi
+Il est 6/7/8/9/10/11 heures du soir.
+Il est minuit.
+
+- Communication and
+collaboration
+- Critical thinking
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+- Personal development and
+leadership
+- Digital literacy
+
+Ex. :
+- Quelle heure est-il ?/Il est quelle heure ?/Vous avez l’heure ?
+- Il six heures/Il est midi/Il est minuit
+- Etc.
+
+© NaCCA, Ministry of Education 2019
+
+18
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+B4.4.2.2 : Parler de l’emploi du temps de la journée
+-
+
+Compréhension
+Écrite
+
+Ce que l’on fait à certains moments de la journée
+(matin, midi, après-midi, soir)
+Ex. :
+Je me lève à cinq heures
+Je me lave à six heures
+Je mange à six heures et demie, etc.
+- Des chansons, récitations, etc. sur les horaires (sur internet, fabriquées par le professeur, etc.
+et enregistrées)
+B4.4.2.3.1 : Lire et comprendre l’heure qu’il est
+-
+
+Exemple :
+Des affiches, des annonces sur les horaires de transports publics (routier, ferroviaire,
+maritime, aérien)
+
+B4.4.2.3.2 : Indiquer l’heure qu’il est en changeant les aiguilles d’une horloge
+
+© NaCCA, Ministry of Education 2019
+
+19
+
+CONTENT
+STANDARDS
+Production
+Écrite
+
+INDICATOR AND EXEMPLARS
+
+B4.4.2.4.1 : Écrire son emploi du temps de la journée
+
+
+Se référer à l’indicateur
+
+ Ce que l’on fait à certains moments de la journée
+(matin, midi, après-midi, soir)
+À l’aide d’images des activités de la journée et des cadrans indiquant l’heure de ces activités,
+guider les élèves à parler de leur emploi du temps.
+A l’aide des vidéos sur YouTube/Documents aux CREF, guider les apprenants à parler de
+comment ils passent leur journée.
+Regarder/Chanter des chansons sur YouTube/Documents aux CREF sur les activités
+quotidiennes.
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+- Communication and
+collaboration
+- Critical thinking
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+- Personal development
+and leadership
+- Digital literacy
+
+Ex.:
+Le matin à cinq heures et demie, je me lève. … à midi, c’est la récréation, etc.
+
+© NaCCA, Ministry of Education 2019
+
+20
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+SUB-STRAND 3: Parler des jours de la semaine
+Compréhension
+Orale
+
+Production
+Orale
+
+B4.4.3.1.1: Écouter/Regarder et comprendre un document audio/audio-visuel sur les jours de la
+semaine et répondre à des questions
+
+- Communication and
+collaboration
+
+-
+
+- Critical thinking
+
+Un dialogue, un poème, une chanson, etc. sur les jours de la semaine, (sur
+YouTube/Documents aux CREF, dans la collection ‘Chantez plus fort’, etc.)
+
+B4.4.3.2.1 : Poser et répondre à des questions sur les jours de la semaine
+Ex.: Poser et répondre à des questions sur les matières de l’emploi du temps pour réviser les
+jours de la semaine.- Les maths, c’est pour quel(s) jour(s) de la semaine ? Les maths, c’est le lundi,
+mercredi et vendredi.- Jeu de dé
+Les jours de la semaine sur de petits cartons numérotés, les élèves choisissent et selon le numéro
+du déet disent le jour de la semaine choisi.
+B4.4.3.2.2 : Dire ce que l’on fait chaque jour de la semaine
+
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+- Personal development and
+leadership
+- Digital literacy
+
+ Guidés des images, les élèves disent ce qu’ils font à un jour de la semaine.
+Exemples :
+- Lundi, je vais à l’école
+- Mardi, je vais à l’école, etc.
+- Vendredi, je vais à la mosquée, etc.
+- Samedi, je vais jouer.
+- Dimanche, je vais à l’église.
+Etc.
+
+© NaCCA, Ministry of Education 2019
+
+21
+
+CONTENT
+STANDARDS
+
+Compréhension
+Écrite
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+B4.4.3.2.3 : Réciter des poèmes ou chanter des chansons sur les jours de la semaine
+B4.4.3.3.1:Lire et comprendre un texte simple sur les activités d’une personne
+- À partir des emplois du temps des classes différentes, les élèves lisent et disent les matières
+de chaque jour.
+Exemple :
+Lundi
+
+Anglais
+
+mathématiques
+
+Mardi
+
+Français
+
+Twi
+
+Mercredi
+Jeudi
+
+Etc.
+
+sciences
+
+Vendredi
+Samedi
+Dimanche
+
+© NaCCA, Ministry of Education 2019
+
+22
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+- Lundi, nous avons l’anglais, les mathématiques, les sciences
+Production
+Écrite
+
+B4.4.3.4.1 : Écrire ce que l’on fait chaque jour de la semaine
+ À partir d’un emploi du temps, les élèves écrivent quel jour ils font certaines matières.
+Exemple :
+- A partir du tableau, dites quel jour vous faites les matières suivantes ?
+- Mercredi, nous avons….
+B4.4.3.4.2: Écrire une carte postale à un(e) ami(e) pour lui raconter comment on passe sa
+journée.
+B4.4.3.4.3 : Remplir un emploi du temps vierge avec des rubriques comme jour, matière, heure.
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+- Communication and
+collaboration
+- Critical thinking
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+- Personal development and
+leadership
+- Digital literacy
+
+© NaCCA, Ministry of Education 2019
+
+23
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+SUB-STRAND 4 : Situer les mois et les saisons dans le temps
+Compréhension
+Orale
+
+B4.4.1.1 : Écouter/Regarder et comprendre un document audio/audio-visuel sur les mois de
+l’année
+
+
+Production
+Orale
+
+Un dialogue, un poème, une chanson, etc. sur les mois de l’année, (sur YouTube/Documents
+aux CREF, dans la collection ‘Chantez plus fort’, etc.)
+
+B4.4.4.2.1 : Poser et répondre à des questions sur les mois de l’année.
+Exemple :
+- Dans quel mois célèbre-t-on le Fête des Mères ? C’est en janvier.
+ Jeu de dé:
+Les mois de l’année sur de petits cartons numérotés, les élèves choisissent et selon le numéro
+du dé et disent le mois choisi.
+ Questions-réponses sur les images des évènements nationaux et les mois où ils se passent.
+Exemple :
+- Regardez les images d’événements et dites dans quel mois chacun se passe.
+B4.4.4.2.2 : Dire dans quel mois un événement/une activité a lieu
+Exemple 1 :
+A partir d’un calendrier, dites dans quel mois sont célébrées les fêtes suivantes : Homowo,
+Noël, Saint valentin, Republic Day, Workers Day, Independence Day, farmers Day, IdlFitr, etc
+
+- Communication and
+collaboration
+- Critical thinking
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+- Personal development
+and leadership
+- Digital literacy
+
+ Exemple 2 : Donner le mois de naissance d’une personne ou d’un autre
+- En quel mois tu es né(e)il(elle) est née ?
+- Je suis né(e) en …………..Il (Elle) est né(e) en……….
+B4.4.4.2.3 : Réciter des poèmes ou chanter des chansons sur les mois de l’année
+B4.4.4.2.4 : Situer un événement/une action dans un mois de l’année
+Exemple : le Noël est en décembre, le Nouvel an commence en janvier, l’indépendance du
+Ghana est en mars, etc.
+© NaCCA, Ministry of Education 2019
+
+24
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+SUB-STRAND 4 : Situer les mois et les saisons dans le temps
+Compréhension
+Écrite
+
+B4.4.4.3.1 : Lire et donner les dates de naissances, de fêtes nationales/traditionnelles,
+d’événements importants
+Exemples :
+ un calendrier, un texte simple accompagné d’images
+
+- Communication and
+collaboration
+
+Jeu : le mois sur un calendrier, les élèves trouvent le mois dans lequel une date (jour) se trouve
+
+- Critical thinking
+
+Exemple :
+- Trouvez le mois dans lequel mercredi est sur le 2 du mois.
+
+- Creativity and innovation
+
+• A partir d’un texte, dites les dates de certains évènements au Ghana
+Exemples :
+- Le Ghana a l’indépendance le 6 mars 1957
+- Le Ghana devient une République le 25 juin 1960
+- Nous célébrons Noël 25 décembre
+- Etc.
+Production
+Écrite
+
+- Cultural identity and
+global citizenship
+- Personal development
+and leadership
+- Digital literacy
+
+B4.4.4.4.1 : Écrire sa date de naissance et celle des membres de sa famille
+
+Ex. La date de naissance de mon père est le 5 mai 1966.
+
+© NaCCA, Ministry of Education 2019
+
+25
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+SUB-STRAND 5: Entrer en contact par téléphone
+Compréhension
+Orale
+
+B4.4.5.1.1 : Écouter et comprendreune conversation ou regarder et comprendre un clip sur
+deux personnes qui communiquent par téléphone
+Exemple :
+Télécharger du YouTube/Documents aux CREF
+Allô ! Qui est à l’appareil ?
+C’est…
+Allô ! C’est…
+Non, Ce n’est pas…
+Allô ! Je voudrais parler à…
+Allô ! Je veux parler à… ?
+Il /Elle est là ?
+Oui, il /Elle est là. Ne quittez / coupez pas, je vous le/la passe.
+’
+
+Production
+Orale
+
+Compréhension
+Écrite
+Production
+Écrite
+
+B4.4.5.2.1
+Simuler la conversation téléphonique entre deux interlocuteurs
+B4.4.5.2.2
+Se présenter au téléphone
+Exemple :
+Appeler son ami(e) pour lui présenter son professeur de français.
+
+- Communication and
+collaboration
+- Critical thinking
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+- Personal development
+and leadership
+- Digital literacy
+
+B4.4.5.3.1
+Lire et comprendre un dialogue court d’une conversation téléphonique
+Exemple :
+Conversations en bulles avec assez d’images
+B4.4.5.4.1
+Échanger des petits messages écrits par téléphone
+Exemple :
+
+© NaCCA, Ministry of Education 2019
+
+26
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+SUB-STRAND 6: Inviter quelqu’un et accepter une invitation
+Compréhension
+Orale
+
+4.4.6.1.1
+Écouter/Regarder et comprendre un document audio-visuel sur l’invitation.
+Exemple :
+Téléchargement sur YouTube/Documents aux CREF
+
+-
+
+Tu manges avec moi ?
+Oui, merci/ Oui, avec plaisir.
+Viens manger.
+Non, merci.
+Tu viens chez moi demain.
+Non, je ne peux pas./Je suis désolé(e) etc.
+
+Je peux…/je ne peux pas…
+Tu viens ? Tu veux venir ?
+Est-ce que tu veux/ vous voulez …..?
+Veux-tu / voulez-vous ?
+Je te propose de… ?
+Je t’invite à …
+
+- Communication and
+collaboration
+- Critical thinking
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+- Personal development
+and leadership
+- Digital literacy
+
+B4.4.6.2.1
+- Inviter quelqu’un par téléphone
+
+© NaCCA, Ministry of Education 2019
+
+27
+
+CONTENT
+STANDARDS
+Production
+Orale
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+B4.4.6.2.2
+-Accepter/refuser une invitation
+- Avec plaisir.
+-Oui, je suis libre.
+-Non, je suis désolé(e).
+-Non, je ne peux pas.
+-etc.
+B4.4.6.2.3
+Dire pourquoi on accepte ou on refuse une invitationet répondre à des questions simples
+Exemple :
+
+-
+
+Je suis désolé. Je ne peux pas venir. J’ai un cours.
+Je regrette mais je suis malade.
+
+B4.4.6.3.1
+Lire et comprendreune lettre ou une carte d’invitation
+Compréhension
+Écrite
+
+Exemple :
+Une simple carte ou un message d’invitation d’un ami, de la famille, des journaux, etc.
+B4.4.6.4.1
+Écrire une lettre ou carte d’invitation
+
+Production
+Écrite
+
+Exemple :
+Préparer une carte d’invitation pour un anniversaire, une surprise partie, une sortie au cinéma
+ou à la plage, un concoursun jeu, etc.
+
+© NaCCA, Ministry of Education 2019
+
+28
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+SUB-STRAND 7: Identifier les professions et les métiers
+Compréhension
+Orale
+
+B4.4.7.1.1
+Écouter/Regarder et comprendre un document audiovisuel sur les professions et les métiers
+Exemple :
+Téléchargement du YouTube/Documents aux CREF
+
+Production
+Orale
+
+B4.4.7.2.1
+Poser et répondre à des questions sur les métiers ou les professions des membres d’une famille
+ou d’autres personnes
+Exemple :Que fait Papa ?
+--.Il est policier
+•
+
+Devinette
+
+Un élève mime la profession d’un membre de famille, les élèves doivent deviner et dire à haute
+voix la profession.
+
+- Communication and
+collaboration
+- Critical thinking
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+- Personal development and
+leadership
+- Digital literacy
+
+B4.4.7.2.2
+Dire la profession ou le métier que l’on veut exercer dans l’avenir
+Exemple:
+-
+
+-
+
+Je veux devenir… (un mécanicien, un professeur, etc.)
+Je veux être avocat dans l’avenir
+
+© NaCCA, Ministry of Education 2019
+
+29
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+SUB-STRAND 7: Identifier les professions et les métiers
+Compréhension
+Écrite
+
+B4.4.7.3.1
+Identifier et associer les noms des professions et métiers à leurs dessins.
+
+- Communication and
+collaboration
+
+Exemple :
+
+- Critical thinking
+
+Des photos des professions dans des manuels, sur des cartes, etc.
+Production
+Écrite
+
+- Creativity and innovation
+
+B4.4.7.4.1
+Écrire ce que font des personnes qui exercent différents professions et métiers
+
+- Cultural identity and
+global citizenship
+
+Exemple :
+
+- Personal development and
+leadership
+
+Les élèves écrivent sous les images des petites phrases qui décrivent ce que font les gens. Cela
+peut être des phrases à associer aux images aussi
+
+© NaCCA, Ministry of Education 2019
+
+- Digital literacy
+
+30
+
+CONTENT
+STANDARDS
+
+Compréhension
+Orale
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+SUB-STRAND 8:Demander et expliquer la position de personnes ou d’objets les uns par rapport
+B4.4.8.1.1
+Écouter/Regarder et comprendre un document audiovisuel et prendre note des positions des
+personnes et des objets
+Exemple :
+Des documents audio-visuels prix du YouTube/Documents aux CREF
+
+Production
+Orale
+
+B4.4.8.2.1
+Poser et répondre à des questions sur la position d’une personne ou d’un objet.
+Exemple :
+- Où se trouve Kofi ?
+- Kofi se trouve devant la télévision.
+- Où se trouve la chaise ? La chaise se trouve sur la table.
+B4.4.8.2.2
+Indiquer à quelqu’un la position d’un objet
+Exemple :
+
+-
+
+Le cahier est dans le salon, etc.
+
+: La chaise est à côté de l’armoire.
+
+© NaCCA, Ministry of Education 2019
+
+31
+
+CONTENT
+STANDARDS
+
+Compréhension
+Écrite
+
+Production
+Écrite
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+B4.4.8.3.1
+Situer sur une carte de la ville, la position des lieux publics
+Exemples :
+- La banque se trouve derrière l’école.
+- Mon école se trouve derrière la Banque Centrale.
+- Le musée d’Arts se trouve au bord de la mer.
+- Etc.
+B4.4.8.4.1
+Indiquer par écrit la position d’une personne ou d’un objet par rapport à l’autre
+Exemple :À l’aide des images, les élèves complètent par exemple, des phrases pour décrire la
+position de certains objets : - Le miroir se trouve… (sur la table)
+
+© NaCCA, Ministry of Education 2019
+
+32
+
+CONTENT
+STANDARDS
+
+Compréhension
+Orale
+
+Production
+Orale
+
+INDICATOR AND EXEMPLARS
+
+SUB-STRAND 9: Donner et réagir à un ordre
+B4.4.9.1.1 :
+Écouter/Regarder et comprendre un document audio/audio-visuel où l’on parle des ordres
+simples
+Exemple :
+Écoutez un ordre et faites l’action.
+Le professeur donne des ordres :
+Levez-vous
+Asseyez-vous
+Sortez
+Entrez
+
+Écoutez
+Répétez
+Parlez plus fort
+Répondez à la question
+Lisez
+B4.4.9.2.1 :
+Donner et réagir des ordres
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+Communication and
+collaboration
+- Critical thinking
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+- Personal development
+and leadership
+- Digital literacy
+
+Exemple :
+
+
+
+En classe, les apprenants se donnent des ordres et régissent en faisant l’action.
+- Donne-moi ton stylo.
+- Lève-toi.
+- Assieds-toi.
+- Ferme les yeux.
+- Ouvre les yeux.
+- Ouvre la bouche
+- Chante
+- Etc.
+
+© NaCCA, Ministry of Education 2019
+
+33
+
+CONTENT
+STANDARDS
+
+Compréhension
+Écrite
+
+INDICATOR AND EXEMPLARS
+
+B4.4.9.3.1 :
+Lisez et comprendre des ordres
+Exemple :
+
+-
+
+Production
+Écrite
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+Lisez un ordre et associez-le à une image correspondante
+Lisez un ordre et faites l’action
+
+B4.4.9.4.1 :
+Écrire pour donner des ordres
+Exemple :
+Associez un ordre à l’image correspondante
+
+© NaCCA, Ministry of Education 2019
+
+34
+
+BASIC 5
+
+© NaCCA, Ministry of Education 2019
+
+35
+
+BASIC 5
+STRAND 1: Définir les aspects de l’identité
+INDICATOR AND EXEMPLARS
+
+CONTENT
+STANDARDS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+SUB-STRAND 1 : Saluer et prendre congé
+Compréhension
+Orale
+
+B5.1.1.1.1
+Écouter/Regarder et comprendre un document audio-visuel dans lequel deux personnes se
+saluent
+
+Production
+Orale
+
+B5.1.1.2.1
+Saluer et répondre oralement aux salutations et respecter le code et les valeurs sociales
+Exemples :
+-
+
+Compréhension
+Écrite
+
+Bonjour, Kofi ! Comment tu vas ?
+Je vais bien, et vous, madame ?
+Etc.
+
+B5.1.1.3.1
+Lire et comprendre un texte, regarder une image qui décrit une scène de personnes qui se
+saluent
+
+- Communication and
+Collaboration
+- Critical thinking
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+- Personal development and
+leadership
+- Digital literacy
+
+Exemple :
+Un texte de salutations sous forme des images en bulles.
+Production
+Écrite
+
+B5.1.1.4.1
+Écrire pour saluer pour saluer quelqu’un.
+Exemple :
+- Écrire une carte postale/un testo à un(e) ami(e)/à un(e) correspondant(e) pour le/la saluer.
+
+- Bonjour ! Comment ça va ? Comment va la famille aussi ?
+© NaCCA, Ministry of Education 2019
+
+36
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+SUB-STRAND 2: Se présenter
+Compréhension
+Orale
+
+B5.1.2.1.1
+- Écouter et comprendre un dialogue entre deux personnes qui se présentent etidentifier
+oralement les personnes
+
+Production
+Orale
+
+B5.1.2.2.1
+Poser et répondre à des questions sur l’âge, la profession/occupation, l’adresse
+Exemples :
+Dialogue entre deux élèves dans une situation de simulation :
+-
+
+Quelle est votre profession, monsieur ?
+Je suis cultivateur, et vous ?
+Moi, je suis garagiste. Vous habitez ou ?
+J’habite Dagbamete, et vous ?
+Moi, j’habite Oda.
+
+- Communication and
+collaboration
+- Critical thinking
+- Creativity and innovation
+- Cultural identity and global
+citizenship
+- Personal development and
+leadership
+- Digital literacy
+
+B5.1.2.2.2
+-Se présenter à quelqu’un et donner ses goûts et préférences
+Exemples :
+-
+
+-
+
+Je m’appelle Adu. J’aime jouer avec mes amis.
+Moi, je m’appelle Esilfie. Je déteste sortir tout seul.
+Il s’appelle Albert. Il est élève. C’est mon ami. Il aime jouer au tennis Etc.
+
+© NaCCA, Ministry of Education 2019
+
+37
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+SUB-STRAND 2: Se présenter
+Compréhension
+Écrite
+
+Production
+Écrite
+
+B5.1.2.3.1
+Lire et comprendreun dialogue dans lequel deux personnes se présenter
+
+- Communication and
+collaboration
+
+Ex. Répondez à des questions sur le texte.
+
+- Critical thinking
+
+B5.1.2.4.1
+Écrire une carte postale à un(e) correspondant(e) ; donner son âge, sa profession/occupation,
+son adresse
+Exemples :
+
+- Creativity and innovation
+
+-
+
+Cher Kofi/ ChèreAma.
+Bonjour. Je m’appelle NtowDanso. J’ai huit ans. Je viens du Ghana et j’habite à Wa. Je ne
+travaille pas. Je suis étudiant(e).
+
+- Cultural identity and global
+citizenship
+- Personal development and
+leadership
+- Digital literacy
+
+© NaCCA, Ministry of Education 2019
+
+38
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+
+SUB-STRAND 3: Présenter quelqu’un
+Compréhension
+Orale
+
+Production Orale
+
+B5.1.3.1.1
+- Écouter et comprendre un texte dans lequel on présente quelqu’un
+
+- Communication and
+collaboration
+- Critical thinking
+
+Exemple : Posez des questions sur le texte
+- Quel est le prénom de la personne ?
+- Quel âge a la personne ?
+- Quelle est sa nationalité ?
+- Etc.
+
+- Cultural identity and global
+citizenship
+
+B5.1.3.2.1
+Présenter quelqu’un en donnant son âge, sa profession/son occupation, son adresse (I.O)
+
+- Personal development and
+leadership
+
+Exemple : Je vous présente Monsieur Daniel Boateng. Il est ghanéen. Il a 42 ans. Il est
+professeur. Etc.
+
+- Digital literacy
+
+- Creativity and innovation
+
+B5.1.3.2.2
+-Présenter quelqu’un en donnant ses goûts et préférences
+Exemples :
+-
+
+Voici Adu. J’aime jouer au football. Il aime le foufou.
+Lui, c’est Esilfie. Je déteste l’école. Il adore regarder la télévision.
+Je te présente Albert. Il est élève. C’est mon ami. Il aime jouer au tennis.
+Etc.
+
+© NaCCA, Ministry of Education 2019
+
+39
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+
+SUB-STRAND 2: Présenter quelqu’un
+Compréhension
+Écrite
+
+B5.1.3.3.1
+Lire et comprendre la présentationd’un personnage dans un conte/un roman/une nouvelle
+
+- Communication and
+collaboration
+
+Ex. Extrait d’un conte
+
+- Critical thinking
+
+B5.1.3.3.2
+Lire et comprendre le portrait/biographie simple d’une personne
+
+- Creativity and innovation
+
+Exemple:
+
+- Cultural identity and global
+citizenship
+
+Les élèves lisent le portrait ou la bibliographie et répondent à des questions en remplissant par
+- Personal development and
+exemple, une fiche d’identité sur la personne concernée dans le portrait.
+leadership
+Production
+Écrite
+
+B5.1.3.4.1
+Écrire une carte postale à un(e) correspondant(e) pour lui présenter quelqu’un : âge,
+profession/occupation, son adresse
+Exemples :
+
+-
+
+- Digital literacy
+
+Cher Kofi/ Chère Ama.
+
+Bonjour. Comment ça va ? Je te présent mon professeur de maths. Il s’appelle NtowDanso.
+Il a trente-huit ans. Il vient d Kumasi mais il habite ici à Wa. Etc.
+
+© NaCCA, Ministry of Education 2019
+
+40
+
+CONTENT
+STANDARDS
+
+Compréhension
+Orale
+
+INDICATOR AND EXEMPLARS
+
+SUB-STRAND 4: Décrirequelqu’un
+B5.1.4.1.1
+Écouter/Regarder et comprendre un document sur les caractéristiques physiques et l’habillement d’une
+personneExemple :
+1. Un document vidéo avec les images des parties du corps ou un document audio accompagnéde photos
+ou d’images des parties du corps, suivi de questions.
+2. Un document vidéo sur l’habillement ou un document audio sur l’habillement accompagné de photos,
+suivi de questions.
+
+Production Orale
+
+B5.1.4.2.1
+Poser et répondre à des questions sur les caractéristiques physiques et l’habillement d’une
+personneExemple :
+Jeu de rôle : Posez des questions à un ami pour lui demander comment est une personne et comment elle
+est habillée. Par exemple : Ton ami, comment est-il ? Il est grand ou petit ? Il a beaucoup de cheveux ?
+Comment est son nez ? Comment est-il habillé ? / Qu’est-ce qu’il porte ?, etc.
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+- Communication and
+collaboration
+- Critical thinking
+- Creativity and innovation
+- Cultural identity and global
+citizenship
+- Personal development and
+leadership
+- Digital literacy
+
+B5.1.4.2.2
+Réciter un poème/chanter une chanson sur les caractéristiques physiques et l’habillement d’une
+personneExemple :
+Des chansons et des récitations sur YouTube/Documents aux CREF.
+Compréhension
+Écrite
+
+B5.1.4.3.1
+
+Lire et comprendre des textes simples qui décrivent les caractéristiques physiques et
+l’habillement d’une personne
+s
+Exemple :
+Des descriptions accompagnées d’images sur la description d’une personnalité.. On pose des questions
+(vrai/faux, compléter, etc.).
+
+© NaCCA, Ministry of Education 2019
+
+41
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+B5.1.4.4.1
+Production
+Écrite
+
+Décrire quelqu’un en indiquant ses caractéristiques physiques et son habillement:
+Ex.1Associer des adjectifs de description à des dessins de personnes : grand, petit, gros, mince.
+l’homme est grand. La fille est grosse.
+Ex. 2- Associer des photos sur l’habillement des gens à des descriptions,
+- L’homme porte une chemise bleue et un pantalon blanc.
+- La fille porte une robe rouge et des chaussures blanches.
+
+© NaCCA, Ministry of Education 2019
+
+42
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+SUB-STRAND 5: Décrire la famille et les liens familiaux
+Compréhension
+Orale
+
+B5.1.5.1.1
+-Écouter/Regarder et comprendre un document audio-visuel qui décrit une famille élargie
+
+- Communication and
+collaboration
+
+Production
+Orale
+
+B5.1.5.2.1
+Poser et réagir à des questions sur les liens de parenté d’une famille nucléaire
+
+- Critical thinking
+
+-Utilisez des photos de famille..
+- Comment est ta famille ?
+
+-
+
+Nous sommes six : mon, père, ma mère, mes deux frères, ma sœur et moi.
+
+Comment est ta famille, petite ou large ?
+
+-
+
+Tu as des oncles et des tantes ?
+Oui, j’ai deux oncles et trois tantes.
+
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+- Personal development
+and leadership
+- Digital literacy
+
+-Etc.
+
+B5.1.5.2.2
+Présenter les membres de sa famille et donner leurs professions
+Exemple : Nous sommes six : mon, père, ma mère, mes deux frères, ma sœur et moi. Mon père
+est mécanicien et ma mère est vendeuse. Moi, je suis étudiant à l’université,…..
+
+Compréhension
+Écrite
+
+B5.1.5.3.1
+Lire et comprendre un texte simple sur les membres de la famille d’une personnalité publique
+Exemple : la famille du président de la république
+
+© NaCCA, Ministry of Education 2019
+
+43
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+Production
+
+B5.1.5.4.1
+- Dessiner l’arbre généalogique de sa famille et donner les liens de parenté et les professions
+
+Écrite
+
+B5.1.5.4.2
+Décrire les membres de sa famille nucléaire et leurs professions
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+:A l’aide d’une photo réelle, décrivez les membres de sa famille nucléaire et leurs professions
+
+© NaCCA, Ministry of Education 2019
+
+44
+
+STRAND 2: Parler de son environnement
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+SUB-STRAND 1: Parler de samaison
+Compréhension
+Orale
+
+B5.2.1.1.1
+Écouter/Regarder et comprendre un document audio-visuel sur les pièces, les objets de la
+maison et les animaux domestiques
+
+Production
+Orale
+
+B5.2.1.2.1
+Poser et répondre à des questions sur les objets et les animaux de la maison
+Ex. :
+
+- Critical thinking
+- Creativity and innovation
+
+-
+
+Qu’est-ce que c’est ?
+C’est un vieux réfrigérateur ?
+
+- Cultural identity and
+global citizenship
+
+-
+
+Tu as un animal à la maison?
+Oui, un chat et deux chiens.
+
+- Personal development
+and leadership
+
+B5.2.1.2.2
+Réciter des poèmes, chanter des chansons sur des objets, des animaux, des fruits, etc.
+Compréhension
+Écrite
+
+- Communication and
+collaboration
+
+- Digital literacy
+
+B5.2.1.3.1
+Lire et comprendre un texte, sur les objets, les pièces les animaux, les fruits ; dire ce qui se
+passe
+Ex.
+- A partir d’un texte, caractériser les pièces, les objets, les animaux d’une maison par des
+adjectifs qualificatifs (grande, petite, beau, long, vert, éclairée)
+
+© NaCCA, Ministry of Education 2019
+
+45
+
+CONTENT
+STANDARDS
+
+Production
+Écrite
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+B5.2.1.4.1
+Décrire les pièces de sa maison ;
+Ex. :
+
+-
+
+La salle est grande et éclairée
+Il y a deux chambres à coucher
+Il y a dans arbres dans la maison
+
+B5.2.1.4.2
+Décrire les différents objets dans sa maison
+Ex. :
+
+-
+
+À l’aide de dessins ou images, complétez des noms d’objets, pièces, fruits ou
+animaux domestiques par les lettres manquantes.
+
+A l’aide d’images d’une maison, libellez les parties d’une maison et de les caractériser à l’aide
+d’adjectifs proposés au choix
+
+© NaCCA, Ministry of Education 2019
+
+46
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+SUB-STRAND 2 : Parler de son école
+Compréhension
+Orale
+
+Production
+Orale
+
+B5.2.2.1.1
+Écouter/Regarder et comprendre un document audio-visuel sur l’environnement de l’école
+
+- Communication and
+collaboration
+
+Ref. YouTube/Documents aux CREF
+
+- Critical thinking
+
+B5.2.2.2.1
+Poser et répondre à des questions sur l’environnement de l’école
+
+- Creativity and innovation
+
+Exemple :
+
+-
+
+-
+
+Comment est ton école ?
+Mon école est petite. Il y a six salles de classe, une salle des professeurs, une petite
+bibliothèque, le bureau de la directrice et une cantine
+
+Exemple:
+- Où se trouve l’école? Ans: l’école se trouve près de la gare.
+Comment est l’environnement de l’école?
+- Qu’est-ce que tu fais à l’école ? Je joue avec les amis ; Je lis mon cahier ; je fais des devoirs ; je
+balaie la cour ; etc.
+
+- Cultural identity and
+global citizenship
+- Personal development
+and leadership
+- Digital literacy
+
+B5.2.2.2.2
+- Discuter des différentes activités de l’école.
+Ex. :
+B5.2.2.2.3
+Réciter des slogans sur l’environnement de l’école.
+Exemples :
+- Protéger l’environnement ! Protéger les fleurs ! etc.
+
+© NaCCA, Ministry of Education 2019
+
+47
+
+CONTENT
+STANDARDS
+Compréhension
+Écrite
+
+Production
+Écrite
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+B5.2.2.3.1
+- Lire et comprendre des affiches, annonces, sur l’environnement de l’école et dire ce qui se
+passe. :
+- Protéger l’environnement ! Protéger les fleurs ! etc.
+B5.2.2.4.1
+Compléter un texte, une annonce, une affiche par des mots sur l’environnement de l’école :
+
+© NaCCA, Ministry of Education 2019
+
+48
+
+STRAND 3: Exprimer ses goûts et ses préférences
+INDICATOR AND EXEMPLARS
+
+CONTENT
+STANDARDS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+SUB-STRAND 1 : Dire ce que l’on aime
+Compréhension
+Orale
+
+B5.3.1.1.1
+Écouter/Regarder et comprendre un document audio-visuel sur les goûts de quelqu’un : plats,
+sports, matières, professions, etc.
+Ref. YouTube/Documents aux CREF
+
+Production
+Orale
+
+B5.3.1.2.1
+Poser et répondre à des questions sur les goûts, les préférences
+Exemple
+
+-
+
+Qu’est-ce que tu aimes faire ?
+J’aime faire du sport.
+Tu aimes les sports
+Oui, j’aime le foot et le basket mais je déteste la boxe
+
+-
+
+Quel est ta matière préférée : l’anglais, le français, les mathématiques ou les sciences ?
+
+-
+
+J’aime le français et les mathématiques mais je préfère le français.
+
+- Communication and
+collaboration
+- Critical thinking
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+- Personal development and
+leadership
+- Digital literacy
+
+B5.3.1.2.2
+Dire ce que l’on aime faire et ce que l’on n’aime pas faire :
+
+© NaCCA, Ministry of Education 2019
+
+49
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+Compréhension
+Écrite
+
+B5.3.1.3.1
+- Lire et comprendre un texte simple sur les goûts et les préférences des personnes
+
+Production
+Écrite
+
+B5.3.1.4.1
+Écrire des phrases sur ce que l’on aime et de ce que l’on n’aime pas.
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+Exemples :
+J’aime la fête ; Je n’aime pas la danse ; etc.
+
+© NaCCA, Ministry of Education 2019
+
+50
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+SUB-STRAND 2: Dire ce que l’onn’aime pas
+Compréhension
+Orale
+
+B5.3.2.1
+Écouter/Regarder et comprendre un document audio-visuel sur les goûts de quelqu’un : plats,
+sports, matières, professions, etc.
+
+Production
+Orale
+
+B5.3.2.2
+Poser et répondre à des questions sur les goûts, les préférences
+
+Compréhension
+Écrite
+
+-
+
+Production
+Écrite
+
+Quel fruit n’aimes-tu pas ?
+L’ananas, Je n’aime pas l’ananas.
+Pourquoi tu n’aimes pas l’ananas.
+C’est trop doux.
+Tu aimes faire des sports
+Non, j’aime regarder les émissions sportives.
+J’aime le français et les mathématiques.
+J’aime le français mais je déteste lesmathématiques.
+
+- Communication and
+collaboration
+- Critical thinking
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+- Personal development and
+leadership
+- Digital literacy
+
+B5.3.2.3
+Dire ce que l’on n’aime pas faire
+Exemple :
+Ama aime l’école. Elle aime aller à l’école.
+J’aime les sports. J’aime faire du sport.
+Mon père adore le fufu. Il aime manger du fufu.
+J’aime la télévision. J’aime regarder la télé.
+
+© NaCCA, Ministry of Education 2019
+
+51
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+B5.3.1.3.1
+- Lire et comprendre un texte simple sur quelques phénomènes de la nature
+B5.3.1.4.1
+Écrire des phrases sur ce que l’on aime et de ce que l’on n’aime pas.
+
+STRAND 4: Les activités
+INDICATOR AND EXEMPLARS
+
+CONTENT
+STANDARDS
+
+Compréhension
+Orale
+Production
+Orale
+
+SUB-STRAND 1 : Compter et faire des calculs simples
+B5.4.1.1.1
+Écouter/Regarder et comprendre un document audiovisuel sur les nombres :
+Ref. YouTube/Documents aux CREF :
+B5.4.1.2.1
+Compter à haute voixdes objets, des personnes, de son environnement.
+
+Compréhension
+Écrite
+
+Exemple :
+Il y a 1,2,3,4,5,6, ……….chaises dans la salle de classe.
+
+Production
+Écrite
+
+B5.4.1.2.2
+Faire oralement des calculs mentaux simples
+
+© NaCCA, Ministry of Education 2019
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+- Communication and
+collaboration
+- Critical thinking
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+- Personal development
+and leadership
+- Digital literacy
+
+52
+
+CONTENT
+STANDARDS
+Compréhension
+Orale
+Production
+Orale
+Compréhension
+Écrite
+Production
+Écrite
+
+INDICATOR AND EXEMPLARS
+B5.4.1.2.3
+Chanter des chansons/ Réciter poèmes sur les nombres
+Exemples :
+- des chansons et des poèmes sur YouTube/Documents aux CREF
+B5.4.1.3.1
+Lire et comprendre les prix
+Exemple :
+A l’aide d’un catalogue, de petites annonces, des magazines etc., sur des tickets de bus, de cinéma,
+etc.
+- Combien coûte la robe ?
+- Cela coûte trois pounds.
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+- Communication and
+collaboration
+- Critical thinking
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+- Personal development and
+leadership
+- Digital literacy
+
+B5.4.1.4.1
+Faire des calculs simples à l’écrit avec des chiffes en lettres:
+vingt-deux plus sept égalent vingt-neuf
+quatorze mois six égalent huit
+huit divisés par deux égalent quatre
+trois fois trois font neuf
+B5.4.1.4.2
+Ecrire en lettres des chiffres proposés
+Exemple :
+19=dix-neuf
+
+© NaCCA, Ministry of Education 2019
+
+53
+
+CONTENT
+STANDARDS
+
+Compréhension
+Orale
+Production
+Orale
+Compréhension
+Écrite
+Production
+Écrite
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+SUB-STRAND 2: Demander et donner l’heure
+B5.4.2.1.1
+Écouter/Regarder et comprendre un document audio-visuel sur les horaires simples
+
+- Communication and
+collaboration
+
+Exemples :
+
+- Critical thinking
+
+-
+
+Heures d’ouverture du restaurant, etc.,
+Programmes de télévision et de cinéma
+Heures d’arrivée et de départ (aéroport, gare, etc.)
+
+B5.4.2.2.1
+se renseigner sur l’heure
+Exemple :
+-A quelle heure est le rendez-vous ?
+- Les cours commencent à quelle heure ?
+
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+- Personal development and
+leadership
+- Digital literacy
+
+Demander et donner l’heure d’un rendez-vous.
+Exemples :
+- interview, etc.
+- Exemples : Le rendez-vous, c’est à quelle heure ? C’est à 13 heures/ C’est à midi/C’est à 9
+heures du matin/C’est à 8 heures du soir, etc.
+Par groupes de deux, les élèves posent et répondent aux questions
+-Les horaires de train
+A quelle heure part le train ?
+Il part à dix heures.
+
+© NaCCA, Ministry of Education 2019
+
+54
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+A quelle heure arrive le train ? /Le train arrive à quelle heure ?
+Il arrive à deux heures.
+-Les plans de vol
+A quelle heure est le vol Accra-Amsterdam/Accra-Tamale?
+C’est à 22 heures.
+Il est à l’heure.
+Il est en retard.
+Il est en avance.
+Je suis en retard
+
+© NaCCA, Ministry of Education 2019
+
+55
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+Compréhension
+Écrite
+
+-Le bus
+Le bus part à midi.
+Le bus part le soir.
+-Message SMS : Écrire un texto à un camarade pour lui donner l’heure de départ du bus, du
+train, d’un rendez-vous, etc.
+- les horaires des repas au restaurant, les heures des films au cinéma, les horaires des
+programmes de télévision, etc.
+B5.4.2.2.2
+Raconter ce que l’on fait à certaines heures de la journée.
+Exemples : le matin ; à midi ; le soir, la nuit, etc.
+
+Production
+Écrite
+
+B5.4.2.3.1
+Lire et comprendre l’agenda d’une personne
+
+Compréhension
+Orale
+Production
+Orale
+
+Exemple : L’agenda du ministre
+10 h 30 – une réunion
+13 h – Rencontre le président
+14 h – Déjeuner avec l’ambassadeur de France
+etc.
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+- Communication and
+collaboration
+- Critical thinking
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+- Personal development and
+leadership
+- Digital literacy
+
+B5.4.2.4.1
+Programmer son agenda
+Exemple : Agenda d’une excursion
+B5.4.2.4.2
+- Indiquer dans un agenda les heures des activités de la journée.
+
+© NaCCA, Ministry of Education 2019
+
+56
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+SUB-STRAND 3 : Parler des jours de la semaine
+Compréhension
+Orale
+Production
+Orale
+Compréhension
+Écrite
+Production
+Écrite
+
+B5.4.3.1.1
+
+- Communication and
+collaboration
+
+Écouter/Regarder et comprendre un document audio/audio-visuel sur les jours de la semaine et
+
+- Critical thinking
+
+Exemples :
+-Poème
+Bonjour Lundi ! Comment va mardi !
+Très bien mercredi ! Si tu vois jeudi
+Demande-lui de dire à vendredi.
+Que j’irai samedi chez dimanche.
+
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+
+-Chanson :
+Si tu es né le lundi, lève-toi ! lève-toi !
+La-la-la-la-la-la-la-la! etc.
+Si tu es né le mardi, lève-toi !lève-toi !
+
+- Digital literacy
+
+- Personal development
+and leadership
+
+-Demande d’information.
+Par groupes de deux, les élèves posent et répondent aux questions.
+Aujourd’hui, c’est….,C’est….., Demain, c’est…., Je suis né le….
+Tu es né quel jour ? Quelle est la date d’aujourd’hui ?
+Hier, c’était…
+
+© NaCCA, Ministry of Education 2019
+
+57
+
+CONTENT
+STANDARDS
+Compréhension
+Orale
+Production
+Orale
+Compréhension
+Écrite
+Production
+Écrite
+
+INDICATOR AND EXEMPLARS
+L’emploi du temps de la classe :
+Préparer un programme d’activité de la semaine.
+Exemple :
+Jour
+Activité
+Lundi
+Sciences,…
+Vendredi
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+- Communication and
+collaboration
+- Critical thinking
+- Creativity and innovation
+
+-Lire les programmes de la télé de la semaine
+
+- Cultural identity and
+global citizenship
+
+B5.4.3.2.1
+Poser et répondre à des questions sur les activités de la semaine.
+
+- Personal development
+and leadership
+
+A l’aide d’un agenda, le programme de télé, l’emploi du temps scolaire, etc
+Exemple : Que fais-tu le Mardi ? Mardi, je joue au football.
+
+- Digital literacy
+
+B5.4.3.2.2
+Dire ce que l’on fait à l’école chaque jour de la semaine
+-De lundi à vendredi nous allons à l’école.
+
+-
+
+Samedi et dimanche, nous n’allons pas à l’école.
+Etc.
+
+B5.4.3.3.1
+- Lire et comprendre un texte simple sur les activités d’une personne dans la semaine.
+B5.4.3.4.1
+Écrire ce que l’on fait chaque jour de la semaine
+Ex. dans un journal :
+
+© NaCCA, Ministry of Education 2019
+
+58
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+SUB-STRAND 4 : Situer les mois et les saisons dans le temps
+
+Compréhension
+Écrite
+
+B5.4.4.1.1
+Écouter et comprendre une chanson ou un poème sur les saisons
+Exemple :
+-Jeu de calendrier :
+Consigne :
+Le professeur écrit les mois de l’année sur des cartons.
+Il écrit les numéros sur des cartons.
+Les élèves choisissent un numéro.
+Ils choisissent les mois qui correspondent au numéro.
+-Arrangez les mois dans l’ordre chronologique.
+
+Production
+Écrite
+
+B5.4.4.2.1
+Poser et répondre à des questions sur les saisons
+
+Compréhension
+Orale
+Production
+Orale
+
+Exemples :
+- Dire et écrire les mois qui correspondent à la saison des pluies
+- Dire et écrire les mois qui correspondent à la saison sèche
+- Dire et écrire les mois qui correspondent à l’harmattan
+- Dire et écrire les mois qui correspondent à l’hiver, le printemps, l’été et l’automne
+Exemple :
+Dans quels mois y a-t-il l’harmattan ? Il y a l’harmattan en décembre, janvier et février Le
+harmattan est décembre.
+La saison sèche est de février en avril,
+La saison pluvieuse commence en mai.
+
+© NaCCA, Ministry of Education 2019
+
+- Communication and
+collaboration
+- Critical thinking
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+- Personal development
+and leadership
+- Digital literacy
+
+59
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+B5.4.4.2.2
+Réciter des poèmes ou chanter des chansons sur les saisons
+Exemples:
+-Chanson sur YouTube/Documents aux CREF : les mois de l’année
+-Indiquez les mois de naissance des membres de ta famille.
+-Associez les évènements nationaux au mois de l’année.
+B5.4.4.3.1
+Lire et comprendre un texte simple sur les saisons où se passent les évènements.
+B5.4.4.4.1
+Écrire les mois où sont nés les membres de sa famille Ex. Ma mère est née en mars.
+
+© NaCCA, Ministry of Education 2019
+
+60
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+SUB-STRAND 5: Entrer en contact par téléphone
+B5.4.5.1.1
+Écouter/Regarder et comprendre un clip sur deux personnes qui communiquent par téléphone et
+répondre aux questions.
+
+- Communication and
+collaboration
+
+Production
+Orale
+
+Ref. YouTube/Documents aux CREF
+
+- Critical thinking
+
+Compréhension
+Écrite
+
+B5.4.5.2.1
+Simuler la conversation téléphonique entre deux interlocuteurs
+
+Production
+Écrite
+
+Exemples:
+
+Compréhension
+Orale
+
+1. Les élèves se téléphonent pour se présenter. Ils utilisent les expressions ci-dessous :
+- Allo, qui est à l’appareil ?
+- C’est…
+- Allo ! c’est…
+- Je voudrais parler à Ama/Kofi ; Je voudrais parler au directeur/ministre/docteur, etc.
+- Attendez s’il vous plait
+- Merci
+- Au revoir
+- A bientôt
+- A tout à l’heure
+- Je vous le passe
+- Attendez s’il vous plait
+
+© NaCCA, Ministry of Education 2019
+
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+- Personal development and
+leadership
+- Digital literacy
+
+61
+
+CONTENT
+STANDARDS
+Compréhension
+Orale
+Production
+Orale
+Compréhension
+Écrite
+Production
+Écrite
+
+INDICATOR AND EXEMPLARS
+
+2. Replacez dans l’ordre les répliques suivantes :
+Les élèves recopient les répliques suivantes sur des cartons et un à un se rangent l’un après
+l’autre dans l’ordre chronologique des répliques :
+Allô !/ C’est de la part de qui ?/ Merci/ Allô ! Oui / Madame Mensah/ Ne quittez pas/ je vous le
+passe/ Bonjour ! Je voudrais parler à Monsieur Mensah
+3. Inviter quelqu’un par téléphone :
+Ex : Allô Percy, Je t’invite à mon anniversaire… etc.
+-Accepter/refuser une invitation
+Ex : D’accord.
+Non, je ne peux pas.
+B5.4.5.2.2
+Présenter au téléphone des membres de sa famille à un(e) camarade de classe, un(e) ami(e), etc.
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+- Communication and
+collaboration
+- Critical thinking
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+- Personal development and
+leadership
+- Digital literacy
+
+B5.4.5.3.1
+Lire et comprendre de petites scènes d’entretiens téléphoniques entre deux personnes
+B5.4.5.4.1
+Envoyer des textos
+Ex. des messages sur WhatsApp pour dire bonjour à un ami.
+
+© NaCCA, Ministry of Education 2019
+
+62
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+SUB-STRAND 6:Inviter quelqu’un et accepter une invitation
+Compréhension
+Orale
+Production
+Orale
+Compréhension
+Écrite
+Production
+Écrite
+
+B5.4.6.1.1
+Écouter/Regarder et comprendre un document audiovisuel sur l’invitation
+Ref. YouTube/Documents aux CREF
+B5.4.6.2.1
+Inviter quelqu’un par téléphone
+Exemple :
+Invitez quelqu’un à manger à la maison/à l’anniversaire de son/sa frère/sœur.
+Allô Percy, Je t’invite à mon anniversaire… etc.
+
+-
+
+C’est quand ton anniversaire.
+Ce samedi.
+D’accord.
+
+- Communication and
+collaboration
+- Critical thinking
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+- Personal development and
+leadership
+- Digital literacy
+
+B5.4.6.2.2
+-Accepter/refuser une invitation
+Exemple : D’accord !/ Avec plaisir. / J’accepte ton invitation, etc.
+Non, je ne peux pas./ Je suis désolé(e),/ Je suis occupé(e), etc.
+B5.4.6.2.3
+Dire pourquoi on accepte ou on refuse une invitation.
+Exemple : J’accepte car…
+Je ne peux pas parce que…
+Désolé mais je suis malade.
+
+© NaCCA, Ministry of Education 2019
+
+63
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+B5.4.6.3.1
+Lire et comprendre une lettre/une carte d’invitation
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+C’est une carte d’invitation pour quelle occasion ?
+A quelle heure commence la célébration ?
+A quelle heure finit la célébration.
+etc.
+B5.4.6.4.1
+Écrire une carte postale ou une carte d’invitation
+Exemple : Modèle de carte postale ou de carte d’invitation
+
+© NaCCA, Ministry of Education 2019
+
+64
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+SUB-STRAND 7: Identifier les professions et les métiers
+
+Compréhension
+Orale
+Production
+Orale
+Compréhension
+Écrite
+Production
+Écrite
+
+B5.4.7.1.1
+Écouter/Regarder et comprendre un document audiovisuel sur les professions et les métiers
+
+- Communication and
+collaboration
+
+Ref. YouTube/Documents aux CREF
+
+- Critical thinking
+
+B5.4.7.2.1
+Poser et répondre à des questions sur ce que font les membres d’une famille
+Exemple :
+
+- Creativity and innovation
+
+-
+
+Quelle est la profession de ta sœur ?
+Elle est étudiante.
+
+Quel métier exerce ton père ?
+Il est menuisier
+
+- Cultural identity and
+global citizenship
+- Personal development
+and leadership
+- Digital literacy
+
+B5.4.7.2.2
+Dire la profession ou le métier que l’on veut exercer dans l’avenir
+Exemple :
+Je veux chanter/enseigner/réparer des autos/etc.
+Je veux être professeur/médecin/ infirmier/couturière/comptable/etc.
+B5.4.7.3.1
+Identifier et associer les noms de professions et métiers à leurs dessins
+Exemple: Faire deux tableaux désignant les métiers et les dessins. Faire répondre à des questions
+par les apprenants.
+
+© NaCCA, Ministry of Education 2019
+
+65
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+B5.4.7.4.1
+Ecrire ce que font des personnes qui exercent différents professions et métiers
+Exemples : Un médecin soigne les malades.
+Un professeur enseigne.
+
+© NaCCA, Ministry of Education 2019
+
+66
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+SUB-STRAND 8: Demander et expliquer la position des personnes ou des objets les uns par rapport aux autres
+Compréhension
+Orale
+Production
+Orale
+Compréhension
+Écrite
+Production
+Écrite
+
+B5.4.8.1.1
+Écouter/Regarder et comprendre un document audiovisuel et noter les positions des personnes
+et des objets
+
+- Communication and
+collaboration
+
+B5.4.8.2
+Poser et répondre à des questions sur la position d’une personne ou d’un objet.
+A l’aide d’une photo de famille.
+
+- Critical thinking
+
+Exemple :
+
+- Cultural identity and
+global citizenship
+
+-
+
+Cet homme c’est ton père ?
+Non c’est mon oncle ? Mon père est à côté de ma mère.
+Et qui est devant a mère ?
+C’est moi.
+
+B5.4.8.2.2
+Indiquer à quelqu’un la position des objets à de maison.
+Une photo d’une salle de séjour, une chambre à coucher, une cuisine, etc.
+
+-
+
+- Creativity and innovation
+
+- Personal development
+and leadership
+- Digital literacy
+
+La cuisinière est près de la porte.
+La table est au milieu de la salle.
+Il y a un pot de fleur sur le téléviseur.
+Etc.
+
+B5.4.8.3.1
+Situer sur une carte de la ville la position des lieux publics.
+- une carte du centre-ville
+- Où se trouve la banque
+- En face de la pharmacie.
+© NaCCA, Ministry of Education 2019
+
+67
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+B5.4.8.4.1
+Ecrire pour indiquer à quelqu’un où se trouve un objet dans un lieu
+Ex. :
+Ecrire une note pour indiquer à votre frère ou sœur l’endroit où vous avez déposé un objet de
+la maison.
+Salut Kofi,
+La clé est dans la boîte à côté du vieux fauteuil.
+Au revoir.
+Ama
+
+© NaCCA, Ministry of Education 2019
+
+68
+
+CONTENT
+STANDARDS
+
+Compréhension
+Orale
+
+INDICATOR AND EXEMPLARS
+
+SUB-STRAND 9: Donner et réagir à un ordre
+B5.4.9.1.1 :
+Écouter/Regarder et comprendre un document audio/audio-visuel où l’on parle des ordres
+simples
+Exemple :
+
+-
+
+Production
+Orale
+Compréhension
+Écrite
+Production
+Écrite
+
+Écoutez un ordre et faites l’action.
+Le professeur donne les ordres :
+Prenez vos livres.
+Ouvrez à la page cinq.
+Lisez silencieusement le premier paragraphe
+fermez vos livres
+Maintenant prenez vos cahiers.
+Faites l’exercice au tableau.
+
+B5.4.9.2.1 :
+Donner et réagir des ordres
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+Communication and
+collaboration
+- Critical thinking
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+- Personal development
+and leadership
+- Digital literacy
+
+Exemple :
+
+
+
+En classe, les apprenants se donnent des ordres et régissent en faisant l’action.
+- Donne-moi ton stylo.
+- Lève-toi.
+- Assieds-toi.
+- etc.
+
+B5.4.9.3.1 :
+Lisez et comprendre des ordres
+Exemple :
+
+-
+
+Lisez un ordre et associez-le à une image correspondante
+Lisez un ordre et faites l’action
+
+© NaCCA, Ministry of Education 2019
+
+69
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+B5.4.9.4.1 :
+Écrire pour donner des ordres
+Exemple :
+Associez un ordre à l’image correspondante
+
+© NaCCA, Ministry of Education 2019
+
+70
+
+BASIC 6
+
+© NaCCA, Ministry of Education 2019
+
+71
+
+BASIC 6
+STRAND 1: Définir les aspects de l’identité
+INDICATOR AND EXEMPLARS
+
+CONTENT
+STANDARDS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+SUB-STRAND 1: Saluer et prendre conge
+Compréhension
+Orale
+Production
+Orale
+Compréhension
+Écrite
+Production
+Écrite
+
+B6.1.1.1.1
+Écouter/Regarder et comprendre un document audio-visuel dans lequel deux personnes se
+saluent
+Exemples :
+Salut ! Bonjour ! Bonsoir !
+B6.1.1.2.1
+Saluer et répondre oralement aux salutations et respecter le code et les valeurs sociales
+Exemples :
+
+-
+
+Salut, Joe !
+Salut cher ami ! Comment ça va ?
+Ça va bien et toi.
+Je vais bien, merci.
+
+B6.1.1.3.1
+Lire et comprendre un texte, regarder une image qui décrit une scène, des personnes qui se
+saluent
+
+- Communication and
+collaboration
+- Critical thinking
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+- Personal development
+and leadership
+- Digital literacy
+
+B6.1.1.4.1
+Écrire une note pour saluer quelqu’un
+-Écrire une phrase de 6 mots Ex. Je vais très bien, et toi ?
+
+© NaCCA, Ministry of Education 2019
+
+72
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+SUB-STRAND 2: Se présenter
+Compréhension
+Orale
+Production
+Orale
+Compréhension
+Écrite
+Production
+Écrite
+
+B6.1.2.1.1
+- Écouter et comprendre le dialogue où des personnes qui se présentent.
+- Le professeur se présente à la classe
+B6.1.2.2.1
+Demander et donner sa date de naissance, son lieu de naissance, son adresse, son numéro de
+téléphone
+
+-
+
+:
+:
+B6.1.2.3.1
+Lire et comprendre un texte où des personnes se présentent
+:
+B6.1.2.4.1
+-Écrire une carte postale à un/une correspondant(e) pour se présenter; donner sa date de
+naissance, son lieu de naissance, son numéro de téléphone
+
+- Communication and
+collaboration
+- Critical thinking
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+- Personal development
+and leadership
+- Digital literacy
+
+B6.1.2.5.3
+-Remplir une fiche d’identité
+Ex. A la douane : une fiche d’immigration ou un passeport vide à remplir
+
+© NaCCA, Ministry of Education 2019
+
+73
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+SUB-STRAND 3: présenter quelqu’un
+
+Compréhension
+Orale
+Production
+Orale
+Compréhension
+Écrite
+Production
+Écrite
+
+B6.1.3.1.1
+Écouter et comprendre un texte dans lequel on présente quelqu’un
+Exemple : Posez des questions sur le texte
+- Qui est-ce ?
+- Quel âge a-t-il ?
+- D’où vient-il ?
+- Etc.
+Le professeur présente quelques apprenants à la classe.
+B6.1.3.2.1
+Présenter quelqu’un en donnant sa date de naissance, son lieu de naissance, son adresse, son
+numéro de téléphone
+Ex. Kwame Atta est né le 6 juin 1952 à Attakrom dans la région d’Ashanti. Il habite Dansoman, un
+quartier d’Accra. Voici on numéro de téléphone : 042 2534025.
+
+- Communication and
+collaboration
+- Critical thinking
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+- Personal development and
+leadership
+- Digital literacy
+
+B6.1.3.3.1
+Lire et comprendre le portrait/biographie d’une personne historique
+:
+B6.1.3.4.1
+Écrire une carte postale à un/une correspondant(e) pour présenter quelqu’un en donnant sa date
+de naissance, son lieu de naissance, son numéro de téléphone
+
+© NaCCA, Ministry of Education 2019
+
+74
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+SUB-STRAND 3: Décrirequelqu’un
+Compréhension
+Orale
+Production Orale
+Compréhension
+Écrite
+Production
+Écrite
+
+B6.1.4.1.1
+Écouter/Regarder et comprendre un document audio-visuel sur les caractéristiques physiques,
+l’habillement et les comportements d’une personne
+
+- Communication and
+collaboration
+
+Ref. YouTube/Documents aux CREF
+
+- Critical thinking
+
+B6.1.4.2.1
+Poser et répondre à des questions sur les caractéristiques physiques, l’habillement et les
+comportements d’une personne
+Ex. Jeu de rôles
+Comment est-elle ?
+- Elle est petite, intelligente, belle et gentille.
+- Qu’est-ce qu’elle porte ?
+- Elle porte une jupe.
+
+- Creativity and innovation
+
+B6.1.4.2.2
+- Réciter un poème/chanter une chanson sur les caractéristiques physiques, l’habillement et
+les comportements d’une personne
+
+- Cultural identity and
+global citizenship
+- Personal development
+and leadership
+- Digital literacy
+
+Ref. YouTube/Documents aux CREF
+B6.1.4.3.1
+Lire et comprendre des textes simples sur les caractéristiques physiques, l’habillement et les
+comportements d’une personne
+Ex. : Méthode du primaire
+
+© NaCCA, Ministry of Education 2019
+
+75
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+B6.1.4.4.1
+Décrire quelqu’un en indiquant ses caractéristiques physiques, l’habillement et les
+comportements
+Ex. : Écrire une carte postale pour décrire quelqu’un en indiquant ses caractéristiques
+physiques, son habillement et ses comportements
+:
+gros yeux ; cheveux noirs ; grande bouche ; gros ventre, etc.
+
+© NaCCA, Ministry of Education 2019
+
+76
+
+Content
+Standards
+
+Indicator and Exemplars
+
+Subject Specific
+Practices and Core
+Competencies
+
+SUB-STRAND 4: Décrire la famille et les liens familiaux
+Compréhension
+Orale
+Production
+Orale
+Compréhension
+Écrite
+Production
+Écrite
+
+B6.1.5.1.1
+Écouter/Regarder et comprendre un document audio-visuel qui décrit une famille élargie :
+B6.1.5.2.1
+Poser des questions et répondre à des questions sur les liens de parenté d’une famille élargie en
+images ou photos.
+:
+Ex: Qui est le jeune garçon à gauche ? Ans : C’est Kofi, mon cousin. C’est le fils de ma tante.
+La fille à droite, c’est qui ? Ans : C’est Akos. C’est la sœur de mon père. C’est ma tante.
+B6.1.5.2.2
+Décrire les membres de sa famille ; donner leur âge, profession, etc.
+:
+les grands-parents, le grand-père et la grand-mère
+la tante et l’oncle
+la cousine et le cousin
+la nièce et le neveu
+
+- Communication and
+collaboration
+- Critical thinking
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+- Personal development
+and leadership
+- Digital literacy
+
+B6.1.5.3.1
+Lire et comprendre un texte simple sur une famille illustre
+B6.1.5.4.1
+Décrire les membres de sa famille élargie
+-Précisez les liens de parenté, les professions et les goûts et préférences.
+
+© NaCCA, Ministry of Education 2019
+
+77
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+STRAND 2: Parler de son environnement
+
+Compréhension
+Orale
+Production
+Orale
+Compréhension
+Écrite
+Production
+Écrite
+
+SUB-STRAND 1: Parler de samaison
+B6.2.1.1.1
+Écouter/Regarder et comprendre un document audio-visuel sur les pièces, les objets de la
+maison B6.2.1.2.1
+- Poser et répondre à des questions sur les objets de la maison
+B6.2.1.2.2
+- Décrire les pièces de sa maison ;
+: les chambres à coucher, le salon (la salle de séjour), la cuisine, la salle à manger, la salle de
+bains, etc.
+B6.2.1.2.3
+Décrire les différents objets dans sa maison
+Ex :
+A partir d’un document audio-visuel, identifier les différents objets et pièces d’une maison et les
+caractériser avec des adjectifs qualificatifs;
+- beau (belle) spacieux (spacieuse), joli(e), ensoleillé(e), blanc (blanche), rouge, etc.
+- demander aux élèves de décrire en 3 phrases simples 3 pièces/objets de leur maison
+Ex:
+-Comment est le salon ?
+-Il est spacieux, bien décoré et il y a un grand frigo et un téléviseur.
+
+- Communication and
+collaboration
+- Critical thinking
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+- Personal development
+and leadership
+- Digital literacy
+
+B6.2.1.3.1
+-Lire et comprendre un texte, une vidéo, une publicité, surles objets, les pièces, les animaux, les
+fruits, etc.–
+
+© NaCCA, Ministry of Education 2019
+
+78
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+B6.2.1.4.1
+- A l’aide d’un dessin animé ou d’un film, écrire les noms des objets, pièces, animaux ou fruits
+identifiés.
+-B6.2.1.4.2
+Caractériser les différents objets, pièces, animaux de la maison.
+ex. : Utilisez des images ou des photos réelles de sa maison.
+
+© NaCCA, Ministry of Education 2019
+
+79
+
+CONTENT
+STANDARDS
+
+Compréhension
+Orale
+
+INDICATOR AND EXEMPLARS
+
+SUB-STRAND: Parler de son école
+B6.2.2.1.1
+Écouter/Regarder et comprendre un document audio-visuel sur les activités de l’école.
+Exemple : Pendant la récréation, les activités sportives, les cours, etc.
+Ref. YouTube/Documents aux CREF
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+- Communication and
+collaboration
+- Critical thinking
+
+Production
+Orale
+
+B6.2.2.2.1
+Discuter des différentes activités de l’école
+
+Compréhension
+Écrite
+
+Exemple :
+Téléphoner à un(e) correspondant(e)/ un(e) ami(e) pour lui demander les activités de son école.
+
+- Cultural identity and
+global citizenship
+
+Production
+Écrite
+
+-Qu’est-ce que tu fais à l’école ?
+- Je joue avec les amis ; Je lis mon cahier ; je fais des devoirs ; je balaie la cour ; etc.
+
+- Personal development
+and leadership
+
+B6.2.2.2.2
+Raconter ses activités journalières de l’école.
+Exemple : Le matin, nous arrivons à l’école à 7 h. Nous balayons les salles et la cour. etc.
+L’après-midi…
+Le soir…
+
+- Digital literacy
+
+- Creativity and innovation
+
+B6.2.2.2.3
+Dire ce que l’on fait avec les objets de la classe.
+Exemple :
+En classe, J’écris dans mon cahier avec un stylo. Je lis mon livre de français et je fais des exercices. etc.
+B6.2.2.3.1
+Lire et comprendre un texte, un dépliant, sur l’école et ses activités.
+Exemple :Ref. Google images/Manuel
+© NaCCA, Ministry of Education 2019
+
+80
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+B6.2.2.4.1
+Créer des slogans, des publicités, des dépliants l’école.
+Exemple :
+BONJOUR ! J’AIME L’ÉCOLE! ET TOI ?
+
+© NaCCA, Ministry of Education 2019
+
+81
+
+STRAND 3 : Exprimer ses goûts et ses préférences
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+SUB-STRAND 1: Dire ce que l’onaime
+Compréhension
+Orale
+Production
+Orale
+Compréhension
+Écrite
+Production
+Écrite
+
+B6.3.1.1.1
+Écouter/Regarder et comprendre un document audio-visuel sur les comportements qu’on aime
+chez les gens
+Exemple :
+Une vidéo sur les habitudes et les comportements.
+B6.3.1.2.1
+Poser et répondre à des questions sur les comportements qu’on aime chez les gens
+Exemples :
+- Utiliser des images (Google Images) indiquant des comportements–
+
+- Communication and
+collaboration
+- Critical thinking
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+- Personal development and
+leadership
+- Digital literacy
+
+- Les apprenants se posent des questions sur les caractèresdes autres.
+Exemple1 :
+- Comment est ton ami/amie ?
+- Il/Elle est gentil/gentille.
+bon/bonne
+aimable
+- Comment sont les gens de votre village ?
+- Ils sont aimables/accueillants/hospitaliers etc.
+
+© NaCCA, Ministry of Education 2019
+
+82
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+Exemple 2 :
+-
+
+-
+
+Pourquoi tu aimes Kwame ?
+J’aime Kwame parce qu’il est gentil/bon/respectueux/humble/aimable/sympa/etc.
+
+Pourquoi tu aimes Ama.
+J’aime Ama parce qu’elle est gentille/bonne/respectueuse/humble/aimable/sympa/
+
+© NaCCA, Ministry of Education 2019
+
+83
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+Compréhension
+Orale
+
+B6.3.1.2.2
+Dire quels comportements l’on aime chez quelqu’un
+
+Production
+Orale
+
+Deux apprenants se posent des questions sur les caractères.
+- Le/la professeur(e) est strict(e).
+- Oui et il est discipliné
+- Non, il/elle est gentil(le).
+
+Compréhension
+Écrite
+Production
+Écrite
+
+B6.3.1.3.1
+Lire et comprendre un texte en français sur les bons comportements des gens.
+Exemple :Suma en promenade, etc.
+B6.3.1.4
+Dire et écrire les activités que l’on aime faire
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+- Communication and
+collaboration
+- Critical thinking
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+- Personal development
+and leadership
+- Digital literacy
+
+Exemples :
+J’aime lire et écouter de la musique.
+etc.
+J’aime jouer au jeu d’ampe ; J’aime chanter aussi.
+
+© NaCCA, Ministry of Education 2019
+
+84
+
+CONTENT
+STANDARDS
+
+Compréhension
+Orale
+Interaction
+Orale
+Production
+Orale
+Compréhension
+Écrite
+Production
+Écrite
+
+INDICATOR AND EXEMPLARS
+
+B6.3.1.1.1
+Écouter/Regarder et comprendre un document audio-visuel sur les comportements que l’on
+aime ou que l’on déteste chez les gens
+B6.3.1.2.1
+Poser et répondre à des questions sur les mauvais comportements des gens
+Exemple 1 :
+- Comment est ton voisin?
+- Il a un mauvais comportement.
+- c’est vrai ?
+- Oui,, il est méchant. Il n’est pas du tout sympa.
+- Et sa femme ?
+- Elle aussi, elle a un mauvais comportement. Elles jettent des ordures partout.
+- Comment sont les gens de votre village ?
+- Ils sont méchants. Ils ne sont pas accueillants. Ils ne sont pas hospitaliers.
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE
+COMPETENCES
+- Communication and
+collaboration
+- Critical thinking
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+- Personal development
+and leadership
+- Digital literacy
+
+Exemple 2 :
+-
+
+-
+
+Pourquoi tu n’aimes pas Kwame ?
+Je n’aime pas Kwame parce qu’il est méchant et il n’aime pas balayer.
+
+Pourquoi tu aimes Ama.
+J’aime Ama parce qu’elle est méchante, Elle parle trop.
+
+B6.3.1.3.1
+Dire quels comportements vous n’aimez pas chez quelqu’un
+
+© NaCCA, Ministry of Education 2019
+
+85
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+B6.3.1.4.1
+Lire et comprendre un texte ou un image sur les mauvais comportements.
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+B6.3.1.4.1
+Écrire au moins deux phrases sur ce que l’on aime faire et ce que l’on n’aime pas faire.
+
+© NaCCA, Ministry of Education 2019
+
+86
+
+STRAND 4 : Les activités
+INDICATOR AND EXEMPLARS
+
+CONTENT
+STANDARDS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+SUB-STRAND 1: Compter et faire des calculs simples
+Compréhension
+Orale
+Production
+Orale
+Compréhension
+Écrite
+
+B6.4.1.1.1
+Écouter/Regarder et comprendre un document audiovisuelsur les nombres
+Exemples :
+
+-
+
+Des chansons et des poèmes(Youtude) sur les nombres
+(Chantez plus fort)
+
+-
+
+Quels nombres entendez-vous ?
+Combien de fois vous entendez ce nombre ?
+
+Questions :
+
+Production
+Écrite
+
+- Communication and
+collaboration
+- Critical thinking
+- Creativity and innovation
+- Cultural identity and global
+citizenship
+- Personal development and
+leadership
+
+B6.4.1.2.1
+Faire oralement des calculs mentaux simples
+
+- Digital literacy
+
+B6.4.1.2.2 Jouer aux jeux avec des chiffres
+Exemple :
+- Jeu de loto
+
+© NaCCA, Ministry of Education 2019
+
+87
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+B6.4.1.2.3
+Faire un inventaire
+Exemples : Comptez e notez le nombre des articles scolaires/des produits ménagers/des articles
+dans une boutique.
+- Par groupes, les élèves établit des listes des objets dans la classe/ la maison/un
+supermarché/etc.
+- Qu’est-ce qu’il y a dans la salle de classe/ton cartable/etc. ?
+- Comptez et notez le nombredes meubles dans le salon/la cuisine/la chambre à
+coucher/etc.
+
+© NaCCA, Ministry of Education 2019
+
+88
+
+CONTENT
+STANDARDS
+Compréhension
+Orale
+Production Orale
+Compréhension
+Écrite
+Production
+Écrite
+
+INDICATOR AND EXEMPLARS
+B6.4.1.3.1
+Lire et comprendre un inventaire
+Exemples :
+- Des listes d’objets avec le nombre de chaque objet.
+- Il y a combien de crayons en tout dans la boîte ?
+- Il y a combien de chaises au total dans la classe?
+Quel est le montant total des articlessur la liste (faire l’addition en GHS) ?
+- 13 cedis + 12 cedis = 25 cedis
+4 cahiers x 5 cahiers = 20 cahiers
+3 cedis x 5 = 15 cedis
+B6.4.1.3.2
+Lire et comprendredes problèmes arithmétiques
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+- Communication and
+collaboration
+- Critical thinking
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+- Personal development and
+leadership
+- Digital literacy
+
+-L’addition
+Maman va au marché. Elle achète deux sachets de mais grillé/pop-corn à 1 cedi, une boite de
+lait à quinze (15) cedis, un paquet de biscuits à deux(2) cedis, 3 Kalyppo à 8 cedis, un paquet
+de bonbons a 5 cedis. Faites le total.
+-La soustraction
+Il y a 7 œufs dans le panier. Maman utilise 3 œufs pour le petit déjeuner. Il reste combien
+d’œufs ?
+Vous avez 25 oranges. Vous donnez 5 oranges à votre frère, 3 oranges à votre sœur. Il reste
+combien d’oranges?
+40 filles vont au stade. Quinze filles retournent à l’école. Combien de filles ne retournent pas
+au stade.
+
+© NaCCA, Ministry of Education 2019
+
+89
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+-La multiplication
+Pour aller à l’école, je fais 2 kilomètres par jour.
+A la fin de la semaine, je fais combien de kilomètres ?
+-La division
+C’est le jour de Noël. Papa achète 20 paquets de biscuits. Partagez les paquets entre 5
+enfants.
+B6.4.1.4.1
+Faire des calculs simples à l’écrit avec des chiffres en lettres
+B6.4.1.4.2
+Ecrire en lettres les chiffres
+Exemple :
+6 = six
+22 + 18 = quarante
+20 – 11 = neuf
+15 x 3= Quarante-cinq
+Exemple :
+Faites les calculs suivants
+
+© NaCCA, Ministry of Education 2019
+
+90
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+SUB-STRAND 2 : Demander et donner l’heure
+Compréhension
+Orale
+Production
+Orale
+Compréhension
+Écrite
+Production
+Écrite
+
+B6.4.2.1.1
+Écouter/Regarder et comprendre un document audio-visuel sur les horaires Ex : restaurant,
+cinéma, programmes de télévision
+Exemples :
+- Documents audio des annonces des horaires de départ et arrivée des avions à
+l’aéroport
+- Les horaires de la SNCF
+- les horaires des repas au restaurant, les heures des films au cinéma, les horaires des
+programmes de télévision, etc.
+B6.4.2.2.1
+Poser et répondre à des questions sur ce que l’on fait à certaines heures de la journée.
+
+- Communication and
+collaboration
+- Critical thinking
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+- Personal development
+and leadership
+- Digital literacy
+
+Exemples :
+Jeu de rôle – Deux apprenants se posent des questions sur leurs activités journalières.
+- Qu’est-ce que tu fais le matin/à midi/l’après-midi/le soir ?les samedis ?à 6h du matin ? etc.
+- D’habitude, je …….
+- Exemples : Que fais-tu à 6 heures du matin ? Je me lave.
+Que fais-tu à midi ? Je prends mon déjeuner.
+
+© NaCCA, Ministry of Education 2019
+
+91
+
+CONTENT
+STANDARDS
+Compréhension
+Orale
+Production
+Orale
+Compréhension
+Écrite
+Production
+Écrite
+
+INDICATOR AND EXEMPLARS
+B6.4.2.2.2
+Raconter ce que l’on fait à certaines heures de la journée.
+Exemples :
+- Kwame, qu’est-ce que tu fais les samedis ?
+- Moi ? Eh bien. D’habitude je me réveille à 6 h parce que je ne vais pas au cours. Je fais le
+ménage : je balaie les chambres et la cour. A 8 h, je prends mon petit déjeuner. Après,
+je fais la lessive. A 11 h, je vais au marché avec ma mère. A midi, nous préparons le
+déjeuner et nous mangeons. L’après-midi, nous nous reposons ou nous regardons la
+télé.
+B6.4.2.3.1
+Lire et comprendreles heures d’activités sur un programme scolaire.
+B6.4.2.3.2
+Lire et comprendreles heures les programmes d’événements
+
+SUBJECT SPECIFIC
+PRACTICES AND CORE
+COMPETENCES
+- Communication and
+collaboration
+- Critical thinking
+- Creativity and innovation
+- Cultural identity and global
+citizenship
+- Personal development and
+leadership
+- Digital literacy
+
+B6.4.2.4.1
+Ecrire son agenda pour la journée ou la semaine indiquant les heures des activités
+Exemple :
+
+-
+
+Les heures de rendez-vous avec le directeur/le médecin de l’école, etc.
+Les heures des repas
+etc.
+
+B6.4.2.4.2
+Ecrire une affiche/une note de service avec les heures de rendez-vous
+Exemple :
+Un rendez-vous avec le directeur/le médecin de l’école.
+- À 9 heures, c’est l’accueil des invités.
+
+© NaCCA, Ministry of Education 2019
+
+92
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+SUB-STRAND 3: Parler des jours de la semaine
+Compréhension
+Orale
+Production
+Orale
+Compréhension
+Écrite
+Production
+Écrite
+
+B6.4.3.1.1
+Écouter/Regarder et comprendre un document audio/audio-visuel sur les jours de la semaine
+
+- Communication and
+collaboration
+
+:
+B6.4.3.2.1
+
+- Critical thinking
+
+Poser et répondre à des questions sur les activités de la semaine culturelle de l’école.
+:
+B6.4.3.2.2
+Dire ce que quelqu’un fait chaque jour de la semaine
+Lundi, le
+B6.4.3.3.1
+
+- Creativity and innovation
+- Cultural identity and global
+citizenship
+- Personal development and
+leadership
+- Digital literacy
+
+- Lire et comprendre un texte simple sur les activités quotidiennes de quelqu’un.
+Exemple : un(e) commerçant(e), enseignant(e), infirmière, chauffeur, policier(e), comptable,
+etc.:
+B6.4.3.4.1
+Écrire une carte postale à un(e) correspondant(e) pour lui décrire ses activités à l’école durant
+la semaine :
+
+© NaCCA, Ministry of Education 2019
+
+93
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+SUB-STRAND 4: Situer les mois et les saisons dans le temps
+B6.4.4.1
+Ecouter/Regarder et comprendreun(e) audio/vidéo chanson sur les mois et saisons de l’année
+Examples :ReF : YouTube/Documents aux CREF
+
+- Communication and
+collaboration
+
+B6.4.4.2.1
+
+- Critical thinking
+
+Poser et répondre à des questions sur les mois des saisons
+
+- Creativity and innovation
+
+Exemple : : l’hiver ; le printemps ; l’automne ; l’été
+Exemple :
+
+-
+
+Dans quels mois on a l’hiver ?
+L’hiver est en décembre, janvier et février, et mars.
+
+B6.4.4.2.2
+
+- Cultural identity and global
+citizenship
+- Personal development and
+leadership
+- Digital literacy
+
+Dire en quels mois se passent certains évènements
+Exemple :
+la fête des mères, la fêtedes pères, Saint Valentin, la fête de l’indépendance, etc.
+B6.4.4.3.1
+Lire et comprendre un texte simple sur les saisons et les mois où des fêtes importantes sont
+célébrées au Ghana
+B6.4.4.4.1
+Écrire une carte postale à un(e) correspondant(e) pour lui indiquer des dates d’évènements
+importants dans votre pays :
+
+© NaCCA, Ministry of Education 2019
+
+94
+
+Content
+Standards
+
+Compréhension
+Orale
+Production
+Orale
+
+Indicator and Exemplars
+
+SUB-STRAND 5: Entreren contact par telephone
+B6.4.5.1.1
+Écouter/Regarder et comprendre un clip sur deux personnes qui communiquent par téléphone
+B6.4.5.2.1
+Simuler une conversation téléphonique entre deux interlocuteurs.
+
+Subject Specific
+Practices and Core
+Competencies
+
+- Communication and
+collaboration
+- Critical thinking
+
+Compréhension
+Écrite
+
+Ref. YouTube/Documents aux CREF
+B6.4.5.2.2
+Présenter quelqu’un au téléphone
+Exemple : Présenter son ami e) à ses parents, un(e) ami(e), etc. par téléphone
+
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+
+Production
+Écrite
+
+B6.4.5.3.1
+Lire et comprendre de petites conversations téléphoniques entre deux personnes.
+
+- Personal development
+and leadership
+- Digital literacy
+
+B6.4.5.4.1
+Échanger des textos ou des petits messages écrits par téléphone
+
+© NaCCA, Ministry of Education 2019
+
+95
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+SUB-STRAND 6: Inviter quelqu’un et accepter une invitation
+Compréhension
+Orale
+Production
+Orale
+Compréhension
+Écrite
+Production
+Écrite
+
+B6.4.6.1.1
+Écouter/Regarder un document audiovisuel sur l’invitation.
+
+- Communication and
+collaboration
+
+B6.4.6.2.1
+Inviter quelqu’un au téléphone à manger ou à une fête
+
+- Critical thinking
+
+B6.4.6.2.2
+Dire pourquoi on accepte ou on refuse une invitation.
+B6.4.6.3.1
+Lire et comprendre une lettre/une carte d’invitation.
+B6.4.6.4.1
+Écrire une carte postale, un poster ou une carte d’invitation pour inviter des personnes
+
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+- Personal development
+and leadership
+- Digital literacy
+
+Exemple :
+Une invitation à votre prochaine anniversaire/au baptême de votre frère ou sœur/à la fête de
+votre école.
+
+© NaCCA, Ministry of Education 2019
+
+96
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+SUB-STRAND 7: Identifier les professions et les métiers
+Compréhension
+Orale
+
+B6.4.7.1.1
+Écouter/Regarder et comprendre un document audiovisuel sur les professions et les métiers.
+
+- Communication and
+collaboration
+
+Production
+Orale
+
+B6.4.7.2.1
+Poser et répondre à des questions sur ce que font les membres d’une famille.
+Exemple :
+
+- Critical thinking
+
+Quel est ton métier préféré ? J’aime être acteur.
+
+- Cultural identity and
+global citizenship
+
+Compréhension
+Écrite
+Production
+Écrite
+
+Quelle profession aimes-tu beaucoup ? J’aime être avocat.
+B6.4.7.2.2
+Dire la profession ou le métier que l’on veut exercer dans l’avenir
+Exemple :
+Je veux être jardinier.
+J’aimerais être banquier.
+
+- Creativity and innovation
+
+- Personal development
+and leadership
+- Digital literacy
+
+B6.4.7.3.1
+Identifier et associer les noms de professions et métiers à leurs dessins
+B6.4.7.4.1
+Ecrire les professions ou métiers des membres de sa famille.
+
+© NaCCA, Ministry of Education 2019
+
+97
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+SUB-STRAND 8:Demander et expliquer la position des personnes ou des objets les uns par rapport aux autres
+B6.4.8.1.1
+Compréhension Orale Écouter/Regarder et comprendre un document audiovisuel et prendre note des
+- Communication and
+positions des personnes et des objets.
+collaboration
+Production Orale
+Compréhension
+Écrite
+Production
+Écrite
+
+B6.4.8.2.1
+Poser et répondre à des questions sur la position d’une personne ou d’un objet.
+Exemples :
+
+-
+
+Où se trouve Kofi ? Kofi se trouve devant la télévision.
+Où se trouve la chaise ? La chaise se trouve sur la table.
+
+B6.4.8.2.2
+Indiquer à quelqu’un la position d’un objet par rapport à une personne
+Exemples :
+Kofi se trouve à droite de l’armoire.
+Ama se trouve derrière le bus.
+
+- Critical thinking
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+- Personal development and
+leadership
+- Digital literacy
+
+B6.4.8.3.1
+Situer sur une carte de la ville, la position des lieux publics
+Exemple
+l’école, l’hôpital, le parc, le musée, l’église, la poste, l’université, la banque, la mosquée, la
+gare, etc.
+La carte de ville d’une ville (Accra, Kumasi), etc.
+- Le musée se trouve à gauche de la gare.
+
+-
+
+© NaCCA, Ministry of Education 2019
+
+L’église est/se trouve/est située en face/à côté du marché
+L’église se trouve en face de la poste.
+La banque est à côté du marché.
+98
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+Content Standards
+
+Indicator and Exemplars
+
+Compréhension Orale
+Production Orale
+Compréhension
+Écrite
+Production
+Écrite
+
+B6.4.8.4.1
+Indiquer par écrit la position d’une personne ou d’un objet par rapport à l’autre
+Exemples :
+Où est ……….. ?
+Où se trouve/est situé(e)?
+Kofi est à droite/à gauche/devant/derrière Ama.
+Le chat est sous/sur la table.
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+Subject Specific
+Practices and Core
+Competencies
+- Communication and
+collaboration
+- Critical thinking
+- Creativity and innovation
+- Cultural identity and
+global citizenship
+- Personal development and
+leadership
+- Digital literacy
+
+© NaCCA, Ministry of Education 2019
+
+99
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+SUB-STRAND 9: Donner et réagir à un ordre
+Compréhension
+Orale
+Production
+Orale
+Compréhension
+Écrite
+Production
+Écrite
+
+B6.4.9.1.1 :
+Écouter/Regarder et comprendre un document audio/audio-visuel où l’on parle des ordres et
+des conseils ou des consignes simples.
+Exemple : Ecoutez un ordre et faites l’action.
+
+-
+
+Communication and
+collaboration
+- Critical thinking
+
+Le professeur donne des consignes et des conseils :
+
+- Creativity and innovation
+
+Soulignez (Souligne) la bonne réponse
+Entourez (Entoure) la bonne réponse
+Cochez (Coche) la bonne réponse
+Complétez (Complète) la phrase
+Reliez (Relie) le mot à l’image
+Ecrivez (Ecris) votre (ton) nom
+Barrez (Barre) l’intrus
+Dessinez (Dessine)
+Recopiez (Recopie) les phrases
+etc.
+
+- Cultural identity and
+global citizenship
+- Personal development
+and leadership
+- Digital literacy
+
+]
+
+© NaCCA, Ministry of Education 2019
+
+100
+
+CONTENT
+STANDARDS
+
+INDICATOR AND EXEMPLARS
+
+SUBJECT SPECIFIC
+PRACTICES AND
+CORE COMPETENCES
+
+B6.4.9.2.1 :
+Donner et réagir à des ordres
+Exemple :
+
+
+
+En classe, les apprenants se donnent des ordres et régissent en faisant l’action.
+- Sortons dans la cour
+- Allons à la cantine.
+- Jouons à la balle
+- Prête-moi ton stylo.
+- Mangeons.
+- Etc.
+- etc.
+
+B6.4.9.3.1 :
+
+Lisez et comprendre des ordres
+Exemple :
+- Lisez un ordre et associez-le à une image correspondante
+- Lisez un ordre et faites l’action
+B6.4.9.4.1 :
+Écrire pour donner des ordres
+Exemple1 :
+Associez un ordre à l’image correspondante
+
+© NaCCA, Ministry of Education 2019
+
+101
+
+FRENCH SUBJECT PANEL MEMBERS AND REVIEWERS
+SN
+
+NAME
+
+INSTITUTION
+
+WRITING PANEL
+1
+
+Mr. Louis Gminguole
+
+MoE, Accra
+
+2
+
+Mrs. Grace B. Nyuur
+
+Director GES ( Retired); National
+
+3.
+
+Mr. Robert Davor
+
+CREF
+
+4
+
+Mr Maurice Adjetey
+
+CREF/GES
+
+5
+
+Miss. Bernice Edu
+
+GES (Retired)
+
+6
+
+Miss.Felicia Ackah
+
+EXPERT REVIEWER
+7
+
+Dr. Anthony De-Souza
+
+Department of French, UCC
+
+CURRICULUM ADVISOR
+9
+
+Dr. Sam Awuku
+
+OPM (Oxford Policy Management)
+
+SUPERVISORS
+15
+
+Felicia Boakye-Yiadom (Mrs)
+
+NaCCA, Former Executive Secretary
+
+16
+
+Dr. Prince H. Armah
+
+NaCCA, Acting Executive Secretary
+
+GRAPHIC DESIGNERS
+17
+
+Eugene Offei Tettey
+
+NaCCA
+
+18
+
+Frank Appoh
+
+NaCCA
+
+© NaCCA, Ministry of Education 2019
+
+102
+
+© NaCCA, Ministry of Education 2019
+
+103
+
+

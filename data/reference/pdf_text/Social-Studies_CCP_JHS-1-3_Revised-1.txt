@@ -1,0 +1,4622 @@
+NATIONAL COUNCIL FOR
+CURRICULUM & ASSESSMENT
+(MINISTRY OF EDUCATION)
+
+SOCIAL STUDIES
+COMMON CORE PROGRAMME (CCP)
+CURRICULUM FOR JHS 1 – JHS 3
+JANUARY 2024
+
+MINISTRY OF EDUCATION
+REPUBLIC OF GHANA
+
+i
+
+Social Studies Curriculum for JHS1- JHS3
+Enquiries and comments on this Curriculum should be addressed to:
+The Director-General
+National Council for Curriculum and Assessment (NaCCA)
+Ministry of Education
+P. O. Box CT PMB 77 Cantonments Accra
+Telephone: 0302909071, 0302909862
+Email: info@nacca.gov.gh
+Website: www.nacca.gov.gh
+
+©2024 National Council for Curriculum and Assessment (NaCCA).
+This publication is not for sale. All rights reserved. No part of this publication may be
+reproduced without prior written permission from the Ministry of Education, Ghana.
+
+ii
+
+FOREWORD
+The Ministry of Education, acting through the National Council for Curriculum and Assessment (NaCCA), has, in recent times, been working on curriculum and
+assessment reforms to improve the quality and relevance of learning experiences in pre-tertiary schools in Ghana. This curriculum, known as the Common Core
+Programme (CCP), is a sequel to the kindergarten-primary standards-based school curriculum, the implementation of which commenced in the 2019/2020 academic
+year. The CCP is carefully designed for learners in Junior High School 1 to Junior High School 3 (JHS 1 – JHS 3) as part of a holistic learning experience that prepares
+them for post-secondary education, the world of work or both. The curriculum focuses on building character and nurturing values, ensuring a seamless progression
+for all learners from JHS to SHS and creating clear pathways for academic and career-related programmes from Senior High School 1 to Senior High School 3 (SHS1 SHS3).
+In the 21st century, memorising facts and figures is no longer a sufficient learner attribute. Therefore, the CCP focuses on the acquisition of the 4Rs (Reading, wRiting,
+aRithmetic and cReativity) and core competencies to afford learners the ability to apply knowledge innovatively to solve everyday problems. Personal projects,
+community projects and community service have been integrated into the CCP as part of a comprehensive assessment programme, including an assessment of
+knowledge, skills, attitudes and values that mainly emphasise what learners can do. The content of this curriculum will promote better high school education that
+meets the varied learning needs of the young people in the country and addresses the shortfalls in the current school curriculum about learning and assessment.
+The Ministry of Education is committed to ensuring that our schools develop globally competitive high school graduates with the requisite employable skills and
+workplace ethos. The CCP curriculum will, therefore, play an important role in this regard. The Ministry will support the effective implementation of the CCP, including
+the capacity development of all teachers, to ensure improved learning experiences and outcomes for our young people.
+
+Dr Yaw Osei Adutwum (MP)
+The Honourable Minister of
+Education
+
+iii
+
+ACKNOWLEDGEMENTS
+This Common Core Programme (CCP) was developed with the National Pre-tertiary Learning Assessment Framework (NPLAF) and Teacher’s and Learner’s Resource
+Packs. The National Council for Curriculum and Assessment (NaCCA) created all these documents, under te oversight and strategic direction of the Ministry of
+Education (MoE), with support from some MoE agencies and other relevant stakeholders.
+
+NaCCA, acting on behalf of the Ministry of Education (MoE), would like to express its sincere gratitude to all its partners who participated in the professional
+conversations and discussions during the development of the CCP curriculum.
+
+NaCCA also extends special commendations to the leadership of the Ghana Education Service (GES), National School Inspectorate Authority (NaSIA), National
+Teaching Council (NTC), Commission for Technical and Vocational Education and Training (Commission for TVET) and other agencies of the MoE.
+
+Additionally, NaCCA acknowledges the contributions of staff from various Universities and Colleges of Education as well as teachers and learners within Ghana
+Education Service.
+
+Special thanks go to those who contributed to shaping this curriculum content through consultation, including the national stakeholder engagement conducted in
+Accra in February 2020.
+
+iv
+
+CONTENT
+FOREWORD ...................................................................................................................................................................................................................................................iii
+ACKNOWLEDGEMENTS....................................................................................................................................................................................................................................iv
+CONTENT ..........................................................................................................................................................................................................................................................v
+INTRODUCTION ............................................................................................................................................................................................................................................... ix
+RATIONALE ...................................................................................................................................................................................................................................................... xi
+AIMS .............................................................................................................................................................................................................................................................. xiii
+PROFILE OF EXPECTED LEARNING BEHAVIOURS ........................................................................................................................................................................................... xiii
+ATTITUDES, VALUES AND PROCESS SKILLS ..................................................................................................................................................................................................... xv
+ASSESSMENT................................................................................................................................................................................................................................................. xvii
+CREATIVE PEDAGOGICAL APPROACHES ....................................................................................................................................................................................................... xxii
+CORE COMPETENCIES ................................................................................................................................................................................................................................... xxv
+INSTRUCTIONAL EXPECTATIONS ................................................................................................................................................................................................................ xxvii
+ORGANISATION AND STRUCTURE OF THE CURRICULUM ......................................................................................................................................................................... xxviii
+SCOPE AND SEQUENCE ................................................................................................................................................................................................................................ xxxi
+JHS 1................................................................................................................................................................................................................................................................. 1
+STRAND 1: IDENTITY, SIGNIFICANCE AND PURPOSE ....................................................................................................................................................................................... 1
+SUB-STRAND 1: THE PEOPLE OF GHANA ..................................................................................................................................................................................................... 1
+STRAND 1: IDENTITY, SIGNIFICANCE AND PURPOSE ....................................................................................................................................................................................... 8
+SUB-STRAND 3: THE INDIVIDUAL AND COMMUNITY DEVELOPMENT ....................................................................................................................................................... 8
+STRAND 4: ETHICS AND HUMAN DEVELOPMENT ......................................................................................................................................................................................... 11
+SUB-STRAND 1: INDIGENOUS KNOWLEDGE SYSTEMS .............................................................................................................................................................................. 11
+STRAND 3: LAW AND ORDER IN THE GHANAIAN SOCIETY ............................................................................................................................................................................ 14
+v
+
+SUB-STRAND 3: POLITICAL INSTITUTIONS AND STRUCTURES IN GHANA ................................................................................................................................................ 14
+STRAND 5: PRODUCTION, EXCHANGE AND CREATIVITY ............................................................................................................................................................................... 18
+SUB-STRAND 1: PROMOTING ECONOMIC ACTIVITIES IN GHANA ............................................................................................................................................................. 18
+STRAND 6: NATIONALISM AND NATIONHOOD ............................................................................................................................................................................................. 21
+SUB-STRAND 1: EUROPEAN ENCOUNTER AND THE SLAVE TRADE ........................................................................................................................................................... 21
+STRAND 6: NATIONALISM AND NATIONHOOD ............................................................................................................................................................................................. 27
+SUB-STRAND 2: COLONIALISM AND NATIONALISM ................................................................................................................................................................................. 27
+STRAND 2: ENVIRONMENT AND SUSTAINABILITY ......................................................................................................................................................................................... 29
+SUB-STRAND 1: ENVIRONMENTAL ISSUES ............................................................................................................................................................................................... 29
+CONTENT STANDARD ................................................................................................................................................................................................................................ 29
+INDICATORS AND EXEMPLARS .................................................................................................................................................................................................................. 29
+CORE COMPETENCIES ................................................................................................................................................................................................................................ 29
+STRAND 2: ENVIRONMENT AND SUSTAINABILITY ......................................................................................................................................................................................... 32
+SUB-STRAND 3: RESOURCES IN GHANA .................................................................................................................................................................................................... 32
+STRAND 3: LAW AND ORDER IN THE GHANAIAN SOCIETY ............................................................................................................................................................................ 35
+SUB-STRAND 1: CITIZENSHIP AND HUMAN RIGHTS .................................................................................................................................................................................. 35
+STRAND 4: ETHICS AND HUMAN DEVELOPMENT ......................................................................................................................................................................................... 37
+SUB-STRAND 3: SOCIALISATION ............................................................................................................................................................................................................... 37
+JHS 2............................................................................................................................................................................................................................................................... 39
+STRAND 1: IDENTITY, SIGNIFICANCE AND PURPOSE ..................................................................................................................................................................................... 39
+SUB-STRAND 2: SOCIO-CULTURAL PRACTICES IN GHANA ......................................................................................................................................................................... 39
+SUB-STRAND 4: THE INDIVIDUAL AND COMMUNITY DEVELOPMENT ...................................................................................................................................................... 41
+SUB-STRAND 2: CONFLICT, PEACE AND SECURITY ................................................................................................................................................................................... 44
+vi
+
+STRAND 6: NATIONALISM AND NATIONHOOD ............................................................................................................................................................................................. 47
+SUB-STRAND 2: COLONIALISM AND NATIONALISM .................................................................................................................................................................................. 47
+STRAND 6: NATIONALISM AND NATIONHOOD ............................................................................................................................................................................................. 50
+SUB-STRAND 3: THE REPUBLICS AND MILITARY RULE.............................................................................................................................................................................. 50
+STRAND 3: LAW AND ORDER IN THE GHANAIAN SOCIETY ............................................................................................................................................................................ 54
+SUB-STRAND 1: CITIZENSHIP AND HUMAN RIGHTS .................................................................................................................................................................................. 54
+STRAND 3: LAW AND ORDER IN THE GHANAIAN SOCIETY ............................................................................................................................................................................ 56
+SUB-STRAND 2: CONFLICT, PEACE AND SECURITY ................................................................................................................................................................................... 56
+STRAND 4: ETHICS AND HUMAN DEVELOPMENT ......................................................................................................................................................................................... 59
+SUB-STRAND 2: POPULATION AND NATIONAL DEVELOPMENT ................................................................................................................................................................ 59
+STRAND 3: LAW AND ORDER IN THE GHANAIAN SOCIETY ............................................................................................................................................................................ 63
+SUB-STRAND 1: CITIZENSHIP AND HUMAN RIGHTS .................................................................................................................................................................................. 63
+JHS 3............................................................................................................................................................................................................................................................... 65
+STRAND 1: IDENTITY, SIGNIFICANCE AND PURPOSE ..................................................................................................................................................................................... 65
+SUB-STRAND 2: SOCIO-CULTURAL PRACTICES IN GHANA ......................................................................................................................................................................... 65
+STRAND 2: ENVIRONMENT AND SUSTAINABILITY ......................................................................................................................................................................................... 68
+SUB-STRAND 1: ENVIRONMENTAL ISSUES ................................................................................................................................................................................................ 68
+STRAND 2: ENVIRONMENT AND SUSTAINABILITY ......................................................................................................................................................................................... 72
+SUB-STRAND 2: MAPPING SKILLS ............................................................................................................................................................................................................. 72
+STRAND 3: LAW AND ORDER IN THE GHANAIAN SOCIETY ............................................................................................................................................................................ 75
+SUB-STRAND 2: CONFLICT, PEACE AND SECURITY .................................................................................................................................................................................... 75
+STRAND 5: PRODUCTION, EXCHANGE AND CREATIVITY ............................................................................................................................................................................... 77
+SUB-STRAND 3: CONSUMER RIGHTS, PROTECTION, AND RESPONSIBILITIES ........................................................................................................................................... 77
+vii
+
+STRAND 5: PRODUCTION, EXCHANGE AND CREATIVITY ............................................................................................................................................................................... 80
+SUB-STRAND 4: THE CITIZEN AND INVESTMENT ...................................................................................................................................................................................... 80
+STRAND 6: NATIONALISM AND NATIONHOOD ............................................................................................................................................................................................. 82
+SUB-STRAND 3: THE REPUBLICS AND MILITARY RULE .............................................................................................................................................................................. 82
+APPENDICES ................................................................................................................................................................................................................................................... 87
+BIBLIOGRAPHY ............................................................................................................................................................................................................................................... 93
+
+viii
+
+INTRODUCTION
+In the three years of junior high school education, learners are expected to take a Common Core Programme (CCP) that emphasises a set of high, internationally
+benchmarked career and tertiary education readiness standards. Learners need to acquire these for post-secondary education, the workplace or both. The
+standards articulate what learners are expected to know, understand and be able to do by focusing on their social, emotional, cognitive and physical
+development. The CCP runs from JHS1 through JHS3.
+The common core attributes of the learner, which describe the essential outcomes in the three learning domains (i.e. cognitive, psychomotor and affective),
+are at the centre of the CCP (see Figure 1). Inspired by the values important to Ghanaian society, the CCP educates the heart, mind and hands about the
+learner’s lifetime values, well-being, physical development, metacognition and problem-solving abilities. Ultimately, this will produce character-minded
+learners who can play active roles in dealing with the increasing challenges facing Ghana and the global society.
+
+Features of the learner attitudes
+•
+
+learning and teaching approaches – the core competencies, 4Rs and pedagogical approaches;
+
+•
+•
+
+learning context – engagement, service and project;
+learning areas – mathematics, science, computing, languages (English Language, Ghanaian Languages, French and Arabic), career technology, social
+studies, physical and health education, creative arts and design and religious and moral education.
+
+These are elaborated subsequently as follows:
+
+Learning and Teaching Approaches
+•
+
+The core competencies describe the relevant global skills acquired through learning in addition to the 4Rs.These global skills allow learners to become
+critical thinkers, problem-solvers, creators, innovators, good communicators and collaborators. In addition, the CCP curriculum will make learners
+digitally literate, culturally sensitive and globally competitive citizens who are life-long learners with a keen interest in their personal development.
+
+•
+
+The CCP's pedagogical approaches emphasise creative and inclusive learning strategies anchored on authentic and enquiry-based, collaborative,
+cooperative, differentiated, holistic, and cross-disciplinary learning.
+
+•
+
+The 4Rs refer to Reading, wRiting, aRithmetic and cReativity, in which all learners must become proficient.
+
+Learning Context
+The CCP emphasises learners' engagement in classroom activities and projects (in and outside the classroom). These projects can involve individual or group
+tasks, which all learners must complete by the end of JHS 3. The CCP project provides learners with contexts to demonstrate creativity and inventiveness in
+ix
+
+various areas of human endeavour. Community service offers an opportunity for learners to nurture, for, and solve problems in their community.
+
+Learning Areas
+The CCP comprises the following learning areas:
+1. Languages (English Language, Ghanaian Languages, French, Arabic)
+2. Mathematics
+3. Science
+4. Creative Arts and Design (CAD)
+5. Career Technology
+6. Social Studies
+7. Computing
+8. Religious and Moral Education (RME)
+9. Physical and Health Education (PHE)
+This document sets the standards for learning Social Studies in the Common Core Programme (CCP). The standards are carefully set with the expectation that
+the CCP (JHS1 – JHS3) will offer quality education for all learners. The design of this curriculum is based on the features of the CCP, as shown in Figure 1.
+It emphasises a set of high internationally-bench- marked career and tertiary education readiness standards. Learners need to acquire these competencies in
+Social Studies for post-secondary education, the world of work or both. The curriculum has been designed to be user-friendly because it provides a detailed
+preamble that covers the rationale, philosophy, aims, the profile of expected learning behaviours (i.e. knowledge, skills, attitudes and values), pedagogical
+approaches, core competencies and the 4Rs, assessment practices and instructional expectations.
+
+x
+
+Figure 1: CCP Learner Attributes
+
+RATIONALE
+Social Studies is a multi-disciplinary subject that aims to equip learners with knowledge, attitudes, values and skills that will enable them to become active,
+informed, innovative and responsible citizens. Social Studies addresses the challenges or problems that confront and threaten the survival of Ghanaian society.
+It allows the learner to apply concepts, theories and generalisations from various relevant disciplines to analyse, investigate and develop appropriate solutions
+to personal and societal problems. It allows them to explore their immediate environment and the world further. Therefore, Social Studies specifically focuses
+on developing the learner’s curiosity, critical thinking, problem-solving skills and competencies for personal development and leadership. Besides, it seeks to
+xi
+
+enhance communication and collaboration, creativity and innovation, digital literacy, cultural identity and global citizenship. The inclusion of Social Studies in
+the Common Core Programme of the Pre-tertiary Education Curriculum is intended to enable learners to acquire relevant tools to become effective, active and
+patriotic citizens.
+
+PHILOSOPHY
+Teaching Philosophy
+The Social Studies curriculum will enable learners to develop knowledge, understanding, skills and competencies through social constructivism and social
+realism. These theories emphasise learning as an active process where the learner constructs knowledge rather than acquiring it. The curriculum allows
+learners to expand, change, enhance and modify their worldview. Teachers will adopt thematic and creative pedagogical approaches that engage learners in
+a rich and rigorous inquiry-driven environment, such as talk for learning, project-based learning, games, modelling, question brainstorming, demonstration
+and role-play, which are necessary for achieving learner-centred classrooms and developing learners into creative, honest and responsible citizens.
+
+Learning Philosophy
+The philosophy of learning Social Studies is based on the need to train citizens who are reflective, concerned, active and participatory citizens to fit into the
+ever-changing world and contribute their quota to society. Social Studies will provide avenues for learners to interact with people and interrogate issues to
+construct new knowledge and ideas, and describe, analyse and evaluate problems that are critical to the survival of the human race. In essence, the curriculum
+is designed to generate activities that will make learning more relevant by using learners’ previous knowledge, experiences and environments to acquire
+competencies, including the following:
+1. critical thinking and problem-solving skills to be able to compare and contrast, analyse, evaluate and apply geographical knowledge with
+little or no supervision;
+2. creative thinking skills to be able to reconstruct important information confidently;
+3. digital literacy skills to be able to use IT tools and resources efficiently for investigations and project works;
+4. effective communication skills to be able to share information at various levels of interaction;
+5. values to live as global citizens capable of learning about other peoples and cultures.
+
+xii
+
+AIMS
+General Aims
+Social Studies aims to produce reflective, concerned, and competent citizens who will make informed decisions for the individual and public good. The subject
+seeks to produce morally upright Ghanaians responsible and capable of maintaining healthy lifestyles and preserving their environment for sustainability.
+
+Specific Aims
+Specifically, the subject will enable learners to:
+1. explore and protect the environment;
+2. exhibit a sense of belonging to the family and community;
+3. appreciate themselves as unique individuals by deepening their awareness of stereotypes associated with their gender, abilities, ethnicity, and religion
+and how to challenge the me
+4. demonstrate responsible citizenship;
+5. develop attitudes for healthy and peaceful co-existence (embracing diversity)
+6. ensure sustainable use of resources;
+7. develop a sense of patriotism and national pride;
+8. make themselves globally competitive.
+
+PROFILE OF EXPECTED LEARNING BEHAVIOURS
+Knowledge, Understanding and Application
+A central aspect of this curriculum is the profile of learning behaviour dimensions that should be the basis for instruction and assessment. Learners may show
+understanding of concepts by comparing, summarising, rewriting in their own words and constructing meaning from instruction.
+The learner may also apply the knowledge acquired in some new contexts. At a higher level of learning, the learner may be required to analyse an issue or a
+problem. At a much higher level, the learner may be required to synthesise knowledge by integrating several ideas to formulate a plan, solve a problem and
+compose a story or a piece of music. Further, the learner may be required to evaluate, estimate and interpret a concept. At the last, highest level, learners may
+need to create, invent, compose, design and construct. These learning behaviours, “knowledge”, “understanding”, “application’’, “analysis”, “synthesis”,
+xiii
+
+“evaluation”, and “creation”, fall under the cognitive domain.
+Learning indicators are stated with action verbs to show what the learner should know and be able to do. The ability of the learner to describe, explain, examine,
+discuss, and summarise situations after teaching and learning has been completed suggests that the learner has acquired knowledge. In the past, in most cases,
+teaching stressed knowledge acquisition to the detriment of other higher-level behaviours, such as application and analysis. In this curriculum, learners are
+challenged to solve personal and societal problems. In this respect, they demonstrate their ability to “apply” the knowledge acquired. Learners must, therefore, be
+engaged in various activities to stimulate their critical thinking abilities.
+
+The weighting of the profile of learning behaviour dimensions
+The three profiles of learning behaviour dimensions that have been specified for teaching, learning and assessment are:
+•
+
+Knowledge and Understanding 30%
+
+•
+
+Application of Knowledge 40%
+
+•
+
+Attitudes, Values and Process Skills 30%
+
+The weights indicated on the right of the dimensions show the relative emphasis the teacher should give in the teaching, learning and assessment processes.
+Emphasising the three domains of learning (cognitive, affective and psychomotor) in your teaching will ensure that Social Studies will not only be taught and studied
+at the mental level but will also lead learners to the acquisition of positive attitudes and skills that will enable them to deal effectively with life in general.
+The explanation of the keywords involved in each profile of learning behaviour dimensions is as follows:
+Knowing: this has to do with the ability to remember, recall, identify, define, describe, list, name, match and state principles, facts and concepts. In this sense,
+‘knowing’ constitutes the lowest level of learning.
+Understanding: this involves the ability to explain, summarise, translate, rewrite, paraphrase, give examples, generalise, estimate or predict consequences
+based on a trend. Understanding is generally the ability to grasp the meaning of some concepts that may be verbal, pictorial or symbolic.
+Applying: this dimension is also called “Use of Knowledge.” It is the ability to use or apply knowledge, rules, methods, principles, and theories to new and
+unfamiliar situations. It also involves the ability to produce, solve, plan, demonstrate, and discover, among other things.
+Analysing: is the ability to break down material/information into parts, differentiate, compare, distinguish, outline, separate, and identify significant points.
+It also includes recognising unstated assumptions and logical fallacies, inferences from facts, etc.
+Synthesis: is the ability to combine parts or ideas to form a new whole. It involves combining, compiling, composing, planning, revising, organising, creating,
+and generating new ideas and solutions.
+xiv
+
+Evaluating: It is the ability to appraise and compare features of different things and make comments or judgments, contrast, criticise, justify, support, discuss,
+conclude and make recommendations. Evaluation refers to the ability to judge the worth or value of some material based on some criteria.
+Creating: uses information or materials to plan, compose, produce, manufacture, or construct other products.
+According to Bloom’s Taxonomy, creating constitutes the highest form of learning. Therefore, this standards-based Social Studies curriculum emphasises
+creating as a core behavioural attribute. Teachers should encourage learners to develop their creative skills to solve personal and societal problems.
+
+ATTITUDES, VALUES AND PROCESS SKILLS
+Attitudes
+This Social Studies curriculum seeks to equip learners with positive attitudes that will enable them to function effectively in society. Knowledge acquisition
+alone cannot cause expected behavioural change to make learners function properly in society. There is, therefore, the need to emphasise the development
+of positive attitudes. The following are examples of positive attitudes learners are encouraged to develop:
+Commitment: the determination to contribute to national development.
+Tolerance: the willingness to respect the views of others.
+Patriotism: refers to love for one’s country, national pride, and a willingness to sacrifice oneself for the country's development.
+Flexibility in ideas: the willingness to change one’s opinion in the face of more plausible evidence.
+Respect for evidence: it is the willingness to collect and use data from one’s investigation and respect for data collected by others.
+Reflection: refers to the habit of critically reviewing how an investigation or observation has been carried out to identify possible flaws and ways to improve
+it.
+Comportment: the ability to conform to acceptable societal norms.
+Co-operation: the ability to work effectively with others.
+Responsibility: it is the ability to act independently and make decisions, to be morally accountable for one’s actions, and to be capable of rational conduct.
+Environmental Awareness: the ability to be conscious of one’s physical and socio-economic surroundings.
+xv
+
+Respect for the Rule of Law: the ability to obey the rules and regulations of the land.
+
+Values
+The acquisition of values is at the core of the standards-based Social Studies curriculum. These values help individuals to define their identity and uphold high
+moral standards. Learners are expected to exhibit the following values:
+Respect: This includes respect for the nation, its institutions, laws, culture, citizens and neighbours.
+Diversity: Ghana is a multicultural society; therefore, learners must be encouraged to respect all persons irrespective of their ethnic or religious background
+to ensure peaceful co-existence and national integration.
+Equity: The socio-cultural and economic environment across the country is uneven. Consequently, it is necessary to be deliberate in addressing learners' specific
+needs and ensure an equitable distribution of resources. Ghana’s learners have varied needs influenced by their gender, abilities, economic status geographical
+background, which requires the provision of equal opportunities to all. Every citizen, irrespective of their socio-economic background and condition, should be
+treated fairly regarding access to national resources and state power. All learners should have equal opportunities for a fair learning environment to enable
+them to harness their potential and capabilities.
+Commitment to achieving excellence: Learners must be encouraged to take advantage of the opportunities provided through the curriculum to acquire the
+requisite skills to function in their society. Learners should strive to pursue and achieve excellence in whatever they set out to do.
+Teamwork/Collaboration: Learners are encouraged to work together towards common goals within tolerance and mutual understanding. This will instil in
+them the virtues of living harmoniously with members of the larger society.
+Truth and Integrity: Learners must be encouraged to tell the truth irrespective of the consequences. In addition, the curriculum aims to make them morally
+upright and willing to live the values of honesty and compassion. Equally important, the ethos or culture of the workplace, including integrity and perseverance,
+must underpin the learning processes to allow learners to see and apply skills and competencies in the world of work.
+
+Process Skills
+These activities or tasks indicate performance or proficiency in a given learning area. They are useful benchmarks for planning lessons and developing
+exemplars and are the core of inquiry-based learning. This is the skill of using our senses to gather information about objects or events. This also includes
+using instruments to extend our senses' range.
+Classifying: This is the skill of grouping objects or events based on common characteristics.
+Comparing: This is identifying the similarities and differences between two or more objects, concepts or processes.
+xvi
+
+Communicating/Reporting: This is the skill of transmitting, receiving and presenting information in concise, clear and accurate forms - spoken, written,
+pictorial, tabular or graphical.
+Predicting: This is assessing the likelihood of an outcome based on prior knowledge of how things usually turn out.
+Analysing: is the skill of identifying the parts of objects, information, or processes and the patterns and relationships between these parts.
+Generating possibilities: This is the skill of exploring all the options, possibilities and alternatives beyond the obvious or preferred one.
+Evaluating: This assesses the reasonableness, accuracy and quality of information, processes or ideas.
+Designing: This is the skill of visualising and drawing new objects or gadgets from imagination.
+Interpreting: evaluating data in terms of its worth: good, bad, reliable, or unreliable; making inferences and predictions from written or graphical data; and
+extrapolating and deriving conclusions. Interpretation is also referred to as “Information Handling.”
+Recording: is the skill of boldly drawing or making a graphical representation that is well-labelled and pertinent to the issue at hand
+Aligning: This is the skill of using and applying the conclusions arrived at in an activity to what could happen in similar situations.
+
+ASSESSMENT
+Assessment is a process of collecting and evaluating information about learners and using the information to make decisions to improve their learning. Depending
+on its purpose, assessment may be formative, summative, diagnostic, or evaluative. It is integral to the teaching-learning process, promotes student learning, and
+improves instruction. In the CCP, it is suggested that assessment involves assessment for learning, assessment of knowledge, and assessment as learning, which
+are described in the subsequent paragraphs.
+
+Assessment for Learning (AfL)
+Assessment for Learning (AfL) is the process of seeking and interpreting evidence for use by learners and teachers to decide where the learners are in their learning,
+where they need to be (the desired goal), and how best to get them there. AfL is one of the most suitable methods for improving learning and raising standards
+(Black and William, 1998). Assessment for Learning also refers to all activities undertaken by teachers or their learners, which provide information for feedback to
+modify the teaching and learning activities in which they are engaged. AfL can be achieved by sharing criteria with learners, effective questioning and feedback.
+AfL, therefore, provides timely feedback to ensure individual learners are assisted during the teaching and learning process. Various strategies and questioning are
+used to measure the learning that has taken place. It is a continuous process that happens at all stages of the instructional process to monitor a learner's progress
+and offer feedback or change teaching strategies to achieve lesson performance standards.
+xvii
+
+Assessment as Learning (AaL)
+Assessment as Learning develops and supports learners’ sense of ownership and efficacy in their learning through reflective practices. This form of self-assessment
+helps build learners' competencies and better understand their knowledge and what they are taught.
+
+Assessment of Learning (AoL)
+Assessment of learning provides a picture of the teacher's achieved standards and learners' performance at the terminal stage of the learning process. This
+information provides data for accountability and educational decisions such as grading, selection and placement, promotion and certification. Through AoL,
+stakeholders such as parents and guardians are informed about the extent to which learners have attained in expected learning outcomes at the end of their grade
+or programme.
+
+What do we assess?
+Assessment in the CCP emphasises:
+•
+
+the Common Core Learner Attributes, which are essential outcomes in the three domains of learning (i.e. cognitive, psychomotor, and affective);
+
+•
+
+knowledge and skills with emphasis on the 4Rs;
+
+•
+
+the core competencies with emphasis on attitudes and values. The process is illustrated in Figure 2.
+
+Figure 2: Essential Assessment Features
+
+xviii
+
+How do we monitor progress?
+The School Assessment (SBA) covers all forms/modes of assessment, including AfL, AaL and AoL (see Table 1), that can be undertaken by any school-level
+actor (learner, teacher, head teacher) to monitor the learner’s achievement over some time. Data collection and record keeping are central to the conduct
+of SBA.
+
+Table 1 Modes of Assessment
+
+xix
+
+ASSESSMENT FOR
+LEARNING
+
+ASSESSMENT OF
+LEARNING
+
+ASSESSMENT AS
+LEARNING
+
+Class exercises
+
+Class Assessment Task
+(CAT)
+
+Portfolio
+
+Quizzes
+
+End of term
+
+Journal entries
+
+Class tests (written, oral,
+aural and practical)
+
+End of year
+
+Project work
+
+Class Assessment Task
+(CAT)
+
+Checklist
+Questionnaire
+
+The following are relevant records that can be kept on the learner’s learning.
+•
+
+Learner’s Progress Record (Cumulative Record)
+
+•
+
+Learner’s Report Card
+
+•
+
+School-Based Assessment Termly Recording Register
+
+The National Pre-tertiary Learning Assessment Framework (NPLAF) document (Ministry of Education, 2020a) and the School-Based Assessment Guidelines
+(Ministry of Education, 2020b) provide details of SBA guidelines.
+
+Reporting School-Based Assessment (SBA) in the CCP
+The CCP uses a criterion-referenced model of presenting and reporting school-based assessment data. Throughout the three-year duration, school-based
+assessment is done against criteria linked to performance standards. The CCP provides proficiency levels to be attained and descriptors for all grade levels of
+the programme (see Table 2). Individual schools cannot change these levels and descriptors, which are common to all learners and learning areas nationwide.
+For each assessment criterion or benchmark for the level of proficiency, several descriptors are defined, as shown in Table 2.
+
+xx
+
+Table 2 Benchmarks, levels of proficiency and the grade level descriptors
+LEVEL OF PROFICIENCY
+
+BENCHMARK
+
+GRADE LEVEL DESCRIPTOR
+
+1: Highly proficient (HP)
+
+80% +
+
+The learner shows a high level of proficiency in knowledge, skills, and values and can
+transfer them automatically and flexibly through authentic performance tasks.
+
+2: Proficient (P)
+
+68-79%
+
+The learner demonstrates a sufficient level of proficient knowledge, skills, and core
+understanding and can transfer them independently through authentic performance
+tasks.
+
+3: Approaching
+Proficiency (AP)
+
+54-67%
+
+The learner is approaching proficiency in terms of knowledge, skills and values with
+little guidance and
+can transfer understanding through authentic performance tasks
+
+4: Developing (D)
+
+40-53%
+
+Learner demonstrates a developing level of knowledge, skills and values but needs
+help throughout the performance of authentic tasks.
+
+5: Emerging (E)
+
+39% and below
+
+The learner is emerging with minimal understanding of knowledge, skills, and values but
+needs a lot of help.
+
+The grading system presented shows the letter grade system and equivalent grade boundaries. In assigning grades to learners’ test results or any form of
+evaluation, the above grade boundaries and the descriptors may be applied. The descriptors (Highly Proficient [HP], Proficient [P], Approaching Proficiency
+[AP], Developing [D], Emerging [E]) indicate the meaning of each grade. In addition to the school-based assessment (SBA), a national standards assessment
+test is conducted in Basic 8 to provide national-level indicators of learners’ achievement.
+
+xxi
+
+CREATIVE PEDAGOGICAL APPROACHES
+The CCP emphasises creative and inclusive pedagogies that are anchored on authentic and enquiry-based learning, collaborative and cooperative learning,
+differentiated learning, holistic learning, cross-disciplinary learning (i.e., the 4Rs across the curriculum), and developing the core competencies. This section
+describes some of the creative pedagogical approaches required for the CCP.
+
+Learning-Centred Pedagogy
+The learner is at the centre of learning. At the heart of the national curriculum for change and sustainable development is the learning progression and
+improvement of learning outcomes for Ghana’s young people, focusing on the 4Rs – Reading, wRiting, aRithmetic and cReativity. At each curriculum phase,
+learners are expected to be offered the essential learning experiences to progress seamlessly to the next phase. Where there are indications that a learner is
+not sufficiently ready for the next phase, a compensatory provision through differentiation should be provided to ensure that such a learner is prepared to
+progress with their classmates. The progression phases at the high school level are from JHS1 to JHS3.
+The curriculum encourages the creation of a learner-centred classroom with the opportunity for learners to engage in meaningful “hands-on” activities that
+bring home what they learn in school and what they know from outside of school. The learner-centred classroom allows the learners to discuss ideas through
+the teacher's inspiration. Learners then actively look for answers and work in groups to solve problems. They also research, analyse and evaluate information.
+The learner-centred classroom aims to enable learners to take ownership of their learning. It provides the opportunity for profound learning to take place. The
+teacher as a facilitator needs to create a learning environment that:
+1. makes learners feel safe and accepted;
+2. helps learners to interact with varied sources of information in a variety of ways;
+3.
+
+helps learners to identify a problem suitable for investigation through project work;
+
+4.
+
+connects the problem with the context of the learners’ world so that it presents realistic opportunities for learning;
+
+5.
+
+organises the subject matter around the problem, not the subject;
+
+6.
+
+gives learners responsibilities for defining their learning experiences and planning to solve the problem;
+
+7.
+
+encourages learners to collaborate in learning; and
+
+8.
+
+Expect all learners to demonstrate the results of their learning through a product or performance.
+
+In a learner-centred classroom, it is more productive for learners to find answers to their questions rath for teachers to provide the answers and their
+opinions.
+
+xxii
+
+Inclusion
+Inclusion is recognising that learners come from diverse backgrounds with diverse needs and must be uniquely supported through the learning process. Learners
+can be disadvantaged based on gender, ability, ethnicity, economic status, and religious affiliation. Therefore, inclusion ensures access and learning for all learners,
+especially those disadvantaged. All learners are entitled to a broad and balanced curriculum in every school in Ghana. The daily learning activities to which learners
+are exposed should ensure that the learners’ right to equal access to quality education is met. The Curriculum suggests a variety of approaches that address learners’
+diversity and their special needs in the learning process, including addressing stereotypes that seek to limit the learners’ interests and abilities. When these
+approaches are effectively used in lessons, they will contribute to the full development of the learning potential of every learner. Learners have individual needs
+and learning experiences and different motivation levels for learning. Therefore, planning, delivery and reflection on daily learning experiences should consider
+these differences.
+The curriculum, therefore, promotes:
+1. learning that is linked to the learners’ background and their prior experiences, interests, potential and capacities;
+2. learning that is meaningful because it aligns with learners’ ability (e.g. learning that is oriented towards developing general capabilities and solving the
+practical problems of everyday life); and
+3. The active involvement of the learners in the selection and organisation of learning experiences, making them aware of their importance and enabling
+them to assess their learning outcomes.
+
+Differentiation and Scaffolding
+Differentiation is a process by which differences (learning styles, interests and readiness to learn) between learners are accommodated so that all learners in a
+group have the best possible chance of learning. Differentiation could be by task, support or outcome. Differentiation to ensure each learner benefits adequately
+from the curriculum delivery can be achieved in the classroom through tasks, support from the Guidance and Counselling Unit and learning outcomes.
+• Differentiation by task involves teachers setting different tasks for learners of various abilities. For example, in sketching the plan and shape of their school
+compound and community, some learners could sketch with a free hand while others trace the outline of the plan.
+• Differentiation by support involves the teacher giving the needed support and referring weak learners to the Guidance and Counselling Unit for academic
+support.
+• Differentiation by outcome involves the teacher allowing learners to respond at different levels. Weaker learners are allowed more time for complicated
+tasks.
+Scaffolding in education refers to using various instructional techniques to move learners progressively towards stronger understanding and, ultimately, greater
+independence in the learning process. It involves breaking up the learning task, experience or concepts into smaller parts and providing them with the support they
+need to learn each part. The process may require a teacher to assign an excerpt of a longer text for learners to read and engage them to discuss the excerpt to
+improve comprehension. The teacher guides keywords/vocabulary to ensure learners have developed a thorough understanding of the text before engaging them
+to read the full text.
+xxiii
+
+Common scaffolding strategies available to the teacher are:
+1. giving learners a simplified version of a lesson, assignment or reading and gradually increasing the complexity, difficulty or sophistication
+over time;
+2. describing or illustrating a concept, problem or process in multiple ways to ensure understanding;
+3. giving learners an exemplar or a model of an assignment and asking them to complete it;
+4. giving learners a vocabulary lesson before they read a difficult text;
+5. describing the purpose of a learning activity clearly and the learning goals they are expected to achieve; and
+6. describing explicitly how the new lesson builds on the knowledge and skills learners were taught in a previous lesson.
+
+Information Communication Technology
+Information Communication Technology (ICT) has been integrated into the Social Studies curriculum as part of the core of education, alongside reading, writing,
+and numeracy. Thus, the curriculum is designed to use ICT as a teaching and learning tool to enhance deep and independent learning. For instance, in certain
+cases, the teacher is directed to use multimedia to support the teaching and learning process.
+ICT has the potential to innovate, accelerate, enrich, and deepen skills. It also motivates and engages learners to relate school experiences to work
+practices and provides opportunities for them to fit into the world of work.
+Some of the expected outcomes that this curriculum aims to achieve through ICT use are:
+1.
+
+improved teaching and learning processes;
+
+2.
+
+improved consistency and quality of teaching and learning;
+
+3.
+
+increased opportunities for more learner-centred pedagogical approaches;
+
+4.
+
+improved inclusive education practices where learners with special education and social needs such as disabilities and gender differences are
+uniquely catered for
+
+5.
+
+improved collaboration, creativity, higher order thinking skills; and
+
+6.
+
+enhanced flexibility and differentiated approach to delivery.
+
+7,
+
+improved gender, equality, equity and social inclusion
+
+xxiv
+
+ICT is a teaching and learning tool that provides learners access to large quantities of online and offline information. It also provides the framework for analysing
+data to investigate patterns and relationships in the computing context. Once learners have made their findings, ICT can help them organise, edit, and print
+the information in many different ways.
+Learners need to be exposed to various ICT tools around them, including calculators, radios, cameras, phones, television sets, computers and related software
+like Microsoft Office packages - Word, PowerPoint and Excel - as teaching and learning tools. The exposure that learners are given from JHS 1 to JHS 3 to use
+ICT in exploiting learning will build their confidence and increase their motivation to apply ICT use in later years, both within and outside of education. ICT use
+for teaching and learning is expected to enhance learners' quality and competence.
+
+CORE COMPETENCIES
+The Core Competencies describe a body of skills that teachers at the basic level should seek to develop in their learners. The competencies describe a connected
+body of core skills that are acquired throughout the processes of teaching and learning. They are the relevant global skills for learning that allow learners to
+develop, in addition to the 4Rs, to become critical thinkers, problem-solvers, creators, innovators, good communicators, collaborators, culturally identified
+individuals, digitally literate and global citizens who have a keen interest in their personal development. Using this curriculum, we hope the core competencies
+will be developed in learners to help them build our country, Ghana. These competencies include:
+
+Critical Thinking and Problem solving (CP)
+Develop learners’ cognitive and reasoning abilities to analyse issues and situations, leading to problem resolution. This skill allows learners to draw on and
+demonstrate what they have learnt, analyse situations from their own experiences, and choose the most appropriate solution out of several possible solutions.
+It requires learners to embrace the problem, persevere, and take responsibility for their learning.
+
+Creativity and Innovation (CI)
+Learners acquire entrepreneurial skills through their ability to think about new ways of solving problems and develop technologies to address them. This
+competency requires ingenuity of ideas in the arts, technology, and enterprise. It enables learners to think independently and creatively.
+
+Communication and Collaboration (CC)
+This competence aims to teach learners to use languages, symbols, and texts to exchange information about themselves and the world around them. Learners
+actively share their ideas and engage in dialogue by listening to and learning from others in ways that respect and value the multiple perspectives of all persons
+involved.
+
+xxv
+
+Cultural Identity and Global Citizenship (CG)
+This competence aims to develop learners who put country and service foremost through understanding what it means to be active citizens by inculcating a
+strong sense of environmental and economic awareness. Learners use the knowledge, skills and attitudes acquired to contribute meaningfully towards the
+country's socio-economic development. They develop skills to critically analyse cultural trends and identify and contribute to the global community.
+
+Personal Development and Leadership (PL)
+This competence aims to improve self-awareness and self-knowledge, build and renew self-esteem, identify and develop talents, fulfil dreams and aspirations
+and develop other people or meet different people’s needs. It involves recognising the importance of values such as honesty and empathy, seeking the wellbeing of others, distinguishing between right and wrong, fostering perseverance, resilience and self-confidence, self-regulation and responsibility and
+developing a love for life-long learning.
+
+Digital Literacy (DL)
+It involves guiding learners to discover, acquire skills, and communicate through ICT to support their learning and responsibly use digital media.
+For effective lesson planning for teaching, learning and assessment, it is suggested that teachers refer to Appendix 1 for details of the components of the core
+competencies. These details comprise the unpacked skills such as listening, presenting and teamwork for collaboration.
+These details include the approaches, methods, strategies, and appropriate, relevant teaching and learning resources for ensuring that every learner benefits from
+the teaching and learning process.
+
+NB: Please refer to Appendix 1 to choose core competencies for your lessons.
+
+xxvi
+
+INSTRUCTIONAL EXPECTATIONS
+The following are the major roles the teacher is expected to play in the implementation of the curriculum:
+1. Guide and facilitate learning by generating discourse among learners and challenging them to accept and share responsibility for their learning based
+on their unique differences.
+2. Select content, adapt and plan lessons to meet learners' interests, knowledge, understanding, abilities and experiences. It should be noted that in the
+standards-based curriculum, lessons are not expected to be limited to only learning outcome(s) but should broadly cover the processes of learning for
+the learners to cumulatively engage in activities/experiences to demonstrate what they know and can do (i.e. the indicators) as well as develop such
+core competencies.
+3. Work together as colleagues within and across disciplines and grade levels to develop communities of learners who exhibit enquiry skills, attitudes and
+social values conducive to learning.
+4. Use multiple methods and systematically gather data about learners’ understanding and abilities to guide Social Studies teaching and learning, with
+arrangements to provide feedback to learners and parents.
+5. Design and manage learning environments that provide learners with the time, space, and resources needed to learn Social Studies.
+6. Help learners make sense of problems and persevere in solving them, including using higher-order reasoning and problem-solving skills.
+7. Aid learners to identify and challenge stereotypes about gender, disability, religion, ethnicity, economic, status etc
+8. Get learners to think critically about tasks and their solutions by asking questions and challenging each other’s views until a consensus is reached.
+9. Encourage learners to present their ideas in ways that make sense to others and critique each other’s reasoning.
+10. Enable learners to work together to represent real-life situations in multiple ways (e.g. oral, text, pictures, diagrams, equations, etc.).
+11. Support learners using appropriate technologies to solve problems embedded in their culture and society.
+12. Provide opportunities for learners to realise that flexibility is necessary when sharing ideas in social contexts. Also, allow them to support each other in
+all learning contexts.
+
+Suggested Time Allocation
+From JHS 1/JHS1 to JHS 3/JHS3, three periods a week, each lasting 50 minutes, are allocated to teaching Social Studies.
+
+xxvii
+
+ORGANISATION AND STRUCTURE OF THE CURRICULUM
+The Social Studies curriculum draws on the following disciplines:
+•
+
+Geography
+
+•
+
+Sociology
+
+•
+
+Government
+
+•
+
+Economics
+
+•
+
+History
+
+The thematic areas are organised under six strands:
+•
+
+Strand 1: Identity, Significance and Purpose
+
+•
+
+Strand 2: Environment and Sustainability
+
+•
+
+Strand 3: Law and Order in the Ghanaian Society
+
+•
+
+Strand 4: Ethics and Human Development
+
+•
+
+Strand 5: Production, Exchange and Creativity
+
+•
+
+Strand 6: Nationalism and Nationhood
+
+xxviii
+
+Curriculum Reference Numbers
+The curriculum has been structured into Strands, Sub-strands, Content standards, Indicators and Exemplars and Core Competencies. Each
+Strand, Sub-strand, Content Standard and Indicator have a unique identification number (code). The annotation is indicated in Table 3.
+Table 3: Interpretation of Curriculum Reference Numbers
+
+Example: Social Studies: JHS1.1.1.2.1
+ANNOTATION
+
+MEANING/REPRESENTATION
+
+JHS1.
+
+Junior High School 1
+
+1.
+
+Strand Number
+
+1.
+
+Sub-Strand Number.
+
+2.
+
+Content Standard Number
+
+1.
+
+Learning Indicator Number
+
+Strands are the broad learning areas or domains of the Social Studies content to be studied.
+Sub-strands are the sub-divisions of the broad learning areas or strands.
+Content Standard refers to the pre-determined level of knowledge, skill and attitude that a learner attains by a set stage of education.
+Indicators are clear outcomes or milestones that learners must exhibit each year to meet the content standard expectation. They represent
+the minimum expected standard in a year.
+Exemplars clearly explain the expected outcomes of indicators and serve as support and guidance to the facilitator/teacher in delivering the curriculum.
+
+xxix
+
+Structure
+
+STRAND NUMBER
+
+CONTENT STANDARD NUMBER
+
+YEAR OR CLASS
+
+JHS1 1.1.1.1.
+
+INDICATOR NUMBER
+SUB-STRAND NUMBER
+
+xxx
+
+SCOPE AND SEQUENCE
+STRAND
+
+1. IDENTITY, SIGNIFICANCE AND PURPOSE
+
+SUB-STRAND
+
+JHS
+1/JHS1
+
+JHS
+2/JHS2
+
+JHS 3/JHS3
+
+1. The People of Ghana
+
+Ü
+
+2. Socio-cultural Practices in Ghana
+
+Ü
+
+Ü
+
+4. The Individual and Community Development
+
+Ü
+
+1. Environmental Issues
+2. ENVIRONMENT AND SUSTAINABILITY
+
+3. LAW AND ORDER IN THE GHANAIAN
+
+SOCIETY
+
+Ü
+
+Ü
+Ü
+
+2. Mapping Skills
+3. Resources in Ghana
+
+Ü
+
+1. Citizenship and Human Rights
+
+Ü
+
+Ü
+
+2. Conflict, Peace and Security
+3. Political Institutions and Structures in Ghana
+
+Ü
+Ü
+
+Ü
+
+xxxi
+
+STRAND
+
+JHS1
+
+SUB-STRAND
+1. Indigenous Knowledge Systems
+
+Ü
+Ü
+
+2. Population and National Development
+4. ETHICS AND HUMAN DEVELOPMENT
+
+JHS3
+
+JHS2
+
+3. Socialisation
+
+Ü
+
+1. Promoting Economic Activities in Ghana
+
+Ü
+
+Ü
+Ü
+
+5. PRODUCTION, EXCHANGE AND
+
+2. Self-employment
+
+CREATIVITY
+
+3. Consumer Rights, Protection, and Responsibilities
+
+Ü
+
+4. The Citizen and Investment
+
+Ü
+
+6. NATIONALISM AND NATIONHOOD
+
+1. European Encounter and the Slave Trade
+
+Ü
+
+2. Colonialism and Nationalism
+
+Ü
+
+3. The Republics and Military Rule
+
+Ü
+
+Ü
+
+Ü
+
+Ü
+
+xxxii
+
+JHS 1
+STRAND 1: IDENTITY, SIGNIFICANCE AND PURPOSE
+SUB-STRAND 1: THE PEOPLE OF GHANA
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+JHS 1.1.1.1 Demonstrate
+understanding of the
+movement of major ethnic
+groups into Ghana.
+
+JHS 1.1.1.1.1 Trace the original homes and movement patterns of Communication and Collaboration (CC),
+the major ethnic groups in Ghana.
+Cultural Identity and Global Citizenship
+(CG), Creativity and Innovation (CI)
+
+Exemplars:
+1. In pairs, learners identify the major ethnic groups in
+Ghana, including the Gonja, Mole-Dagbani, Guan, Akan,
+Ewe, and Ga-Adangbe.
+
+© NaCCA, Ministry of Education 2021
+
+CC9.1: Demonstrate behaviour and skills of
+working towards group goals.
+
+1
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+CC7.3: Provide feedback on ideas,
+organisation, voice, word choice, and
+sentence fluency in communication.
+CC7.4: Identify underlying themes,
+implications and issues when listening.
+
+2. Learners use a historical map of Africa to trace the original CG5.3: Develop and express respect,
+recognition and appreciation of others’
+homes of the major ethnic groups.
+cultures.
+CG5.4: Develop and exhibit a sense of
+cultural identity.
+CI 5.2: Combining simple/complex ideas to
+create novel situations or things.
+
+3. Using maps or cardinal points, learners draw simple
+directional signs to describe the movement patterns of the CI 5.2: Ability to merge simple/complex
+major ethnic groups to their present location in Ghana,
+ideas to create novel situations or things.
+including places they temporarily settled.
+
+© NaCCA, Ministry of Education 2021
+
+2
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+CI 6.2: Ability to reflect on creative task
+approaches and evaluate the tools'
+effectiveness.
+CI 6.3: Ability to select the most effective
+creative tools for work and give reasons for
+the choice.
+
+JHS 1.1.1.1.2 Assess the factors and impact of the migration of
+the major ethnic groups into Ghana.
+
+Communication and Collaboration (CC),
+Critical Thinking and Problem-Solving (CP),
+Creativity and Innovation (CI)
+
+Exemplars:
+
+1. Using the Jigsaw strategy, learners analyse the pull and
+push factors of migration of major ethnic groups into
+Ghana.
+
+CC 9.3: Understand roles during group
+activities.
+CC9.1: Demonstrate behaviour and skills of
+working towards group goals.
+CC7.5: Identify and analyse different points
+of view of the speaker.
+
+© NaCCA, Ministry of Education 2021
+
+3
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+2. In small groups, learners create charts to explain the pull
+and push factors of migration of the major ethnic groups
+into Ghana.
+
+CORE COMPETENCIES
+CI 5.4: Ability to visualise alternatives, see
+possibilities and identify problems and
+challenges.
+CI 5.1: Examine alternatives in creating new
+things.
+
+3. Using the thought shower strategy, learners explain the
+CI 5.6: Ability to combine information and
+effects of migration of the major ethnic groups into Ghana.
+ideas from several sources to conclude.
+CP 5.6: Demonstrate a thorough
+understanding of a generalised concept and
+facts specific to a task or situation.
+
+© NaCCA, Ministry of Education 2021
+
+4
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+JHS 1.1.1.2 Students should
+JHS 1.1.1.2.1 Recount the factors for the rise and decline of the
+demonstrate knowledge of the major states and kingdoms in Ghana.
+factors responsible for the rise
+and decline of major states
+and kingdoms in Ghana.
+
+CORE COMPETENCIES
+Communication and Collaboration (CC),
+Personal Development and Leadership
+(PL), Critical Thinking and Problem-Solving
+(CP)
+
+Exemplars:
+1. In small groups, learners explore different sources to
+explain the factors (political, economic, geographical,
+cultural, etc.) that contributed to the rise of major states
+and kingdoms in Ghana.
+
+PL 6.1: Ability to serve group members
+effectively.
+CC 9.6: Ability to work with all group
+members to complete a task successfully.
+
+2. Using a jigsaw technique, learners develop charts, models,
+and written or oral presentations on factors that led to the CP 5.1: Ability to combine information and
+ideas from several sources to conclude.
+decline of some major states and kingdoms in Ghana.
+
+© NaCCA, Ministry of Education 2021
+
+5
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+JHS 1.1.1.2.2 Discuss the roles of matriarchs and patriarchs of the Communication and Collaboration (CC),
+major kingdoms and states in precolonial Ghana.
+Critical Thinking and Problem-Solving (CP),
+Personal Development and Leadership
+(PL), Cultural Identity and Global
+Citizenship (CG), Creativity and Innovation
+(CI)
+Exemplars:
+
+1. In small groups, learners explore primary and secondary
+sources to identify the contributions of major leaders in
+the rise of their states and kingdoms.
+
+CP 5.1: Ability to combine information and
+ideas from several sources to conclude.
+CC9.5: Appreciate the importance of
+including all team members in discussions
+and actively encourage their contributions.
+
+2. Learners role-play the contributions of identified patriarchs PL5.4: Ability to understand one’s
+personality traits.
+and matriarchs in the rise of their states and kingdoms.
+CG5.4: Develop and exhibit a sense of
+cultural identity.
+© NaCCA, Ministry of Education 2021
+
+6
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+3. Learners compose epic poems to recognise the
+CI 5.1: Examine alternatives in creating new
+contributions of identified patriarchs and matriarchs of the things.
+various states and kingdoms.
+CI 5.2: Ability to merge simple/complex
+ideas to create novel situations or things.
+
+© NaCCA, Ministry of Education 2021
+
+7
+
+STRAND 1: IDENTITY, SIGNIFICANCE AND PURPOSE
+SUB-STRAND 3: THE INDIVIDUAL AND COMMUNITY DEVELOPMENT
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+JHS 1.1.3.1 Demonstrate
+understanding of ‘selfidentity’.
+
+JHS 1.1.3.1.1. Examine the concept of self-identity.
+
+Critical Thinking and Problem Solving (CP),
+Personal Development and Leadership
+(DL), Communication and Collaboration
+(CC)
+
+Exemplars:
+
+1. Using think-pair-share, learners explain the concepts of
+“self” and “self-identity.”
+
+CP 5.2: Analyse and make distinct
+judgments about viewpoints expressed in
+an argument.
+PL 5.3: Recognise one’s emotional state and
+their preparedness to apply emotional
+intelligence.
+PL 5.5: Desire to accept one’s true self and
+overcome weaknesses.
+
+© NaCCA, Ministry of Education 2021
+
+8
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+2. Using the question-and-answer technique, learners
+discuss the reasons for knowing oneself, e.g., accepting
+oneself and identifying one’s potential and abilities.
+
+CORE COMPETENCIES
+
+CC 8.1: Speak clearly and explain ideas.
+Share a narrative or extended answer while
+speaking to a group.
+CC 8.4: Anticipate different responses from
+the audience and plan for them.
+
+CC 8.2: Explain ideas in a clear order with
+3. Using the say-something strategy, learners identify
+attitudes that enhance self-worth, such as self-confidence, relevant detail, using correct construction
+and structure of speech.
+can-do spirit, and positive attitude towards life.
+CC8.1: Speak clearly and explain ideas.
+Share a narrative or extended answer while
+speaking to a group.
+
+4. In small groups, learners identify their strengths and
+weaknesses and how to use them to promote personal
+development.
+© NaCCA, Ministry of Education 2021
+
+CC 9.1: Demonstrate behaviour and skills of
+working towards group goals.
+9
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+PL5.5: Desire to accept one’s true self and
+overcome weaknesses.
+
+5. Using the graffiti wall strategy, learners describe how
+individuals can develop their capabilities, including
+education and training, counselling, and continuous
+practice.
+
+© NaCCA, Ministry of Education 2021
+
+CP 5.2: Analyse and make distinct
+judgments about viewpoints expressed in
+an argument.
+CP 5.6: Demonstrate a thorough
+understanding of a generalised concept and
+facts specific to a task or situation.
+
+10
+
+STRAND 4: ETHICS AND HUMAN DEVELOPMENT
+SUB-STRAND 1: INDIGENOUS KNOWLEDGE SYSTEMS
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+JHS 1.4.1.1 Demonstrate
+knowledge of the various
+indigenous medicinal
+practices in pre-colonial
+Ghana.
+
+JHS 1.4.1.1.1 Identify indigenous medicinal plants used in the
+pre-colonial era to provide health care.
+
+Communication and Collaboration (CC),
+Creativity and Innovation (CI), Cultural
+Identity and Global Citizenship (CG)
+
+Exemplars:
+
+CG5.2: Develop and exhibit the ability to
+1. Using pictures or real samples of local medicinal plants,
+defend one’s cultural beliefs, practices
+learners work in small groups to identify medicinal plants
+and norms.
+used in the pre-colonial era.
+CC9.5: Appreciate the importance of
+including all team members in discussions
+and actively encourage their
+contributions.
+
+© NaCCA, Ministry of Education 2021
+
+11
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+2. In pairs, learners match pictures of medicinal plants to
+the diseases they cured in the pre-colonial era.
+
+3. In mixed groups (gender, ability, etc.), learners discuss
+the concept of traditional medicine and its importance.
+
+CORE COMPETENCIES
+CI 6.1: Exhibit strong memory, intuitive
+thinking, and respond appropriately.
+
+CP 6.5: Ability to select alternative(s) that
+adequately meet specified criteria.
+CG5.3: Develop and express respect,
+recognition and appreciation of others’
+cultures.
+CC9.1: Demonstrate behaviour and skills
+of working towards group goals.
+
+JHS 1.4.1.1.2 Investigate the processes and methods of
+indigenous medicinal practitioners in pre-colonial Ghana.
+
+Digital Literacy (DL), Communication and
+Collaboration (CC), Critical Thinking and
+Problem-Solving (CP)
+
+Exemplars:
+
+1. Learners watch and discuss documentaries on different
+methods of providing indigenous health care.
+
+© NaCCA, Ministry of Education 2021
+
+DL5.3: Ability to find and utilise digital
+content.
+
+12
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+DL5.6: Preparedness to make better
+decisions using available information,
+
+2. In a jigsaw activity, learners research different
+healthcare delivery methods commonly used in precolonial Ghana.
+Hint: Encourage learners to gather information from
+community elders, herbalists, traditional birth
+attendants, etc.
+
+3. Learners role-play different methods of indigenous
+health care delivery.
+
+DL5.1: Ability to ascertain when
+information is needed and identify,
+locate, evaluate and effectively use it to
+solve a problem.
+CP 6.4: Ability to identify important and
+appropriate criteria and use them to
+evaluate available alternatives.
+
+CC 9.5: Appreciate the importance of
+including all team members in discussions
+and actively encourage their
+contributions.
+CC 7.2: Interpret correctly and respond to
+non-verbal communication such as facial
+expressions, cues and gestures.
+
+© NaCCA, Ministry of Education 2021
+
+13
+
+STRAND 3: LAW AND ORDER IN THE GHANAIAN SOCIETY
+SUB-STRAND 3: POLITICAL INSTITUTIONS AND STRUCTURES IN GHANA
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+JHS 1.3.3.1 Demonstrate
+JHS 1.3.3.1.1 Analyse the indigenous political systems in preknowledge and understanding colonial Ghana and their relevance today.
+of pre-colonial Ghanaian
+political systems and their
+relevance in contemporary
+Ghana.
+
+Communication and Collaboration (CC),
+Creativity and Innovation (CI), Cultural
+Identity and Global Citizenship (CG),
+Critical Thinking and Problem-Solving (CP)
+
+Exemplars:
+
+1. In pairs, learners create charts showing pre-colonial
+Ghana's major states and kingdoms and the political
+systems practised.
+Centralised
+Akan (Fante,
+Asante, Denkyira,
+Akwamu, etc)
+
+Mole-Dagbani
+(Mamprusi,
+Dagomba,
+Nanumba)
+
+© NaCCA, Ministry of Education 2021
+
+Non-centralised
+
+Theocratic
+
+Vagala, Sisala,
+Tallensi,
+Kokomba, Koma,
+Tampulensi,
+Chamba, Guans
+who lived West of
+the White Volta,
+etc.
+
+Guan
+
+CI 5.1: Examine alternatives in creating new
+things.
+CG5.1: Show a strong sense of
+belongingness to one’s culture.
+
+Ga-Adangbe
+
+14
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+2. In mixed-ability groups, learners create posters describing CC9.5: Appreciate the importance of
+the political systems in pre-colonial Ghana.
+including all team members in discussions
+and actively encourage their contributions.
+
+3. In small groups, learners compare and contrast the
+different forms of political systems in pre-colonial Ghana.
+
+4. In mixed-ability groups, learners elaborate on the
+importance of Indigenous Political Institutions in
+contemporary Ghana.
+
+CP 5.2: Analyse and make distinct
+judgments about viewpoints expressed in
+an argument.
+
+CC9.5: Appreciate the importance of
+including all team members in discussions
+and actively encourage their contributions.
+CC9.8: Demonstrate an awareness of team
+dynamics and work to minimise conflicts in
+the team.
+
+© NaCCA, Ministry of Education 2021
+
+15
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+5. Using the think-pair-share technique, learners discuss the CC7.5: Identify and analyse different points
+role of women in the structure of the chieftaincy institution of view of the speaker.
+(e.g. Queen mother, female chiefs, etc.).
+
+JHS 1.3.3.2 Demonstrate
+JHS 1.3.3.2.1 Examine the nature of modern political institutions Personal Development and Leadership
+understanding of modern
+in Ghana.
+(PL), Communication and Collaboration
+political institutions in Ghana.
+(CC), Digital Literacy (DL)
+
+Exemplars
+1. In groups, learners explain the concepts of political
+institutions, power and authority.
+
+CC9.5: Appreciate the importance of
+including all team members in discussions
+and actively encourage their contributions.
+PL6.1: Ability to serve group members
+effectively.
+
+2. Using pictures and videos, learners identify the types of DL5.1: Ability to ascertain when
+political institutions in the state, such as the., executive, information is needed and identify, locate,
+legislature, and judiciary.
+evaluate and effectively use it to solve a
+problem.
+
+© NaCCA, Ministry of Education 2021
+
+16
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+3. Building on what others say, learners discuss the effect of CC8.2: Explain ideas in a clear order with
+power and authority on political institutions.
+relevant detail, using correct construction
+and structure of speech.
+
+© NaCCA, Ministry of Education 2021
+
+17
+
+STRAND 5: PRODUCTION, EXCHANGE AND CREATIVITY
+SUB-STRAND 1: PROMOTING ECONOMIC ACTIVITIES IN GHANA
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+JHS 1.5.1.1 Demonstrate
+JHS 1.5.1.1.1 Explore the role of pre-colonial Ghanaian economic Communication and Collaboration (CC),
+knowledge and understanding activities on the economy of Ghana today.
+Creativity and Innovation (CI), Cultural
+of key economic activities in
+Identity and Global Citizenship (CG),
+pre-colonial Ghana.
+Critical Thinking and Problem-Solving (CP)
+
+Exemplars:
+
+1. learners in small groups recount some pre-colonial
+CC9.6: Ability to work with all group
+Ghanaian economic activities (agricultural and industries).
+members to complete a task successfully.
+CC9.2: Understand and use interpersonal
+skills.
+CC9.1: Demonstrate behaviour and skills of
+working towards group goals.
+
+© NaCCA, Ministry of Education 2021
+
+18
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+2. In a jigsaw activity, learners create multimedia
+CI 6.3: Ability to select the most effective
+presentations on pre-colonial Ghanaian economic activities creative tools for work and give reasons for
+in their communities today (farming, fishing, hunting, craft the choice.
+industries, mining, salt production etc.).
+CI 5.2: Ability to merge simple/complex
+ideas to create novel situations or things.
+
+CP 5.5: Effectively evaluate the success of
+3. In mixed-ability groups, learners research and present
+solutions to a complex problem.
+findings on sustainable methods or practices in agriculture
+and indigenous industries.
+CC8.1: Speak clearly and explain ideas.
+Share a narrative or extended answer while
+speaking to a group.
+
+4. learners discuss the continuity and changes in pre-colonial CC8.4: Anticipate different responses from
+the audience and plan for them.
+Ghanaian economic activities in mixed-ability groups.
+CC9.8: Demonstrate an awareness of team
+dynamics and work to minimise conflicts in
+the team.
+
+© NaCCA, Ministry of Education 2021
+
+19
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+5. In pairs, learners discuss how pre-colonial Ghanaian
+economic activities have shaped the economy of Ghana
+today.
+
+CORE COMPETENCIES
+CC8.2: Explain ideas in a clear order with
+relevant detail, using correct construction
+and structure of speech.
+CP 5.2: Analyse and make distinct
+judgments about viewpoints expressed in
+an argument.
+CC9.2: Understand and use interpersonal
+skills.
+
+© NaCCA, Ministry of Education 2021
+
+20
+
+STRAND 6: NATIONALISM AND NATIONHOOD
+SUB-STRAND 1: EUROPEAN ENCOUNTER AND THE SLAVE TRADE
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+JHS 1.6.1.1 Exhibit knowledge JHS 1.6.1.1.1 Examine the coming of Europeans to the Gold
+and understanding of
+Coast.
+European exploration and
+expansion in the Gold Coast.
+
+CORE COMPETENCIES
+Communication and Collaboration (CC),
+Cultural Identity and Global Citizenship
+(CG)
+
+Exemplars:
+
+1. With the help of a historical map, learners identify
+European countries that sailed to Ghana.
+
+CC9.6: Ability to work with all group
+members to complete a task successfully.
+CI 5.2: Ability to merge simple/complex
+ideas to create novel situations or things.
+CI 5.7: Putting forward constructive
+comments, ideas, explanations and new
+ways of doing things.
+
+© NaCCA, Ministry of Education 2021
+
+21
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+2. In mixed-ability groups, learners research and build a
+chronological timeline that shows the order in which
+European countries came to the Gold Coast (Ghana).
+
+CORE COMPETENCIES
+CG 6.4: Exhibit a sense of nationality and
+global identity.
+CC 9.7: Effectively perform multiple roles
+within the group,
+DL 5.6: Preparedness to make better
+decisions using available information.
+
+3. Using the Internet or library sources, learners search for
+the various reasons Europeans came to the Gold Coast.
+
+DL 5.1: Ability to ascertain when
+information is needed and identify, locate,
+evaluate, and effectively use it to solve a
+problem.
+DL6.3: Use digital tools to create novel
+things.
+
+JHS 1.6.1.1.2 Explore the early interactions between Europeans Communication and Collaboration (CC),
+and the indigenous people
+Digital Literacy (DL)
+
+© NaCCA, Ministry of Education 2021
+
+22
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+Exemplars:
+1. Learners role-play scenes of the meeting between the
+Portuguese and Nana Kwamena Ansa I of Elmina.
+
+CC9.3: Understand roles during group
+activities.
+CC9.7: Effectively perform multiple roles
+within the group.
+
+2. Learners use the internet or maps to identify areas on the DL5.3: Ability to find and utilise digital
+Gold Coast where the Europeans first settled.
+content.
+DL5.1: Ability to ascertain when
+information is needed and identify, locate,
+evaluate and effectively use it to solve a
+problem.
+
+3. In the Think-Pair-Share activity, learners identify some
+castles and forts built by Europeans and the purposes they CC9.2: Understand and use interpersonal
+skills.
+served.
+CC7.4: Identify underlying themes,
+implications and issues when listening.
+
+© NaCCA, Ministry of Education 2021
+
+23
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+4. In small groups, learners identify the items Europeans
+brought in exchange for indigenous goods.
+
+CORE COMPETENCIES
+CC9.4: Help group work on relevant
+activities.
+CC8.4: Anticipate different responses from
+the audience and plan for them
+
+JHS 1.6.1.2 Demonstrate
+understanding of the TransAtlantic Slave Trade.
+
+JHS 1.6.1.2.1 Describe the origins and development of the Trans- Communication and Collaboration (CC),
+Atlantic slave trade.
+Digital Literacy (DL), Critical Thinking and
+Problem-Solving (CP)
+
+Exemplars:
+
+CP 5.1: Ability to combine information and
+1. Using historical maps, learners explain the concept of the
+ideas from several sources to conclude.
+Trans-Atlantic Slave Trade/ Triangular trade and trace the
+continents involved in it.
+CP 6.7: Implement strategies with accuracy.
+
+2. In mixed-ability groups, learners discuss how the slave
+trade started on the Gold Coast.
+
+CC9.6: Ablity to work with all group
+members to complete a task successfully.
+CC9.7: Effectively perform multiple roles
+within the group.
+
+© NaCCA, Ministry of Education 2021
+
+24
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+3. Learners watch documentaries and discuss the methods
+used to capture enslaved people on the Gold Coast.
+
+CORE COMPETENCIES
+
+DL5.3: Ability to find and utilise digital
+content.
+CC8.1: Speak clearly and explain ideas.
+Share a narrative or extended answer while
+speaking to a group.
+
+CP 5.1: Ability to combine information and
+4. Learners use the Internet or other historical sources to
+ideas from several sources to conclude.
+research and present reasons for the increased volume of
+the Slave Trade in the 18th Century.
+DL5.6: Preparedness to make better
+decisions using available information.
+
+JHS 1.5.1.2.2 Analyse the impact of the slave trade on Ghanaian Communication and Collaboration (CC)
+society.
+
+Exemplars:
+1. In small groups, learners discuss the effects of the slave
+trade on Ghanaian society, including the depopulation of CC9.1: Demonstrate behaviour and skills of
+the people of Gold Coast and the disruption of traditional, working towards group goals.
+social and economic structures.
+
+© NaCCA, Ministry of Education 2021
+
+25
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+CC9.2: Understand and use interpersonal
+skills.
+
+2. Learners debate on the impact of the Trans-Atlantic Slave CC8.1: Speak clearly and explain ideas.
+Share a narrative or extended answer while
+Trade.
+speaking to a group.
+CC8.2: Explain ideas in a clear order with
+relevant detail, using correct construction
+and structure of speech.
+
+© NaCCA, Ministry of Education 2021
+
+26
+
+STRAND 6: NATIONALISM AND NATIONHOOD
+SUB-STRAND 2: COLONIALISM AND NATIONALISM
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+JHS 2.6.2.1 Demonstrate
+knowledge of the European
+colonial period in Ghana.
+
+JHS 2.6.2.1.1 Use historical sources to examine the colonial
+period in Ghana (1874-1957).
+
+Communication and Collaboration (CC),
+Cultural Identity and Global Citizenship
+(CG), Critical Thinking and Problem-Solving
+(CP), Digital Literacy (DL)
+
+Exemplars:
+1. Using historical maps of Ghana, learners identify areas
+constituting the Gold Coast Colony, Asante, Northern
+Territories and the Trans-Volta Togoland.
+
+CG6.4: Exhibit a sense of nationality and
+global identity.
+DL5.1: Ability to ascertain when
+information is needed and identify, locate,
+evaluate and effectively use it to solve a
+problem.
+
+2. In small groups, learners create a chronological timeline to CC8.2: Explain ideas in a clear order with
+explain the processes leading to establishing British
+relevant detail, using correct construction
+colonial rule in Ghana, including the proclamation of the
+and structure of speech.
+Gold Coast as a Crown Colony.
+CG6.4: Exhibit a sense of nationality and
+global identity.
+
+© NaCCA, Ministry of Education 2021
+
+27
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+3. In a jigsaw activity, learners discuss major events leading to CC9.5: Appreciate the importance of
+the annexation of Asante and the Northern Territories.
+including all team members in discussions
+and actively encourage their contributions.
+
+4. Using document analysis, learners analyse how the Trans- CP 5.1: Ability to combine information and
+Volta Togoland was adopted under British rule.
+ideas from several sources to conclude.
+CI 6.7: Look and think about things
+differently and from different perspectives.
+
+5. Learners re-enact the Plebiscite of 1956 and discuss its
+relevance to Ghana’s Independence in 1957.
+
+© NaCCA, Ministry of Education 2021
+
+CP 5.6: Demonstrate a thorough
+understanding of a generalised concept and
+facts specific to a task or situation.
+CI 6.1: Exhibit strong memory, intuitive
+thinking, and respond appropriately.
+
+28
+
+STRAND 2: ENVIRONMENT AND SUSTAINABILITY
+SUB-STRAND 1: ENVIRONMENTAL ISSUES
+CONTENT STANDARD
+JHS 1.2.1.1 Demonstrate
+understanding and skills in
+dealing with environmental
+challenges.
+
+INDICATORS AND EXEMPLARS
+JHS 1.2.1.1.1. Examine ways of dealing with environmental
+challenges in the society.
+
+CORE COMPETENCIES
+Critical Thinking and Problem Solving (CP),
+Communication and Collaboration (CC),
+Creativity and Innovation (CI)
+
+Exemplars:
+.
+1. Using the thought shower strategy, learners explain the
+following terms:
+I. Environment
+II.
+Environmental challenges
+III.
+Pollution.
+
+2. In mixed-ability groups, learners discuss the types of
+environmental challenges.
+
+© NaCCA, Ministry of Education 2021
+
+CP 5.1: Ability to combine information and
+ideas from several sources to conclude.
+CC 7.5: Identify and analyse different points
+of view of the speaker.
+
+CC 8.1: Speak clearly and explain ideas.
+Share a narrative or extended answer while
+speaking to a group.
+
+29
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+CC 9.2: Understand and use interpersonal
+skills.
+
+3. In small groups, learners identify the impact of human
+activities on the environment.
+
+CP 5.2: Analyse and make distinct
+judgments about viewpoints expressed in
+an argument.
+CC 7.4: Identify underlying themes,
+implications and issues when listening.
+
+CC 7.2: Interpret correctly and respond to
+4. Invite a resource person to assist learners in discussing the
+non-verbal communication such as facial
+effects of environmental challenges.
+expressions, cues and gestures.
+CC7.5: Identify and analyse different points
+of view of the speaker.
+
+5. Learners embark on a project to manage environmental
+problems in the community and do a presentation.
+
+© NaCCA, Ministry of Education 2021
+
+CC 8.1: Speak clearly and explain ideas.
+Share a narrative or extended answer while
+speaking to a group.
+
+30
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+CP 6.1: Ability to effectively define goals
+towards solving a problem.
+CP 6.2: Ability to explain plans for attaining
+goals.
+
+© NaCCA, Ministry of Education 2021
+
+31
+
+STRAND 2: ENVIRONMENT AND SUSTAINABILITY
+SUB-STRAND 3: RESOURCES IN GHANA
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+JHS 1.2.3.1. Demonstrate
+JHS 1.2.3.1.1 Examine the nature and role of resources in the
+knowledge and understanding development of Ghana.
+of resources in Ghana.
+.
+
+CORE COMPETENCIES
+Critical Thinking and Problem Solving (CP),
+Communication and Collaboration (CC),
+Creativity and Innovation (CI), Digital
+Literacy (DL)
+
+Exemplars:
+1. Using the think-pair-share strategy, learners explain what
+CC8.2: Explain ideas in a clear order with
+resources mean.
+relevant detail, using correct construction
+and structure of speech.
+CC8.1: Speak clearly and explain ideas.
+Share a narrative or extended answer while
+speaking to a group.
+
+2. In small groups, learners identify the various types of
+resources using concept maps.
+
+CP 6.4 Ability to identify important and
+appropriate criteria and use them to
+evaluate available alternatives.
+CI 5.3: Identify the requirements of a given
+situation and justify using more than one
+suitable creative tool.
+
+© NaCCA, Ministry of Education 2021
+
+32
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+3. Using videos or pictures, learners identify the types of
+natural resources (Renewable and non-renewable).
+
+CORE COMPETENCIES
+
+DL5.3: Ability to find and utilise digital
+content.
+DL5.5: Evaluate the quality and validity of
+the information.
+
+4. Using the internet, learners generate a map of Ghana
+showing the location of natural resources.
+
+CP 5.1: Ability to combine information and
+ideas from several sources to conclude.
+CC8.2: Explain ideas in a clear order with
+relevant detail, using correct construction
+and structure of speech.
+
+5. In mixed groupings, learners discuss the importance of
+resources in Ghana,
+
+CI 5.7: Putting forward constructive
+comments, ideas, explanations and new
+ways of doing things.
+CC7.4: Identify underlying themes,
+implications and issues when listening.
+
+© NaCCA, Ministry of Education 2021
+
+33
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+6. Using the thought shower strategy, learners discuss ways CI 6.7: Look and think about things
+of developing resources in Ghana and the challenges
+differently and from different perspectives.
+involved.
+CC8.1: Speak clearly and explain ideas.
+Share a narrative or extended answer while
+speaking to a group.
+
+7. In pairs, learners explain how Ghana’s human resources
+can be used to ensure sustainable exploitation of natural
+resources.
+
+© NaCCA, Ministry of Education 2021
+
+CI 5.7: Putting forward constructive
+comments, ideas, explanations and new
+ways of doing things.
+
+34
+
+STRAND 3: LAW AND ORDER IN THE GHANAIAN SOCIETY
+SUB-STRAND 1: CITIZENSHIP AND HUMAN RIGHTS
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+JHS 1.3.1.1. Exhibit knowledge JHS 1.3.1.1.1 Examine the value of citizenship in nation-building. Critical Thinking and Problem Solving (CP),
+and understanding of
+Communication and
+citizenship.
+Collaboration (CC)
+Exemplars:
+
+1. Using say something strategy, learners explain the concept
+of “citizenship”.
+CC 8.1: Speak clearly and explain ideas.
+Share a narrative or extended
+
+\
+
+answer while speaking to a group.
++
+
+CC 8.4: Anticipate different responses from
+the audience and plan for them.
+
+2. Using the thought shower strategy, learners discuss the
+CP 5.2: Analyse and make distinct
+various ways of acquiring citizenship in Ghana, such as
+citizenship by birth, adoption, marriage, and registration. judgments about viewpoints expressed in
+an argument.
+
+© NaCCA, Ministry of Education 2021
+
+35
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+3. Using the graffiti wall strategy, learners discuss the
+responsibilities of a Ghanaian, e.g., obeying regulations,
+protecting state property, reporting crime, respecting
+national symbols and payment of taxes, among others.
+
+CORE COMPETENCIES
+CC 7.2: Interpret correctly and respond to
+non-verbal communication such as facial
+expressions, cues and gestures.
+CP 5.2: Analyse and make distinct
+judgments about viewpoints expressed in
+an argument.
+CC 7.2: Interpret correctly and respond to
+non-verbal communication such as facial
+expressions, cues and gestures.
+
+4. Learners role-play how citizens contribute to the country's CP 5.2: Analyse and make distinct
+development (e.g., learner attitudes towards school work, judgments about viewpoints expressed in
+positive work attitudes, paying taxes).
+an argument.
+CC 7.2: Interpret correctly and respond to
+non-verbal communication such as facial
+expressions, cues and gestures.
+CC 8.1: Speak clearly and explain ideas.
+Share a narrative or extended answer while
+speaking to a group.
+
+© NaCCA, Ministry of Education 2021
+
+36
+
+STRAND 4: ETHICS AND HUMAN DEVELOPMENT
+SUB-STRAND 3: SOCIALISATION
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+JHS 1.4.3.1. Exhibit knowledge JHS 1.4.3.1.1 Examine the place of socialisation in the
+and understanding of the
+development of the individual.
+importance of socialisation.
+
+CORE COMPETENCIES
+Critical Thinking and Problem Solving (CP),
+Communication and Collaboration (CC)
+
+Exemplars:
+
+1. Using the thought shower technique, learners explain the
+following terms;
+i. Socialisation
+ii. Agencies of socialisation
+iii. Agents of socialisation.
+
+© NaCCA, Ministry of Education 2021
+
+CP 5.1: Ability to combine information and
+ideas from several sources to conclude.
+CP 5.6: Demonstrate a thorough
+understanding of a generalised concept and
+facts specific to a task or situation.
+
+37
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+2. In small groups, learners identify the agencies and agents CC 8.1: Speak clearly and explain ideas.
+of socialisation.
+Share a narrative or extended answer while
+speaking to a group.
+CC8.2: Explain ideas in a clear order with
+relevant detail, using correct construction
+and structure of speech.
+3. In mixed groups, learners discuss the roles of agencies and
+CC 9.1: Demonstrate behaviour and skills of
+agents in the socialisation process.
+working towards group goals while
+speaking to a group.
+
+4. Learners embark on a socialisation project involving the
+school and the community.
+
+CC9.6: Ability to work with all group
+members to complete a task successfully.
+CC 9.1: Demonstrate behaviour and skills of
+working towards the group.
+
+© NaCCA, Ministry of Education 2021
+
+38
+
+JHS 2
+STRAND 1: IDENTITY, SIGNIFICANCE AND PURPOSE
+SUB-STRAND 2: SOCIO-CULTURAL PRACTICES IN GHANA
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+JHS 2.1.2.1 Demonstrate
+knowledge of the sociocultural practices in Ghana
+since the pre-colonial era.
+
+JHS 2.1.2.1.1 Assess some socio-cultural practices or
+Communication and Collaboration (CC),
+organisations that have shaped Ghanaian society since the pre- Creativity and Innovation (CI), Cultural
+colonial era.
+Identity and Global Citizenship (CG),
+Critical Thinking and Problem-Solving (CP),
+Leadership (PL)
+
+Exemplars:
+1. Using the Socratic seminar strategy, learners discuss the CP 5.4: Generate a hypothesis to help
+inheritance and succession patterns in pre-colonial Ghana. answer complex problems.
+CG5.4: Develop and exhibit a sense of
+cultural identity.
+© NaCCA, Ministry of Education 2021
+
+39
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+CI 6.6: Being open-minded, adapting and
+modifying ideas to achieve creative results.
+
+2. Learners work in groups to discuss the structure of the
+Ghanaian family system.
+
+3. Learners use graphic organisers to explain the cultural
+relevance of the Ghanaian family system.
+
+4. Learners use simulations to discuss how naming
+ceremonies and puberty rites were performed in the past
+and how these socio-cultural practices affected people's
+thinking about themselves and their communities.
+
+© NaCCA, Ministry of Education 2021
+
+CC9.1: Demonstrate behaviour and skills of
+working towards group goals.
+CG5.1: Show a strong sense of
+belongingness to one’s culture.
+PL6.7: Actively promote effective group
+interaction and the expression of ideas and
+opinions in a way that is sensitive to the
+feelings and backgrounds of others.
+
+CG5.4: Develop and exhibit a sense of
+cultural identity.
+
+CG6.2: Recognise resistance to global
+practices that are damaging to our culture.
+CI 5.4: Ability to visualise alternatives, see
+possibilities and identify problems and
+challenges.
+
+40
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+CI 6.7: Look and think about things
+differently and from different perspectives.
+CG5.4: Develop and exhibit a sense of
+cultural identity
+
+SUB-STRAND 4: THE INDIVIDUAL AND COMMUNITY DEVELOPMENT
+CONTENT STANDARD
+JHS 2.1.4.1. Demonstrate
+Knowledge and
+understanding of the role
+of the individual in the
+community.
+
+INDICATORS AND EXEMPLARS
+JHS 2.1.4.1.1. Examine the role of the individual in community
+development.
+
+CORE COMPETENCIES
+Critical Thinking and Problem Solving
+(CP), Communication and Collaboration
+(CC), Digital Literacy (DL), Personal
+Development and Leadership (PL)
+
+Exemplars:
+1. Using the thought shower technique, learners explain
+the concepts:
+i. individual
+ii. community
+iii. community development.
+
+© NaCCA, Ministry of Education 2021
+
+CP 5.1: Ability to combine information
+and ideas from several sources to
+conclude.
+CC 8.1: Speak clearly and explain ideas.
+Share a narrative or extended answer
+while speaking to a group.
+CP 5.6: Demonstrate a thorough
+understanding of a generalised concept
+and facts specific to a task or situation.
+
+41
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+2. Learners watch documentaries/pictures on different
+community engagements and compare individual
+participation levels.
+
+3. Using think-group-share, learners discuss how individual
+values, vision, initiative and drive contribute to
+community development.
+
+4. Using the question-and-answer strategy, learners discuss
+the factors to be considered in the community decisionmaking process.
+
+5. Invite a resource person to assist learners in discussing
+the importance of community development.
+
+© NaCCA, Ministry of Education 2021
+
+CORE COMPETENCIES
+DL 6.3: Use digital tools to create novel
+things.
+CP 5.1: Ability to combine information
+and ideas from several sources to
+conclude.
+
+CC 8.1: Speak clearly and explain ideas.
+Share a narrative or extended answer
+while speaking to a group.
+PL6.1: Ability to serve group members
+effectively.
+CP 5.1: Ability to combine information
+and ideas from several sources to
+conclude.
+
+CP 5.1: Ability to combine information
+and ideas from several sources to
+conclude.
+CP 5.2: Analyse and make distinct
+judgments about viewpoints expressed in
+an argument.
+CP 5.4: Generate a hypothesis to help
+answer complex problems.
+
+CC7.4: Identify underlying themes,
+implications and issues when listening.
+
+42
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+6. Using the question-and-answer strategy, learners
+identify the community's specific problems and show
+how they can contribute to solving them.
+
+JHS 2.1.4.1.2. Discuss the relevance of volunteerism to
+community development.
+
+CORE COMPETENCIES
+CC7.2: Interpret correctly and respond to
+non-verbal communication such as facial
+expressions, cues and gestures.
+CC7.5: Identify and analyse different
+points of view of the speaker.
+
+CP 5.2: Analyse and make distinct
+judgments about viewpoints expressed in
+an argument.
+CC 8.1: Speak clearly and explain ideas.
+Share a narrative or extended answer
+while speaking to a group.
+PL5.3: Recognise one’s emotional state
+and their preparedness to apply
+emotional intelligence.
+Critical Thinking and Problem Solving
+(CP), Communication and Collaboration
+(CC), Digital Literacy (DL), Creativity and
+Innovation (CI)
+
+Exemplars:
+1. Using thought shower, learners explain the concept of
+volunteerism.
+
+© NaCCA, Ministry of Education 2021
+
+CP 5.1: Ability to combine information
+and ideas from several sources to
+conclude.
+CP 6.1: Ability to effectively define goals
+towards solving a problem.
+
+43
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+2. Using concept maps, learners identify volunteering roles
+in the community and their contribution to community
+development (E.g., communal activity, community
+fundraising, etc.).
+
+CORE COMPETENCIES
+CC 8.1: Speak clearly and explain ideas.
+Share a narrative or extended answer
+while speaking to a group.
+CP 5.2: Analyse and make distinct
+judgments about viewpoints expressed in
+an argument.
+
+3. In mixed grouping, learners discuss the importance of
+volunteerism to the community's socio-economic
+development.
+
+CG5.3: Develop and express respect and
+appreciation of others’ cultures.
+CC9.4: Help group work on relevant
+activities.
+CP 5.5: Effectively evaluate the success of
+solutions to a complex problem.
+
+STRAND 3: LAW AND ORDER IN THE GHANAIAN SOCIETY
+SUB-STRAND 2: CONFLICT, PEACE AND SECURITY
+
+CONTENT STANDARD
+INDICATORS AND EXEMPLARS
+JHS 2.3.2.1 Demonstrate
+JHS 2.3.2.1.1 Use historical narratives to investigate the causes
+understanding of the causes and effects of conflicts in Ghana
+and consequences of wars and
+conflicts
+
+CORE COMPETENCIES
+Communication and Collaboration (CC),
+Cultural Identity and Global Citizenship
+(CG), Critical Thinking and Problem-Solving
+(CP)
+
+Exemplars:
+© NaCCA, Ministry of Education 2021
+
+44
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+1. In a think-pair-share activity, learners explain the meaning CC9.6: Ability to work with all group
+of conflict.
+members to complete a task successfully.
+
+2. Learners work in mixed-ability groups to analyse the
+causes of inter-ethnic conflicts in pre-colonial Ghana.
+
+CG5.3: Develop and express respect,
+recognition and appreciation of others’
+cultures.
+
+3. In small groups, learners discuss the impact of inter-ethnic CP 5.1: Ability to combine information and
+conflicts in the pre-colonial era.
+ideas from several sources to conclude.
+CP 5.7: Provide new insight into a
+controversial situation or task.
+
+4. In mixed-gender groups (where applicable), learners form CG6.3: Know the global discourse about the
+concentric circles to discuss how groups used diplomacy roles of males and females.
+and alliances to promote peace and stability.
+CG6.2: Recognise resistance to global
+practices that are damaging to our culture.
+JHS 2.3.2.1. Demonstrate
+JHS 2.3.2.1.1 Examine ways of preventing and managing conflict Critical Thinking and Problem Solving (CP),
+knowledge and skills in conflict in the community.
+Communication and Collaboration (CC),
+prevention and management.
+Digital Literacy (DL)
+Exemplars:
+1. Using think-write-pair-share strategy, learners explain the CP 5.1: Ability to combine information and
+following terms:
+ideas from several sources to conclude.
+i. conflict prevention
+© NaCCA, Ministry of Education 2021
+
+45
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+ii. conflict management
+
+2. In small groups, learners describe attitudes, values and
+strategies needed to prevent conflict in the community.
+
+CORE COMPETENCIES
+CC 8.1: Speak clearly and explain ideas.
+Share a narrative or extended answer while
+speaking to a group.
+
+DL5.3: Ability to find and utilise digital
+content.
+CC 8.1: Speak clearly and explain ideas.
+Share a narrative or extended answer while
+speaking to a group.
+CC 9.1: Demonstrate behaviour and skills of
+working towards group goals.
+
+3. Using think-pair-share, learners assess the role of women CP 5.1: Ability to combine information and
+in conflict prevention and management.
+ideas from several sources to conclude.
+CP 5.2: Analyse and make distinct
+judgments about viewpoints expressed in
+an argument.
+CC 8.1: Speak clearly and explain ideas.
+Share a narrative or extended answer while
+speaking to a group.
+
+© NaCCA, Ministry of Education 2021
+
+46
+
+STRAND 6: NATIONALISM AND NATIONHOOD
+SUB-STRAND 2: COLONIALISM AND NATIONALISM
+
+CONTENT STANDARD
+JHS 2.6.2.1 Demonstrate
+understanding of the origins
+and development of
+nationalism in Ghana.
+
+INDICATORS AND EXEMPLARS
+JHS 2.6.2.1.1 Analyse the historical roots of Ghanaian
+nationalism, including the role of traditional leaders and
+resistance movements.
+
+CORE COMPETENCIES
+Digital Literacy (DL), Critical Thinking and
+Problem-Solving (CP), Communication and
+Collaboration (CC)
+
+Exemplars:
+1. Using documentaries, pictures or other sources, learners DL6.5: Recognition of societal issues
+identify key traditional leaders who opposed British
+emanating from the use of digital
+colonial rule (E.g. Awulae Kaku Ackah (Aka) of Nzema,
+technologies.
+Nana Badu Bonsu II of Ahanta, King Tackie Tawiah I of Ga, CG6.2: Recognise resistance to global
+King Aggrey of Cape Coast, Otumfuo Prempeh I of Asante, practices that are damaging to our culture.
+Nana Yaa Asantewaa of Edweso, Nana Adwoa Arduah of
+Wassa Fiase, etc.).
+
+2. Using close reading protocol, learners examine the factors
+CP 5.2: Analyse and make distinct
+that contributed to the rise of nationalism (1874-1957).
+judgments about viewpoints expressed in
+an argument.
+
+© NaCCA, Ministry of Education 2021
+
+47
+
+3. Using a jigsaw strategy, learners analyse the activities of CC8.1: Speak clearly and explain ideas.
+key nationalist movements in Ghana, including the
+Share a narrative or extended answer while
+Aborigines Rights Protection Society (ARPS), National
+speaking to a group.
+Congress of British West Africa (NCBWA), Gold Coast Youth CG6.4: Exhibit a sense of nationality and
+Conference (GCYC), United Gold Coast Convention (UGCC), global identity.
+Convention People’s Party (CPP).
+CG5.2: Develop and exhibit the ability to
+defend one’s cultural beliefs, practices and
+norms.
+
+4. Learners create a chronological timeline identifying key
+CG6.1: Understanding of influences of
+political events that led to Ghana’s Independence (E.g., the globalisation on traditions, languages and
+1948 Riots, the arrest of the “Big Six,” the setting up of the culture.
+Watson Commission and the Coussey Committee, the
+CG5.1: Show a strong sense of
+Declaration of Positive Action, the 1951, 54, and 56
+belongingness to one’s culture.
+General Elections, the rise of the NLM, and the trans-volta
+Togoland plebiscite).
+
+The 1948
+Riots:
+
+© NaCCA, Ministry of Education 2021
+
+Arrest of the
+"Big Six":.
+
+Watson
+Commission
+and Coussey
+Committee:
+
+Declaration of
+Positive
+Action:
+
+1951, 1954,
+and 1956
+General
+Elections:
+
+Rise of the
+National
+Liberation
+Movement
+(NLM) and the
+Ewe Question:
+
+48
+
+5. Learners assess the role of women in the struggle for
+Ghana’s independence. (E.g., Sophia Oboshie Doku,
+Rebecca Naa Dedei Aryeetey, etc.).
+
+© NaCCA, Ministry of Education 2021
+
+CG6.3: Know the global discourse about the
+roles of males and females
+CI 5.3: Identification of requirements of a
+given situation and justification of more
+than one creative tool that will be suitable.
+CI 6.10: Reflect on work and explore the
+thinking behind thoughts and processes.
+
+49
+
+STRAND 6: NATIONALISM AND NATIONHOOD
+SUB-STRAND 3: THE REPUBLICS AND MILITARY RULE
+
+CONTENT STANDARD
+INDICATORS AND EXEMPLARS
+JHS 2.6.3.1 Demonstrate
+JHS 2.6.3.1.1 Assess the military rule era in Ghana (1966-1991).
+knowledge and understanding
+of military regimes in Ghana.
+
+CORE COMPETENCIES
+Critical Thinking and Problem Solving (CP),
+Communication and Collaboration (CC),
+Digital Literacy (DL), Personal
+Development and Leadership (PL)
+
+Exemplars:
+
+© NaCCA, Ministry of Education 2021
+
+1. In small group discussions, learners explain the term
+military rule.
+
+CG5.3: Develop and express respect,
+recognition and appreciation of others’
+cultures.
+CC8.1: Speak clearly and explain ideas.
+Share a narrative or extended answer
+while speaking to a group.
+
+2. Using internet sources, learners search for the various
+military regimes that ruled Ghana.
+
+CP 5.6: Demonstrate a thorough
+understanding of a generalised concept
+and facts specific to a task or situation.
+DL5.5: Evaluate the quality and validity of
+information
+DL5.3: Ability to find and utilise digital
+content.
+
+50
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+3. Using information from the internet, learners discuss the
+factors that led to the overthrow of civilian regimes.
+
+CORE COMPETENCIES
+DL5.6: Preparedness to make better
+decisions using available information
+DL5.5: Evaluate the quality and validity of
+the information.
+
+4. In small group discussions, learners examine the impacts of CC9.1: Demonstrate behaviour and skills of
+working towards group goals.
+military rule in Ghana.
+PL6.7: Actively promote effective group
+interaction and the expression of ideas and
+opinions in a way that is sensitive to the
+feelings and backgrounds of others.
+CP 5.7: Provide new insight into a
+controversial situation or task.
+
+JHS 2.6.3.2 Demonstrate
+JHS 2.6.3.2.1 Explain how the First Republic came into being.
+knowledge and understanding
+of the main developments
+leading to the First and Second Exemplars:
+Republics.
+1. Using the thought shower strategy, learners explain the
+term Republic.
+
+2. Learners research how the First Republic was established
+Using the Internet, print media and oral sources.
+© NaCCA, Ministry of Education 2021
+
+Critical Thinking and Problem Solving (CP),
+Communication and Collaboration (CC),
+Digital Literacy (DL)
+
+CC8.4: Anticipate different responses from
+the audience and plan for them.
+CP 5.6: Demonstrate a thorough
+understanding of a generalised concept
+and facts specific to a task or situation.
+
+DL5.3: Ability to find and utilise digital
+content
+51
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+3. In groups, learners identify the main features of the 1960 DL5.1: Ability to ascertain when
+Constitution of the First Republic, such as the introduction information is needed and identify, locate,
+of a presidential system of government.
+evaluate and effectively use it to solve a
+problem.
+CC9.5: Appreciate the importance of
+including all team members in discussions
+and actively encourage their contributions.
+
+4. learners identify the major achievements under the First
+Republic using think-pair-share.
+
+JHS 2.5.3.2.2 Explain how the Second Republic came into being
+
+CC7.1: Identify words or sentences in
+context appropriately.
+CC9.8: Demonstrate an awareness of team
+dynamics and work to minimise conflicts in
+the team.
+CC7.5: Identify and analyse different points
+of view of the speaker.
+Critical Thinking and Problem Solving (CP),
+Communication and Collaboration (CC),
+Digital Literacy (DL), Personal
+Development and Leadership (Pl)
+
+Exemplars:
+1. Using a resource person or documentaries, learners recount DL5.6: Preparedness to make better
+the events that led to the formation of the Second Republic, decisions using available information.
+DL5.3: Ability to find and utilise digital
+e.g., the National Civic Education etc.
+content.
+CC7.5: Identify and analyse different points
+of view of the speaker.
+© NaCCA, Ministry of Education 2021
+
+52
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+2. In small groups, learners describe the main features of the PL6.7: Actively promote effective group
+1969 Constitution of the Second Republic, such as the
+interaction and the expression of ideas and
+creation of the office of the Prime Minister.
+opinions in a way that is sensitive to the
+feelings and backgrounds of others.
+
+3. Using build on what others say strategy, learners examine
+the major achievements under the Second Republic.
+
+© NaCCA, Ministry of Education 2021
+
+CC7.1: Identify words or sentences in
+context appropriately.
+CC8.2: Explain ideas in a clear order with
+relevant detail, using correct construction
+and structure of speech.
+
+53
+
+STRAND 3: LAW AND ORDER IN THE GHANAIAN SOCIETY
+SUB-STRAND 1: CITIZENSHIP AND HUMAN RIGHTS
+CONTENT STANDARD
+JHS 2.3.1.1 Exhibit
+knowledge and
+understanding of human
+rights and responsibilities of
+a citizen.
+
+INDICATORS AND EXEMPLARS
+JHS 2.3.1.1.1. Examine the importance of human rights and
+responsibilities in the Ghanaian society.
+
+CORE COMPETENCIES
+Critical Thinking and Problem Solving
+(CP), Communication and Collaboration
+(CC), Digital Literacy (DL)
+
+Exemplars:
+1. Using think-group-share, learners discuss the concepts of CP 5.5: Effectively evaluate the success of
+solutions used to solve a complex
+human rights and responsibilities.
+problem.
+CP 5.6: Demonstrate a thorough
+understanding of a generalised concept
+and facts specific to a task or situation.
+
+2. Learners use the internet to search and discuss the
+United Nations Declaration on Human Rights.
+
+© NaCCA, Ministry of Education 2021
+
+DL5.3: Ability to find and utilise digital
+content.
+DL5.6: Preparedness to make better
+decisions using available information.
+
+54
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+3. Engage learners in question-and-answer drills to identify
+human rights enshrined in the 1992 constitution and
+their importance.
+
+CORE COMPETENCIES
+CP 5.5: Effectively evaluate the success of
+solutions used to solve a complex
+problem.
+
+4. Using the fishbowl strategy, learners identify the rights
+and responsibilities of people in Ghana.
+
+CC 9.1: Demonstrate behaviour and skills
+of working towards group goals.
+
+5. Learners undertake a project in the community on
+human rights and how to safeguard them (collect data
+on human rights issues in the community).
+
+CC9.6: Ability to work with all group
+members to complete a task successfully.
+CP 6.2: Ability to explain plans for
+attaining goals.
+
+© NaCCA, Ministry of Education 2021
+
+55
+
+STRAND 3: LAW AND ORDER IN THE GHANAIAN SOCIETY
+SUB-STRAND 2: CONFLICT, PEACE AND SECURITY
+
+CONTENT STANDARD
+JHS 2.3.2.1 Demonstrate
+understanding of the causes
+and consequences of wars
+and conflicts
+
+INDICATORS AND EXEMPLARS
+JHS 2.3.2.1.1 Use historical narratives to investigate the causes
+and effects of conflicts in Ghana
+
+CORE COMPETENCIES
+Communication and Collaboration (CC),
+Cultural Identity and Global Citizenship
+(CG), Critical Thinking and ProblemSolving (CP)
+
+Exemplars:
+
+© NaCCA, Ministry of Education 2021
+
+5. In a think-pair-share activity, learners explain the
+meaning of conflict.
+
+CC9.6: Ability to work with all group
+members to complete a task successfully.
+
+6. Learners work in mixed-ability groups to analyse the
+causes of inter-ethnic conflicts in pre-colonial Ghana.
+
+CG5.3: Develop and express respect,
+recognition and appreciation of others’
+cultures.
+
+7. In small groups, learners discuss the impact of interethnic conflicts in the pre-colonial era.
+
+CP 5.1: Ability to combine information
+and ideas from several sources to
+conclude.
+CP 5.7: Provide new insight into a
+controversial situation or task.
+
+56
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+8. In mixed-gender groups (where applicable), learners
+form concentric circles to discuss how groups used
+diplomacy and alliances to promote peace and stability.
+
+CORE COMPETENCIES
+CG6.3: Know the global discourse about
+the roles of males and females.
+CG6.2: Recognise resistance to global
+practices that are damaging to our
+culture.
+
+JHS 2.3.2.1. Demonstrate
+knowledge and skills in
+conflict prevention and
+management.
+
+JHS 2.3.2.1.1 Examine ways of preventing and managing
+conflict in the community.
+
+Critical Thinking and Problem Solving
+(CP), Communication and Collaboration
+(CC), Digital Literacy (DL)
+
+Exemplars:
+
+© NaCCA, Ministry of Education 2021
+
+4. Using think-write-pair-share strategy, learners explain
+the following terms:
+iii. conflict prevention
+iv.
+conflict management
+
+CP 5.1: Ability to combine information
+and ideas from several sources to
+conclude.
+CC 8.1: Speak clearly and explain ideas.
+Share a narrative or extended answer
+while speaking to a group.
+
+5. In small groups, learners describe attitudes, values and
+strategies needed to prevent conflict in the community.
+
+DL5.3: Ability to find and utilise digital
+content.
+CC 8.1: Speak clearly and explain ideas.
+Share a narrative or extended answer
+while speaking to a group.
+CC 9.1: Demonstrate behaviour and skills
+of working towards group goals.
+
+57
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+6. Using think-pair-share, learners assess the role of
+women in conflict prevention and management.
+
+© NaCCA, Ministry of Education 2021
+
+CORE COMPETENCIES
+CP 5.1: Ability to combine information
+and ideas from several sources to
+conclude.
+CP 5.2: Analyse and make distinct
+judgments about viewpoints expressed in
+an argument.
+CC 8.1: Speak clearly and explain ideas.
+Share a narrative or extended answer
+while speaking to a group.
+
+58
+
+STRAND 4: ETHICS AND HUMAN DEVELOPMENT
+SUB-STRAND 2: POPULATION AND NATIONAL DEVELOPMENT
+CONTENT STANDARD
+INDICATORS AND EXEMPLARS
+JHS 2.4.2.1. Demonstrate
+JHS 2.4.2.1.1 Examine the components of population growth.
+knowledge and understanding
+of population growth in
+Ghana.
+Exemplars:
+1. Using the round-robin technique, learners explain the
+concepts:
+i.
+population
+ii. population growth.
+
+CORE COMPETENCIES
+Critical Thinking and Problem Solving (CP),
+Communication and Collaboration (CC),
+Digital Literacy (DL)
+
+CP:5.1 Ability to combine information and
+ideas from several sources to conclude.
+CP 5.6: Demonstrate a thorough
+understanding of a generalised concept and
+facts specific to a task or situation.
+
+2. Learners use the Internet or library to search for
+CP:5.1 Ability to combine information and
+information and discuss how the population of Ghana has ideas from several sources to conclude.
+changed in recent years.
+DL5.3: Ability to find and utilise digital
+content.
+
+3. In pairs, learners use information from previous population CI 5.1: Examine alternatives in creating new
+census to create a bar chart on district population changes. things.
+CI 5.2: Ability to merge simple/complex
+ideas to create novel situations or things.
+© NaCCA, Ministry of Education 2021
+
+59
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+4. Using think-group-share, learners discuss the following
+factors of population growth:
+i.
+fertility
+ii. mortality
+iii. migration.
+
+CORE COMPETENCIES
+DL 5.6: Preparedness to make better
+decisions using information.
+CP 5.5: Effectively evaluate the success of
+solutions used to solve a complex problem.
+
+5. In groups, learners analyse the effects of rapid population CP 5.2: Analyse and make distinct
+judgments about viewpoints expressed in
+growth on the community and the nation.
+an argument.
+CI 5.7: Putting forward constructive
+comments, ideas, explanations and new
+ways of doing things.
+
+6. Learners role-play the effects of large family size on the
+family.
+
+CP 6.2: Ability to explain plans for attaining
+goals.
+CP 5.2: Analyse and make distinct
+judgments about viewpoints expressed in
+an argument.
+
+7. Using mind maps, learners suggest ways to minimise rapid CP 5.5: Effectively evaluate the success of
+population growth, including public education.
+solutions used in an attempt to solve a
+complex problem.
+JHS 2.4.2.2 Exhibit knowledge JHS 2.4.2.2.1 Analyse the population structure in Ghana and its Critical Thinking and Problem Solving (CP),
+and understanding of
+related issues.
+Communication and Collaboration (CC),
+population structure and
+Digital Literacy (DL)
+development in Ghana.
+© NaCCA, Ministry of Education 2021
+
+60
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+Exemplars:
+1. Using the sage in a circle strategy, learners explain
+population structure.
+
+PL6.1: Ability to serve group members
+effectively.
+CP 5.5: Effectively evaluate the success of
+solutions used in an attempt to solve a
+complex problem.
+
+2. Using the Jigsaw strategy, learners describe the current
+population structure of Ghana.
+
+CP 5.1: Ability to combine information and
+ideas from several sources to conclude.
+
+3. In small groups, learners draw a bar graph representing the DL 5.6: Preparedness to make better
+decisions using available information.
+population structure of their school.
+CP 5.1: Ability to combine information and
+ideas from several sources to conclude.
+
+4. Using the onion ring strategy, learners discuss the
+relationship between Ghana's population structure and
+development.
+
+© NaCCA, Ministry of Education 2021
+
+CC 7.1: Identify words or sentences in
+context or appropriately.
+DL 6.3: Use digital tools to create novel
+things.
+CC8.1: Speak clearly and explain ideas.
+Share a narrative or extended answer while
+speaking to a group.
+61
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+© NaCCA, Ministry of Education 2021
+
+CORE COMPETENCIES
+CP 5.2: Analyse and make distinct
+judgments about viewpoints expressed in
+an argument.
+
+62
+
+STRAND 3: LAW AND ORDER IN THE GHANAIAN SOCIETY
+SUB-STRAND 1: CITIZENSHIP AND HUMAN RIGHTS
+CONTENT STANDARD
+INDICATORS AND EXEMPLARS
+JHS 2.3.1.1 Exhibit knowledge JHS 2.3.1.1.1. Examine the importance of human rights and
+and understanding of human responsibilities in the Ghanaian society.
+rights and responsibilities of a
+citizen.
+
+CORE COMPETENCIES
+Critical Thinking and Problem Solving (CP),
+Communication and Collaboration (CC),
+Digital Literacy (DL)
+
+Exemplars:
+6. Using think-group-share, learners discuss the concepts of CP 5.5: Effectively evaluate the success of
+solutions used in an attempt to solve a
+human rights and responsibilities.
+complex problem.
+CP 5.6: Demonstrate a thorough
+understanding of a generalised concept and
+facts specific to a task or situation.
+
+7. Learners use the internet to search and discuss the United DL5.3: Ability to find and utilise digital
+content.
+Nations Declaration on Human Rights.
+DL5.6: Preparedness to make better
+decisions using available information.
+
+8. Engage learners in question-and-answer drills to identify CP 5.5: Effectively evaluate the success of
+human rights enshrined in the 1992 constitution and their solutions used in an attempt to solve a
+importance.
+complex problem.
+© NaCCA, Ministry of Education 2021
+
+63
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+9. Using the fishbowl strategy, learners identify the rights and CC 9.1: Demonstrate behaviour and skills of
+responsibilities of people in Ghana.
+working towards group goals.
+10. Learners undertake a project in the community on human CC9.6: Ability to work with all group
+rights and how to safeguard them (collect data on human members to complete a task successfully.
+CP 6.2: Ability to explain plans for attaining
+rights issues in the community).
+goals.
+
+© NaCCA, Ministry of Education 2021
+
+64
+
+JHS 3
+STRAND 1: IDENTITY, SIGNIFICANCE AND PURPOSE
+SUB-STRAND 2: SOCIO-CULTURAL PRACTICES IN GHANA
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+JHS 3.1.2.1 Demonstrate
+JHS 3.1.2.1.1 Assess the changes and continuity in indigenous
+knowledge and understanding Ghanaian marriages and funeral rites.
+of the socio-cultural practices
+in Ghana since the pre-colonial
+era.
+
+CORE COMPETENCIES
+Communication and Collaboration (CC),
+Critical Thinking and Problem-Solving (CP),
+Digital Literacy (DL), Personal
+Development and Leadership (PL)
+
+Exemplars:
+1. In mixed-ability groups, learners observe photographs or
+paintings and short videos depicting different Ghanaian
+marriage rites from various ethnic groups and analyse the
+images discussing:
+- Symbols and objects used in marriage rites
+- Facial expressions and body language of
+participants
+- The overall atmosphere and mood conveyed
+
+© NaCCA, Ministry of Education 2021
+
+CP 5.1: Ability to combine information and
+ideas from several sources to conclude.
+CC9.7: Effectively perform multiple roles
+within the group.
+CC8.2: Explain ideas in a clear order with
+relevant detail, using correct construction
+and structure of speech.
+
+65
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+-
+
+CORE COMPETENCIES
+
+What the images tell us about the purpose and
+significance of marriage rites
+
+2. Learners form concentric circles to discuss the significance CC8.5: Vary the level of detail and the
+language used when presenting to make it
+of funeral rites and how it has changed over time.
+appropriate to the audience.
+CC8.2: Explain ideas in a clear order with
+relevant detail, using correct construction
+and structure of speech.
+JHS 3.1.2.1.2 Discuss the origins and purpose of selected
+Creativity and Innovation (CI),
+Ghanaian festivals.
+Communication and Collaboration (CC),
+Cultural Identity and Global Citizenship
+(CG), Personal Development and
+Leadership (PL)
+Exemplars:
+
+1. Using the thought shower strategy, learners identify
+Ghanaian festivals and the people celebrating them.
+
+© NaCCA, Ministry of Education 2021
+
+CI 5.7: Putting forward constructive
+comments, ideas, explanations and new
+ways of doing things.
+CP 5.3: Create simple logic trees to think
+through problems.
+
+66
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+2. Using a jigsaw strategy, learners research and discuss the CG5.2: Develop and exhibit the ability to
+origins of the festivals, the traditional customs and rituals defend one’s cultural beliefs, practices and
+associated with them and the significance of the festivals. norms.
+CC8.1: Speak clearly and explain ideas.
+Share a narrative or extended answer while
+speaking to a group.
+
+3. Using the fishbowl strategy, learners discuss contemporary
+CC8.1: Speak clearly and explain ideas.
+adaptations and changes in celebrating Ghanaian festivals
+Share a narrative or extended answer while
+today.
+speaking to a group.
+CI 5.7: Putting forward constructive
+comments, ideas, explanations and new
+ways of doing things.
+CG5.2: Develop and exhibit the ability to
+4. In mixed-ability groups, learners create a large map of
+defend one’s cultural beliefs, practices and
+Ghana and mark the locations of various festivals
+norms.
+celebrated throughout the year.
+CI 5.7: Putting forward constructive
+- Use different symbols to represent different regions
+comments, ideas, explanations and new
+and ethnic groups on the map.
+ways of doing things.
+- Add details to the map, including information about
+the dates, traditions, and significance of each
+celebration.
+
+© NaCCA, Ministry of Education 2021
+
+67
+
+STRAND 2: ENVIRONMENT AND SUSTAINABILITY
+SUB-STRAND 1: ENVIRONMENTAL ISSUES
+CONTENT STANDARD
+JHS 3.2.1.1 Demonstrate
+understanding of energy and
+ways of conserving it.
+
+INDICATORS AND EXEMPLARS
+JHS 3.2.1.1.1. Examine ways of conserving energy.
+
+CORE COMPETENCIES
+Critical Thinking and Problem Solving (CP),
+Communication and Collaboration (CC),
+Personal Development and Leadership
+(PL), Digital Literacy (DL)
+
+Exemplars:
+
+© NaCCA, Ministry of Education 2021
+
+1. Using the thought shower strategy, learners explain the
+concepts:
+i. energy
+ii. energy conservation
+iii.
+energy sources.
+
+CC 8.1: Speak clearly and explain ideas.
+Share a narrative or extended answer while
+speaking to a group.
+CI 5.7: Putting forward constructive
+comments, ideas, explanations and new
+ways of doing things.
+
+2. Through the use of the internet, videos or pictures,
+learners identify and categorise sources of energy into
+renewable and non-renewable. Give examples of each.
+
+DL 5.1: Ability to ascertain when
+information is needed and be able to
+identify, locate, evaluate and effectively use
+them to solve a problem.
+DL 6.3: Use digital tools to create novel
+things.
+
+68
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+3. Using fishbowl technique, learners identify the effects of
+irresponsible use of energy on the family, community and
+the nation.
+
+CORE COMPETENCIES
+CP5.1: Ability to combine information and
+ideas from several sources to reach a
+conclusion.
+
+4. In small groups, learners discuss how energy conservation CP 5.2: Analyse and make distinct
+should be practiced in their community. (e.g., at home,
+judgment about viewpoints expressed in an
+school and institutions, etc).
+argument.
+
+5. In mixed-ability groups, learners discuss the challenges of CC7.2: Interpret correctly and respond
+energy conservation.
+to non-verbal communication, such as
+facial expressions, cues and gestures.
+
+JHS 3.2.1.2 Demonstrate
+understanding of the
+significance of weather and
+climate to the environment.
+
+6. In small groups, learners create posters on the advantages PL5.1: Understanding oneself (strengths,
+of energy conservation to educate members of the
+weaknesses, goals and aspirations), in
+community.
+reacting and adjusting to novel situations.
+CI 5.7: Putting forward constructive
+comments, ideas, explanations and new
+ways of doing things.
+JHS 3.2.1.2.1 Assess the significance of weather and climate.
+Critical Thinking and Problem Solving (CP),
+Communication and Collaboration (CC),
+Personal Development and Leadership
+(PL), Digital Literacy (DL)
+
+© NaCCA, Ministry of Education 2021
+
+69
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+Exemplars:
+
+© NaCCA, Ministry of Education 2021
+
+CORE COMPETENCIES
+
+1. Using internet search, learners explain the concepts:
+i. climate
+ii. weather.
+
+DL 5.1: Ability to ascertain when
+information is needed and be able to
+identify, locate, evaluate and effectively use
+them to solve a problem.
+
+2. In mixed-ability groups, learners discuss the elements of
+weather and climate.
+
+CP 5.1: Ability to combine information and
+ideas from several sources to reach a
+conclusion.
+CP 5.2: Analyse and make distinct
+judgments about viewpoints expressed in
+an argument.
+
+3. In small groups, learners identify the instruments for
+measuring each of the elements of weather and climate.
+
+CC 9.1: Demonstrate behaviour and skills of
+working towards group goals.
+PL6.7: Actively promote effective group
+interaction and the expression of ideas and
+opinions in a way that is sensitive to the
+feelings and backgrounds of others.
+
+4. In pairs, learners create a map of Ghana indicating the
+different climatic zones.
+
+CI 5.2: Ability to merge simple/complex
+ideas to create novel situations or things.
+
+5. In small groups, learners discuss the factors that affect
+weather and climate.
+
+CC 8.1: Speak clearly and explain ideas.
+Share a narrative or extended answer while
+speaking to a group.
+70
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+6. Using internet search, learners identify and discuss the
+effects of weather-related disasters.
+
+© NaCCA, Ministry of Education 2021
+
+CORE COMPETENCIES
+DL 5.1: Ability to ascertain when
+information is needed and be able to
+identify, locate, evaluate and effectively use
+them to solve a problem.
+
+71
+
+STRAND 2: ENVIRONMENT AND SUSTAINABILITY
+SUB-STRAND 2: MAPPING SKILLS
+
+CONTENT STANDARD
+INDICATORS AND EXEMPLARS
+JHS 3.2.2.1 Demonstrate
+JHS 3.2.2.1.1 Examine ways of creating and interpreting maps.
+knowledge and skills in
+creating and using maps for
+locating places and navigation. Exemplars:
+1. Learners use the internet to search for the following:
+i.
+meaning of a map
+ii.
+types of maps
+iii.
+features of a map.
+
+CORE COMPETENCIES
+Critical Thinking and Problem Solving (CP),
+Communication and Collaboration (CC),
+Personal Development and Leadership
+(PL), Digital Literacy (DL)
+CP 5.1: Ability to combine information and
+ideas from several sources to reach a
+conclusion.
+DL5.6: Preparedness to make better
+decisions using available information.
+
+2. In pairs, learners create a map of the school compound,
+CI 5.2: Ability to merge simple/complex
+showing scale, key, and an eight-point compass (North,
+ideas to create novel situations or things.
+South, East and West; North East, North West, South East, CC 8.1: Speak clearly and explain ideas.
+South West).
+Share a narrative or extended answer while
+speaking to a group.
+
+3. In small groups, learners identify and describe the features CC 8.1: Speak clearly and explain ideas.
+of a given map.
+Share a narrative or extended answer while
+speaking to a group.
+JHS 3.2.2.1.2 Analyse ways of using maps to locate places and get Critical Thinking and Problem Solving (CP),
+directions.
+Communication and Collaboration (CC),
+© NaCCA, Ministry of Education 2021
+
+72
+
+Personal Development and Leadership
+(PL), Digital Literacy (DL)
+
+© NaCCA, Ministry of Education 2021
+
+1. In mixed groups, learners describe how to use maps for
+locating places and navigation.
+
+DL 5.1: Ability to ascertain when
+information is needed and be able to
+identify, locate, evaluate and effectively use
+them to solve a problem.
+
+2. Using geo-techniques (navigation apps, GPS, Remote
+sensing, GIS, google earth, google maps, etc), learners
+locate and navigate to some important landmarks in the
+community.
+
+DL 6.3: Use digital tools to create novel
+things.
+DL 5.3: Ability to find and utilise digital
+content.
+CP 5.1: Ability to combine information and
+ideas from several sources to reach a
+conclusion.
+
+3. Using storyboarding, learners explore the importance of
+maps.
+
+CI 5.5: Ability to try new alternatives and
+different approaches.
+CI 6.3: Ability to select the most effective
+creative tools for working and
+preparedness to give explanations.
+
+4. Using the fish bowl strategy, learners discuss the
+challenges of map making and use in Ghana.
+
+PL6.7: Actively promote effective group
+interaction and the expression of ideas and
+opinions in a way that is sensitive to the
+feelings and background of others.
+
+73
+
+CP 5.2: Analyse and make distinct
+judgments about viewpoints expressed in
+an argument.
+
+© NaCCA, Ministry of Education 2021
+
+74
+
+STRAND 3: LAW AND ORDER IN THE GHANAIAN SOCIETY
+SUB-STRAND 2: CONFLICT, PEACE AND SECURITY
+CONTENT STANDARD
+INDICATORS AND EXEMPLARS
+JHS 3.3.2.1 Exhibit knowledge JHS 3.3.2.1.1. Examine the relevance of peace and
+and understanding of the
+security to the development of Ghana.
+relevance of peace and
+security to national
+development.
+
+CORE COMPETENCIES
+Critical Thinking and Problem Solving (CP),
+Communication and Collaboration (CC),
+Personal
+Development and Leadership (PL), Digital
+Literacy (DL)
+
+Exemplars:
+1. In pairs, learners explain the concepts of peace and
+security.
+
+CP 6.3: Identify important and appropriate
+alternatives.
+CP 6.4: Ability to identify important and
+appropriate criteria and use them to
+evaluate available alternatives.
+CP 6.5: Ability to select alternative(s) that
+adequately meet selected criteria.
+
+2. In mixed-ability groups, learners discuss ways of promoting CP 6.4: Ability to identify important and
+appropriate criteria and use them to
+peace and security in the community.
+evaluate available alternatives.
+CC8.2: Explain ideas in a clear order with
+relevant detail, using correct construction
+and structure of speech.
+
+© NaCCA, Ministry of Education 2021
+
+75
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+3. Using the say something strategy, learners discuss the
+need for peace and security in Ghana.
+
+CORE COMPETENCIES
+CP 6.4: Ability to identify important and
+appropriate criteria and use them to
+evaluate available alternatives.
+CP 5.1: Ability to combine information and
+ideas from several sources to reach a
+conclusion.
+
+4. Using video/pictures, learners compare a country
+CC8.2: Explain ideas in a clear order with
+destroyed by conflict and another that has enjoyed peace. relevant detail, using correct construction
+and structure of speech.
+DL 6.3: Use digital tools to create novel
+things.
+
+© NaCCA, Ministry of Education 2021
+
+76
+
+STRAND 5: PRODUCTION, EXCHANGE AND CREATIVITY
+SUB-STRAND 3: CONSUMER RIGHTS, PROTECTION, AND RESPONSIBILITIES
+CONTENT STANDARD
+INDICATORS AND EXEMPLARS
+JHS 3.5.3.1 Demonstrate
+JHS 3.5.3.1.1 Use appropriate information from the community
+knowledge and understanding to explore consumer rights, protection and responsibilities in
+of consumer rights, protection Ghana
+and responsibilities.
+
+CORE COMPETENCIES
+Communication and Collaboration (CC),
+Critical Thinking (CP), Personal
+Development and Leadership (PL),
+Creativity and Innovation (CI)
+
+Exemplars:
+
+1. Using storytelling, video or life experiences, learners
+explain what consumer rights are and why they are
+important.
+
+CC8.2: Explain ideas in a clear order with
+relevant detail using correct construction
+and structure of speech.
+DL 5.3: Ability to find and utilise digital
+content.
+
+2. In mixed ability groups, learners employ document-based PL6.7: Actively promote effective group
+analysis to discuss the rights of the consumer (E.g. right to interaction and the expression of ideas and
+information, right to choose, right to safety, and right to opinions in a way that is sensitive to the
+redress).
+feelings and background of others.
+CC9.2: Understand and use interpersonal
+skills.
+CC9.1: Demonstrate behaviour and skills of
+working towards group goal.
+
+© NaCCA, Ministry of Education 2021
+
+77
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+3. In small group discussion, learners discuss the
+responsibilities that come with consumer rights (E.g.
+making informed choices, understanding product
+information, and using products responsibly).
+
+CORE COMPETENCIES
+CP 6.5: Ability to select alternative(s) that
+adequately meet selected criteria.
+PL5.3: Recognise one’s emotional state and
+their preparedness to apply emotional
+intelligence.
+
+4. In mixed ability groups, learners discuss the importance of CP 5.1: Ability to combine information and
+understanding product information, including ingredients, ideas from several sources to reach a
+expiration dates, and safety instructions.
+conclusion.
+CI 5.5: Ability to try new alternatives and
+different approaches.
+CI 6.3: Ability to select the most effective
+creative tools for working and
+preparedness to give explanations.
+
+5. Learners create posters to educate members of the
+community about common consumer frauds and scams.
+
+© NaCCA, Ministry of Education 2021
+
+CP 5.6: Demonstrate a thorough
+understanding of a generalised concept and
+facts specific to a task or situation.
+CP 5.1: Ability to combine information and
+ideas from several sources to reach a
+conclusion.
+CI 5.5: Ability to try new alternatives and
+different approaches.
+
+78
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+CORE COMPETENCIES
+6. A. Through role-play and simulation, learners demonstrate CP 5.1: Ability to combine information and
+practical experiences in dealing with consumer-related
+ideas from several sources to reach a
+scenarios.
+conclusion.
+CI 5.5: Ability to try new alternatives and
+different approaches.
+
+OR
+B. Using case studies and real-life examples, learners
+CC8.2: Explain ideas in a clear order with
+illustrate the concept of consumer rights, protection and relevant detail, using correct construction
+responsibilities.
+and structure of speech.
+OR
+C. Arrange field trips to relevant places, such as markets or CI 6.9: Interpret and apply learning in new
+consumer protection agencies, to provide practical
+contexts.
+exposure to learners on the concept of consumer rights, CP 5.1: Ability to combine information and
+protection and responsibilities.
+ideas from several sources to reach a
+conclusion.
+
+© NaCCA, Ministry of Education 2021
+
+79
+
+STRAND 5: PRODUCTION, EXCHANGE AND CREATIVITY
+SUB-STRAND 4: THE CITIZEN AND INVESTMENT
+
+CONTENT STANDARD
+INDICATORS AND EXEMPLARS
+JHS 3.5.4.1 Demonstrate
+JHS 3.5.4.1.1 Use appropriate information from the community
+knowledge and understanding to explore issues on investment.
+of Investment.
+
+CORE COMPETENCIES
+Communication and Collaboration (CC),
+Critical Thinking (CP),
+Personal Development and Leadership (Pl),
+Creativity and Innovation (CI)
+
+Exemplars:
+1. Through role play or drama, learners explain investment
+and why there is the need to invest.
+
+CC8.2: Explain ideas in a clear order with
+relevant detail using correct construction
+and structure of speech.
+CP 5.1: Ability to combine information and
+ideas from several sources to reach a
+conclusion.
+
+2. In mixed-ability groups, learners discuss the difference
+between saving and investing.
+
+CI 5.5: Ability to try new alternatives and
+different approaches.
+CC9.1: Demonstrate behaviour and skills of
+working towards group goal.
+
+3. A. Learners listen to an invited resource person(s), such as CI 6.9: Interpret and apply learning in new
+financial experts or entrepreneurs, to share their
+contexts.
+© NaCCA, Ministry of Education 2021
+
+80
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+CORE COMPETENCIES
+experiences and insights on the various forms and types of CP 5.1: Ability to combine information and
+investment opportunities available to citizens.
+ideas from several sources to reach a
+conclusion.
+OR
+B. Learners embark on field trips to financial institutions or CI 5.5: Ability to try new alternatives and
+businesses to get practical exposure on forms and types of different approaches.
+investment opportunities for citizens.
+OR
+C. Learners conduct investment simulations or projects
+where they can practice making financial decisions and
+managing investments.
+
+© NaCCA, Ministry of Education 2021
+
+CC9.1: Demonstrate behaviour and skills of
+working towards a group goal.
+CP 5.1: Ability to combine information and
+ideas from several sources to reach a
+conclusion.
+
+4. Through small group discussions, learners explain the
+importance of investment in personal and national
+development.
+
+CC8.5: Vary the level of detail and the
+language used when presenting to make it
+appropriate to the audience.
+CC9.1: Demonstrate behaviour and skills of
+working towards group goal.
+
+5. In small groups, learners discuss the forms of investment
+scams in Ghana.
+
+CC8.2: Explain ideas in a clear order with
+relevant detail, using correct construction
+and structure of speech.
+81
+
+STRAND 6: NATIONALISM AND NATIONHOOD
+SUB-STRAND 3: THE REPUBLICS AND MILITARY RULE
+
+CONTENT STANDARD
+INDICATORS AND EXEMPLARS
+JHS 3.6.3.1 Demonstrate
+JHS 3.6.3.1.1 Describe how the Third Republic came into being
+knowledge and understanding (1979-1981).
+of the main developments in
+the Third and Fourth
+Exemplars:
+Republics.
+1. Using the internet, print media and oral sources, learners
+discuss how the Third Republic was established.
+
+CORE COMPETENCIES
+Critical Thinking and Problem Solving (CP),
+Communication and Collaboration (CC),
+Digital Literacy (DL)
+
+DL5.3: Ability to find and utilise digital
+content.
+DL 6.3: Use digital tools to create novel
+things.
+
+2. Working in pairs, learners identify the political parties that CC7.5: Identify and analyse different points
+contested in the June 1979 election and discuss the
+of views of speaker.
+outcome.
+CC8.2: Explain ideas in a clear order with
+relevant detail using correct construction
+and structure of speech.
+
+3. Using document analysis, learners identify the main
+CC7.1: Identify words or sentences in
+features of the Third Republican Constitution. (E.g., the
+context appropriately.
+prohibition of a one-party state, limitation on the influence CP 5.1: Ability to combine information and
+of the armed forces and the police, etc.)
+ideas from several sources to reach a
+conclusion.
+
+© NaCCA, Ministry of Education 2021
+
+82
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+CORE COMPETENCIES
+4. In small groups, learners prepare and present on the major PL6.7: interaction and the expression of
+achievements and setbacks under the third Republic.
+ideas and opinions in a way that is sensitive
+to the feelings and background of others.
+CP 5.1: Ability to combine information and
+ideas from several sources to reach a
+conclusion.
+
+JHS 3.5.3.1.2 Examine the major events that led to the
+emergence of the Fourth Republic.
+
+Critical Thinking and Problem Solving (CP),
+Communication and Collaboration (CC),
+Digital Literacy (DL), Personal
+Development and Leadership (Pl)
+
+Exemplars:
+1. Using the Internet, print media and oral sources, learners DL5.6: Preparedness to make better
+search for information on how the Fourth Republic was
+decisions using available information
+established.
+DL 6.3: Use digital tools to create novel
+things.
+
+2. In small groups, learners discuss how the district assembly CC8.2: Explain ideas in a clear order with
+election were organised in later part of 1988 and early part relevant detail using correct construction
+of 1989 and its outcome.
+and structure of speech.
+CC9.3: Understand roles during group
+activities.
+
+3. Using talk for learning strategy, learners discuss the
+recommendations of the committee of experts in May
+1991 towards the establishment of the constitution.
+© NaCCA, Ministry of Education 2021
+
+CC8.2: Explain ideas in a clear order with
+relevant detail, using correct construction
+and structure of speech.
+83
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+CORE COMPETENCIES
+4. In small groups, learners identify the membership of the CC9.8: Demonstrate an awareness of team
+consultative assembly in June 1991 and the role they
+dynamics and work to minimise conflicts in
+played towards the establishment of the 1992 constitution. the team.
+CC9.1: Demonstrate behaviour and skills of
+working towards group goals.
+
+5. In small groups, learners discuss the relevance of the 28th CP 5.9: Identify and explain a confusion,
+April 1992 referendum and its outcome.
+uncertainty or a contradiction surrounding
+an event.
+
+6. Using thought shower strategy, learners examine the
+relevance of the lifting of ban on politics to the
+establishment of the fourth Republic.
+
+CP 5.1: Ability to combine information and
+ideas from several sources to reach a
+conclusion.
+CC8.2: Explain ideas in a clear order with
+relevant detail, using correct construction
+and structure of speech.
+
+7. In small groups, learners identify the political parties that CI 5.2: Ability to merge simple/complex
+contested in the 1992 general elections and the outcome ideas to create novel situations or things.
+of that election.
+CC 8.1: Speak clearly and explain ideas.
+Share a narrative or extended answer while
+speaking to a group.
+JHS 3.5.3.1.3 Assess the lessons and prospects of the Fourth
+Republic.
+
+Critical Thinking and Problem Solving (CP),
+Communication and Collaboration (CC),
+Digital Literacy (DL), Personal
+Development and Leadership (PL)
+
+Exemplars:
+© NaCCA, Ministry of Education 2021
+
+84
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+
+CORE COMPETENCIES
+
+1. Using document analysis, learners discuss the features of PL6.7: Actively promote effective group
+the Fourth Republican Constitution.
+interaction and expressing ideas and
+opinions in a way that is sensitive to the
+feelings and background of others.
+
+© NaCCA, Ministry of Education 2021
+
+2. In small groups, learners trace the sequence of
+governments that have ruled in the Fourth Republic and
+their leaders.
+
+CC9.6: Ability to work with all group
+members to complete a task successfully.
+PL6.7: interaction and the expression of
+ideas and opinions in a way that is sensitive
+to others' feelings and backgrounds.
+
+3. In a panel discussion, learners identify the major
+achievements and setbacks under the Fourth Republic.
+
+CP 5.1: Ability to combine information and
+ideas from several sources to conclude.
+CC7.1: Identify words or sentences in
+context appropriately.
+
+4. In groups, learners plot a bar graph to explain the
+numerical changes that have taken place in the various
+parliaments within the fourth Republic.
+
+CC8.4: Anticipate different responses from
+the audience and plan for them.
+PL6.1: Ability to serve group members
+effectively.
+CI 5.2: Ability to merge simple/complex
+ideas to create novel situations or things.
+
+85
+
+CONTENT STANDARD
+
+INDICATORS AND EXEMPLARS
+5. In a role-play activity, learners dramatise a mock
+parliament to debate on critical national issues in Ghana.
+
+CORE COMPETENCIES
+CP 5.1: Ability to combine information and
+ideas from several sources to conclude.
+PL6.1: Ability to serve group members
+effectively.
+
+6. In groups, learners develop proposals and implementation PL6.7: Actively promote effective group
+plans for what they can do differently to improve the
+interaction and expressing ideas and
+Fourth Republic.
+opinions in a way that is sensitive to the
+feelings and background of others.
+CC9.3: Understand roles during group
+activities.
+
+7. Using think-pair-share, learners discuss lessons they have CC8.2: Explain ideas in a clear order with
+learned in the Fourth Republic.
+relevant detail, using correct construction
+and structure of speech.
+CC8.2: Explain ideas in a clear order with
+relevant detail, using correct construction
+and structure of speech.
+
+© NaCCA, Ministry of Education 2021
+
+86
+
+APPENDICES
+APPENDIX 1: CORE COMPETENCIES AND SUBSKILLS OF THE COMMON CORE PROGRAMME (CCP)
+1. COMMUNICATION AND COLLABORATION (CC)
+JHS1-JHS3
+CC7: LISTENING
+
+CC8: PRESENTING
+
+CC9: TEAMWORK
+
+CC7.1: Identify words or sentences in context
+appropriately
+
+CC8.1: Speak clearly and explain ideas. Share a
+narrative or extended answer while speaking to a
+group
+
+CC9.1: Demonstrate behaviour and skills of
+working towards group goals
+
+CC7.2: Interpret correctly and respond to nonverbal communication such as facial expressions,
+cues and gestures
+
+CC8.2: Explain ideas in a clear order with relevant
+detail, using correct construction and structure of
+speech
+
+CC9.2: Understand and use interpersonal skills
+
+CC7.3: Provide feedback in areas of ideas,
+organisation, voice, word choice and
+sentence fluency in communication
+
+CC8.3: Apply appropriate diction and structure
+sentences correctly for narrative, persuasive,
+imaginative and expository purposes
+
+CC9.3: Understand roles during group activities
+
+CC7.4: Identify underlying themes, implications
+and issues when listening
+
+CC8.4: Anticipate different responses from the
+audience and plan for them
+
+CC9.4: Help group work on relevant activities
+
+CC7.5: Identify and analyse different points of
+view of speaker
+
+CC8.5: Vary the level of detail and the language
+used when presenting to make it appropriate to
+the audience
+
+CC9.5: Appreciate the importance of including
+all team members in discussions and actively
+encourage contributions from them
+CC9.6: Ability to work with all group members to
+complete a task successfully
+CC9.7: Effectively perform multiple roles within
+the group
+
+© NaCCA, Ministry of Education 2021
+
+87
+
+CC9.8: Demonstrate an awareness of team
+dynamics and work to minimise conflicts in the
+team
+
+2. CRITICAL THINKING AND PROBLEM-SOLVING (CP)
+JHS1-JHS3
+CP5: CRITICAL THINKING
+
+CP6: PROBLEM SOLVING
+
+CP 5.1: Ability to combine information and ideas from several sources to
+reach a conclusion
+
+CP 6.1: Ability to effectively define goals towards solving a problem
+
+CP 5.2: Analyse and make distinct judgments about viewpoints expressed in
+an argument
+
+CP 6.2: Ability to explain plans for attaining goals
+
+CP 5.3: Create simple logic trees to think through problems
+
+CP 6.3: Identify important and appropriate alternatives
+
+CP 5.4: Generate hypothesis to help answer complex problems
+
+CP 6.4: Ability to identify important and appropriate criteria and use them
+to evaluate available alternatives
+
+CP 5.5: Effectively evaluate the success of solutions used in an attempt to
+solve a complex problem
+
+CP 6.5: Ability to select alternative(s) that adequately meet selected criteria
+
+CP 5.6: Demonstrate a thorough understanding of a generalised concept
+and facts specific to a task or situation
+
+CP 6.6: Preparedness to recognise and explain results after implementation
+of plans
+
+CP 5.7: Provide new insight into controversial situation or task
+
+CP 6.7: Implement strategies with accuracy
+
+CP 5.8: Identify and prove misconceptions about a generalised concept or
+fact specific to a task or situation
+CP 5.9: Identify and explain a confusion, uncertainty or contradiction
+surrounding an event
+CP 5.10: Develop and defend a logical, plausible resolution to a confusion,
+uncertainty or contradiction surrounding an event
+© NaCCA, Ministry of Education 2021
+
+88
+
+3. PERSONAL DEVELOPMENT AND LEADERSHIP (PL)
+JHS1-JHS3
+PL5: PERSONAL DEVELOPMENT
+
+PL6: LEADERSHIP
+
+PL5.1: Understanding oneself (strengths, weaknesses, goals and aspirations)
+in reacting and adjusting to novel situations
+
+PL6.1: Ability to serve group members effectively
+
+PL5.2: Demonstrate a sense of belongingness to a group
+
+PL6.2: Division of tasks into solvable units and assigning group members to
+task units
+
+PL5.3: Recognise one’s emotional state and their preparedness to apply
+emotional intelligence
+
+PL6.3: Ability to manage time effectively
+
+PL5.4: Ability to understand one’s personality traits
+
+PL6.4: Ability to manage and resolve conflicts
+
+PL5.5: Desire to accept one’s true self and overcome weaknesses
+
+PL6.5: Ability to monitor team members to ascertain progress
+
+PL5.6: Ability to set and maintain personal standards and values
+
+PL6.6: Ability to mentor peers
+PL6.7: Actively promote effective group interaction and the expression of
+ideas and opinions in a way that is sensitive to the feelings and background
+of others
+PL6.8: Actively assist group identify changes or modifications necessary in
+the group activities and work towards carrying out those changes
+
+© NaCCA, Ministry of Education 2021
+
+89
+
+4. CULTURAL IDENTITY AND GLOBAL CITIZENSHIP (CG)
+JHS1-JHS3
+CG5: CULTURAL IDENTITY
+
+CG6: GLOBAL CITIZENSHIP
+
+CG5.1: Show a strong sense of belongingness to one’s culture
+
+CG6.1: Understanding of influences of globalisation on traditions, languages
+and cultures
+
+CG5.2: Develop and exhibit ability to defend one’s cultural beliefs, practices
+and norms
+
+CG6.2: Recognise resistance to global practices that are inimical to our
+culture
+
+CG5.3: Develop and express respect, recognition and appreciation of
+others’ cultures
+
+CG6.3: Know the global discourse about the roles of males and females
+
+CG5.4: Develop and exhibit a sense of cultural identity
+
+CG6.4: Exhibit a sense of nationality and global identity
+
+CG5.5: Adjust to the demands of customs, traditions, values and attitudes of
+society
+
+5. CREATIVITY AND INNOVATION (CI)
+JHS1-JHS3
+
+© NaCCA, Ministry of Education 2021
+
+90
+
+CI5: KNOWLEDGE, UNDERSTANDING, SKILLS AND STRATEGIES
+
+CI6: REFLECTION AND EVALUATION
+
+CI 5.1: Examine alternatives in creating new things
+
+CI 6.1: Exhibit strong memory, intuitive thinking, and respond appropriately
+
+CI 5.2: Ability to merge simple/complex ideas to create novel situations or
+things
+
+CI 6.2: Ability to reflect on approaches to creative tasks and evaluate the
+effectiveness of tools used
+
+CI 5.3: Identification of requirements of a given situation and justification of
+more than one creative tool that will be suitable
+
+CI 6.3: Ability to select the most effective creative tools for work, and give
+reasons for the choice
+
+CI 5.4: Ability to visualise alternatives, see possibilities and identify problems CI 6.4: Imagining and seeing things in a different way
+and challenges
+CI 5.5: Ability to try new alternatives and different approaches
+
+CI 6.5: Anticipate and overcome difficulties relating to taking initiatives
+
+CI 5.6: Understand and use analogies and metaphors
+
+CI 6.6: Being open-minded, adapting and modifying ideas to achieve creative
+results
+
+CI 5.7: Putting forward constructive comments, ideas, explanations and new
+ways of doing things
+
+CI 6.7: Look and think about things differently and from different
+perspectives
+CI 6.8: Recognise and generalise information and experience; search for
+trends and patterns
+CI 6.9: Interpret and apply learning in new contexts
+CI 6.10: Reflect on work and explore the thinking behind thoughts and
+processes
+
+© NaCCA, Ministry of Education 2021
+
+91
+
+6. DIGITAL LITERACY (DL)
+JHS1-JHS3
+DL5: PHOTO-VISUAL AND INFORMATION LITERACY
+
+DL6: SOCIO-EMOTIONAL AND REPRODUCTION LITERACY
+
+DL5.1: Ability to ascertain when information is needed and be able to
+identify, locate, evaluate and effectively use it to solve a problem
+
+DL 6.1: Understand the sociological and emotional aspects of cyberspace
+
+DL5.2: Ability to recognise and avoid traps in cyberspace
+
+DL 6.2: Create a meaningful and original piece of work, or its interpretation
+by integrating existing information
+
+DL5.3: Ability to find and utilise digital content
+
+DL6.3: Use digital tools to create novel things
+
+DL5.4: Ability to construct knowledge from a non-linear hyper-textual
+navigation
+
+DL6.4: Adhere to behavioural protocols that prevail in cyberspace
+
+DL5.5: Evaluate the quality and validity of information
+
+DL6.5: Recognition of societal issues emanating from the use of digital
+technologies
+
+DL5.6: Preparedness to make better decisions using available information
+
+DL6.6: Knowledge and recognition of ethical use of information
+
+Please note these inclusivity issues.
+The core competencies outlined in this document must be assessed, taking into consideration learners with special needs
+(physical disabilities, learning disabilities, etc.). Consider using realia for visually challenged learners. A system of creating
+alternatives for tasks must also be adopted.
+
+© NaCCA, Ministry of Education 2021
+
+92
+
+BIBLIOGRAPHY
+BOOKS
+1. Amonoo, B. (1981). Ghana 1957-1966: The Politics of Institutional Dualism. London: Allen and Unwin.
+2. Attom, L. E., & Adam, M. (2016). Reproductive Health and Family Life Education. Winneba: Institute for Educational Development and Extension.
+3. Adzahlie-Mensah, V., Golo, H., & Attom, L. E. (2016). Gender and Development. Winneba: Institute for Educational Development and Extension.
+4. Apter, D. (1972). Ghana in Transition. Princeton: Princeton University Press.
+5. Armah, K. (2004). Peace without Power: Ghana’s Foreign Policy 1957-1996. Accra: University Press.
+6. Attom, L. E., & Ngaaso, K.C. (2011). Gender Issues and Development I Ghana: Some Policy Implications. Accra: Yamens Press Limited.
+7. Attom, L. E., & Quashigah, Y.A. (2010). Teaching and Learning Guide to Social Studies Education on Reproductive Health and Family Life
+Education. Cape Coast: Yac Publications.
+8. Austin, D. (1964). Politics in Ghana 1946-1960. Oxford: Oxford University Press.
+9. Bening, R.B. (1999). Ghana: Regional Boundaries and National Integration. Accra: Ghana University Press.
+10. Biswal, T. P. (1992). Ghana: Political and Constitutional Development. New Delhi: Northern Book Centre.
+11. Bourret, F. M. (1960). Ghana: The Road to Independence, 1919-1957. London: Oxford University Press.
+12. Cooper, F. (2002). Africa since 1940: The Past of the Present. Cambridge: Cambridge University Press.
+13. Gyekye, K. (2008). Social Studies for West African Senior School Certificate-A Four-Course. Accra: Sankofa Publishing.
+14. Herbst, J. (1993). The Politics of Reform in Ghana, 1982-1991. Berkeley: University of California Press.
+15. Kankam, B. & Atta-Kwenin, I. (2016). Physical & Social Relations in Social Studies. University of Cape Coast: Hampton Printing Press.
+16. Kimble, D. (1963). A Political History of Ghana: The Rise of Gold Coast Nationalism 1850-1928. Oxford: Clarendon Press.
+17. Mamdani, M. (1996). Citizen and Subject: Contemporary Africa and the Legacy of Late Colonialism. Princeton: Princeton University Press.
+19. Massing, A.W. (1994). Local Government Reform in Ghana: Democratic Renewal or Autocratic Revival? Saarbrucken: Verlag fur
+Entwicklungpolitik Breitenbach
+20. Ngaaso, K. C., & Attom, L.E. (2015). Environmental Studies. Accra: Yamens Press Limited.
+22. Ninsin, K. A. (1996). Ghana’s Political Transition 1990-1993. Accra: Freedom Publications.
+23. Nugent, P. (2004). African since Independence. Basingstoke: Palgrave Macmillan.
+24. Obeng, I. J. (2006). Population and Urbanisation in Ghana. Kumasi: Derisco Company Limited.
+25. Parker, J. (2000). Making the Town: Ga State and Society in Early Colonial Accra. Portsmouth: Heinemann.
+© NaCCA, Ministry of Education 2021
+
+93
+
+26. Quashigah, A.Y., Attom, L. E., & Eshun, I. (2017). Science, Technology & Modernization in Social Studies. Accra: Yamens Press Limited.
+27. Quashigah, Y. A., & Attom, L. E. (2016). Teaching and Learning Guide to Social Studies Education on Reproductive Health and Family Lif
+Education. (Revised Edition) Accra: Yamens Press Limited.
+29. Rathbone, R. (2000). Nkrumah and the Chiefs: The Politics of Chieftaincy in Ghana, 1951-1960. Columbus: Ohio State University Press.
+30. Reid, R. (2009). A Modern History of Africa: 1800 to the Present. Oxford: Wiley-Blackwell.
+31. Shillington, K. (1992). Ghana and the Rawlings Factor. London: Macmillan.
+32. Skinner, K., & Yayoh, W.K. (2019). Writing the New Nation in a West AfricBorderland. Oxford: University Press.
+33. Wood, S. N. (1989). Making the District Assembly Work. Tema: Ghana’
+Publishing Corporation.
+RESEARCH ARTICLES
+34. Agyeiwaa, R., & Attom, L. E. (2018), Gendered perceptions and challenges facing females in educational leadership positions. International
+Journal of Education, Learning and Development, 6 (7): 1-15.
+35. Anthony-Krueger, C. & Kankam, B. (2011). The Practice of the Integrated
+Approach in the Teaching of Integrated Science and Social Studies.
+Journal of Science and Mathematics Education, 5, 158-167.
+36. Attom, L. E. (2010). Challenges confronting women in educational Leadership in Effutu Municipality of the Central Region of Ghana.
+International Journal of Educational Leadership (IJEL), 3 (3): 202-210.
+37. Attom, L. E. (2018). Transformative learning pedagogies and reflective practice in Reproductive Health. European Journal of Educational
+Development Psychology, 6 (3): 1-20.
+38. Baker, F., & Kankam, B. (2016). Social Studies Curriculum Response to Climate Change: The Views of Social Studies Teachers in Public
+Senior High Schools in the Cape Coast Metropolis. The International Journal of Social Sciences and Humanities Invention, 3(4):1973-1982.
+39. Bekoe, S. O., Attom, L. E., & Eshun, I. (2017). Evaluation of the impact of Science, Technology and Modernisation in
+Social Studies Curriculum on University students. British Journal of Education, 5 (10): 22-39.
+40. Bekoe, S. O., Eshun, I., & Attom, L. E. (2017). Filling the feedback Gap: The roles of curriculum supervisors and supervisees in Social Studies
+Education. American Journal of Educational Science, 3 (1): 1-12.
+41. Ediger, M. (2007). Philosophy of Social Studies Education. Journal of
+Instructional Psychology, 34(1): 18-21.
+© NaCCA, Ministry of Education 2021
+
+94
+
+42. Harrison, K. G., Attom, L. E., Brew, E., & Eshun, I. (2018). Human rights issues of child labour and economic activities: The way forward.
+American Journal of Social Science Research, 4 (2): 40-52.
+43. Kankam, B. (2016). Citizenship Education in Ghana: A Traditional and Modern Perspective in Development.
+International Journal of Information, Research and Review, 3(4): 2102-2108.
+44 Kankam, B. (2016). Social Studies Education in Ghana: A Historical
+Perspective (1940-Present). Educational Research Journals, 6(12): 215-219.
+45. Kuranchie, I. A., & Attom, L.E. (2019). Sources of adolescent reproductive health education and its influence on sexual choices among Senior
+High School students, Journal of Social Sciences and Humanities 5, (4): 481-494.
+46. Yayoh, W. K. (2015). German Rule in Colonial Ewedome (Ghana), 1890–1914. African Notes, 9(1&2), 129-145.
+47. Yayoh, W. K. (2002). Krepi States in the Eighteenth and the Nineteenth Centuries. Transactions of the Historical Society of Ghana, (6), 67-81.48.
+48. Yayoh, W. K. (2007). Resurgence of Multi-party Rule in Ghana, 1990- 2004: A Historical Review. Transactions of the Historical Society of Ghana,
+(10), 125-147.
+49. Yayoh, W. K. (2013). What is in a flag? The Swastika and Togoland nationalism. Contemporary Journal of African Studies, 1(1), 1-26.
+TECHNICAL PAPERS, REPORTS AND SYLLABUS
+50. Caribbean Examinations Council. (2010). Social Studies Syllabus Kingston, Jamaica: Caribbean Examinations Council.
+51. Ministry of Education (2015). Social Studies 10: Integrated Resource Package (IRP 139). British Colombia: Ministry of Education.
+52. Ministry of Education, Science and Sports (2007). Teaching Syllabus for Social Studies (Junior High School). Accra: Government of Ghana.
+53. Ministry of Education. (2010). Teaching Syllabus for Social Studies (Senior High School1-3). Accra: Government of Ghana.
+54. Louisiana Student Standards Social Studies, K-12 Student Standards for
+Social Studies
+
+SOCIAL STUDIES SUBJECT PANEL MEMBERS AND REVIEWERS
+WRITING PANEL
+
+NAME
+
+INSTITUTION
+
+Osman Bin Umar
+
+GES, Accra Girls
+
+Anitha Oforiwah Adu-Boahen
+
+UEW
+
+Jemima Ayensu
+
+Holy Child SHS
+
+Dr. Emmanuel Agyei Boateng
+
+UG
+
+© NaCCA, Ministry of Education 2021
+
+95
+
+REVIEWERs
+
+Rita Terkuor Sangmor
+
+Aburi Amanfro JHS
+
+Prince Essiaw
+
+Enchi COE
+
+George Boateng
+
+Berekum College
+
+Prof. Dacosta Aboagye
+
+KNUST
+
+Dr. Bernard Yaw Sakyi Acquah
+
+UCC
+
+Joseph Kwaku Agbevanu
+
+KINBU SHS
+
+Dr. Samuel Pimpong
+
+UEW
+
+Josephine Akosuah Gbagbo
+
+NASEC
+
+Dr Samuel Y Boadi-Siaw, (Retired)
+
+UCC
+
+Simon Tengan
+
+WA,Senior High School
+
+Rev. Prof. Kankam Boadu
+
+University of Development Studies
+
+Mr. Cletus Ngaaso
+
+University of Education, Winneba
+
+SUPERVISORS AND COORDINATING TEAM
+
+SUPERVISORS
+
+COORDINATING TEAM
+
+NAME
+
+INSTITUTION
+
+Prof Edward Appiah
+
+Director-General, NaCCA
+
+Prof. Kwame Osei Kwarteng
+
+Council Chairman, NaCCA
+
+Prof. Jonathan Fletcher
+
+Key Advisor
+
+Mr. Cosmos Eminah
+
+NaCCA
+
+© NaCCA, Ministry of Education 2021
+
+96
+
+GRAPHIC DESIGNER
+
+Nii Boye Tagoe
+
+NaCCA
+
+Reginald Quartey
+
+NaCCA
+
+Juliet Owusu-Ansah
+
+NaCCA
+
+Eugene Offei Tettey
+
+NaCCA
+
+© NaCCA, Ministry of Education 2021
+
+97
+
+

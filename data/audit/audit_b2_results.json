@@ -1,0 +1,82 @@
+[
+ {
+  "subject": "mathematics",
+  "hit": 10,
+  "miss": 14,
+  "pct": 41.7,
+  "miss_codes": [
+   "B1.1.1.1.1",
+   "B1.1.1.1.2",
+   "B1.1.1.1.5",
+   "B1.1.1.1.6",
+   "B1.1.2.1.1",
+   "B1.1.2.2.1",
+   "B1.1.2.2.2",
+   "B1.1.2.3.1",
+   "B1.1.4.1.1",
+   "B1.3.1.1.2",
+   "B1.3.1.1.3",
+   "B1.3.2.1.1",
+   "B1.3.3.1.1",
+   "B1.4.1.1.2"
+  ]
+ },
+ {
+  "subject": "science",
+  "hit": 29,
+  "miss": 2,
+  "pct": 93.5,
+  "miss_codes": [
+   "B1.4.3.1.1",
+   "B1.5.3.1.1"
+  ]
+ },
+ {
+  "subject": "english-language",
+  "hit": 71,
+  "miss": 1,
+  "pct": 98.6,
+  "miss_codes": [
+   "B1.2.1.2.3"
+  ]
+ },
+ {
+  "subject": "ghanaian-language",
+  "hit": 77,
+  "miss": 0,
+  "pct": 100.0,
+  "miss_codes": []
+ },
+ {
+  "subject": "history",
+  "hit": 8,
+  "miss": 0,
+  "pct": 100.0,
+  "miss_codes": []
+ },
+ {
+  "subject": "owop",
+  "hit": 21,
+  "miss": 3,
+  "pct": 87.5,
+  "miss_codes": [
+   "B1.1.3.1.1",
+   "B1.2.2.1.1",
+   "B1.2.2.2.1"
+  ]
+ },
+ {
+  "subject": "rme",
+  "hit": 9,
+  "miss": 0,
+  "pct": 100.0,
+  "miss_codes": []
+ },
+ {
+  "subject": "creative-arts",
+  "hit": 42,
+  "miss": 0,
+  "pct": 100.0,
+  "miss_codes": []
+ }
+]

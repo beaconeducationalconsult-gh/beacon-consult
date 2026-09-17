@@ -1,0 +1,17 @@
+# Keep the build context small — node_modules alone is tens of megabytes and
+# none of it is needed to generate documents.
+node_modules/
+.git/
+app/node_modules/
+dist/
+.yarn/
+.saas-reference/
+venv/
+__pycache__/
+*.pyc
+*.tmp
+~$*.docx
+
+# The whole of app/ is now unneeded: the curriculum data that used to live at
+# app/data/ moved to data/reference/ and is copied with the rest of data/.
+app/

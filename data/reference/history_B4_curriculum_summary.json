@@ -1,0 +1,60 @@
+{
+  "id": "history",
+  "name": "History",
+  "grade": "B4",
+  "sourceTitle": "NaCCA History Curriculum B1-B6",
+  "sourceUrl": "https://nacca.gov.gh/wp-content/uploads/2019/04/HISTORY-B1-B6.pdf",
+  "counts": {
+    "strands": 6,
+    "subStrands": 8,
+    "standards": 10,
+    "indicators": 11
+  },
+  "strands": [
+    {
+      "code": "B4.1",
+      "name": "B4.1",
+      "subStrands": 2,
+      "standards": 3,
+      "indicators": 3
+    },
+    {
+      "code": "B4.2",
+      "name": "B4.2",
+      "subStrands": 2,
+      "standards": 2,
+      "indicators": 3
+    },
+    {
+      "code": "B4.3",
+      "name": "B4.3",
+      "subStrands": 1,
+      "standards": 1,
+      "indicators": 1
+    },
+    {
+      "code": "B4.4",
+      "name": "B4.4",
+      "subStrands": 1,
+      "standards": 2,
+      "indicators": 2
+    },
+    {
+      "code": "B4.5",
+      "name": "B4.5",
+      "subStrands": 1,
+      "standards": 1,
+      "indicators": 1
+    },
+    {
+      "code": "B4.6",
+      "name": "B4.6",
+      "subStrands": 1,
+      "standards": 1,
+      "indicators": 1
+    }
+  ],
+  "extraction_method": "pypdf regex B4.x.x.x.x, placeholder metadata",
+  "extraction_date": "2026-07-09",
+  "notes": "Upper Primary B4 – preliminary DB, indicator descriptions to be enriched from NaCCA exemplars"
+}

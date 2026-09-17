@@ -1,0 +1,43 @@
+{
+  "id": "rme",
+  "name": "Religious and Moral Education",
+  "grade": "B3",
+  "sourceTitle": "NaCCA Basic 1-6 RME Curriculum",
+  "sourceUrl": "https://nacca.gov.gh/wp-content/uploads/2019/04/RELIGIOUS-AND-MORAL-EDUCATION-B1-B6.pdf",
+  "counts": {
+    "strands": 4,
+    "subStrands": 7,
+    "standards": 7,
+    "indicators": 11
+  },
+  "strands": [
+    {
+      "code": "B3.1",
+      "name": "B3.1",
+      "subStrands": 2,
+      "standards": 2,
+      "indicators": 4
+    },
+    {
+      "code": "B3.2",
+      "name": "B3.2",
+      "subStrands": 2,
+      "standards": 2,
+      "indicators": 2
+    },
+    {
+      "code": "B3.3",
+      "name": "B3.3",
+      "subStrands": 1,
+      "standards": 1,
+      "indicators": 2
+    },
+    {
+      "code": "B3.4",
+      "name": "B3.4",
+      "subStrands": 2,
+      "standards": 2,
+      "indicators": 3
+    }
+  ]
+}
