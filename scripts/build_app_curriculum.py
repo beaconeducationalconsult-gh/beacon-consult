@@ -7,7 +7,7 @@ from /curriculum/ — no Firestore reads. Until now only Basic 1 was generated
 the repo's full dataset, and adds a new file the app didn't have: per-grade
 Schemes of Learning, derived from the 13,140 enriched lessons.
 
-Outputs (app/public/curriculum/, committed — this is app source data)
+Outputs (public/curriculum/, committed — this is portal source data)
 --------------------------------------------------------------------
     grades.json                 one entry per grade that has data
     <grade>_subjects.json       subjects for the grade, with counts
@@ -22,7 +22,7 @@ Usage
 -----
     python3 tools/build_app_curriculum.py
     python3 tools/build_app_curriculum.py --grade B4
-    python3 tools/build_app_curriculum.py --out app/public/curriculum
+    python3 scripts/build_app_curriculum.py --out public/curriculum
 """
 from __future__ import annotations
 
@@ -235,7 +235,7 @@ def main():
     ap.add_argument("--out", default=None, help="output directory")
     args = ap.parse_args()
 
-    out_dir = Path(args.out) if args.out else ROOT / "app" / "public" / "curriculum"
+    out_dir = Path(args.out) if args.out else ROOT / "public" / "curriculum"
     out_dir.mkdir(parents=True, exist_ok=True)
 
     dbs = db_index()

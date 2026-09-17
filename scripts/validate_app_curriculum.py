@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate app/public/curriculum/ before shipping.
+"""Validate public/curriculum/ before shipping.
 
 Checks the invariants the React app relies on. A failure here means the app
 renders empty lists, orphaned indicator chips, or a scheme that silently
@@ -14,7 +14,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-CURR = ROOT / "app" / "public" / "curriculum"
+CURR = ROOT / "public" / "curriculum"
 
 errors: list[str] = []
 warnings: list[str] = []
@@ -34,7 +34,7 @@ def load(name):
 
 def main():
     if not CURR.exists():
-        sys.exit(f"No curriculum directory at {CURR}. Run tools/build_app_curriculum.py first.")
+        sys.exit(f"No curriculum directory at {CURR}. Run scripts/build_app_curriculum.py first.")
 
     grades = load("grades.json") or []
     print(f"Validating {len(grades)} grades in {CURR}\n")

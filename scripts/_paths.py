@@ -27,8 +27,11 @@ MISC = DATA / "misc"  # parsed-lesson intermediates
 BOOKS = DATA / "books"  # sample generated documents
 REFERENCE = DATA / "reference"  # second copy, formerly app/data/
 
-APP = ROOT / "app"
-APP_CURRICULUM = APP / "public" / "curriculum"  # build output, gitignored
+# The portal lives at the repository root; its static bundle is public/curriculum/.
+# The retired NCOS kernel app (and its module registry) is under legacy/kernel-app/.
+APP = ROOT
+APP_CURRICULUM = ROOT / "public" / "curriculum"  # committed bundle, served offline
+LEGACY_APP = ROOT / "legacy" / "kernel-app"
 
 # Curriculum databases exist in two places: the primary set in
 # data/curriculum/ and a second, partly-divergent copy in data/reference/.

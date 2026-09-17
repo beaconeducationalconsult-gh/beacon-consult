@@ -14,7 +14,7 @@ hide. This script keeps them apart:
                      the audited extraction from the NaCCA source PDFs.
     L2  lessons      data/lessons/*_lessons_enriched.json
                      the teaching template filled per lesson slot.
-    L3  bundle       app/public/curriculum/*.json
+    L3  bundle       public/curriculum/*.json
                      what the React app can serve — the only layer a teacher touches.
 
     (ref) reference  data/reference/ — a second, partly-divergent copy that
@@ -46,8 +46,8 @@ DATA = ROOT / "data"
 CURRICULUM = DATA / "curriculum"
 LESSONS = DATA / "lessons"
 REFERENCE = DATA / "reference"
-BUNDLE = ROOT / "app" / "public" / "curriculum"
-MODULES = ROOT / "app" / "src" / "modules"
+BUNDLE = ROOT / "public" / "curriculum"
+MODULES = ROOT / "legacy" / "kernel-app" / "src" / "modules"
 OUT = DATA / "inventory.json"
 
 # Dataset subject ids are the canonical ones. Anything on disk that spells them
@@ -485,9 +485,9 @@ def main() -> int:
             warnings.append(f"INTENTIONALLY_UNSERVED lists '{sid}' but no layer has that subject")
 
     if l3["built"] and not l3.get("hasQuestions"):
-        warnings.append("app/public/curriculum/questions/ does not exist, yet math declares the 'questions' capability")
+        warnings.append("public/curriculum/questions/ does not exist, yet math declares the 'questions' capability")
     if not l3["built"]:
-        errors.append("app/public/curriculum/ is not built — run `make build-curriculum`")
+        errors.append("public/curriculum/ is not built — run `make build-curriculum`")
 
     for ref_path, users in check_doc_links().items():
         warnings.append(f"{ref_path} is referenced by {', '.join(users)} but does not exist")
@@ -498,7 +498,7 @@ def main() -> int:
         "layers": {
             "L1_curriculum": "data/curriculum/ — audited extraction (DB + summary)",
             "L2_lessons": "data/lessons/ — teaching template filled per lesson slot",
-            "L3_bundle": "app/public/curriculum/ — what the React app serves",
+            "L3_bundle": "public/curriculum/ — what the portal serves",
             "reference": "data/reference/ — second, partly-divergent copy; a silent fallback source, never a total",
         },
         "totals": totals,
