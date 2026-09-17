@@ -12,7 +12,7 @@ this project — including several that were in `README.md` and `docs/TODO.md`.
 |---|---|---|---|
 | **L1 — curriculum** | `data/curriculum/*_curriculum_db_clean.json` + `*_curriculum_summary.json` | The audited extraction from the NaCCA source PDFs. One record per indicator, keyed by indicator code. | 75 DB files · 73 summaries · **3,095 indicators** · 75 subject-grades (plus `english-language B5`, which exists only as a summary) |
 | **L2 — lessons** | `data/lessons/*_lessons_enriched.json` | The teaching template (starter / main / plenary / rpk / assessment) filled for every lesson slot in the school year. | 73 files · **13,140 lesson slots** · 13 subjects · 9 grades |
-| **L3 — bundle** | `app/public/curriculum/*.json` | The static JSON the React app fetches at runtime. The only layer a teacher ever touches. | 84 subject-grades · **4,040 indicators** · 11 grades · 39.7 MB |
+| **L3 — bundle** | `public/curriculum/*.json` | The static JSON the portal fetches at runtime. The only layer a teacher ever touches. | 84 subject-grades · **4,040 indicators** · 11 grades · 39.7 MB |
 | (ref) **reference** | `data/reference/` | A second, partly-divergent copy of L1 that `scripts/_paths.py` searches as a silent fallback. | 84 DB files · 75 summaries (8 malformed) |
 
 ```
@@ -53,7 +53,7 @@ Any statement of the form "this project has N indicators" must name the layer.
 The defensible sentences are:
 
 * "**3,095** indicators are in the audited extraction (`data/curriculum/`)."
-* "**4,040** indicators are served by the app (`app/public/curriculum/`); 945 of them (9 subject-grades) have no counterpart in the audited layer — 8 come from `data/reference/`, 1 (`english-language B5`) has a summary but no database."
+* "**4,040** indicators are served by the portal (`public/curriculum/`); 945 of them (9 subject-grades) have no counterpart in the audited layer — 8 come from `data/reference/`, 1 (`english-language B5`) has a summary but no database."
 * "**13,140** lesson slots across 13 subjects and 9 grades have a filled teaching template (`data/lessons/`)."
 
 ## L1 — curriculum
@@ -75,7 +75,7 @@ The defensible sentences are:
 
 | Thing | Canonical | Variants seen on disk | Rule |
 |---|---|---|---|
-| Subject id | `mathematics` | `math` (DB filename, lesson filename, **and `MathModule.id`**) | The **dataset id wins**. `app/src/modules/math/MathModule.ts` is wrong today and therefore matches zero indicators. |
+| Subject id | `mathematics` | `math` (DB filename, lesson filename, **and `MathModule.id`**) | The **dataset id wins**. `legacy/kernel-app/src/modules/math/MathModule.ts` (retired) is wrong and matches zero indicators. |
 | Grade | `KG1`, `KG2` | `K1`, `K2` (indicator codes in the KG databases) | Normalise `K1 → KG1`, `K2 → KG2`. |
 | Indicator code | `B<grade>.<strand>.<substrand>.<standard>.<indicator>` | — | Grade prefix is the only reliable grade source (B1 files carry no grade in the filename). |
 

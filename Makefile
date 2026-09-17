@@ -1,4 +1,4 @@
-.PHONY: install inventory audit check dev build lint preview boot-check list-modules build-curriculum validate-curriculum generate-schemes generate-records package-books
+.PHONY: install inventory audit check dev build lint preview books book-skeleton boot-check list-modules build-curriculum validate-curriculum generate-schemes generate-records package-books
 
 # ── Frontend (React + Vite + Yarn 4) ────────────────────────────────────────
 # The portal lives at the repository root. Node 22+ and Yarn 4 are required:
@@ -72,3 +72,12 @@ generate-records:
 
 package-books:
 	PYTHONPATH=. python scripts/package_books.py
+
+# ── Book skeletons (books/<grade>/, generated, never overwritten) ───────────
+#   make book-skeleton SUBJECT=mathematics GRADE=B1
+# Writes books/B1/mathematics-{textbook,workbook}-skeleton.docx; re-runs create
+# -v2, -v3 … so an author's edited copy is never clobbered.
+SUBJECT ?= mathematics
+GRADE ?= B1
+book-skeleton:
+	python3 seed/build_book_skeleton.py $(SUBJECT) $(GRADE)
