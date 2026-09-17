@@ -32,8 +32,8 @@ Say you're adding `widgets`:
    composite index to `firestore.indexes.json` (Firestore's error also gives you a
    create-index link).
 4. **Deploy** the backend: `firebase deploy --only firestore:rules,firestore:indexes`.
-   *(This is the step most likely to be forgotten — the app will 403 without it. See the
-   `articles` gap in [gotchas.md](gotchas.md) for what "forgot the rule" looks like.)*
+   *(This is the step most likely to be forgotten — the app will 403 without it. Committed
+   rules are not deployed rules; see [gotchas.md](gotchas.md).)*
 
 ## Add a document exporter (PDF/DOCX/PPTX)
 

@@ -7,7 +7,9 @@ Security lives in **two** places that must agree:
    reads/writes regardless of the UI.
 
 Never rely on the client gate alone. If a rule is missing, the feature is either broken
-(denied) or insecure — see the `articles` gap in [gotchas.md](gotchas.md).
+(denied) or insecure. Every collection the portal reads or writes has a rule — the table in
+[data-model.md](data-model.md) lists them; a collection added without one is denied in
+production until a rule is deployed.
 
 ## Auth flow
 

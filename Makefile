@@ -23,16 +23,20 @@ lint:
 	$(YARN) lint
 
 # ── Everything that must pass before a deploy ───────────────────────────────
-# The app build is included so that "yarn build fails" cannot be discovered for
-# the first time in production.
-check: lint validate-curriculum
+# The build is included so that "yarn build fails" cannot be discovered for the
+# first time in production, and the audit is included because an inventory
+# *error* means the portal would serve part of the dataset it cannot source.
+check: lint validate-curriculum inventory
 	$(YARN) build
 
-# ── Dataset audit (expected to be red until the gaps below are closed) ──────
-# `make inventory` reports real, known gaps: the math module's id (`math`)
-# matches zero indicators (`mathematics`), 12 modules still have a stub
-# validate(), and 9 subject-grades exist only in data/reference/. Deliberately
-# unforgiving — do not relax it to make the output green.
+# ── Dataset audit ───────────────────────────────────────────────────────────
+# `make inventory` derives every headline number from data/ and separates:
+#   errors   -> the portal cannot serve part of the dataset (release blocker)
+#   legacy   -> the retired NCOS app's module manifest (reference only; the
+#               portal has no modules, so this never fails the audit)
+#   warnings -> known, honest data gaps (e.g. the 8 bundle pairs backed only by
+#               data/reference/)
+# Run it before any data change and after `make build-curriculum`.
 audit: inventory
 
 # ── Python environment (data pipeline + book generation) ────────────────────

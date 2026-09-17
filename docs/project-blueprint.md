@@ -217,8 +217,8 @@ Things that span the whole app, best added once features exist:
 - **Automated checks:** `yarn lint && yarn build` must be clean. Add unit/integration/e2e
   tests where logic is risky (rules unit tests, exporters, pure helpers).
 - **Security review:** re-read the rules against the security matrix; confirm no collection is
-  unguarded (a real Beacon bug: an `articles` collection shipped with no rule → denied in
-  prod). Confirm no true secrets are exposed client-side (public keys like Firebase/Web3Forms
+  unguarded (a real Beacon bug, since fixed: an `articles` collection once shipped with no
+  rule → denied in prod). Confirm no true secrets are exposed client-side (public keys like Firebase/Web3Forms
   config are fine; server secrets are not).
 - **Edge cases:** empty data, huge data, slow/offline network, unauthorized users, invalid input.
 - **Cross-device / browser / dark mode / responsive.**

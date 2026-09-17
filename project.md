@@ -50,7 +50,7 @@ Never say "the dataset has N indicators" without naming the layer. Full definiti
 `data/reference/` is a **second, partly-divergent copy** that `scripts/_paths.py`
 searches as a silent fallback. It supplies 8 L3 subject-grades that L1 does not have
 (computing B4–B6, french B4–B6, kindergarten KG1–KG2). It is never a total — only a
-fallback, and an open decision (TODO L1-1).
+fallback, and an open decision (TODO P1-1).
 
 Measured fidelity of L2: `starter` 75% distinct, `main` 41%, `rpk` 2%, `plenary` 3% —
 templated structure with indicator-specific content. Do not describe these as

@@ -59,7 +59,7 @@ Two zones:
 /portal/questions             Question bank  (+ /new, /generate, /quiz, /:id/edit)
 /portal/notes                 Study notes  (+ /new, /:id, /:id/edit)
 /portal/vacancies             Vacancies  (+ /new, /:id/edit)
-/portal/slides                Slide lessons (sub-routes disabled — see gotchas)
+/portal/slides                Slide lessons (browse + PPTX export; no authoring form)
 /portal/wall                  My Wall (the member's own content)
 /portal/authors/:authorId     Author profile page
 /portal/search /progress /calendar /profile /members

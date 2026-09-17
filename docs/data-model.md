@@ -22,7 +22,7 @@ Two data sources:
 | `weekly_forecasts/{id}` | Schemes of learning | `ForecastForm` | ✅ |
 | `lesson_plans/{id}` | Lesson plans | `LessonPlanForm` | ✅ |
 | `questions/{id}` | Question bank | `QuestionForm` | ✅ |
-| `lesson_slides/{id}` (+`comments`) | Slide lessons | `SlideLessonForm` | ✅ |
+| `lesson_slides/{id}` (+`comments`) | Slide lessons (exported from schedules) | `SlideLessons` | ✅ |
 | `vacancies/{id}` | Teaching vacancies | `VacancyForm` | ✅ |
 | `progress/{uid}` | Per-member teaching tracker | `Progress`, `Feed` | ✅ |
 | `quote_likes/{quoteId}` | Shared likes on quotes | `useWisdom` | ✅ |
@@ -69,8 +69,8 @@ reminder on the Feed; indexed `authorId+weekKey`). Consumed by the generators
 (`QuestionGenerator`, `QuizMaker`) and `Search`.
 
 ### `lesson_slides/{id}` (+ `comments`)
-`status` (`'published'` gates public-ish reads within the network). Slide **authoring UI
-is disabled** (routes commented out) — the browse page exists. See [gotchas.md](gotchas.md).
+`status` (`'published'` gates public-ish reads within the network). The browse/export page
+exists; there is no authoring form (see [gotchas.md](gotchas.md)).
 
 ### `vacancies/{id}`
 `status` (`'published'` is readable **without auth** — powers the public `/vacancies`

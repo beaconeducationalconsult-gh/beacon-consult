@@ -35,17 +35,31 @@ degrades gracefully instead of throwing (see `useQuoteLikes`).
 
 ## The Tailwind design vocabulary
 
-Shared component classes are defined in `src/index.css` (`@layer components`). **Use these
-instead of re-styling headings/labels every time:**
+Tailwind is **v4.3** and CSS-first: the design tokens are an `@theme` block in `src/index.css`
+and the shared component classes are `@utility` definitions in the same file. They are
+declared with `@utility` (not `@layer components`) because Tailwind v4 only lets `@apply`
+resolve *real utilities* — a class defined in `@layer components` cannot be `@apply`-ed and
+the build fails with `Cannot apply unknown utility class`.
+
+**Use these instead of re-styling headings/labels every time:**
 
 | Class | Use |
 |---|---|
-| `.page-title` | Top-of-page `<h1>` (24px bold) |
+| `.page-title` | Top-of-page `<h1>` |
 | `.page-subtitle` | Supporting sentence under a title |
 | `.section-heading` | Small uppercase section label |
+| `.card` / `.card-hover` | Standard card surface / card with hover lift |
 | `.card-title` | Primary text inside a card |
 | `.card-meta` | Secondary/muted info line |
 | `.label-caps` | Uppercase field label |
+| `.input` | Form controls (input, select, textarea) |
+| `.btn` + `.btn-primary` `.btn-secondary` `.btn-accent` `.btn-danger` `.btn-ghost` | Buttons |
+| `.chip` / `.chip-brand` | Small pill labels (subjects, grades, tags) |
+| `.link` | Inline text link |
+
+Rebranding happens in `@theme` (`--color-brand-*`, `--color-accent-*`, `--color-cream`,
+`--font-display`, `--font-sans`) — keep the class strings semantic (`text-brand-700`, not
+`text-indigo-700`) so a palette change is one edit.
 
 ### Colour & style norms
 - **Brand:** indigo primary (`indigo-600/700`), amber/gold accents (`amber-500`), cream

@@ -33,8 +33,8 @@ Other useful commands:
 |---|---|
 | `yarn build` / `yarn preview` | Production build, then serve it (PWA behaviour only exists here) |
 | `yarn lint` | ESLint incl. the React Compiler rules — must stay clean |
-| `make check` | lint + curriculum validation + inventory + production build |
-| `make inventory` | Regenerate `data/inventory.json` and the headline dataset numbers |
+| `make check` | The pre-deploy gate: lint + curriculum validation + production build |
+| `make audit` (`make inventory`) | The data audit: regenerate `data/inventory.json`, list every dataset gap |
 | `make build-curriculum` | Rebuild `public/curriculum/` from `data/` after a dataset change |
 
 Firestore rules and indexes deploy separately from the app:

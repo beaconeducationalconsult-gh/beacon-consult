@@ -20,7 +20,8 @@ also exposed publicly (landing, vacancies, quotes, calendar, articles).
 
 - **React 19** SPA built with **Vite 8** (Rolldown) + the React Compiler (Babel plugin)
 - **React Router 7** (`BrowserRouter`)
-- **Tailwind CSS v4** (`@tailwindcss/vite`) — design tokens in `src/index.css`
+- **Tailwind CSS v4.3** (`@tailwindcss/vite`) — tokens in `src/index.css` (`@theme`) and
+  the shared class vocabulary (`@utility`)
 - **Firebase**: Auth (email/password) + **Firestore** (offline persistence enabled)
 - **Tiptap** rich-text editor (articles/notes)
 - Client-side document export: **jsPDF**, **docx**, **pptxgenjs**
@@ -41,10 +42,22 @@ also exposed publicly (landing, vacancies, quotes, calendar, articles).
 | 8 | [build-deploy.md](build-deploy.md) | Scripts, env vars, Vercel + Firebase deploy |
 | 9 | [playbooks.md](playbooks.md) | How to add a page / collection / exporter / curriculum grade |
 | 10 | [gotchas.md](gotchas.md) | Known gaps, footguns, and things that will bite you |
+| 11 | [curriculum-data.md](curriculum-data.md) | **The dataset hub** — the three layers (L1/L2/L3), every headline number, the gaps |
+| 12 | [book-structure.md](book-structure.md) | The textbook/workbook spec (chapter → unit → topic → lesson; pilot B1 Mathematics) |
+| 13 | [deliveries-roadmap.md](deliveries-roadmap.md) | Deferred work: the paid-delivery ledger, server-side hard gate, MoMo automation |
+| 14 | [git-codes.md](git-codes.md) | The git commands used on this repo (init → push → track a branch) |
 
-> **Building a project like this from scratch?** See
-> **[project-blueprint.md](project-blueprint.md)** — a full lifecycle map (planning → design →
-> backend + frontend coding → deployment → publishing), generalized from how Beacon was built.
+Also in this folder:
+
+- **[project-blueprint.md](project-blueprint.md)** — a reusable lifecycle map (planning → design
+  → backend + frontend → deploy → publish), generalized from how Beacon was built.
+- **[code-bible.md](code-bible.md)** — the build-in-order cookbook: copy-pasteable snippets for
+  scaffolding, tokens, rules, auth, data access, and the feature-slice recipe.
+- **[TODO.md](TODO.md)** — the live backlog, ordered by dependency.
+- **[analysis/](analysis/)** — the audits that shaped this architecture: `IDENTIFIED-ISSUES.md`
+  (performance findings) and `FINAL ANALYSIS.md` (the priorities drawn from them).
+- **[OPPORTUNITY_MAP.md](OPPORTUNITY_MAP.md)** / **[NACCA_QUESTION_BANK.yaml](NACCA_QUESTION_BANK.yaml)**
+  — product research and the question-bank spec.
 
 ## 60-second mental model
 

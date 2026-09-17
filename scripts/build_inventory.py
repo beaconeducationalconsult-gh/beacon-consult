@@ -285,7 +285,12 @@ def check_doc_links() -> dict:
             if path.name in HISTORICAL_DOCS or "CODE_REVIEW" in path.name:
                 continue
             text = path.read_text(encoding="utf-8", errors="ignore")
-            for ref in re.findall(r"docs/[A-Za-z0-9_\-]+\.md", text):
+            # Only root-relative `docs/...` references: a bare regex would also
+            # match the tail of `legacy/docs/CODE_REVIEW.md` and report a file
+            # that exists. Require the match not to be preceded by a path char,
+            # a backtick, or `(`/`[` immediately followed by a path prefix.
+            for match in re.finditer(r"(?<![\w./\-])docs/[A-Za-z0-9_\-]+\.md", text):
+                ref = match.group(0)
                 if not (ROOT / ref).exists():
                     missing[ref].add(rel)
     return {k: sorted(v) for k, v in sorted(missing.items())}
@@ -417,41 +422,52 @@ def main() -> int:
         fidelity_totals[field] = round(num / den, 3)
 
     # ── CHECKS
+    # Two classes of finding, deliberately separated:
+    #   errors  -> the *portal* (this repository's live product) cannot serve the
+    #              dataset, or a layer is missing/broken. These block a release.
+    #   legacy  -> the retired NCOS kernel app under legacy/kernel-app. It is kept
+    #              for reference only (nothing imports it); its module manifest is
+    #              reported, never treated as a failure of the current portal.
     module_ids = {m["id"] for m in modules.values() if m["id"]}
     pair_set = set(universe)
+    legacy = []
     for row in subject_grades:
         sid, g = row["subjectId"], row["grade"]
         if sid in INTENTIONALLY_UNSERVED:
             continue
-        if sid not in module_ids:
+        if l3["built"] and row["l3BundleIndicators"] is None:
+            errors.append(f"{sid} {g} is not in the app bundle — the portal cannot serve it")
+        if sid not in module_ids and (row["l1Indicators"] or row["l2LessonSlots"] or row["l3BundleIndicators"]):
             layers = []
             if row["l1Indicators"] is not None:
-                layers.append(f"L1 ({row['l1Indicators']} indicators)")
+                layers.append(f"L1 {row['l1Indicators']} indicators")
             if row["l2LessonSlots"]:
-                layers.append(f"L2 ({row['l2LessonSlots']} lesson slots)")
+                layers.append(f"L2 {row['l2LessonSlots']} lesson slots")
             if row["l3BundleIndicators"] is not None:
-                layers.append(f"L3 ({row['l3BundleIndicators']} indicators)")
-            if layers:
-                errors.append(f"{sid} {g} exists in {' + '.join(layers)} but no app module declares id '{sid}'")
-        if l3["built"] and row["l3BundleIndicators"] is None:
-            warnings.append(f"{sid} {g} is not in the app bundle — the portal cannot serve it")
+                layers.append(f"L3 {row['l3BundleIndicators']} indicators")
+            legacy.append(f"{sid} {g} has data ({', '.join(layers)}) but the legacy app "
+                          f"declares no module id '{sid}' — the portal does not use modules")
 
     for name, m in sorted(modules.items()):
         if not m["id"]:
             continue
         if m["id"] not in subjects_present:
             near = [s for s in subjects_present if s.startswith(m["id"][:4])]
-            errors.append(f"{name} declares id '{m['id']}' which is not a dataset subject id"
+            legacy.append(f"{name} declares id '{m['id']}' which is not a dataset subject id"
                           + (f" (the dataset uses '{near[0]}')" if near else ""))
             continue
         for g in m["grades"]:
             if (m["id"], g) not in pair_set:
-                errors.append(f"{name} declares grade {g} which no layer has for '{m['id']}'")
+                legacy.append(f"{name} declares grade {g} which no layer has for '{m['id']}'")
         slots = sum(r["l2LessonSlots"] for r in subject_grades if r["subjectId"] == m["id"])
         if slots and "record_of_work" not in m["capabilities"]:
-            warnings.append(f"{name} does not declare 'record_of_work' although L2 has {slots} lesson slots for it")
+            legacy.append(f"{name} does not declare 'record_of_work' although L2 has {slots} lesson slots")
         if m["validateIsStub"]:
-            warnings.append(f"{name} validate() returns [] unconditionally — boot cannot catch bad ids")
+            legacy.append(f"{name} validate() returns [] unconditionally — legacy boot cannot catch bad ids")
+    if legacy:
+        warnings.append(f"legacy app (legacy/kernel-app) is out of step with the dataset in "
+                        f"{len(legacy)} places — it is retired reference code, so this does not "
+                        "fail the audit; see checks.legacy in data/inventory.json")
 
     for key, v in sorted(l1.items()):
         if (not v["summaryOnly"] and v["summaryIndicators"] is not None
@@ -485,7 +501,8 @@ def main() -> int:
             warnings.append(f"INTENTIONALLY_UNSERVED lists '{sid}' but no layer has that subject")
 
     if l3["built"] and not l3.get("hasQuestions"):
-        warnings.append("public/curriculum/questions/ does not exist, yet math declares the 'questions' capability")
+        legacy.append("public/curriculum/questions/ does not exist, yet the legacy math module "
+                      "declares the 'questions' capability")
     if not l3["built"]:
         errors.append("public/curriculum/ is not built — run `make build-curriculum`")
 
@@ -522,7 +539,7 @@ def main() -> int:
                                   if l3["built"] and r["l3BundleIndicators"] is None
                                   and r["subjectId"] not in INTENTIONALLY_UNSERVED),
         },
-        "checks": {"errors": errors, "warnings": warnings},
+        "checks": {"errors": errors, "warnings": warnings, "legacy": legacy},
     }
     OUT.write_text(json.dumps(inventory, indent=1, ensure_ascii=False, sort_keys=True) + "\n", encoding="utf-8")
 
@@ -556,8 +573,15 @@ def print_report(inv: dict) -> None:
     for field, ratio in sorted(inv["lessonFidelity"]["acrossDataset"].items(), key=lambda kv: -kv[1]):
         print(f"  {field:15} {ratio * 100:5.1f}%  {'#' * max(1, round(ratio * 40))}")
 
+    if inv["checks"].get("legacy"):
+        print(f"\n  LEGACY ({len(inv['checks']['legacy'])}) — retired NCOS app vs the dataset "
+              "(reference only, does not fail the audit):")
+        for item in inv["checks"]["legacy"][:6]:
+            print(f"    - {item}")
+        if len(inv["checks"]["legacy"]) > 6:
+            print(f"    … {len(inv['checks']['legacy']) - 6} more in data/inventory.json")
     if inv["checks"]["errors"]:
-        print(f"\n  ERRORS ({len(inv['checks']['errors'])}) — the app cannot serve this dataset:")
+        print(f"\n  ERRORS ({len(inv['checks']['errors'])}) — the portal cannot serve this dataset:")
         for e in inv["checks"]["errors"]:
             print(f"    x {e}")
     if inv["checks"]["warnings"]:

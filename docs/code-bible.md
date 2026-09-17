@@ -126,12 +126,14 @@ change them in one place forever.
 
 body { @apply bg-canvas text-ink antialiased; }
 
-/* A tiny shared vocabulary used across every page */
-@layer components {
-  .page-title  { @apply text-2xl font-bold tracking-tight text-slate-900; }
-  .card        { @apply rounded-xl border border-frame bg-surface shadow-sm; }
-  .grid-responsive { @apply grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4; }
-}
+/* A tiny shared vocabulary used across every page.
+   Use @utility, not @layer components: Tailwind v4 only lets @apply resolve
+   real utilities, so a @layer components class used with @apply fails the
+   build ("Cannot apply unknown utility class"). This is how src/index.css
+   defines .page-title, .card, .input, .btn-*, .chip, .link … */
+@utility page-title { @apply text-2xl font-bold tracking-tight text-slate-900; }
+@utility card       { @apply rounded-xl border border-frame bg-surface shadow-sm; }
+@utility grid-responsive { @apply grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4; }
 ```
 
 > **Two power moves.** (1) You can *retarget* Tailwind's built-in scales
@@ -265,7 +267,8 @@ service cloud.firestore {
 > **Golden rules:** a `create` must assert `authorId == request.auth.uid` (so nobody forges
 > ownership); an `update` that should only touch a couple of fields uses
 > `diff().affectedKeys().hasOnly([...])`; and **no collection ships without a rule** — an
-> unguarded collection is denied in prod (a real bug we hit). Details in
+> unguarded collection is denied in prod (a real Beacon bug, since fixed — every
+> collection now has a rule). Details in
 > [`security.md`](security.md).
 
 ### 3d. Indexes & deploy the backend separately

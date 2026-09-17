@@ -16,7 +16,9 @@ Collections: `posts`, `progress`, `questions`, `articles`.
 `Articles.jsx` (list), `ArticleForm.jsx` (WYSIWYG create/edit via `RichEditor`),
 `ArticleView.jsx`, `PublicArticles.jsx`, `PublicArticleView.jsx`. Longform posts with
 `category`, optional `subjectId`, `visibility` (`public`/`members`), likes.
-Content is **HTML** produced by Tiptap. Collection: `articles` (⚠️ no rule — [gotchas](gotchas.md)).
+Content is **HTML** produced by Tiptap. Collection: `articles` — `public` reads are open,
+`members` reads need approval; writes are owner/admin, likes use the narrow `likedBy`/
+`likesCount` diff (see [security.md](security.md)).
 
 ### Notes — `/portal/notes` (+ `/new`, `/:id`, `/:id/edit`)
 `Notes.jsx`, `NoteForm.jsx`, `NoteView.jsx`. Study notes with a lifecycle
@@ -70,8 +72,11 @@ theories, colour-coded cards, batched/infinite-scroll loading, search, and **sha
 `published` ones are readable publicly (no login). Collection: `vacancies`.
 
 ## Slides — `/portal/slides`
-`SlideLessons.jsx` (browse). `SlideLessonForm/View` exist but their routes are **commented
-out** in `App.jsx` — the authoring flow is not wired up. Collection: `lesson_slides`.
+`SlideLessons.jsx` — pick a grade/subject/term/week and the page builds a deck from that
+week's scheduled lessons (`useSchedules`) and exports it as PPTX via
+`lib/lessonSlidesPptx.js`; it can also save the deck to `lesson_slides`. There is **no
+authoring form or deck-view page** — `SlideLessonForm`/`SlideLessonView` do not exist in the
+portal. Collection: `lesson_slides`.
 
 ## Utility & admin
 
