@@ -10,9 +10,9 @@ import EmptyState from '../components/EmptyState'
 /** One search box across curriculum indicators and the shared libraries. */
 export default function Search() {
   const [term, setTerm] = useState('')
-  const [grade, setGrade] = useState('')
+  const [grade, setGrade] = useState('B1')
   const [rows, setRows] = useState(null)
-  const { indicators, grade: loadedGrade } = useCurriculum(grade || 'B1')
+  const { indicators, grade: loadedGrade } = useCurriculum(grade)
 
   const needle = term.trim().toLowerCase()
 

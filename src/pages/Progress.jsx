@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { doc, serverTimestamp, setDoc } from 'firebase/firestore'
+import { doc, onSnapshot, serverTimestamp, setDoc } from 'firebase/firestore'
 import { db } from '../firebase'
 import { useAuth } from '../context/AuthContext'
 import { useToast } from '../context/ToastContext'
@@ -28,13 +28,19 @@ export default function Progress() {
   const currentWeek = status.term?.term === Number(term) ? termWeek(status.term) : null
 
   useEffect(() => {
-    if (!user) return
-    import('firebase/firestore').then(({ onSnapshot }) =>
-      onSnapshot(doc(db, 'progress', user.uid), (snap) => {
+    if (!user) return undefined
+    return onSnapshot(
+      doc(db, 'progress', user.uid),
+      (snap) => {
         const data = snap.exists() ? snap.data() : {}
         setWeeks(data.weeks?.[key] || [])
         setLoading(false)
-      })
+      },
+      (error) => {
+        console.warn('[beacon] progress unavailable:', error?.code || error)
+        setWeeks([])
+        setLoading(false)
+      }
     )
   }, [user, key])
 

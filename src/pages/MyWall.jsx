@@ -6,14 +6,14 @@ import EmptyState from '../components/EmptyState'
 import { fmtDate } from '../lib/academicCalendar'
 
 const SECTIONS = [
-  { collection: 'lesson_plans', label: 'Lesson plans', to: (id) => `/portal/plans/${id}` },
-  { collection: 'weekly_forecasts', label: 'Schemes', to: (id) => `/portal/forecasts/${id}` },
-  { collection: 'notes', label: 'Study notes', to: (id) => `/portal/notes/${id}` },
-  { collection: 'questions', label: 'Questions', to: () => '/portal/questions' },
-  { collection: 'articles', label: 'Articles', to: (id) => `/portal/articles/${id}` },
+  { collection: 'lesson_plans', label: 'Lesson plans', to: (id) => `/portal/plans/${id}`, all: '/portal/plans' },
+  { collection: 'weekly_forecasts', label: 'Schemes', to: (id) => `/portal/forecasts/${id}`, all: '/portal/forecasts' },
+  { collection: 'notes', label: 'Study notes', to: (id) => `/portal/notes/${id}`, all: '/portal/notes' },
+  { collection: 'questions', label: 'Questions', to: () => '/portal/questions', all: '/portal/questions' },
+  { collection: 'articles', label: 'Articles', to: (id) => `/portal/articles/${id}`, all: '/portal/articles' },
 ]
 
-function Section({ collection, label, to, uid }) {
+function Section({ collection, label, to, all, uid }) {
   const { rows, loading } = useCollection(collection, { filters: [['authorId', '==', uid]], max: 20 })
   return (
     <section className="card p-5">
@@ -34,7 +34,7 @@ function Section({ collection, label, to, uid }) {
         ))}
       </ul>
       {rows.length > 5 && (
-        <Link to={collection === 'questions' ? '/portal/questions' : `/portal/${collection.replace('_', '')}`} className="link mt-3 inline-block text-xs">
+        <Link to={all} className="link mt-3 inline-block text-xs">
           See all {rows.length} →
         </Link>
       )}
