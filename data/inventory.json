@@ -1,0 +1,2734 @@
+{
+ "appCoverage": {
+  "bundleBuilt": true,
+  "bundleGrades": [
+   "KG1",
+   "KG2",
+   "B1",
+   "B2",
+   "B3",
+   "B4",
+   "B5",
+   "B6",
+   "B7",
+   "B8",
+   "B9"
+  ],
+  "bundleScheduleGrades": [
+   "B1",
+   "B2",
+   "B3",
+   "B4",
+   "B5",
+   "B6",
+   "B7",
+   "B8",
+   "B9"
+  ],
+  "intentionallyUnserved": {
+   "kindergarten": "KG1/KG2 indicators only (no lessons, no module planned yet)"
+  },
+  "modules": {
+   "career-technology": {
+    "capabilities": [
+     "lesson_plan",
+     "scheme_of_work"
+    ],
+    "file": "CareerTechnologyModule.ts",
+    "grades": [
+     "B7",
+     "B8",
+     "B9"
+    ]
+   },
+   "computing": {
+    "capabilities": [
+     "lesson_plan",
+     "scheme_of_work"
+    ],
+    "file": "ComputingModule.ts",
+    "grades": [
+     "B7",
+     "B8",
+     "B9"
+    ]
+   },
+   "creative-arts": {
+    "capabilities": [
+     "lesson_plan",
+     "scheme_of_work"
+    ],
+    "file": "CreativeArtsModule.ts",
+    "grades": [
+     "B2",
+     "B3",
+     "B4",
+     "B5",
+     "B6"
+    ]
+   },
+   "creative-arts-design": {
+    "capabilities": [
+     "lesson_plan",
+     "scheme_of_work"
+    ],
+    "file": "CreativeArtsDesignModule.ts",
+    "grades": [
+     "B7",
+     "B8",
+     "B9"
+    ]
+   },
+   "english-language": {
+    "capabilities": [
+     "lesson_plan",
+     "scheme_of_work"
+    ],
+    "file": "EnglishModule.ts",
+    "grades": [
+     "B2",
+     "B3",
+     "B4",
+     "B5",
+     "B6",
+     "B7",
+     "B8",
+     "B9"
+    ]
+   },
+   "french": {
+    "capabilities": [
+     "lesson_plan",
+     "scheme_of_work"
+    ],
+    "file": "FrenchModule.ts",
+    "grades": [
+     "B7",
+     "B8",
+     "B9"
+    ]
+   },
+   "ghanaian-language": {
+    "capabilities": [
+     "lesson_plan",
+     "scheme_of_work"
+    ],
+    "file": "GhanaianLanguageModule.ts",
+    "grades": [
+     "B2",
+     "B3",
+     "B4",
+     "B5",
+     "B6",
+     "B7",
+     "B8",
+     "B9"
+    ]
+   },
+   "history": {
+    "capabilities": [
+     "lesson_plan",
+     "scheme_of_work"
+    ],
+    "file": "HistoryModule.ts",
+    "grades": [
+     "B2",
+     "B3",
+     "B4",
+     "B5",
+     "B6"
+    ]
+   },
+   "math": {
+    "capabilities": [
+     "lesson_plan",
+     "scheme_of_work",
+     "questions"
+    ],
+    "file": "MathModule.ts",
+    "grades": [
+     "B4"
+    ]
+   },
+   "owop": {
+    "capabilities": [
+     "lesson_plan",
+     "scheme_of_work"
+    ],
+    "file": "OWOPModule.ts",
+    "grades": [
+     "B1"
+    ]
+   },
+   "rme": {
+    "capabilities": [
+     "lesson_plan",
+     "scheme_of_work"
+    ],
+    "file": "RMEModule.ts",
+    "grades": [
+     "B2",
+     "B3",
+     "B4",
+     "B5",
+     "B6",
+     "B7",
+     "B8",
+     "B9"
+    ]
+   },
+   "science": {
+    "capabilities": [
+     "lesson_plan",
+     "scheme_of_work"
+    ],
+    "file": "ScienceModule.ts",
+    "grades": [
+     "B2",
+     "B3",
+     "B4",
+     "B5",
+     "B6",
+     "B7",
+     "B8",
+     "B9"
+    ]
+   },
+   "social-studies": {
+    "capabilities": [
+     "lesson_plan",
+     "scheme_of_work"
+    ],
+    "file": "SocialStudiesModule.ts",
+    "grades": [
+     "B7",
+     "B8",
+     "B9"
+    ]
+   }
+  },
+  "notInBundle": []
+ },
+ "checks": {
+  "errors": [
+   "mathematics B1 exists in L1 (24 indicators) + L2 (180 lesson slots) + L3 (24 indicators) but no app module declares id 'mathematics'",
+   "mathematics B2 exists in L1 (29 indicators) + L2 (180 lesson slots) + L3 (29 indicators) but no app module declares id 'mathematics'",
+   "mathematics B3 exists in L1 (39 indicators) + L2 (180 lesson slots) + L3 (39 indicators) but no app module declares id 'mathematics'",
+   "mathematics B4 exists in L1 (71 indicators) + L2 (180 lesson slots) + L3 (71 indicators) but no app module declares id 'mathematics'",
+   "mathematics B5 exists in L1 (67 indicators) + L2 (180 lesson slots) + L3 (67 indicators) but no app module declares id 'mathematics'",
+   "mathematics B6 exists in L1 (42 indicators) + L2 (180 lesson slots) + L3 (42 indicators) but no app module declares id 'mathematics'",
+   "mathematics B7 exists in L1 (67 indicators) + L2 (180 lesson slots) + L3 (67 indicators) but no app module declares id 'mathematics'",
+   "mathematics B8 exists in L1 (49 indicators) + L2 (180 lesson slots) + L3 (49 indicators) but no app module declares id 'mathematics'",
+   "mathematics B9 exists in L1 (43 indicators) + L2 (180 lesson slots) + L3 (43 indicators) but no app module declares id 'mathematics'",
+   "MathModule.ts declares id 'math' which is not a dataset subject id (the dataset uses 'mathematics')"
+  ],
+  "warnings": [
+   "CareerTechnologyModule.ts does not declare 'record_of_work' although L2 has 540 lesson slots for it",
+   "CareerTechnologyModule.ts validate() returns [] unconditionally — boot cannot catch bad ids",
+   "ComputingModule.ts does not declare 'record_of_work' although L2 has 540 lesson slots for it",
+   "ComputingModule.ts validate() returns [] unconditionally — boot cannot catch bad ids",
+   "CreativeArtsDesignModule.ts does not declare 'record_of_work' although L2 has 540 lesson slots for it",
+   "CreativeArtsDesignModule.ts validate() returns [] unconditionally — boot cannot catch bad ids",
+   "CreativeArtsModule.ts does not declare 'record_of_work' although L2 has 1080 lesson slots for it",
+   "CreativeArtsModule.ts validate() returns [] unconditionally — boot cannot catch bad ids",
+   "EnglishModule.ts does not declare 'record_of_work' although L2 has 1620 lesson slots for it",
+   "EnglishModule.ts validate() returns [] unconditionally — boot cannot catch bad ids",
+   "FrenchModule.ts does not declare 'record_of_work' although L2 has 540 lesson slots for it",
+   "FrenchModule.ts validate() returns [] unconditionally — boot cannot catch bad ids",
+   "GhanaianLanguageModule.ts does not declare 'record_of_work' although L2 has 1620 lesson slots for it",
+   "GhanaianLanguageModule.ts validate() returns [] unconditionally — boot cannot catch bad ids",
+   "HistoryModule.ts does not declare 'record_of_work' although L2 has 1080 lesson slots for it",
+   "HistoryModule.ts validate() returns [] unconditionally — boot cannot catch bad ids",
+   "OWOPModule.ts does not declare 'record_of_work' although L2 has 180 lesson slots for it",
+   "OWOPModule.ts validate() returns [] unconditionally — boot cannot catch bad ids",
+   "RMEModule.ts does not declare 'record_of_work' although L2 has 1620 lesson slots for it",
+   "RMEModule.ts validate() returns [] unconditionally — boot cannot catch bad ids",
+   "ScienceModule.ts does not declare 'record_of_work' although L2 has 1620 lesson slots for it",
+   "ScienceModule.ts validate() returns [] unconditionally — boot cannot catch bad ids",
+   "SocialStudiesModule.ts does not declare 'record_of_work' although L2 has 540 lesson slots for it",
+   "SocialStudiesModule.ts validate() returns [] unconditionally — boot cannot catch bad ids",
+   "english-language B4: L1 database english-language_B4_curriculum_db_clean.json has no summary (no source URL, no counts)",
+   "english-language B5: L1 has a summary but no database in data/curriculum/ (the database only exists in data/reference/)",
+   "mathematics B1: L1 database math_curriculum_db_clean.json has no summary (no source URL, no counts)",
+   "science B1: L1 database science_curriculum_db_clean.json has no summary (no source URL, no counts)",
+   "8 app-bundle subject-grades exist ONLY in data/reference/ and have no audited L1 counterpart: computing B4, computing B5, computing B6, french B4, french B5, french B6, kindergarten KG1, kindergarten KG2",
+   "data/reference/ has 8 summary files with no counts block (e.g. computing_B4_curriculum_summary.json)",
+   "app/public/curriculum/questions/ does not exist, yet math declares the 'questions' capability"
+  ]
+ },
+ "generatedBy": "scripts/build_inventory.py",
+ "grades": [
+  {
+   "hasSchedules": false,
+   "id": "KG1",
+   "l1Indicators": 0,
+   "l1Subjects": 0,
+   "l2LessonSlots": 0,
+   "l2Subjects": 0,
+   "l3Indicators": 169,
+   "l3Subjects": 1,
+   "name": "KG 1"
+  },
+  {
+   "hasSchedules": false,
+   "id": "KG2",
+   "l1Indicators": 0,
+   "l1Subjects": 0,
+   "l2LessonSlots": 0,
+   "l2Subjects": 0,
+   "l3Indicators": 170,
+   "l3Subjects": 1,
+   "name": "KG 2"
+  },
+  {
+   "hasSchedules": true,
+   "id": "B1",
+   "l1Indicators": 287,
+   "l1Subjects": 8,
+   "l2LessonSlots": 1440,
+   "l2Subjects": 8,
+   "l3Indicators": 287,
+   "l3Subjects": 8,
+   "name": "Basic 1"
+  },
+  {
+   "hasSchedules": true,
+   "id": "B2",
+   "l1Indicators": 249,
+   "l1Subjects": 7,
+   "l2LessonSlots": 1260,
+   "l2Subjects": 7,
+   "l3Indicators": 249,
+   "l3Subjects": 7,
+   "name": "Basic 2"
+  },
+  {
+   "hasSchedules": true,
+   "id": "B3",
+   "l1Indicators": 276,
+   "l1Subjects": 7,
+   "l2LessonSlots": 1260,
+   "l2Subjects": 7,
+   "l3Indicators": 276,
+   "l3Subjects": 7,
+   "name": "Basic 3"
+  },
+  {
+   "hasSchedules": true,
+   "id": "B4",
+   "l1Indicators": 402,
+   "l1Subjects": 8,
+   "l2LessonSlots": 1260,
+   "l2Subjects": 7,
+   "l3Indicators": 517,
+   "l3Subjects": 10,
+   "name": "Basic 4"
+  },
+  {
+   "hasSchedules": true,
+   "id": "B5",
+   "l1Indicators": 286,
+   "l1Subjects": 7,
+   "l2LessonSlots": 1260,
+   "l2Subjects": 7,
+   "l3Indicators": 590,
+   "l3Subjects": 10,
+   "name": "Basic 5"
+  },
+  {
+   "hasSchedules": true,
+   "id": "B6",
+   "l1Indicators": 385,
+   "l1Subjects": 8,
+   "l2LessonSlots": 1260,
+   "l2Subjects": 7,
+   "l3Indicators": 572,
+   "l3Subjects": 10,
+   "name": "Basic 6"
+  },
+  {
+   "hasSchedules": true,
+   "id": "B7",
+   "l1Indicators": 454,
+   "l1Subjects": 10,
+   "l2LessonSlots": 1800,
+   "l2Subjects": 10,
+   "l3Indicators": 454,
+   "l3Subjects": 10,
+   "name": "Basic 7"
+  },
+  {
+   "hasSchedules": true,
+   "id": "B8",
+   "l1Indicators": 379,
+   "l1Subjects": 10,
+   "l2LessonSlots": 1800,
+   "l2Subjects": 10,
+   "l3Indicators": 379,
+   "l3Subjects": 10,
+   "name": "Basic 8"
+  },
+  {
+   "hasSchedules": true,
+   "id": "B9",
+   "l1Indicators": 377,
+   "l1Subjects": 10,
+   "l2LessonSlots": 1800,
+   "l2Subjects": 10,
+   "l3Indicators": 377,
+   "l3Subjects": 10,
+   "name": "Basic 9"
+  }
+ ],
+ "layers": {
+  "L1_curriculum": "data/curriculum/ — audited extraction (DB + summary)",
+  "L2_lessons": "data/lessons/ — teaching template filled per lesson slot",
+  "L3_bundle": "app/public/curriculum/ — what the React app serves",
+  "reference": "data/reference/ — second, partly-divergent copy; a silent fallback source, never a total"
+ },
+ "lessonFidelity": {
+  "acrossDataset": {
+   "assessment": 0.013,
+   "ind_desc": 0.242,
+   "main": 0.413,
+   "perf_indicator": 0.251,
+   "plenary": 0.007,
+   "rpk": 0.006,
+   "session_title": 0.155,
+   "starter": 0.753
+  },
+  "note": "distinct values / lesson slots per field. 1.0 = every slot bespoke; near 0 = one template value shared by every slot in that file.",
+  "perFile": {
+   "career_technology_b7_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.239,
+     "main": 0.833,
+     "perf_indicator": 0.239,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.144,
+     "starter": 0.867
+    }
+   },
+   "career_technology_b8_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.233,
+     "main": 0.678,
+     "perf_indicator": 0.233,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.383,
+     "starter": 0.867
+    }
+   },
+   "career_technology_b9_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.261,
+     "main": 0.822,
+     "perf_indicator": 0.261,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.178,
+     "starter": 0.867
+    }
+   },
+   "computing_b7_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.278,
+     "main": 0.911,
+     "perf_indicator": 0.278,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.111,
+     "starter": 1.0
+    }
+   },
+   "computing_b8_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.206,
+     "main": 0.711,
+     "perf_indicator": 0.206,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.172,
+     "starter": 1.0
+    }
+   },
+   "computing_b9_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.2,
+     "main": 0.711,
+     "perf_indicator": 0.2,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.156,
+     "starter": 0.933
+    }
+   },
+   "creative_arts_b2_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.233,
+     "main": 0.867,
+     "perf_indicator": 0.233,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.1,
+     "starter": 1.0
+    }
+   },
+   "creative_arts_b3_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.222,
+     "main": 0.844,
+     "perf_indicator": 0.222,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.1,
+     "starter": 1.0
+    }
+   },
+   "creative_arts_b4_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.261,
+     "main": 0.933,
+     "perf_indicator": 0.261,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.067,
+     "starter": 1.0
+    }
+   },
+   "creative_arts_b5_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.267,
+     "main": 0.933,
+     "perf_indicator": 0.267,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.067,
+     "starter": 1.0
+    }
+   },
+   "creative_arts_b6_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.256,
+     "main": 0.933,
+     "perf_indicator": 0.256,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.067,
+     "starter": 1.0
+    }
+   },
+   "creative_arts_design_b7_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.183,
+     "main": 0.733,
+     "perf_indicator": 0.183,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.094,
+     "starter": 1.0
+    }
+   },
+   "creative_arts_design_b8_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.189,
+     "main": 0.756,
+     "perf_indicator": 0.189,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.094,
+     "starter": 1.0
+    }
+   },
+   "creative_arts_design_b9_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.183,
+     "main": 0.733,
+     "perf_indicator": 0.183,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.1,
+     "starter": 1.0
+    }
+   },
+   "creative_arts_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.222,
+     "main": 0.022,
+     "perf_indicator": 0.222,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.1,
+     "starter": 0.2
+    }
+   },
+   "english_b2_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.372,
+     "main": 0.372,
+     "perf_indicator": 0.372,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.256,
+     "starter": 0.867
+    }
+   },
+   "english_b3_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.433,
+     "main": 0.433,
+     "perf_indicator": 0.433,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.233,
+     "starter": 0.867
+    }
+   },
+   "english_b4_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.706,
+     "main": 0.733,
+     "perf_indicator": 0.706,
+     "plenary": 0.011,
+     "rpk": 0.006,
+     "session_title": 0.05,
+     "starter": 0.933
+    }
+   },
+   "english_b5_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.717,
+     "main": 0.744,
+     "perf_indicator": 0.717,
+     "plenary": 0.011,
+     "rpk": 0.006,
+     "session_title": 0.05,
+     "starter": 0.961
+    }
+   },
+   "english_b6_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.711,
+     "main": 0.739,
+     "perf_indicator": 0.711,
+     "plenary": 0.011,
+     "rpk": 0.006,
+     "session_title": 0.05,
+     "starter": 0.922
+    }
+   },
+   "english_b7_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.294,
+     "main": 0.311,
+     "perf_indicator": 0.283,
+     "plenary": 0.011,
+     "rpk": 0.006,
+     "session_title": 0.083,
+     "starter": 0.833
+    }
+   },
+   "english_b8_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.272,
+     "main": 0.278,
+     "perf_indicator": 0.25,
+     "plenary": 0.011,
+     "rpk": 0.006,
+     "session_title": 0.072,
+     "starter": 0.567
+    }
+   },
+   "english_b9_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.278,
+     "main": 0.289,
+     "perf_indicator": 0.261,
+     "plenary": 0.011,
+     "rpk": 0.006,
+     "session_title": 0.083,
+     "starter": 0.7
+    }
+   },
+   "english_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.022,
+     "ind_desc": 0.4,
+     "main": 0.028,
+     "perf_indicator": 0.783,
+     "plenary": 0.028,
+     "rpk": 0.017,
+     "session_title": 0.256,
+     "starter": 0.206
+    }
+   },
+   "french_b7_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.356,
+     "main": 0.944,
+     "perf_indicator": 0.356,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.083,
+     "starter": 1.0
+    }
+   },
+   "french_b8_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.3,
+     "main": 0.856,
+     "perf_indicator": 0.3,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.117,
+     "starter": 0.967
+    }
+   },
+   "french_b9_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.267,
+     "main": 0.944,
+     "perf_indicator": 0.267,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.067,
+     "starter": 1.0
+    }
+   },
+   "ghanaian_b2_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.383,
+     "main": 0.383,
+     "perf_indicator": 0.383,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.156,
+     "starter": 0.867
+    }
+   },
+   "ghanaian_b3_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.4,
+     "main": 0.406,
+     "perf_indicator": 0.4,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.05,
+     "starter": 0.733
+    }
+   },
+   "ghanaian_b4_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.461,
+     "main": 0.478,
+     "perf_indicator": 0.45,
+     "plenary": 0.011,
+     "rpk": 0.006,
+     "session_title": 0.117,
+     "starter": 0.9
+    }
+   },
+   "ghanaian_b5_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.489,
+     "main": 0.45,
+     "perf_indicator": 0.444,
+     "plenary": 0.011,
+     "rpk": 0.006,
+     "session_title": 0.067,
+     "starter": 0.911
+    }
+   },
+   "ghanaian_b6_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.506,
+     "main": 0.45,
+     "perf_indicator": 0.444,
+     "plenary": 0.011,
+     "rpk": 0.006,
+     "session_title": 0.094,
+     "starter": 0.844
+    }
+   },
+   "ghanaian_b7_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.267,
+     "main": 0.267,
+     "perf_indicator": 0.267,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.161,
+     "starter": 0.733
+    }
+   },
+   "ghanaian_b8_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.15,
+     "main": 0.156,
+     "perf_indicator": 0.15,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.233,
+     "starter": 0.583
+    }
+   },
+   "ghanaian_b9_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.156,
+     "main": 0.156,
+     "perf_indicator": 0.156,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.25,
+     "starter": 0.533
+    }
+   },
+   "ghanaian_language_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.422,
+     "main": 0.022,
+     "perf_indicator": 0.817,
+     "plenary": 0.022,
+     "rpk": 0.022,
+     "session_title": 0.133,
+     "starter": 0.161
+    }
+   },
+   "history_b2_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.022,
+     "main": 0.089,
+     "perf_indicator": 0.022,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.25,
+     "starter": 0.867
+    }
+   },
+   "history_b3_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.039,
+     "main": 0.156,
+     "perf_indicator": 0.039,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.283,
+     "starter": 0.867
+    }
+   },
+   "history_b4_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.056,
+     "main": 0.222,
+     "perf_indicator": 0.056,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.1,
+     "starter": 0.667
+    }
+   },
+   "history_b5_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.072,
+     "main": 0.289,
+     "perf_indicator": 0.072,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.15,
+     "starter": 1.0
+    }
+   },
+   "history_b6_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.05,
+     "main": 0.2,
+     "perf_indicator": 0.05,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.111,
+     "starter": 1.0
+    }
+   },
+   "history_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.044,
+     "ind_desc": 0.044,
+     "main": 0.044,
+     "perf_indicator": 0.044,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.4,
+     "starter": 0.033
+    }
+   },
+   "math_b2_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.161,
+     "main": 0.161,
+     "perf_indicator": 0.161,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.15,
+     "starter": 0.6
+    }
+   },
+   "math_b3_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.217,
+     "main": 0.217,
+     "perf_indicator": 0.217,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.15,
+     "starter": 0.8
+    }
+   },
+   "math_b4_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.389,
+     "main": 0.394,
+     "perf_indicator": 0.389,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.061,
+     "starter": 0.867
+    }
+   },
+   "math_b5_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.372,
+     "main": 0.372,
+     "perf_indicator": 0.372,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.089,
+     "starter": 0.867
+    }
+   },
+   "math_b6_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.233,
+     "main": 0.233,
+     "perf_indicator": 0.233,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.139,
+     "starter": 0.6
+    }
+   },
+   "math_b7_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.372,
+     "main": 0.372,
+     "perf_indicator": 0.372,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.083,
+     "starter": 0.933
+    }
+   },
+   "math_b8_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.272,
+     "main": 0.272,
+     "perf_indicator": 0.272,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.1,
+     "starter": 0.867
+    }
+   },
+   "math_b9_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.239,
+     "main": 0.239,
+     "perf_indicator": 0.239,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.1,
+     "starter": 0.667
+    }
+   },
+   "math_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.133,
+     "ind_desc": 0.411,
+     "main": 0.028,
+     "perf_indicator": 0.256,
+     "plenary": 0.028,
+     "rpk": 0.006,
+     "session_title": 0.022,
+     "starter": 0.2
+    }
+   },
+   "owop_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.133,
+     "ind_desc": 0.133,
+     "main": 0.133,
+     "perf_indicator": 0.133,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.083,
+     "starter": 0.111
+    }
+   },
+   "rme_b2_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.072,
+     "main": 0.289,
+     "perf_indicator": 0.072,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.217,
+     "starter": 0.667
+    }
+   },
+   "rme_b3_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.078,
+     "main": 0.311,
+     "perf_indicator": 0.078,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.15,
+     "starter": 0.8
+    }
+   },
+   "rme_b4_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.072,
+     "main": 0.289,
+     "perf_indicator": 0.072,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.417,
+     "starter": 0.533
+    }
+   },
+   "rme_b5_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.083,
+     "main": 0.333,
+     "perf_indicator": 0.083,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.25,
+     "starter": 0.6
+    }
+   },
+   "rme_b6_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.072,
+     "main": 0.289,
+     "perf_indicator": 0.072,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.217,
+     "starter": 0.667
+    }
+   },
+   "rme_b7_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.15,
+     "main": 0.6,
+     "perf_indicator": 0.15,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.2,
+     "starter": 0.9
+    }
+   },
+   "rme_b8_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.122,
+     "main": 0.456,
+     "perf_indicator": 0.122,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.267,
+     "starter": 0.6
+    }
+   },
+   "rme_b9_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.106,
+     "main": 0.422,
+     "perf_indicator": 0.106,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.283,
+     "starter": 0.5
+    }
+   },
+   "rme_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.05,
+     "ind_desc": 0.05,
+     "main": 0.05,
+     "perf_indicator": 0.05,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.5,
+     "starter": 0.05
+    }
+   },
+   "science_b2_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.139,
+     "main": 0.139,
+     "perf_indicator": 0.139,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.211,
+     "starter": 0.467
+    }
+   },
+   "science_b3_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.139,
+     "main": 0.139,
+     "perf_indicator": 0.139,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.183,
+     "starter": 0.6
+    }
+   },
+   "science_b4_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.133,
+     "main": 0.133,
+     "perf_indicator": 0.133,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.183,
+     "starter": 0.733
+    }
+   },
+   "science_b5_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.161,
+     "main": 0.161,
+     "perf_indicator": 0.161,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.233,
+     "starter": 0.867
+    }
+   },
+   "science_b6_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.144,
+     "main": 0.144,
+     "perf_indicator": 0.144,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.283,
+     "starter": 0.533
+    }
+   },
+   "science_b7_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.289,
+     "main": 0.289,
+     "perf_indicator": 0.289,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.089,
+     "starter": 0.733
+    }
+   },
+   "science_b8_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.256,
+     "main": 0.256,
+     "perf_indicator": 0.256,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.111,
+     "starter": 0.867
+    }
+   },
+   "science_b9_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.3,
+     "main": 0.3,
+     "perf_indicator": 0.3,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.111,
+     "starter": 0.867
+    }
+   },
+   "science_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.172,
+     "ind_desc": 0.172,
+     "main": 0.078,
+     "perf_indicator": 0.317,
+     "plenary": 0.017,
+     "rpk": 0.028,
+     "session_title": 0.3,
+     "starter": 0.239
+    }
+   },
+   "social_studies_b7_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.094,
+     "main": 0.378,
+     "perf_indicator": 0.094,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.117,
+     "starter": 1.0
+    }
+   },
+   "social_studies_b8_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.1,
+     "main": 0.4,
+     "perf_indicator": 0.1,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.056,
+     "starter": 1.0
+    }
+   },
+   "social_studies_b9_lessons_enriched.json": {
+    "lessons": 180,
+    "ratio": {
+     "assessment": 0.006,
+     "ind_desc": 0.106,
+     "main": 0.422,
+     "perf_indicator": 0.106,
+     "plenary": 0.006,
+     "rpk": 0.006,
+     "session_title": 0.106,
+     "starter": 1.0
+    }
+   }
+  }
+ },
+ "schema": 3,
+ "subjectGrades": [
+  {
+   "grade": "B7",
+   "l1Indicators": 43,
+   "l1SummaryIndicators": 43,
+   "l2IndicatorsScheduled": 43,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 43,
+   "refIndicators": 43,
+   "referenceOnly": false,
+   "subjectId": "career-technology",
+   "subjectName": "Career Technology"
+  },
+  {
+   "grade": "B8",
+   "l1Indicators": 42,
+   "l1SummaryIndicators": 42,
+   "l2IndicatorsScheduled": 42,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 42,
+   "refIndicators": 42,
+   "referenceOnly": false,
+   "subjectId": "career-technology",
+   "subjectName": "Career Technology"
+  },
+  {
+   "grade": "B9",
+   "l1Indicators": 47,
+   "l1SummaryIndicators": 47,
+   "l2IndicatorsScheduled": 47,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 47,
+   "refIndicators": 47,
+   "referenceOnly": false,
+   "subjectId": "career-technology",
+   "subjectName": "Career Technology"
+  },
+  {
+   "grade": "B4",
+   "l1Indicators": null,
+   "l1SummaryIndicators": null,
+   "l2IndicatorsScheduled": 0,
+   "l2LessonSlots": 0,
+   "l3BundleIndicators": 27,
+   "refIndicators": 27,
+   "referenceOnly": true,
+   "subjectId": "computing",
+   "subjectName": "computing"
+  },
+  {
+   "grade": "B5",
+   "l1Indicators": null,
+   "l1SummaryIndicators": null,
+   "l2IndicatorsScheduled": 0,
+   "l2LessonSlots": 0,
+   "l3BundleIndicators": 81,
+   "refIndicators": 81,
+   "referenceOnly": true,
+   "subjectId": "computing",
+   "subjectName": "computing"
+  },
+  {
+   "grade": "B6",
+   "l1Indicators": null,
+   "l1SummaryIndicators": null,
+   "l2IndicatorsScheduled": 0,
+   "l2LessonSlots": 0,
+   "l3BundleIndicators": 98,
+   "refIndicators": 98,
+   "referenceOnly": true,
+   "subjectId": "computing",
+   "subjectName": "computing"
+  },
+  {
+   "grade": "B7",
+   "l1Indicators": 50,
+   "l1SummaryIndicators": 50,
+   "l2IndicatorsScheduled": 50,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 50,
+   "refIndicators": 50,
+   "referenceOnly": false,
+   "subjectId": "computing",
+   "subjectName": "Computing"
+  },
+  {
+   "grade": "B8",
+   "l1Indicators": 37,
+   "l1SummaryIndicators": 37,
+   "l2IndicatorsScheduled": 37,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 37,
+   "refIndicators": 37,
+   "referenceOnly": false,
+   "subjectId": "computing",
+   "subjectName": "Computing"
+  },
+  {
+   "grade": "B9",
+   "l1Indicators": 36,
+   "l1SummaryIndicators": 36,
+   "l2IndicatorsScheduled": 36,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 36,
+   "refIndicators": 36,
+   "referenceOnly": false,
+   "subjectId": "computing",
+   "subjectName": "Computing"
+  },
+  {
+   "grade": "B1",
+   "l1Indicators": 42,
+   "l1SummaryIndicators": 42,
+   "l2IndicatorsScheduled": 42,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 42,
+   "refIndicators": 42,
+   "referenceOnly": false,
+   "subjectId": "creative-arts",
+   "subjectName": "Creative Arts"
+  },
+  {
+   "grade": "B2",
+   "l1Indicators": 42,
+   "l1SummaryIndicators": 42,
+   "l2IndicatorsScheduled": 42,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 42,
+   "refIndicators": 42,
+   "referenceOnly": false,
+   "subjectId": "creative-arts",
+   "subjectName": "Creative Arts"
+  },
+  {
+   "grade": "B3",
+   "l1Indicators": 40,
+   "l1SummaryIndicators": 40,
+   "l2IndicatorsScheduled": 40,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 40,
+   "refIndicators": 42,
+   "referenceOnly": false,
+   "subjectId": "creative-arts",
+   "subjectName": "Creative Arts"
+  },
+  {
+   "grade": "B4",
+   "l1Indicators": 47,
+   "l1SummaryIndicators": 47,
+   "l2IndicatorsScheduled": 47,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 47,
+   "refIndicators": 47,
+   "referenceOnly": false,
+   "subjectId": "creative-arts",
+   "subjectName": "Creative Arts"
+  },
+  {
+   "grade": "B5",
+   "l1Indicators": 48,
+   "l1SummaryIndicators": 48,
+   "l2IndicatorsScheduled": 48,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 48,
+   "refIndicators": 48,
+   "referenceOnly": false,
+   "subjectId": "creative-arts",
+   "subjectName": "Creative Arts"
+  },
+  {
+   "grade": "B6",
+   "l1Indicators": 46,
+   "l1SummaryIndicators": 46,
+   "l2IndicatorsScheduled": 46,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 46,
+   "refIndicators": 46,
+   "referenceOnly": false,
+   "subjectId": "creative-arts",
+   "subjectName": "Creative Arts"
+  },
+  {
+   "grade": "B7",
+   "l1Indicators": 33,
+   "l1SummaryIndicators": 33,
+   "l2IndicatorsScheduled": 33,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 33,
+   "refIndicators": 33,
+   "referenceOnly": false,
+   "subjectId": "creative-arts-design",
+   "subjectName": "Creative Arts and Design"
+  },
+  {
+   "grade": "B8",
+   "l1Indicators": 34,
+   "l1SummaryIndicators": 34,
+   "l2IndicatorsScheduled": 34,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 34,
+   "refIndicators": 34,
+   "referenceOnly": false,
+   "subjectId": "creative-arts-design",
+   "subjectName": "Creative Arts and Design"
+  },
+  {
+   "grade": "B9",
+   "l1Indicators": 33,
+   "l1SummaryIndicators": 33,
+   "l2IndicatorsScheduled": 33,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 33,
+   "refIndicators": 33,
+   "referenceOnly": false,
+   "subjectId": "creative-arts-design",
+   "subjectName": "Creative Arts and Design"
+  },
+  {
+   "grade": "B1",
+   "l1Indicators": 72,
+   "l1SummaryIndicators": 72,
+   "l2IndicatorsScheduled": 72,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 72,
+   "refIndicators": 72,
+   "referenceOnly": false,
+   "subjectId": "english-language",
+   "subjectName": "English Language"
+  },
+  {
+   "grade": "B2",
+   "l1Indicators": 67,
+   "l1SummaryIndicators": 67,
+   "l2IndicatorsScheduled": 67,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 67,
+   "refIndicators": 67,
+   "referenceOnly": false,
+   "subjectId": "english-language",
+   "subjectName": "English Language"
+  },
+  {
+   "grade": "B3",
+   "l1Indicators": 78,
+   "l1SummaryIndicators": 78,
+   "l2IndicatorsScheduled": 78,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 78,
+   "refIndicators": 78,
+   "referenceOnly": false,
+   "subjectId": "english-language",
+   "subjectName": "English Language"
+  },
+  {
+   "grade": "B4",
+   "l1Indicators": 129,
+   "l1SummaryIndicators": null,
+   "l2IndicatorsScheduled": 129,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 129,
+   "refIndicators": 129,
+   "referenceOnly": false,
+   "subjectId": "english-language",
+   "subjectName": "english-language"
+  },
+  {
+   "grade": "B5",
+   "l1Indicators": null,
+   "l1SummaryIndicators": 133,
+   "l2IndicatorsScheduled": 133,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 133,
+   "refIndicators": 133,
+   "referenceOnly": false,
+   "subjectId": "english-language",
+   "subjectName": "English Language"
+  },
+  {
+   "grade": "B6",
+   "l1Indicators": 131,
+   "l1SummaryIndicators": 131,
+   "l2IndicatorsScheduled": 131,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 131,
+   "refIndicators": 131,
+   "referenceOnly": false,
+   "subjectId": "english-language",
+   "subjectName": "English Language"
+  },
+  {
+   "grade": "B7",
+   "l1Indicators": 53,
+   "l1SummaryIndicators": 53,
+   "l2IndicatorsScheduled": 53,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 53,
+   "refIndicators": 53,
+   "referenceOnly": false,
+   "subjectId": "english-language",
+   "subjectName": "English Language"
+  },
+  {
+   "grade": "B8",
+   "l1Indicators": 49,
+   "l1SummaryIndicators": 49,
+   "l2IndicatorsScheduled": 49,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 49,
+   "refIndicators": 49,
+   "referenceOnly": false,
+   "subjectId": "english-language",
+   "subjectName": "English Language"
+  },
+  {
+   "grade": "B9",
+   "l1Indicators": 50,
+   "l1SummaryIndicators": 50,
+   "l2IndicatorsScheduled": 50,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 50,
+   "refIndicators": 50,
+   "referenceOnly": false,
+   "subjectId": "english-language",
+   "subjectName": "English Language"
+  },
+  {
+   "grade": "B4",
+   "l1Indicators": null,
+   "l1SummaryIndicators": null,
+   "l2IndicatorsScheduled": 0,
+   "l2LessonSlots": 0,
+   "l3BundleIndicators": 88,
+   "refIndicators": 88,
+   "referenceOnly": true,
+   "subjectId": "french",
+   "subjectName": "french"
+  },
+  {
+   "grade": "B5",
+   "l1Indicators": null,
+   "l1SummaryIndicators": null,
+   "l2IndicatorsScheduled": 0,
+   "l2LessonSlots": 0,
+   "l3BundleIndicators": 90,
+   "refIndicators": 90,
+   "referenceOnly": true,
+   "subjectId": "french",
+   "subjectName": "french"
+  },
+  {
+   "grade": "B6",
+   "l1Indicators": null,
+   "l1SummaryIndicators": null,
+   "l2IndicatorsScheduled": 0,
+   "l2LessonSlots": 0,
+   "l3BundleIndicators": 89,
+   "refIndicators": 89,
+   "referenceOnly": true,
+   "subjectId": "french",
+   "subjectName": "french"
+  },
+  {
+   "grade": "B7",
+   "l1Indicators": 64,
+   "l1SummaryIndicators": 64,
+   "l2IndicatorsScheduled": 64,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 64,
+   "refIndicators": 65,
+   "referenceOnly": false,
+   "subjectId": "french",
+   "subjectName": "French"
+  },
+  {
+   "grade": "B8",
+   "l1Indicators": 54,
+   "l1SummaryIndicators": 54,
+   "l2IndicatorsScheduled": 54,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 54,
+   "refIndicators": 54,
+   "referenceOnly": false,
+   "subjectId": "french",
+   "subjectName": "French"
+  },
+  {
+   "grade": "B9",
+   "l1Indicators": 48,
+   "l1SummaryIndicators": 48,
+   "l2IndicatorsScheduled": 48,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 48,
+   "refIndicators": 48,
+   "referenceOnly": false,
+   "subjectId": "french",
+   "subjectName": "French"
+  },
+  {
+   "grade": "B1",
+   "l1Indicators": 77,
+   "l1SummaryIndicators": 77,
+   "l2IndicatorsScheduled": 77,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 77,
+   "refIndicators": 77,
+   "referenceOnly": false,
+   "subjectId": "ghanaian-language",
+   "subjectName": "Ghanaian Language"
+  },
+  {
+   "grade": "B2",
+   "l1Indicators": 69,
+   "l1SummaryIndicators": 69,
+   "l2IndicatorsScheduled": 69,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 69,
+   "refIndicators": 69,
+   "referenceOnly": false,
+   "subjectId": "ghanaian-language",
+   "subjectName": "Ghanaian Language"
+  },
+  {
+   "grade": "B3",
+   "l1Indicators": 73,
+   "l1SummaryIndicators": 73,
+   "l2IndicatorsScheduled": 73,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 73,
+   "refIndicators": 73,
+   "referenceOnly": false,
+   "subjectId": "ghanaian-language",
+   "subjectName": "Ghanaian Language"
+  },
+  {
+   "grade": "B4",
+   "l1Indicators": 83,
+   "l1SummaryIndicators": 83,
+   "l2IndicatorsScheduled": 83,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 83,
+   "refIndicators": 83,
+   "referenceOnly": false,
+   "subjectId": "ghanaian-language",
+   "subjectName": "Ghanaian Language"
+  },
+  {
+   "grade": "B5",
+   "l1Indicators": 89,
+   "l1SummaryIndicators": 89,
+   "l2IndicatorsScheduled": 89,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 89,
+   "refIndicators": 88,
+   "referenceOnly": false,
+   "subjectId": "ghanaian-language",
+   "subjectName": "Ghanaian Language"
+  },
+  {
+   "grade": "B6",
+   "l1Indicators": 94,
+   "l1SummaryIndicators": 94,
+   "l2IndicatorsScheduled": 94,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 94,
+   "refIndicators": 94,
+   "referenceOnly": false,
+   "subjectId": "ghanaian-language",
+   "subjectName": "Ghanaian Language"
+  },
+  {
+   "grade": "B7",
+   "l1Indicators": 48,
+   "l1SummaryIndicators": 48,
+   "l2IndicatorsScheduled": 48,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 48,
+   "refIndicators": 49,
+   "referenceOnly": false,
+   "subjectId": "ghanaian-language",
+   "subjectName": "Ghanaian Language"
+  },
+  {
+   "grade": "B8",
+   "l1Indicators": 28,
+   "l1SummaryIndicators": 28,
+   "l2IndicatorsScheduled": 28,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 28,
+   "refIndicators": 28,
+   "referenceOnly": false,
+   "subjectId": "ghanaian-language",
+   "subjectName": "Ghanaian Language"
+  },
+  {
+   "grade": "B9",
+   "l1Indicators": 28,
+   "l1SummaryIndicators": 28,
+   "l2IndicatorsScheduled": 28,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 28,
+   "refIndicators": 28,
+   "referenceOnly": false,
+   "subjectId": "ghanaian-language",
+   "subjectName": "Ghanaian Language"
+  },
+  {
+   "grade": "B1",
+   "l1Indicators": 8,
+   "l1SummaryIndicators": 8,
+   "l2IndicatorsScheduled": 8,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 8,
+   "refIndicators": 8,
+   "referenceOnly": false,
+   "subjectId": "history",
+   "subjectName": "History"
+  },
+  {
+   "grade": "B2",
+   "l1Indicators": 4,
+   "l1SummaryIndicators": 4,
+   "l2IndicatorsScheduled": 4,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 4,
+   "refIndicators": 4,
+   "referenceOnly": false,
+   "subjectId": "history",
+   "subjectName": "History"
+  },
+  {
+   "grade": "B3",
+   "l1Indicators": 7,
+   "l1SummaryIndicators": 7,
+   "l2IndicatorsScheduled": 7,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 7,
+   "refIndicators": 6,
+   "referenceOnly": false,
+   "subjectId": "history",
+   "subjectName": "History"
+  },
+  {
+   "grade": "B4",
+   "l1Indicators": 10,
+   "l1SummaryIndicators": 10,
+   "l2IndicatorsScheduled": 10,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 10,
+   "refIndicators": 11,
+   "referenceOnly": false,
+   "subjectId": "history",
+   "subjectName": "History"
+  },
+  {
+   "grade": "B5",
+   "l1Indicators": 13,
+   "l1SummaryIndicators": 13,
+   "l2IndicatorsScheduled": 13,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 13,
+   "refIndicators": 12,
+   "referenceOnly": false,
+   "subjectId": "history",
+   "subjectName": "History"
+  },
+  {
+   "grade": "B6",
+   "l1Indicators": 9,
+   "l1SummaryIndicators": 9,
+   "l2IndicatorsScheduled": 9,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 9,
+   "refIndicators": 9,
+   "referenceOnly": false,
+   "subjectId": "history",
+   "subjectName": "History"
+  },
+  {
+   "grade": "KG1",
+   "l1Indicators": null,
+   "l1SummaryIndicators": null,
+   "l2IndicatorsScheduled": 0,
+   "l2LessonSlots": 0,
+   "l3BundleIndicators": 169,
+   "refIndicators": 169,
+   "referenceOnly": true,
+   "subjectId": "kindergarten",
+   "subjectName": "kindergarten"
+  },
+  {
+   "grade": "KG2",
+   "l1Indicators": null,
+   "l1SummaryIndicators": null,
+   "l2IndicatorsScheduled": 0,
+   "l2LessonSlots": 0,
+   "l3BundleIndicators": 170,
+   "refIndicators": 170,
+   "referenceOnly": true,
+   "subjectId": "kindergarten",
+   "subjectName": "kindergarten"
+  },
+  {
+   "grade": "B1",
+   "l1Indicators": 24,
+   "l1SummaryIndicators": null,
+   "l2IndicatorsScheduled": 24,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 24,
+   "refIndicators": 24,
+   "referenceOnly": false,
+   "subjectId": "mathematics",
+   "subjectName": "mathematics"
+  },
+  {
+   "grade": "B2",
+   "l1Indicators": 29,
+   "l1SummaryIndicators": 29,
+   "l2IndicatorsScheduled": 29,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 29,
+   "refIndicators": 29,
+   "referenceOnly": false,
+   "subjectId": "mathematics",
+   "subjectName": "Mathematics"
+  },
+  {
+   "grade": "B3",
+   "l1Indicators": 39,
+   "l1SummaryIndicators": 39,
+   "l2IndicatorsScheduled": 39,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 39,
+   "refIndicators": 39,
+   "referenceOnly": false,
+   "subjectId": "mathematics",
+   "subjectName": "Mathematics"
+  },
+  {
+   "grade": "B4",
+   "l1Indicators": 71,
+   "l1SummaryIndicators": 71,
+   "l2IndicatorsScheduled": 71,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 71,
+   "refIndicators": 71,
+   "referenceOnly": false,
+   "subjectId": "mathematics",
+   "subjectName": "Mathematics"
+  },
+  {
+   "grade": "B5",
+   "l1Indicators": 67,
+   "l1SummaryIndicators": 67,
+   "l2IndicatorsScheduled": 67,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 67,
+   "refIndicators": 67,
+   "referenceOnly": false,
+   "subjectId": "mathematics",
+   "subjectName": "Mathematics"
+  },
+  {
+   "grade": "B6",
+   "l1Indicators": 42,
+   "l1SummaryIndicators": 42,
+   "l2IndicatorsScheduled": 42,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 42,
+   "refIndicators": 42,
+   "referenceOnly": false,
+   "subjectId": "mathematics",
+   "subjectName": "Mathematics"
+  },
+  {
+   "grade": "B7",
+   "l1Indicators": 67,
+   "l1SummaryIndicators": 67,
+   "l2IndicatorsScheduled": 67,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 67,
+   "refIndicators": 63,
+   "referenceOnly": false,
+   "subjectId": "mathematics",
+   "subjectName": "Mathematics"
+  },
+  {
+   "grade": "B8",
+   "l1Indicators": 49,
+   "l1SummaryIndicators": 49,
+   "l2IndicatorsScheduled": 49,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 49,
+   "refIndicators": 52,
+   "referenceOnly": false,
+   "subjectId": "mathematics",
+   "subjectName": "Mathematics"
+  },
+  {
+   "grade": "B9",
+   "l1Indicators": 43,
+   "l1SummaryIndicators": 43,
+   "l2IndicatorsScheduled": 43,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 43,
+   "refIndicators": 49,
+   "referenceOnly": false,
+   "subjectId": "mathematics",
+   "subjectName": "Mathematics"
+  },
+  {
+   "grade": "B1",
+   "l1Indicators": 24,
+   "l1SummaryIndicators": 24,
+   "l2IndicatorsScheduled": 24,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 24,
+   "refIndicators": 24,
+   "referenceOnly": false,
+   "subjectId": "owop",
+   "subjectName": "Our World Our People"
+  },
+  {
+   "grade": "B4",
+   "l1Indicators": 25,
+   "l1SummaryIndicators": 25,
+   "l2IndicatorsScheduled": 0,
+   "l2LessonSlots": 0,
+   "l3BundleIndicators": 25,
+   "refIndicators": 25,
+   "referenceOnly": false,
+   "subjectId": "owop",
+   "subjectName": "Our World Our People"
+  },
+  {
+   "grade": "B5",
+   "l1Indicators": 25,
+   "l1SummaryIndicators": 25,
+   "l2IndicatorsScheduled": 0,
+   "l2LessonSlots": 0,
+   "l3BundleIndicators": 25,
+   "refIndicators": 25,
+   "referenceOnly": false,
+   "subjectId": "owop",
+   "subjectName": "Our World Our People"
+  },
+  {
+   "grade": "B6",
+   "l1Indicators": 24,
+   "l1SummaryIndicators": 24,
+   "l2IndicatorsScheduled": 0,
+   "l2LessonSlots": 0,
+   "l3BundleIndicators": 24,
+   "refIndicators": 24,
+   "referenceOnly": false,
+   "subjectId": "owop",
+   "subjectName": "Our World Our People"
+  },
+  {
+   "grade": "B1",
+   "l1Indicators": 9,
+   "l1SummaryIndicators": 9,
+   "l2IndicatorsScheduled": 9,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 9,
+   "refIndicators": 9,
+   "referenceOnly": false,
+   "subjectId": "rme",
+   "subjectName": "Religious and Moral Education"
+  },
+  {
+   "grade": "B2",
+   "l1Indicators": 13,
+   "l1SummaryIndicators": 13,
+   "l2IndicatorsScheduled": 13,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 13,
+   "refIndicators": 12,
+   "referenceOnly": false,
+   "subjectId": "rme",
+   "subjectName": "Religious and Moral Education"
+  },
+  {
+   "grade": "B3",
+   "l1Indicators": 14,
+   "l1SummaryIndicators": 14,
+   "l2IndicatorsScheduled": 14,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 14,
+   "refIndicators": 11,
+   "referenceOnly": false,
+   "subjectId": "rme",
+   "subjectName": "Religious and Moral Education"
+  },
+  {
+   "grade": "B4",
+   "l1Indicators": 13,
+   "l1SummaryIndicators": 13,
+   "l2IndicatorsScheduled": 13,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 13,
+   "refIndicators": 13,
+   "referenceOnly": false,
+   "subjectId": "rme",
+   "subjectName": "Religious and Moral Education"
+  },
+  {
+   "grade": "B5",
+   "l1Indicators": 15,
+   "l1SummaryIndicators": 15,
+   "l2IndicatorsScheduled": 15,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 15,
+   "refIndicators": 15,
+   "referenceOnly": false,
+   "subjectId": "rme",
+   "subjectName": "Religious and Moral Education"
+  },
+  {
+   "grade": "B6",
+   "l1Indicators": 13,
+   "l1SummaryIndicators": 13,
+   "l2IndicatorsScheduled": 13,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 13,
+   "refIndicators": 13,
+   "referenceOnly": false,
+   "subjectId": "rme",
+   "subjectName": "Religious and Moral Education"
+  },
+  {
+   "grade": "B7",
+   "l1Indicators": 27,
+   "l1SummaryIndicators": 27,
+   "l2IndicatorsScheduled": 27,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 27,
+   "refIndicators": 27,
+   "referenceOnly": false,
+   "subjectId": "rme",
+   "subjectName": "Religious and Moral Education"
+  },
+  {
+   "grade": "B8",
+   "l1Indicators": 22,
+   "l1SummaryIndicators": 22,
+   "l2IndicatorsScheduled": 22,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 22,
+   "refIndicators": 22,
+   "referenceOnly": false,
+   "subjectId": "rme",
+   "subjectName": "Religious and Moral Education"
+  },
+  {
+   "grade": "B9",
+   "l1Indicators": 19,
+   "l1SummaryIndicators": 19,
+   "l2IndicatorsScheduled": 19,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 19,
+   "refIndicators": 19,
+   "referenceOnly": false,
+   "subjectId": "rme",
+   "subjectName": "Religious and Moral Education"
+  },
+  {
+   "grade": "B1",
+   "l1Indicators": 31,
+   "l1SummaryIndicators": null,
+   "l2IndicatorsScheduled": 31,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 31,
+   "refIndicators": 31,
+   "referenceOnly": false,
+   "subjectId": "science",
+   "subjectName": "science"
+  },
+  {
+   "grade": "B2",
+   "l1Indicators": 25,
+   "l1SummaryIndicators": 25,
+   "l2IndicatorsScheduled": 25,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 25,
+   "refIndicators": 25,
+   "referenceOnly": false,
+   "subjectId": "science",
+   "subjectName": "Science"
+  },
+  {
+   "grade": "B3",
+   "l1Indicators": 25,
+   "l1SummaryIndicators": 25,
+   "l2IndicatorsScheduled": 25,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 25,
+   "refIndicators": 26,
+   "referenceOnly": false,
+   "subjectId": "science",
+   "subjectName": "Science"
+  },
+  {
+   "grade": "B4",
+   "l1Indicators": 24,
+   "l1SummaryIndicators": 24,
+   "l2IndicatorsScheduled": 24,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 24,
+   "refIndicators": 25,
+   "referenceOnly": false,
+   "subjectId": "science",
+   "subjectName": "Science"
+  },
+  {
+   "grade": "B5",
+   "l1Indicators": 29,
+   "l1SummaryIndicators": 29,
+   "l2IndicatorsScheduled": 29,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 29,
+   "refIndicators": 29,
+   "referenceOnly": false,
+   "subjectId": "science",
+   "subjectName": "Science"
+  },
+  {
+   "grade": "B6",
+   "l1Indicators": 26,
+   "l1SummaryIndicators": 26,
+   "l2IndicatorsScheduled": 26,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 26,
+   "refIndicators": 26,
+   "referenceOnly": false,
+   "subjectId": "science",
+   "subjectName": "Science"
+  },
+  {
+   "grade": "B7",
+   "l1Indicators": 52,
+   "l1SummaryIndicators": 52,
+   "l2IndicatorsScheduled": 52,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 52,
+   "refIndicators": 52,
+   "referenceOnly": false,
+   "subjectId": "science",
+   "subjectName": "Science"
+  },
+  {
+   "grade": "B8",
+   "l1Indicators": 46,
+   "l1SummaryIndicators": 46,
+   "l2IndicatorsScheduled": 46,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 46,
+   "refIndicators": 46,
+   "referenceOnly": false,
+   "subjectId": "science",
+   "subjectName": "Science"
+  },
+  {
+   "grade": "B9",
+   "l1Indicators": 54,
+   "l1SummaryIndicators": 54,
+   "l2IndicatorsScheduled": 54,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 54,
+   "refIndicators": 54,
+   "referenceOnly": false,
+   "subjectId": "science",
+   "subjectName": "Science"
+  },
+  {
+   "grade": "B7",
+   "l1Indicators": 17,
+   "l1SummaryIndicators": 17,
+   "l2IndicatorsScheduled": 17,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 17,
+   "refIndicators": 18,
+   "referenceOnly": false,
+   "subjectId": "social-studies",
+   "subjectName": "Social Studies"
+  },
+  {
+   "grade": "B8",
+   "l1Indicators": 18,
+   "l1SummaryIndicators": 18,
+   "l2IndicatorsScheduled": 18,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 18,
+   "refIndicators": 11,
+   "referenceOnly": false,
+   "subjectId": "social-studies",
+   "subjectName": "Social Studies"
+  },
+  {
+   "grade": "B9",
+   "l1Indicators": 19,
+   "l1SummaryIndicators": 19,
+   "l2IndicatorsScheduled": 19,
+   "l2LessonSlots": 180,
+   "l3BundleIndicators": 19,
+   "refIndicators": 12,
+   "referenceOnly": false,
+   "subjectId": "social-studies",
+   "subjectName": "Social Studies"
+  }
+ ],
+ "subjects": [
+  {
+   "grades": [
+    "B7",
+    "B8",
+    "B9"
+   ],
+   "id": "career-technology",
+   "l1Indicators": 132,
+   "l2Grades": [
+    "B7",
+    "B8",
+    "B9"
+   ],
+   "l2LessonSlots": 540,
+   "l3Indicators": 132,
+   "name": "Career Technology"
+  },
+  {
+   "grades": [
+    "B4",
+    "B5",
+    "B6",
+    "B7",
+    "B8",
+    "B9"
+   ],
+   "id": "computing",
+   "l1Indicators": 123,
+   "l2Grades": [
+    "B7",
+    "B8",
+    "B9"
+   ],
+   "l2LessonSlots": 540,
+   "l3Indicators": 329,
+   "name": "computing"
+  },
+  {
+   "grades": [
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6"
+   ],
+   "id": "creative-arts",
+   "l1Indicators": 265,
+   "l2Grades": [
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6"
+   ],
+   "l2LessonSlots": 1080,
+   "l3Indicators": 265,
+   "name": "Creative Arts"
+  },
+  {
+   "grades": [
+    "B7",
+    "B8",
+    "B9"
+   ],
+   "id": "creative-arts-design",
+   "l1Indicators": 100,
+   "l2Grades": [
+    "B7",
+    "B8",
+    "B9"
+   ],
+   "l2LessonSlots": 540,
+   "l3Indicators": 100,
+   "name": "Creative Arts and Design"
+  },
+  {
+   "grades": [
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "B7",
+    "B8",
+    "B9"
+   ],
+   "id": "english-language",
+   "l1Indicators": 629,
+   "l2Grades": [
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "B7",
+    "B8",
+    "B9"
+   ],
+   "l2LessonSlots": 1620,
+   "l3Indicators": 762,
+   "name": "English Language"
+  },
+  {
+   "grades": [
+    "B4",
+    "B5",
+    "B6",
+    "B7",
+    "B8",
+    "B9"
+   ],
+   "id": "french",
+   "l1Indicators": 166,
+   "l2Grades": [
+    "B7",
+    "B8",
+    "B9"
+   ],
+   "l2LessonSlots": 540,
+   "l3Indicators": 433,
+   "name": "french"
+  },
+  {
+   "grades": [
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "B7",
+    "B8",
+    "B9"
+   ],
+   "id": "ghanaian-language",
+   "l1Indicators": 589,
+   "l2Grades": [
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "B7",
+    "B8",
+    "B9"
+   ],
+   "l2LessonSlots": 1620,
+   "l3Indicators": 589,
+   "name": "Ghanaian Language"
+  },
+  {
+   "grades": [
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6"
+   ],
+   "id": "history",
+   "l1Indicators": 51,
+   "l2Grades": [
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6"
+   ],
+   "l2LessonSlots": 1080,
+   "l3Indicators": 51,
+   "name": "History"
+  },
+  {
+   "grades": [
+    "KG1",
+    "KG2"
+   ],
+   "id": "kindergarten",
+   "l1Indicators": 0,
+   "l2Grades": [],
+   "l2LessonSlots": 0,
+   "l3Indicators": 339,
+   "name": "kindergarten"
+  },
+  {
+   "grades": [
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "B7",
+    "B8",
+    "B9"
+   ],
+   "id": "mathematics",
+   "l1Indicators": 431,
+   "l2Grades": [
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "B7",
+    "B8",
+    "B9"
+   ],
+   "l2LessonSlots": 1620,
+   "l3Indicators": 431,
+   "name": "mathematics"
+  },
+  {
+   "grades": [
+    "B1",
+    "B4",
+    "B5",
+    "B6"
+   ],
+   "id": "owop",
+   "l1Indicators": 98,
+   "l2Grades": [
+    "B1"
+   ],
+   "l2LessonSlots": 180,
+   "l3Indicators": 98,
+   "name": "Our World Our People"
+  },
+  {
+   "grades": [
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "B7",
+    "B8",
+    "B9"
+   ],
+   "id": "rme",
+   "l1Indicators": 145,
+   "l2Grades": [
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "B7",
+    "B8",
+    "B9"
+   ],
+   "l2LessonSlots": 1620,
+   "l3Indicators": 145,
+   "name": "Religious and Moral Education"
+  },
+  {
+   "grades": [
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "B7",
+    "B8",
+    "B9"
+   ],
+   "id": "science",
+   "l1Indicators": 312,
+   "l2Grades": [
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "B7",
+    "B8",
+    "B9"
+   ],
+   "l2LessonSlots": 1620,
+   "l3Indicators": 312,
+   "name": "science"
+  },
+  {
+   "grades": [
+    "B7",
+    "B8",
+    "B9"
+   ],
+   "id": "social-studies",
+   "l1Indicators": 54,
+   "l2Grades": [
+    "B7",
+    "B8",
+    "B9"
+   ],
+   "l2LessonSlots": 540,
+   "l3Indicators": 54,
+   "name": "Social Studies"
+  }
+ ],
+ "totals": {
+  "grades": 11,
+  "l1": {
+   "databases": 75,
+   "indicators": 3095,
+   "label": "curriculum",
+   "pairsWithoutSummary": [
+    "english-language B4",
+    "mathematics B1",
+    "science B1"
+   ],
+   "subjectGrades": 76,
+   "summaries": 73,
+   "summaryOnlyPairs": [
+    "english-language B5"
+   ]
+  },
+  "l2": {
+   "files": 73,
+   "grades": 9,
+   "label": "lessons",
+   "lessonSlots": 13140,
+   "subjectGrades": 73,
+   "subjects": 13
+  },
+  "l3": {
+   "grades": 11,
+   "hasQuestions": false,
+   "indicators": 4040,
+   "label": "bundle",
+   "megabytes": 39.7,
+   "subjectGrades": 84,
+   "subjects": 14
+  },
+  "reference": {
+   "bundlePairsWithoutAnySource": [],
+   "databases": 84,
+   "label": "reference-fallback",
+   "malformedSummaries": 8,
+   "summaries": 75,
+   "suppliesBundlePairs": [
+    "computing B4",
+    "computing B5",
+    "computing B6",
+    "french B4",
+    "french B5",
+    "french B6",
+    "kindergarten KG1",
+    "kindergarten KG2"
+   ]
+  },
+  "sampleDocuments": 2,
+  "sources": {
+   "pdfs": 24
+  },
+  "subjectGrades": 84,
+  "subjects": 14
+ }
+}

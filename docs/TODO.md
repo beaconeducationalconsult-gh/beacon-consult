@@ -1,78 +1,90 @@
 # Project TODO
 
-Live task list for the Beacon / staff-common-room work. Ordered by horizon:
-**Now** is what unblocks revenue, **Next** is what compounds it, **Later** is
-where the big bets live.
+Restructured 2026-09-17 against the dataset as it actually is. The previous version
+ordered work by aspiration and referenced documents that do not exist; this one is
+ordered by **dependency** and every item names the dataset layer it unblocks.
 
-> Priority anchor, stated by the owner: **build the SaaS and generate revenue as
-> soon as possible.** Anything that does not serve that goes in Later.
+> **Anchor:** the portal must produce at least what the books produce. Everything
+> below is scored against that. Selling the printed inventory is a business action,
+> not an engineering task, so it is no longer item #1 here.
+
+**Verify state at any time with:**
+
+```bash
+make inventory             # dataset vs app agreement -> data/inventory.json
+make validate-curriculum   # bundle invariants the UI relies on
+```
 
 ---
 
-## Now — unblocks revenue
+## P0 — the portal cannot ship in its current state
 
-- [ ] **Take the current inventory to five schools and ask for the sale.**
-      73 lesson plan books, 73 schemes, 365 records of work are all finished and
-      unsold. This is the only item on this list that produces money rather than
-      costing it. Everything else is in service of it.
-- [ ] **Regenerate the gitignored output before any demo** (`dist/` and
-      `app/public/curriculum/` are wiped from any fresh clone):
-      ```bash
-      python tools/build_app_curriculum.py
-      python tools/generate_schemes.py --per-term
-      python tools/generate_records_of_work.py --per-term
-      python tools/package_books.py
-      ```
-- [ ] **Verify `yarn build` on a real machine** — the Materials screen has never
-      been compiled (no npm registry in the dev sandbox).
-- [ ] **Create a “How To” / Getting Started screen and reusable help component.**
-      Start with student authentication: explain that teachers create pupils,
-      issue the shared class code plus each pupil’s personal access code, and
-      recover or reset credentials. Link the guidance from Student login,
-      Classrooms, and the portal navigation; support printable login cards.
-- [ ] **Write `storage.rules`** — still absent. Required the moment the portal
-      writes generated files into a school's workspace.
+| # | Item | Why | Layer | Size |
+|---|------|-----|-------|------|
+| P0-1 | **Fix the 36 TypeScript errors so `npm run build` passes** — 27 unused-param stubs, `DocType`/`recordGeneration` union mismatch, untyped Firestore results in Dashboard/History, two impossible `'question_bank'` comparisons | The app cannot deploy at all. `npm run dev` hides this because Vite does not type-check | app | S |
+| P0-2 | **Make every module's `validate()` real** — check that its id exists in the bundle, that its declared grades have indicators, and that declared capabilities have backing data | All 13 modules currently `return []`, so boot is always green and cannot catch anything. This is what let P0-3 through | app | S |
+| P0-3 | **Rename the math module id `math` → `mathematics`** (or add an alias in one place) | It matches zero indicators: empty lesson-plan dropdown, zero-row scheme, and a Record of Work that downloads a file with an empty table | app | S |
+| P0-4 | **Fix the history read/write key mismatch** — writes use `users/{uid}.schoolId`, reads use `(user as any).schoolId ?? user.uid` | Generation history and the dashboard counters can never display | app | S |
+| P0-5 | **Add a CI workflow** running `tsc -b`, `oxlint`, `validate_app_curriculum.py`, `build_inventory.py` | Nothing prevents P0-1..P0-4 from returning. One 20-line workflow file | repo | S |
 
-## Next — compounds what's built
+## P1 — close the gap between the bundle and the books
 
-- [x] **Generation history in the school workspace** — done 2026-09-13.
-      `generated_materials` collection, recorded on download, listed in the
-      workspace and on the Generate screen. See `docs/SCHOOL_WORKSPACE.md`.
-- [x] **Bind cover branding to the caller's school** — done 2026-09-13. Members
-      of a school get its name pre-filled and the field disabled, so a document
-      cannot be printed under another school's name.
-- [ ] **Store generated documents, not just their metadata.** History is
-      metadata only — there is no re-download. Persisting the `.docx` needs
-      Cloud Storage, which needs `storage.rules`.
-- [ ] **Chunk the 38 MB curriculum bundle** into per-grade-subject files
-      (~50 KB). Blocks usable mobile performance and matters for offline packs.
-- [ ] **Enable `REQUIRE_AUTH=1`** on the deployed Material Service. Currently
-      off, which means anyone finding the URL can generate unlimited documents.
-- [ ] **Fill the question bank** — zero questions exist. Highest-value content
-      the project lacks. VCTM §18 gives the assessment architecture.
+| # | Item | Why | Layer | Size |
+|---|------|-----|-------|------|
+| P1-1 | **Generate lesson plans from L2, not from the indicator row** — emit Starter / Main / Plenary / Assessment / Competencies / Resources / RP Knowledge for the slot | This is the whole product value. Today `generateLessonPlan` emits four sections and ignores all 13,140 authored slots | app + pipeline | M |
+| P1-2 | **Populate `extra` in the bundle, or delete the callout** — every lesson plan currently prints `Sub-skill: n/a` because `extra` is empty for all 4,040 indicators | A document that looks broken is worse than a shorter document | pipeline | S |
+| P1-3 | **Fix or gate the Question Bank** — `/curriculum/questions/math/<grade>.json` does not exist; the module returns an empty document and calls it success | Silent failure that looks like a feature. Gate on `capabilities` **and** on the file existing | app + pipeline | S |
+| P1-4 | **Chunk the bundle per grade+subject** (~50 KB per file instead of 3–5 MB per grade) and key the service-worker cache off a content hash | 39.7 MB committed; `b9_schedules.json` is 4.85 MB; the PWA caches `CacheFirst` for 30 days with no invalidation, so a rebuilt bundle never reaches returning users | pipeline + app | M |
+| P1-5 | **Rule and config hygiene**: add `schoolId` to the `generated_materials` create rule, write `app/storage.rules`, add `firebase.json` that actually deploys the rules and indexes, replace the cargo-culted `firestore.indexes.json` (it indexes `posts`, `vacancies`, `notes`… collections that do not exist) | Create currently lets any user attribute records to another school; indexes are aspirational because nothing deploys them | app | S |
+| P1-6 | **Add `.env.example` + `src/vite-env.d.ts`**, and fail fast when `VITE_FIREBASE_*` is missing | `initializeApp` accepts `undefined` values silently and fails later at the first Firestore call | app | S |
+| P1-7 | **Real onboarding**: first sign-in writes `schools/{id}` and `users/{uid}` | No code creates either document today, so a new teacher's history can never be read by the rules and there is no self-serve path | app | M |
 
-## Later — the big bets
+## L1/L2 — dataset work the app depends on
 
-- [ ] **Visualization engine** — an interactive learning-model library mapped to
-      curriculum indicators. Largest idea on the list; see
-      `docs/VISUALIZATION_ENGINE.md`. Start with a 3–5 model pilot, not 50.
-- [ ] **VCTM pilot** — run the full Visual-Conceptual chain end to end on one
-      subject-grade (suggested: Basic 6 Science or Basic 9 Mathematics) before
-      scaling to all 4,040 indicators.
-- [ ] **Offline packs** — downloadable subject/class bundles so schools without
-      reliable connectivity can use the library. Prerequisite for the
-      visualization engine being realistic in Ghanaian schools.
-- [ ] **Decide whether `dist/` belongs in git** — currently gitignored, so it
-      must be regenerated on every machine.
+| # | Item | Why | Layer | Size |
+|---|------|-----|-------|------|
+| L1-1 | **Decide the fate of `data/reference/`** — either audit and promote the 8 reference-only subject-grades (computing B4–B6, french B4–B6, KG1–KG2) into `data/curriculum/`, or delete the copy and make missing files a loud failure | A silent fallback means the app can serve unaudited curriculum and nobody notices divergence | data | M |
+| L1-2 | **Fill the L1 gaps**: `english-language B4`, `mathematics B1`, `science B1` have databases but no summary (no source URL / counts); `english-language B5` has a summary but no database | Unverifiable provenance on 184 indicators | data | S |
+| L1-3 | **Repair the 8 malformed summaries in `data/reference/`** (no `counts` block) | Any code that reads `summary["counts"]` raises on them | data | S |
+| L1-4 | **Stop treating per-subject-grade constants as per-indicator enrichment** — `competencies`, `resources`, `keywords`, `assessment` have exactly one distinct value per subject-grade | Documents that print "Resources: NaCCA approved textbook; TLMs; ICT tools" under every indicator look templated because they are | data + app | S |
+| L2-1 | **Clean the 58 `ind_desc` records with a repeated trailing sentence** (0.4% of slots) at the extraction source | Visible artefact in generated documents | data | S |
+| L2-2 | **Decide whether L2 is a template or authored content, and say so** — measured fidelity: `starter` 75%, `main` 41%, but `rpk`/`plenary`/`assessment` ≈ 1% (one value per subject-grade) | Marketing, authoring budget and generation strategy all depend on this; see `docs/DATA_MODEL.md` | product | S |
+
+## P2 — structural debt that makes every future fix expensive
+
+| # | Item | Why | Size |
+|---|------|-----|------|
+| P2-1 | **Collapse the 13 subject modules into a factory + a subject descriptor table** — any two non-math modules differ by 20–22 of 128 lines | Every fix today costs 13 edits; this is why P0-2/P1-2 exist | M |
+| P2-2 | **Collapse the 8 `build_math_b{2..9}_word_document.py` (324 lines each) into one `--grade` script**, and the 16 per-grade backfills into one parameterised script | ~2,600 lines that differ only in grade strings | M |
+| P2-3 | **Reconcile the Python spec with the TS runtime** (`ncos/kernel/interface.py` is sync and manifest-driven; `app/src/kernel/` is async and class-driven), and add an `interface_version` check on the JS side | Principle #3 in `README.md` is currently untrue, and nothing detects further drift | M |
+| P2-4 | **Repo hygiene**: delete the 4 tracked `.pyc` files, add a root `.gitignore`, stop committing the 39.7 MB bundle (or move it to a release artefact) | 132 MB of tracked data and generated output in one squashed commit | S |
+| P2-5 | **Tests and a lint gate** — no pytest, no vitest, no CI. Start with one unit test per module `validate()` and one snapshot test of `MaterialDoc → .docx` for a known indicator | There is currently nothing between a pipeline change and a school downloading a wrong document | M |
+| P2-6 | **Delete or banner the historical docs** (`FULL_README.md`, `DEVELOPMENT_GUIDE.md`, `APP_BUILD_PLAN.md`, `REPO_ANALYSIS_REPORT.md`) — they describe `tools/` paths and an empty `app/` that no longer exist | See the status column in `README.md` | S |
+
+## P3 — product bets, once the portal renders what the books render
+
+| # | Item | Notes |
+|---|------|-------|
+| P3-1 | **Visualisation engine** — 3–5 interactive models on one subject-grade as a pilot, not 50 | Needs chunked/offline data (P1-4) first |
+| P3-2 | **Offline packs** — per subject/class downloads for schools without reliable connectivity | Requires P1-4; prerequisite for P3-1 being realistic in classrooms |
+| P3-3 | **Store generated documents, not just metadata** — history has no re-download because nothing writes to Storage | Depends on P1-5 (`storage.rules`) |
+| P3-4 | **Question bank** — zero questions exist in the bundle; `data/questions/` has one mathematics B4 file | Highest-value content the dataset lacks |
+| P3-5 | **Student/teacher portal features** — classrooms, pupil access codes, printable login cards | Scope beyond the current portal; decide before building |
 
 ---
 
 ## Deferred by decision
 
-Items considered and deliberately not being done:
-
 | Item | Why not |
 |---|---|
-| Building the Studio as a separate web app | One author (the owner) — `tools/` + git already is the Studio. Revisit when a second content author joins. |
-| Selling printed books as the primary channel | The owner intends to replace the consortium print model with a self-serve portal, not replicate it. |
-| Porting the Python generators to JavaScript | They work and are tested; the Cloud Run wrapper reuses them as-is. |
+| Building the Studio as a separate web app | One author; `scripts/` + git already is the Studio. Revisit when a second content author joins |
+| Selling printed books as the primary channel | The owner intends to replace the consortium print model with a self-serve portal |
+| Porting the Python generators to JavaScript | They work; the browser needs the *same content model*, not the same language |
+| Regenerating the 73 books before every demo | Superseded by CI (P0-5): if the books matter, build them in the pipeline, not by hand |
+
+---
+
+## Numbers referenced by this file
+
+All from `make inventory` (`data/inventory.json`). If an item above disagrees with
+the inventory, the inventory is right and the item is stale — fix the item.

@@ -464,3 +464,132 @@ git ls-files | grep -c pycache ; ls .gitignore 2>&1
 `server.allowedHosts`/`preview.allowedHosts` so the dev server accepts the sandbox preview hostname instead of
 returning `403 Blocked request`. Nothing else in the repository was modified — all other findings above are
 reported, not fixed.)*
+
+---
+
+# Addendum — findings from restructuring the docs against the dataset
+
+*Added 2026-09-17 after `README.md`, `docs/TODO.md` and `.kiro/steering/project.md`
+were rewritten around a machine-derived inventory (`scripts/build_inventory.py` →
+`data/inventory.json`, `make inventory`).*
+
+Building the inventory forced every headline number to be traced to a file. Five
+new findings came out of it, and two of them are worse than anything in the original
+review because they affect **what a teacher is served**, not just what compiles.
+
+## 18. 🔴 The app serves curriculum that was never audited.
+
+The docs claim "4,040+ NaCCA indicators" and "148 curriculum JSON databases".
+Tracing both:
+
+* **"148 databases" = 75 databases + 73 summaries.** 148 is a count of *files*.
+* **4,040 indicators is L3** (the app bundle). The audited layer, L1
+  (`data/curriculum/`), contains **3,095**.
+
+The difference is 8 subject-grades that exist **only** in `data/reference/`, the
+copy `scripts/_paths.py` itself calls "partly divergent":
+
+```
+computing B4 (27) · B5 (81) · B6 (98)      french B4 (88) · B5 (90) · B6 (89)
+kindergarten KG1 (169) · KG2 (170)
+```
+
+`scripts/build_app_curriculum.py` finds them because `DB_SEARCH` falls back to
+`REFERENCE` **silently**. Nothing logs the fallback, `validate_app_curriculum.py`
+validates internal consistency only (it cannot know a file came from the fallback),
+and no audit in `data/audit/` covers them. Add `english-language B5`, which exists
+in L1 only as a *summary* (the database lives in reference), and 9 of the app's 84
+subject-grades — 945 of its 4,040 indicators — are not backed by the audited
+extraction. (The other 75 pairs agree exactly: 3,095 = 3,095.)
+
+For a product whose entire pitch is "the data is audited", this is the most
+important finding in the review. It is also invisible from the outside: the bundle
+validates, the files parse, the numbers look right.
+
+**Fix:** either audit and promote those pairs into `data/curriculum/`, or delete
+`data/reference/` and make the missing files a build failure. A silent fallback
+cannot be the permanent state. Tracked as L1-1 in `docs/TODO.md`.
+
+## 19. 🟠 The "enrichment" in L1 is four constants per subject-grade.
+
+`competencies`, `resources`, `keywords` and `assessment` are present on every
+indicator record, which makes them look like per-indicator content. They are not:
+
+| Field | Distinct values in `mathematics_B4` (71 indicators) |
+|---|---|
+| `competencies` | 1 (`"Critical Thinking and Problem Solving; Communication and Collaboration; …"`) |
+| `resources` | 1 (`"NaCCA approved textbook; TLMs; ICT tools; community resources"`) |
+| `keywords` | 1 (`"mathematics, b4, upper-primary"`) |
+| `assessment` | 1 (`"Class exercises; oral questions; practical performance; SBA"`) |
+
+Identical pattern in science B4 (24/24) and career-technology B7 (43/43): 1 distinct
+value each. `keywords` is literally `{subject}, {grade}, {band}`.
+
+Any document that prints these under an indicator — as the portal does for
+`resources`/`assessment`, and as the book templates do — repeats 71 identical lines
+per subject-grade. It reads as padding because it is padding.
+
+## 20. 🟠 L2 is a filled template, not 13,140 authored lesson plans.
+
+Distinct values ÷ lesson slots across all 13,140 slots:
+
+| Field | Ratio | Reading |
+|---|---|---|
+| `starter` | 75.3% | genuinely varied per lesson |
+| `main` | 41.3% | activity text varies; the time budget is constant |
+| `perf_indicator` | 25.1% | derived: embeds `ind_desc` in 12,884/13,140 slots |
+| `ind_desc` | 24.2% | ~4 slots share each indicator |
+| `session_title` | 15.5% | positional (`"Session 2 of 3 — Practice"`) |
+| `assessment` | 1.3% | per-subject constant |
+| `plenary` | 0.7% | per-subject constant |
+| `rpk` | 0.6% | per-subject constant |
+
+This does not make the books wrong — the books are real and usable, and the
+per-lesson `starter`/`main` content is real. But "13,140 fully-written lesson plans"
+(from `docs/REPO_ANALYSIS_REPORT.md`, repeated in `.kiro/steering/project.md`)
+overstates it, and any plan that prices authoring work per lesson must use the
+fidelity numbers, not the slot count.
+
+## 21. 🟠 `package_books.py` would produce an empty catalogue, and the book counts are unverifiable.
+
+`scripts/package_books.py` scans `data/books/` for `Basic{N}_{Subject}_Lesson_Plans_Full_Year.docx`.
+`data/books/` contains two files, neither matching: a Scheme of Learning and a Record
+of Work for Mathematics B4. The 73–77 lesson-plan volumes its docstring cites are not
+in the repository (`dist/` is gitignored and was never committed).
+
+So three separate claims cannot be checked from this repo:
+
+| Claim | Where | Reality |
+|---|---|---|
+| "the 77 lesson-plan DOCX volumes" | `package_books.py` docstring | 0 are present; the script's `canonical` list would be empty |
+| "73 lesson plan books … are all finished and unsold" | old `docs/TODO.md` | unverifiable here; L2 has 73 subject-grades, so 73 is a plausible *regeneration* count |
+| "73 schemes, 365 records of work" | old `docs/TODO.md` | 365 matches nothing derivable — `--per-term` over 73 subject-grades × 3 terms = 219 |
+
+The generators and their inputs exist. The outputs must be regenerated, and any
+count stated before that is a guess.
+
+## 22. 🟡 Two documents referenced by the backlog did not exist.
+
+`docs/TODO.md` linked `docs/SCHOOL_WORKSPACE.md` for "generation history" and
+`docs/VISUALIZATION_ENGINE.md` for the largest planned feature. Neither file exists;
+`VCTM` — cited as giving "the assessment architecture" — appears nowhere in the
+repository except that one line. The restructured `TODO.md` describes the work
+inline instead of pointing at phantoms.
+
+## What changed in this pass
+
+| File | Change |
+|---|---|
+| `scripts/build_inventory.py` | **New.** Derives L1/L2/L3/reference totals, per-grade and per-subject coverage, lesson fidelity, dataset-vs-app agreement, and doc-link integrity. Exits non-zero when the app cannot serve the dataset. |
+| `data/inventory.json` | **New (generated).** The numbers every doc now quotes. |
+| `docs/DATA_MODEL.md` | **New.** Canonical definition of the three layers, the reference divergence, id conventions, invariants. |
+| `README.md` | Rewritten around the three layers and the real state of the app. Correct paths (`scripts/`, not `tools/`), correct package manager (`npm`, not `yarn`), honest "what is broken" section, documentation index with per-doc status. |
+| `docs/TODO.md` | Restructured by dependency (P0 build blockers → P1 book/portal parity → L1/L2 data work → P2 structural debt → P3 product bets). Added items the inventory surfaced: the reference decision, the missing L1 summaries, the malformed reference summaries, the enrichment-constant problem, and the L2 fidelity decision. |
+| `.kiro/steering/project.md` | Rewritten. It previously told every agent session that `app/` was empty and that `tools/` was the pipeline root. Now carries the derived numbers and the "fail loud" rule that P0-2 enforces. |
+| `Makefile` | Added `make inventory` and `make check` (which includes `npm run build`, so a red build cannot be discovered first in production). |
+| `app/vite.config.ts` | (Earlier in this review) dev/preview servers accept the sandbox host, unblocking the preview. |
+
+Still unfixed, deliberately: every P0/P1 code finding above. The restructure changed
+what the repository *says about itself* and gave the claims a single source; it did
+not change the code. `make inventory` now fails on the `math`/`mathematics` mismatch,
+which is the intended behaviour — it should stay red until P0-3 is fixed.
