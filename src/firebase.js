@@ -18,21 +18,31 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_FIREBASE_APP_ID,
 }
 
-if (!firebaseConfig.apiKey || !firebaseConfig.projectId) {
-  // Loud in the console, because the alternative is an opaque
-  // "auth/invalid-api-key" much later. See docs/gotchas.md.
+/**
+ * Whether the six VITE_FIREBASE_* values were supplied at build time.
+ *
+ * When they are not, the app must not call getAuth(): the SDK throws
+ * `auth/invalid-api-key` during module evaluation, which aborts the entry
+ * module and leaves a blank page with nothing to act on. main.jsx checks this
+ * flag and renders SetupNotice instead, so a missing config explains itself.
+ */
+export const firebaseConfigured = Boolean(firebaseConfig.apiKey && firebaseConfig.projectId)
+
+if (!firebaseConfigured) {
   console.error(
     '[beacon] Firebase config is missing. Copy .env.example to .env.local and fill in ' +
       'the VITE_FIREBASE_* values from the Firebase console, then restart the dev server.'
   )
 }
 
-export const app = initializeApp(firebaseConfig)
+export const app = firebaseConfigured ? initializeApp(firebaseConfig) : null
 
 // Offline-first: reads come from IndexedDB, writes queue when offline and sync
 // on reconnect. Pages need no changes — see docs/pwa-offline.md.
-export const db = initializeFirestore(app, {
-  localCache: persistentLocalCache({ tabManager: persistentMultipleTabManager() }),
-})
+export const db = app
+  ? initializeFirestore(app, {
+      localCache: persistentLocalCache({ tabManager: persistentMultipleTabManager() }),
+    })
+  : null
 
-export const auth = getAuth(app)
+export const auth = app ? getAuth(app) : null
