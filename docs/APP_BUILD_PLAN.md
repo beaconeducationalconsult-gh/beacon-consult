@@ -1,4 +1,4 @@
-# NCOS App — Complete Build Plan
+# Beacon Consult App — Complete Build Plan
 
 This document is the single guide for building the React portal from the
 current empty scaffold to a fully working, deployed SaaS. Work the phases
@@ -1051,8 +1051,8 @@ export default defineConfig({
         ],
       },
       manifest: {
-        name: 'NCOS — Beacon Teaching Materials',
-        short_name: 'NCOS',
+        name: 'Beacon Consult — Beacon Teaching Materials',
+        short_name: 'Beacon Consult',
         theme_color: '#1e40af',
         icons: [
           { src: '/icon-192.png', sizes: '192x192', type: 'image/png' },

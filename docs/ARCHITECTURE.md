@@ -1,8 +1,8 @@
-# NCOS Architecture
+# Beacon Consult Architecture
 
 ## The Core Idea
 
-NCOS is structured like an operating system because the problem has the
+Beacon Consult is structured like an operating system because the problem has the
 same shape: many subjects (processes) need controlled access to shared
 curriculum data (the file system) through one stable interface (the
 kernel), without any of them needing to know about each other.
@@ -46,7 +46,7 @@ No Flask. No Docker. No Cloud Run. No server to operate.
 
 ## The OS Metaphor (still applies, shifted to the browser)
 
-| OS Concept        | NCOS Equivalent                                      |
+| OS Concept        | Beacon Consult Equivalent                                      |
 |-------------------|------------------------------------------------------|
 | Kernel            | `app/src/kernel/` — document model + module contract |
 | Drivers           | `app/src/drivers/docx.ts` — renders MaterialDoc      |

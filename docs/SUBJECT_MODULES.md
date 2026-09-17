@@ -1,4 +1,4 @@
-# NCOS Subject Module Interface
+# Beacon Consult Subject Module Interface
 
 How subjects plug into the curriculum engine. The goal: adding Creative Arts
 or French should mean writing one new module directory, not editing
