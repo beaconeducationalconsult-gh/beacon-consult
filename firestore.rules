@@ -1,0 +1,201 @@
+rules_version = '2';
+
+/*
+ * Beacon Consult — Firestore security rules.
+ *
+ * The UI gate (ProtectedLayout) is cosmetics. THIS is the enforcement.
+ * See docs/security.md for the access matrix this file implements.
+ *
+ * Deploying is a separate step from deploying the app:
+ *   firebase deploy --only firestore:rules,firestore:indexes
+ * A committed-but-undeployed change has no effect in production.
+ */
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ── helpers ────────────────────────────────────────────────────────────
+    function isSignedIn() {
+      return request.auth != null;
+    }
+    function myDoc() {
+      return /databases/$(database)/documents/users/$(request.auth.uid);
+    }
+    function hasProfile() {
+      return isSignedIn() && exists(myDoc());
+    }
+    function profile() {
+      return get(myDoc()).data;
+    }
+    function isApproved() {
+      return hasProfile() && profile().status == 'approved';
+    }
+    function isAdmin() {
+      return hasProfile() && profile().role == 'admin';
+    }
+    function isApprovedOrAdmin() {
+      return isApproved() || isAdmin();
+    }
+    function isOwner(uid) {
+      return isSignedIn() && request.auth.uid == uid;
+    }
+    function createdByMe() {
+      return isApprovedOrAdmin() && request.resource.data.authorId == request.auth.uid;
+    }
+    // Narrow exception used by like/react buttons: only these keys may differ.
+    function onlyChanged(keys) {
+      return request.resource.data.diff(resource.data).affectedKeys().hasOnly(keys);
+    }
+    // A like/unlike must move the tally by exactly one and may only add or
+    // remove the caller's own uid. Without this, a member could rewrite the
+    // whole likedBy array (the diff alone only restricts *which* fields move).
+    function likeDelta(countField) {
+      return (request.resource.data[countField] == resource.data[countField] + 1
+              && request.resource.data.likedBy.hasAll(resource.data.likedBy)
+              && request.resource.data.likedBy.size() == resource.data.likedBy.size() + 1
+              && request.resource.data.likedBy.hasAll([request.auth.uid]))
+          || (request.resource.data[countField] == resource.data[countField] - 1
+              && resource.data.likedBy.hasAll(request.resource.data.likedBy)
+              && request.resource.data.likedBy.size() == resource.data.likedBy.size() - 1
+              && !request.resource.data.likedBy.hasAll([request.auth.uid]));
+    }
+
+    // ── users ──────────────────────────────────────────────────────────────
+    match /users/{uid} {
+      allow read: if isOwner(uid) || isApprovedOrAdmin();
+
+      // Self-signup only, and it cannot grant itself access: status is forced
+      // to 'pending' and role to 'member'. Without this, anyone could create
+      // their own doc with status:'approved' and walk straight into the portal.
+      allow create: if isOwner(uid)
+                    && request.resource.data.status == 'pending'
+                    && request.resource.data.role == 'member';
+
+      // A member may edit their own profile but never their own status/role.
+      allow update: if isAdmin()
+                    || (isOwner(uid)
+                        && !request.resource.data.diff(resource.data)
+                             .affectedKeys().hasAny(['status', 'role']));
+      allow delete: if isAdmin();
+    }
+
+    // ── community feed ─────────────────────────────────────────────────────
+    match /posts/{postId} {
+      allow read: if isApprovedOrAdmin();
+      allow create: if createdByMe();
+      allow update: if isAdmin()
+                    || (isApprovedOrAdmin() && onlyChanged(['likedBy', 'likesCount']) && likeDelta('likesCount'))
+                    || (isApprovedOrAdmin() && isOwner(resource.data.authorId));
+      allow delete: if isAdmin() || isOwner(resource.data.authorId);
+    }
+
+    // ── articles (public ones are readable without an account) ─────────────
+    // NOTE: this collection shipped WITHOUT a rule in the previous build, which
+    // denied everything in production. Keep this block in step with the app.
+    match /articles/{articleId} {
+      allow read: if (resource.data.visibility == 'public') || isApprovedOrAdmin()
+                  || (isSignedIn() && isOwner(resource.data.authorId));
+      allow create: if createdByMe();
+      allow update: if isAdmin()
+                    || (isApprovedOrAdmin() && onlyChanged(['likedBy', 'likesCount']) && likeDelta('likesCount'))
+                    || (isSignedIn() && isOwner(resource.data.authorId));
+      allow delete: if isAdmin() || isOwner(resource.data.authorId);
+    }
+
+    // ── study notes (+ comments) ───────────────────────────────────────────
+    match /notes/{noteId} {
+      allow read: if resource.data.status == 'published' || isApprovedOrAdmin()
+                  || (isSignedIn() && isOwner(resource.data.authorId));
+      allow create: if createdByMe();
+      allow update: if isAdmin()
+                    || (isApprovedOrAdmin() && onlyChanged(['likes', 'likesBy']) && likeDelta('likes'))
+                    || (isSignedIn() && isOwner(resource.data.authorId));
+      allow delete: if isAdmin() || isOwner(resource.data.authorId);
+
+      match /comments/{commentId} {
+        allow read: if isApprovedOrAdmin();
+        allow create: if createdByMe();
+        allow update: if isAdmin() || isOwner(resource.data.authorId);
+        allow delete: if isAdmin() || isOwner(resource.data.authorId);
+      }
+    }
+
+    // ── schemes of learning ────────────────────────────────────────────────
+    match /weekly_forecasts/{forecastId} {
+      allow read: if resource.data.visibility == 'public' || isApprovedOrAdmin()
+                  || (isSignedIn() && isOwner(resource.data.authorId));
+      allow create: if createdByMe();
+      allow update, delete: if isAdmin() || isOwner(resource.data.authorId);
+    }
+
+    // ── lesson plans ───────────────────────────────────────────────────────
+    match /lesson_plans/{planId} {
+      allow read: if resource.data.visibility == 'public' || isApprovedOrAdmin()
+                  || (isSignedIn() && isOwner(resource.data.authorId));
+      allow create: if createdByMe();
+      allow update, delete: if isAdmin() || isOwner(resource.data.authorId);
+    }
+
+    // ── question bank ──────────────────────────────────────────────────────
+    match /questions/{questionId} {
+      allow read: if isApprovedOrAdmin();
+      allow create: if createdByMe();
+      allow update, delete: if isAdmin() || isOwner(resource.data.authorId);
+    }
+
+    // ── slide lessons (+ comments) ─────────────────────────────────────────
+    match /lesson_slides/{slideId} {
+      allow read: if resource.data.status == 'published' || isApprovedOrAdmin()
+                  || (isSignedIn() && isOwner(resource.data.authorId));
+      allow create: if createdByMe();
+      allow update, delete: if isAdmin() || isOwner(resource.data.authorId);
+
+      match /comments/{commentId} {
+        allow read: if isApprovedOrAdmin();
+        allow create: if createdByMe();
+        allow update, delete: if isAdmin() || isOwner(resource.data.authorId);
+      }
+    }
+
+    // ── vacancies (published ones power the public /vacancies page) ────────
+    match /vacancies/{vacancyId} {
+      allow read: if resource.data.status == 'published' || isApprovedOrAdmin()
+                  || (isSignedIn() && isOwner(resource.data.authorId));
+      allow create: if createdByMe();
+      allow update, delete: if isAdmin() || isOwner(resource.data.authorId);
+    }
+
+    // ── personal progress tracker: owner only, no exceptions ───────────────
+    match /progress/{uid} {
+      allow read, write: if isOwner(uid);
+    }
+
+    // ── shared quote likes ─────────────────────────────────────────────────
+    // Quotes live in static JSON, so their likes need their own document.
+    // Members may only add/remove their own uid, and `count` must move ±1 in
+    // step — nobody can inflate or wipe someone else's tally.
+    match /quote_likes/{quoteId} {
+      allow read: if isSignedIn();
+
+      allow create: if isSignedIn()
+                    && request.resource.data.count == 1
+                    && request.resource.data.likedBy == [request.auth.uid]
+                    && !exists(/databases/$(database)/documents/quote_likes/$(quoteId));
+
+      allow update: if isSignedIn() && (
+                      (request.resource.data.count == resource.data.count + 1
+                       && request.resource.data.likedBy.hasAll(resource.data.likedBy)
+                       && request.resource.data.likedBy.size() == resource.data.likedBy.size() + 1
+                       && request.resource.data.likedBy.hasAll([request.auth.uid]))
+                   || (request.resource.data.count == resource.data.count - 1
+                       && resource.data.likedBy.hasAll(request.resource.data.likedBy)
+                       && request.resource.data.likedBy.size() == resource.data.likedBy.size() - 1
+                       && !request.resource.data.likedBy.hasAll([request.auth.uid]))
+                    );
+
+      allow delete: if isAdmin();
+    }
+
+    // Everything not matched above is denied. Add a block when you add a
+    // collection — see docs/playbooks.md ("Add a new Firestore collection").
+  }
+}

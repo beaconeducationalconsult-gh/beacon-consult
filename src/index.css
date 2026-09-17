@@ -1,0 +1,110 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* ── Design tokens ──────────────────────────────────────────────────────────
+   Tailwind v4 reads @theme and generates both CSS variables and utilities
+   (bg-brand, text-accent, font-display…). Rebranding happens here, not in
+   component class strings. See docs/conventions.md. */
+@theme {
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Brand: indigo primary, amber accent, cream surfaces, slate neutrals. */
+  --color-brand-50: #eef2ff;
+  --color-brand-100: #e0e7ff;
+  --color-brand-500: #6366f1;
+  --color-brand-600: #4f46e5;
+  --color-brand-700: #4338ca;
+  --color-brand-900: #312e81;
+
+  --color-accent-400: #fbbf24;
+  --color-accent-500: #f59e0b;
+  --color-accent-600: #d97706;
+
+  --color-cream: #faf6f1;
+  --color-cream-dark: #f1ebe3;
+  --color-ink: #1c1917;
+
+  /* Semantic aliases — prefer these in new components. */
+  --color-primary: var(--color-brand-600);
+  --color-surface: #ffffff;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-cream text-slate-800 font-sans antialiased;
+  }
+  /* Visible, consistent focus for keyboard users everywhere. */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-600;
+  }
+}
+
+@utility page-title {
+  @apply text-2xl font-bold tracking-tight text-slate-900;
+}
+@utility page-subtitle {
+  @apply mt-1 text-sm text-slate-600;
+}
+@utility section-heading {
+  @apply text-xs font-semibold uppercase tracking-wider text-slate-500;
+}
+@utility card {
+  @apply rounded-2xl border border-slate-200 bg-white shadow-sm;
+}
+@utility card-hover {
+  @apply transition-shadow hover:shadow-md;
+}
+@utility card-title {
+  @apply font-semibold text-slate-900;
+}
+@utility card-meta {
+  @apply text-xs text-slate-500;
+}
+@utility label-caps {
+  @apply mb-1.5 block text-xs font-semibold uppercase tracking-wide text-slate-600;
+}
+@utility input {
+  @apply w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900
+           placeholder:text-slate-400 focus:border-brand-600 focus:outline-none
+           focus:ring-2 focus:ring-brand-600/20 disabled:bg-slate-100 disabled:text-slate-500;
+}
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold
+           transition-colors disabled:cursor-not-allowed disabled:opacity-50;
+}
+@utility btn-primary {
+  @apply btn bg-brand-600 text-white hover:bg-brand-700;
+}
+@utility btn-secondary {
+  @apply btn border border-slate-300 bg-white text-slate-700 hover:bg-slate-50;
+}
+@utility btn-accent {
+  @apply btn bg-accent-500 text-ink hover:bg-accent-400;
+}
+@utility btn-danger {
+  @apply btn bg-red-600 text-white hover:bg-red-700;
+}
+@utility btn-ghost {
+  @apply btn text-slate-600 hover:bg-slate-100 hover:text-slate-900;
+}
+@utility chip {
+  @apply inline-flex items-center gap-1 rounded-full bg-slate-100 px-2.5 py-0.5
+           text-xs font-medium text-slate-600;
+}
+@utility chip-brand {
+  @apply chip bg-brand-50 text-brand-700;
+}
+@utility link {
+  @apply font-medium text-brand-700 underline-offset-4 hover:underline;
+}
+
+/* The app targets light mode only; keep form controls and scrollbars sane. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: light;
+  }
+}

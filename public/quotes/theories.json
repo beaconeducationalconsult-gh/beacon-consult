@@ -1,0 +1,56 @@
+[
+  {
+    "id": "t-001",
+    "title": "Constructivism",
+    "theorist": "Jean Piaget",
+    "definition": "Learners build understanding by connecting new experiences to what they already know, rather than receiving knowledge passively.",
+    "classroom": "Start with a hands-on task using local materials, then let learners explain what they noticed before you name the concept. In Ghanaian classrooms this works well with counting stones, bottle caps and market role-play.",
+    "category": "Learning theory",
+    "tags": ["active-learning", "discovery"]
+  },
+  {
+    "id": "t-002",
+    "title": "Zone of Proximal Development",
+    "theorist": "Lev Vygotsky",
+    "definition": "The space between what a learner can do alone and what they can do with support — the target zone for instruction.",
+    "classroom": "Pair a stronger learner with a learner who needs support on the same task, and withdraw your own help as they succeed ('scaffolding').",
+    "category": "Learning theory",
+    "tags": ["scaffolding", "collaboration"]
+  },
+  {
+    "id": "t-003",
+    "title": "Concrete–Pictorial–Abstract",
+    "theorist": "Jerome Bruner",
+    "definition": "Understanding deepens when a concept is met first with real objects, then pictures, then symbols.",
+    "classroom": "For fractions: cut real oranges, then draw the fractions, and only then write 1/2 + 1/4.",
+    "category": "Instructional sequence",
+    "tags": ["mathematics", "manipulatives"]
+  },
+  {
+    "id": "t-004",
+    "title": "Formative assessment",
+    "theorist": "Dylan Wiliam",
+    "definition": "Assessment used during learning to adapt teaching, rather than only at the end to grade it.",
+    "classroom": "Replace hands-up questioning with mini-whiteboards or a quick exit slip so every learner answers, and you can see who to reteach tomorrow.",
+    "category": "Assessment",
+    "tags": ["assessment", "feedback"]
+  },
+  {
+    "id": "t-005",
+    "title": "Growth mindset",
+    "theorist": "Carol Dweck",
+    "definition": "Learners who believe ability grows with effort persist longer than those who believe ability is fixed.",
+    "classroom": "Praise the method and the effort ('you tried three ways to solve it'), not the child's cleverness.",
+    "category": "Motivation",
+    "tags": ["motivation", "feedback"]
+  },
+  {
+    "id": "t-006",
+    "title": "Cognitive load theory",
+    "theorist": "John Sweller",
+    "definition": "Working memory is small; instruction must reduce extraneous load to leave room for learning.",
+    "classroom": "Give one instruction at a time, use worked examples first, and avoid decorating slides with material that competes with the content.",
+    "category": "Learning theory",
+    "tags": ["instruction", "memory"]
+  }
+]

@@ -1,0 +1,14 @@
+[
+  { "id": "q-001", "type": "quote", "text": "Education is the most powerful weapon which you can use to change the world.", "author": "Nelson Mandela", "tags": ["purpose", "change"] },
+  { "id": "q-002", "type": "quote", "text": "The function of education is to teach one to think intensively and to think critically.", "author": "Martin Luther King Jr.", "tags": ["critical-thinking"] },
+  { "id": "q-003", "type": "quote", "text": "A child educated only at school is an uneducated child.", "author": "George Santayana", "tags": ["community", "family"] },
+  { "id": "q-004", "type": "quote", "text": "Tell me and I forget. Teach me and I remember. Involve me and I learn.", "author": "Benjamin Franklin", "tags": ["active-learning"] },
+  { "id": "q-005", "type": "quote", "text": "The teacher who is indeed wise does not bid you to enter the house of their wisdom but leads you to the threshold of your mind.", "author": "Khalil Gibran", "tags": ["teaching"] },
+  { "id": "q-006", "type": "quote", "text": "If you want to go fast, go alone. If you want to go far, go together.", "author": "African proverb", "tags": ["collaboration"] },
+  { "id": "q-007", "type": "quote", "text": "It takes a whole village to raise a child.", "author": "African proverb", "tags": ["community"] },
+  { "id": "q-008", "type": "quote", "text": "Knowledge is like a baobab tree; no one person can embrace it alone.", "author": "African proverb", "tags": ["collaboration", "learning"] },
+  { "id": "q-009", "type": "proverb", "text": "Sankofa — go back and fetch it.", "author": "Adinkra", "meaning": "It is not wrong to go back for that which you have forgotten; learning builds on what came before.", "tags": ["heritage", "reflection"] },
+  { "id": "q-010", "type": "proverb", "text": "Nyansapo — wisdom knot.", "author": "Adinkra", "meaning": "Wisdom, ingenuity and patience are needed to achieve a goal.", "tags": ["wisdom", "patience"] },
+  { "id": "q-011", "type": "proverb", "text": "Funtunfunefu Denkyemfunefu — the Siamese crocodiles.", "author": "Adinkra", "meaning": "They share one stomach yet fight over food; unity in diversity matters more than difference.", "tags": ["unity"] },
+  { "id": "q-012", "type": "quote", "text": "The beautiful thing about learning is that no one can take it away from you.", "author": "B.B. King", "tags": ["learning"] }
+]
