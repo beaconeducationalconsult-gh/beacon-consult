@@ -1,4 +1,4 @@
-# NCOS — NaCCA Curriculum Operating System
+# Beacon Consult — NaCCA Curriculum Operating System
 
 Curriculum-mapped teaching materials for Ghanaian basic schools (KG1–B9): lesson
 plans, schemes of learning and records of work, built from the official NaCCA

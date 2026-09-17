@@ -1,4 +1,4 @@
-# NCOS Development Guide
+# Beacon Consult Development Guide
 
 A staged path from the scaffold you already have to a real, multi-subject,
 multi-school system. Each stage has a goal, why it comes at that point (not
