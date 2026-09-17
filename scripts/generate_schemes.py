@@ -19,10 +19,11 @@ Outputs
         One document per subject-grade-term (219 total) for individual submission.
 
     dist/schemes/json/{subject}_{grade}_scheme.json
-        Rows in the exact shape the Beacon app's ForecastForm / schemeAuto.js
-        uses, so they can be seeded straight into the `weekly_forecasts`
-        collection: { week, kind, strand, subStrand, contentStandards,
-        indicators, resources, indicatorIds }.
+        One file per subject-grade, holding all three terms. Every row is in
+        the shape the app reads (`ForecastForm` writes it, `ForecastView` and
+        `lib/schemeDocx.js` read it), so a term can be seeded straight into the
+        `weekly_forecasts` collection: { week, kind?, label?, strandName,
+        subStrandName, contentStandard, indicators, indicatorCodes, resources }.
 
     dist/schemes/QA_REPORT.md
         Coverage and anomaly report — read this before shipping.
@@ -31,11 +32,19 @@ Requires: python-docx  (pip install python-docx)
 
 Usage
 -----
-    python3 tools/generate_schemes.py                    # everything
-    python3 tools/generate_schemes.py --grade B4         # one grade
-    python3 tools/generate_schemes.py --subject math     # one subject
-    python3 tools/generate_schemes.py --per-term         # also emit 219 term docs
-    python3 tools/generate_schemes.py --with-descriptions
+    python3 scripts/generate_schemes.py                  # everything
+    python3 scripts/generate_schemes.py --grade B4       # one grade
+    python3 scripts/generate_schemes.py --subject math   # one subject (file key)
+    python3 scripts/generate_schemes.py --subject mathematics  # ...or portal id
+    python3 scripts/generate_schemes.py --per-term       # also emit 219 term docs
+    python3 scripts/generate_schemes.py --with-descriptions
+
+Notes
+-----
+A scheme row covers a whole week, so it lists **every indicator that week
+covers** (5 teaching rows a week at one lesson a day), and one lesson may itself
+carry several indicator codes. Reading only the first code of the first lesson
+would drop the rest of the week silently.
 """
 from __future__ import annotations
 
@@ -60,12 +69,12 @@ except ImportError:  # data-only use (build_app_curriculum.py) still works
     HAS_DOCX = False
 
 ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(ROOT / "tools"))
+sys.path.insert(0, str(ROOT / "scripts"))
 OUT = ROOT / "dist" / "schemes"
 JSON_OUT = OUT / "json"
 DOCX_OUT = OUT / "docx"
 
-# Brand — matches tools/build_*_word_document.py.
+# Brand — matches scripts/build/build_*_word_document.py.
 # Only meaningful when python-docx is present (document rendering).
 if HAS_DOCX:
     NAVY = RGBColor(0, 32, 96)
@@ -117,7 +126,7 @@ B1_DB_PREFIX = {
 # Some curriculum DB files live only in the reference copy (e.g.
 # english-language_B5), so it is searched as a fallback. The primary copy
 # is searched first, which preserves the historical ordering (repo root
-# before app/data/). See tools/_paths.py — do not re-define this here.
+# before app/data/). See scripts/_paths.py — do not re-define this here.
 from _paths import DB_SEARCH, LESSONS, REFERENCE  # noqa: E402,F401
 
 
@@ -143,6 +152,21 @@ COL_HEADS = ["WEEKS", "STRAND", "SUB-STRANDS", "CONTENT STANDARD", "INDICATORS",
 
 
 # ---------------------------------------------------------------- discovery
+
+def resolve_subject(requested):
+    """Map a user-supplied --subject to the lesson-file keys it names.
+
+    Accepts the lesson-file key (`math`) and the subject id the portal and the
+    curriculum bundle use (`mathematics`), because asking for a subject by the
+    name the app shows should not answer "no matching files". Returns [] when
+    nothing matches, so the caller can print the valid names.
+    """
+    wanted = str(requested).strip().lower().replace("-", "_")
+    if not wanted:
+        return []
+    return [k for k, (sid, _) in SUBJECTS.items()
+            if k == wanted or sid.replace("-", "_") == wanted]
+
 
 def discover():
     """Map enriched lesson files -> (subject_key, grade, path)."""
@@ -177,8 +201,10 @@ def uniq(seq):
 def special_rows(term, teaching_weeks):
     """REVISION / EXAMINATION / VACATION block.
 
-    Mirrors the convention in src/lib/schemeAuto.js: term 1 ends with
-    REVISION then a combined EXAMINATION week; terms 2 and 3 add VACATION.
+    Term 1 ends with REVISION then a combined EXAMINATION week; terms 2 and 3
+    add VACATION. `ForecastForm.jsx` has no equivalent of these rows — it seeds
+    12 teaching weeks from the schedule — so they are carried in the JSON as
+    `kind: "special"` with a `label` for the caller to render.
     """
     w = teaching_weeks
     if term == 1:
@@ -191,6 +217,27 @@ def special_rows(term, teaching_weeks):
         {"week": str(w + 2), "kind": "special", "label": "EXAMINATION"},
         {"week": str(w + 3), "kind": "special", "label": "VACATION"},
     ]
+
+
+# A lesson covers a *set* of indicators, not a single one: the app stores
+# `indicatorCodes[]` on a plan (LessonPlanForm) and a scheme row lists every
+# indicator the week covers. Lesson records carry that as `ind_code` today;
+# accept a list (`ind_codes` / `indicatorCodes`) and a separated string too, so
+# a lesson taught against several indicators is not silently reduced to its
+# first. Splitting is on ; , and newline only — never on whitespace, because
+# indicator codes are never space-separated.
+INDICATOR_SPLIT_RE = re.compile(r"[;,\n]+")
+
+
+def lesson_indicator_codes(lesson):
+    """Every indicator code one lesson covers, in order, de-duplicated."""
+    raw = (lesson.get("ind_codes") or lesson.get("indicatorCodes")
+           or lesson.get("ind_code") or lesson.get("indicatorCode") or "")
+    if isinstance(raw, (list, tuple, set)):
+        parts = [str(p) for p in raw]
+    else:
+        parts = INDICATOR_SPLIT_RE.split(str(raw))
+    return uniq(p.strip() for p in parts if str(p).strip())
 
 
 def row_from_week(week, lessons, with_desc):
@@ -217,10 +264,16 @@ def row_from_week(week, lessons, with_desc):
 
     inds, ind_ids = [], []
     for l in lessons:
-        code = l.get("ind_code", "")
-        if code and code not in ind_ids:
+        codes = lesson_indicator_codes(l)
+        # `ind_desc` describes the lesson's indicator. When a lesson carries
+        # several codes that text cannot be attributed to any one of them, so
+        # print the codes alone rather than repeating one description under
+        # every code.
+        desc = (l.get("ind_desc") or "").strip() if len(codes) == 1 else ""
+        for code in codes:
+            if code in ind_ids:
+                continue
             ind_ids.append(code)
-            desc = (l.get("ind_desc") or "").strip()
             inds.append(f"{code} — {desc}" if with_desc and desc else code)
 
     resources = uniq((l.get("resources") or "").strip() for l in lessons)
@@ -236,6 +289,28 @@ def row_from_week(week, lessons, with_desc):
         "indicatorIds": ind_ids,
         "_revision": sum(1 for l in lessons if l.get("is_revision")),
         "_lessons": len(lessons),
+    }
+
+
+def to_app_row(row):
+    """One internal scheme row -> the `weekly_forecasts` row shape.
+
+    Field-by-field this is what `ForecastForm.jsx` writes and what
+    `ForecastView.jsx` / `src/lib/schemeDocx.js` read back. `kind` and `label`
+    are carried through for the REVISION / EXAMINATION / VACATION rows, which
+    the app has no equivalent of and renders as blank weeks.
+    """
+    week = str(row.get("week", "")).strip()
+    return {
+        "week": int(week) if week.isdigit() else week,
+        "kind": row.get("kind", "lesson"),
+        **({"label": row["label"]} if row.get("label") else {}),
+        "strandName": row.get("strand", ""),
+        "subStrandName": row.get("subStrand", ""),
+        "contentStandard": row.get("contentStandards", ""),
+        "indicators": row.get("indicators", ""),
+        "indicatorCodes": list(row.get("indicatorIds", [])),
+        "resources": row.get("resources", ""),
     }
 
 
@@ -516,7 +591,14 @@ def main():
     if args.grade:
         entries = [e for e in entries if e[1] == args.grade]
     if args.subject:
-        entries = [e for e in entries if e[0] == args.subject]
+        matching = resolve_subject(args.subject)
+        if not matching:
+            known = ", ".join(sorted(SUBJECTS))
+            sys.exit(f"Unknown subject '{args.subject}'.\n"
+                     f"  lesson-file keys: {known}\n"
+                     f"  portal subject ids: "
+                     + ", ".join(sorted({v[0] for v in SUBJECTS.values()})))
+        entries = [e for e in entries if e[0] in matching]
     if not entries:
         sys.exit("No matching lesson files.")
 
@@ -545,11 +627,15 @@ def main():
                 )
 
         # ---- JSON for the app
-        # Strip keys prefixed with "_" (internal QA counters) so the payload is
-        # exactly the row shape ForecastForm / schemeAuto.js expects.
+        # Strip keys prefixed with "_" (internal QA counters) and emit every row
+        # under the names the app reads, so the file can be seeded straight into
+        # `weekly_forecasts`. This is not cosmetic: the app reads
+        # strandName / subStrandName / contentStandard / indicatorCodes
+        # (ForecastForm writes them; ForecastView and lib/schemeDocx.js read
+        # them), so the internal names would render the strand, sub-strand and
+        # content-standard columns blank.
         clean = {
-            str(t): [{k: v for k, v in r.items() if not k.startswith("_")}
-                     for r in rows]
+            str(t): [to_app_row(r) for r in rows]
             for t, rows in sorted(scheme.items())
         }
         payload = {
@@ -684,9 +770,10 @@ def write_qa(qa, args):
         "strands by day of week (e.g. B4 Mathematics runs Number → Algebra → Geometry "
         "→ Data across Mon–Fri), so one week legitimately covers several strands.",
         "- Each term ends with the REVISION / EXAMINATION (/ VACATION) block, "
-        "following the convention in `src/lib/schemeAuto.js`.",
+        "emitted as `kind: \"special\"` rows carrying a `label`.",
         "- Teaching weeks per term are **inferred from the lesson data (12)**, not the "
-        "app's 10/11/11 convention, so that the scheme and the lesson plans agree. "
+        "app's default of 12 rows (ForecastForm), so that the scheme and the "
+        "lesson plans agree. "
         "Override with `--weeks`.",
     ]
     (OUT / "QA_REPORT.md").write_text("\n".join(lines), encoding="utf-8")
