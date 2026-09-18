@@ -34,7 +34,7 @@ additionally fails if `data/inventory.json` is stale.
 
 | # | Item | Why | Size |
 |---|------|-----|------|
-| P1-1 | **Cross-check the 8 unaudited subject-grades against their NaCCA PDFs**, then promote them into `data/curriculum/` and add their counts to the `EXPECTED` table in `scripts/audit/audit_a_databases.py` | The portal serves curriculum for 8 subject-grades (computing B4–B6, french B4–B6, KG1–KG2; ~714 indicators) that has **never been checked against its source** — no counts, no PDF in `data/sources/`, no row in `EXPECTED`. It is real NaCCA curriculum, not invented data (the official PDFs are now cited in the summaries and the sources exist — see below), but nobody has verified the extraction. **Partly done 2026-09-18**: every served subject now names its source, the bundle carries `verified`/`source` per subject derived from Audit A, and the UI says so (`GradeSubjects`, `SubjectSelect`). Remaining: the actual content cross-check. | M |
+| P1-1 | **Cross-check the 8 unaudited subject-grades against their NaCCA PDFs**, then promote them into `data/curriculum/` and add their counts to the `EXPECTED` table in `scripts/audit/audit_a_databases.py`. **Computing and french B4–B6 are done** — see the progress note below; KG1–KG2 and the remaining content gaps are not | The portal serves curriculum for 8 subject-grades (computing B4–B6, french B4–B6, KG1–KG2; ~714 indicators) that has **never been checked against its source** — no counts, no PDF in `data/sources/`, no row in `EXPECTED`. It is real NaCCA curriculum, not invented data (the official PDFs are now cited in the summaries and the sources exist — see below), but nobody has verified the extraction. **Partly done 2026-09-18**: every served subject now names its source, the bundle carries `verified`/`source` per subject derived from Audit A, and the UI says so (`GradeSubjects`, `SubjectSelect`). Remaining: the content gaps measured below, and KG1–KG2. | M |
 | P1-9 | **`english-language B5` is audited but not reproducible** — it passed Audit A before the data restructure and its database now exists only in `data/reference/`, so `audit_a_databases.py` (which enumerates `data/curriculum/`) no longer sees it: re-running the audit today yields 75 rows where the committed results have 76 | Promote the database into `data/curriculum/` and re-run the audit, or the only evidence that its 133 indicators were checked lives in a file nobody can regenerate. Flagged by a test in `src/curriculumBundle.test.js` that names it explicitly | S |
 | P1-2 | **Fill the L1 provenance gaps**: `english-language B4`, `mathematics B1`, `science B1` have databases but no summary (no source URL, no counts); `english-language B5` has a summary but no database in `data/curriculum/` | 184 indicators with unverifiable provenance are served to teachers | S |
 | P1-3 | **Repair the 8 malformed reference summaries** (no `counts` block) | Any code that reads `summary['counts']` raises on them | S |
@@ -43,6 +43,47 @@ additionally fails if `data/inventory.json` is stale.
 | P1-6 | **Clean the 58 L2 `ind_desc` records with a repeated trailing sentence** (0.4% of slots) at the extraction source | Visible artefact in generated documents | S |
 | P1-7 | **`indicatorDocId` keys on the bare indicator code** (`src/hooks/useCollection.js`) | `B4.1.1.1.1` exists in all ten B4 subjects, so the id is not grade-unique. Currently exported but unused — scope it by subject (or use `id`) before anything adopts it. See `docs/curriculum-data.md` | S |
 | P1-8 | **The book skeleton seeds only the first session of each indicator** — `seed/build_book_skeleton.py` reads `sessions[0]` for the title, RPK, starter, main, plenary and performance indicator | Its own docstring promises "everything the database knows is *seeded*". Measured on B4: 263 of 377 indicator slots carry more than one session, and for 134 of them the later sessions hold *different* main-activity text — so those sessions' teaching content never reaches the draft books. Either collapse the sessions into the one lesson deliberately (and say so), or emit them as lesson sessions/variants | M |
+
+### P1-1 progress — computing + french B4–B6 (2026-09-18)
+
+The two source PDFs arrived and were checked against the served data. **Both are genuine NaCCA
+documents** (Computing 76pp, French 123pp, September 2019) and they now sit in `data/sources/`
+as `computing_B4-B6.pdf` / `french_B4-B6.pdf`, giving both subjects B4–B9 source coverage
+alongside the existing `*_CCP_B7-B9.pdf` files.
+
+**The indicator sets match the source exactly** — computing 27/81/98 and french 88/90/89 for
+B4/B5/B6, with zero codes missing and zero invented. That is the question the audit could not
+answer before, and it is now answered: the *content* of these six subject-grades is complete and
+correctly coded.
+
+**What was wrong was the hierarchy labels.** Two distinct faults, both fixed by
+`scripts/fix_reference_structure.py` (which re-reads the strand headings from the PDFs):
+
+| | before | after |
+|---|---|---|
+| computing B4 | `strand: "Strand 1"` (placeholder) | `"1. WORD PROCESSING"` |
+| french B4 | `strand: "Saluer et prendre congé"` — a **sub-strand** name, one level too low | `"1. L'IDENTITÉ"` |
+
+473 indicators changed, and the change is exactly the two fields (verified: indicator key sets
+identical, only `strand`/`sub_strand` differ). The strand names now match each PDF's table of
+contents. `sub_strand` became `"Sub-strand B4.1.1"` — the generic form every audited subject
+already uses, so the browse tree looks the same whichever copy a subject comes from. The real
+sub-strand names are in the PDFs if the app ever wants to display them.
+
+**Still outstanding before these six can be called audited:**
+
+- **french: content standard empty** for 85/88 (B4), 89/90 (B5), 88/89 (B6). The text is in the
+  PDF's CONTENT STANDARDS column; it needs the same treatment, and the column layout makes it a
+  separate, more delicate extraction than the strand headings. User-visible: the content
+  standard is blank on a French lesson plan.
+- **keywords empty** for all 473. The audited subjects carry them, so the field is expected.
+- **PDF footer text bleeds into 94 descriptions** (e.g. `ind_desc` ending
+  `"© NaCCA, Ministry of Education 2019 - Personal development and leadership - Digital literacy 2"`).
+  `build_app_curriculum.py` strips its own `=== PAGE n ===` markers but not this.
+- **KG1–KG2** have no source PDF at all yet.
+
+Until those are closed the six remain `verified: false` in the bundle, which is now accurate
+rather than vague: the codes are right, the labels and some fields are not.
 
 ## P2 — engineering debt that makes every future fix expensive
 

@@ -124,6 +124,17 @@ Built by `scripts/build_app_curriculum.py`; validated by
 | `<grade>_schedules.json` | every scheduled lesson: term/week/day + phases (largest files, 3–5 MB each) |
 | `<grade>_schemes.json` | scheme rows per subject per term |
 
+### The reference-only subjects
+
+`computing`, `french` and `kindergarten` exist only in `data/reference/`, so they missed the
+extraction pass that produced everything else. Their source PDFs are in `data/sources/`
+(`computing_B4-B6.pdf`, `french_B4-B6.pdf`; kindergarten has none yet) and
+`scripts/fix_reference_structure.py` re-derives the hierarchy labels from them — run it with no
+arguments to see what would change, `--apply` to write. It exists because the labels, not the
+content, were wrong: computing's strands read `"Strand 1"` and french's held a *sub-strand* name
+one level too low. See TODO P1-1 for what is still outstanding (french content standards,
+keywords, PDF footer text in 94 descriptions).
+
 ### Provenance on every served subject
 
 Each entry in `<grade>_subjects.json` carries two fields the build derives rather than
