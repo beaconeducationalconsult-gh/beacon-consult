@@ -32,7 +32,7 @@ truth for "who am I / am I approved / am I admin".
 - `useQuoteLikes()` → live `{ quoteId: { count, likedBy[] } }` map (one `onSnapshot` on the
   `quote_likes` collection; error-handled so it degrades when unauthenticated)
 - `toggleQuoteLike(quoteId, uid, likes)` → create-on-first-like toggle
-- `topLikedQuotes(quotes, likes, n)` → top-N by count, joined to quote objects (Feed
+- `topLikedQuotes(quotes, likes, n)` → top-N by count, joined to quote objects (workspace
   leaderboard)
 
 ## Document exporters (`src/lib/`)
@@ -53,7 +53,7 @@ Libraries: `jspdf` + `jspdf-autotable` (PDF), `docx` (Word), `pptxgenjs` (PowerP
 
 - `week.js` — ISO week keys + the `WEEKLY_QUOTA` constant (question-bank target)
 - `academicCalendar.js` — Ghana term calendar; `getAcademicStatus()`, `termProgress()`,
-  `daysUntil()`, `fmtDate()` (drives Feed/Calendar widgets)
+  `daysUntil()`, `fmtDate()` (drives the workspace widgets and `components/TermCalendar.jsx`)
 - `grades.js` — grade id ↔ label helpers (`gradeLabel`)
 - `subjectThemes.js` — per-subject colour theming
 
@@ -61,7 +61,7 @@ Libraries: `jspdf` + `jspdf-autotable` (PDF), `docx` (Word), `pptxgenjs` (PowerP
 
 | Component | Purpose |
 |---|---|
-| `Sidebar.jsx` | Primary nav (fixed desktop / drawer mobile). The nav scrolls; header + user footer stay pinned. |
+| `Sidebar.jsx` | Primary nav (fixed desktop / drawer mobile). Study notes, Quote of the day and Slide lessons are commented out of `LINKS` (pages still routed); header + user footer stay pinned. |
 | `Navbar.jsx` | Public marketing nav (currently unused by pages) |
 | `PendingApproval.jsx` | Shown to unapproved/suspended members by `ProtectedLayout` |
 | `OfflineIndicator.jsx` | Bottom-center pill: offline / syncing / synced (see pwa-offline.md) |
@@ -72,6 +72,9 @@ Libraries: `jspdf` + `jspdf-autotable` (PDF), `docx` (Word), `pptxgenjs` (PowerP
 | `Stepper.jsx` | Multi-step form stepper |
 | `NotesTabs.jsx` | Tab strip used in the notes area |
 | `SubjectIcon.jsx` | Per-subject icon |
+| `SubjectSelect.jsx` | Subject dropdown for a grade; reports load failures and "no subjects" distinctly instead of rendering an empty-looking select |
+| `DataError.jsx` | "Could not load X" block naming the Firestore error (pending approval, undeployed rules, offline, missing index) — used by every data page |
+| `TermCalendar.jsx` | One term's weeks + scheduled lessons (a section of the Workspace) |
 
 > `RichEditor` and the article views render content with Tailwind `prose` classes, backed by
 > the `@tailwindcss/typography` plugin (registered via `@plugin "@tailwindcss/typography";`

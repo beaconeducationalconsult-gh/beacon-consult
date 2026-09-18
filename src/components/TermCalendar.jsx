@@ -2,11 +2,21 @@ import { useState } from 'react'
 import { ACADEMIC_YEAR, TERMS, fmtDate, getAcademicStatus, termProgress, termWeek } from '../lib/academicCalendar'
 import { GRADES, gradeLabel } from '../lib/grades'
 import { useSchedules } from '../hooks/useCurriculum'
-import { SkeletonList } from '../components/Skeleton'
-import EmptyState from '../components/EmptyState'
+import { SkeletonList } from './Skeleton'
+import EmptyState from './EmptyState'
 
-/** Term calendar for a class, merged with the department's static calendar. */
-export default function Calendar() {
+/**
+ * One term's weeks and what is scheduled in each.
+ *
+ * Lifted out of `src/pages/Calendar.jsx` when that page was folded into the
+ * workspace. The "in session" banner that headed the old page is gone: the
+ * workspace rail already carries `TermProgressCard`, which reports the same
+ * current-term position, and a page that says it twice reads like a bug.
+ *
+ * Owns its own grade/term state because it is the only consumer — lift it into
+ * props if a second caller ever needs to drive it.
+ */
+export default function TermCalendar() {
   const [grade, setGrade] = useState('B1')
   const [term, setTerm] = useState(1)
   const { lessons, loading: loadingSchedule, error: scheduleError } = useSchedules(grade)
@@ -22,20 +32,13 @@ export default function Calendar() {
   }
 
   return (
-    <div>
-      <header className="mb-6">
-        <h1 className="page-title">Calendar</h1>
-        <p className="page-subtitle">{ACADEMIC_YEAR} · terms, weeks and what is scheduled for your class.</p>
-      </header>
-
-      {status.state === 'in-term' && (
-        <div className="card mb-6 border-l-4 border-l-emerald-500 p-5">
-          <p className="section-heading">In session</p>
-          <p className="mt-1 text-sm text-slate-700">
-            {status.term.label} · week {termWeek(status.term)} of {status.term.weeks} · {status.daysRemaining} days remaining
-          </p>
-        </div>
-      )}
+    <section>
+      <div className="mb-4">
+        <h2 className="card-title text-lg">Term calendar</h2>
+        <p className="card-meta mt-1">
+          {ACADEMIC_YEAR} · terms, weeks and what is scheduled for your class.
+        </p>
+      </div>
 
       <div className="card mb-6 grid gap-4 p-5 sm:grid-cols-4">
         <div>
@@ -78,33 +81,33 @@ export default function Calendar() {
       )}
 
       {!loadingSchedule && !scheduleError && lessons.length > 0 && (
-      <ol className="space-y-3">
-        {Array.from({ length: 14 }, (_, i) => i + 1).map((week) => {
-          const scheduled = byWeek.get(week) || []
-          const isCurrent = status.state === 'in-term' && status.term.term === Number(term) && termWeek(status.term) === week
-          return (
-            <li key={week} className={`card p-5 ${isCurrent ? 'border-brand-300 ring-1 ring-brand-200' : ''}`}>
-              <div className="flex flex-wrap items-center justify-between gap-2">
-                <h2 className="card-title">Week {week}{isCurrent && <span className="chip-brand ml-2">this week</span>}</h2>
-                <span className="card-meta">{scheduled.length} scheduled lesson(s)</span>
-              </div>
-              {scheduled.length > 0 && (
-                <ul className="mt-3 space-y-1">
-                  {scheduled.slice(0, 12).map((lesson, index) => (
-                    <li key={index} className="text-sm text-slate-600">
-                      <span className="font-mono text-xs text-brand-700">{lesson.indicatorCode || lesson.code}</span>{' '}
-                      {lesson.sessionTitle || lesson.indicatorDescription}
-                      {lesson.subjectName && <span className="card-meta"> · {lesson.subjectName}</span>}
-                    </li>
-                  ))}
-                  {scheduled.length > 12 && <li className="card-meta">+{scheduled.length - 12} more…</li>}
-                </ul>
-              )}
-            </li>
-          )
-        })}
-      </ol>
+        <ol className="space-y-3">
+          {Array.from({ length: 14 }, (_, i) => i + 1).map((week) => {
+            const scheduled = byWeek.get(week) || []
+            const isCurrent = status.state === 'in-term' && status.term.term === Number(term) && termWeek(status.term) === week
+            return (
+              <li key={week} className={`card p-5 ${isCurrent ? 'border-brand-300 ring-1 ring-brand-200' : ''}`}>
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <h3 className="card-title">Week {week}{isCurrent && <span className="chip-brand ml-2">this week</span>}</h3>
+                  <span className="card-meta">{scheduled.length} scheduled lesson(s)</span>
+                </div>
+                {scheduled.length > 0 && (
+                  <ul className="mt-3 space-y-1">
+                    {scheduled.slice(0, 12).map((lesson, index) => (
+                      <li key={index} className="text-sm text-slate-600">
+                        <span className="font-mono text-xs text-brand-700">{lesson.indicatorCode || lesson.code}</span>{' '}
+                        {lesson.sessionTitle || lesson.indicatorDescription}
+                        {lesson.subjectName && <span className="card-meta"> · {lesson.subjectName}</span>}
+                      </li>
+                    ))}
+                    {scheduled.length > 12 && <li className="card-meta">+{scheduled.length - 12} more…</li>}
+                  </ul>
+                )}
+              </li>
+            )
+          })}
+        </ol>
       )}
-    </div>
+    </section>
   )
 }

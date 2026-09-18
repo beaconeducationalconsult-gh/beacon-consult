@@ -73,7 +73,7 @@ weekly teaching theory, the academic calendar, and articles set to public.
 
 | Area | What teachers get |
 |---|---|
-| Feed | Posts, likes, quote of the day, term progress, this week's contribution count |
+| Workspace | The home page: network posts and likes, your own contributions, quote of the day, term progress, this week's contribution count, and the term calendar |
 | Curriculum | Every indicator by strand → sub-strand → content standard, KG1–B9 |
 | Schemes of learning | A term scheme seeded from the curriculum schedule, editable per week, exported to Word/PDF |
 | Lesson plans | Indicator-linked plans (objectives, starter, main, plenary, assessment) exported to Word/PDF |
