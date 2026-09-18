@@ -34,7 +34,7 @@ additionally fails if `data/inventory.json` is stale.
 
 | # | Item | Why | Size |
 |---|------|-----|------|
-| P1-1 | **Cross-check the 8 unaudited subject-grades against their NaCCA PDFs**, then promote them into `data/curriculum/` and add their counts to the `EXPECTED` table in `scripts/audit/audit_a_databases.py`. **Computing, french and kindergarten B4–B6/KG1–KG2 are audited** — see the progress notes below; the french content standards are filled (2026-09-18), and the remaining content gaps are not | The portal serves curriculum for 8 subject-grades (computing B4–B6, french B4–B6, KG1–KG2; ~714 indicators) that had **never been checked against its source** — no counts, no PDF in `data/sources/`, no row in `EXPECTED` — until the three PDFs arrived and Audit B was pointed at them. It is real NaCCA curriculum, not invented data (the official PDFs are now cited in the summaries and the sources exist — see below), but nobody has verified the extraction. **Partly done 2026-09-18**: every served subject now names its source, the bundle carries `verified`/`source` per subject derived from Audit A, and the UI says so (`GradeSubjects`, `SubjectSelect`). Remaining: promoting the copies into `data/curriculum/` with their counts in `EXPECTED`, and the field-completeness gaps measured below (keywords, footer/column bleed, KG content standards). | M |
+| P1-1 | **Cross-check the 8 unaudited subject-grades against their NaCCA PDFs**, then promote them into `data/curriculum/` and add their counts to the `EXPECTED` table in `scripts/audit/audit_a_databases.py`. **Computing, french and kindergarten B4–B6/KG1–KG2 are audited and their text fields are cleaned** (keywords, `ind_desc` furniture and the KG content standards — 2026-09-18, see the progress notes below); what is left is the promotion | The portal serves curriculum for 8 subject-grades (computing B4–B6, french B4–B6, KG1–KG2; ~714 indicators) that had **never been checked against its source** — no counts, no PDF in `data/sources/`, no row in `EXPECTED` — until the three PDFs arrived and Audit B was pointed at them. It is real NaCCA curriculum, not invented data (the official PDFs are now cited in the summaries and the sources exist — see below), but nobody has verified the extraction. **Partly done 2026-09-18**: every served subject now names its source, the bundle carries `verified`/`source` per subject derived from Audit A, and the UI says so (`GradeSubjects`, `SubjectSelect`). Remaining: promoting the copies into `data/curriculum/` with their counts in `EXPECTED`, and the field-completeness gaps measured below (keywords, footer/column bleed, KG content standards). | M |
 | P1-9 | **`english-language B5` is audited but not reproducible** — it passed Audit A before the data restructure and its database now exists only in `data/reference/`, so `audit_a_databases.py` (which enumerates `data/curriculum/`) no longer sees it: re-running the audit today yields 75 rows where the committed results have 76 | Promote the database into `data/curriculum/` and re-run the audit. Less urgent since Audit B now covers the subject — it resolves databases through `find_data`, so it sees both directories, and it passes this one 133/133 (a test pins that). But Audit A's committed row still cannot be reproduced by anyone | S |
 | P1-10 | **`B7.4.2.3.1` is a fabricated record in `data/reference/french_B7_...`** — its `cs_desc` reads `"French Content Standard B7.4.2.3"` and its `ind_desc` `"French Learning Indicator B7.4.2.3.1"`, and the only occurrence of that code in `french_CCP_B7-B9.pdf` is the worked example in the front matter (p. xxix) | The served copy (`data/curriculum/`) has 64 records and not this one, and Audit A's `EXPECTED` table says 64, so the record is an extraction artefact rather than curriculum. Left in place: deleting data is the user's call, and `scripts/fix_french_content_standards.py` reports it instead of inventing a standard for it | S |
 | P1-2 | **Fill the L1 provenance gaps**: `english-language B4`, `mathematics B1`, `science B1` have databases but no summary (no source URL, no counts); `english-language B5` has a summary but no database in `data/curriculum/` | 184 indicators with unverifiable provenance are served to teachers | S |
@@ -69,8 +69,10 @@ strand-7 heading `SUB STRAND 7: MY GLOBAL COMMUNITY` (p135), while `SUB STRAND 7
 when its number agrees with the codes beneath it *and* no strand heading for that number has been
 seen yet.
 
-**Still outstanding:** the same field gaps as computing/french — `keywords` empty on all 339,
-and 17 descriptions carrying the PDF's footer text.
+**Then the same field gaps as computing/french** — `keywords` empty on all 339 and descriptions
+carrying the PDF's footer text — plus the KG content standards; all three were closed on
+2026-09-18 by `scripts/fix_reference_text.py` (see the note under the computing + french section
+below).
 
 ### P1-1 progress — computing + french B4–B6 (2026-09-18)
 
@@ -101,25 +103,38 @@ sub-strand names are in the PDFs if the app ever wants to display them.
 **Audited.** These six now pass Audit B (below), so `verified` is true for them and the app no
 longer flags them. What remains is field completeness, not authenticity:
 
-**Still outstanding before these six can be called complete:**
+**The field gaps are closed** (2026-09-18). All three were settled against the prints in
+`data/sources/`, never by rewriting:
 
 - ~~**french: content standard empty** for 85/88 (B4), 89/90 (B5), 88/89 (B6)~~ — **done
   2026-09-18**, see the content-standards note below. All 266 records now carry the skill area
   the print names as the standard, and the eleven french B7–B9 standards that had the
   neighbouring column glued in front of them were repaired in the same pass (36 records).
-- **keywords empty** for all 473 (and for KG1/KG2, 169/170). The audited subjects carry them, so
-  the field is expected.
-- **Neighbouring columns and page footers bleed into indicator text** — 94 `ind_desc` values end
-  with the page footer (e.g. `"© NaCCA, Ministry of Education 2019 - Personal development and
-  leadership - Digital literacy 2"`), and 62 more in french B4–B6 carry the CORE COMPETENCIES
-  list (17/21/24 by grade; a few *open* with it). `build_app_curriculum.py` strips its own
-  `=== PAGE n ===` markers but not this. These are indicator texts, which is why the content
-  standards — a field where the print's answer is unambiguous — were fixed first.
-- **KG1–KG2 content standards**: 12 (KG1) and 6 (KG2) `cs_desc` are still empty. The KG print is
-  thematic and does print standard text; that is its own extraction (see the kindergarten note).
+- ~~**keywords empty** for all 473 (and for KG1/KG2, 169/170)~~ — **done 2026-09-18**: all 812
+  records of the eight subject-grades carry the audited convention's tag
+  (`computing, b5, upper-primary`, `kindergarten, kg1, kindergarten`). The six drifted reference
+  copies of audited subjects (creative-arts B4–B6, social-studies B7–B9) were stamped with the
+  tag their curriculum copy carries — their *records* are still a stale extraction and stay out
+  of scope.
+- ~~**Neighbouring columns and page footers bleed into indicator text**~~ — **done 2026-09-18**:
+  397 `ind_desc` values were cleaned. The furniture was the page footer (118 records, e.g.
+  `"… desktop 3 © NaCCA, Ministry of Education 2019"`), the reference codes (`LL2`, `(CC)`,
+  `N3.1` — 166), the CORE COMPETENCIES list of the column next door (54, incl. the few that
+  *opened* with it), the table's headings, the row markers the extractor read past, and one cell
+  label. 383 of the 397 survivors are verbatim readings of the record's own row and 14 are
+  word-by-word (the extraction braided the columns); nothing the print does not carry was
+  written, and none is left over.
+- ~~**KG1–KG2 content standards**~~ — **done 2026-09-18**: 13 records were filled (the print's
+  standard column had been missed for `K1.3.1.1` and `K2.1.3.1`), 7 were completed, 21 trimmed of
+  the heading next door, and 5 (`K2.5.1.1`) replaced — they held indicator-column text, and the
+  displaced values are kept in `data/audit/reference_text_fixes.json`. `K1.3.2.1`'s cell is
+  **blank in the print**, so its five records stay empty, and the audit's
+  "the print has no sentence" verdict for it stands as a print defect.
 
-Until those are closed the six remain `verified: false` in the bundle, which is now accurate
-rather than vague: the codes are right, the labels and some fields are not.
+The work and its trail are `scripts/fix_reference_text.py` (report by default, `--apply` writes)
+and `data/audit/reference_text_fixes.json`; the rule and the residual check are in
+`docs/curriculum-data.md`. What is still outstanding from P1-1 is the promotion: these eight
+subject-grades live in `data/reference/`, and Audit A's `EXPECTED` table has no row for them.
 
 ### P1-1 progress — the french content standards (2026-09-18)
 

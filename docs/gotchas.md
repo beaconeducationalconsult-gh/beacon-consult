@@ -88,6 +88,43 @@ fix against the right one leaves a defect behind in the file someone may later p
 Check which copy `find_data` resolves (and whether the subject is served from it) before editing,
 then rebuild: `make build-curriculum` writes `public/curriculum/`, which is what the app reads.
 
+## 🟠 A page read top to bottom glues the neighbouring columns onto the row
+
+The eight reference-only subject-grades were extracted by reading each page in order, which is why
+397 indicator descriptions carried the page footer, the competence list of the column beside the
+row, and the table's headings. The tempting fix — a list of phrases to delete — is not a fix: the
+same words appear legitimately inside indicator text (`… discuss and point to things that are safe
+and unsafe to play with.` sits beside a `References / WP / Communication and collaboration`
+panel), and a phrase list cannot tell the two apart.
+
+What works is to read the *print's row* first: the x band of the indicator column comes from the
+page's own vertical rules (`re` operators with `w < 2.5`), then a row runs from its indicator code
+to the next code or the next table heading. A phrase is furniture only when the print sets it
+**outside that row**, and the survivor is read back against the row before anything is written.
+Four traps sit in that geometry, all of them found the hard way:
+
+* **A heading can sit inside the indicator column's band.** `STRAND 4: Les activités` and
+  `INDICATOR AND EXEMPLARS` are centred over the table between two of its rules, so a row-band
+  check that stops only at the next indicator code swallows them — `B5.3.1.4.1` ended
+  `… l'on n'aime pas. STRAND 4: Les activités INDICATOR AND EXEMPLARS`.
+* **A label copied halfway is not a label.** Where the print's line ran out, the extractor left a
+  stub the vocabulary cannot match: `- Creativity and innov`, `… Cultural ide`,
+  `… - Critical thinking -`. Cut a stub only when the print never sets it as a word of its own
+  *and* a label word starts with it — otherwise the rule eats the record's own truncations
+  (`… according to a given att`, where `attribute` is the print's word).
+* **Never delete the extraction's truncations.** The database's clean spelling is usually the
+  better reading (`R ead , use and copy` against `Read, use and copy`), so de-kern the row before
+  comparing and treat a word the extraction cut short as part of the record: report it, never
+  write it away.
+* **De-kerning must not invent words.** Rejoining `R` + `ead` is safe only when the page prints
+  `read` somewhere and does *not* print `R` on its own; without that second half `a` + `long`
+  becomes `along`, and the row stops being a yardstick — which fails silently, because the
+  comparison is on folded text.
+
+The rule, the ladder of reading strengths (`row`/`page` verbatim → `row-order`/`page-order`/
+`document-order` word-by-word → report only) and the residual scan live in
+`scripts/fix_reference_text.py`; the trail is `data/audit/reference_text_fixes.json`.
+
 ## 🟠 Committed rules ≠ deployed rules
 Vercel does **not** deploy Firestore rules/indexes. Editing `firestore.rules` and pushing
 changes nothing in production until `firebase deploy --only firestore:rules,firestore:indexes`

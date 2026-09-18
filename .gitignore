@@ -39,3 +39,7 @@ yarn-error.log*
 # Audit scratch: PDF text extracted by scripts/audit/audit_b_pdf_crosscheck.py,
 # cached so repeat runs are fast. Regenerated on demand; never committed.
 data/audit/pdf_text_cache/
+
+# Same, for the per-chunk coordinates scripts/fix_reference_text.py needs to tell
+# a table's columns apart.
+data/audit/pdf_chunk_cache/

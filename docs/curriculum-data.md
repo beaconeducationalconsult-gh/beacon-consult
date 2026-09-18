@@ -65,7 +65,10 @@ The defensible sentences are:
   constants, not per-indicator content.** In `mathematics_B4` all 71 records share
   one `resources` string, one `keywords` string and one `assessment` string
   (1 distinct value each). They are derived labels (`{subject, grade, band}`), not
-  authored per indicator. Do not present them as per-indicator enrichment.
+  authored per indicator. Do not present them as per-indicator enrichment. The
+  eight reference-only subject-grades and the six drifted reference copies were the
+  last records with an empty `keywords`; they carry the same derived tag since
+  2026-09-18 (`scripts/fix_reference_text.py`).
 * **`cs_desc` is the content standard the indicator belongs to, and what it holds
   depends on the print** — the two shapes are not interchangeable:
   * French and computing **B7–B9** print a sentence (*"Comprendre les salutations,
@@ -158,10 +161,35 @@ see what would change, `--apply` to write. It exists because the labels, not the
 wrong: computing's and kindergarten's strands read `"Strand 1"`, french's held a *sub-strand*
 name one level too low, and one kindergarten indicator was a restatement of its own code. The
 script also fills descriptions that are stubs, and refuses to guess when a heading is ambiguous.
-See TODO P1-1 for what is still outstanding (keywords on all three, the page footer and
-neighbouring column bled into 111 descriptions, the empty KG content standards).
-`scripts/fix_french_content_standards.py` completed the french half of that list on 2026-09-18 —
-see the `cs_desc` note under *L1 — curriculum* above.
+`scripts/fix_french_content_standards.py` completed the french half of the field work on
+2026-09-18 — see the `cs_desc` note under *L1 — curriculum* above.
+
+`scripts/fix_reference_text.py` (report by default, `--apply` writes, trail in
+`data/audit/reference_text_fixes.json`) closed the rest of that list on 2026-09-18:
+
+| field | before | after |
+|---|---|---|
+| `keywords` | empty in all 812 records | the audited convention `{subject}, {grade}, {band}` |
+| `ind_desc` | 397 records carried the print's furniture — the page footer in 118, the reference codes in 166 (`LL2`, `(CC)`, `N3.1`), the competence labels of the column next door in 54, plus the table headings, the row markers the extractor read past and one cell label | the indicator's own text, and only that |
+| KG `cs_desc` | 13 empty, 7 truncated, 21 carrying the sentence plus the heading next door, 5 holding indicator-column text | the sentence the print sets in the standard's own column |
+
+The deletion rule is "the print sets it *outside* the record's own row" — the print is read twice,
+once for the record's row and once for everything else on the page — so a description that
+legitimately names a competence keeps it; a label the extraction copied only halfway
+(`… - Creativity and innov`) and text belonging to another record's row are cut too, each only as
+far as the print says so. What survives is then read back against the print and graded
+(`row`/`page` verbatim, `row-order`/`page-order`/`document-order` word-by-word, both recorded per
+record in the trail — 383 of the 397 are verbatim, 14 word-by-word); a survivor the print does not
+carry is reported and never written, and no record was left in that state. Two print
+defects are left standing and reported rather than papered over: `K1.3.2.1`'s content-standard cell
+is blank in the KG print (its five records stay empty), and `K2.5.1.1`'s five records held
+indicator-column text, which the print's own sentence replaced — the displaced values are kept in
+the trail. Reference copies of subjects audited elsewhere (creative-arts B4–B6, social-studies
+B7–B9) get the same keyword tag, read off the curriculum copy of the same name — their *records*
+are a stale extraction and remain out of scope (TODO P1-1).
+
+See TODO P1-1 for what is still outstanding (promoting the eight into `data/curriculum/` with
+their counts in Audit A's `EXPECTED` table).
 
 ### Which subject-grades have been cross-checked
 

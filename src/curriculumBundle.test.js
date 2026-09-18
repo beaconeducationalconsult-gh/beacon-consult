@@ -292,6 +292,140 @@ describe.each(ids)('%s', (grade) => {
     })
   })
 
+  describe('the reference-only text fields', () => {
+    const readData = (path) => JSON.parse(readFileSync(new URL(`../data/${path}`, import.meta.url), 'utf8'))
+    const referenceOnly = [
+      'computing_B4', 'computing_B5', 'computing_B6',
+      'french_B4', 'french_B5', 'french_B6',
+      'kindergarten_KG1', 'kindergarten_KG2',
+    ]
+    const servedFor = (name) => {
+      const [subject, grade] = name.split('_')
+      return bundle.get(grade).indicators.filter((i) => i.subjectId === subject)
+    }
+
+    it('gives every record of the eight reference-only subject-grades a keyword tag', () => {
+      // No NaCCA print carries keywords, so there is nothing to read from one: the
+      // audited subject-grades carry a single `subject, grade, band` tag per file,
+      // and the extraction had left all 812 records of these eight empty (the six
+      // drifted copies in data/reference/ are covered by the same pass).
+      const empty = []
+      for (const name of referenceOnly) {
+        const rows = readData(`reference/${name}_curriculum_db_clean.json`)
+        const codes = Object.keys(rows)
+        expect(codes.length, `${name} records`).toBeGreaterThan(20)
+        for (const code of codes) {
+          if (!String(rows[code].keywords || '').trim()) empty.push(`${name}/${code}`)
+        }
+      }
+      expect(empty).toEqual([])
+    })
+
+    it('serves those tags to the portal', () => {
+      const empty = []
+      for (const name of referenceOnly) {
+        for (const i of servedFor(name)) if (!String(i.keywords || '').trim()) empty.push(i.id)
+      }
+      expect(empty).toEqual([])
+    })
+
+    it('serves no page furniture in their descriptions', () => {
+      // The extraction read the page top to bottom, so the footer (`© NaCCA,
+      // Ministry of Education 2019 44`), the column headings and the
+      // core-competence labels of the column next door ended up inside indicator
+      // descriptions — 94 records ended with the footer, 62 carried the
+      // competence list, and the headings were in dozens more.
+      // scripts/fix_reference_text.py deletes only what the print sets outside the
+      // record's own row, and this is the check that it did, over the served copy.
+      const FURNITURE = [
+        /©\s*NaCCA/i,
+        /Indicators? and Exemplars?/i,
+        /Core Competenc/i,
+        /Subject Specific Practice/i,
+        /Communication and Collaboration/i,
+        /Critical Thinking/i,
+        /Creativity and Innovation/i,
+        /Cultural Identity and Global Citizenship/i,
+        /Personal Development and Leadership/i,
+        /Digital Literacy/i,
+      ]
+      const hits = []
+      for (const name of referenceOnly) {
+        for (const i of servedFor(name)) {
+          const text = String(i.description || '')
+          const seen = FURNITURE.filter((rx) => rx.test(text))
+          if (seen.length) hits.push(`${i.id}: ${seen[0]}`)
+        }
+      }
+      expect(hits).toEqual([])
+    })
+
+    it('gives the kindergarten content standards the sentence the print prints', () => {
+      // The KG print sets the standard in its own column. Thirteen records held
+      // nothing, seven stopped short of the sentence, twenty-one carried the
+      // sentence plus the heading of the column next door, and five (K2.5.1.1)
+      // held indicator-column text instead — all of them are settled against the
+      // print. K1.3.2.1's own cell is blank in the print, so its five records stay
+      // empty rather than being guessed at.
+      const empty = []
+      for (const grade of ['KG1', 'KG2']) {
+        const rows = readData(`reference/kindergarten_${grade}_curriculum_db_clean.json`)
+        for (const code of Object.keys(rows)) {
+          if (!String(rows[code].cs_desc || '').trim()) empty.push(code)
+        }
+      }
+      expect(empty.sort()).toEqual([
+        'K1.3.2.1.1', 'K1.3.2.1.2', 'K1.3.2.1.3', 'K1.3.2.1.4', 'K1.3.2.1.5',
+      ])
+
+      // the two standards whose column the print was read for at last
+      const washed = []
+      for (const [grade, prefix] of [['KG1', 'K1.3.1.1.'], ['KG2', 'K2.1.3.1.']]) {
+        const rows = readData(`reference/kindergarten_${grade}_curriculum_db_clean.json`)
+        for (const code of Object.keys(rows)) {
+          if (code.startsWith(prefix) && !/^Demonstrate/.test(rows[code].cs_desc || '')) washed.push(code)
+        }
+      }
+      expect(washed).toEqual([])
+
+      // and the five records that held indicator text now hold the print's own
+      // sentence for their standard
+      const kg2 = readData('reference/kindergarten_KG2_curriculum_db_clean.json')
+      for (const code of ['K2.5.1.1.3', 'K2.5.1.1.4', 'K2.5.1.1.5', 'K2.5.1.1.6', 'K2.5.1.1.7']) {
+        expect(kg2[code].cs_desc, code).toBe('Demonstrate understanding of history and celebrations of Ghana')
+      }
+    })
+
+    it('leaves a trail of what it wrote, and writes nothing it could not back', () => {
+      const trail = readData('audit/reference_text_fixes.json')
+      expect(trail.applied).toMatchObject({ keywords: 812, ind_desc: 397, cs_desc: 176 })
+      expect(trail.history.length, 'runs recorded').toBeGreaterThan(0)
+
+      // every description it wrote is read back against the print, and the
+      // strength of that reading is recorded per record; a survivor the print does
+      // not carry is never written (`unverified`), so none may appear here
+      const allowed = new Set([
+        'row', 'page', 'row-order', 'page-order', 'document', 'document-order',
+      ])
+      const bad = []
+      for (const [key, entry] of Object.entries(trail.ind_desc)) {
+        for (const c of entry.changes) if (!allowed.has(c.where)) bad.push(`${key}/${c.code}: ${c.where}`)
+      }
+      expect(bad).toEqual([])
+      expect(Object.values(trail.ind_desc).flatMap((e) => e.unverified)).toEqual([])
+
+      // the five values displaced from K2.5.1.1 are kept here, not thrown away
+      const displaced = trail.cs_desc
+        .flatMap((e) => e.changes)
+        .filter((c) => c.action === 'displaced')
+        .map((c) => c.code)
+        .sort()
+      expect(displaced).toEqual([
+        'K2.5.1.1.3', 'K2.5.1.1.4', 'K2.5.1.1.5', 'K2.5.1.1.6', 'K2.5.1.1.7',
+      ])
+    })
+  })
+
   describe('known gaps stay known', () => {
     it('has no schedules file for the kindergarten grades', () => {
     const kg = grades.filter((g) => g.id.startsWith('KG'))
