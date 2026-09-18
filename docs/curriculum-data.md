@@ -147,11 +147,19 @@ every generated document:
 
 `scripts/fix_ind_desc_exemplars.py` (report by default, `--apply` writes, trail in
 `data/audit/ind_desc_exemplars.json`) took those tails back off on 2026-09-18: **242
-records in 8 databases** (239 dangling intros, 3 repeats), plus the 980 lesson slots
-in 8 lesson files that carry a copy of the same indicator. It never invents text —
+records in 8 databases** (239 dangling intros, 3 repeats). It never invents text —
 the new value is always a prefix of the old one — and it cuts only when the print's
 own row carries the indicator that would be left behind, recording the reading's
 strength (`ratio`) and the pages it checked per record.
+
+**The lesson layer is a copy, and it edits that too.** `data/lessons/` embeds the
+indicator in four fields — `ind_desc`, the `perf_indicator` built from it, and the
+`starter`/`main` activity steps the template writes around it — and the generated
+books read the lesson file, not the database. So the same substitution runs there,
+matched slot by slot on `ind_code` (never across records): **980 slots in 8 lesson
+files**, `ind_desc` 980, `perf_indicator` 980, `starter` 805, `main` 805. A source
+fix that stopped at the database would have left the artefact in the documents
+teachers print.
 
 What it deliberately did *not* touch:
 

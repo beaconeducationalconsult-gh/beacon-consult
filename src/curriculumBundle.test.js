@@ -24,6 +24,14 @@ const bundle = new Map(
 const flatten = (tree) =>
   tree.flatMap((s) => s.subStrands.flatMap((sub) => sub.standards.flatMap((std) => std.indicators)))
 
+// creative-arts_B2_curriculum_db_clean.json -> creative_arts_b2_lessons_enriched.json
+const lessonFileOf = (dbFile) => {
+  const stem = dbFile.replace('_curriculum_db_clean.json', '').replace(/-/g, '_')
+  const [subject, grade] = [stem.replace(/_(B\d|KG\d)$/i, ''), stem.match(/_(B\d|KG\d)$/i)?.[1]]
+  return grade ? `${subject}_${grade.toLowerCase()}_lessons_enriched.json`
+    : `${subject}_lessons_enriched.json`
+}
+
 describe('the grade list', () => {
   it('covers KG1 to B9', () => {
     expect(ids).toEqual(['KG1', 'KG2', 'B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'B9'])
@@ -460,6 +468,10 @@ describe.each(ids)('%s', (grade) => {
 
       // and the lesson template, which is a copy of the database, was cleaned with
       // it — the generated books read the lesson file, not the database
+      expect(trail.applied.lesson_slots).toBe(980)
+      expect(trail.applied.lesson_fields).toMatchObject({
+        ind_desc: 980, perf_indicator: 980, starter: 805, main: 805,
+      })
       const slots = readData('lessons/creative_arts_b2_lessons_enriched.json')
       const dangling = slots.filter((s) => /learners? (are|is) to:?\s*$/i.test(s.ind_desc || ''))
       expect(dangling).toEqual([])
@@ -468,7 +480,36 @@ describe.each(ids)('%s', (grade) => {
       for (const slot of noTail) {
         expect(slot.ind_desc.endsWith('communities')).toBe(true)
         expect(slot.perf_indicator.endsWith('communities')).toBe(true)
+        // the activity steps the template writes around the indicator are copies
+        // too, and they are what the printed book actually shows
+        for (const step of [...slot.starter, ...slot.main]) {
+          expect(step, step).not.toMatch(/learners? (are|is) to:?$|1\. Identify drawing materials/)
+        }
       }
+
+      // the strongest form of the same claim, over every record the trail names:
+      // no lesson field anywhere still carries a text the cleanup removed
+      const before = new Map(trail.cut.filter((e) => e.verified)
+        .map((e) => [`lessons/${lessonFileOf(e.file)}`, e.before]))
+      const offenders = []
+      for (const file of new Set(before.keys())) {
+        for (const slot of readData(file)) {
+          const b = before.get(file)
+          if (b === undefined) continue
+          if (slot.ind_desc === b) offenders.push(`${file}/${slot.lesson_num}/ind_desc`)
+          // the other fields embed the indicator inside a sentence the template
+          // writes around it, so the check is containment, not equality
+          for (const field of ['perf_indicator', 'rpk']) {
+            if ((slot[field] || '').includes(b)) offenders.push(`${file}/${slot.lesson_num}/${field}`)
+          }
+          for (const field of ['starter', 'main', 'plenary']) {
+            for (const step of slot[field] || []) {
+              if (step.includes(b)) offenders.push(`${file}/${slot.lesson_num}/${field}`)
+            }
+          }
+        }
+      }
+      expect(offenders).toEqual([])
 
       // the record the artefact names first is the one the audit trail describes
       const first = trail.cut.find((e) => e.verified)

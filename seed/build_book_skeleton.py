@@ -186,6 +186,10 @@ class Lesson:
     objective: str
     seeds: dict = field(default_factory=dict)
     sessions: list[dict] = field(default_factory=list)
+    # the scheduled sessions whose own `main` differs from the seeded one — the
+    # lesson above drafts from the indicator's *first* session, so these print as
+    # the sessions that follow it rather than being dropped
+    later_main: list[dict] = field(default_factory=list)
 
     @property
     def code_parts(self) -> list[str]:
@@ -258,7 +262,13 @@ def build_structure(indicators: dict, lessons: list[dict]) -> list[Chapter]:
             unit.topics.append(topic)
 
         sessions = sessions_by_code.get(code, [])
-        title = clean(sessions[0].get("session_title")) if sessions else ""
+        first = sessions[0] if sessions else {}
+        # The book sets one lesson per indicator, so the lesson *is* one draft:
+        # it seeds from the first scheduled session, and every later session whose
+        # own main-activity text differs is carried underneath rather than lost.
+        later = [s for s in sessions[1:]
+                 if _steps(s.get("main")) and _steps(s.get("main")) != _steps(first.get("main"))]
+        title = clean(first.get("session_title")) if sessions else ""
         if title.lower().startswith("session"):
             title = ""  # "Session 1 of 2 — …" is a schedule label, not a lesson title
         if not title:
@@ -278,17 +288,38 @@ def build_structure(indicators: dict, lessons: list[dict]) -> list[Chapter]:
                     "resources": clean(row.get("resources")),
                     "competencies": clean(row.get("competencies")),
                     "assessment": clean(row.get("assessment")),
-                    "rpk": clean(sessions[0].get("rpk")) if sessions else "",
-                    "main": sessions[0].get("main") if sessions else [],
-                    "starter": sessions[0].get("starter") if sessions else [],
-                    "plenary": sessions[0].get("plenary") if sessions else [],
-                    "performance": clean(sessions[0].get("perf_indicator")) if sessions else "",
+                    "rpk": clean(first.get("rpk")),
+                    "main": first.get("main") or [],
+                    "starter": first.get("starter") or [],
+                    "plenary": first.get("plenary") or [],
+                    "performance": clean(first.get("perf_indicator")),
+                    "session": _session_label(first),
                 },
                 sessions=sessions,
+                later_main=later,
             )
         )
 
     return list(chapters.values())
+
+
+def _steps(value) -> list[str]:
+    """A session field as a list of steps (`main`/`starter`/`plenary` are lists,
+    but the templates hold a bare string in some records)."""
+    if isinstance(value, str):
+        return [value] if value.strip() else []
+    return [clean(v) for v in value or [] if clean(v)]
+
+
+def _session_label(session: dict) -> str:
+    """`Term 1 · week 2 · Monday`, the way the schedule names a session."""
+    parts = []
+    for key, word in (("term", "Term"), ("week", "week")):
+        if session.get(key) is not None:
+            parts.append(f"{word} {session[key]}")
+    if session.get("day"):
+        parts.append(str(session["day"]))
+    return " · ".join(parts)
 
 
 def _sort_key(code: str):
@@ -497,6 +528,13 @@ def build_textbook(subject_label: str, grade: str, chapters: list[Chapter], flav
                     main = lesson.seeds.get("main") or []
                     if main:
                         heading(document, "Main content", 5)
+                        where = lesson.seeds.get("session")
+                        if where:
+                            paragraph = document.add_paragraph()
+                            run = paragraph.add_run(
+                                f"Drafted from the first scheduled session ({where}).")
+                            run.italic = True
+                            run.font.color.rgb = MUTED
                         for step in main:
                             document.add_paragraph(clean(step))
                     else:
@@ -527,10 +565,23 @@ def build_textbook(subject_label: str, grade: str, chapters: list[Chapter], flav
                     if lesson.seeds.get("plenary"):
                         box(document, "Plenary", [clean(s) for s in lesson.seeds["plenary"]], fill="EFF6FF")
 
-                    if lesson.sessions and len(lesson.sessions) > 1:
+                    if lesson.later_main:
+                        # each later session's own activity text, verbatim: the
+                        # lesson above covers the first session, and dropping these
+                        # would lose teaching content the database holds
+                        heading(document, "Later sessions", 5)
+                        box(
+                            document,
+                            f"The other {len(lesson.later_main)} scheduled session(s) for this indicator",
+                            [f"{_session_label(s)} — " + "; ".join(_steps(s.get("main")))
+                             for s in lesson.later_main],
+                            fill="F8FAFC",
+                        )
+                    elif lesson.sessions and len(lesson.sessions) > 1:
                         document.add_paragraph(
                             f"{len(lesson.sessions)} scheduled sessions cover this indicator "
-                            f"(term {lesson.sessions[0].get('term')}, week {lesson.sessions[0].get('week')})."
+                            f"(term {lesson.sessions[0].get('term')}, week {lesson.sessions[0].get('week')}); "
+                            "the later ones repeat the same activity, so this lesson covers them all."
                         ).italic = True
 
                     figure = document.add_paragraph()

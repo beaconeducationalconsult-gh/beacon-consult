@@ -142,10 +142,13 @@ rendered, so the artefact reaches every scheme, lesson plan and book.
 Two things follow. **`ind_desc` should end where the print's exemplar begins** —
 `scripts/fix_ind_desc_exemplars.py` cuts at the marker, and only when the print's
 own row carries the indicator that would be left behind. And **the lesson files are
-copies**: `data/lessons/*_lessons_enriched.json` embeds `ind_desc` in both
-`ind_desc` and `perf_indicator`, so a source fix that stops at the database leaves
-the artefact in the documents teachers actually print. Fix both, or the fix is
-cosmetic.
+copies, four times over**: `data/lessons/*_lessons_enriched.json` embeds the
+indicator in `ind_desc`, in the `perf_indicator` built from it, and inside the
+`starter` and `main` activity steps the template writes around it — and the
+generated books read the lesson file, not the database. Fix only the database and
+the artefact survives in the documents teachers actually print; the fixer therefore
+carries the same substitution into all four fields (and matches slots by
+`ind_code`, so one indicator's text is never read into another's).
 
 The trap in the other direction: a tail that *mentions* the indicator is not a
 repeat. History's rows carry the whole cell — enquiry route, then a dozen steps that

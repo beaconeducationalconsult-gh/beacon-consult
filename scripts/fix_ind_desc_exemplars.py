@@ -291,9 +291,16 @@ def plan() -> tuple[list[dict], list[dict], dict]:
 LESSONS = CURRICULUM.parent / "lessons"
 
 
-def phrase_pattern(text: str) -> str:
+_PATTERNS: dict = {}
+
+
+def phrase_pattern(text: str) -> re.Pattern:
     """`text` as a whole-phrase pattern that tolerates the print's spacing."""
-    return r"(?<![A-Za-z0-9])" + r"\s*".join(re.escape(w) for w in text.split()) + r"(?![A-Za-z0-9])"
+    if text not in _PATTERNS:
+        _PATTERNS[text] = re.compile(
+            r"(?<![A-Za-z0-9])" + r"\s*".join(re.escape(w) for w in text.split())
+            + r"(?![A-Za-z0-9])", re.I)
+    return _PATTERNS[text]
 
 
 def swap(haystack: str, before: str, after: str) -> str | None:
@@ -303,7 +310,7 @@ def swap(haystack: str, before: str, after: str) -> str | None:
     capitalises it, and it is the template that is being edited, so the case the
     text already has is the case it keeps.
     """
-    m = re.search(phrase_pattern(before), haystack, re.I)
+    m = phrase_pattern(before).search(haystack)
     if not m:
         return None
     got = m.group(0)
@@ -314,6 +321,10 @@ def swap(haystack: str, before: str, after: str) -> str | None:
     return haystack[:m.start()] + repl + haystack[m.end():]
 
 
+APPLIED_DEFAULTS = {"records": 0, "repeats": 0, "dangling": 0, "files": {},
+                    "lesson_slots": 0, "lesson_files": {}, "lesson_fields": {}}
+
+
 def flat_run(run: dict) -> dict:
     """A history entry: what one run wrote, without the file-by-file detail."""
     return {"records": run.get("records", 0), "repeats": run.get("repeats", 0),
@@ -321,31 +332,108 @@ def flat_run(run: dict) -> dict:
             "lesson_slots": run.get("lesson_slots", 0)}
 
 
-def lesson_plan(cuts: list[dict]) -> list[dict]:
-    """Lesson slots carrying one of the cleaned indicators (their `ind_desc` and
-    the `perf_indicator` built from it)."""
-    by_before = {F.compact(e["before"]): e for e in cuts if e.get("verified")}
+LESSON_FIELDS = ("ind_desc", "perf_indicator", "starter", "main", "plenary", "rpk",
+                 "session_title")
+
+
+def lesson_plan(by_code: dict[str, tuple[str, str]]) -> list[dict]:
+    """The lesson slots carrying one of the cleaned indicators.
+
+    The lesson template is a copy of the database and it embeds the indicator in
+    more than one field — `ind_desc`, the `perf_indicator` built from it, and the
+    `starter`/`main` activity steps the template writes around it — so all of them
+    are read. Nothing is invented here either: each field is passed through the
+    same substitution, which only ever removes the tail. A slot is matched by the
+    indicator it teaches, so one record's text is never read into another's.
+    """
     out = []
     for path in sorted(LESSONS.glob("*_lessons_enriched.json")):
         slots = json.loads(path.read_text())
         hits = []
+        fields: dict = {}
         for slot in slots:
-            entry = by_before.get(F.compact(slot.get("ind_desc") or ""))
-            if not entry:
+            pair = by_code.get(slot.get("ind_code"))
+            if not pair:
                 continue
-            after = entry["after"]
-            slot_after = dict(slot)
-            slot_after["ind_desc"] = after
-            perf = swap(slot.get("perf_indicator") or "", entry["before"], after)
-            if perf is not None:
-                slot_after["perf_indicator"] = perf
-            hits.append({"lesson_num": slot.get("lesson_num"), "ind_code": slot.get("ind_code"),
-                         "before": slot.get("ind_desc"), "after": after,
-                         "perf": perf is not None})
+            changed = changed_fields(slot, [pair])
+            if not changed:
+                continue
+            for field in changed:
+                fields[field] = fields.get(field, 0) + 1
+            hits.append({"lesson_num": slot.get("lesson_num"),
+                         "ind_code": slot.get("ind_code"),
+                         "fields": sorted(changed)})
         if hits:
-            out.append({"file": path.name, "slots": hits,
-                        "slots_changed": len(hits),
-                        "perf_changed": sum(1 for h in hits if h["perf"])})
+            out.append({"file": path.name, "slots": hits, "slots_changed": len(hits),
+                        "fields": fields,
+                        "field_occurrences": sum(fields.values())})
+    return out
+
+
+def lesson_state(by_code: dict[str, tuple[str, str]]) -> dict:
+    """What the cleanup now stands for in the lesson layer, read off the files.
+
+    A field counts as cleaned when it carries the indicator the cleanup left and
+    no longer carries the text it removed — the state, not a run's tally, so the
+    numbers stay true however many times the script is run.
+    """
+    files: dict = {}
+    field_counts: dict = {}
+    slots = 0
+    for path in sorted(LESSONS.glob("*_lessons_enriched.json")):
+        here = 0
+        for slot in json.loads(path.read_text()):
+            pair = by_code.get(slot.get("ind_code"))
+            if not pair:
+                continue
+            before_rx, after_rx = phrase_pattern(pair[0]), phrase_pattern(pair[1])
+            touched = []
+            for field in LESSON_FIELDS:
+                value = slot.get(field)
+                items = value if isinstance(value, list) else [value]
+                saw_after = saw_before = False
+                for item in items:
+                    if not isinstance(item, str):
+                        continue
+                    saw_after = saw_after or bool(after_rx.search(item))
+                    saw_before = saw_before or bool(before_rx.search(item))
+                if saw_after and not saw_before:
+                    touched.append(field)
+            if touched:
+                here += 1
+                for field in touched:
+                    field_counts[field] = field_counts.get(field, 0) + 1
+        if here:
+            files[path.name] = here
+            slots += here
+    return {"slots": slots, "fields": field_counts, "files": files}
+
+
+def changed_fields(slot: dict, pairs: list[tuple[str, str]]) -> dict:
+    """{field: new value} for every lesson field the pairs change."""
+    out = {}
+    for field in LESSON_FIELDS:
+        value = slot.get(field)
+        if isinstance(value, str):
+            for before, after in pairs:
+                new = swap(value, before, after)
+                if new is not None and new != value:
+                    out[field] = new
+                    break
+        elif isinstance(value, list):
+            items = list(value)
+            touched = False
+            for i, item in enumerate(items):
+                if not isinstance(item, str):
+                    continue
+                for before, after in pairs:
+                    new = swap(item, before, after)
+                    if new is not None and new != item:
+                        items[i] = new
+                        touched = True
+                        break
+            if touched:
+                out[field] = items
     return out
 
 
@@ -360,7 +448,23 @@ def main() -> int:
         keep = set(args.files)
         cut = [e for e in cut if e["file"] in keep]
         report = [e for e in report if e["file"] in keep]
-    lessons = lesson_plan(cut)
+
+    artifact = AUDIT / "ind_desc_exemplars.json"
+    old: dict = {}
+    if artifact.exists():
+        try:
+            old = json.loads(artifact.read_text())
+        except ValueError:
+            old = {}
+    # the pairs this cleanup stands on: what this run would cut, plus what an
+    # earlier run already wrote — the lesson template still carries those texts
+    # whatever state the databases are in
+    by_code: dict[str, tuple[str, str]] = {}
+    for source in (old.get("cut", []), cut):
+        for e in source:
+            if e.get("verified"):
+                by_code[e["code"]] = (F.compact(e["before"]), e["after"])
+    lessons = lesson_plan(by_code)
 
     print(f"{len(cut) + len(report)} record(s) carry the print's exemplar tail")
     print(f"  to cut   {sum(1 for e in cut if e.get('verified'))}"
@@ -370,6 +474,9 @@ def main() -> int:
     print(f"  skipped  {sum(1 for e in cut if not e.get('verified'))}  (print does not back the cut)")
     print(f"  lessons  {sum(e['slots_changed'] for e in lessons)} slot(s) in "
           f"{len(lessons)} lesson file(s) carry one of them")
+    for entry in lessons:
+        print(f"     {entry['file']:52s} {entry['slots_changed']:4d} slot(s) "
+              f"{entry['field_occurrences']:4d} field(s) {entry['fields']}")
     print()
     for name, row in sorted(tally["files"].items()):
         if row["cut"] or row["unverified"] or row["report"]:
@@ -381,9 +488,17 @@ def main() -> int:
                 print(f"       print: {entry['print_head']}")
             print(f"       db   : {entry['before'][:200]}")
 
-    audit = {"cut": cut, "report": report, "lessons": lessons,
-             "applied": {"records": 0, "repeats": 0, "dangling": 0, "files": {},
-                         "lesson_slots": 0, "lesson_files": {}}}
+    audit = {
+        # what an earlier run cut stays on the record after this one finds nothing
+        "cut": cut if any(e.get("verified") for e in cut) else old.get("cut", cut),
+        "report": report or old.get("report", report),
+        "lessons": lessons or old.get("lessons", lessons),
+        "applied": {**APPLIED_DEFAULTS, **old.get("applied", {})},
+        "history": [flat_run(h) for h in old.get("history", [])],
+    }
+    run = {"records": 0, "repeats": 0, "dangling": 0, "lesson_slots": 0,
+           "lesson_fields": {}}
+
     if args.apply:
         by_file: dict[str, list[dict]] = {}
         for entry in cut:
@@ -399,51 +514,44 @@ def main() -> int:
             audit["applied"]["records"] += len(entries)
             audit["applied"]["repeats"] += sum(1 for e in entries if e["kind"] == "repeats")
             audit["applied"]["dangling"] += sum(1 for e in entries if e["kind"] == "dangling")
-        print(f"\napplied: {audit['applied']['records']} record(s) in "
-              f"{len(by_file)} file(s)")
+            run["records"] += len(entries)
+            run["repeats"] += sum(1 for e in entries if e["kind"] == "repeats")
+            run["dangling"] += sum(1 for e in entries if e["kind"] == "dangling")
+        if by_file:
+            print(f"\napplied: {run['records']} record(s) in {len(by_file)} file(s)")
         for entry in lessons:
             path = LESSONS / entry["file"]
             slots = json.loads(path.read_text())
-            by_num = {h["lesson_num"]: h for h in entry["slots"]}
+            planned = {h["lesson_num"]: h for h in entry["slots"]}
             for slot in slots:
-                hit = by_num.get(slot.get("lesson_num"))
+                hit = planned.get(slot.get("lesson_num"))
                 if not hit:
                     continue
-                slot["ind_desc"] = hit["after"]
-                if hit.get("perf"):
-                    swapped = swap(slot.get("perf_indicator") or "", hit["before"], hit["after"])
-                    if swapped is not None:
-                        slot["perf_indicator"] = swapped
+                pair = by_code.get(slot.get("ind_code"))
+                if not pair:
+                    continue
+                for field, value in changed_fields(slot, [pair]).items():
+                    slot[field] = value
             path.write_text(json.dumps(slots, indent=1, ensure_ascii=False) + "\n")
-            audit["applied"]["lesson_files"][entry["file"]] = entry["slots_changed"]
-            audit["applied"]["lesson_slots"] += entry["slots_changed"]
-        print(f"          {audit['applied']['lesson_slots']} lesson slot(s) in "
-              f"{len(lessons)} lesson file(s)")
+            run["lesson_slots"] += entry["slots_changed"]
+            for field, n in entry["fields"].items():
+                run["lesson_fields"][field] = run["lesson_fields"].get(field, 0) + n
+        if lessons:
+            print(f"          {run['lesson_slots']} lesson slot(s) in {len(lessons)} "
+                  f"lesson file(s), {run['lesson_fields']}")
+        state = lesson_state(by_code)
+        audit["applied"].update({"lesson_slots": state["slots"],
+                                 "lesson_files": state["files"],
+                                 "lesson_fields": state["fields"]})
+        print(f"          lesson layer now: {state['slots']} slot(s) in "
+              f"{len(state['files'])} file(s), {state['fields']}")
+
+    if run["records"] or run["lesson_slots"]:
+        audit["history"].append(run)
+
     AUDIT.mkdir(parents=True, exist_ok=True)
-    path = AUDIT / "ind_desc_exemplars.json"
-    keep = False
-    if path.exists():
-        try:
-            old = json.loads(path.read_text())
-        except ValueError:
-            old = {}
-        done = old.get("applied", {}).get("records", 0)
-        # A later run finds nothing left to cut, and overwriting would replace the
-        # record of what the cleanup did with an empty list (the trap the text
-        # fixer's trail fell into). The file is only rewritten when it has no
-        # applied run to lose, or when this run is itself writing one.
-        keep = bool(done) and audit["applied"]["records"] == 0
-        if keep:
-            audit["history"] = [flat_run(h.get("applied", h))
-                                for h in old.get("history", [])]
-            audit["applied"] = old["applied"]
-            audit["cut"] = old.get("cut", [])
-            audit["report"] = old.get("report", audit["report"])
-            audit["lessons"] = old.get("lessons", audit["lessons"])
-    if args.apply and audit["applied"]["records"]:
-        audit.setdefault("history", []).append(flat_run(audit["applied"]))
-    path.write_text(json.dumps(audit, indent=1, ensure_ascii=False) + "\n")
-    print(f"{'kept' if keep else 'wrote'} {path}")
+    artifact.write_text(json.dumps(audit, indent=1, ensure_ascii=False) + "\n")
+    print(f"wrote {artifact}")
     return 0
 
 
