@@ -52,7 +52,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
-from _paths import REFERENCE, SOURCES  # noqa: E402
+from _paths import SOURCES, find_data  # noqa: E402
 
 try:
     from pypdf import PdfReader
@@ -273,8 +273,11 @@ def main() -> int:
             problems += 1
 
         for code_grade, file_grade in cfg["code_to_file"].items():
-            path = REFERENCE / f"{subject}_{file_grade}_curriculum_db_clean.json"
-            if not path.exists():
+            # resolved, not assumed: the reference-only subjects were promoted into
+            # data/curriculum/ (scripts/promote_reference_subjects.py), and this
+            # script must keep following the copy the portal actually reads
+            path = find_data(f"{subject}_{file_grade}_curriculum_db_clean.json")
+            if path is None:
                 continue
             data = json.loads(path.read_text())
 

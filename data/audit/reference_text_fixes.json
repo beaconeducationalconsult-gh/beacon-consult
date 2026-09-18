@@ -10,18 +10,8 @@
  "vocabulary": {
   "computing": [
    {
-    "item": "cultural identity and global citizenship",
-    "printed_on_pages": 52,
-    "in_the_data": true
-   },
-   {
     "item": "critical thinking and problem solving",
     "printed_on_pages": 1,
-    "in_the_data": true
-   },
-   {
-    "item": "personal development and leadership",
-    "printed_on_pages": 52,
     "in_the_data": true
    },
    {
@@ -35,33 +25,8 @@
     "in_the_data": true
    },
    {
-    "item": "subject specific practices",
-    "printed_on_pages": 102,
-    "in_the_data": true
-   },
-   {
-    "item": "subject specific practices",
-    "printed_on_pages": 102,
-    "in_the_data": true
-   },
-   {
-    "item": "subject specific practice",
-    "printed_on_pages": 51,
-    "in_the_data": true
-   },
-   {
     "item": "creativity and innovation",
     "printed_on_pages": 52,
-    "in_the_data": true
-   },
-   {
-    "item": "data collection skill",
-    "printed_on_pages": 1,
-    "in_the_data": true
-   },
-   {
-    "item": "skill development",
-    "printed_on_pages": 28,
     "in_the_data": true
    },
    {
@@ -92,11 +57,6 @@
    {
     "item": "assessment",
     "printed_on_pages": 5,
-    "in_the_data": true
-   },
-   {
-    "item": "leadership",
-    "printed_on_pages": 52,
     "in_the_data": true
    },
    {
@@ -142,18 +102,8 @@
   ],
   "french": [
    {
-    "item": "cultural identity and global citizenship",
-    "printed_on_pages": 69,
-    "in_the_data": true
-   },
-   {
     "item": "critical thinking and problem solving",
     "printed_on_pages": 1,
-    "in_the_data": true
-   },
-   {
-    "item": "personal development and leadership",
-    "printed_on_pages": 69,
     "in_the_data": true
    },
    {
@@ -162,28 +112,8 @@
     "in_the_data": true
    },
    {
-    "item": "subject specific practices",
-    "printed_on_pages": 196,
-    "in_the_data": true
-   },
-   {
-    "item": "subject specific practices",
-    "printed_on_pages": 196,
-    "in_the_data": true
-   },
-   {
-    "item": "subject specific practice",
-    "printed_on_pages": 98,
-    "in_the_data": true
-   },
-   {
     "item": "creativity and innovation",
     "printed_on_pages": 69,
-    "in_the_data": true
-   },
-   {
-    "item": "indicator and exemplars",
-    "printed_on_pages": 0,
     "in_the_data": true
    },
    {
@@ -197,23 +127,8 @@
     "in_the_data": true
    },
    {
-    "item": "core competencies",
-    "printed_on_pages": 3,
-    "in_the_data": true
-   },
-   {
-    "item": "content standards",
-    "printed_on_pages": 99,
-    "in_the_data": true
-   },
-   {
     "item": "critical thinking",
     "printed_on_pages": 71,
-    "in_the_data": true
-   },
-   {
-    "item": "content standard",
-    "printed_on_pages": 99,
     "in_the_data": true
    },
    {
@@ -257,11 +172,6 @@
     "in_the_data": true
    },
    {
-    "item": "leadership",
-    "printed_on_pages": 69,
-    "in_the_data": true
-   },
-   {
     "item": "innovation",
     "printed_on_pages": 69,
     "in_the_data": true
@@ -287,18 +197,8 @@
     "in_the_data": true
    },
    {
-    "item": "exemplars",
-    "printed_on_pages": 2,
-    "in_the_data": true
-   },
-   {
     "item": "keywords",
     "printed_on_pages": 2,
-    "in_the_data": true
-   },
-   {
-    "item": "exemplar",
-    "printed_on_pages": 3,
     "in_the_data": true
    },
    {
@@ -329,28 +229,8 @@
   ],
   "kindergarten": [
    {
-    "item": "cultural identity and global citizenship",
-    "printed_on_pages": 15,
-    "in_the_data": true
-   },
-   {
     "item": "critical thinking and problem solving",
     "printed_on_pages": 43,
-    "in_the_data": true
-   },
-   {
-    "item": "problem solving and critical thinking",
-    "printed_on_pages": 24,
-    "in_the_data": true
-   },
-   {
-    "item": "personal development and leadership",
-    "printed_on_pages": 108,
-    "in_the_data": true
-   },
-   {
-    "item": "communication and digital literacy",
-    "printed_on_pages": 3,
     "in_the_data": true
    },
    {
@@ -361,16 +241,6 @@
    {
     "item": "creativity and innovation",
     "printed_on_pages": 73,
-    "in_the_data": true
-   },
-   {
-    "item": "indicators and exemplars",
-    "printed_on_pages": 0,
-    "in_the_data": true
-   },
-   {
-    "item": "core competencies",
-    "printed_on_pages": 81,
     "in_the_data": true
    },
    {
@@ -399,18 +269,8 @@
     "in_the_data": true
    },
    {
-    "item": "references",
-    "printed_on_pages": 80,
-    "in_the_data": true
-   },
-   {
     "item": "assessment",
     "printed_on_pages": 4,
-    "in_the_data": true
-   },
-   {
-    "item": "leadership",
-    "printed_on_pages": 111,
     "in_the_data": true
    },
    {
@@ -2697,14 +2557,14 @@
    "records": 52,
    "written": 52,
    "where": {
-    "page-order": 1,
+    "document-order": 1,
     "row": 50,
-    "document-order": 1
+    "page-order": 1
    },
    "removals": {
     "footer": 23,
-    "label fragment": 3,
-    "column text": 631
+    "column text": 631,
+    "label fragment": 3
    },
    "unverified": [],
    "emptied": [],
@@ -4155,14 +4015,14 @@
    "records": 67,
    "written": 67,
    "where": {
-    "page-order": 1,
+    "document-order": 1,
     "row": 65,
-    "document-order": 1
+    "page-order": 1
    },
    "removals": {
     "footer": 25,
-    "label fragment": 3,
-    "column text": 563
+    "column text": 563,
+    "label fragment": 3
    },
    "unverified": [],
    "emptied": [],
@@ -5758,13 +5618,13 @@
    "written": 50,
    "where": {
     "page": 1,
-    "row": 48,
-    "document-order": 1
+    "document-order": 1,
+    "row": 48
    },
    "removals": {
     "footer": 19,
-    "label fragment": 2,
-    "column text": 977
+    "column text": 977,
+    "label fragment": 2
    },
    "unverified": [],
    "emptied": [],
@@ -7529,15 +7389,15 @@
    "records": 98,
    "written": 98,
    "where": {
+    "document-order": 1,
     "row-order": 2,
-    "row": 95,
-    "document-order": 1
+    "row": 95
    },
    "removals": {
-    "competence tag": 26,
     "footer": 8,
-    "cell label": 1,
+    "competence tag": 26,
     "column text": 256,
+    "cell label": 1,
     "reference code": 224
    },
    "unverified": [],
@@ -9576,17 +9436,17 @@
    "records": 86,
    "written": 86,
    "where": {
-    "row-order": 3,
     "page": 2,
+    "row-order": 3,
     "row": 81
    },
    "removals": {
-    "competence tag": 34,
-    "row marker": 2,
     "footer": 9,
+    "competence tag": 34,
     "column text": 412,
     "label fragment": 1,
-    "reference code": 138
+    "reference code": 138,
+    "row marker": 2
    },
    "unverified": [],
    "emptied": [],
@@ -11849,6 +11709,34 @@
     {
      "file": "kindergarten_KG1_curriculum_db_clean.json",
      "code": "K1.1.2.1.1",
+     "action": "unchanged",
+     "before": "Demonstrate the understanding of appropriate names of the parts of the body and describe the functions of each part.",
+     "after": "Demonstrate the understanding of appropriate names of the parts of the body and describe the functions of each part."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.1.2.1.2",
+     "action": "unchanged",
+     "before": "Demonstrate the understanding of appropriate names of the parts of the body and describe the functions of each part.",
+     "after": "Demonstrate the understanding of appropriate names of the parts of the body and describe the functions of each part."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.1.2.1.4",
+     "action": "unchanged",
+     "before": "Demonstrate the understanding of appropriate names of the parts of the body and describe the functions of each part.",
+     "after": "Demonstrate the understanding of appropriate names of the parts of the body and describe the functions of each part."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.1.2.1.7",
+     "action": "unchanged",
+     "before": "Demonstrate the understanding of appropriate names of the parts of the body and describe the functions of each part.",
+     "after": "Demonstrate the understanding of appropriate names of the parts of the body and describe the functions of each part."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.1.2.1.1",
      "action": "trimmed",
      "before": "Demonstrate the understanding of appropriate names of the parts of the body and describe the functions of each part. References",
      "after": "Demonstrate the understanding of appropriate names of the parts of the body and describe the functions of each part."
@@ -11952,6 +11840,62 @@
    "page": 52,
    "cell": "Demonstrate the understanding that eating good food and taking all my childhood vaccinations will keep me grow ing healthy and strong.",
    "changes": [
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.1.4.1.1",
+     "action": "unchanged",
+     "before": "Demonstrate the understanding that eating good food and taking all my childhood vaccinations will keep me growing healthy and strong.",
+     "after": "Demonstrate the understanding that eating good food and taking all my childhood vaccinations will keep me growing healthy and strong."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.1.4.1.2",
+     "action": "unchanged",
+     "before": "Demonstrate the understanding that eating good food and taking all my childhood vaccinations will keep me growing healthy and strong.",
+     "after": "Demonstrate the understanding that eating good food and taking all my childhood vaccinations will keep me growing healthy and strong."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.1.4.1.3",
+     "action": "unchanged",
+     "before": "Demonstrate the understanding that eating good food and taking all my childhood vaccinations will keep me growing healthy and strong.",
+     "after": "Demonstrate the understanding that eating good food and taking all my childhood vaccinations will keep me growing healthy and strong."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.1.4.1.4",
+     "action": "unchanged",
+     "before": "Demonstrate the understanding that eating good food and taking all my childhood vaccinations will keep me growing healthy and strong.",
+     "after": "Demonstrate the understanding that eating good food and taking all my childhood vaccinations will keep me growing healthy and strong."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.1.4.1.5",
+     "action": "unchanged",
+     "before": "Demonstrate the understanding that eating good food and taking all my childhood vaccinations will keep me growing healthy and strong.",
+     "after": "Demonstrate the understanding that eating good food and taking all my childhood vaccinations will keep me growing healthy and strong."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.1.4.1.6",
+     "action": "unchanged",
+     "before": "Demonstrate the understanding that eating good food and taking all my childhood vaccinations will keep me growing healthy and strong.",
+     "after": "Demonstrate the understanding that eating good food and taking all my childhood vaccinations will keep me growing healthy and strong."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.1.4.1.7",
+     "action": "unchanged",
+     "before": "Demonstrate the understanding that eating good food and taking all my childhood vaccinations will keep me growing healthy and strong.",
+     "after": "Demonstrate the understanding that eating good food and taking all my childhood vaccinations will keep me growing healthy and strong."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.1.4.1.8",
+     "action": "unchanged",
+     "before": "Demonstrate the understanding that eating good food and taking all my childhood vaccinations will keep me growing healthy and strong.",
+     "after": "Demonstrate the understanding that eating good food and taking all my childhood vaccinations will keep me growing healthy and strong."
+    },
     {
      "file": "kindergarten_KG1_curriculum_db_clean.json",
      "code": "K1.1.4.1.1",
@@ -12375,6 +12319,55 @@
     {
      "file": "kindergarten_KG1_curriculum_db_clean.json",
      "code": "K1.3.1.1.1",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the good manners that our families values and why they value them.",
+     "after": "Demonstrate understanding of the good manners that our families values and why they value them."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.3.1.1.2",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the good manners that our families values and why they value them.",
+     "after": "Demonstrate understanding of the good manners that our families values and why they value them."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.3.1.1.3",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the good manners that our families values and why they value them.",
+     "after": "Demonstrate understanding of the good manners that our families values and why they value them."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.3.1.1.4",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the good manners that our families values and why they value them.",
+     "after": "Demonstrate understanding of the good manners that our families values and why they value them."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.3.1.1.5",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the good manners that our families values and why they value them.",
+     "after": "Demonstrate understanding of the good manners that our families values and why they value them."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.3.1.1.6",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the good manners that our families values and why they value them.",
+     "after": "Demonstrate understanding of the good manners that our families values and why they value them."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.3.1.1.7",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the good manners that our families values and why they value them.",
+     "after": "Demonstrate understanding of the good manners that our families values and why they value them."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.3.1.1.1",
      "action": "filled",
      "before": "",
      "after": "Demonstrate understanding of the good manners that our families values and why they value them."
@@ -12649,6 +12642,41 @@
     {
      "file": "kindergarten_KG1_curriculum_db_clean.json",
      "code": "K1.4.3.1.1",
+     "action": "unchanged",
+     "before": "Demonstrate understanding and knowledge of the special leaders and their roles in our communities.",
+     "after": "Demonstrate understanding and knowledge of the special leaders and their roles in our communities."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.4.3.1.2",
+     "action": "unchanged",
+     "before": "Demonstrate understanding and knowledge of the special leaders and their roles in our communities.",
+     "after": "Demonstrate understanding and knowledge of the special leaders and their roles in our communities."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.4.3.1.3",
+     "action": "unchanged",
+     "before": "Demonstrate understanding and knowledge of the special leaders and their roles in our communities.",
+     "after": "Demonstrate understanding and knowledge of the special leaders and their roles in our communities."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.4.3.1.4",
+     "action": "unchanged",
+     "before": "Demonstrate understanding and knowledge of the special leaders and their roles in our communities.",
+     "after": "Demonstrate understanding and knowledge of the special leaders and their roles in our communities."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.4.3.1.5",
+     "action": "unchanged",
+     "before": "Demonstrate understanding and knowledge of the special leaders and their roles in our communities.",
+     "after": "Demonstrate understanding and knowledge of the special leaders and their roles in our communities."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.4.3.1.1",
      "action": "trimmed",
      "before": "Demonstrate understanding and knowledge of the special leaders and their roles in our communities. Indicators and Exemplars",
      "after": "Demonstrate understanding and knowledge of the special leaders and their roles in our communities."
@@ -12801,6 +12829,41 @@
     {
      "file": "kindergarten_KG1_curriculum_db_clean.json",
      "code": "K1.6.2.1.1",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of domestic and wild animals.",
+     "after": "Demonstrate understanding of domestic and wild animals."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.6.2.1.3",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of domestic and wild animals.",
+     "after": "Demonstrate understanding of domestic and wild animals."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.6.2.1.4",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of domestic and wild animals.",
+     "after": "Demonstrate understanding of domestic and wild animals."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.6.2.1.5",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of domestic and wild animals.",
+     "after": "Demonstrate understanding of domestic and wild animals."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.6.2.1.6",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of domestic and wild animals.",
+     "after": "Demonstrate understanding of domestic and wild animals."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.6.2.1.1",
      "action": "trimmed",
      "before": "Demonstrate understanding of domestic and wild animals. Indicators and Exemplars References",
      "after": "Demonstrate understanding of domestic and wild animals."
@@ -12844,6 +12907,48 @@
    "page": 113,
    "cell": "Dem onstrate understanding of sources of water and its uses.",
    "changes": [
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.6.3.1.1",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of sources of water and its uses.",
+     "after": "Demonstrate understanding of sources of water and its uses."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.6.3.1.2",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of sources of water and its uses.",
+     "after": "Demonstrate understanding of sources of water and its uses."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.6.3.1.3",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of sources of water and its uses.",
+     "after": "Demonstrate understanding of sources of water and its uses."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.6.3.1.4",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of sources of water and its uses.",
+     "after": "Demonstrate understanding of sources of water and its uses."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.6.3.1.5",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of sources of water and its uses.",
+     "after": "Demonstrate understanding of sources of water and its uses."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.6.3.1.6",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of sources of water and its uses.",
+     "after": "Demonstrate understanding of sources of water and its uses."
+    },
     {
      "file": "kindergarten_KG1_curriculum_db_clean.json",
      "code": "K1.6.3.1.1",
@@ -12953,6 +13058,48 @@
     {
      "file": "kindergarten_KG1_curriculum_db_clean.json",
      "code": "K1.6.5.1.1",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the parts of plants and their functions.",
+     "after": "Demonstrate understanding of the parts of plants and their functions."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.6.5.1.2",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the parts of plants and their functions.",
+     "after": "Demonstrate understanding of the parts of plants and their functions."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.6.5.1.3",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the parts of plants and their functions.",
+     "after": "Demonstrate understanding of the parts of plants and their functions."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.6.5.1.4",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the parts of plants and their functions.",
+     "after": "Demonstrate understanding of the parts of plants and their functions."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.6.5.1.5",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the parts of plants and their functions.",
+     "after": "Demonstrate understanding of the parts of plants and their functions."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.6.5.1.6",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the parts of plants and their functions.",
+     "after": "Demonstrate understanding of the parts of plants and their functions."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.6.5.1.1",
      "action": "trimmed",
      "before": "Demonstrate understanding of the parts of plants and their functions. Indicators and Exemplars",
      "after": "Demonstrate understanding of the parts of plants and their functions."
@@ -13003,6 +13150,48 @@
    "page": 122,
    "cell": "Demonstrate understanding of how plants grow",
    "changes": [
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.6.6.1.1",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of how plants grow",
+     "after": "Demonstrate understanding of how plants grow"
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.6.6.1.2",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of how plants grow",
+     "after": "Demonstrate understanding of how plants grow"
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.6.6.1.3",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of how plants grow",
+     "after": "Demonstrate understanding of how plants grow"
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.6.6.1.4",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of how plants grow",
+     "after": "Demonstrate understanding of how plants grow"
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.6.6.1.5",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of how plants grow",
+     "after": "Demonstrate understanding of how plants grow"
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.6.6.1.6",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of how plants grow",
+     "after": "Demonstrate understanding of how plants grow"
+    },
     {
      "file": "kindergarten_KG1_curriculum_db_clean.json",
      "code": "K1.6.6.1.1",
@@ -13102,6 +13291,48 @@
    "page": 128,
    "cell": "Demonstrate understanding of the sources of light for day and night.",
    "changes": [
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.6.8.1.1",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the sources of light for day and night.",
+     "after": "Demonstrate understanding of the sources of light for day and night."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.6.8.1.2",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the sources of light for day and night.",
+     "after": "Demonstrate understanding of the sources of light for day and night."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.6.8.1.3",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the sources of light for day and night.",
+     "after": "Demonstrate understanding of the sources of light for day and night."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.6.8.1.4",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the sources of light for day and night.",
+     "after": "Demonstrate understanding of the sources of light for day and night."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.6.8.1.5",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the sources of light for day and night.",
+     "after": "Demonstrate understanding of the sources of light for day and night."
+    },
+    {
+     "file": "kindergarten_KG1_curriculum_db_clean.json",
+     "code": "K1.6.8.1.6",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the sources of light for day and night.",
+     "after": "Demonstrate understanding of the sources of light for day and night."
+    },
     {
      "file": "kindergarten_KG1_curriculum_db_clean.json",
      "code": "K1.6.8.1.1",
@@ -13250,6 +13481,48 @@
     {
      "file": "kindergarten_KG2_curriculum_db_clean.json",
      "code": "K2.1.1.1.1",
+     "action": "unchanged",
+     "before": "Demonstrate the understanding that all learners are wonderful and have unique body features that make them different from other people and other God’s creation in the environment.",
+     "after": "Demonstrate the understanding that all learners are wonderful and have unique body features that make them different from other people and other God’s creation in the environment."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.1.1.1.2",
+     "action": "unchanged",
+     "before": "Demonstrate the understanding that all learners are wonderful and have unique body features that make them different from other people and other God’s creation in the environment.",
+     "after": "Demonstrate the understanding that all learners are wonderful and have unique body features that make them different from other people and other God’s creation in the environment."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.1.1.1.3",
+     "action": "unchanged",
+     "before": "Demonstrate the understanding that all learners are wonderful and have unique body features that make them different from other people and other God’s creation in the environment.",
+     "after": "Demonstrate the understanding that all learners are wonderful and have unique body features that make them different from other people and other God’s creation in the environment."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.1.1.1.5",
+     "action": "unchanged",
+     "before": "Demonstrate the understanding that all learners are wonderful and have unique body features that make them different from other people and other God’s creation in the environment.",
+     "after": "Demonstrate the understanding that all learners are wonderful and have unique body features that make them different from other people and other God’s creation in the environment."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.1.1.1.6",
+     "action": "unchanged",
+     "before": "Demonstrate the understanding that all learners are wonderful and have unique body features that make them different from other people and other God’s creation in the environment.",
+     "after": "Demonstrate the understanding that all learners are wonderful and have unique body features that make them different from other people and other God’s creation in the environment."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.1.1.1.7",
+     "action": "unchanged",
+     "before": "Demonstrate the understanding that all learners are wonderful and have unique body features that make them different from other people and other God’s creation in the environment.",
+     "after": "Demonstrate the understanding that all learners are wonderful and have unique body features that make them different from other people and other God’s creation in the environment."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.1.1.1.1",
      "action": "trimmed",
      "before": "Demonstrate the understanding that all learners are wonderful and have unique body features that make them different from other people and other God’s creation in the environment. Indicators and Exemplars",
      "after": "Demonstrate the understanding that all learners are wonderful and have unique body features that make them different from other people and other God’s creation in the environment."
@@ -13300,6 +13573,55 @@
    "page": 144,
    "cell": "Demonstrate the knowledge of appropriate names of the parts of the internal body that we cannot see and their functions",
    "changes": [
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.1.2.1.1",
+     "action": "unchanged",
+     "before": "Demonstrate the knowledge of appropriate names of the parts of the internal body that we cannot see and their functions",
+     "after": "Demonstrate the knowledge of appropriate names of the parts of the internal body that we cannot see and their functions"
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.1.2.1.2",
+     "action": "unchanged",
+     "before": "Demonstrate the knowledge of appropriate names of the parts of the internal body that we cannot see and their functions",
+     "after": "Demonstrate the knowledge of appropriate names of the parts of the internal body that we cannot see and their functions"
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.1.2.1.3",
+     "action": "unchanged",
+     "before": "Demonstrate the knowledge of appropriate names of the parts of the internal body that we cannot see and their functions",
+     "after": "Demonstrate the knowledge of appropriate names of the parts of the internal body that we cannot see and their functions"
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.1.2.1.4",
+     "action": "unchanged",
+     "before": "Demonstrate the knowledge of appropriate names of the parts of the internal body that we cannot see and their functions",
+     "after": "Demonstrate the knowledge of appropriate names of the parts of the internal body that we cannot see and their functions"
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.1.2.1.5",
+     "action": "unchanged",
+     "before": "Demonstrate the knowledge of appropriate names of the parts of the internal body that we cannot see and their functions",
+     "after": "Demonstrate the knowledge of appropriate names of the parts of the internal body that we cannot see and their functions"
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.1.2.1.6",
+     "action": "unchanged",
+     "before": "Demonstrate the knowledge of appropriate names of the parts of the internal body that we cannot see and their functions",
+     "after": "Demonstrate the knowledge of appropriate names of the parts of the internal body that we cannot see and their functions"
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.1.2.1.7",
+     "action": "unchanged",
+     "before": "Demonstrate the knowledge of appropriate names of the parts of the internal body that we cannot see and their functions",
+     "after": "Demonstrate the knowledge of appropriate names of the parts of the internal body that we cannot see and their functions"
+    },
     {
      "file": "kindergarten_KG2_curriculum_db_clean.json",
      "code": "K2.1.2.1.1",
@@ -13363,6 +13685,48 @@
     {
      "file": "kindergarten_KG2_curriculum_db_clean.json",
      "code": "K2.1.3.1.1",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of personal hygiene and care of the human body.",
+     "after": "Demonstrate understanding of personal hygiene and care of the human body."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.1.3.1.2",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of personal hygiene and care of the human body.",
+     "after": "Demonstrate understanding of personal hygiene and care of the human body."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.1.3.1.3",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of personal hygiene and care of the human body.",
+     "after": "Demonstrate understanding of personal hygiene and care of the human body."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.1.3.1.4",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of personal hygiene and care of the human body.",
+     "after": "Demonstrate understanding of personal hygiene and care of the human body."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.1.3.1.5",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of personal hygiene and care of the human body.",
+     "after": "Demonstrate understanding of personal hygiene and care of the human body."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.1.3.1.6",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of personal hygiene and care of the human body.",
+     "after": "Demonstrate understanding of personal hygiene and care of the human body."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.1.3.1.1",
      "action": "filled",
      "before": "",
      "after": "Demonstrate understanding of personal hygiene and care of the human body."
@@ -13413,6 +13777,55 @@
    "page": 151,
    "cell": "Demonstrate the understanding and knowledge of keeping our bodies healthy by e ating good food and visiting the hospital when sick",
    "changes": [
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.1.4.1.1",
+     "action": "unchanged",
+     "before": "Demonstrate the understanding and knowledge of keeping our bodies healthy by e ating good food and visiting the hospital when sick",
+     "after": "Demonstrate the understanding and knowledge of keeping our bodies healthy by e ating good food and visiting the hospital when sick"
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.1.4.1.2",
+     "action": "unchanged",
+     "before": "Demonstrate the understanding and knowledge of keeping our bodies healthy by e ating good food and visiting the hospital when sick",
+     "after": "Demonstrate the understanding and knowledge of keeping our bodies healthy by e ating good food and visiting the hospital when sick"
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.1.4.1.3",
+     "action": "unchanged",
+     "before": "Demonstrate the understanding and knowledge of keeping our bodies healthy by e ating good food and visiting the hospital when sick",
+     "after": "Demonstrate the understanding and knowledge of keeping our bodies healthy by e ating good food and visiting the hospital when sick"
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.1.4.1.4",
+     "action": "unchanged",
+     "before": "Demonstrate the understanding and knowledge of keeping our bodies healthy by e ating good food and visiting the hospital when sick",
+     "after": "Demonstrate the understanding and knowledge of keeping our bodies healthy by e ating good food and visiting the hospital when sick"
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.1.4.1.5",
+     "action": "unchanged",
+     "before": "Demonstrate the understanding and knowledge of keeping our bodies healthy by e ating good food and visiting the hospital when sick",
+     "after": "Demonstrate the understanding and knowledge of keeping our bodies healthy by e ating good food and visiting the hospital when sick"
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.1.4.1.6",
+     "action": "unchanged",
+     "before": "Demonstrate the understanding and knowledge of keeping our bodies healthy by e ating good food and visiting the hospital when sick",
+     "after": "Demonstrate the understanding and knowledge of keeping our bodies healthy by e ating good food and visiting the hospital when sick"
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.1.4.1.7",
+     "action": "unchanged",
+     "before": "Demonstrate the understanding and knowledge of keeping our bodies healthy by e ating good food and visiting the hospital when sick",
+     "after": "Demonstrate the understanding and knowledge of keeping our bodies healthy by e ating good food and visiting the hospital when sick"
+    },
     {
      "file": "kindergarten_KG2_curriculum_db_clean.json",
      "code": "K2.1.4.1.1",
@@ -13473,6 +13886,48 @@
    "page": 156,
    "cell": "Demonstrate understanding of the environment and how to keep it safe",
    "changes": [
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.1.5.1.1",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the environment and how to keep it safe",
+     "after": "Demonstrate understanding of the environment and how to keep it safe"
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.1.5.1.2",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the environment and how to keep it safe",
+     "after": "Demonstrate understanding of the environment and how to keep it safe"
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.1.5.1.3",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the environment and how to keep it safe",
+     "after": "Demonstrate understanding of the environment and how to keep it safe"
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.1.5.1.4",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the environment and how to keep it safe",
+     "after": "Demonstrate understanding of the environment and how to keep it safe"
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.1.5.1.5",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the environment and how to keep it safe",
+     "after": "Demonstrate understanding of the environment and how to keep it safe"
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.1.5.1.6",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the environment and how to keep it safe",
+     "after": "Demonstrate understanding of the environment and how to keep it safe"
+    },
     {
      "file": "kindergarten_KG2_curriculum_db_clean.json",
      "code": "K2.1.5.1.1",
@@ -13628,6 +14083,55 @@
     {
      "file": "kindergarten_KG2_curriculum_db_clean.json",
      "code": "K2.2.2.1.1",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the origin and history of our families and the languages spoken.",
+     "after": "Demonstrate understanding of the origin and history of our families and the languages spoken."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.2.2.1.2",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the origin and history of our families and the languages spoken.",
+     "after": "Demonstrate understanding of the origin and history of our families and the languages spoken."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.2.2.1.3",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the origin and history of our families and the languages spoken.",
+     "after": "Demonstrate understanding of the origin and history of our families and the languages spoken."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.2.2.1.4",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the origin and history of our families and the languages spoken.",
+     "after": "Demonstrate understanding of the origin and history of our families and the languages spoken."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.2.2.1.5",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the origin and history of our families and the languages spoken.",
+     "after": "Demonstrate understanding of the origin and history of our families and the languages spoken."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.2.2.1.6",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the origin and history of our families and the languages spoken.",
+     "after": "Demonstrate understanding of the origin and history of our families and the languages spoken."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.2.2.1.7",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the origin and history of our families and the languages spoken.",
+     "after": "Demonstrate understanding of the origin and history of our families and the languages spoken."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.2.2.1.1",
      "action": "trimmed",
      "before": "Demonstrate understanding of the origin and history of our families and the languages spoken. Indicators and Exemplars",
      "after": "Demonstrate understanding of the origin and history of our families and the languages spoken."
@@ -13748,6 +14252,41 @@
     {
      "file": "kindergarten_KG2_curriculum_db_clean.json",
      "code": "K2.2.4.1.1",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the rules and regulations for learners and teachers at school.",
+     "after": "Demonstrate understanding of the rules and regulations for learners and teachers at school."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.2.4.1.2",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the rules and regulations for learners and teachers at school.",
+     "after": "Demonstrate understanding of the rules and regulations for learners and teachers at school."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.2.4.1.3",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the rules and regulations for learners and teachers at school.",
+     "after": "Demonstrate understanding of the rules and regulations for learners and teachers at school."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.2.4.1.4",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the rules and regulations for learners and teachers at school.",
+     "after": "Demonstrate understanding of the rules and regulations for learners and teachers at school."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.2.4.1.5",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the rules and regulations for learners and teachers at school.",
+     "after": "Demonstrate understanding of the rules and regulations for learners and teachers at school."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.2.4.1.1",
      "action": "trimmed",
      "before": "Demonstrate understanding of the rules and regulations for learners and teachers at school. Indicators and Exemplars",
      "after": "Demonstrate understanding of the rules and regulations for learners and teachers at school."
@@ -13791,6 +14330,48 @@
    "page": 175,
    "cell": "Demonstrate understanding of their personal value in relation to their likes and dislikes.",
    "changes": [
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.3.1.1.1",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of their personal value in relation to their likes and dislikes.",
+     "after": "Demonstrate understanding of their personal value in relation to their likes and dislikes."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.3.1.1.2",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of their personal value in relation to their likes and dislikes.",
+     "after": "Demonstrate understanding of their personal value in relation to their likes and dislikes."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.3.1.1.3",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of their personal value in relation to their likes and dislikes.",
+     "after": "Demonstrate understanding of their personal value in relation to their likes and dislikes."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.3.1.1.4",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of their personal value in relation to their likes and dislikes.",
+     "after": "Demonstrate understanding of their personal value in relation to their likes and dislikes."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.3.1.1.5",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of their personal value in relation to their likes and dislikes.",
+     "after": "Demonstrate understanding of their personal value in relation to their likes and dislikes."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.3.1.1.6",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of their personal value in relation to their likes and dislikes.",
+     "after": "Demonstrate understanding of their personal value in relation to their likes and dislikes."
+    },
     {
      "file": "kindergarten_KG2_curriculum_db_clean.json",
      "code": "K2.3.1.1.1",
@@ -13886,6 +14467,41 @@
     {
      "file": "kindergarten_KG2_curriculum_db_clean.json",
      "code": "K2.3.3.1.2",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the values and virtues we need to exhibit as Ghanaian learners.",
+     "after": "Demonstrate understanding of the values and virtues we need to exhibit as Ghanaian learners."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.3.3.1.3",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the values and virtues we need to exhibit as Ghanaian learners.",
+     "after": "Demonstrate understanding of the values and virtues we need to exhibit as Ghanaian learners."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.3.3.1.4",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the values and virtues we need to exhibit as Ghanaian learners.",
+     "after": "Demonstrate understanding of the values and virtues we need to exhibit as Ghanaian learners."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.3.3.1.5",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the values and virtues we need to exhibit as Ghanaian learners.",
+     "after": "Demonstrate understanding of the values and virtues we need to exhibit as Ghanaian learners."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.3.3.1.6",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the values and virtues we need to exhibit as Ghanaian learners.",
+     "after": "Demonstrate understanding of the values and virtues we need to exhibit as Ghanaian learners."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.3.3.1.2",
      "action": "trimmed",
      "before": "Demonstrate understanding of the values and virtues we need to exhibit as Ghanaian learners. Indicators and Exemplars",
      "after": "Demonstrate understanding of the values and virtues we need to exhibit as Ghanaian learners."
@@ -13929,6 +14545,48 @@
    "page": 182,
    "cell": "Demonstrate understanding of relating well with people with different beliefs.",
    "changes": [
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.3.4.1.1",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of relating well with people with different beliefs.",
+     "after": "Demonstrate understanding of relating well with people with different beliefs."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.3.4.1.2",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of relating well with people with different beliefs.",
+     "after": "Demonstrate understanding of relating well with people with different beliefs."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.3.4.1.3",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of relating well with people with different beliefs.",
+     "after": "Demonstrate understanding of relating well with people with different beliefs."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.3.4.1.4",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of relating well with people with different beliefs.",
+     "after": "Demonstrate understanding of relating well with people with different beliefs."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.3.4.1.5",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of relating well with people with different beliefs.",
+     "after": "Demonstrate understanding of relating well with people with different beliefs."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.3.4.1.6",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of relating well with people with different beliefs.",
+     "after": "Demonstrate understanding of relating well with people with different beliefs."
+    },
     {
      "file": "kindergarten_KG2_curriculum_db_clean.json",
      "code": "K2.3.4.1.1",
@@ -14144,6 +14802,41 @@
     {
      "file": "kindergarten_KG2_curriculum_db_clean.json",
      "code": "K2.5.1.1.3",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of history and celebrations of Ghana",
+     "after": "Demonstrate understanding of history and celebrations of Ghana"
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.5.1.1.4",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of history and celebrations of Ghana",
+     "after": "Demonstrate understanding of history and celebrations of Ghana"
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.5.1.1.5",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of history and celebrations of Ghana",
+     "after": "Demonstrate understanding of history and celebrations of Ghana"
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.5.1.1.6",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of history and celebrations of Ghana",
+     "after": "Demonstrate understanding of history and celebrations of Ghana"
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.5.1.1.7",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of history and celebrations of Ghana",
+     "after": "Demonstrate understanding of history and celebrations of Ghana"
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.5.1.1.3",
      "action": "displaced",
      "before": "Learners talk about activities that are done during 6th March Celebration and listen to historical stories about Ghana`s Independence. WP LL1 Core Competencies Communication and collaboration (CC)",
      "after": "Demonstrate understanding of history and celebrations of Ghana"
@@ -14187,6 +14880,55 @@
    "page": 198,
    "cell": "Demonstrate understanding of why some things are referred to as living and non - living things.",
    "changes": [
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.1.1.1",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of why some things are referred to as living and non- living things.",
+     "after": "Demonstrate understanding of why some things are referred to as living and non- living things."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.1.1.2",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of why some things are referred to as living and non- living things.",
+     "after": "Demonstrate understanding of why some things are referred to as living and non- living things."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.1.1.3",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of why some things are referred to as living and non- living things.",
+     "after": "Demonstrate understanding of why some things are referred to as living and non- living things."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.1.1.4",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of why some things are referred to as living and non- living things.",
+     "after": "Demonstrate understanding of why some things are referred to as living and non- living things."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.1.1.5",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of why some things are referred to as living and non- living things.",
+     "after": "Demonstrate understanding of why some things are referred to as living and non- living things."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.1.1.6",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of why some things are referred to as living and non- living things.",
+     "after": "Demonstrate understanding of why some things are referred to as living and non- living things."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.1.1.7",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of why some things are referred to as living and non- living things.",
+     "after": "Demonstrate understanding of why some things are referred to as living and non- living things."
+    },
     {
      "file": "kindergarten_KG2_curriculum_db_clean.json",
      "code": "K2.6.1.1.1",
@@ -14310,6 +15052,48 @@
     {
      "file": "kindergarten_KG2_curriculum_db_clean.json",
      "code": "K2.6.3.1.1",
+     "action": "unchanged",
+     "before": "Demonstrate understanding that water is an important natural resource that helps all living things, human, plants and animals",
+     "after": "Demonstrate understanding that water is an important natural resource that helps all living things, human, plants and animals"
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.3.1.2",
+     "action": "unchanged",
+     "before": "Demonstrate understanding that water is an important natural resource that helps all living things, human, plants and animals",
+     "after": "Demonstrate understanding that water is an important natural resource that helps all living things, human, plants and animals"
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.3.1.3",
+     "action": "unchanged",
+     "before": "Demonstrate understanding that water is an important natural resource that helps all living things, human, plants and animals",
+     "after": "Demonstrate understanding that water is an important natural resource that helps all living things, human, plants and animals"
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.3.1.4",
+     "action": "unchanged",
+     "before": "Demonstrate understanding that water is an important natural resource that helps all living things, human, plants and animals",
+     "after": "Demonstrate understanding that water is an important natural resource that helps all living things, human, plants and animals"
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.3.1.5",
+     "action": "unchanged",
+     "before": "Demonstrate understanding that water is an important natural resource that helps all living things, human, plants and animals",
+     "after": "Demonstrate understanding that water is an important natural resource that helps all living things, human, plants and animals"
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.3.1.7",
+     "action": "unchanged",
+     "before": "Demonstrate understanding that water is an important natural resource that helps all living things, human, plants and animals",
+     "after": "Demonstrate understanding that water is an important natural resource that helps all living things, human, plants and animals"
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.3.1.1",
      "action": "trimmed",
      "before": "Demonstrate understanding that water is an important natural resource that helps all living things, human, plants and animals Indicators and Exemplars",
      "after": "Demonstrate understanding that water is an important natural resource that helps all living things, human, plants and animals"
@@ -14360,6 +15144,55 @@
    "page": 208,
    "cell": "Demonstrate understanding th at air is all around us and it is an important and beneficial natural resource for all living things.",
    "changes": [
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.4.1.1",
+     "action": "unchanged",
+     "before": "Demonstrate understanding that air is all around us and it is an important and beneficial natural resource for all living things.",
+     "after": "Demonstrate understanding that air is all around us and it is an important and beneficial natural resource for all living things."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.4.1.2",
+     "action": "unchanged",
+     "before": "Demonstrate understanding that air is all around us and it is an important and beneficial natural resource for all living things.",
+     "after": "Demonstrate understanding that air is all around us and it is an important and beneficial natural resource for all living things."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.4.1.3",
+     "action": "unchanged",
+     "before": "Demonstrate understanding that air is all around us and it is an important and beneficial natural resource for all living things.",
+     "after": "Demonstrate understanding that air is all around us and it is an important and beneficial natural resource for all living things."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.4.1.4",
+     "action": "unchanged",
+     "before": "Demonstrate understanding that air is all around us and it is an important and beneficial natural resource for all living things.",
+     "after": "Demonstrate understanding that air is all around us and it is an important and beneficial natural resource for all living things."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.4.1.5",
+     "action": "unchanged",
+     "before": "Demonstrate understanding that air is all around us and it is an important and beneficial natural resource for all living things.",
+     "after": "Demonstrate understanding that air is all around us and it is an important and beneficial natural resource for all living things."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.4.1.6",
+     "action": "unchanged",
+     "before": "Demonstrate understanding that air is all around us and it is an important and beneficial natural resource for all living things.",
+     "after": "Demonstrate understanding that air is all around us and it is an important and beneficial natural resource for all living things."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.4.1.7",
+     "action": "unchanged",
+     "before": "Demonstrate understanding that air is all around us and it is an important and beneficial natural resource for all living things.",
+     "after": "Demonstrate understanding that air is all around us and it is an important and beneficial natural resource for all living things."
+    },
     {
      "file": "kindergarten_KG2_curriculum_db_clean.json",
      "code": "K2.6.4.1.1",
@@ -14423,6 +15256,55 @@
     {
      "file": "kindergarten_KG2_curriculum_db_clean.json",
      "code": "K2.6.5.1.1",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the knowledge that the different parts of plants are important sources of food and medicine for other living things",
+     "after": "Demonstrate understanding of the knowledge that the different parts of plants are important sources of food and medicine for other living things"
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.5.1.2",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the knowledge that the different parts of plants are important sources of food and medicine for other living things",
+     "after": "Demonstrate understanding of the knowledge that the different parts of plants are important sources of food and medicine for other living things"
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.5.1.3",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the knowledge that the different parts of plants are important sources of food and medicine for other living things",
+     "after": "Demonstrate understanding of the knowledge that the different parts of plants are important sources of food and medicine for other living things"
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.5.1.4",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the knowledge that the different parts of plants are important sources of food and medicine for other living things",
+     "after": "Demonstrate understanding of the knowledge that the different parts of plants are important sources of food and medicine for other living things"
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.5.1.5",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the knowledge that the different parts of plants are important sources of food and medicine for other living things",
+     "after": "Demonstrate understanding of the knowledge that the different parts of plants are important sources of food and medicine for other living things"
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.5.1.6",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the knowledge that the different parts of plants are important sources of food and medicine for other living things",
+     "after": "Demonstrate understanding of the knowledge that the different parts of plants are important sources of food and medicine for other living things"
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.5.1.7",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the knowledge that the different parts of plants are important sources of food and medicine for other living things",
+     "after": "Demonstrate understanding of the knowledge that the different parts of plants are important sources of food and medicine for other living things"
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.5.1.1",
      "action": "trimmed",
      "before": "Demonstrate understanding of the knowledge that the different parts of plants are important sources of food and medicine for other living things Call to the front and give one- syllabic word each to 2 learners. Upon prompting, let them practise creating many mono-syllabic words by gradually moving towards each other sounding out the single syllab",
      "after": "Demonstrate understanding of the knowledge that the different parts of plants are important sources of food and medicine for other living things"
@@ -14483,6 +15365,34 @@
     {
      "file": "kindergarten_KG2_curriculum_db_clean.json",
      "code": "K2.6.6.1.1",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of how plants grow and how they prepare their food.",
+     "after": "Demonstrate understanding of how plants grow and how they prepare their food."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.6.1.2",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of how plants grow and how they prepare their food.",
+     "after": "Demonstrate understanding of how plants grow and how they prepare their food."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.6.1.6",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of how plants grow and how they prepare their food.",
+     "after": "Demonstrate understanding of how plants grow and how they prepare their food."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.6.1.7",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of how plants grow and how they prepare their food.",
+     "after": "Demonstrate understanding of how plants grow and how they prepare their food."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.6.1.1",
      "action": "trimmed",
      "before": "Demonstrate understanding of how plants grow and how they prepare their food. Indicators and Exemplars",
      "after": "Demonstrate understanding of how plants grow and how they prepare their food."
@@ -14519,6 +15429,48 @@
    "page": 219,
    "cell": "Demonstrate understanding of types of soil we find around u s and which one helps plant to grow well .",
    "changes": [
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.7.1.1",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of types of soil we find around us and which one helps plant to grow well.",
+     "after": "Demonstrate understanding of types of soil we find around us and which one helps plant to grow well."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.7.1.2",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of types of soil we find around us and which one helps plant to grow well.",
+     "after": "Demonstrate understanding of types of soil we find around us and which one helps plant to grow well."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.7.1.3",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of types of soil we find around us and which one helps plant to grow well.",
+     "after": "Demonstrate understanding of types of soil we find around us and which one helps plant to grow well."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.7.1.4",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of types of soil we find around us and which one helps plant to grow well.",
+     "after": "Demonstrate understanding of types of soil we find around us and which one helps plant to grow well."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.7.1.5",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of types of soil we find around us and which one helps plant to grow well.",
+     "after": "Demonstrate understanding of types of soil we find around us and which one helps plant to grow well."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.7.1.6",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of types of soil we find around us and which one helps plant to grow well.",
+     "after": "Demonstrate understanding of types of soil we find around us and which one helps plant to grow well."
+    },
     {
      "file": "kindergarten_KG2_curriculum_db_clean.json",
      "code": "K2.6.7.1.1",
@@ -14572,6 +15524,55 @@
    "page": 221,
    "cell": "Demonstrate understanding of the knowledge that the different types of lights we use during the day or in the night can be classifies as of l into natural and manmade and its usefulness.",
    "changes": [
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.8.1.1",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the knowledge that the different types of lights we use during the day or in the night can be classifies as of l into natural and manmade and its usefulness.",
+     "after": "Demonstrate understanding of the knowledge that the different types of lights we use during the day or in the night can be classifies as of l into natural and manmade and its usefulness."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.8.1.2",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the knowledge that the different types of lights we use during the day or in the night can be classifies as of l into natural and manmade and its usefulness.",
+     "after": "Demonstrate understanding of the knowledge that the different types of lights we use during the day or in the night can be classifies as of l into natural and manmade and its usefulness."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.8.1.3",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the knowledge that the different types of lights we use during the day or in the night can be classifies as of l into natural and manmade and its usefulness.",
+     "after": "Demonstrate understanding of the knowledge that the different types of lights we use during the day or in the night can be classifies as of l into natural and manmade and its usefulness."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.8.1.4",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the knowledge that the different types of lights we use during the day or in the night can be classifies as of l into natural and manmade and its usefulness.",
+     "after": "Demonstrate understanding of the knowledge that the different types of lights we use during the day or in the night can be classifies as of l into natural and manmade and its usefulness."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.8.1.5",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the knowledge that the different types of lights we use during the day or in the night can be classifies as of l into natural and manmade and its usefulness.",
+     "after": "Demonstrate understanding of the knowledge that the different types of lights we use during the day or in the night can be classifies as of l into natural and manmade and its usefulness."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.8.1.6",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the knowledge that the different types of lights we use during the day or in the night can be classifies as of l into natural and manmade and its usefulness.",
+     "after": "Demonstrate understanding of the knowledge that the different types of lights we use during the day or in the night can be classifies as of l into natural and manmade and its usefulness."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.8.1.7",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the knowledge that the different types of lights we use during the day or in the night can be classifies as of l into natural and manmade and its usefulness.",
+     "after": "Demonstrate understanding of the knowledge that the different types of lights we use during the day or in the night can be classifies as of l into natural and manmade and its usefulness."
+    },
     {
      "file": "kindergarten_KG2_curriculum_db_clean.json",
      "code": "K2.6.8.1.1",
@@ -14635,6 +15636,48 @@
     {
      "file": "kindergarten_KG2_curriculum_db_clean.json",
      "code": "K2.6.9.1.1",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of positive and negative effects of weather conditions.",
+     "after": "Demonstrate understanding of positive and negative effects of weather conditions."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.9.1.2",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of positive and negative effects of weather conditions.",
+     "after": "Demonstrate understanding of positive and negative effects of weather conditions."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.9.1.3",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of positive and negative effects of weather conditions.",
+     "after": "Demonstrate understanding of positive and negative effects of weather conditions."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.9.1.4",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of positive and negative effects of weather conditions.",
+     "after": "Demonstrate understanding of positive and negative effects of weather conditions."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.9.1.5",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of positive and negative effects of weather conditions.",
+     "after": "Demonstrate understanding of positive and negative effects of weather conditions."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.9.1.7",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of positive and negative effects of weather conditions.",
+     "after": "Demonstrate understanding of positive and negative effects of weather conditions."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.6.9.1.1",
      "action": "trimmed",
      "before": "Demonstrate understanding of positive and negative effects of weather conditions. Indicators and Exemplars",
      "after": "Demonstrate understanding of positive and negative effects of weather conditions."
@@ -14688,6 +15731,55 @@
     {
      "file": "kindergarten_KG2_curriculum_db_clean.json",
      "code": "K2.7.1.1.1",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the various ways we connect with the global community.",
+     "after": "Demonstrate understanding of the various ways we connect with the global community."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.7.1.1.2",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the various ways we connect with the global community.",
+     "after": "Demonstrate understanding of the various ways we connect with the global community."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.7.1.1.3",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the various ways we connect with the global community.",
+     "after": "Demonstrate understanding of the various ways we connect with the global community."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.7.1.1.4",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the various ways we connect with the global community.",
+     "after": "Demonstrate understanding of the various ways we connect with the global community."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.7.1.1.5",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the various ways we connect with the global community.",
+     "after": "Demonstrate understanding of the various ways we connect with the global community."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.7.1.1.7",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the various ways we connect with the global community.",
+     "after": "Demonstrate understanding of the various ways we connect with the global community."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.7.1.1.8",
+     "action": "unchanged",
+     "before": "Demonstrate understanding of the various ways we connect with the global community.",
+     "after": "Demonstrate understanding of the various ways we connect with the global community."
+    },
+    {
+     "file": "kindergarten_KG2_curriculum_db_clean.json",
+     "code": "K2.7.1.1.1",
      "action": "trimmed",
      "before": "Demonstrate understanding of the various ways we connect with the global community. Indicators and Exemplars t",
      "after": "Demonstrate understanding of the various ways we connect with the global community."
@@ -14736,6 +15828,24 @@
     }
    ],
    "action": "trimmed"
+  },
+  {
+   "cs_code": "B5.6.4.9",
+   "files": [
+    "computing_B5_curriculum_db_clean.json"
+   ],
+   "page": 48,
+   "cell": "Demonstrate proficiency in Digital Literacy.",
+   "changes": [
+    {
+     "file": "computing_B5_curriculum_db_clean.json",
+     "code": "B5.6.4.9.1",
+     "action": "filled",
+     "before": "",
+     "after": "Demonstrate proficiency in Digital Literacy."
+    }
+   ],
+   "action": "filled"
   }
  ],
  "drift": [
@@ -14965,10 +16075,10 @@
   }
  ],
  "applied": {
-  "keywords": 812,
-  "keywords_drift": 182,
-  "ind_desc": 397,
-  "cs_desc": 176,
+  "keywords": 0,
+  "keywords_drift": 0,
+  "ind_desc": 0,
+  "cs_desc": 1,
   "skipped": []
  },
  "history": [
@@ -14977,6 +16087,12 @@
    "keywords_drift": 182,
    "ind_desc": 397,
    "cs_desc": 176
+  },
+  {
+   "keywords": 0,
+   "keywords_drift": 0,
+   "ind_desc": 0,
+   "cs_desc": 1
   }
  ]
 }

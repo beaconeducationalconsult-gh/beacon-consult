@@ -176,35 +176,33 @@ describe.each(ids)('%s', (grade) => {
       expect(unsupported.map(pair)).toEqual([])
     })
 
-    it('serves exactly nine subject-grades from the reference copy', () => {
-      // These exist only in data/reference/, so the build's DB_SEARCH order
-      // falls back to that copy. They passed Audit B, which resolves each
-      // database through find_data and so sees both directories — that is why
-      // they can be verified while still being served from the second copy.
-      //
-      // Named explicitly: the list changing is a data-layout decision worth
-      // noticing (promoting one into data/curriculum/ should update this).
+    it('serves every subject-grade from the audited copy', () => {
+      // Nine subject-grades used to be served from data/reference/, the fallback
+      // copy: computing and french B4–B6, kindergarten KG1/KG2 and
+      // english-language B5. `scripts/promote_reference_subjects.py` moved their
+      // databases and summaries into data/curriculum/ (2026-09-18), so the
+      // fallback is no longer what anyone reads — the drifted copies that remain
+      // there (creative-arts B4–B6, social-studies B7–B9, english-language's own
+      // older extracts) are inert, and this assertion is what keeps them that way.
       const fromReference = all.filter((s) => s.source !== 'curriculum').map(pair).sort()
-      expect(fromReference).toEqual([
-        'B4 computing',
-        'B4 french',
-        'B5 computing',
-        'B5 english-language',
-        'B5 french',
-        'B6 computing',
-        'B6 french',
-        'KG1 kindergarten',
-        'KG2 kindergarten',
-      ])
+      expect(fromReference).toEqual([])
     })
 
-    it('audits english-language B5 with a check that can be re-run', () => {
-      // Audit A passed this one before the data restructure, and its database
-      // now lives only in data/reference/, where Audit A cannot see it — so its
-      // committed PASS row cannot be reproduced (TODO P1-9). Audit B has no
-      // such blind spot, which is what keeps the subject verified rather than
-      // resting on a result nobody can re-derive.
-      expect(auditPasses('audit_b_results.json').has('B5 english-language')).toBe(true)
+    it('audits the promoted subject-grades with a check that can be re-run', () => {
+      // Audit A never used to see these nine: it enumerates data/curriculum/, and
+      // their databases lived in the fallback copy. Two of them were pinned to
+      // Audit B for that reason (english-language B5, TODO P1-9). Now both audits
+      // cover all 84 subject-grades, so either row can be re-derived by anyone.
+      const fromA = auditPasses('audit_a_results.json')
+      const fromB = auditPasses('audit_b_results.json')
+      for (const name of [
+        'B4 computing', 'B5 computing', 'B6 computing',
+        'B4 french', 'B5 french', 'B6 french',
+        'KG1 kindergarten', 'KG2 kindergarten', 'B5 english-language',
+      ]) {
+        expect(fromA.has(name), `${name} in Audit A`).toBe(true)
+        expect(fromB.has(name), `${name} in Audit B`).toBe(true)
+      }
     })
   })
 
@@ -231,7 +229,7 @@ describe.each(ids)('%s', (grade) => {
       // scripts/fix_french_content_standards.py filled it.
       const wrong = []
       for (const grade of ['B4', 'B5', 'B6']) {
-        const rows = readData(`reference/french_${grade}_curriculum_db_clean.json`)
+        const rows = readData(`curriculum/french_${grade}_curriculum_db_clean.json`)
         const codes = Object.keys(rows)
         expect(codes.length, `${grade} records`).toBeGreaterThan(50)
         for (const code of codes) {
@@ -250,7 +248,7 @@ describe.each(ids)('%s', (grade) => {
       // defect, and the only record this project leaves without a standard.
       const empty = []
       for (const grade of ['B4', 'B5', 'B6']) {
-        const rows = readData(`reference/french_${grade}_curriculum_db_clean.json`)
+        const rows = readData(`curriculum/french_${grade}_curriculum_db_clean.json`)
         for (const code of Object.keys(rows)) {
           if (!rows[code].cs_desc) empty.push(code)
         }
@@ -259,8 +257,8 @@ describe.each(ids)('%s', (grade) => {
     })
 
     it('serves those standards to the portal', () => {
-      // The fill is only real if it survives the build: the three French
-      // B4-B6 subject-grades are served from data/reference/.
+      // The fill is only real if it survives the build — the three French B4-B6
+      // subject-grades are served from data/curriculum/ since the promotion.
       const rows = ['B4', 'B5', 'B6'].flatMap((grade) =>
         bundle.get(grade).indicators.filter((i) => i.subjectId === 'french')
       )
@@ -276,14 +274,16 @@ describe.each(ids)('%s', (grade) => {
     it('does not mistake the core-competence column for a content standard', () => {
       // In French B7-B9 the CORE COMPETENCIES column sits beside the CONTENT
       // STANDARD column, and eleven standards (37 records) had the neighbour's
-      // text glued in front of the statement — or in place of it. One record is
-      // exempt: B7.4.2.3.1 is a stub built from the front matter's worked
-      // example, which the print has no content standard for (docs/TODO.md).
+      // text glued in front of the statement — or in place of it. The served
+      // copies were already clean; the repair was made to the *reference* copies,
+      // which are what this test reads. One record is exempt: B7.4.2.3.1 is a stub
+      // built from the front matter's worked example, which the print has no
+      // content standard for (docs/TODO.md).
       const BLEED = /^(?:Communication and Collaboration|Critical Thinking and Problem Solving|Creativity and Innovation|Cultural identity and Global Citizenship|Personal development and leadership|Digital literacy|Core Competenc|French Content Standard)/i
       const exempt = new Set(['B7.4.2.3.1'])
       const bad = []
       for (const grade of ['B7', 'B8', 'B9']) {
-        const rows = readData(`reference/french_${grade}_curriculum_db_clean.json`)
+        const rows = readData(`curriculum/french_${grade}_curriculum_db_clean.json`)
         for (const code of Object.keys(rows)) {
           if (!exempt.has(code) && BLEED.test(rows[code].cs_desc || '')) bad.push(`${code}: ${rows[code].cs_desc}`)
         }
@@ -294,6 +294,8 @@ describe.each(ids)('%s', (grade) => {
 
   describe('the reference-only text fields', () => {
     const readData = (path) => JSON.parse(readFileSync(new URL(`../data/${path}`, import.meta.url), 'utf8'))
+    // the eight subject-grades no audited database covered, promoted into
+    // data/curriculum/ by scripts/promote_reference_subjects.py
     const referenceOnly = [
       'computing_B4', 'computing_B5', 'computing_B6',
       'french_B4', 'french_B5', 'french_B6',
@@ -311,7 +313,7 @@ describe.each(ids)('%s', (grade) => {
       // drifted copies in data/reference/ are covered by the same pass).
       const empty = []
       for (const name of referenceOnly) {
-        const rows = readData(`reference/${name}_curriculum_db_clean.json`)
+        const rows = readData(`curriculum/${name}_curriculum_db_clean.json`)
         const codes = Object.keys(rows)
         expect(codes.length, `${name} records`).toBeGreaterThan(20)
         for (const code of codes) {
@@ -369,7 +371,7 @@ describe.each(ids)('%s', (grade) => {
       // empty rather than being guessed at.
       const empty = []
       for (const grade of ['KG1', 'KG2']) {
-        const rows = readData(`reference/kindergarten_${grade}_curriculum_db_clean.json`)
+        const rows = readData(`curriculum/kindergarten_${grade}_curriculum_db_clean.json`)
         for (const code of Object.keys(rows)) {
           if (!String(rows[code].cs_desc || '').trim()) empty.push(code)
         }
@@ -381,7 +383,7 @@ describe.each(ids)('%s', (grade) => {
       // the two standards whose column the print was read for at last
       const washed = []
       for (const [grade, prefix] of [['KG1', 'K1.3.1.1.'], ['KG2', 'K2.1.3.1.']]) {
-        const rows = readData(`reference/kindergarten_${grade}_curriculum_db_clean.json`)
+        const rows = readData(`curriculum/kindergarten_${grade}_curriculum_db_clean.json`)
         for (const code of Object.keys(rows)) {
           if (code.startsWith(prefix) && !/^Demonstrate/.test(rows[code].cs_desc || '')) washed.push(code)
         }
@@ -390,7 +392,7 @@ describe.each(ids)('%s', (grade) => {
 
       // and the five records that held indicator text now hold the print's own
       // sentence for their standard
-      const kg2 = readData('reference/kindergarten_KG2_curriculum_db_clean.json')
+      const kg2 = readData('curriculum/kindergarten_KG2_curriculum_db_clean.json')
       for (const code of ['K2.5.1.1.3', 'K2.5.1.1.4', 'K2.5.1.1.5', 'K2.5.1.1.6', 'K2.5.1.1.7']) {
         expect(kg2[code].cs_desc, code).toBe('Demonstrate understanding of history and celebrations of Ghana')
       }
@@ -398,8 +400,22 @@ describe.each(ids)('%s', (grade) => {
 
     it('leaves a trail of what it wrote, and writes nothing it could not back', () => {
       const trail = readData('audit/reference_text_fixes.json')
-      expect(trail.applied).toMatchObject({ keywords: 812, ind_desc: 397, cs_desc: 176 })
-      expect(trail.history.length, 'runs recorded').toBeGreaterThan(0)
+      // The trail accumulates: the run that did the work is in `history`, and the
+      // per-record evidence stays there after a later run finds nothing to do.
+      expect(trail.history).toContainEqual({
+        keywords: 812, keywords_drift: 182, ind_desc: 397, cs_desc: 176,
+      })
+      expect(trail.keywords.flatMap((k) => k.records)).toHaveLength(812)
+      expect(Object.values(trail.ind_desc).reduce((n, e) => n + e.written, 0)).toBe(397)
+      // …and the one content standard a later run filled is there too: computing's
+      // B5.6.4.9.1 was empty although the print prints the sentence (found when the
+      // promotion put the file under Audit A's nose)
+      expect(trail.history).toContainEqual({
+        keywords: 0, keywords_drift: 0, ind_desc: 0, cs_desc: 1,
+      })
+      const computing = trail.cs_desc.find((e) => e.cs_code === 'B5.6.4.9')
+      expect(computing.changes.map((c) => c.after))
+        .toEqual(['Demonstrate proficiency in Digital Literacy.'])
 
       // every description it wrote is read back against the print, and the
       // strength of that reading is recorded per record; a survivor the print does

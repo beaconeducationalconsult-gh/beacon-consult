@@ -52,15 +52,16 @@ Produced by `make inventory` → `data/inventory.json`. Full definition in
 
 | Layer | Path | Contents |
 |---|---|---|
-| **L1 curriculum** | `data/curriculum/` | 75 databases · 73 summaries · **3,095 indicators** · audited against 24 NaCCA source PDFs |
+| **L1 curriculum** | `data/curriculum/` | 84 databases · 84 summaries · **4,040 indicators** · audited against 27 NaCCA source PDFs |
 | **L2 lessons** | `data/lessons/` | **13,140 lesson slots** (73 files, 13 subjects, B1–B9) with a filled teaching template |
 | **L3 bundle** | `public/curriculum/` | **4,040 indicators** across 84 subject-grades / 11 grades — what the portal serves (39.7 MB) |
 
-L3 is larger than L1 by **945 indicators across 9 subject-grades** (computing B4–B6,
-french B4–B6 and kindergarten KG1–KG2 come from the unaudited `data/reference/`
-fallback; `english-language B5` has an L1 summary but no L1 database). For the other
-75 subject-grades the two layers agree exactly. This divergence is tracked, not
-hidden: `make inventory` reports it and `docs/curriculum-data.md` explains it.
+L1 and L3 agree exactly: every one of the 84 served subject-grades comes from the
+audited copy. That took until 2026-09-18 — nine subject-grades (computing and french
+B4–B6, kindergarten KG1/KG2, `english-language B5`) were served from the
+`data/reference/` fallback and had no L1 counterpart;
+`scripts/promote_reference_subjects.py` moved them and gave them summaries.
+`docs/curriculum-data.md` defines the layers and what is left in `data/reference/`.
 
 ---
 

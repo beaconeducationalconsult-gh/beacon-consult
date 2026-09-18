@@ -1,0 +1,43 @@
+{
+ "id": "french",
+ "name": "French",
+ "grade": "B4",
+ "sourceTitle": "NaCCA French Curriculum for Primary Schools (Basic 4-6)",
+ "sourceUrl": "https://nacca.gov.gh/wp-content/uploads/2019/06/FRENCH-B4-B6.pdf",
+ "counts": {
+  "strands": 4,
+  "subStrands": 17,
+  "standards": 65,
+  "indicators": 88
+ },
+ "strands": [
+  {
+   "code": "B4.1",
+   "name": "L’IDENTITÉ",
+   "subStrands": 4,
+   "standards": 16,
+   "indicators": 17
+  },
+  {
+   "code": "B4.2",
+   "name": "PARLER DE SON ENVIRONNEMENT",
+   "subStrands": 2,
+   "standards": 8,
+   "indicators": 12
+  },
+  {
+   "code": "B4.3",
+   "name": "Exprimer ses goûts et ses préférences",
+   "subStrands": 2,
+   "standards": 7,
+   "indicators": 10
+  },
+  {
+   "code": "B4.4",
+   "name": "Les activités",
+   "subStrands": 9,
+   "standards": 34,
+   "indicators": 49
+  }
+ ]
+}

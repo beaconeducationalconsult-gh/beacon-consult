@@ -2,8 +2,9 @@
 """Clean up the text fields of the reference-only subject-grades against their prints.
 
 The eight subject-grades that no quality-assured database covers (computing B4-B6,
-french B4-B6, kindergarten KG1-KG2) were extracted from the NaCCA PDFs by reading
-the page, which glued the neighbouring columns onto the indicator description:
+french B4-B6, kindergarten KG1-KG2 — promoted into data/curriculum/ by
+`promote_reference_subjects.py`) were extracted from the NaCCA PDFs by reading the
+page, which glued the neighbouring columns onto the indicator description:
 
     "... discuss and point to things that are safe and unsafe to play with.
      References WP LL1 Core Competencies Communication and collaboration (CC)"
@@ -62,7 +63,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from _paths import AUDIT, CURRICULUM, REFERENCE, SOURCES  # noqa: E402
+from _paths import AUDIT, CURRICULUM, REFERENCE, SOURCES, find_data  # noqa: E402
 
 try:
     from pypdf import PdfReader
@@ -80,6 +81,11 @@ SUBJECTS = {
     "kindergarten": ("kindergarten_KG1-KG2.pdf", ("KG1", "KG2")),
 }
 
+# the prints whose content-standard column carries a sentence (the french B4-B6
+# column carries the four skill labels instead, and that document's own script owns
+# its `cs_desc`)
+SENTENCE_CS_PRINT = "computing_B4-B6.pdf"
+
 BAND = {"B4": "upper-primary", "B5": "upper-primary", "B6": "upper-primary",
         "KG1": "kindergarten", "KG2": "kindergarten"}
 
@@ -94,7 +100,10 @@ WINDOW = {
 
 # x band of the content-standard column, kindergarten only (its body tables set
 # that column at 93.6-103.1 and the indicator column starts at 214)
-CS_BAND = {"kindergarten_KG1-KG2.pdf": (85.0, 190.0)}
+CS_BAND = {"kindergarten_KG1-KG2.pdf": (85.0, 190.0),
+           # computing's content-standard column sits at 66-220 (measured on
+           # pp. 20-60); the page's own rules are used wherever they are drawn
+           "computing_B4-B6.pdf": (66.0, 220.0)}
 
 # Column headings the extractor copied along with the row it was reading.
 HEADINGS = ("indicators and exemplars", "indicator and exemplars",
@@ -253,9 +262,14 @@ def chunks(pdf: str, pages=None) -> list[tuple[int, float, float, str]]:
         if todo:
             for n, rows in zip(todo, _extract_pages(pdf, todo)):
                 have[n] = rows
-            CACHE.mkdir(parents=True, exist_ok=True)
-            _cache_path(pdf).write_bytes(
-                pickle.dumps([have[n] for n in range(npages(pdf))]))
+            # the cache is the *whole* document or nothing: a run that asked for
+            # one page would otherwise write a list with holes in it, and the next
+            # run would read those holes as pages that genuinely hold no text
+            total = npages(pdf)
+            if all(n in have for n in range(total)):
+                CACHE.mkdir(parents=True, exist_ok=True)
+                _cache_path(pdf).write_bytes(
+                    pickle.dumps([have[n] for n in range(total)]))
     return [(n, x, y, t) for n in want for x, y, t in have[n]]
 
 
@@ -1145,7 +1159,16 @@ def plan_ind_desc(pdf: str, code: str, text: str, items, headings=None,
 # --------------------------------------------------------------------------- #
 
 def db_path(subject: str, grade: str) -> Path:
-    return REFERENCE / f"{subject}_{grade}_curriculum_db_clean.json"
+    """The subject-grade's database — wherever it lives.
+
+    These eight lived in data/reference/ when this script was written and were
+    promoted into data/curriculum/ by `promote_reference_subjects.py`, so the path
+    is resolved through find_data rather than assumed; the creative-arts and
+    social-studies copies this script only reports on are still in reference.
+    """
+    name = f"{subject}_{grade}_curriculum_db_clean.json"
+    found = find_data(name)
+    return found if found else REFERENCE / name
 
 
 def keyword_value(subject: str, grade: str) -> str:
@@ -1287,12 +1310,15 @@ def cs_candidates(pdf: str) -> dict[str, list[tuple[int, str]]]:
     return out
 
 
-def print_cell(cells: dict, cs_code: str):
+def print_cell(cells: dict, cs_code: str, deeper: bool = False):
     """The print's readings of this standard's cell.
 
     A standard's code is the row's own (`K1.3.1.1`) while the cell may be numbered
     one level shorter (`K2.1.3`), so the lookup prefers the code itself and then the
-    code it sits under.
+    code it sits under.  With `deeper`, a single cell numbered one level *longer*
+    (`B5.6.4.9.1.` where the database keys the standard `B5.6.4.9`) is accepted too
+    — the print's own slip, and only when nothing else matches and exactly one such
+    cell exists, because `B5.6.4.1` and `B5.6.4.12` are different standards.
     """
     b = blob(cs_code)
     if b in cells:
@@ -1302,6 +1328,10 @@ def print_cell(cells: dict, cs_code: str):
         key = blob("".join(mine[:n]))
         if key in cells:
             return cells[key]
+    if deeper:
+        under = [k for k in cells if k.startswith(b) and len(k) > len(b)]
+        if len(under) == 1:
+            return cells[under[0]]
     return []
 
 
@@ -1319,6 +1349,46 @@ def best_cell(cands: list[tuple[int, str]]) -> tuple[int, str]:
         return (-len(blob(text)), split, len(text.split()), c[0])
 
     return min(cands, key=rank)
+
+
+def missing_cs_plan(pdf: str, subject: str) -> list[dict]:
+    """Standards whose sentence the print carries but a record does not hold.
+
+    One question per empty field: does the print's content-standard column print
+    this record's standard?  If it does, the field is empty because the extraction
+    missed it — `B5.6.4.9.1` was, and the sentence was sitting in the column the
+    whole time — and the sentence goes in.  A standard whose cell the print leaves
+    blank is reported and left alone.  Only prints whose content-standard column
+    carries sentences are read (the french B4-B6 column carries skill labels, and
+    that document's own script owns its `cs_desc`).
+    """
+    cells = cs_candidates(pdf)
+    by_code: dict[str, list[dict]] = defaultdict(list)
+    for grade in SUBJECTS[subject][1]:
+        path = db_path(subject, grade)
+        for code, rec in json.loads(path.read_text()).items():
+            if not (rec.get("cs_desc") or "").strip():
+                by_code[rec["cs_code"]].append({"file": path.name, "code": code})
+    plan = []
+    for cs_code, records in sorted(by_code.items()):
+        found = print_cell(cells, cs_code, deeper=True)
+        entry = {"cs_code": cs_code, "records": [r["code"] for r in records],
+                 "files": sorted({r["file"] for r in records}), "changes": []}
+        if not found:
+            entry.update({"action": "no-print-cell",
+                          "note": ("the content-standard cell is blank in the print "
+                                   "(the record keeps what it has)")})
+            plan.append(entry)
+            continue
+        page, cell = best_cell(found)
+        entry.update({"page": page, "cell": cell,
+                      "printed_on": sorted({p for p, _t in found}),
+                      "action": "filled"})
+        for r in records:
+            entry["changes"].append({"file": r["file"], "code": r["code"],
+                                     "action": "filled", "before": "", "after": cell})
+        plan.append(entry)
+    return plan
 
 
 def cs_desc_plan(pdf: str) -> list[dict]:
@@ -1427,7 +1497,8 @@ def apply(plan: dict) -> dict:
 
     def db(name: str) -> dict:
         if name not in dirty:
-            dirty[name] = json.loads((REFERENCE / name).read_text())
+            found = find_data(name)
+            dirty[name] = json.loads(((found if found else REFERENCE / name)).read_text())
         return dirty[name]
 
     for entry in plan["keywords"]:
@@ -1464,7 +1535,8 @@ def apply(plan: dict) -> dict:
             applied["cs_desc"] += 1
 
     for name, data in dirty.items():
-        (REFERENCE / name).write_text(
+        found = find_data(name)
+        (found if found else REFERENCE / name).write_text(
             json.dumps(data, indent=1, ensure_ascii=False) + "\n")
     return applied
 
@@ -1723,9 +1795,10 @@ def main() -> int:
             print(f"    {e['file'][:28]:28s} {e['code']:14s} {e['where']:16s} "
                   f"{e['after'][:60]!r}{note}")
 
-    cs_entries = cs_desc_plan(SUBJECTS["kindergarten"][0])
+    cs_entries = (cs_desc_plan(SUBJECTS["kindergarten"][0])
+                  + missing_cs_plan(SENTENCE_CS_PRINT, "computing"))
     plan["cs_desc"] = cs_entries
-    print("\nkindergarten cs_desc (the print's sentence in the standard's own column)")
+    print("\ncs_desc (the sentence the print sets in the standard's own column)")
     for e in cs_entries:
         if e["action"] == "no-print-cell":
             print(f"  {e['cs_code']:12s} -- {e['note']} ({len(e['records'])} record(s))")

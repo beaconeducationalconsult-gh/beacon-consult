@@ -249,12 +249,7 @@
    "public/curriculum/questions/ does not exist, yet the legacy math module declares the 'questions' capability"
   ],
   "warnings": [
-   "legacy app (legacy/kernel-app) is out of step with the dataset in 34 places — it is retired reference code, so this does not fail the audit; see checks.legacy in data/inventory.json",
-   "english-language B4: L1 database english-language_B4_curriculum_db_clean.json has no summary (no source URL, no counts)",
-   "english-language B5: L1 has a summary but no database in data/curriculum/ (the database only exists in data/reference/)",
-   "mathematics B1: L1 database math_curriculum_db_clean.json has no summary (no source URL, no counts)",
-   "8 app-bundle subject-grades exist ONLY in data/reference/ and have no audited L1 counterpart: computing B4, computing B5, computing B6, french B4, french B5, french B6, kindergarten KG1, kindergarten KG2",
-   "data/reference/ has 8 summary files with no counts block (e.g. computing_B4_curriculum_summary.json)"
+   "legacy app (legacy/kernel-app) is out of step with the dataset in 34 places — it is retired reference code, so this does not fail the audit; see checks.legacy in data/inventory.json"
   ]
  },
  "generatedBy": "scripts/build_inventory.py",
@@ -262,8 +257,8 @@
   {
    "hasSchedules": false,
    "id": "KG1",
-   "l1Indicators": 0,
-   "l1Subjects": 0,
+   "l1Indicators": 169,
+   "l1Subjects": 1,
    "l2LessonSlots": 0,
    "l2Subjects": 0,
    "l3Indicators": 169,
@@ -273,8 +268,8 @@
   {
    "hasSchedules": false,
    "id": "KG2",
-   "l1Indicators": 0,
-   "l1Subjects": 0,
+   "l1Indicators": 170,
+   "l1Subjects": 1,
    "l2LessonSlots": 0,
    "l2Subjects": 0,
    "l3Indicators": 170,
@@ -317,8 +312,8 @@
   {
    "hasSchedules": true,
    "id": "B4",
-   "l1Indicators": 402,
-   "l1Subjects": 8,
+   "l1Indicators": 517,
+   "l1Subjects": 10,
    "l2LessonSlots": 1260,
    "l2Subjects": 7,
    "l3Indicators": 517,
@@ -328,8 +323,8 @@
   {
    "hasSchedules": true,
    "id": "B5",
-   "l1Indicators": 286,
-   "l1Subjects": 7,
+   "l1Indicators": 590,
+   "l1Subjects": 10,
    "l2LessonSlots": 1260,
    "l2Subjects": 7,
    "l3Indicators": 590,
@@ -339,8 +334,8 @@
   {
    "hasSchedules": true,
    "id": "B6",
-   "l1Indicators": 385,
-   "l1Subjects": 8,
+   "l1Indicators": 572,
+   "l1Subjects": 10,
    "l2LessonSlots": 1260,
    "l2Subjects": 7,
    "l3Indicators": 572,
@@ -1391,39 +1386,39 @@
   },
   {
    "grade": "B4",
-   "l1Indicators": null,
-   "l1SummaryIndicators": null,
+   "l1Indicators": 27,
+   "l1SummaryIndicators": 27,
    "l2IndicatorsScheduled": 0,
    "l2LessonSlots": 0,
    "l3BundleIndicators": 27,
-   "refIndicators": 27,
-   "referenceOnly": true,
+   "refIndicators": null,
+   "referenceOnly": false,
    "subjectId": "computing",
-   "subjectName": "computing"
+   "subjectName": "Computing"
   },
   {
    "grade": "B5",
-   "l1Indicators": null,
-   "l1SummaryIndicators": null,
+   "l1Indicators": 81,
+   "l1SummaryIndicators": 81,
    "l2IndicatorsScheduled": 0,
    "l2LessonSlots": 0,
    "l3BundleIndicators": 81,
-   "refIndicators": 81,
-   "referenceOnly": true,
+   "refIndicators": null,
+   "referenceOnly": false,
    "subjectId": "computing",
-   "subjectName": "computing"
+   "subjectName": "Computing"
   },
   {
    "grade": "B6",
-   "l1Indicators": null,
-   "l1SummaryIndicators": null,
+   "l1Indicators": 98,
+   "l1SummaryIndicators": 98,
    "l2IndicatorsScheduled": 0,
    "l2LessonSlots": 0,
    "l3BundleIndicators": 98,
-   "refIndicators": 98,
-   "referenceOnly": true,
+   "refIndicators": null,
+   "referenceOnly": false,
    "subjectId": "computing",
-   "subjectName": "computing"
+   "subjectName": "Computing"
   },
   {
    "grade": "B7",
@@ -1608,23 +1603,23 @@
   {
    "grade": "B4",
    "l1Indicators": 129,
-   "l1SummaryIndicators": null,
+   "l1SummaryIndicators": 129,
    "l2IndicatorsScheduled": 129,
    "l2LessonSlots": 180,
    "l3BundleIndicators": 129,
    "refIndicators": 129,
    "referenceOnly": false,
    "subjectId": "english-language",
-   "subjectName": "english-language"
+   "subjectName": "English Language"
   },
   {
    "grade": "B5",
-   "l1Indicators": null,
+   "l1Indicators": 133,
    "l1SummaryIndicators": 133,
    "l2IndicatorsScheduled": 133,
    "l2LessonSlots": 180,
    "l3BundleIndicators": 133,
-   "refIndicators": 133,
+   "refIndicators": null,
    "referenceOnly": false,
    "subjectId": "english-language",
    "subjectName": "English Language"
@@ -1679,39 +1674,39 @@
   },
   {
    "grade": "B4",
-   "l1Indicators": null,
-   "l1SummaryIndicators": null,
+   "l1Indicators": 88,
+   "l1SummaryIndicators": 88,
    "l2IndicatorsScheduled": 0,
    "l2LessonSlots": 0,
    "l3BundleIndicators": 88,
-   "refIndicators": 88,
-   "referenceOnly": true,
+   "refIndicators": null,
+   "referenceOnly": false,
    "subjectId": "french",
-   "subjectName": "french"
+   "subjectName": "French"
   },
   {
    "grade": "B5",
-   "l1Indicators": null,
-   "l1SummaryIndicators": null,
+   "l1Indicators": 90,
+   "l1SummaryIndicators": 90,
    "l2IndicatorsScheduled": 0,
    "l2LessonSlots": 0,
    "l3BundleIndicators": 90,
-   "refIndicators": 90,
-   "referenceOnly": true,
+   "refIndicators": null,
+   "referenceOnly": false,
    "subjectId": "french",
-   "subjectName": "french"
+   "subjectName": "French"
   },
   {
    "grade": "B6",
-   "l1Indicators": null,
-   "l1SummaryIndicators": null,
+   "l1Indicators": 89,
+   "l1SummaryIndicators": 89,
    "l2IndicatorsScheduled": 0,
    "l2LessonSlots": 0,
    "l3BundleIndicators": 89,
-   "refIndicators": 89,
-   "referenceOnly": true,
+   "refIndicators": null,
+   "referenceOnly": false,
    "subjectId": "french",
-   "subjectName": "french"
+   "subjectName": "French"
   },
   {
    "grade": "B7",
@@ -1931,39 +1926,39 @@
   },
   {
    "grade": "KG1",
-   "l1Indicators": null,
-   "l1SummaryIndicators": null,
+   "l1Indicators": 169,
+   "l1SummaryIndicators": 169,
    "l2IndicatorsScheduled": 0,
    "l2LessonSlots": 0,
    "l3BundleIndicators": 169,
-   "refIndicators": 169,
-   "referenceOnly": true,
+   "refIndicators": null,
+   "referenceOnly": false,
    "subjectId": "kindergarten",
-   "subjectName": "kindergarten"
+   "subjectName": "Kindergarten"
   },
   {
    "grade": "KG2",
-   "l1Indicators": null,
-   "l1SummaryIndicators": null,
+   "l1Indicators": 170,
+   "l1SummaryIndicators": 170,
    "l2IndicatorsScheduled": 0,
    "l2LessonSlots": 0,
    "l3BundleIndicators": 170,
-   "refIndicators": 170,
-   "referenceOnly": true,
+   "refIndicators": null,
+   "referenceOnly": false,
    "subjectId": "kindergarten",
-   "subjectName": "kindergarten"
+   "subjectName": "Kindergarten"
   },
   {
    "grade": "B1",
    "l1Indicators": 24,
-   "l1SummaryIndicators": null,
+   "l1SummaryIndicators": 24,
    "l2IndicatorsScheduled": 24,
    "l2LessonSlots": 180,
    "l3BundleIndicators": 24,
    "refIndicators": 24,
    "referenceOnly": false,
    "subjectId": "mathematics",
-   "subjectName": "mathematics"
+   "subjectName": "Mathematics"
   },
   {
    "grade": "B2",
@@ -2390,7 +2385,7 @@
     "B9"
    ],
    "id": "computing",
-   "l1Indicators": 123,
+   "l1Indicators": 329,
    "l2Grades": [
     "B7",
     "B8",
@@ -2398,7 +2393,7 @@
    ],
    "l2LessonSlots": 540,
    "l3Indicators": 329,
-   "name": "computing"
+   "name": "Computing"
   },
   {
    "grades": [
@@ -2453,7 +2448,7 @@
     "B9"
    ],
    "id": "english-language",
-   "l1Indicators": 629,
+   "l1Indicators": 762,
    "l2Grades": [
     "B1",
     "B2",
@@ -2479,7 +2474,7 @@
     "B9"
    ],
    "id": "french",
-   "l1Indicators": 166,
+   "l1Indicators": 433,
    "l2Grades": [
     "B7",
     "B8",
@@ -2487,7 +2482,7 @@
    ],
    "l2LessonSlots": 540,
    "l3Indicators": 433,
-   "name": "french"
+   "name": "French"
   },
   {
    "grades": [
@@ -2547,11 +2542,11 @@
     "KG2"
    ],
    "id": "kindergarten",
-   "l1Indicators": 0,
+   "l1Indicators": 339,
    "l2Grades": [],
    "l2LessonSlots": 0,
    "l3Indicators": 339,
-   "name": "kindergarten"
+   "name": "Kindergarten"
   },
   {
    "grades": [
@@ -2580,7 +2575,7 @@
    ],
    "l2LessonSlots": 1620,
    "l3Indicators": 431,
-   "name": "mathematics"
+   "name": "Mathematics"
   },
   {
    "grades": [
@@ -2677,18 +2672,13 @@
  "totals": {
   "grades": 11,
   "l1": {
-   "databases": 75,
-   "indicators": 3095,
+   "databases": 84,
+   "indicators": 4040,
    "label": "curriculum",
-   "pairsWithoutSummary": [
-    "english-language B4",
-    "mathematics B1"
-   ],
-   "subjectGrades": 76,
-   "summaries": 74,
-   "summaryOnlyPairs": [
-    "english-language B5"
-   ]
+   "pairsWithoutSummary": [],
+   "subjectGrades": 84,
+   "summaries": 84,
+   "summaryOnlyPairs": []
   },
   "l2": {
    "files": 73,
@@ -2709,20 +2699,11 @@
   },
   "reference": {
    "bundlePairsWithoutAnySource": [],
-   "databases": 84,
+   "databases": 75,
    "label": "reference-fallback",
-   "malformedSummaries": 8,
-   "summaries": 75,
-   "suppliesBundlePairs": [
-    "computing B4",
-    "computing B5",
-    "computing B6",
-    "french B4",
-    "french B5",
-    "french B6",
-    "kindergarten KG1",
-    "kindergarten KG2"
-   ]
+   "malformedSummaries": 0,
+   "summaries": 74,
+   "suppliesBundlePairs": []
   },
   "sampleDocuments": 2,
   "sources": {

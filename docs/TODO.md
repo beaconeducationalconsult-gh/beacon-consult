@@ -34,11 +34,11 @@ additionally fails if `data/inventory.json` is stale.
 
 | # | Item | Why | Size |
 |---|------|-----|------|
-| P1-1 | **Cross-check the 8 unaudited subject-grades against their NaCCA PDFs**, then promote them into `data/curriculum/` and add their counts to the `EXPECTED` table in `scripts/audit/audit_a_databases.py`. **Computing, french and kindergarten B4–B6/KG1–KG2 are audited and their text fields are cleaned** (keywords, `ind_desc` furniture and the KG content standards — 2026-09-18, see the progress notes below); what is left is the promotion | The portal serves curriculum for 8 subject-grades (computing B4–B6, french B4–B6, KG1–KG2; ~714 indicators) that had **never been checked against its source** — no counts, no PDF in `data/sources/`, no row in `EXPECTED` — until the three PDFs arrived and Audit B was pointed at them. It is real NaCCA curriculum, not invented data (the official PDFs are now cited in the summaries and the sources exist — see below), but nobody has verified the extraction. **Partly done 2026-09-18**: every served subject now names its source, the bundle carries `verified`/`source` per subject derived from Audit A, and the UI says so (`GradeSubjects`, `SubjectSelect`). Remaining: promoting the copies into `data/curriculum/` with their counts in `EXPECTED`, and the field-completeness gaps measured below (keywords, footer/column bleed, KG content standards). | M |
-| P1-9 | **`english-language B5` is audited but not reproducible** — it passed Audit A before the data restructure and its database now exists only in `data/reference/`, so `audit_a_databases.py` (which enumerates `data/curriculum/`) no longer sees it: re-running the audit today yields 75 rows where the committed results have 76 | Promote the database into `data/curriculum/` and re-run the audit. Less urgent since Audit B now covers the subject — it resolves databases through `find_data`, so it sees both directories, and it passes this one 133/133 (a test pins that). But Audit A's committed row still cannot be reproduced by anyone | S |
+| P1-1 | ~~**Cross-check the 8 unaudited subject-grades against their NaCCA PDFs**, then promote them into `data/curriculum/` and add their counts to the `EXPECTED` table in `scripts/audit/audit_a_databases.py`~~ — **done 2026-09-18**: all 8 pass Audit B, their text fields are cleaned, and `scripts/promote_reference_subjects.py` moved them (and `english-language B5`) into `data/curriculum/` with counts-bearing summaries and rows in `EXPECTED`. Audit A now covers all 84 subject-grades | The portal served curriculum for 8 subject-grades (~714 indicators) that had never been checked against its source. It was real NaCCA curriculum with unverified extraction; the whole arc is in the progress notes below | M |
+| P1-9 | ~~**`english-language B5` is audited but not reproducible**~~ — **done 2026-09-18**: promoted into `data/curriculum/`, where Audit A enumerates it and its `EXPECTED` row (133) holds. Audit A now reports 84 files / 84 PASS and reproduces every row it prints | Audit A's committed row could not be re-derived by anyone | S |
 | P1-10 | **`B7.4.2.3.1` is a fabricated record in `data/reference/french_B7_...`** — its `cs_desc` reads `"French Content Standard B7.4.2.3"` and its `ind_desc` `"French Learning Indicator B7.4.2.3.1"`, and the only occurrence of that code in `french_CCP_B7-B9.pdf` is the worked example in the front matter (p. xxix) | The served copy (`data/curriculum/`) has 64 records and not this one, and Audit A's `EXPECTED` table says 64, so the record is an extraction artefact rather than curriculum. Left in place: deleting data is the user's call, and `scripts/fix_french_content_standards.py` reports it instead of inventing a standard for it | S |
-| P1-2 | **Fill the L1 provenance gaps**: `english-language B4`, `mathematics B1`, `science B1` have databases but no summary (no source URL, no counts); `english-language B5` has a summary but no database in `data/curriculum/` | 184 indicators with unverifiable provenance are served to teachers | S |
-| P1-3 | **Repair the 8 malformed reference summaries** (no `counts` block) | Any code that reads `summary['counts']` raises on them | S |
+| P1-2 | ~~**Fill the L1 provenance gaps**~~ — **done 2026-09-18**: `english-language B4`'s summary was in `data/reference/` and was promoted; `mathematics B1` had none and now has `math_curriculum_summary.json`, its `sourceTitle`/`sourceUrl` taken from the B2/B3 summary of the same document. (`science B1` already had one — the row was stale.) Every one of the 84 L1 pairs now has a summary with a `counts` block | 184 indicators had unverifiable provenance | S |
+| P1-3 | ~~**Repair the 8 malformed reference summaries** (no `counts` block)~~ — **done 2026-09-18**: the eight were the promoted subject-grades, and their summaries now carry `counts` + a per-strand breakdown derived from their databases, with the vestigial `sourceVerified` flag dropped (nothing read it, and it said `false` about subject-grades Audit B passes) | Any code that reads `summary['counts']` raised on them | S |
 | P1-4 | **Say what L2 is, then act on it** — `competencies`, `resources`, `keywords`, `assessment` have exactly one distinct value per subject-grade; `starter` 75% / `main` 41% distinct, `rpk`/`plenary`/`assessment` ≈ 1% | Marketing and authoring budget depend on this. Either enrich per indicator or label generated documents honestly as templated | S |
 | P1-5 | **Question bank content**: zero questions exist in the bundle (`public/curriculum/questions/` does not exist); `data/questions/` holds one mathematics B4 file | The generators render an empty selection from an empty bank — the highest-value content the dataset lacks | L |
 | P1-6 | **Clean the 58 L2 `ind_desc` records with a repeated trailing sentence** (0.4% of slots) at the extraction source | Visible artefact in generated documents | S |
@@ -71,8 +71,8 @@ seen yet.
 
 **Then the same field gaps as computing/french** — `keywords` empty on all 339 and descriptions
 carrying the PDF's footer text — plus the KG content standards; all three were closed on
-2026-09-18 by `scripts/fix_reference_text.py` (see the note under the computing + french section
-below).
+2026-09-18 by `scripts/fix_reference_text.py`, and the two databases were promoted into
+`data/curriculum/` the same day (see the promotion note below).
 
 ### P1-1 progress — computing + french B4–B6 (2026-09-18)
 
@@ -133,8 +133,50 @@ longer flags them. What remains is field completeness, not authenticity:
 
 The work and its trail are `scripts/fix_reference_text.py` (report by default, `--apply` writes)
 and `data/audit/reference_text_fixes.json`; the rule and the residual check are in
-`docs/curriculum-data.md`. What is still outstanding from P1-1 is the promotion: these eight
-subject-grades live in `data/reference/`, and Audit A's `EXPECTED` table has no row for them.
+`docs/curriculum-data.md`.
+
+### P1-1 — the promotion (2026-09-18)
+
+`scripts/promote_reference_subjects.py` (report by default, `--apply` moves files) finished the
+item. Eighteen files moved into `data/curriculum/` — the databases and summaries of computing
+B4–B6, french B4–B6 and kindergarten KG1/KG2 — plus `english-language B5` (the database, and the
+summary that was already there) and `english-language B4`'s summary. Two summaries were written
+from scratch: `english-language B4`'s (its file *was* the reference copy, which moved) and
+`mathematics B1`'s, whose provenance came from the B2/B3 summary of the same document.
+
+Three things had to be true for the move to be honest, and each was checked before the files went:
+
+* **Audit A had to be able to audit them.** It enumerated `_B4_`-shaped file names and validated
+  `^B(\d)\.` codes, so kindergarten's `_KG1_`/`K1.3.2.1.4` shape was invisible to it. It now
+  enumerates `_KG1_`, accepts the `K`/`KG` mismatch in the grade column, and keeps the file-name
+  form as the grade. Its `EXPECTED` table gained the rows: computing `B4 27 B5 81 B6 98`, french
+  `B4 88 B5 90 B6 89`, kindergarten `KG1 169 KG2 170`.
+* **The one empty field the move would expose had to be filled.** `computing B5.6.4.9.1` had no
+  `cs_desc` although the print prints `Demonstrate proficiency in Digital Literacy.` on p48 — the
+  computing print's own cell code reads `B5.6.4.9.1.` (a three-part standard keyed as
+  `B5.6.4.9`), which the earlier scan could not match. `fix_reference_text.py` now reads the
+  print's content-standard column for computing too, fills empty fields from it, and reports
+  standards whose cell is blank. French B6's `B6.1.2.5.3` and kindergarten's five `K1.3.2.1`
+  records are the two that stay empty, because the print's own cell is blank — now carried as
+  named exemptions in Audit A's `BLANK_IN_PRINT` and printed as `blank-in-print=N`, so the audit
+  still fails on every *other* empty field.
+* **The tooling had to stop assuming the old layout.** `fix_reference_structure.py`,
+  `fix_french_content_standards.py` and `fix_reference_text.py` now resolve their files through
+  `find_data` instead of joining onto `data/reference/`, so they follow the served copy. All three
+  re-run clean: 0 indicators would change.
+
+Result: **Audit A 84 files / 84 PASS / 4,040 indicators** (it printed 75 PASS before), Audit B
+unchanged at 83 PASS + 1 WARN, and the inventory's L1 reports 84 pairs / 84 summaries, its
+"8 app-bundle subject-grades exist ONLY in `data/reference/`" warning gone. The bundle stamps
+`source: 'curriculum'` for all 84, and the test that used to pin nine fallback-served
+subject-grades now pins that *nothing* is served from the fallback.
+
+What stays in `data/reference/`: the older extraction of the same subject-grades
+(`english-language_B5_curriculum_db.json`, `english-language_B[2-6]_curriculum_db.json`), the
+drifted creative-arts B4–B6 and social-studies B7–B9 copies (P1-6/P1-10 territory) and the french
+B7–B9 copies, which is where `fix_french_content_standards.py` keeps its repair of the
+neighbour-column bleed. They are inert: `find_data` prefers `data/curriculum/`, and nothing served
+comes from there any more.
 
 ### P1-1 progress — the french content standards (2026-09-18)
 

@@ -57,7 +57,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
-from _paths import AUDIT, REFERENCE, SOURCES  # noqa: E402
+from _paths import AUDIT, SOURCES, find_data  # noqa: E402
 
 try:
     from pypdf import PdfReader
@@ -215,9 +215,11 @@ def plan_changes() -> tuple[list[dict], list[dict]]:
     """-> (per-file change plans, records that cannot be labelled)."""
     plans, unlabelled = [], []
     for grade in GRADES:
-        path = REFERENCE / f"french_{grade}_curriculum_db_clean.json"
-        if not path.exists():
-            sys.exit(f"missing {path}")
+        # resolved, not assumed: french B4-B6 were promoted into data/curriculum/
+        # (scripts/promote_reference_subjects.py) and B7-B9 were always there
+        path = find_data(f"french_{grade}_curriculum_db_clean.json")
+        if path is None:
+            sys.exit(f"missing french_{grade}_curriculum_db_clean.json")
         data = json.loads(path.read_text(encoding="utf-8-sig"))
         plan = {"grade": grade, "path": path, "data": data, "fills": [],
                 "already": 0, "displaced": [], "by_label": Counter()}
@@ -279,7 +281,7 @@ def recover_statements() -> list[dict]:
     out = []
 
     for grade in CCP_GRADES:
-        path = REFERENCE / f"french_{grade}_curriculum_db_clean.json"
+        path = find_data(f"french_{grade}_curriculum_db_clean.json")
         data = json.loads(path.read_text(encoding="utf-8-sig"))
         by_cs: dict[str, list[str]] = {}
         for code, rec in data.items():
@@ -336,7 +338,7 @@ def plan_ccp(repairs: list[dict]) -> list[dict]:
     """
     plans = []
     for grade in CCP_GRADES:
-        path = REFERENCE / f"french_{grade}_curriculum_db_clean.json"
+        path = find_data(f"french_{grade}_curriculum_db_clean.json")
         data = json.loads(path.read_text(encoding="utf-8-sig"))
         statement_of = {r["cs_code"]: r["statement"] for r in repairs
                         if r["grade"] == grade and r["statement"]}

@@ -1,53 +1,53 @@
 {
  "id": "english-language",
  "name": "English Language",
- "grade": "B5",
+ "grade": "B4",
  "sourceTitle": "NaCCA English Language Curriculum B4-B6",
  "sourceUrl": "https://nacca.gov.gh/wp-content/uploads/2019/06/ENGLISH-B4-B6.pdf",
  "counts": {
   "strands": 6,
-  "subStrands": 48,
-  "standards": 63,
-  "indicators": 133
+  "subStrands": 46,
+  "standards": 62,
+  "indicators": 129
  },
  "strands": [
   {
-   "code": "B5.1",
+   "code": "B4.1",
    "name": "ORAL LANGUAGE",
    "subStrands": 9,
    "standards": 15,
-   "indicators": 40
+   "indicators": 36
   },
   {
-   "code": "B5.2",
-   "name": "Reading",
+   "code": "B4.2",
+   "name": "READING",
    "subStrands": 9,
-   "standards": 14,
-   "indicators": 29
+   "standards": 15,
+   "indicators": 32
   },
   {
-   "code": "B5.3",
+   "code": "B4.3",
    "name": "GRAMMAR USAGE AT WORD AND PHRASE LEVELS",
-   "subStrands": 10,
-   "standards": 10,
+   "subStrands": 9,
+   "standards": 9,
    "indicators": 23
   },
   {
-   "code": "B5.4",
-   "name": "Writing",
+   "code": "B4.4",
+   "name": "WRITING",
    "subStrands": 9,
    "standards": 13,
-   "indicators": 22
+   "indicators": 21
   },
   {
-   "code": "B5.5",
+   "code": "B4.5",
    "name": "USING WRITING CONVENTIONS/ GRAMMAR USAGE",
-   "subStrands": 10,
-   "standards": 10,
-   "indicators": 18
+   "subStrands": 9,
+   "standards": 9,
+   "indicators": 16
   },
   {
-   "code": "B5.6",
+   "code": "B4.6",
    "name": "EXTENSIVE READING",
    "subStrands": 1,
    "standards": 1,

@@ -10,23 +10,23 @@ this project — including several that were in `README.md` and `docs/TODO.md`.
 
 | Layer | Path | What it is | Size |
 |---|---|---|---|
-| **L1 — curriculum** | `data/curriculum/*_curriculum_db_clean.json` + `*_curriculum_summary.json` | The audited extraction from the NaCCA source PDFs. One record per indicator, keyed by indicator code. | 75 DB files · 73 summaries · **3,095 indicators** · 75 subject-grades (plus `english-language B5`, which exists only as a summary) |
+| **L1 — curriculum** | `data/curriculum/*_curriculum_db_clean.json` + `*_curriculum_summary.json` | The audited extraction from the NaCCA source PDFs. One record per indicator, keyed by indicator code. | 84 DB files · 84 summaries · **4,040 indicators** · 84 subject-grades |
 | **L2 — lessons** | `data/lessons/*_lessons_enriched.json` | The teaching template (starter / main / plenary / rpk / assessment) filled for every lesson slot in the school year. | 73 files · **13,140 lesson slots** · 13 subjects · 9 grades |
 | **L3 — bundle** | `public/curriculum/*.json` | The static JSON the portal fetches at runtime. The only layer a teacher ever touches. | 84 subject-grades · **4,040 indicators** · 11 grades · 39.7 MB |
-| (ref) **reference** | `data/reference/` | A second, partly-divergent copy of L1 that `scripts/_paths.py` searches as a silent fallback. | 84 DB files · 75 summaries (8 malformed) |
+| (ref) **reference** | `data/reference/` | Older, partly-divergent copies of L1 subjects — searched by `scripts/_paths.py` only when a file is missing from `data/curriculum/`. Nothing served comes from here any more. | 75 DB files · 74 summaries |
 
 ```
 NaCCA PDFs (24, data/sources/)
       │  scripts/ingest/, scripts/build/build_clean_curriculum_db.py
       ▼
-L1  curriculum DBs + summaries ......... 3,095 indicators, audited (data/audit/)
+L1  curriculum DBs + summaries ......... 4,040 indicators, audited (data/audit/)
       │  scripts/build/lessons/  →  the teaching template
       ▼
 L2  enriched lessons ................... 13,140 lesson slots (3 terms × 12 weeks × 5 days × 73 subject-grades)
       │  scripts/build_app_curriculum.py
       ▼
-L3  app bundle ......................... 4,040 indicators (data/reference/ supplies 8 subject-grades
-                                          that L1 does not have)
+L3  app bundle ......................... 4,040 indicators (all of them from L1, since the
+                                          2026-09-18 promotion)
 
       scripts/generate_schemes.py, scripts/generate_records_of_work.py
       └──► the sellable Word books (regenerated on demand; not committed)
@@ -34,26 +34,27 @@ L3  app bundle ......................... 4,040 indicators (data/reference/ suppl
 
 ## Why the three layers have different totals
 
-**L1 is 3,095 indicators; L3 is 4,040.** The difference is not rounding — it is 945
-indicators across 9 subject-grades that the app serves but the audited layer does not
-contain. For the other 75 subject-grades the two layers agree exactly (3,095 = 3,095):
+**L1 and L3 are both 4,040 indicators, and that is new.** Until 2026-09-18 they were
+3,095 and 4,040: nine subject-grades (computing and french B4–B6, kindergarten
+KG1/KG2, `english-language B5` — 945 indicators) were served by the portal while the
+audited layer had no database for them, eight of them living only in
+`data/reference/` and `english-language B5` having a summary with no database at all.
+`scripts/promote_reference_subjects.py` moved all nine into `data/curriculum/`,
+together with summaries carrying a `counts` block, and Audit A's `EXPECTED` table
+gained their rows. L1 is now 84 subject-grades / 84 databases / 84 summaries, and
+every served subject comes from the audited copy (`source: 'curriculum'`).
 
-| Subject-grade | L3 indicators | Where it comes from |
-|---|---|---|
-| computing B4 / B5 / B6 | 27 / 81 / 98 | `data/reference/` only |
-| french B4 / B5 / B6 | 88 / 90 / 89 | `data/reference/` only |
-| kindergarten KG1 / KG2 | 169 / 170 | `data/reference/` only (KG codes use `K1`/`K2`, normalised to `KG1`/`KG2`) |
-| english-language B5 | 133 | L1 has the summary, not the database |
-
-The reverse also happens: **L1 has databases with no summary** —
-`english-language B4` (129 indicators), `mathematics B1` (24), `science B1` (31) —
-so those pairs have no source URL and no counts block.
+`data/reference/` still exists and is still read — but only when a file is missing
+from `data/curriculum/`, which for curriculum data no longer happens. What lives
+there now: older extractions of subjects that have a better copy in L1 (english, and
+the french B7–B9 databases whose `cs_desc` repair lives there), and the drifted
+creative-arts B4–B6 / social-studies B7–B9 copies (TODO P1-6, P1-10).
 
 Any statement of the form "this project has N indicators" must name the layer.
 The defensible sentences are:
 
-* "**3,095** indicators are in the audited extraction (`data/curriculum/`)."
-* "**4,040** indicators are served by the portal (`public/curriculum/`); 945 of them (9 subject-grades) have no counterpart in the audited layer — 8 come from `data/reference/`, 1 (`english-language B5`) has a summary but no database."
+* "**4,040** indicators are in the audited extraction (`data/curriculum/`) — 84 subject-grades, all 84 also served."
+* "**4,040** indicators are served by the portal (`public/curriculum/`), and every one of them comes from the audited copy."
 * "**13,140** lesson slots across 13 subjects and 9 grades have a filled teaching template (`data/lessons/`)."
 
 ## L1 — curriculum
@@ -151,13 +152,16 @@ Built by `scripts/build_app_curriculum.py`; validated by
 | `<grade>_schedules.json` | every scheduled lesson: term/week/day + phases (largest files, 3–5 MB each) |
 | `<grade>_schemes.json` | scheme rows per subject per term |
 
-### The reference-only subjects
+### The subjects that missed the extraction pass
 
-`computing`, `french` and `kindergarten` exist only in `data/reference/`, so they missed the
-extraction pass that produced everything else. Their source PDFs are all in `data/sources/` now
+`computing`, `french` and `kindergarten` were extracted separately (into `data/reference/`,
+which is why they missed the pass that produced everything else) and were **promoted into
+`data/curriculum/` on 2026-09-18** by `scripts/promote_reference_subjects.py` — see the layer
+note above. Their source PDFs are all in `data/sources/`
 (`computing_B4-B6.pdf`, `french_B4-B6.pdf`, `kindergarten_KG1-KG2.pdf`) and
 `scripts/fix_reference_structure.py` re-derives the data from them — run it with no arguments to
-see what would change, `--apply` to write. It exists because the labels, not the content, were
+see what would change, `--apply` to write; it resolves its files through `find_data`, so it
+follows each database to whichever layer holds it. It exists because the labels, not the content, were
 wrong: computing's and kindergarten's strands read `"Strand 1"`, french's held a *sub-strand*
 name one level too low, and one kindergarten indicator was a restatement of its own code. The
 script also fills descriptions that are stubs, and refuses to guess when a heading is ambiguous.
@@ -201,10 +205,12 @@ the build stamps it from `data/audit/` rather than a hand-kept list. Two audits 
 | Audit A (`audit_a_databases.py`) | indicator counts against the expected count recorded per file | only `data/curriculum/` |
 | Audit B (`audit_b_pdf_crosscheck.py`) | every code re-extracted from the PDF, set-compared with the database | both copies, via `find_data` |
 
-Audit A cannot see the reference-only subjects, which is why Audit B exists as a second route to
-the same claim. All 84 subject-grades pass one of the two; the flag stays a guard against a new
-subject-grade arriving un-cross-checked, and a test in `src/curriculumBundle.test.js` fails if
-one does.
+Audit A used to see only the 75 databases in `data/curriculum/` — which is why Audit B exists as
+a second route to the same claim. Since the promotion it enumerates **all 84**, kindergarten's
+`_KG1_`/`K1.3.2.1.4` shape included, and prints 84 PASS (4,040 indicators). The flag stays a
+guard against a new subject-grade arriving un-cross-checked: a test in
+`src/curriculumBundle.test.js` fails if one does, and it also pins that the promoted nine pass
+*both* audits.
 
 ### Provenance on every served subject
 
@@ -212,21 +218,22 @@ Each entry in `<grade>_subjects.json` carries two fields the build derives rathe
 hand-maintains, so they cannot drift:
 
 - **`source`** — which copy of the database the subject actually came from,
-  `curriculum` (the audited set in `data/curriculum/`) or `reference` (the second copy in
-  `data/reference/`, reached by the `DB_SEARCH` fallback in `scripts/_paths.py`).
+  `curriculum` (the audited set in `data/curriculum/`) or `reference` (the fallback copy in
+  `data/reference/`, reached by the `DB_SEARCH` fallback in `scripts/_paths.py`). Every served
+  subject is `curriculum` since the 2026-09-18 promotion, and a test pins that — if a subject
+  ever falls back to `reference` again it is a data-layout decision, not an accident.
 - **`verified`** — whether the subject-grade has a PASS row in *either* audit
   (`audit_a_results.json` or `audit_b_results.json`). Both compare the data against the
   official NaCCA PDFs — Audit A by indicator counts, Audit B by re-extracting every code —
   so this means "cross-checked against its source", not merely "loaded successfully". The
-  union is what lets the reference-only subjects claim it: they exist only in
-  `data/reference/`, where Audit A never looks, but Audit B resolves each database through
-  `find_data()` and so sees both copies.
+  union is what let the reference-only subjects claim it before the promotion: they existed
+  only in `data/reference/`, where Audit A never looked, but Audit B resolves each database
+  through `find_data()` and so saw both copies.
 
 All 84 served subject-grades are `verified: true`. The flag stays a guard rather than
 decoration: a subject-grade that passes neither audit fails a test in
 `src/curriculumBundle.test.js`, and `GradeSubjects`/`SubjectSelect` would label it
-"unverified" in the UI. See TODO P1-1 (and P1-9 for `english-language B5`, which passes
-Audit B but whose committed Audit A row nobody can reproduce).
+"unverified" in the UI. See TODO P1-1 (done 2026-09-18 — the promotion is what closed it).
 
 Notes and known gaps:
 
@@ -265,23 +272,29 @@ screen instead of rendering a silent "Choose…". Check, in order:
    `public/curriculum/`; a branch that predates the portal rebuild will not have
    them.
 
-## The `data/reference/` problem
+## The `data/reference/` fallback
 
-`scripts/_paths.py` documents `data/reference/` as "a second, partly-divergent copy"
-and searches it **silently** as a fallback (`DB_SEARCH = [CURRICULUM, REFERENCE]`).
-Consequences that are live today:
+`scripts/_paths.py` searches `data/reference/` **silently** after `data/curriculum/`
+(`DB_SEARCH = [CURRICULUM, REFERENCE]`), so a file missing from L1 is not an error anywhere:
+the build quietly serves the other copy. The three live consequences became one, and it is
+dormant rather than harmless:
 
-1. 8 app-bundle subject-grades are served from an unaudited copy with no L1
-   counterpart (table above).
-2. 8 reference summaries are malformed (no `counts` block), so any code path that
-   assumes `summary["counts"]` will raise on them — `build_inventory.py` skips and
-   reports them for exactly this reason.
-3. A file missing from `data/curriculum/` is *not* an error anywhere: the build
-   quietly serves the other copy. Data diverging between the two is invisible.
+1. ~~8 app-bundle subject-grades are served from an unaudited copy with no L1 counterpart.~~
+   **Closed 2026-09-18** — the nine were promoted, so every served subject now comes from L1
+   (`source: 'curriculum'` for all 84).
+2. ~~8 reference summaries are malformed (no `counts` block), so any code path that assumes
+   `summary["counts"]` raises.~~ **Closed 2026-09-18** — the promoted summaries were rewritten
+   with counts derived from their databases, and `build_inventory.py` now reports zero
+   malformed summary files.
+3. **Still true:** a file that goes missing from `data/curriculum/` is *not* an error: the build
+   serves the `reference` copy instead, and data diverging between the two is invisible. The
+   copies that remain there are older extractions, so this is exactly the shape of bug that hid
+   the drifted creative-arts/social-studies copies.
 
-**Decision required (see `docs/TODO.md`, item L1-4):** either promote the reference
-pairs into `data/curriculum/` after audit, or delete `data/reference/` and make the
-missing pairs an explicit, loud failure. Both are fine; the silent fallback is not.
+**Decided:** promote after audit (done). The open question is the one left behind — whether
+`data/reference/` should keep its silent-fallback role at all, now that nothing served depends on
+it, or whether `find_data` should fail loudly and the remaining copies be deleted. See
+`docs/TODO.md`.
 
 ## Invariants to keep
 

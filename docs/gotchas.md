@@ -87,6 +87,10 @@ fix against the right one leaves a defect behind in the file someone may later p
 
 Check which copy `find_data` resolves (and whether the subject is served from it) before editing,
 then rebuild: `make build-curriculum` writes `public/curriculum/`, which is what the app reads.
+The nine subject-grades that were served from the fallback were promoted into `data/curriculum/`
+on 2026-09-18 (see *Two copies of the same database* below) — so what remains in
+`data/reference/` is inert today, and the fixer scripts resolve their files through `find_data`
+rather than assuming the directory.
 
 ## 🟠 A page read top to bottom glues the neighbouring columns onto the row
 
@@ -124,6 +128,37 @@ Four traps sit in that geometry, all of them found the hard way:
 The rule, the ladder of reading strengths (`row`/`page` verbatim → `row-order`/`page-order`/
 `document-order` word-by-word → report only) and the residual scan live in
 `scripts/fix_reference_text.py`; the trail is `data/audit/reference_text_fixes.json`.
+
+## 🟠 Two copies of the same database, and only one of them is audited
+
+`data/reference/` is searched **after** `data/curriculum/` and **silently**, so which copy a tool
+reads depends on where the file happens to live — and nothing fails when they disagree. For a
+year nine subject-grades (computing and french B4–B6, kindergarten KG1/KG2, `english-language B5`)
+existed only in the fallback copy, which meant:
+
+* the portal served them, and said `verified: true`, but **Audit A never looked at them** — it
+  enumerates `data/curriculum/` by filename pattern, so they were invisible rather than failing;
+* their summaries had no `counts` block, so any code assuming `summary["counts"]` raised on exactly
+  those subjects;
+* nothing established which copy a *fix* should write to: `fix_french_content_standards.py` wrote
+  the reference copy of french B7–B9 (correct — that is where the polluted text was, while the
+  served copy was already clean), and the fixer scripts had to be re-pointed through `find_data`
+  when the promotion moved the files they own.
+
+Promotion (`scripts/promote_reference_subjects.py`, 2026-09-18) is the way out: move the files,
+give them summaries derived from their own databases, add their counts to `EXPECTED`, and pin with
+a test that nothing is served from the fallback. Two traps sit in the move itself:
+
+* **Audit A's filename pattern is the gate.** `_(B\d)_` and `^B(\d)\.` codes silently excluded
+  kindergarten (`_KG1_`, `K1.3.2.1.4`): the files would have been "audited" by not being listed.
+  Check the enumerator before trusting it with new data — and note the audit's exit code does not
+  distinguish "no issues" from "no files".
+* **Promotion exposes empty fields, it does not create them.** `B5.6.4.9.1` had carried an empty
+  `cs_desc` since the extraction, and it only surfaced because the file moved under Audit A's nose;
+  the print's own cell reads `B5.6.4.9.1.` (one level *longer* than the standard's code), which is
+  why the earlier column scan could not match it. When a subject-grade becomes visible to an audit
+  for the first time, run the audit *before* celebrating — and keep the print's real defects
+  (blank cells) as named exemptions rather than blanking the rule.
 
 ## 🟠 Committed rules ≠ deployed rules
 Vercel does **not** deploy Firestore rules/indexes. Editing `firestore.rules` and pushing
