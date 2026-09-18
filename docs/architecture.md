@@ -50,8 +50,10 @@ Two zones:
 **Protected portal** — all under `/portal`, rendered inside `ProtectedLayout`:
 
 ```
-/portal                       Feed (index)
-/portal/curriculum            Curriculum  →  /curriculum/:subjectId  SubjectBrowser
+/portal                       Workspace (index) — feed, your contributions, term calendar
+/portal/curriculum            Curriculum (grade grid)
+/portal/curriculum/:gradeId   GradeSubjects (that grade's subjects)
+/portal/curriculum/:gradeId/:subjectId   SubjectBrowser (strand → indicator tree)
 /portal/wisdom                Quote of the Day
 /portal/articles              Articles  (+ /new, /:id, /:id/edit)
 /portal/forecasts             Schemes of learning  (+ /new, /:id, /:id/edit)
@@ -60,9 +62,10 @@ Two zones:
 /portal/notes                 Study notes  (+ /new, /:id, /:id/edit)
 /portal/vacancies             Vacancies  (+ /new, /:id/edit)
 /portal/slides                Slide lessons (browse + PPTX export; no authoring form)
-/portal/wall                  My Wall (the member's own content)
+/portal/wall                  → redirects to /portal (folded into Workspace)
 /portal/authors/:authorId     Author profile page
-/portal/search /progress /calendar /profile /members
+/portal/search /progress /profile /members
+/portal/calendar              → redirects to /portal (folded into Workspace)
 ```
 
 `*` (anything else) → redirect to `/`.
@@ -92,7 +95,8 @@ Every `/portal/*` route renders through `ProtectedLayout`, which reads `useAuth(
 ## Data flow
 
 - **Reads:** pages call Firestore directly (`getDoc`/`getDocs`/`onSnapshot`) via `db`
-  from `src/firebase.js`. Real-time screens (Feed, note/article views) use `onSnapshot`.
+  from `src/firebase.js`. Real-time screens (the Workspace feed, note/article views) use
+  `onSnapshot`.
 - **Writes:** `addDoc`/`updateDoc`/`setDoc`/`deleteDoc`, always stamping `authorId` and
   `serverTimestamp()`.
 - **Offline:** Firestore is initialised with `persistentLocalCache`, so reads are served

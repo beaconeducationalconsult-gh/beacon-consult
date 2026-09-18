@@ -16,7 +16,7 @@ Two data sources:
 | Collection | Purpose | Written by | Rule |
 |---|---|---|---|
 | `users/{uid}` | Member profile & status | `SignUp`, `Profile`, `Members` (admin) | ✅ |
-| `posts/{id}` | Community feed posts | `Feed` | ✅ |
+| `posts/{id}` | Community feed posts | `Workspace` | ✅ |
 | `articles/{id}` | Longform articles (WYSIWYG) | `ArticleForm` | ✅ |
 | `notes/{id}` (+`comments`) | Study notes | `NoteForm`, `NoteView` | ✅ |
 | `weekly_forecasts/{id}` | Schemes of learning | `ForecastForm` | ✅ |
@@ -24,7 +24,7 @@ Two data sources:
 | `questions/{id}` | Question bank | `QuestionForm` | ✅ |
 | `lesson_slides/{id}` (+`comments`) | Slide lessons (exported from schedules) | `SlideLessons` | ✅ |
 | `vacancies/{id}` | Teaching vacancies | `VacancyForm` | ✅ |
-| `progress/{uid}` | Per-member teaching tracker | `Progress`, `Feed` | ✅ |
+| `progress/{uid}` | Per-member teaching tracker | `Progress`, `Workspace` | ✅ |
 | `quote_likes/{quoteId}` | Shared likes on quotes | `useWisdom` | ✅ |
 
 > All collections are enforced by [`firestore.rules`](../firestore.rules) — read
@@ -65,7 +65,7 @@ and `indicatorIds` (array-contains) combos.
 ### `questions/{id}` — question bank
 `subjectId`, `grade`, `strandName`, `subStrandName`, `type` (`'mcq' | 'short' | 'essay'`),
 question/options/answer/marks, and **`weekKey`** (ISO week — drives the weekly quota
-reminder on the Feed; indexed `authorId+weekKey`). Consumed by the generators
+reminder on the Workspace home page; indexed `authorId+weekKey`). Consumed by the generators
 (`QuestionGenerator`, `QuizMaker`) and `Search`.
 
 ### `lesson_slides/{id}` (+ `comments`)
@@ -78,12 +78,13 @@ page), `deadline`, school/role details.
 
 ### `progress/{uid}`
 Owner-only (`read,write: request.auth.uid == uid`). Shape: `{ weeks: { '<subjectKey>_T<term>': [...] } }`.
-Feed summarises it into a "subject-weeks taught" banner; `Progress.jsx` is the full tracker.
+The workspace summarises it into a "subject-weeks taught" card; `Progress.jsx` is the full
+broader tracker.
 
 ### `quote_likes/{quoteId}`
 `{ count, likedBy[] }`, created on first like. Members toggle only their own uid; the rule
 enforces `count` moves ±1 in step. Read live across the collection by `useQuoteLikes()`
-(feeds the Quotes page hearts + the Feed "most-loved" leaderboard). Quote ids come from the
+(feeds the Quotes page hearts + the workspace "most-loved" leaderboard). Quote ids come from the
 static `quotes.json` — there is **no** `quotes` document collection.
 
 ## Static JSON (`public/`)

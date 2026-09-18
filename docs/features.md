@@ -5,12 +5,21 @@ and notable helpers. Page files live in `src/pages/`.
 
 ## Community & content
 
-### Feed — `/portal`
-`Feed.jsx`. The portal home. Real-time community `posts` (compose + like), plus header
-widgets: academic-calendar status, **Quote of the Day**, **most-loved quotes** leaderboard,
-a term-progress banner (from `progress`), and a weekly question-bank quota reminder (counts
-`questions` where `weekKey == thisWeek`). Also surfaces recent `articles`.
-Collections: `posts`, `progress`, `questions`, `articles`.
+### Workspace — `/portal`
+`Workspace.jsx`. The portal home, and the merge of three former pages (the feed, `My wall`
+and `Calendar`):
+
+- **Feed** — real-time community `posts` (compose + like) in the main column.
+- **Rail** — **Quote of the Day**, term-progress card (from `progress`), a weekly question-bank
+  quota reminder (counts `questions` where `weekKey == thisWeek`), and the **most-loved quotes**
+  leaderboard.
+- **Your contributions** — the member's own `lesson_plans`, `weekly_forecasts`, `notes`,
+  `questions` and `articles`, a card each (was `MyWall.jsx`).
+- **Term calendar** — `components/TermCalendar.jsx`: one term's weeks and what is scheduled in
+  them, per grade (was `Calendar.jsx`).
+
+Collections: `posts`, `progress`, `questions`, `articles`, `lesson_plans`, `weekly_forecasts`,
+`notes`. `/portal/wall` and `/portal/calendar` redirect here.
 
 ### Articles — `/portal/articles` (+ `/new`, `/:id`, `/:id/edit`); public `/articles`
 `Articles.jsx` (list), `ArticleForm.jsx` (WYSIWYG create/edit via `RichEditor`),
@@ -21,12 +30,15 @@ Content is **HTML** produced by Tiptap. Collection: `articles` — `public` read
 `likesCount` diff (see [security.md](security.md)).
 
 ### Notes — `/portal/notes` (+ `/new`, `/:id`, `/:id/edit`)
-`Notes.jsx`, `NoteForm.jsx`, `NoteView.jsx`. Study notes with a lifecycle
-(`private`→`pending`→`published`), likes/dislikes, and a `comments` subcollection.
+`Notes.jsx`, `NoteForm.jsx`, `NoteView.jsx`. Study notes with a `comments` subcollection.
 Collection: `notes`.
 
-### My Wall — `/portal/wall`
-`MyWall.jsx`. Aggregates the current member's own content (notes, etc.) for quick access.
+*Documented honestly:* the form saves a `visibility` field ('members' | 'public') that nothing
+reads, and **no UI can set `status: 'published'`** — only vacancies have a publish flow. So
+notes are simply member-readable, and the rule does not gate reads on `status` (it cannot: the
+list page queries un-filtered — see [gotchas.md](gotchas.md)). The "like" fields are
+`likes`/`likesBy` but no note-like UI exists yet. Restoring per-document privacy means giving
+the list a query filter first (P2-7 in [TODO.md](TODO.md)).
 
 ### Author page — `/portal/authors/:authorId`
 `AuthorPage.jsx`. A member's public profile + their published notes/slides.
@@ -34,10 +46,11 @@ Collections: `users`, `notes`, `lesson_slides`.
 
 ## Curriculum & planning
 
-### Curriculum browser — `/portal/curriculum` (+ `/:subjectId`)
-`Curriculum.jsx` (grade → subject grid), `SubjectBrowser.jsx` (strand → sub-strand →
-content standard → indicators tree). Pure reads of static curriculum JSON via
-`useCurriculum` — no Firestore. Offline-capable.
+### Curriculum browser — `/portal/curriculum` (+ `/:gradeId`, `/:gradeId/:subjectId`)
+`Curriculum.jsx` (grade grid), `GradeSubjects.jsx` (one grade's subjects),
+`SubjectBrowser.jsx` (strand → sub-strand → content standard → indicators tree). The grade id
+is in the URL — both ids are, so a subject link is unambiguous. Pure reads of static curriculum
+JSON via `useCurriculum` — no Firestore. Offline-capable.
 
 ### Schemes of learning — `/portal/forecasts` (+ `/new`, `/:id`, `/:id/edit`)
 `Forecasts.jsx`, `ForecastForm.jsx`, `ForecastView.jsx`. Per-term, per-week scheme rows
@@ -82,8 +95,9 @@ portal. Collection: `lesson_slides`.
 
 - **Search** `/portal/search` (`Search.jsx`) — searches the `questions` bank.
 - **Progress** `/portal/progress` (`Progress.jsx`) — personal teaching tracker (`progress`).
-- **Calendar** `/portal/calendar` (`Calendar.jsx`); public `/calendar` (`PublicCalendar.jsx`)
-  — the Ghana academic calendar (`lib/academicCalendar.js`, pure/static).
+- **Calendar** — the portal term calendar is a section of the Workspace
+  (`components/TermCalendar.jsx`); public `/calendar` (`PublicCalendar.jsx`) is the Ghana
+  academic calendar (`lib/academicCalendar.js`, pure/static).
 - **Profile** `/portal/profile` (`Profile.jsx`) — edit own `users` doc.
 - **Members** `/portal/members` (`Members.jsx`, **admin**) — approve/suspend members, set
   roles. Reads/writes `users`.
