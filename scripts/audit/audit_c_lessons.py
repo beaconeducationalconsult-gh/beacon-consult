@@ -20,6 +20,8 @@ import json, os, re, sys
 from pathlib import Path
 from collections import Counter
 import docx
+
+from _paths import AUDIT, find_data
 from docx.shared import RGBColor
 
 ROOT = str(Path(__file__).resolve().parents[2])
@@ -41,12 +43,14 @@ SUBJECTS = {  # enriched json stem : (db json path, docx path, display)
 
 def audit_json(stem, dbp):
     issues = []
-    path = os.path.join(ROOT, f'{stem}_lessons_enriched.json')
+    # Resolved through find_data: these files live in data/lessons/ and
+    # data/curriculum/, not in the repository root they used to be joined onto.
+    path = str(find_data(f'{stem}_lessons_enriched.json') or '')
     try:
         lessons = json.load(open(path))
     except Exception as e:
         return {'subject': stem, 'status': 'FAIL', 'issues': [f'load error: {e}']}
-    db = set(json.load(open(os.path.join(ROOT, dbp))).keys())
+    db = set(json.load(open(str(find_data(dbp) or ''))).keys())
     n = len(lessons)
     if n != 180:
         issues.append(f'expected 180 lessons, got {n}')
@@ -80,8 +84,8 @@ def audit_json(stem, dbp):
 
 def audit_docx(stem, docx_name, lessons):
     issues = []
-    path = os.path.join(ROOT, docx_name)
-    if not os.path.exists(path):
+    path = find_data(docx_name)
+    if not path:
         return {'subject': stem, 'status': 'FAIL', 'issues': ['DOCX missing']}
     d = docx.Document(path)
     texts = [p.text for p in d.paragraphs]
@@ -125,7 +129,7 @@ def main():
     for stem, (dbp, docx_name, disp) in SUBJECTS.items():
         jr.append(audit_json(stem, dbp))
     for stem, (dbp, docx_name, disp) in SUBJECTS.items():
-        lessons = json.load(open(os.path.join(ROOT, f'{stem}_lessons_enriched.json')))
+        lessons = json.load(open(str(find_data(f'{stem}_lessons_enriched.json'))))
         dr.append(audit_docx(stem, docx_name, lessons))
     print('AUDIT C1 - enriched lesson JSONs')
     for r in jr:
@@ -139,7 +143,7 @@ def main():
         print(f"[{flag}] {r['subject']:20s} {r.get('docx','')} ({r.get('size_kb','?')} KB)")
         for i in r['issues']:
             print(f'      ! {i}')
-    json.dump({'json': jr, 'docx': dr}, open(os.path.join(ROOT, 'audit_c_results.json'), 'w'), indent=1)
+    json.dump({'json': jr, 'docx': dr}, open(str(AUDIT / 'audit_c_results.json'), 'w'), indent=1)
 
 if __name__ == '__main__':
     main()

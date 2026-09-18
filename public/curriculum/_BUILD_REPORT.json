@@ -178,7 +178,7 @@
    "indicators": 169,
    "lessons": 0,
    "scheme_subjects": 0,
-   "kb": 135
+   "kb": 136
   },
   {
    "grade": "KG2",
@@ -186,7 +186,7 @@
    "indicators": 170,
    "lessons": 0,
    "scheme_subjects": 0,
-   "kb": 149
+   "kb": 150
   },
   {
    "grade": "B1",
@@ -261,5 +261,5 @@
    "kb": 5304
   }
  ],
- "totalKb": 38764
+ "totalKb": 38767
 }

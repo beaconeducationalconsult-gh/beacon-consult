@@ -16,8 +16,13 @@ import json, os, re, gzip, hashlib
 from pathlib import Path
 from pypdf import PdfReader
 
+from _paths import AUDIT, find_data
+
 ROOT = str(Path(__file__).resolve().parents[2])
-CACHE = os.path.join(ROOT, 'pdf_text_cache')
+# Cache of extracted PDF text. It used to be created in the repository root,
+# where it showed up as an untracked directory; audit scratch now lives beside
+# the results it produces.
+CACHE = str(AUDIT / 'pdf_text_cache')
 os.makedirs(CACHE, exist_ok=True)
 
 B1_ALIAS = {
@@ -26,36 +31,49 @@ B1_ALIAS = {
     'owop': 'owop', 'rme': 'rme', 'creative-arts': 'creative_arts',
 }
 
-def db_path(sid, g):
-    if g == 'B1':
-        return os.path.join(ROOT, f'{B1_ALIAS[sid]}_curriculum_db_clean.json')
-    return os.path.join(ROOT, 'data/curriculum', f'{sid}_{g}_curriculum_db_clean.json')
+# Kindergarten codes are K1./K2. while its files are kindergarten_KG1_/KG2_.
+FILE_GRADE = {'K1': 'KG1', 'K2': 'KG2'}
+
+
+def db_path(sid, prefix):
+    """Locate a subject's database. Resolved through find_data, not joined onto
+    ROOT: B1 files are named without a grade, and the reference-only subjects
+    (computing, french, kindergarten) exist only in data/reference/."""
+    if prefix == 'B1':
+        name = f'{B1_ALIAS[sid]}_curriculum_db_clean.json'
+    else:
+        name = f'{sid}_{FILE_GRADE.get(prefix, prefix)}_curriculum_db_clean.json'
+    found = find_data(name)
+    return str(found) if found else os.path.join(ROOT, name)
 
 PDFS = [
-    ('math_B1-B3.pdf',                 'mathematics',         [1, 2, 3]),
-    ('science_B1-B3.pdf',              'science',             [1, 2, 3]),
-    ('english_B1-B3.pdf',              'english-language',    [1, 2, 3]),
-    ('gh_lang_b1b3.pdf',               'ghanaian-language',   [1, 2, 3]),
-    ('creative_arts_B1-B3.pdf',        'creative-arts',       [1, 2, 3]),
-    ('owop_B1-B3.pdf',                 'owop',                [1]),
-    ('history.pdf',                    'history',             [1, 2, 3, 4, 5, 6]),
-    ('rme_B1-B6.pdf',                  'rme',                 [1, 2, 3, 4, 5, 6]),
-    ('mathematics_B4-B6.pdf',          'mathematics',         [4, 5, 6]),
-    ('science_B4-B6.pdf',              'science',             [4, 5, 6]),
-    ('english_B4-B6.pdf',              'english-language',    [4, 5, 6]),
-    ('ghanaian_language_B4-B6.pdf',    'ghanaian-language',   [4, 5, 6]),
-    ('creative_arts_B4-B6.pdf',        'creative-arts',       [4, 5, 6]),
-    ('owop_B4-B6.pdf',                 'owop',                [4, 5, 6]),
-    ('mathematics_CCP_B7-B9_draft.pdf','mathematics',         [7, 8, 9]),
-    ('science_CCP_B7-B9.pdf',          'science',             [7, 8, 9]),
-    ('english_CCP_B7-B9.pdf',          'english-language',    [7, 8, 9]),
-    ('ghanaian_language_CCP_B7-B9.pdf','ghanaian-language',   [7, 8, 9]),
-    ('rme_CCP_B7-B9.pdf',              'rme',                 [7, 8, 9]),
-    ('computing_CCP_B7-B9.pdf',        'computing',           [7, 8, 9]),
-    ('social_studies_CCP_B7-B9.pdf',   'social-studies',      [7, 8, 9]),
-    ('career_tech_CCP_B7-B9.pdf',      'career-technology',   [7, 8, 9]),
-    ('creative_arts_design_CCP_B7-B9.pdf', 'creative-arts-design', [7, 8, 9]),
-    ('french_CCP_B7-B9.pdf',           'french',              [7, 8, 9]),
+    ('math_B1-B3.pdf',                 'mathematics',         ['B1', 'B2', 'B3']),
+    ('science_B1-B3.pdf',              'science',             ['B1', 'B2', 'B3']),
+    ('english_B1-B3.pdf',              'english-language',    ['B1', 'B2', 'B3']),
+    ('gh_lang_b1b3.pdf',               'ghanaian-language',   ['B1', 'B2', 'B3']),
+    ('creative_arts_B1-B3.pdf',        'creative-arts',       ['B1', 'B2', 'B3']),
+    ('owop_B1-B3.pdf',                 'owop',                ['B1']),
+    ('history.pdf',                    'history',             ['B1', 'B2', 'B3', 'B4', 'B5', 'B6']),
+    ('rme_B1-B6.pdf',                  'rme',                 ['B1', 'B2', 'B3', 'B4', 'B5', 'B6']),
+    ('mathematics_B4-B6.pdf',          'mathematics',         ['B4', 'B5', 'B6']),
+    ('science_B4-B6.pdf',              'science',             ['B4', 'B5', 'B6']),
+    ('english_B4-B6.pdf',              'english-language',    ['B4', 'B5', 'B6']),
+    ('ghanaian_language_B4-B6.pdf',    'ghanaian-language',   ['B4', 'B5', 'B6']),
+    ('creative_arts_B4-B6.pdf',        'creative-arts',       ['B4', 'B5', 'B6']),
+    ('owop_B4-B6.pdf',                 'owop',                ['B4', 'B5', 'B6']),
+    ('computing_B4-B6.pdf',            'computing',           ['B4', 'B5', 'B6']),
+    ('french_B4-B6.pdf',               'french',              ['B4', 'B5', 'B6']),
+    ('kindergarten_KG1-KG2.pdf',       'kindergarten',        ['K1', 'K2']),
+    ('mathematics_CCP_B7-B9_draft.pdf','mathematics',         ['B7', 'B8', 'B9']),
+    ('science_CCP_B7-B9.pdf',          'science',             ['B7', 'B8', 'B9']),
+    ('english_CCP_B7-B9.pdf',          'english-language',    ['B7', 'B8', 'B9']),
+    ('ghanaian_language_CCP_B7-B9.pdf','ghanaian-language',   ['B7', 'B8', 'B9']),
+    ('rme_CCP_B7-B9.pdf',              'rme',                 ['B7', 'B8', 'B9']),
+    ('computing_CCP_B7-B9.pdf',        'computing',           ['B7', 'B8', 'B9']),
+    ('social_studies_CCP_B7-B9.pdf',   'social-studies',      ['B7', 'B8', 'B9']),
+    ('career_tech_CCP_B7-B9.pdf',      'career-technology',   ['B7', 'B8', 'B9']),
+    ('creative_arts_design_CCP_B7-B9.pdf', 'creative-arts-design', ['B7', 'B8', 'B9']),
+    ('french_CCP_B7-B9.pdf',           'french',              ['B7', 'B8', 'B9']),
 ]
 
 # Documented NaCCA-print misprints, verified against document structure.
@@ -68,8 +86,10 @@ KNOWN_EXCEPTIONS = {
     },
 }
 
-# grade + (dot/space-separated) 3-6 following numbers, dots REQUIRED between later parts
-TOK = re.compile(r'B\s*(\d)(?:\s*/\s*JHS\s*\d)?(?:\s*[.]\s*|\s+)\d+(?:\s*[.]\s*\d+){2,5}')
+# (B|K) + grade + (dot/space-separated) 3-6 following numbers, dots REQUIRED
+# between later parts. Kindergarten prints K1./K2. where the rest print B<n>.
+TOK = re.compile(r'([BK])\s*(\d)(?:\s*/\s*JHS\s*\d)?(?:\s*[.]\s*|\s+)\d+(?:\s*[.]\s*\d+){2,5}',
+                 re.I)
 
 def norm_text(t):
     return re.sub(r'[^a-z0-9]+', ' ', t.lower()).strip()
@@ -81,7 +101,7 @@ def pdf_text(pdf):
     if os.path.exists(gz):
         with gzip.open(gz, 'rt', encoding='utf-8', errors='ignore') as f:
             return f.read()
-    reader = PdfReader(os.path.join(ROOT, pdf))
+    reader = PdfReader(str(find_data(pdf) or pdf))
     pages = []
     for pg in reader.pages:
         try:
@@ -100,17 +120,17 @@ def extract_codes(text):
         t = re.sub(r'JHS\s*\d', '', tok.group(0))
         nums = re.findall(r'\d+', t)
         if len(nums) == 5:
-            out.add('B' + '.'.join(nums))
+            out.add(t[0].upper() + '.'.join(nums))
     return out
 
 def main():
     pdf_cache = {}
     results = []
     for pdf, sid, grades in PDFS:
-        path = os.path.join(ROOT, pdf)
-        if not os.path.exists(path):
+        found = find_data(pdf)
+        if not found:
             for g in grades:
-                results.append({'pdf': pdf, 'subject': sid, 'grade': f'B{g}',
+                results.append({'pdf': pdf, 'subject': sid, 'grade': g,
                                 'status': 'SKIP', 'note': 'source PDF missing'})
             continue
         if pdf not in pdf_cache:
@@ -118,16 +138,16 @@ def main():
         text = pdf_cache[pdf]
         codes_in_pdf = extract_codes(text)
         for g in grades:
-            dbp = db_path(sid, f'B{g}')
+            dbp = db_path(sid, g)
             if not os.path.exists(dbp):
-                results.append({'pdf': pdf, 'subject': sid, 'grade': f'B{g}',
+                results.append({'pdf': pdf, 'subject': sid, 'grade': g,
                                 'status': 'SKIP', 'note': 'no DB (expected for OWOP B2/B3)'})
                 continue
             db = json.load(open(dbp))
             db_codes = set(db.keys())
-            pdf_g = {c for c in codes_in_pdf if c.startswith(f'B{g}.')}
+            pdf_g = {c for c in codes_in_pdf if c.startswith(f'{g}.')}
             missing_in_pdf = sorted(db_codes - pdf_g)
-            exceptions = KNOWN_EXCEPTIONS.get((sid, f'B{g}'), {})
+            exceptions = KNOWN_EXCEPTIONS.get((sid, g), {})
             explained = [c for c in missing_in_pdf if c in exceptions]
             unexplained = [c for c in missing_in_pdf if c not in exceptions]
             extra_in_pdf = sorted(pdf_g - db_codes)
@@ -135,7 +155,7 @@ def main():
             valid = round(100 * (len(db_codes) - len(unexplained)) / max(1, len(db_codes)), 1)
             status = 'PASS' if not unexplained else ('WARN' if valid >= 95 else 'FAIL')
             results.append({
-                'pdf': pdf, 'subject': sid, 'grade': f'B{g}', 'status': status,
+                'pdf': pdf, 'subject': sid, 'grade': g, 'status': status,
                 'db_n': len(db_codes), 'pdf_n': len(pdf_g),
                 'valid_pct': valid, 'coverage_pct': cov,
                 'missing_in_pdf': unexplained,
@@ -160,14 +180,14 @@ def main():
             print(f'      ! DB codes NOT found in PDF ({len(r["missing_in_pdf"])}): {r["missing_in_pdf"][:10]}')
         if r['extra_in_pdf_count']:
             print(f'      · in PDF but not DB: {r["extra_in_pdf_count"]} e.g. {r["extra_in_pdf_sample"]}')
-    json.dump(results, open(os.path.join(ROOT, 'audit_b_results.json'), 'w'), indent=1)
+    json.dump(results, open(str(AUDIT / 'audit_b_results.json'), 'w'), indent=1)
 
     # ---- B1 rich-description authenticity ----
     print('\nAUDIT B2 - B1 rich ind_desc text found verbatim in source PDF?')
     auth = []
     for sid, stem in B1_ALIAS.items():
-        dbp = os.path.join(ROOT, f'{stem}_curriculum_db_clean.json')
-        pdfname = next(p for p, s, gs in PDFS if s == sid and 1 in gs)
+        dbp = str(find_data(f'{stem}_curriculum_db_clean.json') or '')
+        pdfname = next(p for p, s, gs in PDFS if s == sid and 'B1' in gs)
         if pdfname not in pdf_cache:
             pdf_cache[pdfname] = pdf_text(pdfname)
         ntext = norm_text(pdf_cache[pdfname])
@@ -185,7 +205,7 @@ def main():
         pct = round(100 * hit / max(1, hit + miss), 1)
         auth.append({'subject': sid, 'hit': hit, 'miss': miss, 'pct': pct, 'miss_codes': misses})
         print(f"  {sid:22s} verbatim {hit:3d}/{hit+miss:3d} ({pct:5.1f}%)  not-found: {misses[:6]}")
-    json.dump(auth, open(os.path.join(ROOT, 'audit_b2_results.json'), 'w'), indent=1)
+    json.dump(auth, open(str(AUDIT / 'audit_b2_results.json'), 'w'), indent=1)
 
 if __name__ == '__main__':
     main()

@@ -94,30 +94,46 @@ def load_json(path):
     return json.loads(Path(path).read_text(encoding="utf-8"))
 
 
+# Audit B works in indicator codes (kindergarten prints K1./K2.); the bundle
+# labels that grade KG1/KG2, taken from the file name.
+AUDIT_GRADE_ALIASES = {"K1": "KG1", "K2": "KG2"}
+
+
 def audited_pairs():
-    """(subjectId, grade) pairs that passed Audit A, from data/audit/.
+    """(subjectId, grade) pairs that passed a source cross-check, from data/audit/.
 
-    Audit A is the structural check over data/curriculum/ whose expected counts
-    were verified against the official NaCCA PDFs. A subject-grade that never
-    appeared there has *not* been cross-checked, and the app must say so rather
-    than present it as equal to the rest — see docs/TODO.md P1-1 and
-    docs/curriculum-data.md.
+    Two audits check a subject-grade against its source NaCCA PDF, and passing
+    either counts:
 
-    Read from the audit output instead of a hand-kept list so the two cannot
+    * Audit A — indicator counts compared against the expected counts recorded
+      for each file. It walks data/curriculum/, so it cannot see the copies that
+      live only in data/reference/.
+    * Audit B — every indicator code re-extracted from the PDF and set-compared
+      with the database. It resolves each database through find_data, so it
+      covers the reference-only subjects too.
+
+    A subject-grade that passed neither has not been cross-checked at all, and
+    the app must say so rather than present it as equal to the rest — see
+    docs/TODO.md P1-1 and docs/curriculum-data.md.
+
+    Read from the audit outputs instead of a hand-kept list so the two cannot
     drift apart.
     """
-    p = ROOT / "data" / "audit" / "audit_a_results.json"
-    if not p.exists():
-        return set()
-    try:
-        rows = load_json(p)
-    except (OSError, ValueError):
-        return set()
     out = set()
-    for r in rows if isinstance(rows, list) else []:
-        if isinstance(r, dict) and r.get("status") == "PASS":
+    for name in ("audit_a_results.json", "audit_b_results.json"):
+        p = ROOT / "data" / "audit" / name
+        if not p.exists():
+            continue
+        try:
+            rows = load_json(p)
+        except (OSError, ValueError):
+            continue
+        for r in rows if isinstance(rows, list) else []:
+            if not (isinstance(r, dict) and r.get("status") == "PASS"):
+                continue
             sid = str(r.get("subject") or "").strip().lower()
             grade = str(r.get("grade") or "").strip().upper()
+            grade = AUDIT_GRADE_ALIASES.get(grade, grade)
             if sid and grade:
                 out.add((sid, grade))
     return out
@@ -279,9 +295,9 @@ def main():
     out_dir.mkdir(parents=True, exist_ok=True)
 
     dbs = db_index()
-    # Audit-A-PASS subject-grades. Anything outside this set is served but has
-    # never been cross-checked against its source; it is stamped `verified:
-    # false` so the app can say so.
+    # Subject-grades that passed a source cross-check (Audit A or Audit B).
+    # Anything outside this set is served but has never been checked against
+    # its source; it is stamped `verified: false` so the app can say so.
     audited = audited_pairs()
     if audited:
         by_dir = defaultdict(int)
@@ -290,10 +306,10 @@ def main():
                 by_dir[source_dir_name(p)] += 1
         if by_dir:
             unaudited = sum(by_dir.values())
-            print(f"  note: {unaudited} subject-grade(s) are unaudited "
+            print(f"  note: {unaudited} subject-grade(s) failed both source "
                   f"({dict(by_dir)}) — stamped verified:false")
     else:
-        print("  note: data/audit/audit_a_results.json not readable — "
+        print("  note: no audit results readable in data/audit/ — "
               "every subject-grade will be stamped verified:false")
     # Index lessons by *subject id*, not file key: two file keys (ghanaian,
     # ghanaian_language) resolve to the same subject id, and iterating by key

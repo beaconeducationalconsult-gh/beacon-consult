@@ -35,7 +35,7 @@ additionally fails if `data/inventory.json` is stale.
 | # | Item | Why | Size |
 |---|------|-----|------|
 | P1-1 | **Cross-check the 8 unaudited subject-grades against their NaCCA PDFs**, then promote them into `data/curriculum/` and add their counts to the `EXPECTED` table in `scripts/audit/audit_a_databases.py`. **Computing and french B4–B6 are done** — see the progress note below; KG1–KG2 and the remaining content gaps are not | The portal serves curriculum for 8 subject-grades (computing B4–B6, french B4–B6, KG1–KG2; ~714 indicators) that has **never been checked against its source** — no counts, no PDF in `data/sources/`, no row in `EXPECTED`. It is real NaCCA curriculum, not invented data (the official PDFs are now cited in the summaries and the sources exist — see below), but nobody has verified the extraction. **Partly done 2026-09-18**: every served subject now names its source, the bundle carries `verified`/`source` per subject derived from Audit A, and the UI says so (`GradeSubjects`, `SubjectSelect`). Remaining: the content gaps measured below, and KG1–KG2. | M |
-| P1-9 | **`english-language B5` is audited but not reproducible** — it passed Audit A before the data restructure and its database now exists only in `data/reference/`, so `audit_a_databases.py` (which enumerates `data/curriculum/`) no longer sees it: re-running the audit today yields 75 rows where the committed results have 76 | Promote the database into `data/curriculum/` and re-run the audit, or the only evidence that its 133 indicators were checked lives in a file nobody can regenerate. Flagged by a test in `src/curriculumBundle.test.js` that names it explicitly | S |
+| P1-9 | **`english-language B5` is audited but not reproducible** — it passed Audit A before the data restructure and its database now exists only in `data/reference/`, so `audit_a_databases.py` (which enumerates `data/curriculum/`) no longer sees it: re-running the audit today yields 75 rows where the committed results have 76 | Promote the database into `data/curriculum/` and re-run the audit. Less urgent since Audit B now covers the subject — it resolves databases through `find_data`, so it sees both directories, and it passes this one 133/133 (a test pins that). But Audit A's committed row still cannot be reproduced by anyone | S |
 | P1-2 | **Fill the L1 provenance gaps**: `english-language B4`, `mathematics B1`, `science B1` have databases but no summary (no source URL, no counts); `english-language B5` has a summary but no database in `data/curriculum/` | 184 indicators with unverifiable provenance are served to teachers | S |
 | P1-3 | **Repair the 8 malformed reference summaries** (no `counts` block) | Any code that reads `summary['counts']` raises on them | S |
 | P1-4 | **Say what L2 is, then act on it** — `competencies`, `resources`, `keywords`, `assessment` have exactly one distinct value per subject-grade; `starter` 75% / `main` 41% distinct, `rpk`/`plenary`/`assessment` ≈ 1% | Marketing and authoring budget depend on this. Either enrich per indicator or label generated documents honestly as templated | S |
@@ -43,6 +43,33 @@ additionally fails if `data/inventory.json` is stale.
 | P1-6 | **Clean the 58 L2 `ind_desc` records with a repeated trailing sentence** (0.4% of slots) at the extraction source | Visible artefact in generated documents | S |
 | P1-7 | **`indicatorDocId` keys on the bare indicator code** (`src/hooks/useCollection.js`) | `B4.1.1.1.1` exists in all ten B4 subjects, so the id is not grade-unique. Currently exported but unused — scope it by subject (or use `id`) before anything adopts it. See `docs/curriculum-data.md` | S |
 | P1-8 | **The book skeleton seeds only the first session of each indicator** — `seed/build_book_skeleton.py` reads `sessions[0]` for the title, RPK, starter, main, plenary and performance indicator | Its own docstring promises "everything the database knows is *seeded*". Measured on B4: 263 of 377 indicator slots carry more than one session, and for 134 of them the later sessions hold *different* main-activity text — so those sessions' teaching content never reaches the draft books. Either collapse the sessions into the one lesson deliberately (and say so), or emit them as lesson sessions/variants | M |
+
+### P1-1 progress — kindergarten KG1/KG2 (2026-09-18)
+
+The KG source PDF arrived (`data/sources/kindergarten_KG1-KG2.pdf`, 231pp, genuine NaCCA
+*Kindergarten Curriculum (KG 1&2)*, September 2019). Checking it turned up the same class of
+fault as computing/french, plus one of its own:
+
+- **strand names were placeholders** — all 339 indicators read `"Strand 1"`…`"Strand 7"`. The
+  curriculum is themed, and the PDF names each one: ALL ABOUT ME, MY FAMILY, VALUES AND
+  BELIEFS, MY LOCAL COMMUNITY, MY NATION GHANA, ALL AROUND US, MY GLOBAL COMMUNITY — the same
+  seven for both grades. `fix_reference_structure.py` now covers kindergarten and wrote them.
+- **one indicator was a stub** — `K1.1.1.1.1`, the *first* KG1 indicator a teacher meets, had
+  `ind_desc: "Kindergarten Learning Indicator K1.1.1.1.1"`: the code restated, no content. The
+  script now refills descriptions that are stubs from the PDF text, and did.
+
+**Codes match the source**: K1 169/169 exactly; K2 170/170 with one extra code in the PDF
+(`K2.1.1.1.51`) that is a **misprint inside an exemplar cross-reference** — the same reference is
+printed correctly as `K2.1.1.1.5` on the following line. Reported by the audit as informational.
+
+Finding the KG strand names needed a rule the earlier pass did not have: the print labels its
+strand-7 heading `SUB STRAND 7: MY GLOBAL COMMUNITY` (p135), while `SUB STRAND 7: GARDENING`
+(p125) really is a sub-strand. The scan now reads a sub-strand heading as a strand heading only
+when its number agrees with the codes beneath it *and* no strand heading for that number has been
+seen yet.
+
+**Still outstanding:** the same field gaps as computing/french — `keywords` empty on all 339,
+and 17 descriptions carrying the PDF's footer text.
 
 ### P1-1 progress — computing + french B4–B6 (2026-09-18)
 
@@ -70,7 +97,10 @@ contents. `sub_strand` became `"Sub-strand B4.1.1"` — the generic form every a
 already uses, so the browse tree looks the same whichever copy a subject comes from. The real
 sub-strand names are in the PDFs if the app ever wants to display them.
 
-**Still outstanding before these six can be called audited:**
+**Audited.** These six now pass Audit B (below), so `verified` is true for them and the app no
+longer flags them. What remains is field completeness, not authenticity:
+
+**Still outstanding before these six can be called complete:**
 
 - **french: content standard empty** for 85/88 (B4), 89/90 (B5), 88/89 (B6). The text is in the
   PDF's CONTENT STANDARDS column; it needs the same treatment, and the column layout makes it a
@@ -98,6 +128,7 @@ rather than vague: the codes are right, the labels and some fields are not.
 | P2-4 | **Pagination** for the capped lists (`useCollection` max 100, `QuestionBank` 200, `Search` 100 per collection) with `startAfter` cursors | Silent truncation is indistinguishable from "no more data" | M |
 | P2-5 | **Slides**: browse + PPTX export exist; there is no authoring form and no deck-view page | Half-built feature; either finish the authoring flow or remove the affordance (see `docs/gotchas.md`) | M |
 | P2-7 | **Rework note/plan visibility into queries** — `visibility` and note `status` are saved but cannot gate reads while the list pages query un-filtered (gotchas.md). To bring back private drafts, split each list into "mine" (`where authorId == uid`) and "published" (`where status/visibility == …`), then re-add the field conditions to the rules | Restores per-document privacy without breaking list queries | M |
+| P2-9 | **Audit C2 wants 8 generated `Basic1_*_Lesson_Plans_Full_Year.docx` files that are not in the repository** — `scripts/audit/audit_c_lessons.py` now resolves paths correctly and reports `DOCX missing` for all 8 | The committed `data/audit/audit_c_results.json` still records them as PASS (238 KB, 215 KB, …) from when they existed. Left intact rather than overwritten — the documents are build outputs, and regenerating them is a bigger job than the audit. Audit C1 (the enriched lesson JSONs) passes for all 8 subjects, 180 lessons each | S |
 | P2-8 | **~150 legacy scripts still import `_compat` from a `tools/` directory that no longer exists** (`parents[2] / "tools"`, and a bare `Path` that was never imported) | The three `scripts/audit/` scripts were repaired on 2026-09-18 so the audits can run again — until then the audit tooling was dead and `audit_a_results.json` could not be regenerated. The remaining scripts are one-shot generators that already ran, so they are lower priority, but any that is needed again will hit the same wall | S |
 | P2-6 | **Repo hygiene**: decide whether the 38 MB curriculum bundle stays in git (or moves to a release artefact) | Keeps clones and diffs manageable. **Partly done**: the 4 tracked `.pyc` files were untracked on 2026-09-18 (`.gitignore` already covered the pattern — they predated it, and gitignore never applies to already-tracked files). The bundle question is open | S |
 

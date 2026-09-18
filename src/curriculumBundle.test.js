@@ -115,33 +115,81 @@ describe.each(ids)('%s', (grade) => {
 
   describe('provenance', () => {
     const all = [...bundle.values()].flatMap((b) => b.subjects)
+    const pair = (s) => `${s.grade} ${s.id}`
+
+    // Audit B works in indicator codes, and kindergarten prints K1./K2. where
+    // the bundle labels that grade KG1/KG2 from the file name.
+    const GRADE_ALIASES = { K1: 'KG1', K2: 'KG2' }
+    const auditPasses = (file) => {
+      const rows = JSON.parse(readFileSync(new URL(`../data/audit/${file}`, import.meta.url), 'utf8'))
+      return new Set(
+        rows
+          .filter((r) => r.status === 'PASS')
+          .map((r) => {
+            const grade = String(r.grade).toUpperCase()
+            return `${GRADE_ALIASES[grade] || grade} ${String(r.subject).toLowerCase()}`
+          })
+      )
+    }
 
     it('names the official source for every served subject', () => {
       // Eight summaries shipped with an empty sourceUrl and no counts block:
       // computing and french B4–B6, and both kindergarten grades. Nobody could
       // tell where the data came from, which is why they could never be
       // audited. Every subject now names its source.
-      const missing = all.filter((s) => !s.sourceUrl).map((s) => `${s.grade} ${s.id}`)
+      const missing = all.filter((s) => !s.sourceUrl).map(pair)
       expect(missing).toEqual([])
     })
 
     it('states, on every subject, whether the source has been checked', () => {
-      // `verified` is stamped by the build from the Audit-A results, so it
-      // cannot silently go missing — an absent field would read as "fine" in
-      // any `s.verified === false` check in the UI.
+      // `verified` is stamped by the build from the audit results, so it cannot
+      // silently go missing — an absent field would read as "fine" in any
+      // `s.verified === false` check in the UI.
       const unstated = all.filter((s) => typeof s.verified !== 'boolean')
-      expect(unstated.map((s) => `${s.grade} ${s.id}`)).toEqual([])
+      expect(unstated.map(pair)).toEqual([])
     })
 
-    it('still flags exactly the eight unaudited subject-grades', () => {
-      const unverified = all
-        .filter((s) => s.verified === false)
-        .map((s) => `${s.grade} ${s.id}`)
-        .sort()
-      expect(unverified).toEqual([
+    it('has now cross-checked every served subject against its source', () => {
+      // This is where P1-1 landed. Eight subject-grades used to be served
+      // un-cross-checked and were flagged as such in the UI; Audit B, which
+      // re-extracts every code from the source PDF, now covers all of them.
+      //
+      // The flag stays a guard rather than becoming decoration: a new
+      // subject-grade that has not been cross-checked fails here.
+      const unverified = all.filter((s) => s.verified === false).map(pair)
+      expect(unverified).toEqual([])
+    })
+
+    it('earns `verified` from an audit result, not from a default', () => {
+      // The test above would also pass if the build stamped `verified: true`
+      // unconditionally, so check the flag against the audit outputs it claims
+      // to come from. Passing either audit counts: Audit A compares indicator
+      // counts, Audit B re-extracts every code from the PDF.
+      const passes = new Set([
+        ...auditPasses('audit_a_results.json'),
+        ...auditPasses('audit_b_results.json'),
+      ])
+      // Guard against a vacuous pass — unreadable or empty audits must not make
+      // the assertion below trivially true.
+      expect(passes.size).toBeGreaterThan(50)
+      const unsupported = all.filter((s) => s.verified === true && !passes.has(pair(s)))
+      expect(unsupported.map(pair)).toEqual([])
+    })
+
+    it('serves exactly nine subject-grades from the reference copy', () => {
+      // These exist only in data/reference/, so the build's DB_SEARCH order
+      // falls back to that copy. They passed Audit B, which resolves each
+      // database through find_data and so sees both directories — that is why
+      // they can be verified while still being served from the second copy.
+      //
+      // Named explicitly: the list changing is a data-layout decision worth
+      // noticing (promoting one into data/curriculum/ should update this).
+      const fromReference = all.filter((s) => s.source !== 'curriculum').map(pair).sort()
+      expect(fromReference).toEqual([
         'B4 computing',
         'B4 french',
         'B5 computing',
+        'B5 english-language',
         'B5 french',
         'B6 computing',
         'B6 french',
@@ -150,30 +198,16 @@ describe.each(ids)('%s', (grade) => {
       ])
     })
 
-    it('serves the unaudited ones from the reference copy', () => {
-      // They exist only in data/reference/, so the build's search order falls
-      // back to that copy. If one is ever promoted into data/curriculum/ the
-      // `source` changes, and this test is the reminder to audit it properly
-      // (TODO P1-1) rather than to quietly widen the exception.
-      for (const s of all.filter((x) => x.verified === false)) {
-        expect(s.source, `${s.grade} ${s.id}`).toBe('reference')
-      }
-    })
-
-    it('has exactly one audited subject whose source copy is missing', () => {
-      // english-language B5 passed Audit A before the data restructure, and its
-      // database now exists only in data/reference/ — so the audit can no longer
-      // be re-run for it. Its result stands (nobody re-decided that it is fine),
-      // but the file should be promoted into data/curriculum/ and re-audited.
-      //
-      // Named explicitly rather than allowed in general: this is a known,
-      // explained gap, and a second one appearing is a change worth noticing.
-      const auditedFromReference = all
-        .filter((s) => s.verified === true && s.source !== 'curriculum')
-        .map((s) => `${s.grade} ${s.id}`)
-      expect(auditedFromReference).toEqual(['B5 english-language'])
+    it('audits english-language B5 with a check that can be re-run', () => {
+      // Audit A passed this one before the data restructure, and its database
+      // now lives only in data/reference/, where Audit A cannot see it — so its
+      // committed PASS row cannot be reproduced (TODO P1-9). Audit B has no
+      // such blind spot, which is what keeps the subject verified rather than
+      // resting on a result nobody can re-derive.
+      expect(auditPasses('audit_b_results.json').has('B5 english-language')).toBe(true)
     })
   })
+
 
   describe('known gaps stay known', () => {
     it('has no schedules file for the kindergarten grades', () => {

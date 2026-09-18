@@ -127,13 +127,30 @@ Built by `scripts/build_app_curriculum.py`; validated by
 ### The reference-only subjects
 
 `computing`, `french` and `kindergarten` exist only in `data/reference/`, so they missed the
-extraction pass that produced everything else. Their source PDFs are in `data/sources/`
-(`computing_B4-B6.pdf`, `french_B4-B6.pdf`; kindergarten has none yet) and
-`scripts/fix_reference_structure.py` re-derives the hierarchy labels from them — run it with no
-arguments to see what would change, `--apply` to write. It exists because the labels, not the
-content, were wrong: computing's strands read `"Strand 1"` and french's held a *sub-strand* name
-one level too low. See TODO P1-1 for what is still outstanding (french content standards,
-keywords, PDF footer text in 94 descriptions).
+extraction pass that produced everything else. Their source PDFs are all in `data/sources/` now
+(`computing_B4-B6.pdf`, `french_B4-B6.pdf`, `kindergarten_KG1-KG2.pdf`) and
+`scripts/fix_reference_structure.py` re-derives the data from them — run it with no arguments to
+see what would change, `--apply` to write. It exists because the labels, not the content, were
+wrong: computing's and kindergarten's strands read `"Strand 1"`, french's held a *sub-strand*
+name one level too low, and one kindergarten indicator was a restatement of its own code. The
+script also fills descriptions that are stubs, and refuses to guess when a heading is ambiguous.
+See TODO P1-1 for what is still outstanding (french content standards, keywords on all three,
+PDF footer text in 111 descriptions).
+
+### Which subject-grades have been cross-checked
+
+`verified` on every served subject means "an audit has checked this against its source PDF", and
+the build stamps it from `data/audit/` rather than a hand-kept list. Two audits qualify:
+
+| | what it checks | what it can see |
+|---|---|---|
+| Audit A (`audit_a_databases.py`) | indicator counts against the expected count recorded per file | only `data/curriculum/` |
+| Audit B (`audit_b_pdf_crosscheck.py`) | every code re-extracted from the PDF, set-compared with the database | both copies, via `find_data` |
+
+Audit A cannot see the reference-only subjects, which is why Audit B exists as a second route to
+the same claim. All 84 subject-grades pass one of the two; the flag stays a guard against a new
+subject-grade arriving un-cross-checked, and a test in `src/curriculumBundle.test.js` fails if
+one does.
 
 ### Provenance on every served subject
 

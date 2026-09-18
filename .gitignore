@@ -35,3 +35,7 @@ books/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Audit scratch: PDF text extracted by scripts/audit/audit_b_pdf_crosscheck.py,
+# cached so repeat runs are fast. Regenerated on demand; never committed.
+data/audit/pdf_text_cache/

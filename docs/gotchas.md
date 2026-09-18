@@ -46,6 +46,20 @@ While you are in there: a footer built as a paragraph at the end of the body pri
 end — real page furniture belongs in `sections[].footers`. Cell widths need `tblLayout: fixed` or
 Word re-fits the columns to their content and ignores the percentages.
 
+## 🟠 An audit that silently checks nothing
+
+`scripts/audit/*.py` were all written before the data restructure, and each one resolved its
+inputs with `os.path.join(ROOT, name)`. That is an absolute path, so `_compat`'s redirect never
+sees it — `open_compat()` only rewrites **bare** filenames through `find_data()`. The PDFs moved
+to `data/sources/`, the databases to `data/curriculum/` and `data/reference/`, and the scripts
+kept looking in the repository root. Audit B reported `SKIP` for all 76 rows and called it a day;
+Audit A reported 8 "file not found" failures that look exactly like data corruption.
+
+So: **an audit that finds nothing looks the same as an audit that is satisfied.** When a check
+reports all-skip, all-missing or zero rows, suspect the path wiring before the data. All three
+audits resolve through `find_data()` now, and they write into `data/audit/` rather than dropping
+result files in the repository root.
+
 ## 🟠 Committed rules ≠ deployed rules
 Vercel does **not** deploy Firestore rules/indexes. Editing `firestore.rules` and pushing
 changes nothing in production until `firebase deploy --only firestore:rules,firestore:indexes`
@@ -86,7 +100,7 @@ curriculum, quotes, or shell files.
   imports it. `make audit` reports its module manifest in a separate `LEGACY` section; that
   output never fails the audit.
 - **`make audit` is only about data.** Errors mean the portal cannot source part of the
-  dataset; the 8 subject-grades backed only by `data/reference/` are warnings by design.
+  dataset; the 9 subject-grades backed only by `data/reference/` are warnings by design.
 - **The dev server runs on port 5199**, and `vite.config.js` needs
   `allowedHosts: ['.e2b.app', 'localhost']` for cloud sandboxes (Vite answers 403
   "Blocked request" otherwise).
