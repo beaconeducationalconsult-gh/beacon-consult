@@ -102,6 +102,15 @@ Data available (all generated automatically into the skeleton):
 - 180 daily schedule lessons carrying `rpk`, `starter`, `main` (step lists),
   `plenary`, `assessment`, `performanceIndicator`, `keywords` per session —
   seeds features 2–9 of nearly every lesson
+
+> ⚠️ Read that second bullet with the generator in front of you. A lesson here is
+> **one indicator**, but an indicator is normally taught over **several sessions**
+> (B4: 263 of 377 indicators, 134 of them with genuinely different activity text in
+> the later sessions), and `seed/build_book_skeleton.py` seeds from `sessions[0]`
+> only — the remaining sessions' starter/main/plenary never reach the draft books.
+> Whether that is the intended collapse (author condenses) or silent content loss
+> is unresolved: see **TODO P1-8**. Lesson *sessions* inside a book lesson do not
+> exist yet as a concept.
 - All 24 content-standard descriptions and keyword sets present
 
 Estimated pilot extent: ~90–120 textbook pages + ~60 workbook pages.

@@ -26,8 +26,8 @@ additionally fails if `data/inventory.json` is stale.
 | # | Item | Why | Size |
 |---|------|-----|------|
 | P0-1 | **Configure Firebase**: copy `.env.example` → `.env.local` with the six `VITE_FIREBASE_*` values, and set the same on Vercel (Production + Preview) | Vite embeds these at build time. Without them the build is green and every Firebase call fails at runtime — no login, no content | S |
-| P0-2 | **Deploy rules + indexes**: `make deploy-rules` (or paste `firestore.rules` into the console). `.firebaserc` is committed and pins `beacon-educational-consu-8005e` | Committed rules are not deployed rules; production denies every read until this runs. **This is the current blocker** — until it runs, every page shows the `DataError` "permission-denied" state rather than data | S |
-| P0-3 | **Bootstrap the first admin**: create an account, then set `role: 'admin'` on its `users/{uid}` doc in the Firebase console | Sign-up creates `status: 'pending'` and only an admin can approve — without one user, nobody can ever get in | S |
+| P0-2 | **Deploy rules + indexes**: `make deploy-rules` (or paste `firestore.rules` into the console). `.firebaserc` is committed and pins `beacon-educational-consu-8005e` | **Done** — the user published the ruleset and reported it working. Caveat: the copy in the console predates the list-query fix in `08b19ab` and needs re-pasting (see P2-7 and gotchas.md) | S |
+| P0-3 | **Bootstrap the first admin**: create an account, then set `role: 'admin'` (and `status: 'approved'`) on its `users/{uid}` doc in the Firebase console | **Done** — confirmed by the user. This is the only way in: sign-up forces `status: 'pending'`/`role: 'member'`, self-edits cannot change `role`/`status`, and only an admin can approve — so the console is the bootstrap path, and it must be repeated for each new school's first admin | S |
 | P0-4 | **Drive the real flows once deployed** (the code bible's Phase 7): sign up → approve → create → view → edit → delete for a scheme, a plan, a question, and a note; check offline behavior with `yarn build && yarn preview` | A green build proves nothing about rules, indexes, or the service worker | M |
 
 ## P1 — data integrity (what teachers actually read)
@@ -41,6 +41,7 @@ additionally fails if `data/inventory.json` is stale.
 | P1-5 | **Question bank content**: zero questions exist in the bundle (`public/curriculum/questions/` does not exist); `data/questions/` holds one mathematics B4 file | The generators render an empty selection from an empty bank — the highest-value content the dataset lacks | L |
 | P1-6 | **Clean the 58 L2 `ind_desc` records with a repeated trailing sentence** (0.4% of slots) at the extraction source | Visible artefact in generated documents | S |
 | P1-7 | **`indicatorDocId` keys on the bare indicator code** (`src/hooks/useCollection.js`) | `B4.1.1.1.1` exists in all ten B4 subjects, so the id is not grade-unique. Currently exported but unused — scope it by subject (or use `id`) before anything adopts it. See `docs/curriculum-data.md` | S |
+| P1-8 | **The book skeleton seeds only the first session of each indicator** — `seed/build_book_skeleton.py` reads `sessions[0]` for the title, RPK, starter, main, plenary and performance indicator | Its own docstring promises "everything the database knows is *seeded*". Measured on B4: 263 of 377 indicator slots carry more than one session, and for 134 of them the later sessions hold *different* main-activity text — so those sessions' teaching content never reaches the draft books. Either collapse the sessions into the one lesson deliberately (and say so), or emit them as lesson sessions/variants | M |
 
 ## P2 — engineering debt that makes every future fix expensive
 
@@ -55,7 +56,7 @@ additionally fails if `data/inventory.json` is stale.
 | P2-4 | **Pagination** for the capped lists (`useCollection` max 100, `QuestionBank` 200, `Search` 100 per collection) with `startAfter` cursors | Silent truncation is indistinguishable from "no more data" | M |
 | P2-5 | **Slides**: browse + PPTX export exist; there is no authoring form and no deck-view page | Half-built feature; either finish the authoring flow or remove the affordance (see `docs/gotchas.md`) | M |
 | P2-7 | **Rework note/plan visibility into queries** — `visibility` and note `status` are saved but cannot gate reads while the list pages query un-filtered (gotchas.md). To bring back private drafts, split each list into "mine" (`where authorId == uid`) and "published" (`where status/visibility == …`), then re-add the field conditions to the rules | Restores per-document privacy without breaking list queries | M |
-| P2-6 | **Repo hygiene**: 4 tracked `.pyc` files; decide whether the 38 MB curriculum bundle stays in git (or moves to a release artefact) | Keeps clones and diffs manageable | S |
+| P2-6 | **Repo hygiene**: decide whether the 38 MB curriculum bundle stays in git (or moves to a release artefact) | Keeps clones and diffs manageable. **Partly done**: the 4 tracked `.pyc` files were untracked on 2026-09-18 (`.gitignore` already covered the pattern — they predated it, and gitignore never applies to already-tracked files). The bundle question is open | S |
 
 ## P3 — product bets, once the P0s are done
 

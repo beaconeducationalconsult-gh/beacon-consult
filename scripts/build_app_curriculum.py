@@ -171,10 +171,13 @@ def build_indicators(sid, sname, grade, db_path):
 
 
 def namespace_ids(rows, sid):
-    """Scheme rows carry bare indicator codes; the app refs them as `{sid}_{code}`.
+    """Scheme rows carry bare indicator codes; the app refs them by code.
 
-    Matches the convention in src/lib/schemeAuto.js: `indicators` is the text
-    shown in the cell, `indicatorIds` is the set of document references.
+    Matches the convention `src/lib/schemeDocx.js` reads when it renders a
+    scheme: `indicators` is the text shown in the cell, `indicatorCodes` is the
+    list of codes behind it. (`indicatorIds` is a different field — the
+    curriculum-linked array on `lesson_plans` and `questions`, indexed
+    array-contains in firestore.indexes.json.)
     """
     out = []
     for r in rows:

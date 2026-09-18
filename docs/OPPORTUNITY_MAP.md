@@ -72,7 +72,7 @@ budgeted spend rather than out-of-pocket teacher spend).
 
 | Product | Why only you can |
 |---|---|
-| **Curriculum coverage analytics** for schools/chains/districts | Requires the indicator map + scheduling. `SchoolCoverage.jsx` already started. |
+| **Curriculum coverage analytics** for schools/chains/districts | Requires the indicator map + scheduling, which you have. No coverage UI exists yet — it is a build, not an extension of something started. |
 | **Textbook / publisher alignment** | You own the reference key publishers must map to. |
 | **CPD content + NTC accreditation** | 13,140 lessons are ready-made training material; accreditation unlocks institutional budgets. |
 | **Remediation keyed to failure data** | 35,382 kids failed on *specific* indicators; your whole model is indicator-keyed. |
