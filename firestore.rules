@@ -1,201 +1,484 @@
 rules_version = '2';
 
-/*
- * Beacon Consult — Firestore security rules.
- *
- * The UI gate (ProtectedLayout) is cosmetics. THIS is the enforcement.
- * See docs/security.md for the access matrix this file implements.
- *
- * Deploying is a separate step from deploying the app:
- *   firebase deploy --only firestore:rules,firestore:indexes
- * A committed-but-undeployed change has no effect in production.
- */
 service cloud.firestore {
   match /databases/{database}/documents {
 
-    // ── helpers ────────────────────────────────────────────────────────────
+    // ── Helpers ──────────────────────────────────────────────────────────
     function isSignedIn() {
       return request.auth != null;
     }
-    function myDoc() {
-      return /databases/$(database)/documents/users/$(request.auth.uid);
-    }
-    function hasProfile() {
-      return isSignedIn() && exists(myDoc());
-    }
-    function profile() {
-      return get(myDoc()).data;
-    }
+
     function isApproved() {
-      return hasProfile() && profile().status == 'approved';
+      return isSignedIn() &&
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.status == 'approved';
     }
+
     function isAdmin() {
-      return hasProfile() && profile().role == 'admin';
+      return isSignedIn() &&
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
     }
-    function isApprovedOrAdmin() {
-      return isApproved() || isAdmin();
-    }
+
     function isOwner(uid) {
       return isSignedIn() && request.auth.uid == uid;
     }
-    function createdByMe() {
-      return isApprovedOrAdmin() && request.resource.data.authorId == request.auth.uid;
-    }
-    // Narrow exception used by like/react buttons: only these keys may differ.
-    function onlyChanged(keys) {
-      return request.resource.data.diff(resource.data).affectedKeys().hasOnly(keys);
-    }
-    // A like/unlike must move the tally by exactly one and may only add or
-    // remove the caller's own uid. Without this, a member could rewrite the
-    // whole likedBy array (the diff alone only restricts *which* fields move).
-    function likeDelta(countField) {
-      return (request.resource.data[countField] == resource.data[countField] + 1
-              && request.resource.data.likedBy.hasAll(resource.data.likedBy)
-              && request.resource.data.likedBy.size() == resource.data.likedBy.size() + 1
-              && request.resource.data.likedBy.hasAll([request.auth.uid]))
-          || (request.resource.data[countField] == resource.data[countField] - 1
-              && resource.data.likedBy.hasAll(request.resource.data.likedBy)
-              && request.resource.data.likedBy.size() == resource.data.likedBy.size() - 1
-              && !request.resource.data.likedBy.hasAll([request.auth.uid]));
+
+    function isApprovedOrAdmin() {
+      return isApproved() || isAdmin();
     }
 
-    // ── users ──────────────────────────────────────────────────────────────
+    // True when the caller holds an active paid subscription (Phase 1 SaaS).
+    function isPro() {
+      return isSignedIn()
+        && exists(/databases/$(database)/documents/subscriptions/$(request.auth.uid))
+        && get(/databases/$(database)/documents/subscriptions/$(request.auth.uid)).data.status == 'active';
+    }
+
+    // ── Schools (Phase 2 multi-tenancy) ──────────────────────────────────
+    function selfUserData() {
+      return get(/databases/$(database)/documents/users/$(request.auth.uid)).data;
+    }
+
+    // The caller's school, or null when they belong to none.
+    function userSchoolId() {
+      return selfUserData().get('schoolId', null);
+    }
+
+    function isSchoolAdmin() {
+      return isSignedIn() && selfUserData().get('role', 'member') == 'school_admin';
+    }
+
+    // ── Users ─────────────────────────────────────────────────────────────
+    // Anyone signed in can read their own profile.
+    // Approved members can read other profiles (for author pages).
+    // Only the owner can update their own profile; admins can update any.
     match /users/{uid} {
-      allow read: if isOwner(uid) || isApprovedOrAdmin();
-
-      // Self-signup only, and it cannot grant itself access: status is forced
-      // to 'pending' and role to 'member'. Without this, anyone could create
-      // their own doc with status:'approved' and walk straight into the portal.
-      allow create: if isOwner(uid)
-                    && request.resource.data.status == 'pending'
-                    && request.resource.data.role == 'member';
-
-      // A member may edit their own profile but never their own status/role.
+      allow read: if isSignedIn() && (request.auth.uid == uid || isApprovedOrAdmin());
+      // A user creates their own profile at signup — or an approved member
+      // (teacher) provisions a pupil's profile alongside the synthetic
+      // auth account (Phase 3 students).
+      allow create: if (isSignedIn() && request.auth.uid == uid)
+        || (isApproved()
+            && request.resource.data.role == 'student'
+            && request.resource.data.status == 'approved'
+            && request.resource.data.get('classroomId', null) != null);
       allow update: if isAdmin()
-                    || (isOwner(uid)
-                        && !request.resource.data.diff(resource.data)
-                             .affectedKeys().hasAny(['status', 'role']));
+        // Self-service profile edits — but never role/status/schoolId;
+        // those are managed by admins (schoolId via the Schools module).
+        || (isOwner(uid)
+            && !request.resource.data.diff(resource.data).affectedKeys()
+                 .hasAny(['role', 'status', 'schoolId']))
+        // School admins manage membership of THEIR school only: assign
+        // their schoolId to a school-less member, or remove a member of
+        // their school. No other field may change on this path.
+        || (isSchoolAdmin()
+            && request.resource.data.diff(resource.data).affectedKeys()
+                 .hasOnly(['schoolId'])
+            && (
+              (request.resource.data.schoolId == userSchoolId()
+                && resource.data.get('schoolId', null) in [null, userSchoolId()])
+              ||
+              (request.resource.data.schoolId == null
+                && resource.data.get('schoolId', null) == userSchoolId())
+            ))
+        // Self-service join with a school code (Phase 2.5): a member with no
+        // school proves knowledge of a code by embedding it in the write;
+        // the code maps to the school they're joining (school_codes/{code}).
+        || (isOwner(uid)
+            && request.resource.data.diff(resource.data).affectedKeys()
+                 .hasOnly(['schoolId', 'joinCode'])
+            && resource.data.get('schoolId', null) == null
+            && request.resource.data.schoolId != null
+            && request.resource.data.joinCode is string
+            && get(/databases/$(database)/documents/school_codes/
+                   $(request.resource.data.joinCode)).data.schoolId
+                 == request.resource.data.schoolId)
+        // …then the client removes the code again immediately after joining.
+        || (isOwner(uid)
+            && request.resource.data.diff(resource.data).affectedKeys()
+                 .hasOnly(['joinCode'])
+            && !('joinCode' in request.resource.data));
       allow delete: if isAdmin();
     }
 
-    // ── community feed ─────────────────────────────────────────────────────
+    // ── Posts (teacher feed) ──────────────────────────────────────────────
     match /posts/{postId} {
       allow read: if isApprovedOrAdmin();
-      allow create: if createdByMe();
-      allow update: if isAdmin()
-                    || (isApprovedOrAdmin() && onlyChanged(['likedBy', 'likesCount']) && likeDelta('likesCount'))
-                    || (isApprovedOrAdmin() && isOwner(resource.data.authorId));
-      allow delete: if isAdmin() || isOwner(resource.data.authorId);
+      allow create: if isApprovedOrAdmin()
+        && request.resource.data.authorId == request.auth.uid;
+      allow update: if isApprovedOrAdmin()
+        && (
+          // Author can edit content
+          isOwner(resource.data.authorId)
+          ||
+          // Any approved member can like/unlike (only likedBy + likesCount change)
+          (request.resource.data.diff(resource.data).affectedKeys()
+            .hasOnly(['likedBy', 'likesCount']))
+        );
+      allow delete: if isOwner(resource.data.authorId) || isAdmin();
     }
 
-    // ── articles (public ones are readable without an account) ─────────────
-    // NOTE: this collection shipped WITHOUT a rule in the previous build, which
-    // denied everything in production. Keep this block in step with the app.
+    // ── Articles ──────────────────────────────────────────────────────────
+    // Public articles are readable without auth (public /articles pages).
+    // 'members' articles need an approved member; authors always read their own.
+    // Any approved member may like/unlike (only likedBy + likesCount change).
     match /articles/{articleId} {
-      allow read: if (resource.data.visibility == 'public') || isApprovedOrAdmin()
-                  || (isSignedIn() && isOwner(resource.data.authorId));
-      allow create: if createdByMe();
-      allow update: if isAdmin()
-                    || (isApprovedOrAdmin() && onlyChanged(['likedBy', 'likesCount']) && likeDelta('likesCount'))
-                    || (isSignedIn() && isOwner(resource.data.authorId));
-      allow delete: if isAdmin() || isOwner(resource.data.authorId);
+      allow read: if resource.data.visibility == 'public'
+        || (isSignedIn() && (isOwner(resource.data.authorId) || isApprovedOrAdmin()));
+      allow create: if isApprovedOrAdmin()
+        && request.resource.data.authorId == request.auth.uid;
+      allow update: if isApprovedOrAdmin()
+        && (
+          isOwner(resource.data.authorId)
+          || isAdmin()
+          || request.resource.data.diff(resource.data).affectedKeys()
+               .hasOnly(['likedBy', 'likesCount'])
+        );
+      allow delete: if isOwner(resource.data.authorId) || isAdmin();
     }
 
-    // ── study notes (+ comments) ───────────────────────────────────────────
-    match /notes/{noteId} {
-      allow read: if resource.data.status == 'published' || isApprovedOrAdmin()
-                  || (isSignedIn() && isOwner(resource.data.authorId));
-      allow create: if createdByMe();
-      allow update: if isAdmin()
-                    || (isApprovedOrAdmin() && onlyChanged(['likes', 'likesBy']) && likeDelta('likes'))
-                    || (isSignedIn() && isOwner(resource.data.authorId));
-      allow delete: if isAdmin() || isOwner(resource.data.authorId);
-
-      match /comments/{commentId} {
-        allow read: if isApprovedOrAdmin();
-        allow create: if createdByMe();
-        allow update: if isAdmin() || isOwner(resource.data.authorId);
-        allow delete: if isAdmin() || isOwner(resource.data.authorId);
-      }
+    // ── Generated materials (Material Service history) ────────────────────
+    // What a school's teachers produced with the Generate screen.
+    //
+    // schoolId is pinned to the caller's own school at create time, so a
+    // member cannot file a document under another school's history, and
+    // authorId must be the caller so nobody can attribute work to someone
+    // else. Records are immutable — no update, only delete by the author or
+    // a platform admin.
+    //
+    // The null guard on the read path matters: without it, two school-less
+    // users would both match `null == null` and could read each other's
+    // history.
+    match /generated_materials/{materialId} {
+      allow read: if isSignedIn()
+        && (isOwner(resource.data.authorId)
+            || (resource.data.get('schoolId', null) != null
+                && resource.data.schoolId == userSchoolId())
+            || isAdmin());
+      allow create: if isApprovedOrAdmin()
+        && request.resource.data.authorId == request.auth.uid
+        && request.resource.data.schoolId == userSchoolId();
+      allow delete: if isOwner(resource.data.authorId) || isAdmin();
     }
 
-    // ── schemes of learning ────────────────────────────────────────────────
-    match /weekly_forecasts/{forecastId} {
-      allow read: if resource.data.visibility == 'public' || isApprovedOrAdmin()
-                  || (isSignedIn() && isOwner(resource.data.authorId));
-      allow create: if createdByMe();
-      allow update, delete: if isAdmin() || isOwner(resource.data.authorId);
+    // ── Progress tracker ──────────────────────────────────────────────────
+    match /progress/{uid} {
+      // Owner-only writes; reads also open to members of the owner's school
+      // so the school workspace can aggregate curriculum coverage.
+      allow read: if (isSignedIn() && request.auth.uid == uid)
+        || (isApproved()
+            && userSchoolId() != null
+            && get(/databases/$(database)/documents/users/$(uid)).data
+                 .get('schoolId', null) == userSchoolId());
+      allow write: if isSignedIn() && request.auth.uid == uid;
     }
 
-    // ── lesson plans ───────────────────────────────────────────────────────
+    // ── Lesson plans ──────────────────────────────────────────────────────
+    // visibility: 'public' (network-wide) | 'private' (author) |
+    //             'school' (members of the author's school — Phase 2)
     match /lesson_plans/{planId} {
-      allow read: if resource.data.visibility == 'public' || isApprovedOrAdmin()
-                  || (isSignedIn() && isOwner(resource.data.authorId));
-      allow create: if createdByMe();
-      allow update, delete: if isAdmin() || isOwner(resource.data.authorId);
+      allow read: if isAdmin() || (isApprovedOrAdmin() &&
+        (resource.data.visibility == 'public'
+          || isOwner(resource.data.authorId)
+          || (resource.data.visibility == 'school'
+              && userSchoolId() != null
+              && resource.data.get('schoolId', null) == userSchoolId())));
+      allow create: if isApprovedOrAdmin()
+        && request.resource.data.authorId == request.auth.uid
+        && (request.resource.data.visibility != 'school'
+            || (userSchoolId() != null
+                && request.resource.data.get('schoolId', null) == userSchoolId()));
+      allow update: if isApprovedOrAdmin()
+        && (isOwner(resource.data.authorId) || isAdmin());
+      allow delete: if isOwner(resource.data.authorId) || isAdmin();
     }
 
-    // ── question bank ──────────────────────────────────────────────────────
+    // ── Schemes of learning (forecasts) ──────────────────────────────────
+    // Same visibility model as lesson plans.
+    match /weekly_forecasts/{forecastId} {
+      allow read: if isAdmin() || (isApprovedOrAdmin() &&
+        (resource.data.visibility == 'public'
+          || isOwner(resource.data.authorId)
+          || (resource.data.visibility == 'school'
+              && userSchoolId() != null
+              && resource.data.get('schoolId', null) == userSchoolId())));
+      allow create: if isApprovedOrAdmin()
+        && request.resource.data.authorId == request.auth.uid
+        && (request.resource.data.visibility != 'school'
+            || (userSchoolId() != null
+                && request.resource.data.get('schoolId', null) == userSchoolId()));
+      allow update: if isApprovedOrAdmin()
+        && (isOwner(resource.data.authorId) || isAdmin());
+      allow delete: if isOwner(resource.data.authorId) || isAdmin();
+    }
+
+    // ── Questions ─────────────────────────────────────────────────────────
     match /questions/{questionId} {
       allow read: if isApprovedOrAdmin();
-      allow create: if createdByMe();
-      allow update, delete: if isAdmin() || isOwner(resource.data.authorId);
+      allow create: if isApprovedOrAdmin()
+        && request.resource.data.authorId == request.auth.uid;
+      allow update: if isApprovedOrAdmin()
+        && (isOwner(resource.data.authorId) || isAdmin());
+      allow delete: if isOwner(resource.data.authorId) || isAdmin();
     }
 
-    // ── slide lessons (+ comments) ─────────────────────────────────────────
+    // ── Slide lessons ─────────────────────────────────────────────────────
     match /lesson_slides/{slideId} {
-      allow read: if resource.data.status == 'published' || isApprovedOrAdmin()
-                  || (isSignedIn() && isOwner(resource.data.authorId));
-      allow create: if createdByMe();
-      allow update, delete: if isAdmin() || isOwner(resource.data.authorId);
+      allow read: if isApprovedOrAdmin() &&
+        (resource.data.status == 'published' || isOwner(resource.data.authorId) || isAdmin());
+      allow create: if isApprovedOrAdmin()
+        && request.resource.data.authorId == request.auth.uid;
+      allow update: if isApprovedOrAdmin()
+        && (isOwner(resource.data.authorId) || isAdmin());
+      allow delete: if isOwner(resource.data.authorId) || isAdmin();
 
+      // Comments live in a subcollection (see SlideLessonView.jsx).
       match /comments/{commentId} {
         allow read: if isApprovedOrAdmin();
-        allow create: if createdByMe();
-        allow update, delete: if isAdmin() || isOwner(resource.data.authorId);
+        allow create: if isApprovedOrAdmin()
+          && request.resource.data.authorId == request.auth.uid;
+        allow delete: if isOwner(resource.data.authorId) || isAdmin();
       }
     }
 
-    // ── vacancies (published ones power the public /vacancies page) ────────
+    // ── Vacancies ─────────────────────────────────────────────────────────
     match /vacancies/{vacancyId} {
-      allow read: if resource.data.status == 'published' || isApprovedOrAdmin()
-                  || (isSignedIn() && isOwner(resource.data.authorId));
-      allow create: if createdByMe();
-      allow update, delete: if isAdmin() || isOwner(resource.data.authorId);
+      // Public page reads published vacancies without auth
+      allow read: if resource.data.status == 'published'
+        || (isSignedIn() && (isOwner(resource.data.authorId) || isApprovedOrAdmin()));
+      allow create: if isApprovedOrAdmin()
+        && request.resource.data.authorId == request.auth.uid;
+      allow update: if isApprovedOrAdmin()
+        && (isOwner(resource.data.authorId) || isAdmin());
+      allow delete: if isOwner(resource.data.authorId) || isAdmin();
     }
 
-    // ── personal progress tracker: owner only, no exceptions ───────────────
-    match /progress/{uid} {
-      allow read, write: if isOwner(uid);
+    // ── Study notes ───────────────────────────────────────────────────────
+    // Private notes are visible only to their author (and admins). Advertised
+    // notes are 'pending' (awaiting approval) then 'published' (network-wide).
+    // Any approved member may like/unlike a note without other edits.
+    match /notes/{noteId} {
+      // status: 'private' | 'pending' | 'published' | 'school' (Phase 2:
+      // visible to members of the author's school without admin approval)
+      allow read: if isApprovedOrAdmin() &&
+        (resource.data.status == 'published'
+          || isOwner(resource.data.authorId)
+          || isAdmin()
+          || (resource.data.status == 'school'
+              && userSchoolId() != null
+              && resource.data.get('schoolId', null) == userSchoolId()));
+      allow create: if isApprovedOrAdmin()
+        && request.resource.data.authorId == request.auth.uid
+        && (request.resource.data.status != 'school'
+            || (userSchoolId() != null
+                && request.resource.data.get('schoolId', null) == userSchoolId()));
+      allow update: if isApprovedOrAdmin()
+        && (
+          isOwner(resource.data.authorId)
+          || isAdmin()
+          || request.resource.data.diff(resource.data).affectedKeys()
+               .hasOnly(['likes', 'dislikes'])
+        );
+      allow delete: if isOwner(resource.data.authorId) || isAdmin();
+
+      match /comments/{commentId} {
+        allow read: if isApprovedOrAdmin();
+        allow create: if isApprovedOrAdmin()
+          && request.resource.data.authorId == request.auth.uid;
+        allow delete: if isOwner(resource.data.authorId) || isAdmin();
+      }
     }
 
-    // ── shared quote likes ─────────────────────────────────────────────────
-    // Quotes live in static JSON, so their likes need their own document.
-    // Members may only add/remove their own uid, and `count` must move ±1 in
-    // step — nobody can inflate or wipe someone else's tally.
+    // ── Quote likes ───────────────────────────────────────────────────────
+    // One doc per liked quote: quote_likes/{quoteId} = { count, likedBy[] },
+    // created on the first like. An approved member may toggle ONLY their own
+    // like, and the count must move ±1 in step with adding/removing themselves.
     match /quote_likes/{quoteId} {
-      allow read: if isSignedIn();
+      allow read: if isApprovedOrAdmin();
 
-      allow create: if isSignedIn()
-                    && request.resource.data.count == 1
-                    && request.resource.data.likedBy == [request.auth.uid]
-                    && !exists(/databases/$(database)/documents/quote_likes/$(quoteId));
+      allow create: if isApprovedOrAdmin()
+        && request.resource.data.keys().hasOnly(['count', 'likedBy'])
+        && request.resource.data.count == 1
+        && request.resource.data.likedBy.size() == 1
+        && (request.auth.uid in request.resource.data.likedBy);
 
-      allow update: if isSignedIn() && (
-                      (request.resource.data.count == resource.data.count + 1
-                       && request.resource.data.likedBy.hasAll(resource.data.likedBy)
-                       && request.resource.data.likedBy.size() == resource.data.likedBy.size() + 1
-                       && request.resource.data.likedBy.hasAll([request.auth.uid]))
-                   || (request.resource.data.count == resource.data.count - 1
-                       && resource.data.likedBy.hasAll(request.resource.data.likedBy)
-                       && request.resource.data.likedBy.size() == resource.data.likedBy.size() - 1
-                       && !request.resource.data.likedBy.hasAll([request.auth.uid]))
-                    );
+      allow update: if isApprovedOrAdmin()
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['count', 'likedBy'])
+        && (
+          // Like — add myself, count +1
+          (!(request.auth.uid in resource.data.likedBy)
+            && (request.auth.uid in request.resource.data.likedBy)
+            && request.resource.data.likedBy.hasAll(resource.data.likedBy)
+            && request.resource.data.likedBy.size() == resource.data.likedBy.size() + 1
+            && request.resource.data.count == resource.data.count + 1)
+          ||
+          // Unlike — remove myself, count -1
+          ((request.auth.uid in resource.data.likedBy)
+            && !(request.auth.uid in request.resource.data.likedBy)
+            && resource.data.likedBy.hasAll(request.resource.data.likedBy)
+            && request.resource.data.likedBy.size() == resource.data.likedBy.size() - 1
+            && request.resource.data.count == resource.data.count - 1)
+        );
 
       allow delete: if isAdmin();
     }
 
-    // Everything not matched above is denied. Add a block when you add a
-    // collection — see docs/playbooks.md ("Add a new Firestore collection").
+    // ── Deliveries (agent → school commission ledger) ─────────────────────
+    // An agent (any approved member) requests delivery of a material to a
+    // school. The platform owner (admin) approves, then marks paid — which is
+    // when commission is realized. Agents see only their own requests; the
+    // owner sees and manages all. Status flows requested → approved → paid,
+    // with rejected as an off-ramp. Only the owner may change status.
+    match /deliveries/{deliveryId} {
+      allow read: if isSignedIn()
+        && (isOwner(resource.data.agentId) || isAdmin());
+      allow create: if isApproved()
+        && request.resource.data.agentId == request.auth.uid
+        && request.resource.data.status == 'requested';
+      // Only the owner moves a delivery through its lifecycle.
+      allow update: if isAdmin();
+      // Owner can delete anything; an agent may cancel their own request
+      // while it is still pending.
+      allow delete: if isAdmin()
+        || (isOwner(resource.data.agentId) && resource.data.status == 'requested');
+    }
+
+    // ── Subscriptions (SaaS billing ledger) ───────────────────────────────
+    // One doc per member: subscriptions/{uid} = {
+    //   planId: 'free'|'pro'|'school',
+    //   status: 'none'|'requested'|'active'|'cancelled'|'rejected',
+    //   exports: { month: 'YYYY-MM', count }   — free-tier export meter,
+    //   momoNumber, paymentRef, renewsAt, ...
+    // }. Members may only request, cancel and meter their own doc; ONLY an
+    // admin may activate/renew (i.e. confirm the Mobile Money payment).
+    // The free-plan export cap is FREE_EXPORT_LIMIT (5/month) in
+    // src/lib/subscriptions.js — keep the two in sync.
+    match /subscriptions/{uid} {
+      allow get: if isSignedIn() && (request.auth.uid == uid || isAdmin());
+      allow list: if isAdmin();
+
+      allow create: if isApproved() && request.auth.uid == uid
+        && (
+          // Upgrade request — sits at 'requested' until an admin activates
+          (request.resource.data.status == 'requested'
+            && request.resource.data.planId in ['pro', 'school']
+            && request.resource.data.exports.count == 0)
+          ||
+          // Free-tier ledger row, created lazily by the first metered export
+          (request.resource.data.planId == 'free'
+            && request.resource.data.status == 'none'
+            && request.resource.data.exports.count == 1)
+        );
+
+      allow update: if isAdmin()
+        || (isApproved() && request.auth.uid == uid && (
+          // 1) Cancel my own active or pending subscription
+          (request.resource.data.diff(resource.data).affectedKeys().hasOnly(['status'])
+            && request.resource.data.status == 'cancelled'
+            && resource.data.status in ['active', 'requested'])
+          ||
+          // 2) (Re-)request an upgrade after none/rejected/cancelled
+          (request.resource.data.status == 'requested'
+            && request.resource.data.planId in ['pro', 'school']
+            && resource.data.status in ['none', 'rejected', 'cancelled']
+            && request.resource.data.diff(resource.data).affectedKeys()
+                 .hasOnly(['status', 'planId', 'requestedAt', 'momoNumber',
+                           'paymentRef', 'name', 'email']))
+          ||
+          // 3) Meter one export: count moves +1 within the same month, or
+          //    resets to 1 on month rollover. Free docs are capped at 5;
+          //    active paid plans are unmetered.
+          (request.resource.data.diff(resource.data).affectedKeys().hasOnly(['exports'])
+            && (
+              (request.resource.data.exports.month == resource.data.exports.month
+                && request.resource.data.exports.count == resource.data.exports.count + 1)
+              ||
+              (request.resource.data.exports.month != resource.data.exports.month
+                && request.resource.data.exports.count == 1)
+            )
+            && (resource.data.status == 'active'
+                || request.resource.data.exports.count <= 5))
+        ));
+
+      allow delete: if isAdmin();
+    }
+
+    // ── Classrooms, quizzes & attempts (Phase 3 students) ─────────────────
+    // Students sign in with synthetic accounts (see src/lib/classrooms.js).
+    match /classrooms/{classroomId} {
+      allow read: if isAdmin()
+        || (isSignedIn() && isOwner(resource.data.teacherId))
+        || (isSignedIn()
+            && selfUserData().get('role', 'member') == 'student'
+            && selfUserData().get('classroomId', null) == classroomId);
+      allow create: if isApproved()
+        && request.resource.data.teacherId == request.auth.uid;
+      allow update: if isOwner(resource.data.teacherId) || isAdmin();
+      allow delete: if isOwner(resource.data.teacherId) || isAdmin();
+    }
+
+    match /quizzes/{quizId} {
+      allow read: if isAdmin()
+        || (isSignedIn() && isOwner(resource.data.authorId))
+        || (isSignedIn()
+            && selfUserData().get('classroomId', null) == resource.data.classroomId);
+      // Only the classroom's own teacher may assign quizzes to it.
+      allow create: if isApproved()
+        && request.resource.data.authorId == request.auth.uid
+        && request.resource.data.get('classroomId', null) != null
+        && get(/databases/$(database)/documents/classrooms/
+               $(request.resource.data.classroomId)).data.teacherId
+             == request.auth.uid;
+      allow update, delete: if isOwner(resource.data.authorId) || isAdmin();
+    }
+
+    match /quiz_attempts/{attemptId} {
+      // Immutable result rows: student creates once per sit, teacher reads
+      // via the denormalised teacherId, only admins delete. Teachers may
+      // attach marks for written answers via `grades` (and nothing else).
+      allow read: if isAdmin()
+        || (isSignedIn() && isOwner(resource.data.studentId))
+        || (isSignedIn() && isOwner(resource.data.get('teacherId', '')));
+      allow create: if isSignedIn()
+        && selfUserData().get('role', 'member') == 'student'
+        && request.resource.data.studentId == request.auth.uid;
+      allow update: if isAdmin()
+        || (isSignedIn()
+            && isOwner(resource.data.get('teacherId', ''))
+            && request.resource.data.diff(resource.data).affectedKeys()
+                 .hasOnly(['grades']));
+      allow delete: if isAdmin();
+    }
+
+    // ── Schools (Phase 2 multi-tenancy) ───────────────────────────────────
+    // A school is a tenant. Platform admins create schools and manage them.
+    // Approved members can read a school doc (to show its name/header) but
+    // only admins write. Membership is carried on users/{uid}.schoolId and
+    // managed there (see the users block), not on the school doc.
+    match /schools/{schoolId} {
+      allow read: if isApprovedOrAdmin();
+      allow create: if isAdmin();
+      // School admins of THIS school may rotate its join code; everything
+      // else stays with platform admins.
+      allow update: if isAdmin()
+        || (isSchoolAdmin()
+            && userSchoolId() == schoolId
+            && request.resource.data.diff(resource.data).affectedKeys()
+                 .hasOnly(['joinCode']));
+      allow delete: if isAdmin();
+    }
+
+    // ── School join codes (Phase 2.5) ────────────────────────────────────
+    // school_codes/{code} maps a secret code to a school. Codes are long
+    // random strings from a large alphabet, so get-by-known-code is safe;
+    // only admins can list (enumerate) them.
+    match /school_codes/{code} {
+      allow get: if isApproved();
+      allow list: if isAdmin();
+      allow create: if isAdmin()
+        || (isSchoolAdmin() && request.resource.data.schoolId == userSchoolId());
+      allow update, delete: if isAdmin()
+        || (isSchoolAdmin() && resource.data.schoolId == userSchoolId());
+    }
+
   }
 }
