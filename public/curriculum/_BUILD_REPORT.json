@@ -218,7 +218,7 @@
    "indicators": 517,
    "lessons": 1260,
    "scheme_subjects": 7,
-   "kb": 3776
+   "kb": 3777
   },
   {
    "grade": "B5",
@@ -226,7 +226,7 @@
    "indicators": 590,
    "lessons": 1260,
    "scheme_subjects": 7,
-   "kb": 3870
+   "kb": 3872
   },
   {
    "grade": "B6",
@@ -234,7 +234,7 @@
    "indicators": 572,
    "lessons": 1260,
    "scheme_subjects": 7,
-   "kb": 3810
+   "kb": 3812
   },
   {
    "grade": "B7",
@@ -261,5 +261,5 @@
    "kb": 5304
   }
  ],
- "totalKb": 38767
+ "totalKb": 38771
 }

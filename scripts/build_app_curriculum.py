@@ -110,7 +110,8 @@ def audited_pairs():
       live only in data/reference/.
     * Audit B — every indicator code re-extracted from the PDF and set-compared
       with the database. It resolves each database through find_data, so it
-      covers the reference-only subjects too.
+      covers the reference-only subjects too (computing B4-B6, french B4-B6,
+      kindergarten KG1/KG2, and B7-B9 everywhere).
 
     A subject-grade that passed neither has not been cross-checked at all, and
     the app must say so rather than present it as equal to the rest — see

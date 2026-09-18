@@ -66,6 +66,30 @@ The defensible sentences are:
   one `resources` string, one `keywords` string and one `assessment` string
   (1 distinct value each). They are derived labels (`{subject, grade, band}`), not
   authored per indicator. Do not present them as per-indicator enrichment.
+* **`cs_desc` is the content standard the indicator belongs to, and what it holds
+  depends on the print** — the two shapes are not interchangeable:
+  * French and computing **B7–B9** print a sentence (*"Comprendre les salutations,
+    saluer et prendre congé"*), and `cs_desc` carries it.
+  * French **B4–B6** prints no sentence at all. Its CONTENT STANDARDS column holds
+    one of four skill areas, and the SCOPE AND SEQUENCE table (pp. xviii–xx) lists
+    exactly those four — in this order — for every sub-strand. The front matter
+    (p. xvii) makes the fourth component of an indicator code the content-standard
+    number, so the standard *is* that number:
+
+    | 4th component | content standard |
+    |---|---|
+    | 1 | Compréhension Orale |
+    | 2 | Production Orale |
+    | 3 | Compréhension Écrite |
+    | 4 | Production Écrite |
+
+    `scripts/fix_french_content_standards.py` wrote those labels (266 records) and
+    stripped the neighbouring CORE COMPETENCIES column out of the eleven B7–B9
+    standards that had it glued in front of the statement (36 records). One record
+    is left empty on purpose — `B6.1.2.5.3`, where the print numbers a fifth
+    content standard inside a four-standard sub-strand. The run is recorded in
+    `data/audit/french_content_standards.json`, including the five values it
+    replaced.
 * Summaries (`*_curriculum_summary.json`) carry `counts`, `strands[]`,
   `sourceTitle`, `sourceUrl`, `extraction_method`, `extraction_date`.
 * Audit trail: `data/audit/` (76/76 databases PASS; the mathematics B1 PDF
@@ -134,8 +158,10 @@ see what would change, `--apply` to write. It exists because the labels, not the
 wrong: computing's and kindergarten's strands read `"Strand 1"`, french's held a *sub-strand*
 name one level too low, and one kindergarten indicator was a restatement of its own code. The
 script also fills descriptions that are stubs, and refuses to guess when a heading is ambiguous.
-See TODO P1-1 for what is still outstanding (french content standards, keywords on all three,
-PDF footer text in 111 descriptions).
+See TODO P1-1 for what is still outstanding (keywords on all three, the page footer and
+neighbouring column bled into 111 descriptions, the empty KG content standards).
+`scripts/fix_french_content_standards.py` completed the french half of that list on 2026-09-18 —
+see the `cs_desc` note under *L1 — curriculum* above.
 
 ### Which subject-grades have been cross-checked
 
@@ -160,18 +186,19 @@ hand-maintains, so they cannot drift:
 - **`source`** — which copy of the database the subject actually came from,
   `curriculum` (the audited set in `data/curriculum/`) or `reference` (the second copy in
   `data/reference/`, reached by the `DB_SEARCH` fallback in `scripts/_paths.py`).
-- **`verified`** — whether the subject-grade appears in the Audit A results
-  (`data/audit/audit_a_results.json`) with `status: PASS`. Audit A's expected counts were
-  verified against the official NaCCA PDFs, so this means "cross-checked against its
-  source", not merely "loaded successfully".
+- **`verified`** — whether the subject-grade has a PASS row in *either* audit
+  (`audit_a_results.json` or `audit_b_results.json`). Both compare the data against the
+  official NaCCA PDFs — Audit A by indicator counts, Audit B by re-extracting every code —
+  so this means "cross-checked against its source", not merely "loaded successfully". The
+  union is what lets the reference-only subjects claim it: they exist only in
+  `data/reference/`, where Audit A never looks, but Audit B resolves each database through
+  `find_data()` and so sees both copies.
 
-Eight subject-grades are `verified: false` — computing B4–B6, french B4–B6 and KG1–KG2 —
-because they exist only in `data/reference/` and were never in Audit A's scope. Their
-summaries now cite the official NaCCA PDFs, but their contents have not been checked
-against them. `GradeSubjects` and `SubjectSelect` say so in the UI, and
-`src/curriculumBundle.test.js` pins the list so a new unaudited subject cannot appear
-unnoticed. See TODO P1-1 (and P1-9 for `english-language B5`, which is audited but whose
-database now lives only in the reference copy).
+All 84 served subject-grades are `verified: true`. The flag stays a guard rather than
+decoration: a subject-grade that passes neither audit fails a test in
+`src/curriculumBundle.test.js`, and `GradeSubjects`/`SubjectSelect` would label it
+"unverified" in the UI. See TODO P1-1 (and P1-9 for `english-language B5`, which passes
+Audit B but whose committed Audit A row nobody can reproduce).
 
 Notes and known gaps:
 

@@ -209,6 +209,89 @@ describe.each(ids)('%s', (grade) => {
   })
 
 
+  describe('the French content standards', () => {
+    const readData = (path) => JSON.parse(readFileSync(new URL(`../data/${path}`, import.meta.url), 'utf8'))
+
+    // The French B4–B6 print does not carry sentence-style content standards:
+    // its CONTENT STANDARDS column holds one of four skill areas, and the SCOPE
+    // AND SEQUENCE table (pp. xviii–xx) lists exactly those four — in this
+    // order — for every sub-strand. The front matter (p. xvii) makes the fourth
+    // component of an indicator code the content-standard number, so the
+    // standard a record belongs to is decided by its own code.
+    const SKILLS = {
+      1: 'Compréhension Orale',
+      2: 'Production Orale',
+      3: 'Compréhension Écrite',
+      4: 'Production Écrite',
+    }
+    const skillOf = (csCode) => SKILLS[String(csCode).split('.')[3]] || ''
+
+    it('names the content standard of every French B4-B6 record', () => {
+      // The field was empty for 262 of 267 records before
+      // scripts/fix_french_content_standards.py filled it.
+      const wrong = []
+      for (const grade of ['B4', 'B5', 'B6']) {
+        const rows = readData(`reference/french_${grade}_curriculum_db_clean.json`)
+        const codes = Object.keys(rows)
+        expect(codes.length, `${grade} records`).toBeGreaterThan(50)
+        for (const code of codes) {
+          const expected = skillOf(rows[code].cs_code)
+          if (rows[code].cs_desc !== expected) {
+            wrong.push(`${code} (${rows[code].cs_code}) -> ${JSON.stringify(rows[code].cs_desc)}`)
+          }
+        }
+      }
+      expect(wrong).toEqual([])
+    })
+
+    it('leaves the one content standard the print mis-numbers empty', () => {
+      // B6.1.2.5 is numbered as a fifth content standard in a sub-strand whose
+      // scope table lists four, so there is no skill to name — the print's own
+      // defect, and the only record this project leaves without a standard.
+      const empty = []
+      for (const grade of ['B4', 'B5', 'B6']) {
+        const rows = readData(`reference/french_${grade}_curriculum_db_clean.json`)
+        for (const code of Object.keys(rows)) {
+          if (!rows[code].cs_desc) empty.push(code)
+        }
+      }
+      expect(empty).toEqual(['B6.1.2.5.3'])
+    })
+
+    it('serves those standards to the portal', () => {
+      // The fill is only real if it survives the build: the three French
+      // B4-B6 subject-grades are served from data/reference/.
+      const rows = ['B4', 'B5', 'B6'].flatMap((grade) =>
+        bundle.get(grade).indicators.filter((i) => i.subjectId === 'french')
+      )
+      expect(rows.length).toBe(266 + 1)
+      const wrong = rows
+        .filter((i) => i.contentStandardDescription !== skillOf(i.contentStandardCode))
+        .map((i) => `${i.code} -> ${JSON.stringify(i.contentStandardDescription)}`)
+      expect(wrong).toEqual([])
+      // …and the one print defect is served as empty rather than guessed at.
+      expect(rows.filter((i) => !i.contentStandardDescription).map((i) => i.code)).toEqual(['B6.1.2.5.3'])
+    })
+
+    it('does not mistake the core-competence column for a content standard', () => {
+      // In French B7-B9 the CORE COMPETENCIES column sits beside the CONTENT
+      // STANDARD column, and eleven standards (37 records) had the neighbour's
+      // text glued in front of the statement — or in place of it. One record is
+      // exempt: B7.4.2.3.1 is a stub built from the front matter's worked
+      // example, which the print has no content standard for (docs/TODO.md).
+      const BLEED = /^(?:Communication and Collaboration|Critical Thinking and Problem Solving|Creativity and Innovation|Cultural identity and Global Citizenship|Personal development and leadership|Digital literacy|Core Competenc|French Content Standard)/i
+      const exempt = new Set(['B7.4.2.3.1'])
+      const bad = []
+      for (const grade of ['B7', 'B8', 'B9']) {
+        const rows = readData(`reference/french_${grade}_curriculum_db_clean.json`)
+        for (const code of Object.keys(rows)) {
+          if (!exempt.has(code) && BLEED.test(rows[code].cs_desc || '')) bad.push(`${code}: ${rows[code].cs_desc}`)
+        }
+      }
+      expect(bad).toEqual([])
+    })
+  })
+
   describe('known gaps stay known', () => {
     it('has no schedules file for the kindergarten grades', () => {
     const kg = grades.filter((g) => g.id.startsWith('KG'))

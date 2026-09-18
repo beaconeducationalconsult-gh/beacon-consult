@@ -60,6 +60,34 @@ reports all-skip, all-missing or zero rows, suspect the path wiring before the d
 audits resolve through `find_data()` now, and they write into `data/audit/` rather than dropping
 result files in the repository root.
 
+## 🟠 A "content standard" is not always a sentence
+
+P1-1 asked for the empty `cs_desc` fields to be filled *from the PDF*, which assumes the print
+carries a standard to copy. For French B4–B6 it does not: the CONTENT STANDARDS column holds one
+of four skill areas (Compréhension Orale, Production Orale, Compréhension Écrite, Production
+Écrite), and those four are the standard — the SCOPE AND SEQUENCE table lists exactly them, in
+that order, for every sub-strand. French B7–B9 and computing do print a sentence.
+
+So before "filling a missing field from the source", read what the source actually puts in that
+column. The French B4–B6 answer is derivable without touching the PDF geometry: the fourth
+component of the indicator code is the content-standard number, so the number names the skill
+(1→CO, 2→PO, 3→CE, 4→PE). Two traps sit in that document — its body's CS cells are vertically
+aligned to nothing in particular, so geometry-based matching disagrees with the scope table about
+a quarter of the time; and one sub-strand is numbered as if it had a fifth standard
+(`B6.1.2.5.3`), which no rule can name, so the field stays empty rather than guessed.
+
+## 🟠 The same database can exist in two copies, and they drift
+
+`find_data()` searches `data/curriculum/` before `data/reference/`, so for the six subjects that
+exist in both, the *curriculum* copy is what the portal serves and the *reference* copy is inert.
+The copies are not kept in step by anything: the French B7–B9 reference copies carried the
+CORE COMPETENCIES column in `cs_desc` and a fabricated `B7.4.2.3.1` stub record, while the served
+copies were clean — so a fix written against the wrong copy changes nothing a teacher sees, and a
+fix against the right one leaves a defect behind in the file someone may later promote.
+
+Check which copy `find_data` resolves (and whether the subject is served from it) before editing,
+then rebuild: `make build-curriculum` writes `public/curriculum/`, which is what the app reads.
+
 ## 🟠 Committed rules ≠ deployed rules
 Vercel does **not** deploy Firestore rules/indexes. Editing `firestore.rules` and pushing
 changes nothing in production until `firebase deploy --only firestore:rules,firestore:indexes`
