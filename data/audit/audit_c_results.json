@@ -53,58 +53,72 @@
   {
    "subject": "math",
    "docx": "Basic1_Mathematics_Lesson_Plans_Full_Year.docx",
-   "size_kb": 238,
-   "status": "PASS",
-   "issues": []
+   "status": "MISSING",
+   "issues": [
+    "not built here \u2014 a generated document, not a repository file"
+   ]
   },
   {
    "subject": "science",
    "docx": "Basic1_Science_Lesson_Plans_Full_Year.docx",
-   "size_kb": 215,
-   "status": "PASS",
-   "issues": []
+   "status": "MISSING",
+   "issues": [
+    "not built here \u2014 a generated document, not a repository file"
+   ]
   },
   {
    "subject": "english",
    "docx": "Basic1_English_Lesson_Plans_Full_Year.docx",
-   "size_kb": 225,
-   "status": "PASS",
-   "issues": []
+   "status": "MISSING",
+   "issues": [
+    "not built here \u2014 a generated document, not a repository file"
+   ]
   },
   {
    "subject": "ghanaian_language",
    "docx": "Basic1_Ghanaian_Language_Lesson_Plans_Full_Year.docx",
-   "size_kb": 193,
-   "status": "PASS",
-   "issues": []
+   "status": "MISSING",
+   "issues": [
+    "not built here \u2014 a generated document, not a repository file"
+   ]
   },
   {
    "subject": "history",
    "docx": "Basic1_History_Lesson_Plans_Full_Year.docx",
-   "size_kb": 131,
-   "status": "PASS",
-   "issues": []
+   "status": "MISSING",
+   "issues": [
+    "not built here \u2014 a generated document, not a repository file"
+   ]
   },
   {
    "subject": "owop",
    "docx": "Basic1_OWOP_Lesson_Plans_Full_Year.docx",
-   "size_kb": 118,
-   "status": "PASS",
-   "issues": []
+   "status": "MISSING",
+   "issues": [
+    "not built here \u2014 a generated document, not a repository file"
+   ]
   },
   {
    "subject": "rme",
    "docx": "Basic1_RME_Lesson_Plans_Full_Year.docx",
-   "size_kb": 118,
-   "status": "PASS",
-   "issues": []
+   "status": "MISSING",
+   "issues": [
+    "not built here \u2014 a generated document, not a repository file"
+   ]
   },
   {
    "subject": "creative_arts",
    "docx": "Basic1_Creative_Arts_Lesson_Plans_Full_Year.docx",
-   "size_kb": 106,
-   "status": "PASS",
-   "issues": []
+   "status": "MISSING",
+   "issues": [
+    "not built here \u2014 a generated document, not a repository file"
+   ]
   }
- ]
+ ],
+ "summary": {
+  "checked": 0,
+  "not_built": 8,
+  "warn": 0,
+  "fail": 0
+ }
 }

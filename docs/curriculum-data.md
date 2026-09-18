@@ -248,6 +248,7 @@ the build stamps it from `data/audit/` rather than a hand-kept list. Two audits 
 |---|---|---|
 | Audit A (`audit_a_databases.py`) | indicator counts against the expected count recorded per file | only `data/curriculum/` |
 | Audit B (`audit_b_pdf_crosscheck.py`) | every code re-extracted from the PDF, set-compared with the database | both copies, via `find_data` |
+| Audit C (`audit_c_lessons.py`) | the L2 layer: 180-slot grid, required fields, codes present in the database; and the generated `Basic1_*` documents, if they are here | `data/lessons/` + `data/curriculum/`; the documents are build outputs, so an absent one is `MISSING`, not a defect |
 
 Audit A used to see only the 75 databases in `data/curriculum/` — which is why Audit B exists as
 a second route to the same claim. Since the promotion it enumerates **all 84**, kindergarten's

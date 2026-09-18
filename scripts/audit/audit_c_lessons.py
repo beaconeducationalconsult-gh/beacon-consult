@@ -10,6 +10,12 @@ DOCX checks:
   - 180 'LESSON PLAN #' headers; parsed (num, week, day) sequence == JSON
   - 3-phase structure blocks x180; Reflection x180; Sign-off x180
   - font Calibri; navy 002060 header color present
+
+The DOCX files are *build outputs*: they are generated locally from the enriched
+JSONs and are not in the repository (`.gitignore` covers `dist/books/` and
+`books/`), so a fresh clone has none of them. An absent document is reported as
+`MISSING` — not built here — and is not a defect of the data; a document that is
+present and wrong is a `WARN`. C1 (the JSONs) is the check that always runs.
 """
 # --- resolve bare data filenames against data/ (see scripts/_compat.py) ---
 import sys as _sys, pathlib as _pathlib
@@ -86,7 +92,8 @@ def audit_docx(stem, docx_name, lessons):
     issues = []
     path = find_data(docx_name)
     if not path:
-        return {'subject': stem, 'status': 'FAIL', 'issues': ['DOCX missing']}
+        return {'subject': stem, 'docx': docx_name, 'status': 'MISSING',
+                'issues': ['not built here — a generated document, not a repository file']}
     d = docx.Document(path)
     texts = [p.text for p in d.paragraphs]
     joined = '\n'.join(texts)
@@ -139,11 +146,22 @@ def main():
             print(f'      ! {i}')
     print('AUDIT C2 - DOCX lesson plan files')
     for r in dr:
-        flag = {'PASS': 'OK ', 'WARN': 'WRN', 'FAIL': 'FHL'}.get(r['status'], '???')
+        flag = {'PASS': 'OK ', 'WARN': 'WRN', 'FAIL': 'FHL',
+                'MISSING': '···'}.get(r['status'], '???')
         print(f"[{flag}] {r['subject']:20s} {r.get('docx','')} ({r.get('size_kb','?')} KB)")
         for i in r['issues']:
             print(f'      ! {i}')
-    json.dump({'json': jr, 'docx': dr}, open(str(AUDIT / 'audit_c_results.json'), 'w'), indent=1)
+    built = [r for r in dr if r['status'] != 'MISSING']
+    summary = {'checked': len(built), 'not_built': len(dr) - len(built),
+               'warn': sum(1 for r in dr if r['status'] == 'WARN'),
+               'fail': sum(1 for r in dr if r['status'] == 'FAIL')}
+    print(f"  {summary['checked']} of {len(dr)} document(s) present — "
+          f"{summary['not_built']} not built here, {summary['warn']} WARN, {summary['fail']} FAIL")
+    if summary['not_built']:
+        print('  (the documents are generated from the JSONs above and are not in the '
+              'repository; the C1 rows are what `make check` stands on)')
+    json.dump({'json': jr, 'docx': dr, 'summary': summary},
+              open(str(AUDIT / 'audit_c_results.json'), 'w'), indent=1)
 
 if __name__ == '__main__':
     main()
