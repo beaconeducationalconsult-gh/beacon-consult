@@ -216,6 +216,48 @@ describe('authorship is pinned on create and preserved on update', () => {
   })
 })
 
+describe('un-filtered list queries stay legal', () => {
+  // Firestore is not a filter: for a list query it must be able to prove the
+  // rule true for every document the query could return. A read rule that
+  // depends on document data therefore denies the WHOLE query — not just the
+  // documents that fail it. `isApprovedOrAdmin() && (resource.data.status ==
+  // 'published' || …)` broke every un-filtered list in the app, and only for
+  // non-admins, so an admin testing the portal would never see it.
+  const unfiltered = new Set()
+  for (const file of walk(new URL('src/', ROOT))) {
+    const text = readFileSync(file, 'utf8')
+    for (const m of text.matchAll(/useCollection\(\s*'([a-z_]+)'\s*,\s*\{([^}]*)\}/g)) {
+      if (!m[2].includes('filters')) unfiltered.add(m[1])
+    }
+    for (const m of text.matchAll(/getDocs\(\s*query\(\s*collection\(\s*db\s*,\s*'([a-z_]+)'\s*\)\s*\)/g)) {
+      unfiltered.add(m[1])
+    }
+    for (const m of text.matchAll(/onSnapshot\(\s*collection\(\s*db\s*,\s*'([a-z_]+)'\s*\)/g)) {
+      unfiltered.add(m[1])
+    }
+  }
+
+  it('finds the un-filtered list queries', () => {
+    expect([...unfiltered].length).toBeGreaterThanOrEqual(4)
+  })
+
+  it.each([...unfiltered].sort())('/%s/ read does not require document data', (name) => {
+    const read = allowClause(name, 'read')
+    // A query is provable when one of its disjuncts holds whatever the document
+    // contains, for an ordinary approved member. `isAdmin()` does NOT count:
+    // it is document-independent but false for a member, so the member's list
+    // query still fails.
+    const MEMBER_PATH = /is(?:ApprovedOrAdmin|Approved|SignedIn)\(\)/
+    const NAKED = /^\s*is(?:ApprovedOrAdmin|Approved|SignedIn)\(\)\s*$/
+    const DISJUNCT = /\|\|\s*is(?:ApprovedOrAdmin|Approved|SignedIn)\(\)/
+
+    expect(
+      NAKED.test(read) || DISJUNCT.test(read),
+      `the read rule for ${name} has no document-independent branch, so the un-filtered list query in the client is denied for every non-admin member. Clause: ${read.trim()}`
+    ).toBe(true)
+  })
+})
+
 describe('the file is structurally sound', () => {
   it('declares rules_version 2 and a single service block', () => {
     expect(source.trimStart().startsWith("rules_version = '2';")).toBe(true)

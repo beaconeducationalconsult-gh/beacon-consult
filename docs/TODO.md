@@ -54,6 +54,7 @@ additionally fails if `data/inventory.json` is stale.
 | P2-3 | **Bundle strategy**: chunk the 39.7 MB bundle per grade+subject and key the service-worker cache off a content hash (or automate the `CACHE_VERSION` bump) | `b9_schedules.json` alone is 4.85 MB; today a rebuilt bundle reaches returning users only after a manual `sw.js` edit | M |
 | P2-4 | **Pagination** for the capped lists (`useCollection` max 100, `QuestionBank` 200, `Search` 100 per collection) with `startAfter` cursors | Silent truncation is indistinguishable from "no more data" | M |
 | P2-5 | **Slides**: browse + PPTX export exist; there is no authoring form and no deck-view page | Half-built feature; either finish the authoring flow or remove the affordance (see `docs/gotchas.md`) | M |
+| P2-7 | **Rework note/plan visibility into queries** — `visibility` and note `status` are saved but cannot gate reads while the list pages query un-filtered (gotchas.md). To bring back private drafts, split each list into "mine" (`where authorId == uid`) and "published" (`where status/visibility == …`), then re-add the field conditions to the rules | Restores per-document privacy without breaking list queries | M |
 | P2-6 | **Repo hygiene**: 4 tracked `.pyc` files; decide whether the 38 MB curriculum bundle stays in git (or moves to a release artefact) | Keeps clones and diffs manageable | S |
 
 ## P3 — product bets, once the P0s are done

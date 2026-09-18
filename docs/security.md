@@ -64,7 +64,9 @@ and `isAdmin()` both read the very document the caller just created.
 
 ## The access pattern (applies to most collections)
 
-- **read:** `isApprovedOrAdmin()` (+ visibility/status/ownership checks where relevant)
+- **read:** `isApprovedOrAdmin()`, plus a document-independent disjunct where public or
+  ownership widening is needed. **Never** nest the member check behind a `resource.data`
+  condition on a collection the client lists un-filtered — that denies the whole query.
 - **create:** `isApprovedOrAdmin()` and `request.resource.data.authorId == request.auth.uid`
   (you can only create docs authored by yourself)
 - **update:** author or admin — *except* like/react fields, which any approved member may
@@ -78,16 +80,21 @@ and `isAdmin()` both read the very document the caller just created.
   fields — the self-service update path cannot change them.
 - **`posts`**: any approved member may like — the diff is limited to `likedBy`,`likesCount`
   **and** the tally is checked with `likeDelta`.
-- **`notes`**: read gated by `status=='published'` OR owner/admin; like fields diff-limited to
+- **`notes`**: read is `isApprovedOrAdmin()` — see below. Like fields diff-limited to
   `likes`,`likesBy` and checked with `likeDelta`. Has a `comments` subcollection (approved
   read/create; author/admin delete).
   *The note-like UI is not built, so nothing writes these fields yet. They are `likes`+`likesBy`
   to match the app-wide counted-array pattern (`posts`, `articles`) — a pair of bare
   `likes`/`dislikes` counters could not be tamper-checked. Change both the rule and this line
   together if that design wins.*
-- **`lesson_plans` / `weekly_forecasts`**: read if `visibility=='public'` OR owner; `school`
-  visibility (Phase 2) compares `schoolId` against the caller's own school.
-- **`lesson_slides`**: read if `status=='published'` OR owner/admin. Has `comments`.
+  *`NoteForm` saves a `visibility` field ('members' | 'public') and nothing reads it; the rule
+  reads neither. Until a note moderation flow exists (nothing can set `status: 'published'`),
+  notes are simply member-readable.*
+- **`lesson_plans` / `weekly_forecasts` / `lesson_slides`**: read is `isApprovedOrAdmin()`. The
+  `visibility`/`status` fields still order the UI but cannot gate the read — the client lists
+  all three un-filtered, and a document-dependent clause would deny the whole query (see
+  gotchas.md). Gating on `visibility` again means giving those list pages a `where(...)` filter
+  or splitting them into "mine" and "published" queries first.
 - **`vacancies`**: read if `status=='published'` **without auth** (public page) OR
   owner/approved.
 - **`progress/{uid}`**: owner-only read/write in practice. The second read clause (members of
