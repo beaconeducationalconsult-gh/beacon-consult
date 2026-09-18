@@ -11,12 +11,14 @@ Checks per file:
   7. Placeholder vs rich metadata flag
   8. Counts vs embedded summary JSON (where present) and vs expected table
 """
-# --- resolve bare data filenames against data/ (see tools/_compat.py) ---
+# --- resolve bare data filenames against data/ (see scripts/_compat.py) ---
 import sys as _sys, pathlib as _pathlib
-_sys.path.insert(0, str(_pathlib.Path(__file__).resolve().parents[2] / "tools"))
+_sys.path.insert(0, str(_pathlib.Path(__file__).resolve().parents[1]))
 from _compat import open_compat; open_compat()
 # -----------------------------------------------------------------------
 import json, os, re, sys
+from pathlib import Path
+from _paths import find_data  # noqa: E402  (scripts/ is on sys.path)
 
 ROOT = str(Path(__file__).resolve().parents[2])
 CDB = os.path.join(ROOT, 'data/curriculum')
@@ -118,7 +120,12 @@ def audit_file(path, sid, grade):
 def main():
     jobs = []
     for f, sid in B1_ALIAS.items():
-        jobs.append((os.path.join(ROOT, f'{f}_curriculum_db_clean.json'), sid, 'B1'))
+        # Resolved through find_data, not joined onto ROOT: the B1 files used to
+        # sit in the repository root and now live in data/curriculum/ (several
+        # also exist only in data/reference/). A ROOT join silently produced
+        # eight "file not found" failures that looked like data corruption.
+        p = find_data(f'{f}_curriculum_db_clean.json')
+        jobs.append((str(p) if p else os.path.join(ROOT, f'{f}_curriculum_db_clean.json'), sid, 'B1'))
     for fn in sorted(os.listdir(CDB)):
         m = re.match(r'^(.+)_B(\d)_curriculum_db_clean\.json$', fn)
         if m:
@@ -135,7 +142,10 @@ def main():
         print(line)
         for i in r['issues']:
             print(f'      ! {i}')
-    json.dump(results, open(os.path.join(ROOT, 'audit_a_results.json'), 'w'), indent=1)
+    out = Path(ROOT) / 'data' / 'audit' / 'audit_a_results.json'   # ROOT is a str
+    out.parent.mkdir(parents=True, exist_ok=True)
+    json.dump(results, open(out, 'w'), indent=1)
+    print(f'wrote {out.relative_to(ROOT)}')
 
 if __name__ == '__main__':
     main()

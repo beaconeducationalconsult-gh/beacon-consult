@@ -1,7 +1,8 @@
 {
- "id": "computing",
- "name": "Computing",
- "grade": "B6",
- "sourceTitle": "NaCCA Computing Curriculum",
- "sourceUrl": ""
+  "id": "computing",
+  "name": "Computing",
+  "grade": "B6",
+  "sourceTitle": "NaCCA Computing Curriculum for Primary Schools (Basic 4-6)",
+  "sourceUrl": "https://nacca.gov.gh/wp-content/uploads/2019/04/COMPUTING-B4-B6.pdf",
+  "sourceVerified": false
 }

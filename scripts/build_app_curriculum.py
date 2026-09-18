@@ -94,6 +94,43 @@ def load_json(path):
     return json.loads(Path(path).read_text(encoding="utf-8"))
 
 
+def audited_pairs():
+    """(subjectId, grade) pairs that passed Audit A, from data/audit/.
+
+    Audit A is the structural check over data/curriculum/ whose expected counts
+    were verified against the official NaCCA PDFs. A subject-grade that never
+    appeared there has *not* been cross-checked, and the app must say so rather
+    than present it as equal to the rest — see docs/TODO.md P1-1 and
+    docs/curriculum-data.md.
+
+    Read from the audit output instead of a hand-kept list so the two cannot
+    drift apart.
+    """
+    p = ROOT / "data" / "audit" / "audit_a_results.json"
+    if not p.exists():
+        return set()
+    try:
+        rows = load_json(p)
+    except (OSError, ValueError):
+        return set()
+    out = set()
+    for r in rows if isinstance(rows, list) else []:
+        if isinstance(r, dict) and r.get("status") == "PASS":
+            sid = str(r.get("subject") or "").strip().lower()
+            grade = str(r.get("grade") or "").strip().upper()
+            if sid and grade:
+                out.add((sid, grade))
+    return out
+
+
+def source_dir_name(db_path):
+    """"curriculum" or "reference" — which copy of the DB we actually used."""
+    try:
+        return Path(db_path).parent.name
+    except (TypeError, AttributeError):
+        return ""
+
+
 def db_index():
     """Map (subjectId, grade) -> database path, for every DB we can find."""
     out = {}
@@ -242,6 +279,22 @@ def main():
     out_dir.mkdir(parents=True, exist_ok=True)
 
     dbs = db_index()
+    # Audit-A-PASS subject-grades. Anything outside this set is served but has
+    # never been cross-checked against its source; it is stamped `verified:
+    # false` so the app can say so.
+    audited = audited_pairs()
+    if audited:
+        by_dir = defaultdict(int)
+        for (sid, g), p in dbs.items():
+            if (sid, g) not in audited:
+                by_dir[source_dir_name(p)] += 1
+        if by_dir:
+            unaudited = sum(by_dir.values())
+            print(f"  note: {unaudited} subject-grade(s) are unaudited "
+                  f"({dict(by_dir)}) — stamped verified:false")
+    else:
+        print("  note: data/audit/audit_a_results.json not readable — "
+              "every subject-grade will be stamped verified:false")
     # Index lessons by *subject id*, not file key: two file keys (ghanaian,
     # ghanaian_language) resolve to the same subject id, and iterating by key
     # would count B1 Ghanaian Language twice.
@@ -294,6 +347,12 @@ def main():
                 "sourceTitle": summary.get("sourceTitle")
                                or f"NaCCA {grade} {sname} Curriculum",
                 "sourceUrl": summary.get("sourceUrl") or "",
+                # Whether this subject-grade has been cross-checked against its
+                # official source. False means "present, but not audited" —
+                # the UI says so instead of implying the same standing as the
+                # rest. Derived from the audit output, not a hand-kept list.
+                "verified": (sid, grade) in audited,
+                "source": source_dir_name(db_path),
                 "hasSchedule": has_schedule,
                 "counts": counts or {
                     "strands": 0, "subStrands": 0, "standards": 0, "indicators": 0,

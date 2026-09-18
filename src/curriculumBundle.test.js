@@ -113,8 +113,70 @@ describe.each(ids)('%s', (grade) => {
   })
 })
 
-describe('known gaps stay known', () => {
-  it('has no schedules file for the kindergarten grades', () => {
+  describe('provenance', () => {
+    const all = [...bundle.values()].flatMap((b) => b.subjects)
+
+    it('names the official source for every served subject', () => {
+      // Eight summaries shipped with an empty sourceUrl and no counts block:
+      // computing and french B4–B6, and both kindergarten grades. Nobody could
+      // tell where the data came from, which is why they could never be
+      // audited. Every subject now names its source.
+      const missing = all.filter((s) => !s.sourceUrl).map((s) => `${s.grade} ${s.id}`)
+      expect(missing).toEqual([])
+    })
+
+    it('states, on every subject, whether the source has been checked', () => {
+      // `verified` is stamped by the build from the Audit-A results, so it
+      // cannot silently go missing — an absent field would read as "fine" in
+      // any `s.verified === false` check in the UI.
+      const unstated = all.filter((s) => typeof s.verified !== 'boolean')
+      expect(unstated.map((s) => `${s.grade} ${s.id}`)).toEqual([])
+    })
+
+    it('still flags exactly the eight unaudited subject-grades', () => {
+      const unverified = all
+        .filter((s) => s.verified === false)
+        .map((s) => `${s.grade} ${s.id}`)
+        .sort()
+      expect(unverified).toEqual([
+        'B4 computing',
+        'B4 french',
+        'B5 computing',
+        'B5 french',
+        'B6 computing',
+        'B6 french',
+        'KG1 kindergarten',
+        'KG2 kindergarten',
+      ])
+    })
+
+    it('serves the unaudited ones from the reference copy', () => {
+      // They exist only in data/reference/, so the build's search order falls
+      // back to that copy. If one is ever promoted into data/curriculum/ the
+      // `source` changes, and this test is the reminder to audit it properly
+      // (TODO P1-1) rather than to quietly widen the exception.
+      for (const s of all.filter((x) => x.verified === false)) {
+        expect(s.source, `${s.grade} ${s.id}`).toBe('reference')
+      }
+    })
+
+    it('has exactly one audited subject whose source copy is missing', () => {
+      // english-language B5 passed Audit A before the data restructure, and its
+      // database now exists only in data/reference/ — so the audit can no longer
+      // be re-run for it. Its result stands (nobody re-decided that it is fine),
+      // but the file should be promoted into data/curriculum/ and re-audited.
+      //
+      // Named explicitly rather than allowed in general: this is a known,
+      // explained gap, and a second one appearing is a change worth noticing.
+      const auditedFromReference = all
+        .filter((s) => s.verified === true && s.source !== 'curriculum')
+        .map((s) => `${s.grade} ${s.id}`)
+      expect(auditedFromReference).toEqual(['B5 english-language'])
+    })
+  })
+
+  describe('known gaps stay known', () => {
+    it('has no schedules file for the kindergarten grades', () => {
     const kg = grades.filter((g) => g.id.startsWith('KG'))
     for (const grade of kg) expect(grade.hasSchedules).toEqual([])
 

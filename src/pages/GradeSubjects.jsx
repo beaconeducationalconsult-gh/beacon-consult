@@ -30,6 +30,11 @@ export default function GradeSubjects() {
     counts.set(indicator.subjectId, (counts.get(indicator.subjectId) || 0) + 1)
   }
 
+  // Subjects in the bundle that never passed the source cross-check. Eight of
+  // the served subject-grades are in this state (see docs/TODO.md P1-1); the
+  // app says so rather than presenting them as equal to the rest.
+  const unverified = subjects.filter((s) => s.verified === false)
+
   return (
     <div>
       <Link
@@ -39,15 +44,22 @@ export default function GradeSubjects() {
         ← All grades
       </Link>
 
-      <header className="mb-8">
-        <p className="section-heading">{gradeBand(grade)}</p>
-        <h1 className="page-title mt-1">{gradeLabel(grade)}</h1>
-        <p className="page-subtitle">
-          {subjects.length
-            ? `${subjects.length} subject${subjects.length === 1 ? '' : 's'} · ${indicators.length} indicators`
-            : 'Pick a subject to browse its strands, sub-strands and indicators.'}
-        </p>
-      </header>
+        <header className="mb-8">
+          <p className="section-heading">{gradeBand(grade)}</p>
+          <h1 className="page-title mt-1">{gradeLabel(grade)}</h1>
+          <p className="page-subtitle">
+            {subjects.length
+              ? `${subjects.length} subject${subjects.length === 1 ? '' : 's'} · ${indicators.length} indicators`
+              : 'Pick a subject to browse its strands, sub-strands and indicators.'}
+          </p>
+          {unverified.length > 0 && (
+            <p className="mt-2 text-xs text-amber-700">
+              {unverified.length === 1 ? 'One subject here has' : `${unverified.length} subjects here have`} not
+              been cross-checked against the official NaCCA PDF yet, so treat the wording of
+              {unverified.length === 1 ? ' its' : ' their'} indicators as provisional.
+            </p>
+          )}
+        </header>
 
       {loading && <SkeletonGrid items={6} />}
 
@@ -84,7 +96,10 @@ export default function GradeSubjects() {
                   {subject.counts?.strands != null && (
                     <span className="card-meta mt-0.5 block">{subject.counts.strands} strands</span>
                   )}
-                  {!subject.hasSchedule && <span className="card-meta mt-1 block">No schedule</span>}
+                    {!subject.hasSchedule && <span className="card-meta mt-1 block">No schedule</span>}
+                    {subject.verified === false && (
+                      <span className="mt-1 block text-xs text-amber-700">Unverified source</span>
+                    )}
                 </span>
               </Link>
             )

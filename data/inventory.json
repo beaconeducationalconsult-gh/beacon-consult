@@ -253,7 +253,6 @@
    "english-language B4: L1 database english-language_B4_curriculum_db_clean.json has no summary (no source URL, no counts)",
    "english-language B5: L1 has a summary but no database in data/curriculum/ (the database only exists in data/reference/)",
    "mathematics B1: L1 database math_curriculum_db_clean.json has no summary (no source URL, no counts)",
-   "science B1: L1 database science_curriculum_db_clean.json has no summary (no source URL, no counts)",
    "8 app-bundle subject-grades exist ONLY in data/reference/ and have no audited L1 counterpart: computing B4, computing B5, computing B6, french B4, french B5, french B6, kindergarten KG1, kindergarten KG2",
    "data/reference/ has 8 summary files with no counts block (e.g. computing_B4_curriculum_summary.json)"
   ]
@@ -2221,14 +2220,14 @@
   {
    "grade": "B1",
    "l1Indicators": 31,
-   "l1SummaryIndicators": null,
+   "l1SummaryIndicators": 31,
    "l2IndicatorsScheduled": 31,
    "l2LessonSlots": 180,
    "l3BundleIndicators": 31,
    "refIndicators": 31,
    "referenceOnly": false,
    "subjectId": "science",
-   "subjectName": "science"
+   "subjectName": "Science"
   },
   {
    "grade": "B2",
@@ -2655,7 +2654,7 @@
    ],
    "l2LessonSlots": 1620,
    "l3Indicators": 312,
-   "name": "science"
+   "name": "Science"
   },
   {
    "grades": [
@@ -2683,11 +2682,10 @@
    "label": "curriculum",
    "pairsWithoutSummary": [
     "english-language B4",
-    "mathematics B1",
-    "science B1"
+    "mathematics B1"
    ],
    "subjectGrades": 76,
-   "summaries": 73,
+   "summaries": 74,
    "summaryOnlyPairs": [
     "english-language B5"
    ]

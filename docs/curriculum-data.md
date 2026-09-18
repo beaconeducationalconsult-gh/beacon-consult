@@ -119,10 +119,31 @@ Built by `scripts/build_app_curriculum.py`; validated by
 | File | Purpose |
 |---|---|
 | `grades.json` | one entry per grade: subject count, indicator count, whether schedules exist |
-| `<grade>_subjects.json` | subjects for a grade + counts |
+| `<grade>_subjects.json` | subjects for a grade + counts, `sourceUrl`, and the `verified`/`source` provenance pair |
 | `<grade>_indicators.json` | flat indicators, full hierarchy, the only file the generator reads |
 | `<grade>_schedules.json` | every scheduled lesson: term/week/day + phases (largest files, 3–5 MB each) |
 | `<grade>_schemes.json` | scheme rows per subject per term |
+
+### Provenance on every served subject
+
+Each entry in `<grade>_subjects.json` carries two fields the build derives rather than
+hand-maintains, so they cannot drift:
+
+- **`source`** — which copy of the database the subject actually came from,
+  `curriculum` (the audited set in `data/curriculum/`) or `reference` (the second copy in
+  `data/reference/`, reached by the `DB_SEARCH` fallback in `scripts/_paths.py`).
+- **`verified`** — whether the subject-grade appears in the Audit A results
+  (`data/audit/audit_a_results.json`) with `status: PASS`. Audit A's expected counts were
+  verified against the official NaCCA PDFs, so this means "cross-checked against its
+  source", not merely "loaded successfully".
+
+Eight subject-grades are `verified: false` — computing B4–B6, french B4–B6 and KG1–KG2 —
+because they exist only in `data/reference/` and were never in Audit A's scope. Their
+summaries now cite the official NaCCA PDFs, but their contents have not been checked
+against them. `GradeSubjects` and `SubjectSelect` say so in the UI, and
+`src/curriculumBundle.test.js` pins the list so a new unaudited subject cannot appear
+unnoticed. See TODO P1-1 (and P1-9 for `english-language B5`, which is audited but whose
+database now lives only in the reference copy).
 
 Notes and known gaps:
 
