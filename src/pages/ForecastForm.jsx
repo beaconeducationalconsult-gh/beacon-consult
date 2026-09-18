@@ -30,7 +30,7 @@ export default function ForecastForm() {
   const [saving, setSaving] = useState(false)
 
   const { subjects, loading: loadingSubjects, error: subjectsError } = useCurriculum(grade)
-  const { lessons, loading: loadingSchedule } = useSchedules(grade)
+  const { lessons, loading: loadingSchedule, error: scheduleError } = useSchedules(grade)
 
   // Editing: load the stored scheme instead of the template.
   useEffect(() => {
@@ -186,7 +186,9 @@ export default function ForecastForm() {
           </div>
           {!loadingSchedule && subjectId && templateRows.length === 0 && (
             <p className="text-sm text-amber-700">
-              No curriculum schedule exists for this subject and grade yet — start blank and fill it in yourself.
+              {scheduleError
+                ? 'The curriculum schedule for this grade could not be loaded — check your connection and reload, or start blank.'
+                : 'No curriculum schedule exists for this subject and grade yet — start blank and fill it in yourself.'}
             </p>
           )}
         </div>

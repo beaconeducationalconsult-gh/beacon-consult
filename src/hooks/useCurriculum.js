@@ -25,7 +25,13 @@ const curriculumFile = (name) => `${BASE_URL}curriculum/${name}`
 function loadJson(path, store) {
   if (store.has(path)) return store.get(path)
   const promise = fetch(path).then((res) => {
-    if (!res.ok) throw new Error(`Could not load ${path} (HTTP ${res.status})`)
+    if (!res.ok) {
+      // Carry the status so callers can tell "this file does not exist"
+      // (404 — normal for grades without schedules) from a real failure.
+      const error = new Error(`Could not load ${path} (HTTP ${res.status})`)
+      error.status = res.status
+      throw error
+    }
     return res.json()
   })
   store.set(path, promise)
@@ -88,23 +94,31 @@ export function useCurriculum(grade = 'B1') {
 }
 
 export function useSchedules(grade) {
-  const [state, setState] = useState({ grade: null, loading: true, lessons: [] })
+  const [state, setState] = useState({ grade: null, loading: true, lessons: [], error: null })
 
   useEffect(() => {
     if (!grade) return undefined
     let active = true
     loadJson(gradeFile(grade, 'schedules'), scheduleCache)
-      .then((lessons) => active && setState({ grade, loading: false, lessons }))
-      // A grade without schedules is normal (KG1/KG2) — not an error.
-      .catch(() => active && setState({ grade, loading: false, lessons: [] }))
+      .then((lessons) => active && setState({ grade, loading: false, lessons, error: null }))
+      .catch((error) => {
+        // A grade without a schedules file is normal (KG1/KG2 have none) —
+        // anything else is a real failure and must not look like "no data".
+        const absent = error?.status === 404
+        active && setState({ grade, loading: false, lessons: [], error: absent ? null : error })
+      })
     return () => {
       active = false
     }
   }, [grade])
 
-  if (!grade) return { loading: false, lessons: [] }
+  if (!grade) return { loading: false, lessons: [], error: null }
   const stale = state.grade !== grade
-  return { loading: stale || state.loading, lessons: stale ? [] : state.lessons }
+  return {
+    loading: stale || state.loading,
+    lessons: stale ? [] : state.lessons,
+    error: stale ? null : state.error,
+  }
 }
 
 /** True while an indicator is still an extraction placeholder. */

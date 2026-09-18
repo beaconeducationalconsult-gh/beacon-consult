@@ -19,6 +19,7 @@ import PublicArticleView from './pages/PublicArticleView'
 // Portal pages — lazy so the public landing stays small.
 const Feed = lazy(() => import('./pages/Feed'))
 const Curriculum = lazy(() => import('./pages/Curriculum'))
+const GradeSubjects = lazy(() => import('./pages/GradeSubjects'))
 const SubjectBrowser = lazy(() => import('./pages/SubjectBrowser'))
 const Wisdom = lazy(() => import('./pages/Wisdom'))
 const Articles = lazy(() => import('./pages/Articles'))
@@ -105,7 +106,8 @@ export default function App() {
       <Route path="/portal" element={<ProtectedLayout />}>
         <Route index element={<Feed />} />
         <Route path="curriculum" element={<Curriculum />} />
-        <Route path="curriculum/:subjectId" element={<SubjectBrowser />} />
+        <Route path="curriculum/:gradeId" element={<GradeSubjects />} />
+        <Route path="curriculum/:gradeId/:subjectId" element={<SubjectBrowser />} />
         <Route path="wisdom" element={<Wisdom />} />
 
         <Route path="articles" element={<Articles />} />
