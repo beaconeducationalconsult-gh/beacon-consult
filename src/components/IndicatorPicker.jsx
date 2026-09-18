@@ -9,7 +9,7 @@ import { Skeleton } from './Skeleton'
  * Extracted from LessonPlanForm — see docs/analysis/FINAL ANALYSIS.md.
  */
 export default function IndicatorPicker({ grade, subjectId, selected = [], onChange }) {
-  const { indicators, loading } = useCurriculum(grade)
+  const { indicators, loading, error } = useCurriculum(grade)
   const [search, setSearch] = useState('')
   const [expandedStrand, setExpandedStrand] = useState(null)
 
@@ -57,6 +57,16 @@ export default function IndicatorPicker({ grade, subjectId, selected = [], onCha
   }
 
   if (loading) return <Skeleton className="h-40" />
+
+  // An empty list and a failed fetch looked identical here: both fell through to
+  // "No indicators match that search." Say which one it is.
+  if (error) {
+    return (
+      <p role="alert" className="rounded-lg border border-amber-200 bg-amber-50 p-3 text-sm text-amber-800">
+        Could not load the {gradeLabel(grade)} indicators. Check your connection, then reopen this form.
+      </p>
+    )
+  }
 
   return (
     <div>

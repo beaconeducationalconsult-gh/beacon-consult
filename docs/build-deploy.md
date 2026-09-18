@@ -61,9 +61,15 @@ path serves `index.html` (client-side routing). Push to the tracked branch → a
 firebase deploy --only firestore:rules,firestore:indexes
 ```
 
-`firebase.json` points at both files. There's no `.firebaserc` committed — pass
-`--project <id>` if the CLI can't resolve the project. **A committed-but-undeployed rule
-change has no effect in production.**
+`firebase.json` points at both files and `.firebaserc` pins the project
+(`beacon-educational-consu-8005e`), so no `--project` flag is needed. `make deploy-rules`
+runs the command above. **A committed-but-undeployed rule change has no effect in
+production.**
+
+Pasting the rules into the Firebase console works too, and is the fastest way to unblock a
+fresh project — but copy from this repo's `firestore.rules`, never from a chat message or a
+design doc, or the console copy and the repo drift with nothing to detect it. Re-run the CLI
+deploy the next time you touch the file.
 
 ## Local verification loop
 

@@ -6,6 +6,7 @@ import { useAuth } from '../context/AuthContext'
 import { useToast } from '../context/ToastContext'
 import { useCollection } from '../hooks/useCollection'
 import { SkeletonList } from '../components/Skeleton'
+import DataError from '../components/DataError'
 import EmptyState from '../components/EmptyState'
 import ConfirmModal from '../components/ConfirmModal'
 import NotesTabs from '../components/NotesTabs'
@@ -15,7 +16,7 @@ export default function Articles() {
   const { user, isAdmin } = useAuth()
   const toast = useToast()
   const [scope, setScope] = useState('all')
-  const { rows, loading } = useCollection('articles', { max: 60 })
+  const { rows, loading, error } = useCollection('articles', { max: 60 })
   const [pendingDelete, setPendingDelete] = useState(null)
 
   const visible = scope === 'mine' ? rows.filter((a) => a.authorId === user.uid) : rows
@@ -50,8 +51,9 @@ export default function Articles() {
         onChange={setScope}
       />
 
-      {loading && <SkeletonList rows={3} />}
-      {!loading && visible.length === 0 && (
+      {error && <DataError what="articles" error={error} />}
+{loading && <SkeletonList rows={3} />}
+      {!loading && !error && visible.length === 0 && (
         <EmptyState
           title={scope === 'mine' ? 'You have not written an article yet' : 'No articles yet'}
           message="Articles are longer, edited pieces — different from feed posts."

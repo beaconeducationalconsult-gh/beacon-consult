@@ -4,6 +4,7 @@ import { useDoc } from '../hooks/useCollection'
 import { useAuth } from '../context/AuthContext'
 import { useToast } from '../context/ToastContext'
 import { SkeletonList } from '../components/Skeleton'
+import DataError from '../components/DataError'
 import EmptyState from '../components/EmptyState'
 import { downloadSchemeDocx } from '../lib/schemeDocx'
 import { downloadSchemePdf } from '../lib/schemePdf'
@@ -11,12 +12,13 @@ import { gradeLabel } from '../lib/grades'
 
 export default function ForecastView() {
   const { forecastId } = useParams()
-  const { row: scheme, loading } = useDoc('weekly_forecasts', forecastId)
+  const { row: scheme, loading, error } = useDoc('weekly_forecasts', forecastId)
   const { user, profile, isAdmin } = useAuth()
   const toast = useToast()
   const [busy, setBusy] = useState(null)
 
   if (loading) return <SkeletonList rows={2} />
+  if (error) return <DataError what="this scheme" error={error} />
   if (!scheme) {
     return (
       <EmptyState

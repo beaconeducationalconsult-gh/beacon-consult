@@ -2,12 +2,14 @@ import { useState } from 'react'
 import { ACADEMIC_YEAR, TERMS, fmtDate, getAcademicStatus, termProgress, termWeek } from '../lib/academicCalendar'
 import { GRADES, gradeLabel } from '../lib/grades'
 import { useSchedules } from '../hooks/useCurriculum'
+import { SkeletonList } from '../components/Skeleton'
+import EmptyState from '../components/EmptyState'
 
 /** Term calendar for a class, merged with the department's static calendar. */
 export default function Calendar() {
   const [grade, setGrade] = useState('B1')
   const [term, setTerm] = useState(1)
-  const { lessons } = useSchedules(grade)
+  const { lessons, loading: loadingSchedule, error: scheduleError } = useSchedules(grade)
   const status = getAcademicStatus()
   const selected = TERMS.find((t) => t.term === Number(term))
 
@@ -59,6 +61,23 @@ export default function Calendar() {
         )}
       </div>
 
+      {loadingSchedule && <SkeletonList rows={4} />}
+
+      {!loadingSchedule && scheduleError && (
+        <EmptyState
+          title={`Could not load the ${gradeLabel(grade)} schedule`}
+          message="The curriculum schedule could not be fetched. Check your connection and reload."
+        />
+      )}
+
+      {!loadingSchedule && !scheduleError && lessons.length === 0 && (
+        <EmptyState
+          title={`No schedule for ${gradeLabel(grade)}`}
+          message="Kindergarten grades have no scheduled lessons in the curriculum bundle."
+        />
+      )}
+
+      {!loadingSchedule && !scheduleError && lessons.length > 0 && (
       <ol className="space-y-3">
         {Array.from({ length: 14 }, (_, i) => i + 1).map((week) => {
           const scheduled = byWeek.get(week) || []
@@ -85,6 +104,7 @@ export default function Calendar() {
           )
         })}
       </ol>
+      )}
     </div>
   )
 }

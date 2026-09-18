@@ -8,6 +8,7 @@ import { useDoc } from '../hooks/useCollection'
 import { useAuth } from '../context/AuthContext'
 import { useToast } from '../context/ToastContext'
 import { SkeletonList } from '../components/Skeleton'
+import DataError from '../components/DataError'
 import EmptyState from '../components/EmptyState'
 import { gradeLabel } from '../lib/grades'
 import { fmtDate } from '../lib/academicCalendar'
@@ -15,7 +16,7 @@ import { fmtDate } from '../lib/academicCalendar'
 /** A note plus its comment thread (subcollection `comments`). */
 export default function NoteView() {
   const { noteId } = useParams()
-  const { row: note, loading } = useDoc('notes', noteId)
+  const { row: note, loading, error } = useDoc('notes', noteId)
   const { user, profile, isAdmin } = useAuth()
   const toast = useToast()
   const [comments, setComments] = useState(null)
@@ -64,6 +65,7 @@ export default function NoteView() {
   }
 
   if (loading) return <SkeletonList rows={2} />
+  if (error) return <DataError what="this note" error={error} />
   if (!note) {
     return (
       <EmptyState

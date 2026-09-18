@@ -3,11 +3,34 @@
 Things that will bite you. Verified against the code in this repository — each entry below
 is an **open** issue; when one is fixed, delete it.
 
+## 🔴 A read rule that inspects document fields breaks list queries
+
+Firestore is not a filter. For a `list`, the rules must be provable for **every** document the
+query could return, so a read rule that depends on document data denies the *whole query* — not
+just the documents that fail it. The client then sees `permission-denied` on a page that should
+simply show fewer rows.
+
+This bit us in production. `isApprovedOrAdmin() && (status == 'published' || isOwner(...))` on
+`notes`, `lesson_plans`, `weekly_forecasts` and `lesson_slides` broke every un-filtered list in
+`src/pages/` — **for ordinary members only**. Admins pass every branch, so an admin testing the
+portal sees it working.
+
+A read rule needs one disjunct that holds regardless of the document, and is true for a member:
+`isApprovedOrAdmin()`, `isApproved()` or `isSignedIn()`. `isAdmin()` is document-independent but
+false for a member, so it does not rescue the query. Where a rule genuinely must gate on a field
+(like `articles.visibility == 'public'` for the anonymous public page), the *query* has to carry
+a matching `where(...)` — see `PublicArticles.jsx`.
+
+`src/firestoreRules.test.js` fails if a collection the client lists un-filtered loses its
+document-independent branch.
+
 ## 🟠 Committed rules ≠ deployed rules
 Vercel does **not** deploy Firestore rules/indexes. Editing `firestore.rules` and pushing
 changes nothing in production until `firebase deploy --only firestore:rules,firestore:indexes`
 runs. This is the most common "it works locally / on my emulator but 403s in prod" cause.
-(There's no `.firebaserc` — you may need `--project <id>`.)
+`.firebaserc` pins the project (`beacon-educational-consu-8005e`); `make deploy-rules`
+runs it. Note that rules pasted into the Firebase console are **not** version-controlled:
+the console and `firestore.rules` can silently disagree, and only the repo file is reviewed.
 
 ## 🟠 Env vars are required at build time
 `VITE_FIREBASE_*` are embedded at build time. Without a `.env.local` (or the equivalent

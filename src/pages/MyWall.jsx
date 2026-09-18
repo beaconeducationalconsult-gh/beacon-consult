@@ -14,7 +14,7 @@ const SECTIONS = [
 ]
 
 function Section({ collection, label, to, all, uid }) {
-  const { rows, loading } = useCollection(collection, { filters: [['authorId', '==', uid]], max: 20 })
+  const { rows, loading, error } = useCollection(collection, { filters: [['authorId', '==', uid]], max: 20 })
   return (
     <section className="card p-5">
       <div className="flex items-center justify-between">
@@ -22,7 +22,10 @@ function Section({ collection, label, to, all, uid }) {
         <span className="chip">{rows.length}</span>
       </div>
       {loading && <SkeletonList rows={1} />}
-      {!loading && rows.length === 0 && <p className="card-meta mt-2">Nothing here yet.</p>}
+      {!loading && error && (
+        <p className="card-meta mt-2 text-rose-700">Could not load your {label.toLowerCase()} ({error.code || 'error'}).</p>
+      )}
+      {!loading && !error && rows.length === 0 && <p className="card-meta mt-2">Nothing here yet.</p>}
       <ul className="mt-3 space-y-2">
         {rows.slice(0, 5).map((row) => (
           <li key={row.id} className="text-sm">

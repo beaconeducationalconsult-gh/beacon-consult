@@ -2,15 +2,17 @@ import { Link, useParams } from 'react-router-dom'
 import { useDoc } from '../hooks/useCollection'
 import { useAuth } from '../context/AuthContext'
 import { SkeletonList } from '../components/Skeleton'
+import DataError from '../components/DataError'
 import EmptyState from '../components/EmptyState'
 import { fmtDate } from '../lib/academicCalendar'
 
 export default function ArticleView() {
   const { articleId } = useParams()
-  const { row: article, loading } = useDoc('articles', articleId)
+  const { row: article, loading, error } = useDoc('articles', articleId)
   const { user, isAdmin } = useAuth()
 
   if (loading) return <SkeletonList rows={2} />
+  if (error) return <DataError what="articles" error={error} />
   if (!article) {
     return (
       <EmptyState
