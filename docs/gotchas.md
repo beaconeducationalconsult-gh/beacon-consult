@@ -7,7 +7,9 @@ is an **open** issue; when one is fixed, delete it.
 Vercel does **not** deploy Firestore rules/indexes. Editing `firestore.rules` and pushing
 changes nothing in production until `firebase deploy --only firestore:rules,firestore:indexes`
 runs. This is the most common "it works locally / on my emulator but 403s in prod" cause.
-(There's no `.firebaserc` — you may need `--project <id>`.)
+`.firebaserc` pins the project (`beacon-educational-consu-8005e`); `make deploy-rules`
+runs it. Note that rules pasted into the Firebase console are **not** version-controlled:
+the console and `firestore.rules` can silently disagree, and only the repo file is reviewed.
 
 ## 🟠 Env vars are required at build time
 `VITE_FIREBASE_*` are embedded at build time. Without a `.env.local` (or the equivalent

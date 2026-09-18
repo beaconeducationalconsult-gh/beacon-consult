@@ -26,7 +26,7 @@ additionally fails if `data/inventory.json` is stale.
 | # | Item | Why | Size |
 |---|------|-----|------|
 | P0-1 | **Configure Firebase**: copy `.env.example` → `.env.local` with the six `VITE_FIREBASE_*` values, and set the same on Vercel (Production + Preview) | Vite embeds these at build time. Without them the build is green and every Firebase call fails at runtime — no login, no content | S |
-| P0-2 | **Deploy rules + indexes, and commit a `.firebaserc`**: `firebase deploy --only firestore:rules,firestore:indexes` | Committed rules are not deployed rules; production denies every read until this runs. `.firebaserc` is missing, so the CLI needs `--project <id>` by hand | S |
+| P0-2 | **Deploy rules + indexes**: `make deploy-rules` (or paste `firestore.rules` into the console). `.firebaserc` is committed and pins `beacon-educational-consu-8005e` | Committed rules are not deployed rules; production denies every read until this runs. **This is the current blocker** — until it runs, every page shows the `DataError` "permission-denied" state rather than data | S |
 | P0-3 | **Bootstrap the first admin**: create an account, then set `role: 'admin'` on its `users/{uid}` doc in the Firebase console | Sign-up creates `status: 'pending'` and only an admin can approve — without one user, nobody can ever get in | S |
 | P0-4 | **Drive the real flows once deployed** (the code bible's Phase 7): sign up → approve → create → view → edit → delete for a scheme, a plan, a question, and a note; check offline behavior with `yarn build && yarn preview` | A green build proves nothing about rules, indexes, or the service worker | M |
 

@@ -115,9 +115,9 @@ Rules and indexes are **not** deployed by Vercel. After changing `firestore.rule
 firebase deploy --only firestore:rules,firestore:indexes
 ```
 
-(There is no `.firebaserc` committed — add `--project <id>` if the CLI can't resolve the
-project.) A committed rules change that hasn't been deployed does **nothing** in
-production.
+`.firebaserc` pins the project (`beacon-educational-consu-8005e`), so the CLI resolves it
+without a `--project` flag; `make deploy-rules` wraps the command. A committed rules change
+that hasn't been deployed does **nothing** in production.
 
 **Pasting into the Firebase console also works**, and is the fastest way to unblock a fresh
 project — but copy from this repo's `firestore.rules`, never from a chat message or a design

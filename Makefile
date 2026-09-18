@@ -1,4 +1,4 @@
-.PHONY: install inventory audit check dev build lint test preview books book-skeleton boot-check list-modules build-curriculum validate-curriculum generate-schemes generate-records package-books
+.PHONY: install inventory audit check dev build lint test preview deploy-rules books book-skeleton boot-check list-modules build-curriculum validate-curriculum generate-schemes generate-records package-books
 
 # ── Frontend (React + Vite + Yarn 4) ────────────────────────────────────────
 # The portal lives at the repository root. Node 22+ and Yarn 4 are required:
@@ -34,6 +34,17 @@ test:
 # that does not join up fails here rather than in a teacher's browser.
 check: lint test validate-curriculum inventory
 	$(YARN) build
+
+# ── Firebase (rules + indexes) ──────────────────────────────────────────────
+# .firebaserc pins the project, so no --project flag is needed.
+# Override with: make deploy-rules FIREBASE=/path/to/firebase
+#
+# Run `make check` first — this pushes the rules that enforce everything the
+# app does, and a bad publish locks every member out of production.
+FIREBASE ?= firebase
+
+deploy-rules:
+	$(FIREBASE) deploy --only firestore:rules,firestore:indexes
 
 # ── Dataset audit ───────────────────────────────────────────────────────────
 # `make inventory` derives every headline number from data/ and separates:
