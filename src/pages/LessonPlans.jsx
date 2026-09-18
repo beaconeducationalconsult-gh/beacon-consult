@@ -6,6 +6,7 @@ import { useAuth } from '../context/AuthContext'
 import { useToast } from '../context/ToastContext'
 import { useCollection } from '../hooks/useCollection'
 import { SkeletonList } from '../components/Skeleton'
+import DataError from '../components/DataError'
 import EmptyState from '../components/EmptyState'
 import ConfirmModal from '../components/ConfirmModal'
 import NotesTabs from '../components/NotesTabs'
@@ -16,7 +17,7 @@ export default function LessonPlans() {
   const { user, isAdmin } = useAuth()
   const toast = useToast()
   const [scope, setScope] = useState('mine')
-  const { rows, loading } = useCollection('lesson_plans', { max: 80 })
+  const { rows, loading, error } = useCollection('lesson_plans', { max: 80 })
   const [pendingDelete, setPendingDelete] = useState(null)
 
   const mine = rows.filter((r) => r.authorId === user.uid)
@@ -57,8 +58,9 @@ export default function LessonPlans() {
         onChange={setScope}
       />
 
-      {loading && <SkeletonList rows={3} />}
-      {!loading && visible.length === 0 && (
+      {error && <DataError what="lesson plans" error={error} />}
+{loading && <SkeletonList rows={3} />}
+      {!loading && !error && visible.length === 0 && (
         <EmptyState
           title={scope === 'mine' ? 'No plans yet' : 'Nothing shared here yet'}
           message="Open the curriculum browser and choose an indicator to build a plan around it."

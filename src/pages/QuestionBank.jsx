@@ -6,6 +6,7 @@ import { useAuth } from '../context/AuthContext'
 import { useToast } from '../context/ToastContext'
 import { useCollection } from '../hooks/useCollection'
 import { SkeletonList } from '../components/Skeleton'
+import DataError from '../components/DataError'
 import EmptyState from '../components/EmptyState'
 import ConfirmModal from '../components/ConfirmModal'
 import NotesTabs from '../components/NotesTabs'
@@ -23,7 +24,7 @@ export default function QuestionBank() {
   const [type, setType] = useState('')
   const [selected, setSelected] = useState([])
   const [pendingDelete, setPendingDelete] = useState(null)
-  const { rows, loading } = useCollection('questions', { max: 200 })
+  const { rows, loading, error } = useCollection('questions', { max: 200 })
 
   const visible = useMemo(
     () =>
@@ -111,8 +112,9 @@ export default function QuestionBank() {
         </div>
       )}
 
-      {loading && <SkeletonList rows={4} />}
-      {!loading && visible.length === 0 && (
+      {error && <DataError what="questions" error={error} />}
+{loading && <SkeletonList rows={4} />}
+      {!loading && !error && visible.length === 0 && (
         <EmptyState
           title="No questions here yet"
           message="Add questions by hand, or generate them from an indicator and edit before saving."

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { useCollection } from '../hooks/useCollection'
 import { useToast } from '../context/ToastContext'
 import { SkeletonList } from '../components/Skeleton'
+import DataError from '../components/DataError'
 import EmptyState from '../components/EmptyState'
 import { downloadQuizPptx } from '../lib/quizPptx'
 import { downloadQuestionPaper } from '../lib/questionPaper'
@@ -14,7 +15,7 @@ export default function QuizMaker() {
   const [selected, setSelected] = useState([])
   const [title, setTitle] = useState('Class quiz')
   const [busy, setBusy] = useState(false)
-  const { rows, loading } = useCollection('questions', { max: 200 })
+  const { rows, loading, error } = useCollection('questions', { max: 200 })
 
   const chosen = useMemo(() => rows.filter((q) => selected.includes(q.id)), [rows, selected])
   const totalMarks = chosen.reduce((sum, q) => sum + (Number(q.marks) || 1), 0)
@@ -80,8 +81,9 @@ export default function QuizMaker() {
         </p>
       </div>
 
-      {loading && <SkeletonList rows={4} />}
-      {!loading && rows.length === 0 && (
+      {error && <DataError what="questions" error={error} />}
+{loading && <SkeletonList rows={4} />}
+      {!loading && !error && rows.length === 0 && (
         <EmptyState
           title="The bank is empty"
           message="Add questions first, then come back to build a quiz."

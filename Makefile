@@ -1,4 +1,4 @@
-.PHONY: install inventory audit check dev build lint preview books book-skeleton boot-check list-modules build-curriculum validate-curriculum generate-schemes generate-records package-books
+.PHONY: install inventory audit check dev build lint test preview books book-skeleton boot-check list-modules build-curriculum validate-curriculum generate-schemes generate-records package-books
 
 # ── Frontend (React + Vite + Yarn 4) ────────────────────────────────────────
 # The portal lives at the repository root. Node 22+ and Yarn 4 are required:
@@ -22,11 +22,17 @@ preview:
 lint:
 	$(YARN) lint
 
+# Unit tests + contract tests over the committed curriculum bundle (vitest).
+test:
+	$(YARN) test
+
 # ── Everything that must pass before a deploy ───────────────────────────────
 # The build is included so that "yarn build fails" cannot be discovered for the
 # first time in production, and the audit is included because an inventory
 # *error* means the portal would serve part of the dataset it cannot source.
-check: lint validate-curriculum inventory
+# The tests include contract checks over public/curriculum itself, so a bundle
+# that does not join up fails here rather than in a teacher's browser.
+check: lint test validate-curriculum inventory
 	$(YARN) build
 
 # ── Dataset audit ───────────────────────────────────────────────────────────

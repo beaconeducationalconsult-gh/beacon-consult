@@ -47,9 +47,15 @@ export function fmtDate(value) {
 /** Kept out of component bodies so render stays pure. */
 export const currentYear = () => new Date().getFullYear()
 
-export function daysUntil(value) {
+/**
+ * Whole days from `from` (default: now) until `value`. Negative once past.
+ *
+ * `from` is explicit so callers that already know "now" — and tests — do not
+ * silently measure against the real clock.
+ */
+export function daysUntil(value, from = new Date()) {
   const target = startOfDay(value instanceof Date ? value : new Date(value))
-  return Math.round((target - startOfDay(new Date())) / DAY)
+  return Math.round((target - startOfDay(from)) / DAY)
 }
 
 /** Where we are in the school year: in term, on holiday, or before it starts. */
@@ -62,7 +68,8 @@ export function getAcademicStatus(today = new Date()) {
       return { state: 'in-term', term, daysUntilStart: 0, daysRemaining: Math.round((end - now) / DAY) }
     }
     if (now < start) {
-      return { state: 'before-term', term, daysUntilStart: daysUntil(start), daysRemaining: 0 }
+      // Measured from the `today` this call was given, not from the real clock.
+      return { state: 'before-term', term, daysUntilStart: Math.round((start - now) / DAY), daysRemaining: 0 }
     }
   }
   return { state: 'holiday', term: null, daysUntilStart: null, daysRemaining: 0, next: TERMS[0] }

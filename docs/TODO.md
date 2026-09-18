@@ -11,9 +11,13 @@ pending. Nothing in `src/` imports `legacy/`.
 **Verify state at any time with:**
 
 ```bash
-make check     # lint + validate-curriculum + production build
+make check     # lint + tests + validate-curriculum + inventory + production build
 make audit     # dataset vs portal agreement -> data/inventory.json (warnings are honest)
+yarn test      # vitest: src/lib, buildTree, and contracts over public/curriculum
 ```
+
+`make check` is also run by CI (`.github/workflows/ci.yml`) on every push, which
+additionally fails if `data/inventory.json` is stale.
 
 ---
 
@@ -36,13 +40,17 @@ make audit     # dataset vs portal agreement -> data/inventory.json (warnings ar
 | P1-4 | **Say what L2 is, then act on it** — `competencies`, `resources`, `keywords`, `assessment` have exactly one distinct value per subject-grade; `starter` 75% / `main` 41% distinct, `rpk`/`plenary`/`assessment` ≈ 1% | Marketing and authoring budget depend on this. Either enrich per indicator or label generated documents honestly as templated | S |
 | P1-5 | **Question bank content**: zero questions exist in the bundle (`public/curriculum/questions/` does not exist); `data/questions/` holds one mathematics B4 file | The generators render an empty selection from an empty bank — the highest-value content the dataset lacks | L |
 | P1-6 | **Clean the 58 L2 `ind_desc` records with a repeated trailing sentence** (0.4% of slots) at the extraction source | Visible artefact in generated documents | S |
+| P1-7 | **`indicatorDocId` keys on the bare indicator code** (`src/hooks/useCollection.js`) | `B4.1.1.1.1` exists in all ten B4 subjects, so the id is not grade-unique. Currently exported but unused — scope it by subject (or use `id`) before anything adopts it. See `docs/curriculum-data.md` | S |
 
 ## P2 — engineering debt that makes every future fix expensive
 
+> **P2-2 (CI workflow) is done** — `.github/workflows/ci.yml` runs `make check` plus a
+> stale-inventory guard on every push. Its number is left empty rather than renumbering,
+> because other items reference these ids.
+
 | # | Item | Why | Size |
 |---|------|-----|------|
-| P2-1 | **Tests**: vitest for `src/lib/` (exporters, `week.js`, `academicCalendar.js`, `buildTree`) + Firestore **rules unit tests** with the emulator | Nothing sits between a change and a broken export or an unguarded collection; `firestore.rules` is the real security surface (see `docs/analysis/FINAL ANALYSIS.md`) | M |
-| P2-2 | **CI workflow** running `yarn lint`, `yarn build`, `validate_app_curriculum.py`, `build_inventory.py` | No `.github/workflows/` exists; the gate is only as good as the person remembering to run it | S |
+| P2-1 | **Firestore rules unit tests** with the emulator, and smoke tests for the exporters (`lessonPlanDocx`, `schemePdf`, …) | Rules are the real security surface (see `docs/analysis/FINAL ANALYSIS.md`); the exporters are the only code path with no test at all. `src/lib` helpers, `buildTree` and the `public/curriculum` bundle contracts are now covered by `yarn test` | M |
 | P2-3 | **Bundle strategy**: chunk the 39.7 MB bundle per grade+subject and key the service-worker cache off a content hash (or automate the `CACHE_VERSION` bump) | `b9_schedules.json` alone is 4.85 MB; today a rebuilt bundle reaches returning users only after a manual `sw.js` edit | M |
 | P2-4 | **Pagination** for the capped lists (`useCollection` max 100, `QuestionBank` 200, `Search` 100 per collection) with `startAfter` cursors | Silent truncation is indistinguishable from "no more data" | M |
 | P2-5 | **Slides**: browse + PPTX export exist; there is no authoring form and no deck-view page | Half-built feature; either finish the authoring flow or remove the affordance (see `docs/gotchas.md`) | M |
@@ -70,7 +78,7 @@ make audit     # dataset vs portal agreement -> data/inventory.json (warnings ar
 | Building the Studio as a separate web app | One author; `scripts/` + git already is the Studio | A second content author joins |
 | Selling printed books as the primary channel | The owner is replacing the consortium print model with a self-serve portal | — |
 | Porting the Python generators to JavaScript | They work; the browser needs the *same content model*, not the same language | The pipeline becomes a runtime dependency |
-| Regenerating the 73 books before every demo | Superseded by CI (P2-2): if the books matter, build them in the pipeline, not by hand | — |
+| Regenerating the 73 books before every demo | The CI workflow exists, but does not build books yet: if the books matter, build them in the pipeline, not by hand | — |
 
 ---
 

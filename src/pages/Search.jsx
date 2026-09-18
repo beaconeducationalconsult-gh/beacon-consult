@@ -12,7 +12,7 @@ export default function Search() {
   const [term, setTerm] = useState('')
   const [grade, setGrade] = useState('B1')
   const [rows, setRows] = useState(null)
-  const { indicators, grade: loadedGrade } = useCurriculum(grade)
+  const { indicators, grade: loadedGrade, error: curriculumError } = useCurriculum(grade)
 
   const needle = term.trim().toLowerCase()
 
@@ -108,7 +108,12 @@ export default function Search() {
         <div className="mt-6 space-y-8">
           <section>
             <h2 className="section-heading mb-3">Curriculum · {gradeLabel(loadedGrade)}</h2>
-            {curriculumHits.length === 0 ? (
+            {curriculumError ? (
+              <p className="card p-5 text-sm text-rose-700">
+                The {gradeLabel(loadedGrade)} curriculum could not be loaded ({curriculumError.code || 'error'}), so
+                curriculum matches are missing from these results.
+              </p>
+            ) : curriculumHits.length === 0 ? (
               <p className="card p-5 text-sm text-slate-500">No indicators match in this grade. Try another grade.</p>
             ) : (
               <ul className="space-y-2">

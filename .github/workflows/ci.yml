@@ -1,0 +1,63 @@
+name: CI
+
+# The gate that used to be "whoever remembers to run make check".
+# Steps mirror `make check`; keep the two in sync.
+on:
+  push:
+    branches: ['**']
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  portal:
+    name: Lint, test, build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # Reads packageManager: yarn@4.9.4 from package.json.
+      - run: corepack enable
+
+      - name: Install
+        run: yarn install --immutable
+
+      - name: Lint
+        run: yarn lint
+
+      - name: Test
+        run: yarn test
+
+      - name: Build
+        run: yarn build
+
+  dataset:
+    name: Curriculum data audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # validate_app_curriculum.py and build_inventory.py are stdlib-only, so
+      # there is nothing to pip install. `make inventory` exits non-zero on a
+      # data *error*; warnings (known gaps) are printed and allowed through.
+      - name: Validate the app curriculum bundle
+        run: make validate-curriculum
+
+      - name: Rebuild the inventory and check it is current
+        run: |
+          make inventory
+          if ! git diff --quiet -- data/inventory.json; then
+            echo "::error::data/inventory.json is stale — run 'make inventory' and commit the result."
+            git diff --stat -- data/inventory.json
+            exit 1
+          fi

@@ -6,6 +6,7 @@ import { useAuth } from '../context/AuthContext'
 import { useToast } from '../context/ToastContext'
 import { useCollection } from '../hooks/useCollection'
 import { SkeletonList } from '../components/Skeleton'
+import DataError from '../components/DataError'
 import EmptyState from '../components/EmptyState'
 import ConfirmModal from '../components/ConfirmModal'
 import NotesTabs from '../components/NotesTabs'
@@ -17,7 +18,7 @@ export default function Notes() {
   const { user, isAdmin } = useAuth()
   const toast = useToast()
   const [scope, setScope] = useState('all')
-  const { rows, loading } = useCollection('notes', { max: 80 })
+  const { rows, loading, error } = useCollection('notes', { max: 80 })
   const [pendingDelete, setPendingDelete] = useState(null)
 
   const visible = scope === 'mine' ? rows.filter((n) => n.authorId === user.uid) : rows
@@ -52,8 +53,9 @@ export default function Notes() {
         onChange={setScope}
       />
 
-      {loading && <SkeletonList rows={3} />}
-      {!loading && visible.length === 0 && (
+      {error && <DataError what="study notes" error={error} />}
+{loading && <SkeletonList rows={3} />}
+      {!loading && !error && visible.length === 0 && (
         <EmptyState
           title="No notes yet"
           message="Notes are shorter than articles — a summary of a sub-strand, a revision sheet, a worked example."

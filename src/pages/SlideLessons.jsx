@@ -10,6 +10,7 @@ import SubjectSelect from '../components/SubjectSelect'
 import { GRADES, TERMS, gradeLabel } from '../lib/grades'
 import { downloadLessonSlidesPptx } from '../lib/lessonSlidesPptx'
 import { SkeletonList } from '../components/Skeleton'
+import DataError from '../components/DataError'
 import EmptyState from '../components/EmptyState'
 
 /** Turn a week's scheduled lessons into a presentation deck. */
@@ -23,7 +24,7 @@ export default function SlideLessons() {
   const [busy, setBusy] = useState(false)
   const { subjects, loading: loadingSubjects, error: subjectsError } = useCurriculum(grade)
   const { lessons } = useSchedules(grade)
-  const { rows: decks, loading } = useCollection('lesson_slides', { max: 40 })
+  const { rows: decks, loading, error } = useCollection('lesson_slides', { max: 40 })
 
   const buildDeck = () => {
     const subjectName = subjects.find((s) => s.id === subjectId)?.name || subjectId
@@ -150,8 +151,9 @@ export default function SlideLessons() {
       </div>
 
       <h2 className="section-heading mb-3 mt-8">Saved decks</h2>
-      {loading && <SkeletonList rows={2} />}
-      {!loading && decks.length === 0 && (
+      {error && <DataError what="slide decks" error={error} />}
+{loading && <SkeletonList rows={2} />}
+      {!loading && !error && decks.length === 0 && (
         <EmptyState title="No decks saved yet" message="Build one above and save it so colleagues can use it too." />
       )}
       <ul className="space-y-3">

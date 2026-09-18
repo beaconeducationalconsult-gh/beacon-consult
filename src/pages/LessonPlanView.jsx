@@ -4,6 +4,7 @@ import { useDoc } from '../hooks/useCollection'
 import { useAuth } from '../context/AuthContext'
 import { useToast } from '../context/ToastContext'
 import { SkeletonList } from '../components/Skeleton'
+import DataError from '../components/DataError'
 import EmptyState from '../components/EmptyState'
 import { downloadLessonPlanDocx } from '../lib/lessonPlanDocx'
 import { downloadLessonPlanPdf } from '../lib/lessonPlanPdf'
@@ -28,13 +29,14 @@ function Section({ heading, children }) {
 
 export default function LessonPlanView() {
   const { planId } = useParams()
-  const { row: plan, loading } = useDoc('lesson_plans', planId)
+  const { row: plan, loading, error } = useDoc('lesson_plans', planId)
   const { user, profile, isAdmin } = useAuth()
   const toast = useToast()
   const [busy, setBusy] = useState(null)
   const { lessons } = useSchedules(plan?.grade)
 
   if (loading) return <SkeletonList rows={2} />
+  if (error) return <DataError what="this lesson plan" error={error} />
   if (!plan) {
     return (
       <EmptyState

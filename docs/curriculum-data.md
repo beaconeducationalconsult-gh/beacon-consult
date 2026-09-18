@@ -181,8 +181,18 @@ missing pairs an explicit, loud failure. Both are fine; the silent fallback is n
 
 ## Invariants to keep
 
-1. An indicator belongs to exactly one subject-grade; indicator codes are unique
-   within a grade (`validate_app_curriculum.py` enforces this).
+1. An indicator belongs to exactly one subject-grade. Uniqueness is **two-tier**,
+   and conflating the tiers is a trap:
+
+   | Key | Shape | Unique within | Enforced by |
+   |---|---|---|---|
+   | `id` | `<subjectId>_<code>`, e.g. `mathematics_B4.1.1.1.1` | the whole grade (517/517 in B4) | `validate_app_curriculum.py`, `src/curriculumBundle.test.js` |
+   | `code` | `B4.1.1.1.1` — carries **no subject namespace** | one subject-grade only | `src/curriculumBundle.test.js` |
+
+   `B4.1.1.1.1` legitimately exists in all ten B4 subjects, so a bare `code` is
+   **not** a grade-wide key. Anything keyed on one must also carry the subject,
+   or use `id`. (`indicatorDocId` in `src/hooks/useCollection.js` keys on the
+   bare code; it is currently exported but unused — scope it before adopting it.)
 2. Every indicator carries numeric `strandNumber` / `subStrandNumber` — the UI sorts
    numerically and silently mis-orders text-numbered strands.
 3. Every bundle subject id matches a subject id in L1 (or is listed in
