@@ -66,6 +66,10 @@ export function useDoc(name, id) {
   return id ? state : EMPTY
 }
 
-/** Deterministic id for indicator-linked docs (one plan per indicator per author). */
-export const indicatorDocId = (uid, indicatorCode) =>
-  `${uid}_${String(indicatorCode).replace(/[^\w.-]/g, '_')}`
+/**
+ * Deterministic id for indicator-linked docs — see `src/lib/docIds.js`.
+ *
+ * Re-exported here because this is where callers look for it; the implementation
+ * lives in its own module so it can be tested without pulling in Firestore.
+ */
+export { indicatorDocId } from '../lib/docIds'

@@ -17,6 +17,12 @@ file exists it writes ``…-skeleton-v2.docx`` so an author's edited copy is saf
 
 Everything the database knows is *seeded*; everything it does not is written as
 an AUTHOR-TODO placeholder rather than invented prose.
+
+**One lesson per indicator, and one session is the draft.** A lesson seeds from
+the indicator's *first* scheduled session (so the header can say which one), and
+every later session whose own `main` activity differs prints underneath it as
+"Later sessions" — the book sets one lesson per indicator, and those sessions'
+teaching content would otherwise never reach the draft.
 """
 
 from __future__ import annotations
