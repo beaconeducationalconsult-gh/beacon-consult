@@ -134,10 +134,46 @@ it, when deciding what to generate in the browser, and when planning authoring w
 The honest headline is *"13,140 scheduled lesson slots with a filled teaching
 template"*, not *"13,140 authored lesson plans"*.
 
-`ind_desc` also carries a source-extraction artefact in a small number of records
-(58 of 13,140 = 0.4%), where a sentence is repeated:
-`"...used for Graphic Communication 1. Identify drawing materials, instruments and equipment"`.
-Safe to render, worth cleaning at the source.
+`ind_desc` also carried the print's exemplar tail in some records. Every one of
+these prints sets its rows as `<indicator>` followed by the exemplar column in the
+same cell — a numbered list of teaching steps (`1. In groups, discuss ways of
+maintaining personal hygiene`), `Learners are to:`, `Enquiry route:` — and several
+extractions read past the end of the indicator into it. Two shapes were visible in
+every generated document:
+
+* a duplicated echo: `Describe ways of maintaining personal hygiene 1. In groups,
+  discuss ways of maintaining personal hygiene`
+* a dangling introduction: `Study some visual artworks … in Africa Learners are to`
+
+`scripts/fix_ind_desc_exemplars.py` (report by default, `--apply` writes, trail in
+`data/audit/ind_desc_exemplars.json`) took those tails back off on 2026-09-18: **242
+records in 8 databases** (239 dangling intros, 3 repeats), plus the 980 lesson slots
+in 8 lesson files that carry a copy of the same indicator. It never invents text —
+the new value is always a prefix of the old one — and it cuts only when the print's
+own row carries the indicator that would be left behind, recording the reading's
+strength (`ratio`) and the pages it checked per record.
+
+What it deliberately did *not* touch:
+
+* **151 records whose tail is exemplar content the indicator does not repeat**
+  (`Discuss food hygiene 1. Explain what is meant by food hygiene`, history's whole
+  `Enquiry route:` blocks). Cutting those deletes a sentence that no other field
+  holds; that is a decision about the data, not a cleanup, so they are listed in the
+  artefact instead.
+* **32 records the print does not back** (see the next paragraph) — the great
+  majority are career-technology's, where the **core-competencies column bled into
+  `ind_desc` itself** (`… opportunities in Career Technology Communication and
+  Collaboration (CC) Critical Thinking and Problem Solving (CP) …`), so cutting at
+  the exemplar marker would leave the tag soup behind. Those records need the
+  column-bleed pass the french/kindergarten subjects got, and are the remaining
+  work under P1-6.
+
+The same verification surfaced a fidelity finding that is *not* a cleanup: ten
+creative-arts B5/B6 indicators do not match their print word for word (the database
+reads `Explore to generate ideas by studying visual artworks …` where the print
+sets `Study some visual artworks … and examine how the artworks reflect …`). The
+cut was refused for each and they are listed in the artefact under `cut` with
+`verified: false` and the print's own reading next to them.
 
 ## L3 — bundle
 

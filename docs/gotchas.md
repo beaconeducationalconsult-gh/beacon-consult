@@ -129,6 +129,30 @@ The rule, the ladder of reading strengths (`row`/`page` verbatim → `row-order`
 `document-order` word-by-word → report only) and the residual scan live in
 `scripts/fix_reference_text.py`; the trail is `data/audit/reference_text_fixes.json`.
 
+## 🟠 The print's exemplar rides inside the indicator cell
+
+These prints set a row as `<indicator>` and then, in the same cell, an exemplar
+column — a numbered list of teaching steps behind `1.`, or `Learners are to:`, or
+history's `Enquiry route:`. An extractor that reads to the end of the cell returns
+indicator *plus* exemplar, which is how the databases came to hold
+`… used for Graphic Communication 1. Identify drawing materials, instruments and
+equipment` and `… in Africa Learners are to`. Nothing fails: `ind_desc` is only ever
+rendered, so the artefact reaches every scheme, lesson plan and book.
+
+Two things follow. **`ind_desc` should end where the print's exemplar begins** —
+`scripts/fix_ind_desc_exemplars.py` cuts at the marker, and only when the print's
+own row carries the indicator that would be left behind. And **the lesson files are
+copies**: `data/lessons/*_lessons_enriched.json` embeds `ind_desc` in both
+`ind_desc` and `perf_indicator`, so a source fix that stops at the database leaves
+the artefact in the documents teachers actually print. Fix both, or the fix is
+cosmetic.
+
+The trap in the other direction: a tail that *mentions* the indicator is not a
+repeat. History's rows carry the whole cell — enquiry route, then a dozen steps that
+naturally name the topic — and cutting at the first marker deletes the only copy of
+that text. The script cuts a tail only when it is short and says the indicator back
+(≥4-word run covering half the indicator); everything else is reported.
+
 ## 🟠 Two copies of the same database, and only one of them is audited
 
 `data/reference/` is searched **after** `data/curriculum/` and **silently**, so which copy a tool

@@ -440,6 +440,41 @@ describe.each(ids)('%s', (grade) => {
         'K2.5.1.1.3', 'K2.5.1.1.4', 'K2.5.1.1.5', 'K2.5.1.1.6', 'K2.5.1.1.7',
       ])
     })
+
+    it('took the print\u2019s exemplar tail back off the indicators it cut', () => {
+      const trail = readData('audit/ind_desc_exemplars.json')
+      expect(trail.applied.records).toBe(242)
+      expect(trail.applied.repeats + trail.applied.dangling).toBe(242)
+      expect(trail.history[0]).toMatchObject({ records: 242, lesson_slots: 980 })
+
+      // a cut is only ever a deletion: what each record says now is a prefix of
+      // what it said, and the print backed the reading before it was made
+      for (const e of trail.cut) {
+        expect(e.after.length, e.code).toBeLessThanOrEqual(e.before.length)
+        expect(e.before.startsWith(e.after), e.code).toBe(true)
+        // only the readings the print backs are written, and the strength of that
+        // reading is recorded next to each one
+        if (e.verified) expect(e.ratio, e.code).toBeGreaterThanOrEqual(0.9)
+        else expect(e.reason, e.code).toBeTruthy()
+      }
+
+      // and the lesson template, which is a copy of the database, was cleaned with
+      // it — the generated books read the lesson file, not the database
+      const slots = readData('lessons/creative_arts_b2_lessons_enriched.json')
+      const dangling = slots.filter((s) => /learners? (are|is) to:?\s*$/i.test(s.ind_desc || ''))
+      expect(dangling).toEqual([])
+      const noTail = slots.filter((s) => s.ind_code === 'B2.1.1.1.1')
+      expect(noTail.length).toBeGreaterThan(0)
+      for (const slot of noTail) {
+        expect(slot.ind_desc.endsWith('communities')).toBe(true)
+        expect(slot.perf_indicator.endsWith('communities')).toBe(true)
+      }
+
+      // the record the artefact names first is the one the audit trail describes
+      const first = trail.cut.find((e) => e.verified)
+      const rows = readData(`curriculum/${first.file}`)
+      expect(rows[first.code].ind_desc).toBe(first.after)
+    })
   })
 
   describe('known gaps stay known', () => {
