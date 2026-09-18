@@ -130,3 +130,9 @@ Before publishing, check the two invariants that a rules edit can quietly destro
 1. `users` create still forces `status == 'pending'` and `role == 'member'`.
 2. Every like path still calls `likeDelta(...)` — `hasOnly(...)` alone does not stop a member
    from inflating a tally or stuffing `likedBy` with other people's uids.
+
+`yarn test` checks both, plus that every collection `src/` touches has a match block and that
+each authored collection pins `authorId` on create and calls `keepsAuthor()` on update
+(`src/firestoreRules.test.js`). Those checks are **static**: they prove a guard was not
+deleted, not that a permission decision is correct — that needs the emulator (P2-1 in
+docs/TODO.md). Each one was verified by re-introducing the bug and watching it fail.
