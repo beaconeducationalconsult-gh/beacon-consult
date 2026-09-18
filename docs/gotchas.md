@@ -24,6 +24,28 @@ a matching `where(...)` — see `PublicArticles.jsx`.
 `src/firestoreRules.test.js` fails if a collection the client lists un-filtered loses its
 document-independent branch.
 
+## 🟠 A Word style Word cannot resolve renders as body text, silently
+
+`docx` never validates what you hand it. Give a paragraph a `pStyle` naming a style the document
+does not define and Word drops the reference and falls back to Normal — no error, no warning, no
+difference you can see in the `.docx` itself. That is how every section heading in the lesson-plan
+export disappeared: `docxShared.js` exported `H2` as a paragraph *factory*, and callers passed it as
+`heading: H2`, so the style name written into the XML was the source text
+`(text) => new Paragraph({ text, heading: HeadingLevel.HEADING_2 })`.
+
+Two rules, both now enforced by `src/lib/docxExport.test.js` (which unzips the generated file and
+reads its parts):
+
+- **A heading level is a constant, not a function.** `H1`/`H2`/`H3` in `docxShared.js` are
+  `HeadingLevel` values; the section styling lives in `documentStyles()`.
+- **Declare the document's own font and size.** Without `docDefaults` the body font is whatever
+  the *reader's* Word Normal template happens to be, so the same export looks different on two
+  machines.
+
+While you are in there: a footer built as a paragraph at the end of the body prints once, at the
+end — real page furniture belongs in `sections[].footers`. Cell widths need `tblLayout: fixed` or
+Word re-fits the columns to their content and ignores the percentages.
+
 ## 🟠 Committed rules ≠ deployed rules
 Vercel does **not** deploy Firestore rules/indexes. Editing `firestore.rules` and pushing
 changes nothing in production until `firebase deploy --only firestore:rules,firestore:indexes`

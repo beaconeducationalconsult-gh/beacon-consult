@@ -39,6 +39,9 @@ Say you're adding `widgets`:
 
 1. Add `src/lib/myThingPdf.js` (or `…Docx.js`/`…Pptx.js`) exporting a `downloadX(data, opts)`
    function. Reuse `docxShared.js` for Word; jsPDF+autotable for PDF; pptxgenjs for slides.
+   For Word, pass `styles: documentStyles()` to the `Document` and use the `H1`/`H2`/`H3`
+   constants as `heading:` values — a heading that Word cannot resolve renders as plain body
+   text without complaining (see [gotchas.md](gotchas.md)).
 2. In the page, **lazy-load** it at click time so it's not in the main bundle:
    ```js
    const { downloadX } = await import('../lib/myThingPdf')

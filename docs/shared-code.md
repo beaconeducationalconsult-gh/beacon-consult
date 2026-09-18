@@ -49,6 +49,17 @@ All run **client-side** (no server). Heavy ones are `import()`-ed lazily at clic
 
 Libraries: `jspdf` + `jspdf-autotable` (PDF), `docx` (Word), `pptxgenjs` (PowerPoint).
 
+Two rules for anything built on `docxShared.js`, both enforced by `src/lib/docxExport.test.js`:
+
+1. **Declare the font and size in `documentStyles()`.** Without document defaults the body font is
+   whatever the *reader's* Word Normal template happens to be.
+2. **Use the real heading levels.** `H1`/`H2`/`H3` are `HeadingLevel` constants — passing a
+   paragraph factory as `heading:` writes a style name Word cannot resolve and the heading renders
+   as body text (see [gotchas.md](gotchas.md)).
+
+The palette (`BRAND.navy`, Calibri, rules under titles, `_` blanks for unfilled fields) mirrors
+`scripts/generate_schemes.py`, so an export and a printed book look like the same product.
+
 ## Pure helpers (`src/lib/`)
 
 - `week.js` — ISO week keys + the `WEEKLY_QUOTA` constant (question-bank target)

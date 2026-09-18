@@ -2232,6 +2232,7 @@ __metadata:
     globals: "npm:^16.5.0"
     jspdf: "npm:^4.2.1"
     jspdf-autotable: "npm:^5.0.8"
+    jszip: "npm:^3.10.1"
     pptxgenjs: "npm:^4.0.1"
     react: "npm:^19.2.0"
     react-dom: "npm:^19.2.0"
