@@ -160,7 +160,9 @@ export default function SlideLessons() {
         {decks.map((deck) => (
           <li key={deck.id} className="card flex flex-wrap items-center justify-between gap-3 p-5">
             <div>
-              <p className="card-title">{deck.subjectName} · {gradeLabel(deck.grade)}</p>
+              <Link to={`/portal/slides/${deck.id}`} className="card-title hover:underline">
+                {deck.subjectName} · {gradeLabel(deck.grade)}
+              </Link>
               <p className="card-meta">
                 Term {deck.term}, week {deck.week} · {deck.slides?.length || 0} slides · {deck.authorName}
               </p>

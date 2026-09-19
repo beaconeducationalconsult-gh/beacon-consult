@@ -43,6 +43,16 @@ paginate (`usePagedCollection`, 24 per page) so the cap never silently hides old
 "like" fields are `likes`/`likesBy` but no note-like UI exists yet (P2-7 in
 [TODO.md](TODO.md)).
 
+*Exports (2026-09-19):* **Word** and **PDF**, from the buttons on the note page — the note's
+rich text goes through `src/lib/htmlBlocks.js` into `noteDocx.js` / `notePdf.js`. Inline
+formatting is flattened and inline images are omitted (see [gotchas.md](gotchas.md)).
+
+### Slide lessons — `/portal/slides`, `/:deckId`, `/:deckId/edit`
+`SlideLessons.jsx` builds a deck from a week's scheduled lessons and exports PPTX;
+`SlideLessonView.jsx` shows a saved deck slide by slide with its comment thread and export;
+`SlideLessonForm.jsx` edits the slides (add/remove/reorder). Hidden from the side panel, still
+routed. Collection: `lesson_slides` (+ `comments`).
+
 ### Author page — `/portal/authors/:authorId`
 `AuthorPage.jsx`. A member's public profile + their published notes/slides.
 Collections: `users`, `notes`, `lesson_slides`.

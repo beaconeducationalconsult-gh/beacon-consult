@@ -12,6 +12,8 @@ import DataError from '../components/DataError'
 import EmptyState from '../components/EmptyState'
 import { gradeLabel } from '../lib/grades'
 import { fmtDate } from '../lib/academicCalendar'
+import { downloadNoteDocx } from '../lib/noteDocx'
+import { downloadNotePdf } from '../lib/notePdf'
 
 /** A note plus its comment thread (subcollection `comments`). */
 export default function NoteView() {
@@ -22,6 +24,7 @@ export default function NoteView() {
   const [comments, setComments] = useState(null)
   const [text, setText] = useState('')
   const [posting, setPosting] = useState(false)
+  const [exporting, setExporting] = useState(null)
 
   useEffect(() => {
     if (!noteId) return undefined
@@ -64,6 +67,29 @@ export default function NoteView() {
     }
   }
 
+  /* Export as Word or PDF — see src/lib/noteDocx.js / notePdf.js. */
+  const exportAs = async (kind) => {
+    setExporting(kind)
+    try {
+      if (kind === 'docx') {
+        const blob = await downloadNoteDocx(note, { school: profile?.school, teacher: profile?.name })
+        const url = URL.createObjectURL(blob)
+        const link = document.createElement('a')
+        link.href = url
+        link.download = `Study_note_${note.subjectId || 'note'}_${note.grade || ''}.docx`
+        link.click()
+        URL.revokeObjectURL(url)
+      } else {
+        downloadNotePdf(note, { school: profile?.school, teacher: profile?.name })
+      }
+      toast.success(`Exported ${kind === 'docx' ? 'Word document' : 'PDF'}`)
+    } catch (error) {
+      toast.error(`Export failed: ${error.message}`)
+    } finally {
+      setExporting(null)
+    }
+  }
+
   if (loading) return <SkeletonList rows={2} />
   if (error) return <DataError what="this note" error={error} />
   if (!note) {
@@ -88,11 +114,15 @@ export default function NoteView() {
           {note.subjectName || note.subjectId} · {gradeLabel(note.grade)} · {note.authorName} ·{' '}
           {fmtDate(note.createdAt)}
         </p>
-        {canEdit && (
-          <div className="mt-3 flex gap-2">
-            <Link to={`/portal/notes/${note.id}/edit`} className="btn-secondary">Edit</Link>
-          </div>
-        )}
+        <div className="mt-3 flex flex-wrap gap-2">
+          {canEdit && <Link to={`/portal/notes/${note.id}/edit`} className="btn-secondary">Edit</Link>}
+          <button type="button" className="btn-secondary" disabled={exporting} onClick={() => exportAs('docx')}>
+            {exporting === 'docx' ? 'Building…' : 'Word'}
+          </button>
+          <button type="button" className="btn-secondary" disabled={exporting} onClick={() => exportAs('pdf')}>
+            {exporting === 'pdf' ? 'Building…' : 'PDF'}
+          </button>
+        </div>
       </header>
 
       {note.summary && <p className="card mb-4 p-4 text-sm text-slate-600">{note.summary}</p>}

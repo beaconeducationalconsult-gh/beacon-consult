@@ -285,6 +285,14 @@ domain.
 authoring form and no deck-view page** — `SlideLessonForm`/`SlideLessonView` do not exist in
 this portal. Don't assume slide creation works end-to-end.
 
+## 🟡 Note exports flatten rich text, and drop images
+`src/lib/htmlBlocks.js` reads a note's HTML into headings, paragraphs, bullets and numbered
+items for the Word/PDF exporters. Inline markup (`strong`, `em`, links) is **dropped, keeping
+the text** — deliberate: mis-nested runs would corrupt a paragraph, a missing italic does not.
+Inline images (`<img>` from the Tiptap image extension) have no text at all, so they are
+**omitted from both exports**. If notes ever carry diagrams a teacher needs on paper, that is
+the file to extend first.
+
 ## 🟡 The curriculum cache is permanent for the session
 `useCurriculum`/`useSchedules` cache each JSON file in a module-level `Map` that never
 expires. Curriculum only changes on deploy and the service worker revalidates in the

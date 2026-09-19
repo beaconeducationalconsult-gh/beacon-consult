@@ -42,6 +42,8 @@ const AuthorPage = lazy(() => import('./pages/AuthorPage'))
 const Vacancies = lazy(() => import('./pages/Vacancies'))
 const VacancyForm = lazy(() => import('./pages/VacancyForm'))
 const SlideLessons = lazy(() => import('./pages/SlideLessons'))
+const SlideLessonView = lazy(() => import('./pages/SlideLessonView'))
+const SlideLessonForm = lazy(() => import('./pages/SlideLessonForm'))
 const Search = lazy(() => import('./pages/Search'))
 const Progress = lazy(() => import('./pages/Progress'))
 const Profile = lazy(() => import('./pages/Profile'))
@@ -139,6 +141,8 @@ export default function App() {
         <Route path="vacancies/:vacancyId/edit" element={<VacancyForm />} />
 
         <Route path="slides" element={<SlideLessons />} />
+        <Route path="slides/:deckId" element={<SlideLessonView />} />
+        <Route path="slides/:deckId/edit" element={<SlideLessonForm />} />
 
         {/* Folded into the workspace: /portal and /portal/wall are one page now. */}
         <Route path="wall" element={<Navigate to="/portal" replace />} />
