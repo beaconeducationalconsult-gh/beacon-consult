@@ -3,7 +3,7 @@ import { readFileSync } from 'node:fs'
 
 /*
  * The book rollout (P3-1) writes real .docx files into `books/`, which is
- * gitignored — the repository's record of them is `data/books/manifest.json`.
+ * gitignored — the repository's record of them is `data/books_manifest.json`.
  * That makes the manifest a claim about the product, so it is held to the same
  * standard as the rest of the data: every book it names must belong to a
  * subject-grade the portal actually serves, and the generator's contract (one
@@ -13,7 +13,7 @@ import { readFileSync } from 'node:fs'
 const root = new URL('../', import.meta.url)
 const read = (path) => JSON.parse(readFileSync(new URL(path, root), 'utf8'))
 
-const manifest = read('data/books/manifest.json')
+const manifest = read('data/books_manifest.json')
 
 describe('the books manifest', () => {
   it('covers every served subject-grade exactly once', () => {

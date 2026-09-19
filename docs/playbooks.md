@@ -18,7 +18,7 @@ make books-publish SUBJECT=mathematics GRADE=B1   # one zip to send a school
 
 `books/` is gitignored and a re-run **never overwrites**: an existing document is left
 alone and the new one lands beside it as `-v2`. What the repository records is
-`data/books/manifest.json` — every served subject-grade, its structure counts
+`data/books_manifest.json` — every served subject-grade, its structure counts
 (chapters · units · topics · lessons) and a content hash per document. `make check`
 fails if that manifest drifts from the served curriculum or from the generator's
 contract of one lesson per indicator.

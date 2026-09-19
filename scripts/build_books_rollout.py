@@ -11,7 +11,7 @@ the part that turns one working generator into a rollout:
     a subject-grade cannot be "done" for books but missing from the app;
   * it runs the generator per subject-grade and reports each one — built, already
     present, or failed with the generator's own reason;
-  * it writes `data/books/manifest.json`, because `books/` is gitignored: without
+  * it writes `data/books_manifest.json`, because `books/` is gitignored: without
     a manifest nobody can tell which books were generated, how big they are, or
     whether a `-v2` revision exists beside the canonical one;
   * `--publish` zips a subject-grade's two documents into `dist/books/` — one
@@ -41,7 +41,7 @@ ROOT = Path(__file__).resolve().parent.parent
 BUNDLE = ROOT / "public" / "curriculum"
 BOOKS = ROOT / "books"
 DIST = ROOT / "dist" / "books"
-MANIFEST = ROOT / "data" / "books" / "manifest.json"
+MANIFEST = ROOT / "data" / "books_manifest.json"
 GENERATOR = ROOT / "seed" / "build_book_skeleton.py"
 
 # The pilot the ticket names first; the report prints it at the top.
@@ -199,7 +199,7 @@ def main() -> int:
     ap.add_argument("--grade", action="append", help="grade id (default: every served one)")
     ap.add_argument("--generate", action="store_true", help="run the generator for the selection")
     ap.add_argument("--manifest", action="store_true",
-                    help="write data/books/manifest.json and stop (measuring any subject-grade "
+                    help="write data/books_manifest.json and stop (measuring any subject-grade "
                          "whose structure was never recorded)")
     ap.add_argument("--publish", action="store_true", help="zip the selection's documents into dist/books/")
     args = ap.parse_args()
