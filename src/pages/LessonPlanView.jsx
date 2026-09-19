@@ -33,7 +33,13 @@ export default function LessonPlanView() {
   const { user, profile, isAdmin } = useAuth()
   const toast = useToast()
   const [busy, setBusy] = useState(null)
-  const { lessons } = useSchedules(plan?.grade)
+  // The planned subject's schedule. `subjectId` is always written by the form;
+  // the indicator ids (`<subjectId>_<code>`) are the fallback for plans saved
+  // before it was, so the term/day lookup does not silently go blank.
+  const planSubject = plan?.subjectId
+    || String((plan?.indicatorIds || [])[0] || '').split('_')[0]
+    || null
+  const { lessons } = useSchedules(plan?.grade, planSubject)
 
   if (loading) return <SkeletonList rows={2} />
   if (error) return <DataError what="this lesson plan" error={error} />

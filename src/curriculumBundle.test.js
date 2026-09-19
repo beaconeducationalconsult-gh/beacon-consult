@@ -1,4 +1,4 @@
-import { readFileSync } from 'node:fs'
+import { existsSync, readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import { buildTree } from './hooks/useCurriculum'
 
@@ -662,12 +662,90 @@ describe.each(ids)('%s', (grade) => {
 
   describe('known gaps stay known', () => {
     it('has no schedules file for the kindergarten grades', () => {
-    const kg = grades.filter((g) => g.id.startsWith('KG'))
-    for (const grade of kg) expect(grade.hasSchedules).toEqual([])
+      const kg = grades.filter((g) => g.id.startsWith('KG'))
+      for (const grade of kg) expect(grade.hasSchedules).toEqual([])
 
-    // and that is a deliberate gap, not a missing build: every other grade has one
-    for (const grade of grades.filter((g) => !g.id.startsWith('KG'))) {
-      expect(grade.hasSchedules.length, `${grade.id} schedules`).toBeGreaterThan(0)
-    }
+      // and that is a deliberate gap, not a missing build: every other grade has one
+      for (const grade of grades.filter((g) => !g.id.startsWith('KG'))) {
+        expect(grade.hasSchedules.length, `${grade.id} schedules`).toBeGreaterThan(0)
+      }
+    })
   })
-})
+
+  /*
+   * Schedules are one file per subject-grade, not one per grade: every screen
+   * that reads them reads exactly one subject's worth. `useSchedules(grade,
+   * subjectId)` builds `curriculum/schedules/<grade>-<subject>.json`, so that
+   * exact path is what these hold to disk — a rename on either side fails here
+   * instead of rendering an empty planner.
+   */
+  describe('the per-subject schedule split', () => {
+    const schedulePath = (grade, subjectId) => `schedules/${grade.toLowerCase()}-${subjectId}.json`
+
+    it('has no combined per-grade schedules file left', () => {
+      for (const grade of grades) {
+        const combined = new URL(`../public/curriculum/${grade.id.toLowerCase()}_schedules.json`, import.meta.url)
+        expect(existsSync(combined), `${grade.id} still has a combined schedules file`).toBe(false)
+      }
+    })
+
+    it('has exactly the file useSchedules() asks for, for every scheduled subject', () => {
+      for (const [gradeId, { subjects }] of bundle) {
+        for (const subject of subjects.filter((s) => s.hasSchedule)) {
+          const path = new URL(`../public/curriculum/${schedulePath(gradeId, subject.id)}`, import.meta.url)
+          expect(existsSync(path), `${gradeId}/${subject.id} has no ${schedulePath(gradeId, subject.id)}`).toBe(true)
+        }
+      }
+    })
+
+    it('holds only that subject and grade in each file, and no orphans', () => {
+      for (const [gradeId, { subjects, indicators }] of bundle) {
+        const known = new Set(indicators.map((i) => i.id))
+        for (const subject of subjects.filter((s) => s.hasSchedule)) {
+          const lessons = JSON.parse(readFileSync(
+            new URL(`../public/curriculum/${schedulePath(gradeId, subject.id)}`, import.meta.url), 'utf8'))
+          expect(lessons.length, `${gradeId}/${subject.id} schedule is empty`).toBeGreaterThan(0)
+          expect(new Set(lessons.map((l) => l.subjectId))).toEqual(new Set([subject.id]))
+          expect(new Set(lessons.map((l) => l.grade))).toEqual(new Set([gradeId]))
+          const orphans = lessons.filter((l) => !known.has(l.indicatorId))
+          expect(orphans.map((l) => l.indicatorId).slice(0, 3), `${gradeId}/${subject.id} orphans`).toEqual([])
+        }
+      }
+    })
+
+    it('still serves every scheduled lesson the combined file used to', () => {
+      // 13,140 lesson slots across the dataset — the split must not drop any.
+      let total = 0
+      for (const [gradeId, { subjects }] of bundle) {
+        for (const subject of subjects.filter((s) => s.hasSchedule)) {
+          total += JSON.parse(readFileSync(
+            new URL(`../public/curriculum/${schedulePath(gradeId, subject.id)}`, import.meta.url), 'utf8')).length
+        }
+      }
+      expect(total).toBe(13140)
+    })
+  })
+
+  /*
+   * The service worker names its cache after `bundleHash` in the build report,
+   * so a rebuilt bundle invalidates itself. Two halves have to line up for that
+   * to keep working: the build writes the hash, and sw.js reads it (rather than
+   * a hand-bumped constant, which is what used to go stale).
+   */
+  describe('the service worker cache key', () => {
+    const sw = readFileSync(new URL('../public/sw.js', import.meta.url), 'utf8')
+
+    it('is the bundle hash the build writes', () => {
+      const report = read('_BUILD_REPORT.json')
+      expect(report.bundleHash).toMatch(/^[0-9a-f]{12}$/)
+      expect(sw).toContain('_BUILD_REPORT.json')
+      expect(sw).toContain('bundleHash')
+      expect(sw).not.toMatch(/^(?:let|const)\s+CACHE_VERSION/m)
+    })
+
+    it('is fetched past the cached copy of the report', () => {
+      // A plain fetch would be answered from the outgoing worker's cache and
+      // hand the new worker the old hash.
+      expect(sw).toMatch(/sw=\$\{Math\.random\(\)/)
+    })
+  })

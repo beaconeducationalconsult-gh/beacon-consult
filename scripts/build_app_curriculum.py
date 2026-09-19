@@ -12,11 +12,17 @@ Outputs (public/curriculum/, committed — this is portal source data)
     grades.json                 one entry per grade that has data
     <grade>_subjects.json       subjects for the grade, with counts
     <grade>_indicators.json     flat indicators, full hierarchy, rich metadata
-    <grade>_schedules.json      every scheduled lesson: term/week/day + phases
-    <grade>_schemes.json        NEW — scheme rows per subject per term
+    <grade>_schemes.json        scheme rows per subject per term
+    schedules/<grade>-<subj>.json   every scheduled lesson for ONE subject-grade
+                                (term/week/day + phases) — split per subject so a
+                                teacher downloads ~0.5 MB, not the whole grade
 
 Shapes match what useCurriculum.js / buildTree() / ForecastForm already expect,
 so no app changes are needed to read them. See docs/APP_CURRICULUM.md.
+
+`_BUILD_REPORT.json` carries `bundleHash` — a hash of every file written here.
+`public/sw.js` reads it and names its cache after it, so a rebuilt bundle
+invalidates itself in returning browsers without anyone editing a constant.
 
 Usage
 -----
@@ -27,6 +33,7 @@ Usage
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import sys
@@ -318,6 +325,7 @@ def main():
     lessons_by_subject = {(SUBJECTS[k][0], g): p for k, g, p in discover()}
 
     grades_out, report = [], []
+    written: list[str] = []  # every payload written, in order — hashed at the end
 
     for grade in GRADES:
         if args.grade and grade != args.grade:
@@ -396,13 +404,26 @@ def main():
                 "subjects": schemes,
             },
         }
-        if schedules:
-            files[f"{g}_schedules.json"] = schedules
+
+        # Schedules are split per subject-grade. The combined per-grade array
+        # was 3.5-4.8 MB, and every screen that needs schedules needs exactly
+        # one subject's worth: ForecastForm pre-fills a scheme for one subject
+        # and term, LessonPlanForm/LessonPlanView look up one indicator,
+        # Progress highlights weeks for one subject. Fetching the grade meant
+        # downloading (and service-worker-caching) nine subjects to use one.
+        sched_dir = out_dir / "schedules"
+        for sid in sorted({l["subjectId"] for l in schedules}):
+            rows = [l for l in schedules if l["subjectId"] == sid]
+            files[f"schedules/{g}-{sid}.json"] = rows
 
         for name, payload in files.items():
-            (out_dir / name).write_text(
+            path = out_dir / name
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(
                 json.dumps(payload, ensure_ascii=False, separators=(",", ":")),
                 encoding="utf-8")
+            written.append(json.dumps(payload, ensure_ascii=False,
+                                      separators=(",", ":")))
 
         grades_out.append({
             "id": grade,
@@ -429,15 +450,23 @@ def main():
     (out_dir / "grades.json").write_text(
         json.dumps(grades_out, ensure_ascii=False, indent=1), encoding="utf-8")
 
-    total_kb = sum(f.stat().st_size for f in out_dir.glob("*.json")) // 1024
+    # The hash covers every payload this run wrote (grades.json excluded — it
+    # is written after, and re-writing it must not look like a data change).
+    payload = "\n".join(written).encode("utf-8")
+    bundle_hash = hashlib.sha256(payload).hexdigest()[:12]
+
+    json_files = sorted(out_dir.rglob("*.json"))
+    total_kb = sum(f.stat().st_size for f in json_files) // 1024
     print(f"\nWrote {len(grades_out)} grades to {out_dir}")
-    print(f"  {len(list(out_dir.glob('*.json')))} files · {total_kb} KB total")
+    print(f"  {len(json_files)} files · {total_kb} KB total · "
+          f"bundleHash {bundle_hash}")
     print(f"  {sum(r['subjects'] for r in report)} subject-grades · "
           f"{sum(r['indicators'] for r in report)} indicators · "
           f"{sum(r['lessons'] for r in report)} scheduled lessons")
 
     (out_dir / "_BUILD_REPORT.json").write_text(json.dumps({
         "grades": grades_out, "detail": report, "totalKb": total_kb,
+        "bundleHash": bundle_hash,
     }, indent=1), encoding="utf-8")
 
 

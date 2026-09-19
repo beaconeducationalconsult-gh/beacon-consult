@@ -23,7 +23,7 @@ export default function SlideLessons() {
   const [week, setWeek] = useState(1)
   const [busy, setBusy] = useState(false)
   const { subjects, loading: loadingSubjects, error: subjectsError } = useCurriculum(grade)
-  const { lessons } = useSchedules(grade)
+  const { lessons } = useSchedules(grade, subjectId)
   const { rows: decks, loading, error } = useCollection('lesson_slides', { max: 40 })
 
   const buildDeck = () => {

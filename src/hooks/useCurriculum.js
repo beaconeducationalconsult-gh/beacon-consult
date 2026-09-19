@@ -42,6 +42,17 @@ function loadJson(path, store) {
 
 const gradeFile = (grade, kind) => curriculumFile(`${String(grade).toLowerCase()}_${kind}.json`)
 
+/*
+ * Schedules are one file per subject-grade (`schedules/b3-mathematics.json`),
+ * not one per grade. The combined per-grade file was 3.5-4.8 MB and every
+ * caller wants exactly one subject's worth — a scheme for one subject and term,
+ * the week an indicator falls in, the lessons behind a plan. Split, the same
+ * screen fetches ~0.5 MB, and the service worker caches that one file for
+ * offline use instead of a whole grade.
+ */
+const scheduleFile = (grade, subjectId) =>
+  curriculumFile(`schedules/${String(grade).toLowerCase()}-${subjectId}.json`)
+
 export function useGrades() {
   const [state, setState] = useState({ loading: true, grades: [], error: null })
 
@@ -93,31 +104,86 @@ export function useCurriculum(grade = 'B1') {
   }
 }
 
-export function useSchedules(grade) {
-  const [state, setState] = useState({ grade: null, loading: true, lessons: [], error: null })
+export function useSchedules(grade, subjectId) {
+  const key = grade && subjectId ? `${grade}|${subjectId}` : null
+  const [state, setState] = useState({ key: null, loading: true, lessons: [], error: null })
 
   useEffect(() => {
-    if (!grade) return undefined
+    if (!key) return undefined
     let active = true
-    loadJson(gradeFile(grade, 'schedules'), scheduleCache)
-      .then((lessons) => active && setState({ grade, loading: false, lessons, error: null }))
+    loadJson(scheduleFile(grade, subjectId), scheduleCache)
+      .then((lessons) => active && setState({ key, loading: false, lessons, error: null }))
       .catch((error) => {
-        // A grade without a schedules file is normal (KG1/KG2 have none) —
-        // anything else is a real failure and must not look like "no data".
+        // A subject-grade without schedules is normal (KG1/KG2 have none, and
+        // not every subject is scheduled) — anything else is a real failure and
+        // must not look like "no data".
         const absent = error?.status === 404
-        active && setState({ grade, loading: false, lessons: [], error: absent ? null : error })
+        active && setState({ key, loading: false, lessons: [], error: absent ? null : error })
       })
     return () => {
       active = false
     }
-  }, [grade])
+  }, [key, grade, subjectId])
 
-  if (!grade) return { loading: false, lessons: [], error: null }
-  const stale = state.grade !== grade
+  if (!key) return { loading: false, lessons: [], error: null }
+  const stale = state.key !== key
   return {
     loading: stale || state.loading,
     lessons: stale ? [] : state.lessons,
     error: stale ? null : state.error,
+  }
+}
+
+/**
+ * Every scheduled lesson in a grade, for the one screen that shows all subjects
+ * at once (the term calendar). Fetches the per-subject files in parallel and
+ * appends each as it lands, so the calendar fills in rather than blocking on
+ * ~5 MB. The service worker caches each file, so a second visit is offline-fast.
+ */
+export function useGradeSchedules(grade) {
+  const { subjects } = useCurriculum(grade)
+  const ids = subjects.filter((s) => s.hasSchedule).map((s) => s.id).join(',')
+  const key = grade && ids ? `${grade}|${ids}` : null
+  const [state, setState] = useState({ key: null, lessons: [], loading: true, error: null })
+
+  useEffect(() => {
+    if (!key) return undefined
+    let active = true
+    // No synchronous reset here (react-hooks/set-state-in-effect): the first
+    // arrival adopts the new key, and a stale key renders as "still loading".
+    const adopt = (update) => setState((current) => (current.key === key
+      ? { ...current, ...update }
+      : { key, lessons: [], loading: true, error: null, ...update }))
+    const pending = ids.split(',').map((subjectId) =>
+      loadJson(scheduleFile(grade, subjectId), scheduleCache)
+        .then((lessons) => {
+          if (active) {
+            setState((current) => (current.key === key
+              ? { ...current, lessons: [...current.lessons, ...lessons] }
+              : { key, lessons, loading: true, error: null }))
+          }
+        })
+        .catch((error) => {
+          // A subject with no schedules file is normal; anything else is real.
+          if (active && error?.status !== 404) adopt({ error })
+        })
+    )
+    Promise.all(pending).then(() => {
+      // Every file settled: adopt the key even if none of them produced rows,
+      // so a grade with no readable schedules stops looking like it is loading.
+      if (active) adopt({ loading: false })
+    })
+    return () => {
+      active = false
+    }
+  }, [key, grade, ids])
+
+  if (!key) return { loading: false, lessons: [], error: null }
+  const current = state.key === key
+  return {
+    loading: !current || state.loading,
+    lessons: current ? state.lessons : [],
+    error: current ? state.error : null,
   }
 }
 

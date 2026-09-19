@@ -5,7 +5,7 @@ Checks the invariants the React app relies on. A failure here means the app
 renders empty lists, orphaned indicator chips, or a scheme that silently
 collapses to nothing.
 
-    python3 tools/validate_app_curriculum.py
+    python3 scripts/validate_app_curriculum.py
 """
 from __future__ import annotations
 
@@ -84,12 +84,25 @@ def main():
                 errors.append(f"{tag}/{s['id']}: counts.indicators="
                               f"{s['counts']['indicators']} but {actual} present")
 
-        # --- schedules (absent for grades with no scheduled lessons, e.g. KG)
-        expects_schedules = any(s["hasSchedule"] for s in subjects)
-        sched = load(f"{gl}_schedules.json") if expects_schedules else None
-        if expects_schedules and sched is None:
-            errors.append(f"{tag}: subjects declare schedules but {gl}_schedules.json is missing")
-        lessons = sched or []
+        # --- schedules: one file per subject-grade, only where hasSchedule.
+        # useSchedules(grade, subjectId) fetches exactly one of these; a file
+        # the subjects file does not declare is dead weight the app never asks
+        # for, and a declared one that is missing renders an empty planner.
+        lessons = []
+        for s in subjects:
+            name = f"schedules/{gl}-{s['id']}.json"
+            # Not every subject is scheduled, and a subject that is not has no
+            # file at all — only a *declared* schedule may be missing.
+            rows = load(name) if (CURR / name).exists() else None
+            if s["hasSchedule"]:
+                if not rows:
+                    errors.append(f"{tag}/{s['id']}: hasSchedule=true but {name} "
+                                  f"is missing or empty")
+                else:
+                    lessons.extend(rows)
+            elif rows:
+                errors.append(f"{tag}/{s['id']}: hasSchedule=false but {name} "
+                              f"holds {len(rows)} lessons")
         if lessons:
             bad_ref = {l["indicatorId"] for l in lessons} - ind_ids
             if bad_ref:
@@ -99,12 +112,6 @@ def main():
             if sched_subj - subj_ids:
                 errors.append(f"{tag}: schedules reference undeclared subjects "
                               f"{sorted(sched_subj - subj_ids)}")
-            for s in subjects:
-                has = sum(1 for l in lessons if l["subjectId"] == s["id"])
-                if s["hasSchedule"] and not has:
-                    errors.append(f"{tag}/{s['id']}: hasSchedule=true but 0 lessons")
-                if not s["hasSchedule"] and has:
-                    errors.append(f"{tag}/{s['id']}: hasSchedule=false but {has} lessons")
 
         # --- schemes
         weeks = schemes.get("teachingWeeksPerTerm")

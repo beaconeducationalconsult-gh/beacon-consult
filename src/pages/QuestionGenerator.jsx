@@ -46,7 +46,7 @@ export default function QuestionGenerator() {
   const [drafts, setDrafts] = useState([])
   const [saving, setSaving] = useState(false)
   const { subjects, loading: loadingSubjects, error: subjectsError } = useCurriculum(grade)
-  const { lessons } = useSchedules(grade)
+  const { lessons } = useSchedules(grade, subjectId)
 
   const generate = () => {
     if (!indicatorIds.length) return toast.error('Choose at least one indicator.')

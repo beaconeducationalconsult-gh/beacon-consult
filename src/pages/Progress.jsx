@@ -22,7 +22,7 @@ export default function Progress() {
   const [weeks, setWeeks] = useState([])
   const [loading, setLoading] = useState(true)
   const { subjects, loading: loadingSubjects, error: subjectsError } = useCurriculum(grade)
-  const { lessons } = useSchedules(grade)
+  const { lessons } = useSchedules(grade, subjectId)
 
   const key = `${grade}|${subjectId}|T${term}`
   const status = getAcademicStatus()

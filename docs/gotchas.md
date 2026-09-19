@@ -274,8 +274,9 @@ this portal. Don't assume slide creation works end-to-end.
 `useCurriculum`/`useSchedules` cache each JSON file in a module-level `Map` that never
 expires. Curriculum only changes on deploy and the service worker revalidates in the
 background, so this is intentional — but it means a hot-fix to a bundle file needs a reload,
-and **bumping `CACHE_VERSION` in `public/sw.js`** is what makes existing installs pick up new
-curriculum, quotes, or shell files.
+and the service worker's cache is named after the bundle hash in
+`curriculum/_BUILD_REPORT.json`, which is what makes existing installs pick up a rebuilt
+bundle. Edit a bundle file by hand and nothing renames the cache — clear site data.
 
 ## ⚪ Minor
 - **The retired NCOS app lives under `legacy/`** and is reference-only — nothing in `src/`

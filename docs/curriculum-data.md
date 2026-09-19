@@ -220,7 +220,7 @@ Built by `scripts/build_app_curriculum.py`; validated by
 | `grades.json` | one entry per grade: subject count, indicator count, whether schedules exist |
 | `<grade>_subjects.json` | subjects for a grade + counts, `sourceUrl`, and the `verified`/`source` provenance pair |
 | `<grade>_indicators.json` | flat indicators, full hierarchy, the only file the generator reads |
-| `<grade>_schedules.json` | every scheduled lesson: term/week/day + phases (largest files, 3–5 MB each) |
+| `schedules/<grade>-<subject>.json` | every scheduled lesson for one subject-grade: term/week/day + phases (~0.4–0.6 MB each) |
 | `<grade>_schemes.json` | scheme rows per subject per term |
 
 ### The subjects that missed the extraction pass
@@ -310,8 +310,11 @@ Notes and known gaps:
 
 * **11 grades (KG1–B9); 9 have schedules (B1–B9)** — KG1/KG2 are indicators and
   schemes only: they have no lessons in L2, so no schedules in L3.
-* **The bundle is 39.7 MB** and is committed to git, so Vercel re-uploads it on every
-  deploy. `b9_schedules.json` alone is 4.85 MB.
+* **The bundle is 38.6 MB** and is committed to git, so Vercel re-uploads it on every
+  deploy. Schedules are the bulk of it and are **split per subject-grade**
+  (`schedules/b9-mathematics.json`, ~0.5 MB) so no screen downloads a whole grade;
+  `useGradeSchedules()` pulls every subject's file for the one screen that shows them
+  all (the term calendar).
 * **There is no `questions/` directory** even though `MathModule` declares the
   `questions` capability and requests `/curriculum/questions/math/<grade>.json`.
 * The bundle's `extra` field is empty for every indicator in every grade, so
@@ -333,8 +336,11 @@ screen instead of rendering a silent "Choose…". Check, in order:
    request. A 404 or a `net::ERR_FAILED` names the cause directly.
 2. **A stale service worker.** The worker caches curriculum JSON
    stale-while-revalidate, so a copy cached by an older build is served *before*
-   the network answers. Bump `CACHE_VERSION` in `public/sw.js` (or clear site
-   data) to drop it. This only exists in `yarn build && yarn preview`, never dev.
+   the network answers. Name its cache after the bundle hash is automatic — the
+   worker reads `bundleHash` from `curriculum/_BUILD_REPORT.json`, so a rebuilt
+   bundle renames the cache and the old one is dropped on activate — but a
+   *hand-edited* file (not a rebuild) keeps the same hash. Clear site data for
+   that. This only exists in `yarn build && yarn preview`, never dev.
 3. **Serving from a sub-path.** `/curriculum/…` resolves against
    `import.meta.env.BASE_URL`, so a deploy under `/app/` works — but only if Vite
    was *built* with that `base`. `vite.config.js` sets no `base`, so a sub-path

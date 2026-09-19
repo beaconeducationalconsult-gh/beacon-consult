@@ -57,16 +57,20 @@ Curriculum is static JSON in `public/curriculum/`:
 1. Add the grade to `grades.json`.
 2. Add `<grade>_subjects.json` and `<grade>_indicators.json` (flat indicators with
    strand/sub-strand/content-standard fields — see an existing grade for the exact shape).
-   Optionally `<grade>_schedules.json` for day-by-day lessons.
-3. No code change needed — `useCurriculum(grade)` fetches by convention. The service worker
-   precaches `public/curriculum/*`, so bump `CACHE_VERSION` in `sw.js` if you want existing
-   installs to pick up new files immediately.
+   Optionally `schedules/<grade>-<subject>.json` for day-by-day lessons (one file per
+   subject-grade; `hasSchedule` on the subject says which exist).
+3. No code change needed — `useCurriculum(grade)` / `useSchedules(grade, subjectId)` fetch
+   by convention. Rebuild the bundle (`scripts/build_app_curriculum.py`), which writes a new
+   `bundleHash`; the service worker names its cache after it, so existing installs pick the
+   new files up on the next load without anyone editing a constant.
 
 ## Add quotes / theories
 
 Edit `public/quotes/quotes.json` or `theories.json`. Keep the field shape
 ([data-model.md](data-model.md)); theories must keep `definition` + `theorist` +
-`classroom` (Ghana application). Bump `sw.js` `CACHE_VERSION` to refresh cached copies.
+`classroom` (Ghana application). Quotes are cached stale-while-revalidate; the app shell
+cache is named after the curriculum bundle hash, so a quotes-only edit reaches an
+already-installed browser on its next load but leaves the current cache name alone.
 
 ## Add a "like" to a new content type
 

@@ -23,9 +23,11 @@ Registered by `src/registerSW.js`, which runs **only in production builds**
 - **Same-origin assets** (`/curriculum/*`, `/quotes/*`, hashed JS/CSS, icons):
   **stale-while-revalidate** — served from cache instantly, refreshed in the background.
   Falls back to any precached copy when offline.
-- **Precache:** the app shell + the curriculum and quotes JSON, so Quote-of-the-Day and
-  curriculum browsing work offline from first launch. Bump `CACHE_VERSION` in `sw.js` to
-  invalidate old caches.
+- **Precache:** the app shell. Curriculum and quotes JSON are cached on first use, so
+  Quote-of-the-Day and anything already browsed work offline — and because schedules are per
+  subject-grade, a class that has opened one subject's planner has that subject offline, not
+  the whole grade's 5 MB. The cache is named after the bundle hash in
+  `curriculum/_BUILD_REPORT.json`, so a rebuilt bundle invalidates old caches by itself.
 - **Cross-origin (Firebase/Firestore, Google Fonts, analytics):** never intercepted —
   Firestore manages its own offline cache (below).
 

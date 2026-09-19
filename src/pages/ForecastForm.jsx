@@ -30,7 +30,7 @@ export default function ForecastForm() {
   const [saving, setSaving] = useState(false)
 
   const { subjects, loading: loadingSubjects, error: subjectsError } = useCurriculum(grade)
-  const { lessons, loading: loadingSchedule, error: scheduleError } = useSchedules(grade)
+  const { lessons, loading: loadingSchedule, error: scheduleError } = useSchedules(grade, subjectId)
 
   // Editing: load the stored scheme instead of the template.
   useEffect(() => {

@@ -232,6 +232,7 @@ def read_bundle() -> dict:
         return {"built": False, "grades": [], "pairs": {}, "subjects": {}, "gradeNames": {}, "scheduleGrades": []}
     grades = load(grades_path)
     pairs, subjects, names = {}, collections.defaultdict(list), {}
+    sched_grades = set()
     for g in grades:
         gid = g.get("id")
         if not gid:
@@ -243,15 +244,20 @@ def read_bundle() -> dict:
         for s in load(subj_path):
             pairs[(s["id"], gid)] = s.get("counts", {}).get("indicators", 0)
             subjects[s["id"]].append(gid)
+            # Schedules are split per subject-grade (schedules/<grade>-<id>.json);
+            # the subjects file says which of them exist, so the grade list does
+            # not depend on globbing a directory that may not exist.
+            if s.get("hasSchedule") and (BUNDLE / "schedules" / f"{gid.lower()}-{s['id']}.json").exists():
+                sched_grades.add(gid)
     return {
         "built": True,
         "grades": [g["id"] for g in grades],
         "gradeNames": names,
         "pairs": pairs,
         "subjects": dict(subjects),
-        "scheduleGrades": sorted({p.name.split("_")[0].upper() for p in BUNDLE.glob("*_schedules.json")}, key=grade_sort_key),
+        "scheduleGrades": sorted(sched_grades, key=grade_sort_key),
         "hasQuestions": (BUNDLE / "questions").exists(),
-        "bytes": sum(p.stat().st_size for p in BUNDLE.glob("*.json")),
+        "bytes": sum(p.stat().st_size for p in BUNDLE.rglob("*.json")),
     }
 
 

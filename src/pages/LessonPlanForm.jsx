@@ -85,7 +85,7 @@ export default function LessonPlanForm() {
   const [prefilling, setPrefilling] = useState(false)
 
   const { subjects, indicators, loading: loadingSubjects, error: subjectsError } = useCurriculum(form.grade)
-  const { lessons } = useSchedules(form.grade)
+  const { lessons } = useSchedules(form.grade, form.subjectId)
 
   // Deep link from the curriculum browser: ?indicator=B1.1.1.1.1&grade=B5
   // Resolved during render (React's documented "adjust state when a prop

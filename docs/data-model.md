@@ -94,10 +94,10 @@ Per grade **KG1, KG2, B1…B9** (`grades.json` lists them):
 - `<grade>_subjects.json` — subjects for the grade (`id`, `name`, `hasSchedule`, …)
 - `<grade>_indicators.json` — flat indicators (strand → sub-strand → content standard →
   indicator), grouped in memory by `buildTree()` in `useCurriculum.js`
-- `<grade>_schedules.json` — optional day-by-day scheduled lessons (used to pre-fill
-  schemes)
+- `schedules/<grade>-<subject>.json` — day-by-day scheduled lessons, one file per
+  subject-grade (used to pre-fill schemes; the term calendar loads all of a grade's)
 
-Loaded via `useCurriculum(grade)` / `useSchedules(grade)` / `useGrades()` with
+Loaded via `useCurriculum(grade)` / `useSchedules(grade, subjectId)` / `useGrades()` with
 module-level caches. Also **precached by the service worker** for offline use.
 
 ### Quotes — `public/quotes/`

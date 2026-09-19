@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { ACADEMIC_YEAR, TERMS, fmtDate, getAcademicStatus, termProgress, termWeek } from '../lib/academicCalendar'
 import { GRADES, gradeLabel } from '../lib/grades'
-import { useSchedules } from '../hooks/useCurriculum'
+import { useGradeSchedules } from '../hooks/useCurriculum'
 import { SkeletonList } from './Skeleton'
 import EmptyState from './EmptyState'
 
@@ -19,7 +19,7 @@ import EmptyState from './EmptyState'
 export default function TermCalendar() {
   const [grade, setGrade] = useState('B1')
   const [term, setTerm] = useState(1)
-  const { lessons, loading: loadingSchedule, error: scheduleError } = useSchedules(grade)
+  const { lessons, loading: loadingSchedule, error: scheduleError } = useGradeSchedules(grade)
   const status = getAcademicStatus()
   const selected = TERMS.find((t) => t.term === Number(term))
 
