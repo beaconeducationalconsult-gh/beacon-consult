@@ -70,16 +70,15 @@ jobs:
           set -o pipefail
           yarn test:rules 2>&1 | tee /tmp/rules.log
 
-      # The full log is in the Actions UI; these annotations repeat the failing
-      # assertions on the check run itself, which is what a red build shows
-      # without opening a log. The job still fails either way.
-      - name: Annotate the failing assertions
+      # Vitest annotates each failing test on the check run by itself; this adds
+      # the one thing it does not — the tally — so a red build says how much of
+      # the matrix moved without opening the log.
+      - name: Summarise the failure
         if: steps.rules.outcome == 'failure'
         run: |
           sed -r 's/\x1B\[[0-9;]*[A-Za-z]//g' /tmp/rules.log \
-            | grep -aE 'AssertionError|Error:|expected|FAIL|×|✕|Tests +[0-9]+ failed|Test Files' \
-            | head -40 | cut -c1-300 \
-            | while IFS= read -r line; do echo "::error::${line}"; done
+            | grep -aE 'Test Files|Tests +[0-9]+' | tr -s ' ' | paste -sd' | ' - | cut -c1-300 \
+            | sed 's/^/::error::/'
           exit 1
 
   dataset:
