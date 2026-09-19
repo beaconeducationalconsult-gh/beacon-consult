@@ -64,7 +64,23 @@ jobs:
       # firebase-tools, downloaded pinned) and runs tests/rules/ against it.
       # It cannot run inside `make check`, which is why it has its own job.
       - name: Ask the emulator for every permission decision
-        run: yarn test:rules
+        id: rules
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          yarn test:rules 2>&1 | tee /tmp/rules.log
+
+      # The full log is in the Actions UI; these annotations repeat the failing
+      # assertions on the check run itself, which is what a red build shows
+      # without opening a log. The job still fails either way.
+      - name: Annotate the failing assertions
+        if: steps.rules.outcome == 'failure'
+        run: |
+          sed -r 's/\x1B\[[0-9;]*[A-Za-z]//g' /tmp/rules.log \
+            | grep -aE 'AssertionError|Error:|expected|FAIL|×|✕|Tests +[0-9]+ failed|Test Files' \
+            | head -40 | cut -c1-300 \
+            | while IFS= read -r line; do echo "::error::${line}"; done
+          exit 1
 
   dataset:
     name: Curriculum data audit
