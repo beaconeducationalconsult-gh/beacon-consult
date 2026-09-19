@@ -97,6 +97,18 @@ says so after a fill, and both exports mark those headings `(teaching template)`
 explaining the marker, so a printed plan never passes the syllabus' routine off as the teacher's
 own writing. See `src/lib/lessonTemplate.js`.
 
+## My library — `/portal/library`
+`DocumentLibrary.jsx`. Every document the portal generates — lesson plans, schemes, exam papers,
+quiz decks, study notes — can be kept instead of existing only as whatever landed in the
+downloads folder: the file goes to Cloud Storage under `generated/{uid}/…` and a record goes to
+`generated_documents`. **Open** re-downloads it, **Delete** removes both halves. The folder is
+private to its owner (see `storage.rules` in [security.md](security.md)).
+
+Pages offer it through `<SaveToLibrary>` (`src/components/SaveToLibrary.jsx`), which builds the
+document lazily — a teacher who never presses the button never pays for the build.
+`src/lib/generatedDocs.test.js` scans the pages and fails if one downloads a document without
+offering to keep it.
+
 ## Generators — `/portal/questions/generate` and `/quiz`
 `QuestionGenerator.jsx` (builds a printable exam paper — PDF), `QuizMaker.jsx` (builds a
 classroom quiz slideshow — PPTX). Both read the shared `questions` bank.

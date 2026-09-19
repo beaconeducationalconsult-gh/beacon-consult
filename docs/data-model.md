@@ -11,6 +11,23 @@ Two data sources:
 > of truth. Every document also carries `authorId`, `authorName`, and server timestamps
 > unless noted.
 
+## `generated_documents/{id}` — the document library (P3-3)
+
+One row per file a member generated and chose to keep. The file itself lives in Cloud Storage;
+this is what the library lists.
+
+| Field | Notes |
+|---|---|
+| `name`, `kind`, `kindLabel` | the filename and which exporter produced it (`lesson_plan`, `scheme`, `question_paper`, `quiz_deck`, `slide_deck`, `note`) |
+| `bytes` | size, shown in the list; uploads are capped at 8 MB |
+| `storagePath` | `generated/{uid}/…` — the rules require this to sit inside the creator's own folder |
+| `storageUrl` | download URL, so opening a document needs no extra round trip |
+| `meta` | what the document was about (`subjectId`, `grade`, `term`, `week`, indicators…) |
+| `authorId`, `authorName` | the owner. Read is owner-or-admin, so the list query filters on `authorId` |
+| `createdAt` | for ordering (index: `authorId` ASC, `createdAt` DESC) |
+
+Deleting a row deletes the file first; a file that is already gone does not strand the row.
+
 ## Firestore collections
 
 | Collection | Purpose | Written by | Rule |

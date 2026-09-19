@@ -6,8 +6,10 @@ import { useToast } from '../context/ToastContext'
 import { SkeletonList } from '../components/Skeleton'
 import DataError from '../components/DataError'
 import EmptyState from '../components/EmptyState'
-import { downloadQuizPptx } from '../lib/quizPptx'
-import { downloadQuestionPaper } from '../lib/questionPaper'
+import { buildQuizPptx, downloadQuizPptx } from '../lib/quizPptx'
+import { buildQuestionPaper, downloadQuestionPaper } from '../lib/questionPaper'
+import SaveToLibrary from '../components/SaveToLibrary'
+import { suggestFilename } from '../lib/generatedDocs'
 import { gradeLabel } from '../lib/grades'
 
 /** Turn bank questions into a classroom quiz slideshow (PPTX) or a paper. */
@@ -46,6 +48,26 @@ export default function QuizMaker() {
     }
   }
 
+  // What the library records beside the file, so the list is searchable later.
+  const libraryMeta = () => {
+    const first = chosen[0] || {}
+    return {
+      subjectId: first.subjectId, subjectName: first.subjectName || first.subjectId,
+      grade: first.grade, term: first.term || 1, questions: chosen.length, title,
+    }
+  }
+
+  const quizOptions = () => {
+    const first = chosen[0] || {}
+    return {
+      title,
+      subjectName: first.subjectName || first.subjectId,
+      grade: first.grade,
+      term: first.term || 1,
+      totalMarks,
+    }
+  }
+
   const buildPaper = () => {
     if (!chosen.length) return toast.error('Select at least one question.')
     const first = chosen[0]
@@ -79,6 +101,21 @@ export default function QuizMaker() {
             {busy ? 'Building…' : 'Quiz slides (.pptx)'}
           </button>
           <button type="button" className="btn-primary" onClick={buildPaper}>Exam paper (.pdf)</button>
+          {/* Keep the file itself (P3-3). Both builds are lazy, and both need a
+              selection — the button says so rather than failing quietly. */}
+          <SaveToLibrary
+            kind="quiz_deck"
+            filename={suggestFilename('quiz_deck', libraryMeta(), 'pptx')}
+            meta={libraryMeta()}
+            build={() => buildQuizPptx(chosen, quizOptions()).write({ outputType: 'blob' })}
+          />
+          <SaveToLibrary
+            label="Save paper"
+            kind="question_paper"
+            filename={suggestFilename('question_paper', libraryMeta(), 'pdf')}
+            meta={libraryMeta()}
+            build={() => buildQuestionPaper(chosen, quizOptions()).output('blob')}
+          />
         </div>
         <p className="w-full text-sm text-slate-600 sm:w-auto">
           <span className="font-semibold">{chosen.length}</span> selected · {totalMarks} marks

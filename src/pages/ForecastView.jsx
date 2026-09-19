@@ -7,7 +7,9 @@ import { SkeletonList } from '../components/Skeleton'
 import DataError from '../components/DataError'
 import EmptyState from '../components/EmptyState'
 import { downloadSchemeDocx } from '../lib/schemeDocx'
-import { downloadSchemePdf } from '../lib/schemePdf'
+import { buildSchemePdf, downloadSchemePdf } from '../lib/schemePdf'
+import SaveToLibrary from '../components/SaveToLibrary'
+import { suggestFilename } from '../lib/generatedDocs'
 import { gradeLabel } from '../lib/grades'
 
 export default function ForecastView() {
@@ -31,6 +33,10 @@ export default function ForecastView() {
 
   const canEdit = scheme.authorId === user.uid || isAdmin
   const meta = { school: profile?.school, teacher: profile?.name }
+  const libraryMeta = {
+    subjectId: scheme.subjectId, subjectName: scheme.subjectName,
+    grade: scheme.grade, term: scheme.term, weeks: scheme.rows?.length,
+  }
 
   const exportAs = async (kind) => {
     setBusy(kind)
@@ -74,6 +80,19 @@ export default function ForecastView() {
           <button type="button" className="btn-accent" onClick={() => exportAs('pdf')} disabled={busy}>
             {busy === 'pdf' ? 'Preparing…' : 'PDF'}
           </button>
+          <SaveToLibrary
+            kind="scheme"
+            filename={suggestFilename('scheme', libraryMeta, 'docx')}
+            meta={libraryMeta}
+            build={() => downloadSchemeDocx(scheme, meta)}
+          />
+          <SaveToLibrary
+            label="Save PDF"
+            kind="scheme"
+            filename={suggestFilename('scheme', libraryMeta, 'pdf')}
+            meta={libraryMeta}
+            build={() => buildSchemePdf(scheme, meta).output('blob')}
+          />
           {canEdit && <Link to={`/portal/forecasts/${scheme.id}/edit`} className="btn-primary">Edit</Link>}
         </div>
       </header>

@@ -13,7 +13,9 @@ import EmptyState from '../components/EmptyState'
 import ConfirmModal from '../components/ConfirmModal'
 import { gradeLabel } from '../lib/grades'
 import { fmtDate } from '../lib/academicCalendar'
-import { downloadLessonSlidesPptx } from '../lib/lessonSlidesPptx'
+import { buildLessonSlidesPptx, downloadLessonSlidesPptx } from '../lib/lessonSlidesPptx'
+import SaveToLibrary from '../components/SaveToLibrary'
+import { suggestFilename } from '../lib/generatedDocs'
 
 /**
  * One saved deck: the slides as a teacher would read them, a PPTX download, the
@@ -76,6 +78,12 @@ export default function SlideLessonView() {
     }
   }
 
+  // What the library records beside the file (P3-3).
+  const slideMeta = () => ({
+    subjectId: deck.subjectId, subjectName: deck.subjectName, grade: deck.grade,
+    term: deck.term, week: deck.week, slides: deck.slides?.length,
+  })
+
   const exportPptx = async () => {
     setBusy(true)
     try {
@@ -124,6 +132,12 @@ export default function SlideLessonView() {
           Term {deck.term}, week {deck.week} · {deck.slides?.length || 0} slides · {deck.authorName} · {fmtDate(deck.createdAt)}
         </p>
         <div className="mt-3 flex flex-wrap gap-2">
+          <SaveToLibrary
+            kind="slide_deck"
+            filename={suggestFilename('slide_deck', slideMeta(), 'pptx')}
+            meta={slideMeta()}
+            build={() => buildLessonSlidesPptx(deck, { school: profile?.school }).write({ outputType: 'blob' })}
+          />
           <button type="button" className="btn-accent" onClick={exportPptx} disabled={busy}>
             {busy ? 'Building…' : 'Export .pptx'}
           </button>

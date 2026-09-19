@@ -8,7 +8,9 @@ import { useCollection } from '../hooks/useCollection'
 import { useCurriculum, useSchedules } from '../hooks/useCurriculum'
 import SubjectSelect from '../components/SubjectSelect'
 import { GRADES, TERMS, gradeLabel } from '../lib/grades'
-import { downloadLessonSlidesPptx } from '../lib/lessonSlidesPptx'
+import { buildLessonSlidesPptx, downloadLessonSlidesPptx } from '../lib/lessonSlidesPptx'
+import SaveToLibrary from '../components/SaveToLibrary'
+import { suggestFilename } from '../lib/generatedDocs'
 import { SkeletonList } from '../components/Skeleton'
 import DataError from '../components/DataError'
 import EmptyState from '../components/EmptyState'
@@ -171,6 +173,13 @@ export default function SlideLessons() {
               <button type="button" className="btn-secondary px-3 py-1.5 text-xs" onClick={() => downloadLessonSlidesPptx(deck, { school: profile?.school })}>
                 Download
               </button>
+              <SaveToLibrary
+                label="Save"
+                kind="slide_deck"
+                filename={suggestFilename('slide_deck', { subjectId: deck.subjectId, subjectName: deck.subjectName, grade: deck.grade, term: deck.term, week: deck.week }, 'pptx')}
+                meta={{ subjectId: deck.subjectId, subjectName: deck.subjectName, grade: deck.grade, term: deck.term, week: deck.week, slides: deck.slides?.length }}
+                build={() => buildLessonSlidesPptx(deck, { school: profile?.school }).write({ outputType: 'blob' })}
+              />
               {deck.authorId === user.uid && (
                 <button type="button" className="btn-ghost px-3 py-1.5 text-xs" onClick={() => remove(deck.id)}>Delete</button>
               )}

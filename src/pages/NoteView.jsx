@@ -13,7 +13,9 @@ import EmptyState from '../components/EmptyState'
 import { gradeLabel } from '../lib/grades'
 import { fmtDate } from '../lib/academicCalendar'
 import { downloadNoteDocx } from '../lib/noteDocx'
-import { downloadNotePdf } from '../lib/notePdf'
+import { buildNotePdf, downloadNotePdf } from '../lib/notePdf'
+import SaveToLibrary from '../components/SaveToLibrary'
+import { suggestFilename } from '../lib/generatedDocs'
 
 /** A note plus its comment thread (subcollection `comments`). */
 export default function NoteView() {
@@ -65,6 +67,10 @@ export default function NoteView() {
     } catch (error) {
       toast.error(`Could not delete: ${error?.code || error.message}`)
     }
+  }
+
+  const libraryMeta = {
+    subjectId: note.subjectId, subjectName: note.subjectName, grade: note.grade, term: note.term,
   }
 
   /* Export as Word or PDF — see src/lib/noteDocx.js / notePdf.js. */
@@ -122,6 +128,19 @@ export default function NoteView() {
           <button type="button" className="btn-secondary" disabled={exporting} onClick={() => exportAs('pdf')}>
             {exporting === 'pdf' ? 'Building…' : 'PDF'}
           </button>
+          <SaveToLibrary
+            kind="note"
+            filename={suggestFilename('note', libraryMeta, 'docx')}
+            meta={libraryMeta}
+            build={() => downloadNoteDocx(note, { school: profile?.school, teacher: profile?.name })}
+          />
+          <SaveToLibrary
+            label="Save PDF"
+            kind="note"
+            filename={suggestFilename('note', libraryMeta, 'pdf')}
+            meta={libraryMeta}
+            build={() => buildNotePdf(note, { school: profile?.school, teacher: profile?.name }).output('blob')}
+          />
         </div>
       </header>
 

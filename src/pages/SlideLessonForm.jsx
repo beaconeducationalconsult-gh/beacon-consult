@@ -7,7 +7,9 @@ import { useToast } from '../context/ToastContext'
 import { useCurriculum } from '../hooks/useCurriculum'
 import SubjectSelect from '../components/SubjectSelect'
 import { GRADES, TERMS, gradeLabel } from '../lib/grades'
-import { downloadLessonSlidesPptx } from '../lib/lessonSlidesPptx'
+import { buildLessonSlidesPptx, downloadLessonSlidesPptx } from '../lib/lessonSlidesPptx'
+import SaveToLibrary from '../components/SaveToLibrary'
+import { suggestFilename } from '../lib/generatedDocs'
 
 const emptySlide = () => ({
   title: '',
@@ -270,6 +272,12 @@ export default function SlideLessonForm() {
         <button type="button" className="btn-secondary" onClick={exportPptx} disabled={busy}>
           {busy ? 'Building…' : 'Export .pptx'}
         </button>
+        <SaveToLibrary
+          kind="slide_deck"
+          filename={suggestFilename('slide_deck', { subjectId: deck.subjectId, subjectName: deck.subjectName, grade: deck.grade, term: deck.term, week: deck.week }, 'pptx')}
+          meta={{ subjectId: deck.subjectId, subjectName: deck.subjectName, grade: deck.grade, term: deck.term, week: deck.week, slides: deck.slides?.length }}
+          build={() => buildLessonSlidesPptx(deck, { school: profile?.school }).write({ outputType: 'blob' })}
+        />
       </div>
 
       <div className="flex justify-end gap-3">

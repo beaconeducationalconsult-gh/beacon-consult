@@ -148,10 +148,13 @@ export async function deleteStoredDocument(record) {
 /** A filename a teacher will recognise, e.g. `Exam_paper_mathematics_B4_T1.pdf`. */
 export function suggestFilename(kind, meta = {}, extension) {
   const parts = [
-    (DOC_KINDS[kind] || kind).replace(/\s+/g, '_'),
+    DOC_KINDS[kind] || kind,
     meta.subjectId || meta.subjectName,
     meta.grade,
     meta.term ? `T${meta.term}` : null,
   ].filter(Boolean)
-  return `${safeFilename(parts.join('_'))}.${extension || 'pdf'}`
+  // A single separator: subject names arrive with spaces ("Creative Arts"), and
+  // mixing them with underscores reads like a typo in a downloads folder.
+  const base = safeFilename(parts.join('_').replace(/\s+/g, '_'))
+  return `${base}.${extension || 'pdf'}`
 }

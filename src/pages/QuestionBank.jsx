@@ -13,7 +13,9 @@ import ConfirmModal from '../components/ConfirmModal'
 import NotesTabs from '../components/NotesTabs'
 import { GRADES, gradeLabel } from '../lib/grades'
 import { isoWeekKey } from '../lib/week'
-import { downloadQuestionPaper } from '../lib/questionPaper'
+import { buildQuestionPaper, downloadQuestionPaper } from '../lib/questionPaper'
+import SaveToLibrary from '../components/SaveToLibrary'
+import { suggestFilename } from '../lib/generatedDocs'
 import { loadStarterIndex, loadStarterPack, starterToFirestore } from '../lib/starterBank'
 
 const TYPE_LABELS = { mcq: 'Multiple choice', short: 'Short answer', essay: 'Essay', truefalse: 'True / false' }
@@ -111,15 +113,28 @@ export default function QuestionBank() {
     }
   }
 
-  const exportPaper = () => {
-    if (!selectedQuestions.length) return toast.error('Select some questions first.')
-    const first = selectedQuestions[0]
-    downloadQuestionPaper(selectedQuestions, {
+  const paperOptions = () => {
+    const first = selectedQuestions[0] || {}
+    return {
       subjectName: first.subjectName || first.subjectId,
       grade: first.grade,
       term: first.term || 1,
       totalMarks,
-    })
+    }
+  }
+
+  // What the library records beside the file (P3-3).
+  const paperMeta = () => {
+    const first = selectedQuestions[0] || {}
+    return {
+      subjectId: first.subjectId, subjectName: first.subjectName || first.subjectId,
+      grade: first.grade, term: first.term || 1, questions: selectedQuestions.length,
+    }
+  }
+
+  const exportPaper = () => {
+    if (!selectedQuestions.length) return toast.error('Select some questions first.')
+    downloadQuestionPaper(selectedQuestions, paperOptions())
   }
 
   const remove = async () => {
@@ -240,6 +255,13 @@ export default function QuestionBank() {
           <div className="flex gap-2">
             <button type="button" className="btn-secondary" onClick={() => setSelected([])}>Clear</button>
             <button type="button" className="btn-accent" onClick={exportPaper}>Export exam paper (PDF)</button>
+            <SaveToLibrary
+              label="Save paper"
+              kind="question_paper"
+              filename={suggestFilename('question_paper', paperMeta(), 'pdf')}
+              meta={paperMeta()}
+              build={() => buildQuestionPaper(selectedQuestions, paperOptions()).output('blob')}
+            />
           </div>
         </div>
       )}
