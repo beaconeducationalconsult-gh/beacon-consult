@@ -242,7 +242,7 @@
    "indicators": 454,
    "lessons": 1800,
    "scheme_subjects": 10,
-   "kb": 5309
+   "kb": 5311
   },
   {
    "grade": "B8",
@@ -250,7 +250,7 @@
    "indicators": 379,
    "lessons": 1800,
    "scheme_subjects": 10,
-   "kb": 5299
+   "kb": 5301
   },
   {
    "grade": "B9",
@@ -258,9 +258,9 @@
    "indicators": 377,
    "lessons": 1800,
    "scheme_subjects": 10,
-   "kb": 5317
+   "kb": 5319
   }
  ],
- "totalKb": 39004,
- "bundleHash": "e517dc2c9581"
+ "totalKb": 39010,
+ "bundleHash": "c10a82bca9b9"
 }

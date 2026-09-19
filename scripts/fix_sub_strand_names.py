@@ -120,8 +120,12 @@ def fold_code(text: str) -> str:
     print drops the dot after the grade (`B1 1.1.1.2`), and every print may space the
     digits out of the line's flow.
     """
-    text = re.sub(r"\s+", "", text or "")
-    text = re.sub(r"/?(?:JHS|SHS|BASIC|PRIMARY)\d*", "", text, flags=re.I)
+    # The class marker is stripped *before* the whitespace, because the rme print sets
+    # `B7/JHS1 2.2.1.1` with no dot after the class: collapsing first would let the
+    # marker's `\d*` eat the strand digit (`JHS12`) and fold the code one component
+    # short, which read the wrong block's heading for every row it touched.
+    text = re.sub(r"\s*/?\s*(?:JHS|SHS|BASIC|PRIMARY)\s*\d*", "", text or "", flags=re.I)
+    text = re.sub(r"\s+", "", text)
     return re.sub(r"^([BK]\d)(\d)", r"\1.\2", text)
 
 

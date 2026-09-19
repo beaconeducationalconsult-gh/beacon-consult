@@ -23,7 +23,7 @@
  },
  "B8.2.1.1.1": {
   "strand": "2. RELIGIOUS PRACTICES",
-  "sub_strand": "1. BRIBERY AND CORRUPTION",
+  "sub_strand": "1. RITES OF PASSAGE",
   "cs_code": "B8.2.1.1",
   "cs_desc": "Explain rites of passage and identify the moral lessons in them Islam A child is given a name on the eighth day. A ceremony made up of couple’s relatives, community members and led by an imam or a mallam. A sheep is slaughtered to thank A",
   "ind_desc": "Describe the naming ceremonies/outdooring in the three major religions",
@@ -34,7 +34,7 @@
  },
  "B8.2.1.1.2": {
   "strand": "2. RELIGIOUS PRACTICES",
-  "sub_strand": "1. BRIBERY AND CORRUPTION",
+  "sub_strand": "1. RITES OF PASSAGE",
   "cs_code": "B8.2.1.1",
   "cs_desc": "Explain rites of passage and identify the moral lessons in them Islam A child is given a name on the eighth day. A ceremony made up of couple’s relatives, community members and led by an imam or a mallam. A sheep is slaughtered to thank A",
   "ind_desc": "Explain physical and emotional changes that characterise puberty",
@@ -45,7 +45,7 @@
  },
  "B8.2.1.1.3": {
   "strand": "2. RELIGIOUS PRACTICES",
-  "sub_strand": "1. BRIBERY AND CORRUPTION",
+  "sub_strand": "1. RITES OF PASSAGE",
   "cs_code": "B8.2.1.1",
   "cs_desc": "Explain rites of passage and identify the moral lessons in them Islam A child is given a name on the eighth day. A ceremony made up of couple’s relatives, community members and led by an imam or a mallam. A sheep is slaughtered to thank A",
   "ind_desc": "Describe how puberty rites are performed in traditional Ghanaian societies",
@@ -56,7 +56,7 @@
  },
  "B8.2.1.1.4": {
   "strand": "2. RELIGIOUS PRACTICES",
-  "sub_strand": "1. BRIBERY AND CORRUPTION",
+  "sub_strand": "1. RITES OF PASSAGE",
   "cs_code": "B8.2.1.1",
   "cs_desc": "Explain rites of passage and identify the moral lessons in them Islam A child is given a name on the eighth day. A ceremony made up of couple’s relatives, community members and led by an imam or a mallam. A sheep is slaughtered to thank A",
   "ind_desc": "Describe how a marriage is contracted in the three main religions in Ghana",
@@ -67,7 +67,7 @@
  },
  "B8.2.1.1.5": {
   "strand": "2. RELIGIOUS PRACTICES",
-  "sub_strand": "1. BRIBERY AND CORRUPTION",
+  "sub_strand": "1. RITES OF PASSAGE",
   "cs_code": "B8.2.1.1",
   "cs_desc": "Explain rites of passage and identify the moral lessons in them Islam A child is given a name on the eighth day. A ceremony made up of couple’s relatives, community members and led by an imam or a mallam. A sheep is slaughtered to thank A",
   "ind_desc": "Describe how death rites are performed in the three major religions in Ghana",
@@ -78,7 +78,7 @@
  },
  "B8.2.1.1.6": {
   "strand": "2. RELIGIOUS PRACTICES",
-  "sub_strand": "1. BRIBERY AND CORRUPTION",
+  "sub_strand": "1. RITES OF PASSAGE",
   "cs_code": "B8.2.1.1",
   "cs_desc": "Explain rites of passage and identify the moral lessons in them Islam A child is given a name on the eighth day. A ceremony made up of couple’s relatives, community members and led by an imam or a mallam. A sheep is slaughtered to thank A",
   "ind_desc": "Identify and explain the moral lessons in the rites of passage",
@@ -122,7 +122,7 @@
  },
  "B8.4.1.1.1": {
   "strand": "4. RELIGIOUS LEADERS AND PERSONALITIES",
-  "sub_strand": "1. TIME AND LEISURE",
+  "sub_strand": "1. PROPHETS AND CALIPHS",
   "cs_code": "B8.4.1.1",
   "cs_desc": "Identify and explain the moral lessons that can be learned from the exemplary lives of the prophets and Caliphs",
   "ind_desc": "Describe the mission of the prophets",
@@ -133,7 +133,7 @@
  },
  "B8.4.1.1.2": {
   "strand": "4. RELIGIOUS LEADERS AND PERSONALITIES",
-  "sub_strand": "1. TIME AND LEISURE",
+  "sub_strand": "1. PROPHETS AND CALIPHS",
   "cs_code": "B8.4.1.1",
   "cs_desc": "Identify and explain the moral lessons that can be learned from the exemplary lives of the prophets and Caliphs",
   "ind_desc": "Outline the mission and exemplary lives of the Caliphs",
@@ -144,7 +144,7 @@
  },
  "B8.4.1.1.3": {
   "strand": "4. RELIGIOUS LEADERS AND PERSONALITIES",
-  "sub_strand": "1. TIME AND LEISURE",
+  "sub_strand": "1. PROPHETS AND CALIPHS",
   "cs_code": "B8.4.1.1",
   "cs_desc": "Identify and explain the moral lessons that can be learned from the exemplary lives of the prophets and Caliphs",
   "ind_desc": "Examine lessons from the exemplary lives of the Prophets and Caliphs",
@@ -155,7 +155,7 @@
  },
  "B8.5.1.1.1": {
   "strand": "5. ETHICS AND MORAL LIFE",
-  "sub_strand": "Sub-strand B8.5.1",
+  "sub_strand": "1. MORAL TEACHINGS IN THE THREE MAJOR RELIGIONS IN GHANA",
   "cs_code": "B8.5.1.1",
   "cs_desc": "Exemplify the moral teachings from the Bible, Qur’an and Oral Traditions Indigenous African Religion",
   "ind_desc": "Identify and explain the moral teachings from the Bible, Qur’an and Oral Traditions",
@@ -166,7 +166,7 @@
  },
  "B8.5.1.1.2": {
   "strand": "5. ETHICS AND MORAL LIFE",
-  "sub_strand": "Sub-strand B8.5.1",
+  "sub_strand": "1. MORAL TEACHINGS IN THE THREE MAJOR RELIGIONS IN GHANA",
   "cs_code": "B8.5.1.1",
   "cs_desc": "Exemplify the moral teachings from the Bible, Qur’an and Oral Traditions Indigenous African Religion",
   "ind_desc": "Demonstrate how to apply the moral teachings from the three main religions in their daily life",
@@ -177,7 +177,7 @@
  },
  "B8.6.1.1.1": {
   "strand": "6. RELIGION AND ECONOMIC LIFE",
-  "sub_strand": "Sub-strand B8.6.1",
+  "sub_strand": "1. MONEY",
   "cs_code": "B8.6.1.1",
   "cs_desc": "Plan the wise use of money Project Work: Learners to visit the internet website of SSNIT and search for information on its functions and benefits workers get from social security contributions for class discussions. 51 © NaCCA, Mini",
   "ind_desc": "Explain the term “money” and indicate its usefulness",
@@ -188,7 +188,7 @@
  },
  "B8.6.1.1.2": {
   "strand": "6. RELIGION AND ECONOMIC LIFE",
-  "sub_strand": "Sub-strand B8.6.1",
+  "sub_strand": "1. MONEY",
   "cs_code": "B8.6.1.1",
   "cs_desc": "Plan the wise use of money Project Work: Learners to visit the internet website of SSNIT and search for information on its functions and benefits workers get from social security contributions for class discussions. 51 © NaCCA, Mini",
   "ind_desc": "Identify and explain honest ways of acquiring money",
@@ -199,7 +199,7 @@
  },
  "B8.6.1.1.3": {
   "strand": "6. RELIGION AND ECONOMIC LIFE",
-  "sub_strand": "Sub-strand B8.6.1",
+  "sub_strand": "1. MONEY",
   "cs_code": "B8.6.1.1",
   "cs_desc": "Plan the wise use of money Project Work: Learners to visit the internet website of SSNIT and search for information on its functions and benefits workers get from social security contributions for class discussions. 51 © NaCCA, Mini",
   "ind_desc": "Discuss the appropriate ways of using money",
@@ -210,7 +210,7 @@
  },
  "B8.6.1.1.4": {
   "strand": "6. RELIGION AND ECONOMIC LIFE",
-  "sub_strand": "Sub-strand B8.6.1",
+  "sub_strand": "1. MONEY",
   "cs_code": "B8.6.1.1",
   "cs_desc": "Plan the wise use of money Project Work: Learners to visit the internet website of SSNIT and search for information on its functions and benefits workers get from social security contributions for class discussions. 51 © NaCCA, Mini",
   "ind_desc": "Discuss the benefits of the SSNIT pension scheme and people who are qualified to benefit. The SSNIT Pension Scheme The Social Security and National Insurance Trust (SSNIT)is the institution established by law to collect and manage the social security contributions of workers. Its main objective is to “ensure the provision of social protection for the working population for various contingencies including old",
@@ -221,7 +221,7 @@
  },
  "B8.6.2.1.1": {
   "strand": "6. RELIGION AND ECONOMIC LIFE",
-  "sub_strand": "Sub-strand B8.6.2",
+  "sub_strand": "2. BRIBERY AND CORRUPTION",
   "cs_code": "B8.6.2.1",
   "cs_desc": "Explain the need to avoid bribery and corruption and the ways to do so. 2. Using Think-Pair and Share, learners discuss the effects of bribery and corruption on the state Effects",
   "ind_desc": "Explain the terms “bribery” and “corruption”",
@@ -232,7 +232,7 @@
  },
  "B8.6.2.1.2": {
   "strand": "6. RELIGION AND ECONOMIC LIFE",
-  "sub_strand": "Sub-strand B8.6.2",
+  "sub_strand": "2. BRIBERY AND CORRUPTION",
   "cs_code": "B8.6.2.1",
   "cs_desc": "Explain the need to avoid bribery and corruption and the ways to do so. 2. Using Think-Pair and Share, learners discuss the effects of bribery and corruption on the state Effects",
   "ind_desc": "Identify the causes and effects of bribery and corruption",

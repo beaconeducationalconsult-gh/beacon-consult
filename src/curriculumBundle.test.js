@@ -688,7 +688,7 @@ describe.each(ids)('%s', (grade) => {
       // `SUB - STRAND 1: GENERATION OF COMPUTERS ...`, which the print itself
       // kerns as `GENE RATION` and the reader joins back.
       expect(ledger.applied).toBe(true)
-      expect(ledger.written).toHaveLength(3642)
+      expect(ledger.written).toHaveLength(3665)
       const computing = read('b6_indicators.json').find((r) => r.code === 'B6.1.1.1.3')
       expect(computing.subStrandName)
         .toBe('GENERATION OF COMPUTERS AND PARTS OF A COMPUTER AND OTHER GADGETS')
@@ -696,12 +696,13 @@ describe.each(ids)('%s', (grade) => {
     })
 
     it('leaves a code only where the print does not name the block one way', () => {
-      // 37 readings are refused: 18 are blocks the rme print sets no heading
-      // for, and the rest are blocks the print itself names two ways
+      // 14 readings are refused, all of them blocks the print itself names two
+      // ways - the rme and mathematics CCP prints reuse a code in two places
       // (`PLANTS- 1` / `PLANTS- 2`, `MY NATIONAL AND CIVIC VALUES` /
-      // `OUR BELIEFS`). Keeping the code is the honest result there - the
-      // alternative is picking one of two names for the teacher.
-      expect(refused.size).toBe(37)
+      // `OUR BELIEFS`, `Measurement- (Perimeter and Area)` /
+      // `Position/Transformation`). Keeping the code is the honest result
+      // there - the alternative is picking one of two names for the teacher.
+      expect(refused.size).toBe(14)
       const offenders = []
       for (const [grade, { indicators }] of bundle) {
         for (const row of indicators) {
@@ -716,8 +717,8 @@ describe.each(ids)('%s', (grade) => {
     it('carries the names into the schedules, and refuses the same records there', () => {
       // The scheme of learning prints the lesson's own `sub_strand`, so filling
       // the databases alone would have left the code on the document teachers
-      // print. The lesson files repeated it in 11,506 of their 13,140 rows.
-      expect(ledger.written_lessons.records).toBe(11506)
+      // print. The lesson files repeated it in 11,652 of their 13,140 rows.
+      expect(ledger.written_lessons.records).toBe(11652)
       const offenders = []
       let rows = 0
       for (const [gradeId, { subjects }] of bundle) {

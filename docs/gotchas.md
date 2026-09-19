@@ -193,8 +193,8 @@ one measured on the prints:
 * **A name is not a row's property.** The heading sits above the whole block, so a record is
   anchored on its own row when the print carries it, then on its content standard, then on the
   same block in its grade, and — one step weaker, reported as such — on the same block in another
-  grade of the same print. The CCP prints repeat a block across B7–B9, which is where 14 of the
-  3,642 readings come from.
+  grade of the same print. The CCP prints repeat a block across B7–B9, which is where 10 of the
+  3,665 readings come from.
 * **The same code can be reprinted under a different heading pages later** (english
   `B6.2.3.1.1` is read under `Word Families` on p192 and `Diphthongs` on p193, five blocks on).
   A reading whose heading number agrees with the row's own components settles it; a print that
@@ -209,6 +209,13 @@ one measured on the prints:
   and a rule wide enough to fix `Appreciati n g` also invents `RolePlay` and `ceque`. What the
   print itself sets (`TECHNOLOGY INTHE COMMUNITY` in the computing CCP's own table of contents)
   stays verbatim.
+* **A code the print dresses up must be folded in the right order.** The rme CCP sets
+  `B7/JHS1 2.2.1.1` — no dot after the class — and a fold that collapses the whitespace
+  *first* lets the class marker's `\d*` eat the strand digit (`JHS12`): the code lands one
+  component short and the row is named from the *neighbouring* block. On the first pass
+  that refused 18 rme blocks as "no heading" and silently named 41 records from the wrong
+  block, which is the worst kind of wrong — a plausible name. Strip the class marker
+  before collapsing the space and the same codes fold correctly.
 
 ## 🟠 A print's notation example parses as a record
 

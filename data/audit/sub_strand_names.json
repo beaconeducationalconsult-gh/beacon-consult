@@ -29373,7 +29373,7 @@
    "code": "B7.1.1.1.1",
    "before": "Sub-strand B7.1.1",
    "after": "1. GOD, HIS NATURE AND ATTRIBUTES",
-   "source": "standard",
+   "source": "row",
    "page": 32,
    "print": "rme_CCP_B7-B9.pdf"
   },
@@ -29382,7 +29382,7 @@
    "code": "B7.1.1.1.2",
    "before": "Sub-strand B7.1.1",
    "after": "1. GOD, HIS NATURE AND ATTRIBUTES",
-   "source": "standard",
+   "source": "row",
    "page": 32,
    "print": "rme_CCP_B7-B9.pdf"
   },
@@ -29400,7 +29400,7 @@
    "code": "B7.2.1.1.1",
    "before": "Sub-strand B7.2.1",
    "after": "1. WORSHIP",
-   "source": "standard",
+   "source": "row",
    "page": 34,
    "print": "rme_CCP_B7-B9.pdf"
   },
@@ -29409,7 +29409,7 @@
    "code": "B7.2.1.1.2",
    "before": "Sub-strand B7.2.1",
    "after": "1. WORSHIP",
-   "source": "standard",
+   "source": "row",
    "page": 34,
    "print": "rme_CCP_B7-B9.pdf"
   },
@@ -29418,7 +29418,7 @@
    "code": "B7.2.1.1.3",
    "before": "Sub-strand B7.2.1",
    "after": "1. WORSHIP",
-   "source": "standard",
+   "source": "row",
    "page": 34,
    "print": "rme_CCP_B7-B9.pdf"
   },
@@ -29429,6 +29429,33 @@
    "after": "1. WORSHIP",
    "source": "row",
    "page": 34,
+   "print": "rme_CCP_B7-B9.pdf"
+  },
+  {
+   "file": "rme_B7_curriculum_db_clean.json",
+   "code": "B7.2.2.1.1",
+   "before": "Sub-strand B7.2.2",
+   "after": "2. RELIGIOUS SONGS AND RECITATIONS",
+   "source": "row",
+   "page": 38,
+   "print": "rme_CCP_B7-B9.pdf"
+  },
+  {
+   "file": "rme_B7_curriculum_db_clean.json",
+   "code": "B7.2.2.1.2",
+   "before": "Sub-strand B7.2.2",
+   "after": "2. RELIGIOUS SONGS AND RECITATIONS",
+   "source": "row",
+   "page": 38,
+   "print": "rme_CCP_B7-B9.pdf"
+  },
+  {
+   "file": "rme_B7_curriculum_db_clean.json",
+   "code": "B7.2.2.1.3",
+   "before": "Sub-strand B7.2.2",
+   "after": "2. RELIGIOUS SONGS AND RECITATIONS",
+   "source": "row",
+   "page": 38,
    "print": "rme_CCP_B7-B9.pdf"
   },
   {
@@ -29445,7 +29472,7 @@
    "code": "B7.3.1.1.2",
    "before": "Sub-strand B7.3.1",
    "after": "1. FAMILY SYSTEMS",
-   "source": "standard",
+   "source": "row",
    "page": 40,
    "print": "rme_CCP_B7-B9.pdf"
   },
@@ -29454,7 +29481,7 @@
    "code": "B7.3.1.1.3",
    "before": "Sub-strand B7.3.1",
    "after": "1. FAMILY SYSTEMS",
-   "source": "standard",
+   "source": "row",
    "page": 40,
    "print": "rme_CCP_B7-B9.pdf"
   },
@@ -29462,27 +29489,27 @@
    "file": "rme_B7_curriculum_db_clean.json",
    "code": "B7.4.1.1.1",
    "before": "Sub-strand B7.4.1",
-   "after": "1. TIME AND LEISURE",
-   "source": "cross-grade",
-   "page": 103,
+   "after": "1. RELIGIOUS LEADERS",
+   "source": "row",
+   "page": 43,
    "print": "rme_CCP_B7-B9.pdf"
   },
   {
    "file": "rme_B7_curriculum_db_clean.json",
    "code": "B7.4.1.1.2",
    "before": "Sub-strand B7.4.1",
-   "after": "1. TIME AND LEISURE",
-   "source": "cross-grade",
-   "page": 103,
+   "after": "1. RELIGIOUS LEADERS",
+   "source": "row",
+   "page": 43,
    "print": "rme_CCP_B7-B9.pdf"
   },
   {
    "file": "rme_B7_curriculum_db_clean.json",
    "code": "B7.4.1.1.3",
    "before": "Sub-strand B7.4.1",
-   "after": "1. TIME AND LEISURE",
-   "source": "cross-grade",
-   "page": 103,
+   "after": "1. RELIGIOUS LEADERS",
+   "source": "row",
+   "page": 43,
    "print": "rme_CCP_B7-B9.pdf"
   },
   {
@@ -29490,7 +29517,7 @@
    "code": "B7.5.1.1.1",
    "before": "Sub-strand B7.5.1",
    "after": "1. MANNERS AND DECENCY",
-   "source": "standard",
+   "source": "row",
    "page": 45,
    "print": "rme_CCP_B7-B9.pdf"
   },
@@ -29508,7 +29535,7 @@
    "code": "B7.5.1.1.3",
    "before": "Sub-strand B7.5.1",
    "after": "1. MANNERS AND DECENCY",
-   "source": "standard",
+   "source": "row",
    "page": 45,
    "print": "rme_CCP_B7-B9.pdf"
   },
@@ -29517,7 +29544,7 @@
    "code": "B7.5.1.1.4",
    "before": "Sub-strand B7.5.1",
    "after": "1. MANNERS AND DECENCY",
-   "source": "standard",
+   "source": "row",
    "page": 45,
    "print": "rme_CCP_B7-B9.pdf"
   },
@@ -29535,7 +29562,7 @@
    "code": "B7.5.2.1.2",
    "before": "Sub-strand B7.5.2",
    "after": "2. SUBSTANCE ABUSE",
-   "source": "standard",
+   "source": "row",
    "page": 48,
    "print": "rme_CCP_B7-B9.pdf"
   },
@@ -29544,8 +29571,44 @@
    "code": "B7.5.2.1.3",
    "before": "Sub-strand B7.5.2",
    "after": "2. SUBSTANCE ABUSE",
-   "source": "standard",
+   "source": "row",
    "page": 48,
+   "print": "rme_CCP_B7-B9.pdf"
+  },
+  {
+   "file": "rme_B7_curriculum_db_clean.json",
+   "code": "B7.6.1.1.1",
+   "before": "Sub-strand B7.6.1",
+   "after": "1. WORK , ENTREPRENEURSHIP AND SOCIAL SECURITY",
+   "source": "row",
+   "page": 51,
+   "print": "rme_CCP_B7-B9.pdf"
+  },
+  {
+   "file": "rme_B7_curriculum_db_clean.json",
+   "code": "B7.6.1.1.2",
+   "before": "Sub-strand B7.6.1",
+   "after": "1. WORK , ENTREPRENEURSHIP AND SOCIAL SECURITY",
+   "source": "row",
+   "page": 51,
+   "print": "rme_CCP_B7-B9.pdf"
+  },
+  {
+   "file": "rme_B7_curriculum_db_clean.json",
+   "code": "B7.6.1.1.3",
+   "before": "Sub-strand B7.6.1",
+   "after": "1. WORK , ENTREPRENEURSHIP AND SOCIAL SECURITY",
+   "source": "row",
+   "page": 51,
+   "print": "rme_CCP_B7-B9.pdf"
+  },
+  {
+   "file": "rme_B7_curriculum_db_clean.json",
+   "code": "B7.6.1.1.4",
+   "before": "Sub-strand B7.6.1",
+   "after": "1. WORK , ENTREPRENEURSHIP AND SOCIAL SECURITY",
+   "source": "row",
+   "page": 51,
    "print": "rme_CCP_B7-B9.pdf"
   },
   {
@@ -29553,7 +29616,7 @@
    "code": "B8.1.1.1.1",
    "before": "Sub-strand B8.1.1",
    "after": "1. THE CREATION STORIES OF THE THREE MAJOR RELIGIONS IN GHANA",
-   "source": "pair",
+   "source": "row",
    "page": 56,
    "print": "rme_CCP_B7-B9.pdf"
   },
@@ -29562,7 +29625,7 @@
    "code": "B8.1.1.1.2",
    "before": "Sub-strand B8.1.1",
    "after": "1. THE CREATION STORIES OF THE THREE MAJOR RELIGIONS IN GHANA",
-   "source": "pair",
+   "source": "row",
    "page": 56,
    "print": "rme_CCP_B7-B9.pdf"
   },
@@ -29570,54 +29633,54 @@
    "file": "rme_B8_curriculum_db_clean.json",
    "code": "B8.2.1.1.1",
    "before": "Sub-strand B8.2.1",
-   "after": "1. BRIBERY AND CORRUPTION",
-   "source": "pair",
-   "page": 81,
+   "after": "1. RITES OF PASSAGE",
+   "source": "row",
+   "page": 58,
    "print": "rme_CCP_B7-B9.pdf"
   },
   {
    "file": "rme_B8_curriculum_db_clean.json",
    "code": "B8.2.1.1.2",
    "before": "Sub-strand B8.2.1",
-   "after": "1. BRIBERY AND CORRUPTION",
-   "source": "pair",
-   "page": 81,
+   "after": "1. RITES OF PASSAGE",
+   "source": "row",
+   "page": 58,
    "print": "rme_CCP_B7-B9.pdf"
   },
   {
    "file": "rme_B8_curriculum_db_clean.json",
    "code": "B8.2.1.1.3",
    "before": "Sub-strand B8.2.1",
-   "after": "1. BRIBERY AND CORRUPTION",
-   "source": "pair",
-   "page": 81,
+   "after": "1. RITES OF PASSAGE",
+   "source": "row",
+   "page": 58,
    "print": "rme_CCP_B7-B9.pdf"
   },
   {
    "file": "rme_B8_curriculum_db_clean.json",
    "code": "B8.2.1.1.4",
    "before": "Sub-strand B8.2.1",
-   "after": "1. BRIBERY AND CORRUPTION",
-   "source": "pair",
-   "page": 81,
+   "after": "1. RITES OF PASSAGE",
+   "source": "row",
+   "page": 58,
    "print": "rme_CCP_B7-B9.pdf"
   },
   {
    "file": "rme_B8_curriculum_db_clean.json",
    "code": "B8.2.1.1.5",
    "before": "Sub-strand B8.2.1",
-   "after": "1. BRIBERY AND CORRUPTION",
-   "source": "pair",
-   "page": 81,
+   "after": "1. RITES OF PASSAGE",
+   "source": "row",
+   "page": 58,
    "print": "rme_CCP_B7-B9.pdf"
   },
   {
    "file": "rme_B8_curriculum_db_clean.json",
    "code": "B8.2.1.1.6",
    "before": "Sub-strand B8.2.1",
-   "after": "1. BRIBERY AND CORRUPTION",
-   "source": "pair",
-   "page": 81,
+   "after": "1. RITES OF PASSAGE",
+   "source": "row",
+   "page": 58,
    "print": "rme_CCP_B7-B9.pdf"
   },
   {
@@ -29634,7 +29697,7 @@
    "code": "B8.3.1.1.2",
    "before": "Sub-strand B8.3.1",
    "after": "1. AUTHORITY AND OBEDIENCE",
-   "source": "standard",
+   "source": "row",
    "page": 66,
    "print": "rme_CCP_B7-B9.pdf"
   },
@@ -29643,7 +29706,7 @@
    "code": "B8.3.1.1.3",
    "before": "Sub-strand B8.3.1",
    "after": "1. AUTHORITY AND OBEDIENCE",
-   "source": "standard",
+   "source": "row",
    "page": 66,
    "print": "rme_CCP_B7-B9.pdf"
   },
@@ -29651,27 +29714,99 @@
    "file": "rme_B8_curriculum_db_clean.json",
    "code": "B8.4.1.1.1",
    "before": "Sub-strand B8.4.1",
-   "after": "1. TIME AND LEISURE",
-   "source": "cross-grade",
-   "page": 103,
+   "after": "1. PROPHETS AND CALIPHS",
+   "source": "row",
+   "page": 69,
    "print": "rme_CCP_B7-B9.pdf"
   },
   {
    "file": "rme_B8_curriculum_db_clean.json",
    "code": "B8.4.1.1.2",
    "before": "Sub-strand B8.4.1",
-   "after": "1. TIME AND LEISURE",
-   "source": "cross-grade",
-   "page": 103,
+   "after": "1. PROPHETS AND CALIPHS",
+   "source": "row",
+   "page": 69,
    "print": "rme_CCP_B7-B9.pdf"
   },
   {
    "file": "rme_B8_curriculum_db_clean.json",
    "code": "B8.4.1.1.3",
    "before": "Sub-strand B8.4.1",
-   "after": "1. TIME AND LEISURE",
-   "source": "cross-grade",
-   "page": 103,
+   "after": "1. PROPHETS AND CALIPHS",
+   "source": "row",
+   "page": 69,
+   "print": "rme_CCP_B7-B9.pdf"
+  },
+  {
+   "file": "rme_B8_curriculum_db_clean.json",
+   "code": "B8.5.1.1.1",
+   "before": "Sub-strand B8.5.1",
+   "after": "1. MORAL TEACHINGS IN THE THREE MAJOR RELIGIONS IN GHANA",
+   "source": "row",
+   "page": 72,
+   "print": "rme_CCP_B7-B9.pdf"
+  },
+  {
+   "file": "rme_B8_curriculum_db_clean.json",
+   "code": "B8.5.1.1.2",
+   "before": "Sub-strand B8.5.1",
+   "after": "1. MORAL TEACHINGS IN THE THREE MAJOR RELIGIONS IN GHANA",
+   "source": "row",
+   "page": 72,
+   "print": "rme_CCP_B7-B9.pdf"
+  },
+  {
+   "file": "rme_B8_curriculum_db_clean.json",
+   "code": "B8.6.1.1.1",
+   "before": "Sub-strand B8.6.1",
+   "after": "1. MONEY",
+   "source": "row",
+   "page": 75,
+   "print": "rme_CCP_B7-B9.pdf"
+  },
+  {
+   "file": "rme_B8_curriculum_db_clean.json",
+   "code": "B8.6.1.1.2",
+   "before": "Sub-strand B8.6.1",
+   "after": "1. MONEY",
+   "source": "row",
+   "page": 75,
+   "print": "rme_CCP_B7-B9.pdf"
+  },
+  {
+   "file": "rme_B8_curriculum_db_clean.json",
+   "code": "B8.6.1.1.3",
+   "before": "Sub-strand B8.6.1",
+   "after": "1. MONEY",
+   "source": "row",
+   "page": 75,
+   "print": "rme_CCP_B7-B9.pdf"
+  },
+  {
+   "file": "rme_B8_curriculum_db_clean.json",
+   "code": "B8.6.1.1.4",
+   "before": "Sub-strand B8.6.1",
+   "after": "1. MONEY",
+   "source": "row",
+   "page": 75,
+   "print": "rme_CCP_B7-B9.pdf"
+  },
+  {
+   "file": "rme_B8_curriculum_db_clean.json",
+   "code": "B8.6.2.1.1",
+   "before": "Sub-strand B8.6.2",
+   "after": "2. BRIBERY AND CORRUPTION",
+   "source": "row",
+   "page": 81,
+   "print": "rme_CCP_B7-B9.pdf"
+  },
+  {
+   "file": "rme_B8_curriculum_db_clean.json",
+   "code": "B8.6.2.1.2",
+   "before": "Sub-strand B8.6.2",
+   "after": "2. BRIBERY AND CORRUPTION",
+   "source": "row",
+   "page": 81,
    "print": "rme_CCP_B7-B9.pdf"
   },
   {
@@ -29679,7 +29814,7 @@
    "code": "B9.1.1.1.1",
    "before": "Sub-strand B9.1.1",
    "after": "1. THE PURPOSE AND USEFULNESS OF GOD’S CREATION",
-   "source": "pair",
+   "source": "row",
    "page": 84,
    "print": "rme_CCP_B7-B9.pdf"
   },
@@ -29688,62 +29823,107 @@
    "code": "B9.1.1.1.2",
    "before": "Sub-strand B9.1.1",
    "after": "1. THE PURPOSE AND USEFULNESS OF GOD’S CREATION",
-   "source": "pair",
+   "source": "row",
    "page": 84,
+   "print": "rme_CCP_B7-B9.pdf"
+  },
+  {
+   "file": "rme_B9_curriculum_db_clean.json",
+   "code": "B9.1.2.1.1",
+   "before": "Sub-strand B9.1.2",
+   "after": "2. THE ENVIRONMENT",
+   "source": "row",
+   "page": 86,
+   "print": "rme_CCP_B7-B9.pdf"
+  },
+  {
+   "file": "rme_B9_curriculum_db_clean.json",
+   "code": "B9.1.2.1.3",
+   "before": "Sub-strand B9.1.2",
+   "after": "2. THE ENVIRONMENT",
+   "source": "row",
+   "page": 86,
    "print": "rme_CCP_B7-B9.pdf"
   },
   {
    "file": "rme_B9_curriculum_db_clean.json",
    "code": "B9.2.1.1.1",
    "before": "Sub-strand B9.2.1",
-   "after": "1. THE ENVIRONMENT",
-   "source": "pair",
-   "page": 86,
+   "after": "1. RELIGIOUS FESTIVALS",
+   "source": "row",
+   "page": 90,
    "print": "rme_CCP_B7-B9.pdf"
   },
   {
    "file": "rme_B9_curriculum_db_clean.json",
    "code": "B9.2.1.1.2",
    "before": "Sub-strand B9.2.1",
-   "after": "1. THE ENVIRONMENT",
-   "source": "pair",
-   "page": 86,
+   "after": "1. RELIGIOUS FESTIVALS",
+   "source": "row",
+   "page": 90,
    "print": "rme_CCP_B7-B9.pdf"
   },
   {
    "file": "rme_B9_curriculum_db_clean.json",
    "code": "B9.2.1.1.3",
    "before": "Sub-strand B9.2.1",
-   "after": "1. THE ENVIRONMENT",
-   "source": "pair",
-   "page": 86,
+   "after": "1. RELIGIOUS FESTIVALS",
+   "source": "row",
+   "page": 90,
+   "print": "rme_CCP_B7-B9.pdf"
+  },
+  {
+   "file": "rme_B9_curriculum_db_clean.json",
+   "code": "B9.3.1.1.1",
+   "before": "Sub-strand B9.3.1",
+   "after": "1. RELIGION AND SOCIAL COHESION",
+   "source": "row",
+   "page": 93,
+   "print": "rme_CCP_B7-B9.pdf"
+  },
+  {
+   "file": "rme_B9_curriculum_db_clean.json",
+   "code": "B9.3.1.1.2",
+   "before": "Sub-strand B9.3.1",
+   "after": "1. RELIGION AND SOCIAL COHESION",
+   "source": "row",
+   "page": 93,
+   "print": "rme_CCP_B7-B9.pdf"
+  },
+  {
+   "file": "rme_B9_curriculum_db_clean.json",
+   "code": "B9.3.1.1.3",
+   "before": "Sub-strand B9.3.1",
+   "after": "1. RELIGION AND SOCIAL COHESION",
+   "source": "row",
+   "page": 93,
    "print": "rme_CCP_B7-B9.pdf"
   },
   {
    "file": "rme_B9_curriculum_db_clean.json",
    "code": "B9.4.1.1.1",
    "before": "Sub-strand B9.4.1",
-   "after": "1. TIME AND LEISURE",
-   "source": "pair",
-   "page": 103,
+   "after": "1. WOMEN IN RELIGION AND LEADERSHIP POSITIONS",
+   "source": "row",
+   "page": 96,
    "print": "rme_CCP_B7-B9.pdf"
   },
   {
    "file": "rme_B9_curriculum_db_clean.json",
    "code": "B9.4.1.1.2",
    "before": "Sub-strand B9.4.1",
-   "after": "1. TIME AND LEISURE",
-   "source": "pair",
-   "page": 103,
+   "after": "1. WOMEN IN RELIGION AND LEADERSHIP POSITIONS",
+   "source": "row",
+   "page": 96,
    "print": "rme_CCP_B7-B9.pdf"
   },
   {
    "file": "rme_B9_curriculum_db_clean.json",
    "code": "B9.4.1.1.3",
    "before": "Sub-strand B9.4.1",
-   "after": "1. TIME AND LEISURE",
-   "source": "pair",
-   "page": 103,
+   "after": "1. WOMEN IN RELIGION AND LEADERSHIP POSITIONS",
+   "source": "row",
+   "page": 96,
    "print": "rme_CCP_B7-B9.pdf"
   },
   {
@@ -29751,7 +29931,7 @@
    "code": "B9.5.1.1.1",
    "before": "Sub-strand B9.5.1",
    "after": "1. REWARD, PUNISHMENT AND REPENTANCE",
-   "source": "standard",
+   "source": "row",
    "page": 99,
    "print": "rme_CCP_B7-B9.pdf"
   },
@@ -29769,8 +29949,35 @@
    "code": "B9.5.1.1.3",
    "before": "Sub-strand B9.5.1",
    "after": "1. REWARD, PUNISHMENT AND REPENTANCE",
-   "source": "standard",
+   "source": "row",
    "page": 99,
+   "print": "rme_CCP_B7-B9.pdf"
+  },
+  {
+   "file": "rme_B9_curriculum_db_clean.json",
+   "code": "B9.6.1.1.1",
+   "before": "Sub-strand B9.6.1",
+   "after": "1. TIME AND LEISURE",
+   "source": "row",
+   "page": 103,
+   "print": "rme_CCP_B7-B9.pdf"
+  },
+  {
+   "file": "rme_B9_curriculum_db_clean.json",
+   "code": "B9.6.1.1.2",
+   "before": "Sub-strand B9.6.1",
+   "after": "1. TIME AND LEISURE",
+   "source": "row",
+   "page": 103,
+   "print": "rme_CCP_B7-B9.pdf"
+  },
+  {
+   "file": "rme_B9_curriculum_db_clean.json",
+   "code": "B9.6.4.1.3",
+   "before": "Sub-strand B9.6.4",
+   "after": "4. TIME AND LEISURE",
+   "source": "row",
+   "page": 103,
    "print": "rme_CCP_B7-B9.pdf"
   },
   {
@@ -32873,167 +33080,6 @@
    "reason": "the print names this standard two ways: ['Equations and Inequalities', 'Lines and Shapes']"
   },
   {
-   "file": "rme_B7_curriculum_db_clean.json",
-   "code": "B7.2.2.1.1",
-   "strand": "2/2",
-   "sub": "Sub-strand B7.2.2",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_B7_curriculum_db_clean.json",
-   "code": "B7.2.2.1.2",
-   "strand": "2/2",
-   "sub": "Sub-strand B7.2.2",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_B7_curriculum_db_clean.json",
-   "code": "B7.2.2.1.3",
-   "strand": "2/2",
-   "sub": "Sub-strand B7.2.2",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_B7_curriculum_db_clean.json",
-   "code": "B7.6.1.1.1",
-   "strand": "6/1",
-   "sub": "Sub-strand B7.6.1",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_B7_curriculum_db_clean.json",
-   "code": "B7.6.1.1.2",
-   "strand": "6/1",
-   "sub": "Sub-strand B7.6.1",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_B7_curriculum_db_clean.json",
-   "code": "B7.6.1.1.3",
-   "strand": "6/1",
-   "sub": "Sub-strand B7.6.1",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_B7_curriculum_db_clean.json",
-   "code": "B7.6.1.1.4",
-   "strand": "6/1",
-   "sub": "Sub-strand B7.6.1",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_B8_curriculum_db_clean.json",
-   "code": "B8.5.1.1.1",
-   "strand": "5/1",
-   "sub": "Sub-strand B8.5.1",
-   "reason": "the print names ('5', '1') two ways: ['MANNERS AND DECENCY', 'REWARD, PUNISHMENT AND REPENTANCE']"
-  },
-  {
-   "file": "rme_B8_curriculum_db_clean.json",
-   "code": "B8.5.1.1.2",
-   "strand": "5/1",
-   "sub": "Sub-strand B8.5.1",
-   "reason": "the print names ('5', '1') two ways: ['MANNERS AND DECENCY', 'REWARD, PUNISHMENT AND REPENTANCE']"
-  },
-  {
-   "file": "rme_B8_curriculum_db_clean.json",
-   "code": "B8.6.1.1.1",
-   "strand": "6/1",
-   "sub": "Sub-strand B8.6.1",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_B8_curriculum_db_clean.json",
-   "code": "B8.6.1.1.2",
-   "strand": "6/1",
-   "sub": "Sub-strand B8.6.1",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_B8_curriculum_db_clean.json",
-   "code": "B8.6.1.1.3",
-   "strand": "6/1",
-   "sub": "Sub-strand B8.6.1",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_B8_curriculum_db_clean.json",
-   "code": "B8.6.1.1.4",
-   "strand": "6/1",
-   "sub": "Sub-strand B8.6.1",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_B8_curriculum_db_clean.json",
-   "code": "B8.6.2.1.1",
-   "strand": "6/2",
-   "sub": "Sub-strand B8.6.2",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_B8_curriculum_db_clean.json",
-   "code": "B8.6.2.1.2",
-   "strand": "6/2",
-   "sub": "Sub-strand B8.6.2",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_B9_curriculum_db_clean.json",
-   "code": "B9.1.2.1.1",
-   "strand": "1/2",
-   "sub": "Sub-strand B9.1.2",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_B9_curriculum_db_clean.json",
-   "code": "B9.1.2.1.3",
-   "strand": "1/2",
-   "sub": "Sub-strand B9.1.2",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_B9_curriculum_db_clean.json",
-   "code": "B9.3.1.1.1",
-   "strand": "3/1",
-   "sub": "Sub-strand B9.3.1",
-   "reason": "the print names ('3', '1') two ways: ['AUTHORITY AND OBEDIENCE', 'FAMILY SYSTEMS']"
-  },
-  {
-   "file": "rme_B9_curriculum_db_clean.json",
-   "code": "B9.3.1.1.2",
-   "strand": "3/1",
-   "sub": "Sub-strand B9.3.1",
-   "reason": "the print names ('3', '1') two ways: ['AUTHORITY AND OBEDIENCE', 'FAMILY SYSTEMS']"
-  },
-  {
-   "file": "rme_B9_curriculum_db_clean.json",
-   "code": "B9.3.1.1.3",
-   "strand": "3/1",
-   "sub": "Sub-strand B9.3.1",
-   "reason": "the print names ('3', '1') two ways: ['AUTHORITY AND OBEDIENCE', 'FAMILY SYSTEMS']"
-  },
-  {
-   "file": "rme_B9_curriculum_db_clean.json",
-   "code": "B9.6.1.1.1",
-   "strand": "6/1",
-   "sub": "Sub-strand B9.6.1",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_B9_curriculum_db_clean.json",
-   "code": "B9.6.1.1.2",
-   "strand": "6/1",
-   "sub": "Sub-strand B9.6.1",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_B9_curriculum_db_clean.json",
-   "code": "B9.6.4.1.3",
-   "strand": "6/4",
-   "sub": "Sub-strand B9.6.4",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
    "file": "social-studies_B7_curriculum_db_clean.json",
    "code": "B7.1.1.1.1",
    "strand": "1/1",
@@ -33042,7 +33088,7 @@
   }
  ],
  "written_lessons": {
-  "records": 11506,
+  "records": 11652,
   "files": {
    "career_technology_b7_lessons_enriched.json": 180,
    "career_technology_b8_lessons_enriched.json": 180,
@@ -33095,9 +33141,9 @@
    "rme_b4_lessons_enriched.json": 180,
    "rme_b5_lessons_enriched.json": 180,
    "rme_b6_lessons_enriched.json": 180,
-   "rme_b7_lessons_enriched.json": 132,
-   "rme_b8_lessons_enriched.json": 126,
-   "rme_b9_lessons_enriched.json": 136,
+   "rme_b7_lessons_enriched.json": 180,
+   "rme_b8_lessons_enriched.json": 180,
+   "rme_b9_lessons_enriched.json": 180,
    "science_b2_lessons_enriched.json": 180,
    "science_b3_lessons_enriched.json": 180,
    "science_b4_lessons_enriched.json": 180,
@@ -33111,10 +33157,10 @@
    "social_studies_b9_lessons_enriched.json": 180
   },
   "sources": {
-   "row": 10997,
-   "cross-grade": 46,
-   "standard": 269,
-   "pair": 194
+   "row": 11487,
+   "cross-grade": 10,
+   "standard": 151,
+   "pair": 4
   },
   "codes_absent_from_the_databases": []
  },
@@ -33490,1466 +33536,6 @@
    "reason": "the print names this row two ways: ['Equations and Inequalities', 'Lines and Shapes']"
   },
   {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 9,
-   "term": 1,
-   "week": 2,
-   "day": "Thursday",
-   "lesson_num": 9,
-   "code": "B7.6.1.1.1",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 11,
-   "term": 1,
-   "week": 3,
-   "day": "Monday",
-   "lesson_num": 11,
-   "code": "B7.2.2.1.1",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 15,
-   "term": 1,
-   "week": 3,
-   "day": "Friday",
-   "lesson_num": 15,
-   "code": "B7.2.2.1.2",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 16,
-   "term": 1,
-   "week": 4,
-   "day": "Monday",
-   "lesson_num": 16,
-   "code": "B7.2.2.1.3",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 19,
-   "term": 1,
-   "week": 4,
-   "day": "Thursday",
-   "lesson_num": 19,
-   "code": "B7.6.1.1.2",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 29,
-   "term": 1,
-   "week": 6,
-   "day": "Thursday",
-   "lesson_num": 29,
-   "code": "B7.6.1.1.3",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 30,
-   "term": 1,
-   "week": 6,
-   "day": "Friday",
-   "lesson_num": 30,
-   "code": "B7.2.2.1.1",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 31,
-   "term": 1,
-   "week": 7,
-   "day": "Monday",
-   "lesson_num": 31,
-   "code": "B7.2.2.1.2",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 35,
-   "term": 1,
-   "week": 7,
-   "day": "Friday",
-   "lesson_num": 35,
-   "code": "B7.2.2.1.3",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 39,
-   "term": 1,
-   "week": 8,
-   "day": "Thursday",
-   "lesson_num": 39,
-   "code": "B7.6.1.1.4",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 46,
-   "term": 1,
-   "week": 10,
-   "day": "Monday",
-   "lesson_num": 46,
-   "code": "B7.2.2.1.1",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 49,
-   "term": 1,
-   "week": 10,
-   "day": "Thursday",
-   "lesson_num": 49,
-   "code": "B7.6.1.1.1",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 50,
-   "term": 1,
-   "week": 10,
-   "day": "Friday",
-   "lesson_num": 50,
-   "code": "B7.2.2.1.2",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 51,
-   "term": 1,
-   "week": 11,
-   "day": "Monday",
-   "lesson_num": 51,
-   "code": "B7.2.2.1.3",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 59,
-   "term": 1,
-   "week": 12,
-   "day": "Thursday",
-   "lesson_num": 59,
-   "code": "B7.6.1.1.2",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 65,
-   "term": 2,
-   "week": 1,
-   "day": "Friday",
-   "lesson_num": 65,
-   "code": "B7.2.2.1.1",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 66,
-   "term": 2,
-   "week": 2,
-   "day": "Monday",
-   "lesson_num": 66,
-   "code": "B7.2.2.1.2",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 69,
-   "term": 2,
-   "week": 2,
-   "day": "Thursday",
-   "lesson_num": 69,
-   "code": "B7.6.1.1.3",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 70,
-   "term": 2,
-   "week": 2,
-   "day": "Friday",
-   "lesson_num": 70,
-   "code": "B7.2.2.1.3",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 79,
-   "term": 2,
-   "week": 4,
-   "day": "Thursday",
-   "lesson_num": 79,
-   "code": "B7.6.1.1.4",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 81,
-   "term": 2,
-   "week": 5,
-   "day": "Monday",
-   "lesson_num": 81,
-   "code": "B7.2.2.1.1",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 85,
-   "term": 2,
-   "week": 5,
-   "day": "Friday",
-   "lesson_num": 85,
-   "code": "B7.2.2.1.2",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 86,
-   "term": 2,
-   "week": 6,
-   "day": "Monday",
-   "lesson_num": 86,
-   "code": "B7.2.2.1.3",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 89,
-   "term": 2,
-   "week": 6,
-   "day": "Thursday",
-   "lesson_num": 89,
-   "code": "B7.6.1.1.1",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 99,
-   "term": 2,
-   "week": 8,
-   "day": "Thursday",
-   "lesson_num": 99,
-   "code": "B7.6.1.1.2",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 100,
-   "term": 2,
-   "week": 8,
-   "day": "Friday",
-   "lesson_num": 100,
-   "code": "B7.2.2.1.1",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 101,
-   "term": 2,
-   "week": 9,
-   "day": "Monday",
-   "lesson_num": 101,
-   "code": "B7.2.2.1.2",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 105,
-   "term": 2,
-   "week": 9,
-   "day": "Friday",
-   "lesson_num": 105,
-   "code": "B7.2.2.1.3",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 109,
-   "term": 2,
-   "week": 10,
-   "day": "Thursday",
-   "lesson_num": 109,
-   "code": "B7.6.1.1.3",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 116,
-   "term": 2,
-   "week": 12,
-   "day": "Monday",
-   "lesson_num": 116,
-   "code": "B7.2.2.1.1",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 119,
-   "term": 2,
-   "week": 12,
-   "day": "Thursday",
-   "lesson_num": 119,
-   "code": "B7.6.1.1.4",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 120,
-   "term": 2,
-   "week": 12,
-   "day": "Friday",
-   "lesson_num": 120,
-   "code": "B7.2.2.1.2",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 121,
-   "term": 3,
-   "week": 1,
-   "day": "Monday",
-   "lesson_num": 121,
-   "code": "B7.2.2.1.3",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 129,
-   "term": 3,
-   "week": 2,
-   "day": "Thursday",
-   "lesson_num": 129,
-   "code": "B7.6.1.1.1",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 135,
-   "term": 3,
-   "week": 3,
-   "day": "Friday",
-   "lesson_num": 135,
-   "code": "B7.2.2.1.1",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 136,
-   "term": 3,
-   "week": 4,
-   "day": "Monday",
-   "lesson_num": 136,
-   "code": "B7.2.2.1.2",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 139,
-   "term": 3,
-   "week": 4,
-   "day": "Thursday",
-   "lesson_num": 139,
-   "code": "B7.6.1.1.2",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 140,
-   "term": 3,
-   "week": 4,
-   "day": "Friday",
-   "lesson_num": 140,
-   "code": "B7.2.2.1.3",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 149,
-   "term": 3,
-   "week": 6,
-   "day": "Thursday",
-   "lesson_num": 149,
-   "code": "B7.6.1.1.3",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 151,
-   "term": 3,
-   "week": 7,
-   "day": "Monday",
-   "lesson_num": 151,
-   "code": "B7.2.2.1.1",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 155,
-   "term": 3,
-   "week": 7,
-   "day": "Friday",
-   "lesson_num": 155,
-   "code": "B7.2.2.1.2",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 156,
-   "term": 3,
-   "week": 8,
-   "day": "Monday",
-   "lesson_num": 156,
-   "code": "B7.2.2.1.3",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 159,
-   "term": 3,
-   "week": 8,
-   "day": "Thursday",
-   "lesson_num": 159,
-   "code": "B7.6.1.1.4",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 169,
-   "term": 3,
-   "week": 10,
-   "day": "Thursday",
-   "lesson_num": 169,
-   "code": "B7.6.1.1.1",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 170,
-   "term": 3,
-   "week": 10,
-   "day": "Friday",
-   "lesson_num": 170,
-   "code": "B7.2.2.1.1",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 171,
-   "term": 3,
-   "week": 11,
-   "day": "Monday",
-   "lesson_num": 171,
-   "code": "B7.2.2.1.2",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 175,
-   "term": 3,
-   "week": 11,
-   "day": "Friday",
-   "lesson_num": 175,
-   "code": "B7.2.2.1.3",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b7_lessons_enriched.json",
-   "lesson": 179,
-   "term": 3,
-   "week": 12,
-   "day": "Thursday",
-   "lesson_num": 179,
-   "code": "B7.6.1.1.2",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 2,
-   "term": 1,
-   "week": 1,
-   "day": "Tuesday",
-   "lesson_num": 2,
-   "code": "B8.5.1.1.1",
-   "reason": "the print names ('5', '1') two ways: ['MANNERS AND DECENCY', 'REWARD, PUNISHMENT AND REPENTANCE']"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 7,
-   "term": 1,
-   "week": 2,
-   "day": "Tuesday",
-   "lesson_num": 7,
-   "code": "B8.5.1.1.2",
-   "reason": "the print names ('5', '1') two ways: ['MANNERS AND DECENCY', 'REWARD, PUNISHMENT AND REPENTANCE']"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 9,
-   "term": 1,
-   "week": 2,
-   "day": "Thursday",
-   "lesson_num": 9,
-   "code": "B8.6.1.1.1",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 12,
-   "term": 1,
-   "week": 3,
-   "day": "Tuesday",
-   "lesson_num": 12,
-   "code": "B8.5.1.1.1",
-   "reason": "the print names ('5', '1') two ways: ['MANNERS AND DECENCY', 'REWARD, PUNISHMENT AND REPENTANCE']"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 17,
-   "term": 1,
-   "week": 4,
-   "day": "Tuesday",
-   "lesson_num": 17,
-   "code": "B8.5.1.1.2",
-   "reason": "the print names ('5', '1') two ways: ['MANNERS AND DECENCY', 'REWARD, PUNISHMENT AND REPENTANCE']"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 19,
-   "term": 1,
-   "week": 4,
-   "day": "Thursday",
-   "lesson_num": 19,
-   "code": "B8.6.1.1.2",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 22,
-   "term": 1,
-   "week": 5,
-   "day": "Tuesday",
-   "lesson_num": 22,
-   "code": "B8.5.1.1.1",
-   "reason": "the print names ('5', '1') two ways: ['MANNERS AND DECENCY', 'REWARD, PUNISHMENT AND REPENTANCE']"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 27,
-   "term": 1,
-   "week": 6,
-   "day": "Tuesday",
-   "lesson_num": 27,
-   "code": "B8.5.1.1.2",
-   "reason": "the print names ('5', '1') two ways: ['MANNERS AND DECENCY', 'REWARD, PUNISHMENT AND REPENTANCE']"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 29,
-   "term": 1,
-   "week": 6,
-   "day": "Thursday",
-   "lesson_num": 29,
-   "code": "B8.6.1.1.3",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 32,
-   "term": 1,
-   "week": 7,
-   "day": "Tuesday",
-   "lesson_num": 32,
-   "code": "B8.5.1.1.1",
-   "reason": "the print names ('5', '1') two ways: ['MANNERS AND DECENCY', 'REWARD, PUNISHMENT AND REPENTANCE']"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 37,
-   "term": 1,
-   "week": 8,
-   "day": "Tuesday",
-   "lesson_num": 37,
-   "code": "B8.5.1.1.2",
-   "reason": "the print names ('5', '1') two ways: ['MANNERS AND DECENCY', 'REWARD, PUNISHMENT AND REPENTANCE']"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 39,
-   "term": 1,
-   "week": 8,
-   "day": "Thursday",
-   "lesson_num": 39,
-   "code": "B8.6.1.1.4",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 42,
-   "term": 1,
-   "week": 9,
-   "day": "Tuesday",
-   "lesson_num": 42,
-   "code": "B8.5.1.1.1",
-   "reason": "the print names ('5', '1') two ways: ['MANNERS AND DECENCY', 'REWARD, PUNISHMENT AND REPENTANCE']"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 47,
-   "term": 1,
-   "week": 10,
-   "day": "Tuesday",
-   "lesson_num": 47,
-   "code": "B8.5.1.1.2",
-   "reason": "the print names ('5', '1') two ways: ['MANNERS AND DECENCY', 'REWARD, PUNISHMENT AND REPENTANCE']"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 49,
-   "term": 1,
-   "week": 10,
-   "day": "Thursday",
-   "lesson_num": 49,
-   "code": "B8.6.2.1.1",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 52,
-   "term": 1,
-   "week": 11,
-   "day": "Tuesday",
-   "lesson_num": 52,
-   "code": "B8.5.1.1.1",
-   "reason": "the print names ('5', '1') two ways: ['MANNERS AND DECENCY', 'REWARD, PUNISHMENT AND REPENTANCE']"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 57,
-   "term": 1,
-   "week": 12,
-   "day": "Tuesday",
-   "lesson_num": 57,
-   "code": "B8.5.1.1.2",
-   "reason": "the print names ('5', '1') two ways: ['MANNERS AND DECENCY', 'REWARD, PUNISHMENT AND REPENTANCE']"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 59,
-   "term": 1,
-   "week": 12,
-   "day": "Thursday",
-   "lesson_num": 59,
-   "code": "B8.6.2.1.2",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 62,
-   "term": 2,
-   "week": 1,
-   "day": "Tuesday",
-   "lesson_num": 62,
-   "code": "B8.5.1.1.1",
-   "reason": "the print names ('5', '1') two ways: ['MANNERS AND DECENCY', 'REWARD, PUNISHMENT AND REPENTANCE']"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 67,
-   "term": 2,
-   "week": 2,
-   "day": "Tuesday",
-   "lesson_num": 67,
-   "code": "B8.5.1.1.2",
-   "reason": "the print names ('5', '1') two ways: ['MANNERS AND DECENCY', 'REWARD, PUNISHMENT AND REPENTANCE']"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 69,
-   "term": 2,
-   "week": 2,
-   "day": "Thursday",
-   "lesson_num": 69,
-   "code": "B8.6.1.1.1",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 72,
-   "term": 2,
-   "week": 3,
-   "day": "Tuesday",
-   "lesson_num": 72,
-   "code": "B8.5.1.1.1",
-   "reason": "the print names ('5', '1') two ways: ['MANNERS AND DECENCY', 'REWARD, PUNISHMENT AND REPENTANCE']"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 77,
-   "term": 2,
-   "week": 4,
-   "day": "Tuesday",
-   "lesson_num": 77,
-   "code": "B8.5.1.1.2",
-   "reason": "the print names ('5', '1') two ways: ['MANNERS AND DECENCY', 'REWARD, PUNISHMENT AND REPENTANCE']"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 79,
-   "term": 2,
-   "week": 4,
-   "day": "Thursday",
-   "lesson_num": 79,
-   "code": "B8.6.1.1.2",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 82,
-   "term": 2,
-   "week": 5,
-   "day": "Tuesday",
-   "lesson_num": 82,
-   "code": "B8.5.1.1.1",
-   "reason": "the print names ('5', '1') two ways: ['MANNERS AND DECENCY', 'REWARD, PUNISHMENT AND REPENTANCE']"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 87,
-   "term": 2,
-   "week": 6,
-   "day": "Tuesday",
-   "lesson_num": 87,
-   "code": "B8.5.1.1.2",
-   "reason": "the print names ('5', '1') two ways: ['MANNERS AND DECENCY', 'REWARD, PUNISHMENT AND REPENTANCE']"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 89,
-   "term": 2,
-   "week": 6,
-   "day": "Thursday",
-   "lesson_num": 89,
-   "code": "B8.6.1.1.3",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 92,
-   "term": 2,
-   "week": 7,
-   "day": "Tuesday",
-   "lesson_num": 92,
-   "code": "B8.5.1.1.1",
-   "reason": "the print names ('5', '1') two ways: ['MANNERS AND DECENCY', 'REWARD, PUNISHMENT AND REPENTANCE']"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 97,
-   "term": 2,
-   "week": 8,
-   "day": "Tuesday",
-   "lesson_num": 97,
-   "code": "B8.5.1.1.2",
-   "reason": "the print names ('5', '1') two ways: ['MANNERS AND DECENCY', 'REWARD, PUNISHMENT AND REPENTANCE']"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 99,
-   "term": 2,
-   "week": 8,
-   "day": "Thursday",
-   "lesson_num": 99,
-   "code": "B8.6.1.1.4",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 102,
-   "term": 2,
-   "week": 9,
-   "day": "Tuesday",
-   "lesson_num": 102,
-   "code": "B8.5.1.1.1",
-   "reason": "the print names ('5', '1') two ways: ['MANNERS AND DECENCY', 'REWARD, PUNISHMENT AND REPENTANCE']"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 107,
-   "term": 2,
-   "week": 10,
-   "day": "Tuesday",
-   "lesson_num": 107,
-   "code": "B8.5.1.1.2",
-   "reason": "the print names ('5', '1') two ways: ['MANNERS AND DECENCY', 'REWARD, PUNISHMENT AND REPENTANCE']"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 109,
-   "term": 2,
-   "week": 10,
-   "day": "Thursday",
-   "lesson_num": 109,
-   "code": "B8.6.2.1.1",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 112,
-   "term": 2,
-   "week": 11,
-   "day": "Tuesday",
-   "lesson_num": 112,
-   "code": "B8.5.1.1.1",
-   "reason": "the print names ('5', '1') two ways: ['MANNERS AND DECENCY', 'REWARD, PUNISHMENT AND REPENTANCE']"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 117,
-   "term": 2,
-   "week": 12,
-   "day": "Tuesday",
-   "lesson_num": 117,
-   "code": "B8.5.1.1.2",
-   "reason": "the print names ('5', '1') two ways: ['MANNERS AND DECENCY', 'REWARD, PUNISHMENT AND REPENTANCE']"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 119,
-   "term": 2,
-   "week": 12,
-   "day": "Thursday",
-   "lesson_num": 119,
-   "code": "B8.6.2.1.2",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 122,
-   "term": 3,
-   "week": 1,
-   "day": "Tuesday",
-   "lesson_num": 122,
-   "code": "B8.5.1.1.1",
-   "reason": "the print names ('5', '1') two ways: ['MANNERS AND DECENCY', 'REWARD, PUNISHMENT AND REPENTANCE']"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 127,
-   "term": 3,
-   "week": 2,
-   "day": "Tuesday",
-   "lesson_num": 127,
-   "code": "B8.5.1.1.2",
-   "reason": "the print names ('5', '1') two ways: ['MANNERS AND DECENCY', 'REWARD, PUNISHMENT AND REPENTANCE']"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 129,
-   "term": 3,
-   "week": 2,
-   "day": "Thursday",
-   "lesson_num": 129,
-   "code": "B8.6.1.1.1",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 132,
-   "term": 3,
-   "week": 3,
-   "day": "Tuesday",
-   "lesson_num": 132,
-   "code": "B8.5.1.1.1",
-   "reason": "the print names ('5', '1') two ways: ['MANNERS AND DECENCY', 'REWARD, PUNISHMENT AND REPENTANCE']"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 137,
-   "term": 3,
-   "week": 4,
-   "day": "Tuesday",
-   "lesson_num": 137,
-   "code": "B8.5.1.1.2",
-   "reason": "the print names ('5', '1') two ways: ['MANNERS AND DECENCY', 'REWARD, PUNISHMENT AND REPENTANCE']"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 139,
-   "term": 3,
-   "week": 4,
-   "day": "Thursday",
-   "lesson_num": 139,
-   "code": "B8.6.1.1.2",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 142,
-   "term": 3,
-   "week": 5,
-   "day": "Tuesday",
-   "lesson_num": 142,
-   "code": "B8.5.1.1.1",
-   "reason": "the print names ('5', '1') two ways: ['MANNERS AND DECENCY', 'REWARD, PUNISHMENT AND REPENTANCE']"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 147,
-   "term": 3,
-   "week": 6,
-   "day": "Tuesday",
-   "lesson_num": 147,
-   "code": "B8.5.1.1.2",
-   "reason": "the print names ('5', '1') two ways: ['MANNERS AND DECENCY', 'REWARD, PUNISHMENT AND REPENTANCE']"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 149,
-   "term": 3,
-   "week": 6,
-   "day": "Thursday",
-   "lesson_num": 149,
-   "code": "B8.6.1.1.3",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 152,
-   "term": 3,
-   "week": 7,
-   "day": "Tuesday",
-   "lesson_num": 152,
-   "code": "B8.5.1.1.1",
-   "reason": "the print names ('5', '1') two ways: ['MANNERS AND DECENCY', 'REWARD, PUNISHMENT AND REPENTANCE']"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 157,
-   "term": 3,
-   "week": 8,
-   "day": "Tuesday",
-   "lesson_num": 157,
-   "code": "B8.5.1.1.2",
-   "reason": "the print names ('5', '1') two ways: ['MANNERS AND DECENCY', 'REWARD, PUNISHMENT AND REPENTANCE']"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 159,
-   "term": 3,
-   "week": 8,
-   "day": "Thursday",
-   "lesson_num": 159,
-   "code": "B8.6.1.1.4",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 162,
-   "term": 3,
-   "week": 9,
-   "day": "Tuesday",
-   "lesson_num": 162,
-   "code": "B8.5.1.1.1",
-   "reason": "the print names ('5', '1') two ways: ['MANNERS AND DECENCY', 'REWARD, PUNISHMENT AND REPENTANCE']"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 167,
-   "term": 3,
-   "week": 10,
-   "day": "Tuesday",
-   "lesson_num": 167,
-   "code": "B8.5.1.1.2",
-   "reason": "the print names ('5', '1') two ways: ['MANNERS AND DECENCY', 'REWARD, PUNISHMENT AND REPENTANCE']"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 169,
-   "term": 3,
-   "week": 10,
-   "day": "Thursday",
-   "lesson_num": 169,
-   "code": "B8.6.2.1.1",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 172,
-   "term": 3,
-   "week": 11,
-   "day": "Tuesday",
-   "lesson_num": 172,
-   "code": "B8.5.1.1.1",
-   "reason": "the print names ('5', '1') two ways: ['MANNERS AND DECENCY', 'REWARD, PUNISHMENT AND REPENTANCE']"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 177,
-   "term": 3,
-   "week": 12,
-   "day": "Tuesday",
-   "lesson_num": 177,
-   "code": "B8.5.1.1.2",
-   "reason": "the print names ('5', '1') two ways: ['MANNERS AND DECENCY', 'REWARD, PUNISHMENT AND REPENTANCE']"
-  },
-  {
-   "file": "rme_b8_lessons_enriched.json",
-   "lesson": 179,
-   "term": 3,
-   "week": 12,
-   "day": "Thursday",
-   "lesson_num": 179,
-   "code": "B8.6.2.1.2",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 8,
-   "term": 1,
-   "week": 2,
-   "day": "Wednesday",
-   "lesson_num": 8,
-   "code": "B9.3.1.1.1",
-   "reason": "the print names ('3', '1') two ways: ['AUTHORITY AND OBEDIENCE', 'FAMILY SYSTEMS']"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 9,
-   "term": 1,
-   "week": 2,
-   "day": "Thursday",
-   "lesson_num": 9,
-   "code": "B9.6.1.1.1",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 18,
-   "term": 1,
-   "week": 4,
-   "day": "Wednesday",
-   "lesson_num": 18,
-   "code": "B9.3.1.1.2",
-   "reason": "the print names ('3', '1') two ways: ['AUTHORITY AND OBEDIENCE', 'FAMILY SYSTEMS']"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 19,
-   "term": 1,
-   "week": 4,
-   "day": "Thursday",
-   "lesson_num": 19,
-   "code": "B9.6.1.1.2",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 23,
-   "term": 1,
-   "week": 5,
-   "day": "Wednesday",
-   "lesson_num": 23,
-   "code": "B9.1.2.1.1",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 28,
-   "term": 1,
-   "week": 6,
-   "day": "Wednesday",
-   "lesson_num": 28,
-   "code": "B9.3.1.1.3",
-   "reason": "the print names ('3', '1') two ways: ['AUTHORITY AND OBEDIENCE', 'FAMILY SYSTEMS']"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 29,
-   "term": 1,
-   "week": 6,
-   "day": "Thursday",
-   "lesson_num": 29,
-   "code": "B9.6.4.1.3",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 33,
-   "term": 1,
-   "week": 7,
-   "day": "Wednesday",
-   "lesson_num": 33,
-   "code": "B9.1.2.1.3",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 38,
-   "term": 1,
-   "week": 8,
-   "day": "Wednesday",
-   "lesson_num": 38,
-   "code": "B9.3.1.1.1",
-   "reason": "the print names ('3', '1') two ways: ['AUTHORITY AND OBEDIENCE', 'FAMILY SYSTEMS']"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 39,
-   "term": 1,
-   "week": 8,
-   "day": "Thursday",
-   "lesson_num": 39,
-   "code": "B9.6.1.1.1",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 48,
-   "term": 1,
-   "week": 10,
-   "day": "Wednesday",
-   "lesson_num": 48,
-   "code": "B9.3.1.1.2",
-   "reason": "the print names ('3', '1') two ways: ['AUTHORITY AND OBEDIENCE', 'FAMILY SYSTEMS']"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 49,
-   "term": 1,
-   "week": 10,
-   "day": "Thursday",
-   "lesson_num": 49,
-   "code": "B9.6.1.1.2",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 58,
-   "term": 1,
-   "week": 12,
-   "day": "Wednesday",
-   "lesson_num": 58,
-   "code": "B9.3.1.1.3",
-   "reason": "the print names ('3', '1') two ways: ['AUTHORITY AND OBEDIENCE', 'FAMILY SYSTEMS']"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 59,
-   "term": 1,
-   "week": 12,
-   "day": "Thursday",
-   "lesson_num": 59,
-   "code": "B9.6.4.1.3",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 63,
-   "term": 2,
-   "week": 1,
-   "day": "Wednesday",
-   "lesson_num": 63,
-   "code": "B9.1.2.1.1",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 68,
-   "term": 2,
-   "week": 2,
-   "day": "Wednesday",
-   "lesson_num": 68,
-   "code": "B9.3.1.1.1",
-   "reason": "the print names ('3', '1') two ways: ['AUTHORITY AND OBEDIENCE', 'FAMILY SYSTEMS']"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 69,
-   "term": 2,
-   "week": 2,
-   "day": "Thursday",
-   "lesson_num": 69,
-   "code": "B9.6.1.1.1",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 73,
-   "term": 2,
-   "week": 3,
-   "day": "Wednesday",
-   "lesson_num": 73,
-   "code": "B9.1.2.1.3",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 78,
-   "term": 2,
-   "week": 4,
-   "day": "Wednesday",
-   "lesson_num": 78,
-   "code": "B9.3.1.1.2",
-   "reason": "the print names ('3', '1') two ways: ['AUTHORITY AND OBEDIENCE', 'FAMILY SYSTEMS']"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 79,
-   "term": 2,
-   "week": 4,
-   "day": "Thursday",
-   "lesson_num": 79,
-   "code": "B9.6.1.1.2",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 88,
-   "term": 2,
-   "week": 6,
-   "day": "Wednesday",
-   "lesson_num": 88,
-   "code": "B9.3.1.1.3",
-   "reason": "the print names ('3', '1') two ways: ['AUTHORITY AND OBEDIENCE', 'FAMILY SYSTEMS']"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 89,
-   "term": 2,
-   "week": 6,
-   "day": "Thursday",
-   "lesson_num": 89,
-   "code": "B9.6.4.1.3",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 98,
-   "term": 2,
-   "week": 8,
-   "day": "Wednesday",
-   "lesson_num": 98,
-   "code": "B9.3.1.1.1",
-   "reason": "the print names ('3', '1') two ways: ['AUTHORITY AND OBEDIENCE', 'FAMILY SYSTEMS']"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 99,
-   "term": 2,
-   "week": 8,
-   "day": "Thursday",
-   "lesson_num": 99,
-   "code": "B9.6.1.1.1",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 103,
-   "term": 2,
-   "week": 9,
-   "day": "Wednesday",
-   "lesson_num": 103,
-   "code": "B9.1.2.1.1",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 108,
-   "term": 2,
-   "week": 10,
-   "day": "Wednesday",
-   "lesson_num": 108,
-   "code": "B9.3.1.1.2",
-   "reason": "the print names ('3', '1') two ways: ['AUTHORITY AND OBEDIENCE', 'FAMILY SYSTEMS']"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 109,
-   "term": 2,
-   "week": 10,
-   "day": "Thursday",
-   "lesson_num": 109,
-   "code": "B9.6.1.1.2",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 113,
-   "term": 2,
-   "week": 11,
-   "day": "Wednesday",
-   "lesson_num": 113,
-   "code": "B9.1.2.1.3",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 118,
-   "term": 2,
-   "week": 12,
-   "day": "Wednesday",
-   "lesson_num": 118,
-   "code": "B9.3.1.1.3",
-   "reason": "the print names ('3', '1') two ways: ['AUTHORITY AND OBEDIENCE', 'FAMILY SYSTEMS']"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 119,
-   "term": 2,
-   "week": 12,
-   "day": "Thursday",
-   "lesson_num": 119,
-   "code": "B9.6.4.1.3",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 128,
-   "term": 3,
-   "week": 2,
-   "day": "Wednesday",
-   "lesson_num": 128,
-   "code": "B9.3.1.1.1",
-   "reason": "the print names ('3', '1') two ways: ['AUTHORITY AND OBEDIENCE', 'FAMILY SYSTEMS']"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 129,
-   "term": 3,
-   "week": 2,
-   "day": "Thursday",
-   "lesson_num": 129,
-   "code": "B9.6.1.1.1",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 138,
-   "term": 3,
-   "week": 4,
-   "day": "Wednesday",
-   "lesson_num": 138,
-   "code": "B9.3.1.1.2",
-   "reason": "the print names ('3', '1') two ways: ['AUTHORITY AND OBEDIENCE', 'FAMILY SYSTEMS']"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 139,
-   "term": 3,
-   "week": 4,
-   "day": "Thursday",
-   "lesson_num": 139,
-   "code": "B9.6.1.1.2",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 143,
-   "term": 3,
-   "week": 5,
-   "day": "Wednesday",
-   "lesson_num": 143,
-   "code": "B9.1.2.1.1",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 148,
-   "term": 3,
-   "week": 6,
-   "day": "Wednesday",
-   "lesson_num": 148,
-   "code": "B9.3.1.1.3",
-   "reason": "the print names ('3', '1') two ways: ['AUTHORITY AND OBEDIENCE', 'FAMILY SYSTEMS']"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 149,
-   "term": 3,
-   "week": 6,
-   "day": "Thursday",
-   "lesson_num": 149,
-   "code": "B9.6.4.1.3",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 153,
-   "term": 3,
-   "week": 7,
-   "day": "Wednesday",
-   "lesson_num": 153,
-   "code": "B9.1.2.1.3",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 158,
-   "term": 3,
-   "week": 8,
-   "day": "Wednesday",
-   "lesson_num": 158,
-   "code": "B9.3.1.1.1",
-   "reason": "the print names ('3', '1') two ways: ['AUTHORITY AND OBEDIENCE', 'FAMILY SYSTEMS']"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 159,
-   "term": 3,
-   "week": 8,
-   "day": "Thursday",
-   "lesson_num": 159,
-   "code": "B9.6.1.1.1",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 168,
-   "term": 3,
-   "week": 10,
-   "day": "Wednesday",
-   "lesson_num": 168,
-   "code": "B9.3.1.1.2",
-   "reason": "the print names ('3', '1') two ways: ['AUTHORITY AND OBEDIENCE', 'FAMILY SYSTEMS']"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 169,
-   "term": 3,
-   "week": 10,
-   "day": "Thursday",
-   "lesson_num": 169,
-   "code": "B9.6.1.1.2",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 178,
-   "term": 3,
-   "week": 12,
-   "day": "Wednesday",
-   "lesson_num": 178,
-   "code": "B9.3.1.1.3",
-   "reason": "the print names ('3', '1') two ways: ['AUTHORITY AND OBEDIENCE', 'FAMILY SYSTEMS']"
-  },
-  {
-   "file": "rme_b9_lessons_enriched.json",
-   "lesson": 179,
-   "term": 3,
-   "week": 12,
-   "day": "Thursday",
-   "lesson_num": 179,
-   "code": "B9.6.4.1.3",
-   "reason": "no heading of this block is read in the print"
-  },
-  {
    "file": "social_studies_b7_lessons_enriched.json",
    "lesson": 1,
    "term": 1,
@@ -35094,14 +33680,14 @@
   "AN D -> AND": 22
  },
  "totals": {
-  "written": 3642,
-  "refused": 37,
-  "lesson_records": 11506,
-  "lesson_refused": 194,
-  "row": 3551,
-  "cross-grade": 14,
-  "standard": 59,
-  "pair": 18
+  "written": 3665,
+  "refused": 14,
+  "lesson_records": 11652,
+  "lesson_refused": 48,
+  "row": 3612,
+  "cross-grade": 8,
+  "standard": 43,
+  "pair": 2
  },
  "per_file": {
   "career-technology_B7_curriculum_db_clean.json": {
@@ -35297,20 +33883,13 @@
    "row": 13
   },
   "rme_B7_curriculum_db_clean.json": {
-   "standard": 12,
-   "row": 5,
-   "cross-grade": 3
+   "row": 27
   },
   "rme_B8_curriculum_db_clean.json": {
-   "pair": 8,
-   "row": 1,
-   "standard": 2,
-   "cross-grade": 3
+   "row": 22
   },
   "rme_B9_curriculum_db_clean.json": {
-   "pair": 8,
-   "standard": 2,
-   "row": 1
+   "row": 19
   },
   "science_B2_curriculum_db_clean.json": {
    "row": 25
