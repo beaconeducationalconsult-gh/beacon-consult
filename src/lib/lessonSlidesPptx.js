@@ -6,7 +6,7 @@ import { gradeLabel } from './grades'
  * One slide per lesson: objective, key words, the activity steps we hold, and
  * a closing assessment question.
  */
-export async function downloadLessonSlidesPptx(deck, { school } = {}) {
+export function buildLessonSlidesPptx(deck, { school } = {}) {
   const pptx = new PptxGenJS()
   pptx.layout = 'LAYOUT_16x9'
   pptx.author = 'Beacon Educational Consult'
@@ -62,5 +62,11 @@ export async function downloadLessonSlidesPptx(deck, { school } = {}) {
     }
   })
 
-  await pptx.writeFile({ fileName: `Slides_${deck.subjectId || 'lesson'}_${deck.grade}_T${deck.term}_W${deck.week}.pptx` })
+  return pptx
+}
+
+/** Teaching deck → PPTX download (client-side). */
+export async function downloadLessonSlidesPptx(deck, meta = {}) {
+  await buildLessonSlidesPptx(deck, meta)
+    .writeFile({ fileName: `Slides_${deck.subjectId || 'lesson'}_${deck.grade}_T${deck.term}_W${deck.week}.pptx` })
 }

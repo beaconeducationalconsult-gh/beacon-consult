@@ -9,7 +9,7 @@ const PHASES = [
 ]
 
 /** Lesson plan → PDF (client-side, A4 portrait), matching the Word export. */
-export function downloadLessonPlanPdf(plan, { school, teacher } = {}) {
+export function buildLessonPlanPdf(plan, { school, teacher } = {}) {
   const doc = new jsPDF({ unit: 'pt', format: 'a4' })
   const margin = 40
   const width = doc.internal.pageSize.getWidth() - margin * 2
@@ -98,5 +98,10 @@ export function downloadLessonPlanPdf(plan, { school, teacher } = {}) {
   doc.setTextColor('#94A3B8')
   doc.text('Generated with Beacon Educational Consult', margin, doc.internal.pageSize.getHeight() - 24)
 
-  doc.save(`Lesson_Plan_${plan.subjectId}_${plan.grade}_W${plan.week || 1}.pdf`)
+  return doc
+}
+
+/** Lesson plan → PDF download (client-side). */
+export function downloadLessonPlanPdf(plan, meta = {}) {
+  buildLessonPlanPdf(plan, meta).save(`Lesson_Plan_${plan.subjectId}_${plan.grade}_W${plan.week || 1}.pdf`)
 }

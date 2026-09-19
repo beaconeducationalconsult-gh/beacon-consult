@@ -6,7 +6,7 @@ import { gradeLabel } from './grades'
  * Printable exam paper from a question selection (PDF, client-side).
  * Two-column MCQs, then short/essay with working space, then the marking scheme.
  */
-export function downloadQuestionPaper(
+export function buildQuestionPaper(
   questions,
   { subjectName, grade, term, totalMarks, school, durationMinutes = 120, includeAnswers = true } = {}
 ) {
@@ -122,5 +122,15 @@ export function downloadQuestionPaper(
   doc.setTextColor('#94A3B8')
   doc.text('Generated with Beacon Educational Consult', margin, doc.internal.pageSize.getHeight() - 24)
 
-  doc.save(`Exam_${subjectName || 'paper'}_${grade}_T${term}.pdf`)
+  return doc
+}
+
+/** Question selection → printable paper (PDF download). */
+export function downloadQuestionPaper(questions, options = {}) {
+  const { subjectName, grade, term } = options
+  // Every option is forwarded — the callers pass totalMarks, and dropping it
+  // would print "Total marks —" on a real paper.
+  buildQuestionPaper(questions, options).save(
+    `Exam_${subjectName || 'paper'}_${grade}_T${term}.pdf`
+  )
 }
