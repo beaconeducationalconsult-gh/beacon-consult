@@ -411,6 +411,40 @@ screen instead of rendering a silent "Choose…". Check, in order:
    `public/curriculum/`; a branch that predates the portal rebuild will not have
    them.
 
+### Does the bundle belong in git?
+
+**Yes — decided 2026-09-19 (P2-6), with guard rails rather than a move.** The numbers:
+
+| | |
+|---|---|
+| `public/curriculum/` | 114 files · **39.6 MB** (~34 MB of it the 73 schedule files, 5.5 MB the grade files, 55 KB the question bank) |
+| working tree, tracked | 143 MB (`data/lessons/` 33 MB, `data/curriculum/` 3.5 MB, `public/curriculum/` 39 MB) |
+| `.git` | ~56 MB; 13 commits have touched the bundle since 2026-09-17 |
+
+The reasons it stays:
+
+1. **Vercel deploys the repository.** The bundle is what the app serves; if it were not in the
+   repo, every build would need a credential and a network hop to a release artefact, and a failed
+   fetch would deploy a portal that boots with no curriculum.
+2. **It is deterministic, so it does not churn.** `make bundle-check` rebuilds the whole bundle
+   from `data/` and requires the tree to be unchanged — every payload file comes out byte-for-byte
+   identical and `bundleHash` is stable, so a commit only touches the files whose *data* changed.
+3. **39 MB is not a clone problem**; the review problem is real but is about *noise*, and that is
+   handled by marking the regenerated files generated (`.gitattributes` → `linguist-generated`),
+   so GitHub collapses their diffs and keeps them out of language stats.
+
+The guard rails that make this a decision rather than a default:
+
+* `make bundle-size` (`scripts/bundle_size_report.py`) prints the size by directory, the largest
+  files, the comparison with the last commit, and **fails above `BUNDLE_BUDGET_MB` (80 MB)**.
+* `make bundle-check` fails when the committed bundle no longer matches the committed data.
+* Both run in `make check` and in CI.
+
+**When to revisit:** if the served bundle passes the budget with curriculum to spare, or if
+schedules begin to be regenerated more often than the data changes, move `public/curriculum/` to a
+GitHub release artefact and add a `make fetch-bundle` step to the build (Vercel build command
+`make fetch-bundle && yarn build`). The budget failure message says so.
+
 ## The `data/reference/` fallback
 
 `scripts/_paths.py` searches `data/reference/` **silently** after `data/curriculum/`

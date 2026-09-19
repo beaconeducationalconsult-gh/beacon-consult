@@ -64,6 +64,14 @@ jobs:
       - name: Check the service worker still keys off the bundle hash
         run: make bundle-hash
 
+      # The bundle is committed, so it must match the data it is built from, and
+      # it must not quietly outgrow the budget in scripts/bundle_size_report.py
+      # (P2-6). Both are cheap: a rebuild takes about three seconds.
+      - name: Check the committed bundle matches its sources and its budget
+        run: |
+          make bundle-check
+          make bundle-size
+
       - name: Rebuild the inventory and check it is current
         run: |
           make inventory

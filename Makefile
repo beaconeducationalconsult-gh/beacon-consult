@@ -1,4 +1,4 @@
-.PHONY: install inventory audit audit-l2 check check-scripts questions build-questions generate-questions bundle-hash verify-deploy deploy-check dev build lint test preview deploy-rules books book-skeleton boot-check list-modules build-curriculum validate-curriculum generate-schemes generate-records package-books
+.PHONY: install inventory audit audit-l2 check check-scripts bundle-size bundle-check questions build-questions generate-questions bundle-hash verify-deploy deploy-check dev build lint test preview deploy-rules books book-skeleton boot-check list-modules build-curriculum validate-curriculum generate-schemes generate-records package-books
 
 # ── Frontend (React + Vite + Yarn 4) ────────────────────────────────────────
 # The portal lives at the repository root. Node 22+ and Yarn 4 are required:
@@ -32,7 +32,7 @@ test:
 # *error* means the portal would serve part of the dataset it cannot source.
 # The tests include contract checks over public/curriculum itself, so a bundle
 # that does not join up fails here rather than in a teacher's browser.
-check: questions lint test check-scripts validate-curriculum inventory bundle-hash
+check: questions lint test check-scripts validate-curriculum inventory bundle-size bundle-check bundle-hash
 	$(YARN) build
 
 # Cheap guard for the P2-3 contract: the build writes a bundleHash and the service
@@ -91,6 +91,21 @@ list-modules:
 # Run this after any change to data/curriculum/ or data/lessons/.
 build-curriculum:
 	PYTHONPATH=. python scripts/build_app_curriculum.py
+
+# What the committed bundle costs, and a budget it must not quietly pass (P2-6).
+# The bundle is committed on purpose — see docs/curriculum-data.md.
+bundle-size:
+	python3 scripts/bundle_size_report.py
+
+# The bundle is a committed build output, so it must match the data it is built
+# from: rebuilding has to leave the tree unchanged. A stale bundle means the app
+# serves data that no longer matches `data/curriculum/` or `data/lessons/`.
+bundle-check:
+	python3 scripts/build_app_curriculum.py > /dev/null
+	@git diff --quiet -- public/curriculum || { \
+		echo "public/curriculum/ does not match the data it is built from:"; \
+		git diff --stat -- public/curriculum | tail -3; \
+		echo "run 'make build-curriculum' and commit the result"; exit 1; }
 
 # The question bank (P1-5): validate data/questions/ and copy it into the bundle.
 # Report-only by default; `make build-questions` writes. See docs/curriculum-data.md.
