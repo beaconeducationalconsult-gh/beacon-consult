@@ -317,7 +317,13 @@ service cloud.firestore {
         // The path must be inside the caller's own folder: a record pointing at
         // another member's file would be a lie, and reading it would fail only
         // later, in the library.
-        && request.resource.data.storagePath.matches('^generated/' + request.auth.uid + '/');
+        //
+        // Written as a full match, NOT as matches('^generated/' + uid + '/'):
+        // matches() anchors the pattern at both ends, so a bare prefix can
+        // never match a real path — that version denied every upload the
+        // client makes, and the emulator suite caught it
+        // (tests/rules/firestore.rules.test.js; see gotchas.md).
+        && request.resource.data.storagePath.matches('^generated/' + request.auth.uid + '/.*');
       allow update: if isAdmin();
       allow delete: if isOwner(resource.data.authorId) || isAdmin();
     }

@@ -298,6 +298,19 @@ runs. This is the most common "it works locally / on my emulator but 403s in pro
 runs it. Note that rules pasted into the Firebase console are **not** version-controlled:
 the console and `firestore.rules` can silently disagree, and only the repo file is reviewed.
 
+## 🔴 `matches()` is a full-string match, so a prefix pattern denies everything
+In the rules language `'generated/alice/x.pdf'.matches('^generated/alice/')` is **false**:
+`matches()` anchors the pattern at both ends (RE2 full match), so the pattern has to describe
+the *whole* string — a bare prefix can never satisfy it. This shipped in the document library:
+`generated_documents` create required `storagePath.matches('^generated/' + uid + '/')`, which
+denied every save the client makes, and no static check could see it (the guard is present, it
+is just always false). The emulator suite caught it on its first run — that is what
+`tests/rules/firestore.rules.test.js` is for. The rule now reads
+`storagePath.matches('^generated/' + uid + '/.*')` — a `matches()` pattern has to describe the
+whole string, so end it with `.*` (this is the shape Google's own docs use,
+`contentType.matches('image/.*')`). Only `firestore.rules` used `matches()` — `storage.rules`
+matches on the *path*, a different mechanism, and is unaffected.
+
 ## 🟠 Env vars are required at build time
 `VITE_FIREBASE_*` are embedded at build time. Without a `.env.local` (or the equivalent
 Vercel env vars) the build **succeeds** and the app fails at the first Firebase call. Copy

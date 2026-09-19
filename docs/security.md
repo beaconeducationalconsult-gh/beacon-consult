@@ -106,9 +106,10 @@ and `isAdmin()` both read the very document the caller just created.
   owner-or-admin, so the library lists only the caller's own documents —
   `where('authorId', '==', uid)` — and an un-filtered list is denied, which
   `src/firestoreRules.test.js` checks. Create requires `authorId == uid` **and** a
-  `storagePath` inside the caller's own folder (`^generated/<uid>/`), so a record can never
-  point at somebody else's file. Admin update; owner-or-admin delete. The file itself lives
-  in Cloud Storage — see below.
+  `storagePath` inside the caller's own folder (`matches('^generated/<uid>/.*')`). It used to be
+  a bare prefix `matches('^generated/<uid>/')`, which denied **every** upload: `matches()` anchors
+  the pattern at both ends, so a prefix can never match a real path (see [gotchas.md](gotchas.md)).
+  Admin update; owner-or-admin delete. The file itself lives in Cloud Storage — see below.
 - **`quote_likes/{quoteId}`**: approved read; create requires `count==1` + only your uid;
   update only permits adding/removing **your own** uid with `count` moving ±1 in step
   (guarded by `hasAll` + `size()` checks so no one can tamper with others' likes).
