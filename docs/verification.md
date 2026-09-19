@@ -25,6 +25,19 @@ for each of these:
 `make check` runs the offline half (`scripts/verify_deploy.py --offline-check`), which only
 asserts that the local bundle hash exists and that `sw.js` still reads it.
 
+### Rules and indexes to publish first (P0-2 / P3-3)
+
+Nothing below can pass until the console matches this checkout:
+
+| Publish | Why now |
+|---|---|
+| `firestore.rules` (paste into the console, or `make deploy-rules`) | It carries the visibility-gated reads for `/notes/`, `/lesson_plans/` and `/weekly_forecasts/` (P2-4/P2-7) **and** the `generated_documents` block added for the document library (P3-3). The console copy predates both |
+| `storage.rules` (`make deploy-storage`, or paste it under Storage → Rules) | New in P3-3. Without it the library cannot store anything, and every upload is denied |
+| Firestore indexes (19; the console offers one-click links on the first error) | The library's list needs `authorId` + `createdAt` |
+
+Publish the Firestore rules **after** the new build is live: the new rules require the scoped
+list queries the new build makes.
+
 ## 2. The flows (needs a signed-in account on the live project)
 
 Do these in **one ordinary member account** (not an admin — admins pass branches ordinary
@@ -99,6 +112,13 @@ The service worker is registered in production builds only, so this section is
 | 24 | Open `/portal/curriculum`, browse two subjects | DevTools → Application → Cache Storage shows one cache named `beacon-<bundleHash>` | P2-3 |
 | 25 | DevTools → Network → **Offline**, reload | The app boots; the curriculum you browsed still renders; Firebase-backed lists show the offline/error state, not a blank page | App shell + bundle cached |
 | 26 | Back online, reload | The curriculum and lists recover without clearing site data | Firestore's own offline cache |
+| 26a | Open a lesson plan → **Save to library**; then **My library** → **Open** | The document comes back, byte-identical, and **Delete** removes it | P3-3: the file is in Storage under your own uid, the record in `generated_documents` |
+
+### The teaching models (P3-4)
+
+| # | Step | Passes when | Why |
+|---|---|---|---|
+| 26b | Curriculum → Mathematics B4 → **Teaching models** | Five models open, each names its indicators, and changing a control changes what a pupil sees | P3-4 — and they work offline, so try one on the school wifi first |
 
 ### After a curriculum rebuild
 

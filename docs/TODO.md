@@ -2,8 +2,10 @@
 
 The live backlog, ordered by **dependency**. Rewritten 2026-09-17 after the NCOS kernel app
 was folded out to `legacy/` — items about that app (module `validate()`, `schoolId` history,
-`generated_materials`, `storage.rules`, the 36 TypeScript errors) are **retired**, not
-pending. Nothing in `src/` imports `legacy/`.
+`generated_materials`, the 36 TypeScript errors) are **retired**, not pending. Nothing in
+`src/` imports `legacy/`. (`storage.rules` came back on its own account in P3-3: the document
+library stores members' generated files in Cloud Storage, and that is a rule file the portal
+now really has — see `docs/security.md`.)
 
 > **Anchor:** the portal must produce at least what the books produce, and must not serve
 > curriculum it cannot source. Everything below is scored against that.
@@ -26,7 +28,7 @@ additionally fails if `data/inventory.json` is stale.
 | # | Item | Why | Size |
 |---|------|-----|------|
 | P0-1 | **Configure Firebase**: copy `.env.example` → `.env.local` with the six `VITE_FIREBASE_*` values, and set the same on Vercel (Production + Preview) — *the values are the user's to supply; the pipeline around them is done (2026-09-19)* | Vite embeds these at build time, so without them the build is green and every Firebase call fails at runtime. **The build now says so**: `vite.config.js` warns loudly when any of the six is missing, writes `dist/build-info.json` (`firebaseConfigured`, `missingEnv`, `projectId`, `bundleHash`, `commit`), and `make deploy-check URL=…` fetches it plus `/`, `/curriculum/grades.json`, `/curriculum/schedules/…` and `/sw.js` — verified end to end against `yarn preview`. Locally: `cp .env.example .env.local`, fill from Firebase console → Project settings → Your apps, restart the dev server | S |
-| P0-2 | **Deploy rules + indexes**: `make deploy-rules` (or paste `firestore.rules` into the console). `.firebaserc` is committed and pins `beacon-educational-consu-8005e` | **Done** — the user published the ruleset and reported it working. Caveat: the copy in the console predates the list-query fix in `08b19ab` and needs re-pasting (see P2-7 and gotchas.md) | S |
+| P0-2 | **Deploy rules + indexes**: `make deploy-rules` (or paste `firestore.rules` into the console), plus **`make deploy-storage` for the new `storage.rules`** (P3-3). `.firebaserc` is committed and pins `beacon-educational-consu-8005e` | **Partly done** — the user published the ruleset once and reported it working, but the console copy predates three things now in this repo: the visibility-gated reads for `/notes/`, `/lesson_plans/` and `/weekly_forecasts/` (P2-4/P2-7, the list-query fix in `08b19ab`), the `generated_documents` block (P3-3), and Storage rules, which have never been deployed at all. `docs/verification.md` lists all three with the reason | The console is the enforcement; a committed-but-unpublished rule does nothing | S |
 | P0-3 | **Bootstrap the first admin**: create an account, then set `role: 'admin'` (and `status: 'approved'`) on its `users/{uid}` doc in the Firebase console | **Done** — confirmed by the user. This is the only way in: sign-up forces `status: 'pending'`/`role: 'member'`, self-edits cannot change `role`/`status`, and only an admin can approve — so the console is the bootstrap path, and it must be repeated for each new school's first admin | S |
 | P0-4 | **Drive the real flows once deployed** (the code bible's Phase 7): sign up → approve → create → view → edit → delete for a scheme, a plan, a question, and a note; check offline behavior with `yarn build && yarn preview` — *the checklist and its automated half are done (2026-09-19)*: `docs/verification.md` is the 27-step script, written to be run by an ordinary member rather than an admin, with each step's "why" (which rule, index or cache it exercises); `scripts/verify_deploy.py` covers what a machine can check. What remains is the human pass on the live project, which needs the Firebase config (P0-1) | A green build proves nothing about rules, indexes, or the service worker — and admins pass branches ordinary members do not, which is exactly how the un-filtered-list bug hid for so long | M |
 
