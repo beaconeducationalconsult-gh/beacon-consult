@@ -234,7 +234,7 @@
    "indicators": 572,
    "lessons": 1260,
    "scheme_subjects": 7,
-   "kb": 3802
+   "kb": 3801
   },
   {
    "grade": "B7",
@@ -242,7 +242,7 @@
    "indicators": 454,
    "lessons": 1800,
    "scheme_subjects": 10,
-   "kb": 5277
+   "kb": 5266
   },
   {
    "grade": "B8",
@@ -250,7 +250,7 @@
    "indicators": 379,
    "lessons": 1800,
    "scheme_subjects": 10,
-   "kb": 5294
+   "kb": 5264
   },
   {
    "grade": "B9",
@@ -258,8 +258,8 @@
    "indicators": 377,
    "lessons": 1800,
    "scheme_subjects": 10,
-   "kb": 5304
+   "kb": 5275
   }
  ],
- "totalKb": 38707
+ "totalKb": 38636
 }

@@ -400,10 +400,10 @@
   "cs_code": "B9.1.2.1",
   "cs_desc": "is to be done as a project work CI 5.7: Putting forward constructive comments, ideas, explanations and new ways of doing things. CC8.1: Speak clearly and explain ideas. Share a narrative or extended answer while speaking to a group. 44 © NaCCA, M",
   "ind_code": "B9.1.2.1.1",
-  "ind_desc": "CC8.1: Speak clearly and explain ideas. Share a narrative or extended answer while speaking to a group. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion",
+  "ind_desc": "Share a narrative or extended answer while speaking to a group.",
   "is_revision": false,
   "session_title": "Session 1 of 8 — Introduction",
-  "perf_indicator": "By the end of the lesson, learners will be able to: cC8.1: Speak clearly and explain ideas. Share a narrative or extended answer while speaking to a group. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion",
+  "perf_indicator": "By the end of the lesson, learners will be able to: Share a narrative or extended answer while speaking to a group.",
   "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
   "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
   "keywords": "computing, b9, ccp, jhs",
@@ -411,11 +411,11 @@
   "starter": [
    "Greet learners; 1-minute 'tech talk': name one technology you used since yesterday.",
    "Show a real computer/laptop if available, or printed screenshots related to today's lesson; ask 'What do you notice? Where have you seen this?'",
-   "NEW TODAY (Week 3): In Computing we cC8.1: Speak clearly and explain ideas. Share a narrative or extended answer while speaking to a group. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion",
+   "NEW TODAY (Week 3): In Computing we Share a narrative or extended answer while speaking to a group.",
    "Introduce key terms and write them on the board; drill pronunciation."
   ],
   "main": [
-   "ACTIVITY 1 (Model/Demonstrate – 5 min): Teacher demonstrates using a real computer/laptop if available, or printed screenshots – cC8.1: Speak clearly and explain ideas. Share a narrative or extended answer while speaking to a group. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion",
+   "ACTIVITY 1 (Model/Demonstrate – 5 min): Teacher demonstrates using a real computer/laptop if available, or printed screenshots – Share a narrative or extended answer while speaking to a group.",
    "ACTIVITY 2 (Guided practice – 5 min): Learners follow step-by-step in pairs (or follow the unplugged demo); teacher moves round supporting.",
    "ACTIVITY 3 (Task – 5 min): Learners work in pairs on the practice exercise on b9.1.2.",
    "ACTIVITY 4 (Share – 3 min): 2-3 pairs/groups demonstrate; class checks answers; teacher corrects misconceptions."
@@ -1336,10 +1336,10 @@
   "cs_code": "B9.1.2.1",
   "cs_desc": "is to be done as a project work CI 5.7: Putting forward constructive comments, ideas, explanations and new ways of doing things. CC8.1: Speak clearly and explain ideas. Share a narrative or extended answer while speaking to a group. 44 © NaCCA, M",
   "ind_code": "B9.1.2.1.1",
-  "ind_desc": "CC8.1: Speak clearly and explain ideas. Share a narrative or extended answer while speaking to a group. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion",
+  "ind_desc": "Share a narrative or extended answer while speaking to a group.",
   "is_revision": false,
   "session_title": "Session 2 of 8 — Practice",
-  "perf_indicator": "By the end of the lesson, learners will be able to: cC8.1: Speak clearly and explain ideas. Share a narrative or extended answer while speaking to a group. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion",
+  "perf_indicator": "By the end of the lesson, learners will be able to: Share a narrative or extended answer while speaking to a group.",
   "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
   "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
   "keywords": "computing, b9, ccp, jhs",
@@ -1347,11 +1347,11 @@
   "starter": [
    "Greet learners; 1-minute 'tech talk': name one technology you used since yesterday.",
    "Show chart diagrams of computer parts and networks related to today's lesson; ask 'What do you notice? Where have you seen this?'",
-   "NEW TODAY (Week 7): In Computing we cC8.1: Speak clearly and explain ideas. Share a narrative or extended answer while speaking to a group. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion",
+   "NEW TODAY (Week 7): In Computing we Share a narrative or extended answer while speaking to a group.",
    "Introduce key terms and write them on the board; drill pronunciation."
   ],
   "main": [
-   "ACTIVITY 1 (Model/Demonstrate – 5 min): Teacher demonstrates using chart diagrams of computer parts and networks – cC8.1: Speak clearly and explain ideas. Share a narrative or extended answer while speaking to a group. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion",
+   "ACTIVITY 1 (Model/Demonstrate – 5 min): Teacher demonstrates using chart diagrams of computer parts and networks – Share a narrative or extended answer while speaking to a group.",
    "ACTIVITY 2 (Guided practice – 5 min): Learners follow step-by-step in pairs (or follow the unplugged demo); teacher moves round supporting.",
    "ACTIVITY 3 (Task – 5 min): Learners demonstrate the steps to the class in groups on b9.1.2.",
    "ACTIVITY 4 (Share – 3 min): 2-3 pairs/groups demonstrate; class checks answers; teacher corrects misconceptions."
@@ -1999,10 +1999,10 @@
   "cs_code": "B9.2.4.1",
   "cs_desc": "Demonstrate How to Use Spreadsheet (Advanced Operations)",
   "ind_code": "B9.2.4.1.1",
-  "ind_desc": "). 3. Insert a pivot chart to display the number of males and females in the class. 4. Demonstrate the use of the sort and filter features of the pivot table. CC9.6: Ability to work with all group members to complete a task successfully. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion. 50",
+  "ind_desc": "perform data filtering, sorting and validation",
   "is_revision": false,
   "session_title": "Session 1 of 2 — Introduction",
-  "perf_indicator": "By the end of the lesson, learners will be able to: ). 3. Insert a pivot chart to display the number of males and females in the class. 4. Demonstrate the use of the sort and filter features of the pivot table. CC9.6: Ability to work with all group members to complete a task successfully. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion. 50",
+  "perf_indicator": "By the end of the lesson, learners will be able to: perform data filtering, sorting and validation",
   "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
   "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
   "keywords": "computing, b9, ccp, jhs",
@@ -2010,11 +2010,11 @@
   "starter": [
    "Greet learners; 1-minute 'tech talk': name one technology you used since yesterday.",
    "Show a real computer/laptop if available, or printed screenshots related to today's lesson; ask 'What do you notice? Where have you seen this?'",
-   "NEW TODAY (Week 11): In Computing we ). 3. Insert a pivot chart to display the number of males and females in the class. 4. Demonstrate the use of the sort and filter features of the pivot table. CC9.6: Ability to work with all group members to complete a task successfully. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion. 50",
+   "NEW TODAY (Week 11): In Computing we perform data filtering, sorting and validation",
    "Introduce key terms and write them on the board; drill pronunciation."
   ],
   "main": [
-   "ACTIVITY 1 (Model/Demonstrate – 5 min): Teacher demonstrates using a real computer/laptop if available, or printed screenshots – ). 3. Insert a pivot chart to display the number of males and females in the class. 4. Demonstrate the use of the sort and filter features of the pivot table. CC9.6: Ability to work with all group members to complete a task successfully. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion. 50",
+   "ACTIVITY 1 (Model/Demonstrate – 5 min): Teacher demonstrates using a real computer/laptop if available, or printed screenshots – perform data filtering, sorting and validation",
    "ACTIVITY 2 (Guided practice – 5 min): Learners follow step-by-step in pairs (or follow the unplugged demo); teacher moves round supporting.",
    "ACTIVITY 3 (Task – 5 min): Learners work in pairs on the practice exercise on b9.2.4.",
    "ACTIVITY 4 (Share – 3 min): 2-3 pairs/groups demonstrate; class checks answers; teacher corrects misconceptions."
@@ -2155,10 +2155,10 @@
   "cs_code": "B9.1.2.1",
   "cs_desc": "is to be done as a project work CI 5.7: Putting forward constructive comments, ideas, explanations and new ways of doing things. CC8.1: Speak clearly and explain ideas. Share a narrative or extended answer while speaking to a group. 44 © NaCCA, M",
   "ind_code": "B9.1.2.1.1",
-  "ind_desc": "CC8.1: Speak clearly and explain ideas. Share a narrative or extended answer while speaking to a group. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion",
+  "ind_desc": "Share a narrative or extended answer while speaking to a group.",
   "is_revision": false,
   "session_title": "Session 3 of 8 — Practice",
-  "perf_indicator": "By the end of the lesson, learners will be able to: cC8.1: Speak clearly and explain ideas. Share a narrative or extended answer while speaking to a group. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion",
+  "perf_indicator": "By the end of the lesson, learners will be able to: Share a narrative or extended answer while speaking to a group.",
   "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
   "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
   "keywords": "computing, b9, ccp, jhs",
@@ -2166,11 +2166,11 @@
   "starter": [
    "Greet learners; 1-minute 'tech talk': name one technology you used since yesterday.",
    "Show an unplugged demonstration (cards, bottles, paper arrows) related to today's lesson; ask 'What do you notice? Where have you seen this?'",
-   "NEW TODAY (Week 12): In Computing we cC8.1: Speak clearly and explain ideas. Share a narrative or extended answer while speaking to a group. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion",
+   "NEW TODAY (Week 12): In Computing we Share a narrative or extended answer while speaking to a group.",
    "Introduce key terms and write them on the board; drill pronunciation."
   ],
   "main": [
-   "ACTIVITY 1 (Model/Demonstrate – 5 min): Teacher demonstrates using an unplugged demonstration (cards, bottles, paper arrows) – cC8.1: Speak clearly and explain ideas. Share a narrative or extended answer while speaking to a group. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion",
+   "ACTIVITY 1 (Model/Demonstrate – 5 min): Teacher demonstrates using an unplugged demonstration (cards, bottles, paper arrows) – Share a narrative or extended answer while speaking to a group.",
    "ACTIVITY 2 (Guided practice – 5 min): Learners follow step-by-step in pairs (or follow the unplugged demo); teacher moves round supporting.",
    "ACTIVITY 3 (Task – 5 min): Learners complete the worksheet/diagram labelling individually on b9.1.2.",
    "ACTIVITY 4 (Share – 3 min): 2-3 pairs/groups demonstrate; class checks answers; teacher corrects misconceptions."
@@ -3091,10 +3091,10 @@
   "cs_code": "B9.1.2.1",
   "cs_desc": "is to be done as a project work CI 5.7: Putting forward constructive comments, ideas, explanations and new ways of doing things. CC8.1: Speak clearly and explain ideas. Share a narrative or extended answer while speaking to a group. 44 © NaCCA, M",
   "ind_code": "B9.1.2.1.1",
-  "ind_desc": "CC8.1: Speak clearly and explain ideas. Share a narrative or extended answer while speaking to a group. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion",
+  "ind_desc": "Share a narrative or extended answer while speaking to a group.",
   "is_revision": false,
   "session_title": "Session 4 of 8 — Practice",
-  "perf_indicator": "By the end of the lesson, learners will be able to: cC8.1: Speak clearly and explain ideas. Share a narrative or extended answer while speaking to a group. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion",
+  "perf_indicator": "By the end of the lesson, learners will be able to: Share a narrative or extended answer while speaking to a group.",
   "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
   "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
   "keywords": "computing, b9, ccp, jhs",
@@ -3102,11 +3102,11 @@
   "starter": [
    "Greet learners; 1-minute 'tech talk': name one technology you used since yesterday.",
    "Show a short video or poster on technology related to today's lesson; ask 'What do you notice? Where have you seen this?'",
-   "NEW TODAY (Week 4): In Computing we cC8.1: Speak clearly and explain ideas. Share a narrative or extended answer while speaking to a group. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion",
+   "NEW TODAY (Week 4): In Computing we Share a narrative or extended answer while speaking to a group.",
    "Introduce key terms and write them on the board; drill pronunciation."
   ],
   "main": [
-   "ACTIVITY 1 (Model/Demonstrate – 5 min): Teacher demonstrates using a short video or poster on technology – cC8.1: Speak clearly and explain ideas. Share a narrative or extended answer while speaking to a group. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion",
+   "ACTIVITY 1 (Model/Demonstrate – 5 min): Teacher demonstrates using a short video or poster on technology – Share a narrative or extended answer while speaking to a group.",
    "ACTIVITY 2 (Guided practice – 5 min): Learners follow step-by-step in pairs (or follow the unplugged demo); teacher moves round supporting.",
    "ACTIVITY 3 (Task – 5 min): Learners solve the challenge task in small groups and present on b9.1.2.",
    "ACTIVITY 4 (Share – 3 min): 2-3 pairs/groups demonstrate; class checks answers; teacher corrects misconceptions."
@@ -3910,10 +3910,10 @@
   "cs_code": "B9.1.2.1",
   "cs_desc": "is to be done as a project work CI 5.7: Putting forward constructive comments, ideas, explanations and new ways of doing things. CC8.1: Speak clearly and explain ideas. Share a narrative or extended answer while speaking to a group. 44 © NaCCA, M",
   "ind_code": "B9.1.2.1.1",
-  "ind_desc": "CC8.1: Speak clearly and explain ideas. Share a narrative or extended answer while speaking to a group. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion",
+  "ind_desc": "Share a narrative or extended answer while speaking to a group.",
   "is_revision": false,
   "session_title": "Session 5 of 8 — Practice",
-  "perf_indicator": "By the end of the lesson, learners will be able to: cC8.1: Speak clearly and explain ideas. Share a narrative or extended answer while speaking to a group. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion",
+  "perf_indicator": "By the end of the lesson, learners will be able to: Share a narrative or extended answer while speaking to a group.",
   "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
   "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
   "keywords": "computing, b9, ccp, jhs",
@@ -3921,11 +3921,11 @@
   "starter": [
    "Greet learners; 1-minute 'tech talk': name one technology you used since yesterday.",
    "Show a real computer/laptop if available, or printed screenshots related to today's lesson; ask 'What do you notice? Where have you seen this?'",
-   "NEW TODAY (Week 9): In Computing we cC8.1: Speak clearly and explain ideas. Share a narrative or extended answer while speaking to a group. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion",
+   "NEW TODAY (Week 9): In Computing we Share a narrative or extended answer while speaking to a group.",
    "Introduce key terms and write them on the board; drill pronunciation."
   ],
   "main": [
-   "ACTIVITY 1 (Model/Demonstrate – 5 min): Teacher demonstrates using a real computer/laptop if available, or printed screenshots – cC8.1: Speak clearly and explain ideas. Share a narrative or extended answer while speaking to a group. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion",
+   "ACTIVITY 1 (Model/Demonstrate – 5 min): Teacher demonstrates using a real computer/laptop if available, or printed screenshots – Share a narrative or extended answer while speaking to a group.",
    "ACTIVITY 2 (Guided practice – 5 min): Learners follow step-by-step in pairs (or follow the unplugged demo); teacher moves round supporting.",
    "ACTIVITY 3 (Task – 5 min): Learners work in pairs on the practice exercise on b9.1.2.",
    "ACTIVITY 4 (Share – 3 min): 2-3 pairs/groups demonstrate; class checks answers; teacher corrects misconceptions."
@@ -4534,10 +4534,10 @@
   "cs_code": "B9.2.4.1",
   "cs_desc": "Demonstrate How to Use Spreadsheet (Advanced Operations)",
   "ind_code": "B9.2.4.1.1",
-  "ind_desc": "). 3. Insert a pivot chart to display the number of males and females in the class. 4. Demonstrate the use of the sort and filter features of the pivot table. CC9.6: Ability to work with all group members to complete a task successfully. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion. 50",
+  "ind_desc": "perform data filtering, sorting and validation",
   "is_revision": false,
   "session_title": "Session 2 of 2 — Consolidation",
-  "perf_indicator": "By the end of the lesson, learners will be able to: ). 3. Insert a pivot chart to display the number of males and females in the class. 4. Demonstrate the use of the sort and filter features of the pivot table. CC9.6: Ability to work with all group members to complete a task successfully. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion. 50",
+  "perf_indicator": "By the end of the lesson, learners will be able to: perform data filtering, sorting and validation",
   "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
   "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
   "keywords": "computing, b9, ccp, jhs",
@@ -4545,11 +4545,11 @@
   "starter": [
    "Greet learners; 1-minute 'tech talk': name one technology you used since yesterday.",
    "Show chart diagrams of computer parts and networks related to today's lesson; ask 'What do you notice? Where have you seen this?'",
-   "NEW TODAY (Week 12): In Computing we ). 3. Insert a pivot chart to display the number of males and females in the class. 4. Demonstrate the use of the sort and filter features of the pivot table. CC9.6: Ability to work with all group members to complete a task successfully. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion. 50",
+   "NEW TODAY (Week 12): In Computing we perform data filtering, sorting and validation",
    "Introduce key terms and write them on the board; drill pronunciation."
   ],
   "main": [
-   "ACTIVITY 1 (Model/Demonstrate – 5 min): Teacher demonstrates using chart diagrams of computer parts and networks – ). 3. Insert a pivot chart to display the number of males and females in the class. 4. Demonstrate the use of the sort and filter features of the pivot table. CC9.6: Ability to work with all group members to complete a task successfully. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion. 50",
+   "ACTIVITY 1 (Model/Demonstrate – 5 min): Teacher demonstrates using chart diagrams of computer parts and networks – perform data filtering, sorting and validation",
    "ACTIVITY 2 (Guided practice – 5 min): Learners follow step-by-step in pairs (or follow the unplugged demo); teacher moves round supporting.",
    "ACTIVITY 3 (Task – 5 min): Learners demonstrate the steps to the class in groups on b9.2.4.",
    "ACTIVITY 4 (Share – 3 min): 2-3 pairs/groups demonstrate; class checks answers; teacher corrects misconceptions."
@@ -4846,10 +4846,10 @@
   "cs_code": "B9.1.2.1",
   "cs_desc": "is to be done as a project work CI 5.7: Putting forward constructive comments, ideas, explanations and new ways of doing things. CC8.1: Speak clearly and explain ideas. Share a narrative or extended answer while speaking to a group. 44 © NaCCA, M",
   "ind_code": "B9.1.2.1.1",
-  "ind_desc": "CC8.1: Speak clearly and explain ideas. Share a narrative or extended answer while speaking to a group. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion",
+  "ind_desc": "Share a narrative or extended answer while speaking to a group.",
   "is_revision": false,
   "session_title": "Session 6 of 8 — Practice",
-  "perf_indicator": "By the end of the lesson, learners will be able to: cC8.1: Speak clearly and explain ideas. Share a narrative or extended answer while speaking to a group. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion",
+  "perf_indicator": "By the end of the lesson, learners will be able to: Share a narrative or extended answer while speaking to a group.",
   "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
   "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
   "keywords": "computing, b9, ccp, jhs",
@@ -4857,11 +4857,11 @@
   "starter": [
    "Greet learners; 1-minute 'tech talk': name one technology you used since yesterday.",
    "Show chart diagrams of computer parts and networks related to today's lesson; ask 'What do you notice? Where have you seen this?'",
-   "NEW TODAY (Week 1): In Computing we cC8.1: Speak clearly and explain ideas. Share a narrative or extended answer while speaking to a group. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion",
+   "NEW TODAY (Week 1): In Computing we Share a narrative or extended answer while speaking to a group.",
    "Introduce key terms and write them on the board; drill pronunciation."
   ],
   "main": [
-   "ACTIVITY 1 (Model/Demonstrate – 5 min): Teacher demonstrates using chart diagrams of computer parts and networks – cC8.1: Speak clearly and explain ideas. Share a narrative or extended answer while speaking to a group. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion",
+   "ACTIVITY 1 (Model/Demonstrate – 5 min): Teacher demonstrates using chart diagrams of computer parts and networks – Share a narrative or extended answer while speaking to a group.",
    "ACTIVITY 2 (Guided practice – 5 min): Learners follow step-by-step in pairs (or follow the unplugged demo); teacher moves round supporting.",
    "ACTIVITY 3 (Task – 5 min): Learners demonstrate the steps to the class in groups on b9.1.2.",
    "ACTIVITY 4 (Share – 3 min): 2-3 pairs/groups demonstrate; class checks answers; teacher corrects misconceptions."
@@ -5665,10 +5665,10 @@
   "cs_code": "B9.1.2.1",
   "cs_desc": "is to be done as a project work CI 5.7: Putting forward constructive comments, ideas, explanations and new ways of doing things. CC8.1: Speak clearly and explain ideas. Share a narrative or extended answer while speaking to a group. 44 © NaCCA, M",
   "ind_code": "B9.1.2.1.1",
-  "ind_desc": "CC8.1: Speak clearly and explain ideas. Share a narrative or extended answer while speaking to a group. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion",
+  "ind_desc": "Share a narrative or extended answer while speaking to a group.",
   "is_revision": false,
   "session_title": "Session 7 of 8 — Practice",
-  "perf_indicator": "By the end of the lesson, learners will be able to: cC8.1: Speak clearly and explain ideas. Share a narrative or extended answer while speaking to a group. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion",
+  "perf_indicator": "By the end of the lesson, learners will be able to: Share a narrative or extended answer while speaking to a group.",
   "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
   "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
   "keywords": "computing, b9, ccp, jhs",
@@ -5676,11 +5676,11 @@
   "starter": [
    "Greet learners; 1-minute 'tech talk': name one technology you used since yesterday.",
    "Show an unplugged demonstration (cards, bottles, paper arrows) related to today's lesson; ask 'What do you notice? Where have you seen this?'",
-   "NEW TODAY (Week 6): In Computing we cC8.1: Speak clearly and explain ideas. Share a narrative or extended answer while speaking to a group. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion",
+   "NEW TODAY (Week 6): In Computing we Share a narrative or extended answer while speaking to a group.",
    "Introduce key terms and write them on the board; drill pronunciation."
   ],
   "main": [
-   "ACTIVITY 1 (Model/Demonstrate – 5 min): Teacher demonstrates using an unplugged demonstration (cards, bottles, paper arrows) – cC8.1: Speak clearly and explain ideas. Share a narrative or extended answer while speaking to a group. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion",
+   "ACTIVITY 1 (Model/Demonstrate – 5 min): Teacher demonstrates using an unplugged demonstration (cards, bottles, paper arrows) – Share a narrative or extended answer while speaking to a group.",
    "ACTIVITY 2 (Guided practice – 5 min): Learners follow step-by-step in pairs (or follow the unplugged demo); teacher moves round supporting.",
    "ACTIVITY 3 (Task – 5 min): Learners complete the worksheet/diagram labelling individually on b9.1.2.",
    "ACTIVITY 4 (Share – 3 min): 2-3 pairs/groups demonstrate; class checks answers; teacher corrects misconceptions."
@@ -6601,10 +6601,10 @@
   "cs_code": "B9.1.2.1",
   "cs_desc": "is to be done as a project work CI 5.7: Putting forward constructive comments, ideas, explanations and new ways of doing things. CC8.1: Speak clearly and explain ideas. Share a narrative or extended answer while speaking to a group. 44 © NaCCA, M",
   "ind_code": "B9.1.2.1.1",
-  "ind_desc": "CC8.1: Speak clearly and explain ideas. Share a narrative or extended answer while speaking to a group. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion",
+  "ind_desc": "Share a narrative or extended answer while speaking to a group.",
   "is_revision": false,
   "session_title": "Session 8 of 8 — Consolidation",
-  "perf_indicator": "By the end of the lesson, learners will be able to: cC8.1: Speak clearly and explain ideas. Share a narrative or extended answer while speaking to a group. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion",
+  "perf_indicator": "By the end of the lesson, learners will be able to: Share a narrative or extended answer while speaking to a group.",
   "competencies": "Critical Thinking and Problem Solving; Communication and Collaboration; Creativity and Innovation; Personal Development and Leadership; Cultural Identity and Global Citizenship; Digital Literacy",
   "resources": "NaCCA CCP approved textbook; TLMs; ICT tools",
   "keywords": "computing, b9, ccp, jhs",
@@ -6612,11 +6612,11 @@
   "starter": [
    "Greet learners; 1-minute 'tech talk': name one technology you used since yesterday.",
    "Show a short video or poster on technology related to today's lesson; ask 'What do you notice? Where have you seen this?'",
-   "NEW TODAY (Week 10): In Computing we cC8.1: Speak clearly and explain ideas. Share a narrative or extended answer while speaking to a group. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion",
+   "NEW TODAY (Week 10): In Computing we Share a narrative or extended answer while speaking to a group.",
    "Introduce key terms and write them on the board; drill pronunciation."
   ],
   "main": [
-   "ACTIVITY 1 (Model/Demonstrate – 5 min): Teacher demonstrates using a short video or poster on technology – cC8.1: Speak clearly and explain ideas. Share a narrative or extended answer while speaking to a group. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion",
+   "ACTIVITY 1 (Model/Demonstrate – 5 min): Teacher demonstrates using a short video or poster on technology – Share a narrative or extended answer while speaking to a group.",
    "ACTIVITY 2 (Guided practice – 5 min): Learners follow step-by-step in pairs (or follow the unplugged demo); teacher moves round supporting.",
    "ACTIVITY 3 (Task – 5 min): Learners solve the challenge task in small groups and present on b9.1.2.",
    "ACTIVITY 4 (Share – 3 min): 2-3 pairs/groups demonstrate; class checks answers; teacher corrects misconceptions."

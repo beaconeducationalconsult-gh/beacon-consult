@@ -51,6 +51,7 @@ MARKERS = [
     ("numbered exemplar", re.compile(r"\s\d+\.\s")),
     ("learners are to", re.compile(r"\s(?:the\s+)?learners?\s+(?:are|is)\s+to\s*:?", re.I)),
     ("enquiry route", re.compile(r"\sEnquiry\s+route\s*:", re.I)),
+    ("exemplars", re.compile(r"\sExemplar\(?s?\)?\s*:", re.I)),
     ("suggested process", re.compile(r"\sSuggested\s+process\s*/?\s*steps?", re.I)),
     ("e.g.", re.compile(r"\sE\.g\.\s*,?")),
     ("note", re.compile(r"\sNote\s*:")),
@@ -201,6 +202,54 @@ def pages_with(pdf: str, head: str) -> list[int]:
     return [page for page in range(F.npages(pdf)) if key in F.blob(page_text(pdf, page))]
 
 
+# The core-competencies column's own vocabulary: the labels (with or without their
+# two-letter tag) and the `CC 8.2: …` lines, both of which sit *beside* the
+# indicator in the print and inside `ind_desc` in some of these extractions.
+COMPETENCE_LABEL = re.compile(
+    r"\s*(?:Communication and Collaboration|Critical Thinking and Problem Solving|"
+    r"Creativity and Innovation|Personal Development and Leadership|"
+    r"Cultural Identity and Global Citizenship|Global Citizenship|Digital Literacy)"
+    r"(?:\s*\((?:CC|CP|CI|PL|CG|DL)\))?", re.I)
+
+COMPETENCE_TAG = re.compile(r"\s*\((?:CC|CP|CI|PL|CG|DL)\)")
+
+COMPETENCE_LINE = re.compile(
+    r"\s*(?:CC|CP|CI|PL|CG|DL)\s*\d+(?:\.\d+)*\s*:[^.]*\.?", re.I)
+
+
+def furniture_spans(text: str) -> list[tuple[int, int, str]]:
+    """The competence furniture the print keeps out of its indicator column."""
+    spans = []
+    for rx in (COMPETENCE_LABEL, COMPETENCE_TAG, COMPETENCE_LINE):
+        for m in rx.finditer(text):
+            if m.group(0).strip():
+                spans.append((m.start(), m.end(), m.group(0)))
+    # merged, because the labels overlap their own tags
+    spans.sort()
+    merged: list[tuple[int, int, str]] = []
+    for start, end, got in spans:
+        if merged and start <= merged[-1][1]:
+            merged[-1] = (merged[-1][0], max(end, merged[-1][1]),
+                          text[merged[-1][0]:max(end, merged[-1][1])])
+        else:
+            merged.append((start, end, got))
+    return merged
+
+
+def without_furniture(head: str) -> tuple[str, list[str]]:
+    """`head` with the competence furniture taken out, and what was taken."""
+    spans = furniture_spans(head)
+    if not spans:
+        return head.strip(), []
+    out, last = [], 0
+    for start, end, _got in spans:
+        out.append(head[last:start])
+        last = end
+    out.append(head[last:])
+    return F.compact("".join(out)).strip(" -;:,.\t"), [head[a:b] for a, b, _ in
+                                                        [(a, b, t) for a, b, t in spans]]
+
+
 def printed_head(pdf: str, pages: list[int], head: str) -> tuple[str, float]:
     """(the print's text up to its exemplar marker, how close that is to `head`).
 
@@ -249,10 +298,15 @@ def plan() -> tuple[list[dict], list[dict], dict]:
                 continue
             marker, head, tail = split
             kind = classify(head, tail)
+            # …and the print keeps its competence labels and `CC 8.2:` lines in the
+            # column beside the indicator, so where the extraction copied those into
+            # the head, the indicator is what is left once they are taken out
+            stripped, furniture = without_furniture(head)
             entry = {"file": path.name, "code": code, "marker": marker,
                      "kind": kind or "content", "before": text,
-                     "after": head if kind else text,
-                     "removed": tail if kind else ""}
+                     "after": stripped if kind else text,
+                     "removed": tail if kind else "",
+                     "furniture": furniture}
             if kind is None:
                 report.append(entry)
                 continue
@@ -322,21 +376,53 @@ def swap(haystack: str, before: str, after: str) -> str | None:
 
 
 APPLIED_DEFAULTS = {"records": 0, "repeats": 0, "dangling": 0, "files": {},
-                    "lesson_slots": 0, "lesson_files": {}, "lesson_fields": {}}
+                    "lesson_slots": 0, "lesson_files": {}, "lesson_fields": {},
+                    "furniture_records": 0, "furniture_files": {}}
 
 
 def flat_run(run: dict) -> dict:
     """A history entry: what one run wrote, without the file-by-file detail."""
     return {"records": run.get("records", 0), "repeats": run.get("repeats", 0),
             "dangling": run.get("dangling", 0),
-            "lesson_slots": run.get("lesson_slots", 0)}
+            "lesson_slots": run.get("lesson_slots", 0),
+            "furniture_records": run.get("furniture_records", 0)}
 
 
 LESSON_FIELDS = ("ind_desc", "perf_indicator", "starter", "main", "plenary", "rpk",
                  "session_title")
 
 
-def lesson_plan(by_code: dict[str, tuple[str, str]]) -> list[dict]:
+def row_lead(pdf: str, pages: list[int], code: str) -> str:
+    """The indicator the print sets for the row, read off its own cell.
+
+    Used only where a record holds no indicator at all: the print's row is read
+    from the code to the first exemplar marker, and the reading is accepted only
+    when it is the text that row starts with (so a neighbouring row's lead can
+    never be taken for this one's).
+    """
+    wanted = F.blob(code)
+    for page in pages:
+        text = page_text(pdf, page)
+        for m in F.INDICATOR.finditer(text):
+            # only the record's own row: a page carries several, and taking the
+            # next one's indicator would put another indicator's text here
+            if F.blob(m.group(0)) != wanted:
+                continue
+            rest = F.strip_code_prefix(text[m.end():]).strip()
+            if not rest:
+                continue
+            hits = [m for m in (rx.search(" " + rest) for _n, rx in MARKERS) if m]
+            if not hits:
+                continue
+            cut = min(hits, key=lambda c: c.start())
+            lead = (" " + rest)[:cut.start()].strip()
+            if len(re.sub(r"\W+", " ", lead).split()) >= 3:
+                return F.compact(lead)
+    return ""
+
+
+def lesson_plan(by_code: dict[str, tuple[str, str]],
+                by_span: dict[str, list[str]]) -> list[dict]:
     """The lesson slots carrying one of the cleaned indicators.
 
     The lesson template is a copy of the database and it embeds the indicator in
@@ -355,7 +441,7 @@ def lesson_plan(by_code: dict[str, tuple[str, str]]) -> list[dict]:
             pair = by_code.get(slot.get("ind_code"))
             if not pair:
                 continue
-            changed = changed_fields(slot, [pair])
+            changed = changed_fields(slot, [pair], by_span.get(slot.get("ind_code")))
             if not changed:
                 continue
             for field in changed:
@@ -409,31 +495,145 @@ def lesson_state(by_code: dict[str, tuple[str, str]]) -> dict:
     return {"slots": slots, "fields": field_counts, "files": files}
 
 
-def changed_fields(slot: dict, pairs: list[tuple[str, str]]) -> dict:
-    """{field: new value} for every lesson field the pairs change."""
+def scrub(field_value, pairs: list[tuple[str, str]], spans: list[str]):
+    """`field_value` with the record's cuts applied, or None when nothing changes.
+
+    The whole-record substitution is tried first (the lesson template usually
+    copies `ind_desc` verbatim); where the template only copied part of it, each
+    removed span is taken out on its own — the spans are the print's own
+    neighbouring-column text, and removing them is the same deletion the database
+    received.
+    """
+    def one(text: str) -> str:
+        for before, after in pairs:
+            new = swap(text, before, after)
+            if new is not None and new != text:
+                return new
+        new = text
+        for span in spans:
+            got = swap(new, span, "")
+            if got is not None:
+                new = F.compact(got)
+        return new
+
+    if isinstance(field_value, str):
+        new = one(field_value)
+        return new if new != field_value else None
+    if isinstance(field_value, list):
+        items = [one(v) if isinstance(v, str) else v for v in field_value]
+        return items if items != field_value else None
+    return None
+
+
+def changed_fields(slot: dict, pairs: list[tuple[str, str]],
+                   spans: list[str] | None = None) -> dict:
+    """{field: new value} for every lesson field the pairs (and spans) change."""
     out = {}
     for field in LESSON_FIELDS:
-        value = slot.get(field)
-        if isinstance(value, str):
-            for before, after in pairs:
-                new = swap(value, before, after)
-                if new is not None and new != value:
-                    out[field] = new
-                    break
-        elif isinstance(value, list):
-            items = list(value)
-            touched = False
-            for i, item in enumerate(items):
-                if not isinstance(item, str):
+        new = scrub(slot.get(field), pairs, spans or [])
+        if new is not None:
+            out[field] = new
+    return out
+
+
+def side_text(pdf: str, page: int) -> str:
+    """What the page prints in the columns beside its indicator column."""
+    lo, hi = F.column_edges(pdf, page)
+    return F.compact(" ".join(t for _y, t in F.page_lines(pdf, page, hi, 1000.0)))
+
+
+_SIDE: dict = {}
+
+
+def side_of(pdf: str, page: int) -> str:
+    if (pdf, page) not in _SIDE:
+        _SIDE[(pdf, page)] = side_text(pdf, page)
+    return _SIDE[(pdf, page)]
+
+
+def furniture_plan() -> list[dict]:
+    """Competence furniture `ind_desc` copied out of the print's other column.
+
+    Every span is checked against the print twice: it must be in the side column
+    (where the print sets it) and the record's own row must not print the furniture
+    inside the indicator column. Only then is it removed, and only from the field —
+    the exemplar text around it is left exactly as it was.
+    """
+    out = []
+    for path in sorted(CURRICULUM.glob("*_curriculum_db_clean.json")):
+        parsed = subject_grade(path.name)
+        if not parsed:
+            continue
+        subject, grade = parsed
+        pdf = print_for(subject, grade)
+        for code, record in json.loads(path.read_text()).items():
+            text = record.get("ind_desc") or ""
+            spans = furniture_spans(text)
+            if not spans:
+                continue
+            entry = {"file": path.name, "code": code, "before": text,
+                     "removed": [t for _a, _b, t in spans], "pages": [], "proof": [],
+                     "verified": False}
+            if not pdf:
+                entry["reason"] = "no print"
+                out.append(entry)
+                continue
+            pages = sorted(set(F.pages_of(pdf, code)) | set(pages_with(pdf, text[:200])))
+            entry["pages"] = pages[:6]
+            side = " ".join(side_of(pdf, p) for p in pages)
+            ok = True
+            for _a, _b, got in spans:
+                key = F.blob(" ".join(re.sub(r"\W+", " ", got).split()[:5]))
+                if not key or key not in F.blob(side):
+                    ok = False
+                    entry["proof"].append({"span": got, "in_side_column": False})
+                else:
+                    entry["proof"].append({"span": got, "in_side_column": True})
+            if not ok:
+                entry["reason"] = "a span is not printed in the side column"
+                out.append(entry)
+                continue
+            after, _furniture = without_furniture(text)
+            if not after:
+                entry["reason"] = "nothing left"
+                out.append(entry)
+                continue
+            entry["after"] = after
+            # what remains has to be text the print sets in its own column — a
+            # record whose whole text came out of the neighbouring column would
+            # otherwise be left holding a fragment of it, and one whose text was
+            # reassembled in extraction would be left holding a sentence the print
+            # does not carry
+            row = F.blob(" ".join(F.strip_code_prefix(F.row_text(pdf, p, code))
+                                  for p in pages)) or F.blob(page_text(pdf, pages[0]))
+            entry["row_pages"] = pages[:6]
+            lead = text[:spans[0][0]].strip()
+            lead_ok = (len(re.sub(r"\W+", " ", lead).split()) >= 3
+                       and F.blob(lead) in row)
+            whole_ok = bool(row) and F.blob(after) in row
+            entry["row_check"] = ("the print carries what is left" if whole_ok
+                                  else "the print carries the indicator before it"
+                                  if lead_ok else "neither")
+            if not (whole_ok or lead_ok):
+                # the record begins with the neighbouring column's text, or its
+                # own words are not in the row at all: removing the spans would
+                # leave a fragment rather than an indicator. Two records in the
+                # computing B9 database are *entirely* like this — their `ind_desc`
+                # is the neighbouring column's text and nothing else — and for
+                # those the indicator is restored from the print's own row, which
+                # is the text the print sets right after the code.
+                restored = row_lead(pdf, pages, code)
+                if restored:
+                    entry["after"] = restored
+                    entry["restored_from_print"] = True
+                    entry["verified"] = True
+                    out.append(entry)
                     continue
-                for before, after in pairs:
-                    new = swap(item, before, after)
-                    if new is not None and new != item:
-                        items[i] = new
-                        touched = True
-                        break
-            if touched:
-                out[field] = items
+                entry["reason"] = "the print's own row does not carry the indicator"
+                out.append(entry)
+                continue
+            entry["verified"] = bool(after) and not F.similar(F.blob(after), F.blob(text))
+            out.append(entry)
     return out
 
 
@@ -449,6 +649,7 @@ def main() -> int:
         cut = [e for e in cut if e["file"] in keep]
         report = [e for e in report if e["file"] in keep]
 
+    furniture = furniture_plan()
     artifact = AUDIT / "ind_desc_exemplars.json"
     old: dict = {}
     if artifact.exists():
@@ -460,11 +661,16 @@ def main() -> int:
     # earlier run already wrote — the lesson template still carries those texts
     # whatever state the databases are in
     by_code: dict[str, tuple[str, str]] = {}
+    by_span: dict[str, list[str]] = {}
+    for e in furniture:
+        if e.get("verified"):
+            by_code[e["code"]] = (F.compact(e["before"]), e["after"])
+            by_span[e["code"]] = [t.strip() for t in e["removed"]]
     for source in (old.get("cut", []), cut):
         for e in source:
             if e.get("verified"):
                 by_code[e["code"]] = (F.compact(e["before"]), e["after"])
-    lessons = lesson_plan(by_code)
+    lessons = lesson_plan(by_code, by_span)
 
     print(f"{len(cut) + len(report)} record(s) carry the print's exemplar tail")
     print(f"  to cut   {sum(1 for e in cut if e.get('verified'))}"
@@ -472,6 +678,9 @@ def main() -> int:
           f" dangling {sum(1 for e in cut if e.get('verified') and e['kind'] == 'dangling')})")
     print(f"  report   {len(report)}  (exemplar content the indicator does not carry)")
     print(f"  skipped  {sum(1 for e in cut if not e.get('verified'))}  (print does not back the cut)")
+    print(f"  furniture {sum(1 for e in furniture if e.get('verified'))} record(s) whose "
+          f"ind_desc holds text the print sets beside the indicator "
+          f"({sum(1 for e in furniture if not e.get('verified'))} unbacked)")
     print(f"  lessons  {sum(e['slots_changed'] for e in lessons)} slot(s) in "
           f"{len(lessons)} lesson file(s) carry one of them")
     for entry in lessons:
@@ -488,16 +697,28 @@ def main() -> int:
                 print(f"       print: {entry['print_head']}")
             print(f"       db   : {entry['before'][:200]}")
 
+    # every cut this cleanup ever made stays on the record: a later run finds
+    # fewer (or none) and must not shrink the evidence
+    merged_cut: list[dict] = []
+    seen: set = set()
+    for source in (cut, old.get("cut", [])):
+        for entry in source:
+            key = (entry["file"], entry["code"])
+            if key in seen:
+                continue
+            seen.add(key)
+            merged_cut.append(entry)
     audit = {
-        # what an earlier run cut stays on the record after this one finds nothing
-        "cut": cut if any(e.get("verified") for e in cut) else old.get("cut", cut),
+        "cut": merged_cut,
         "report": report or old.get("report", report),
         "lessons": lessons or old.get("lessons", lessons),
+        "furniture": furniture if any(e.get("verified") for e in furniture)
+                     else old.get("furniture", furniture),
         "applied": {**APPLIED_DEFAULTS, **old.get("applied", {})},
         "history": [flat_run(h) for h in old.get("history", [])],
     }
     run = {"records": 0, "repeats": 0, "dangling": 0, "lesson_slots": 0,
-           "lesson_fields": {}}
+           "lesson_fields": {}, "furniture_records": 0}
 
     if args.apply:
         by_file: dict[str, list[dict]] = {}
@@ -519,6 +740,25 @@ def main() -> int:
             run["dangling"] += sum(1 for e in entries if e["kind"] == "dangling")
         if by_file:
             print(f"\napplied: {run['records']} record(s) in {len(by_file)} file(s)")
+        by_furniture: dict[str, list[dict]] = {}
+        for entry in furniture:
+            if entry.get("verified"):
+                by_furniture.setdefault(entry["file"], []).append(entry)
+        for name, entries in by_furniture.items():
+            path = CURRICULUM / name
+            data = json.loads(path.read_text())
+            for entry in entries:
+                data[entry["code"]]["ind_desc"] = entry["after"]
+            path.write_text(json.dumps(data, indent=1, ensure_ascii=False) + "\n")
+            audit["applied"]["furniture_files"] = {
+                **audit["applied"].get("furniture_files", {}), name: len(entries)}
+            audit["applied"]["furniture_records"] = (
+                audit["applied"].get("furniture_records", 0) + len(entries))
+            run["furniture_records"] += len(entries)
+        if by_furniture:
+            print(f"          {run['furniture_records']} record(s) had the print's "
+                  f"neighbouring column taken out of ind_desc in "
+                  f"{len(by_furniture)} file(s)")
         for entry in lessons:
             path = LESSONS / entry["file"]
             slots = json.loads(path.read_text())
@@ -530,7 +770,8 @@ def main() -> int:
                 pair = by_code.get(slot.get("ind_code"))
                 if not pair:
                     continue
-                for field, value in changed_fields(slot, [pair]).items():
+                for field, value in changed_fields(
+                        slot, [pair], by_span.get(slot.get("ind_code"))).items():
                     slot[field] = value
             path.write_text(json.dumps(slots, indent=1, ensure_ascii=False) + "\n")
             run["lesson_slots"] += entry["slots_changed"]
@@ -546,7 +787,23 @@ def main() -> int:
         print(f"          lesson layer now: {state['slots']} slot(s) in "
               f"{len(state['files'])} file(s), {state['fields']}")
 
-    if run["records"] or run["lesson_slots"]:
+    # `applied` states what the cleanup stands for, off the lists themselves —
+    # never a running total that a re-run could double
+    verified_cut = [e for e in audit["cut"] if e.get("verified")]
+    verified_furniture = [e for e in audit["furniture"] if e.get("verified")]
+    audit["applied"]["records"] = len(verified_cut)
+    audit["applied"]["repeats"] = sum(1 for e in verified_cut if e["kind"] == "repeats")
+    audit["applied"]["dangling"] = sum(1 for e in verified_cut if e["kind"] == "dangling")
+    audit["applied"]["files"] = {}
+    for e in verified_cut:
+        audit["applied"]["files"][e["file"]] = audit["applied"]["files"].get(e["file"], 0) + 1
+    audit["applied"]["furniture_records"] = len(verified_furniture)
+    audit["applied"]["furniture_files"] = {}
+    for e in verified_furniture:
+        key = e["file"]
+        audit["applied"]["furniture_files"][key] =             audit["applied"]["furniture_files"].get(key, 0) + 1
+
+    if run["records"] or run["lesson_slots"] or run["furniture_records"]:
         audit["history"].append(run)
 
     AUDIT.mkdir(parents=True, exist_ok=True)

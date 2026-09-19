@@ -451,9 +451,12 @@ describe.each(ids)('%s', (grade) => {
 
     it('took the print\u2019s exemplar tail back off the indicators it cut', () => {
       const trail = readData('audit/ind_desc_exemplars.json')
-      expect(trail.applied.records).toBe(242)
-      expect(trail.applied.repeats + trail.applied.dangling).toBe(242)
+      // 242 stops and 11 the corrected column band exposed (the career-technology
+      // print's content-standard edge sits at x≈59, which the reader had dropped)
+      expect(trail.applied.records).toBe(253)
+      expect(trail.applied.repeats + trail.applied.dangling).toBe(253)
       expect(trail.history[0]).toMatchObject({ records: 242, lesson_slots: 980 })
+      expect(trail.history.at(-1)).toMatchObject({ records: 11, furniture_records: 27 })
 
       // a cut is only ever a deletion: what each record says now is a prefix of
       // what it said, and the print backed the reading before it was made
@@ -468,9 +471,9 @@ describe.each(ids)('%s', (grade) => {
 
       // and the lesson template, which is a copy of the database, was cleaned with
       // it — the generated books read the lesson file, not the database
-      expect(trail.applied.lesson_slots).toBe(980)
+      expect(trail.applied.lesson_slots).toBe(1137)
       expect(trail.applied.lesson_fields).toMatchObject({
-        ind_desc: 980, perf_indicator: 980, starter: 805, main: 805,
+        ind_desc: 1137, perf_indicator: 1137, starter: 962, main: 962,
       })
       const slots = readData('lessons/creative_arts_b2_lessons_enriched.json')
       const dangling = slots.filter((s) => /learners? (are|is) to:?\s*$/i.test(s.ind_desc || ''))
@@ -515,6 +518,25 @@ describe.each(ids)('%s', (grade) => {
       const first = trail.cut.find((e) => e.verified)
       const rows = readData(`curriculum/${first.file}`)
       expect(rows[first.code].ind_desc).toBe(first.after)
+
+      // …and the neighbouring column, which some extractions copied into the same
+      // field: every removed span is text the print sets beside the indicator, and
+      // what is left is either the print's own row or an indicator restored from it
+      expect(trail.furniture.filter((e) => e.verified)).toHaveLength(27)
+      for (const e of trail.furniture) {
+        if (!e.verified) continue
+        expect(e.removed.length, e.code).toBeGreaterThan(0)
+        for (const span of e.removed) expect(e.before.includes(span), `${e.code}: ${span}`).toBe(true)
+        expect(e.after.length).toBeLessThan(e.before.length)
+        expect(e.proof.every((p) => p.in_side_column), e.code).toBe(true)
+      }
+      const restored = trail.furniture.filter((e) => e.restored_from_print)
+      expect(restored.map((e) => e.code).sort()).toEqual(['B9.1.2.1.1', 'B9.2.4.1.1'])
+      const computingB9 = readData('curriculum/computing_B9_curriculum_db_clean.json')
+      expect(computingB9['B9.1.2.1.1'].ind_desc)
+        .toBe('Evaluate problems in the community that can be solved with technology')
+      expect(computingB9['B9.2.4.1.1'].ind_desc)
+        .toBe('Perform data filtering, sorting and validation')
     })
   })
 

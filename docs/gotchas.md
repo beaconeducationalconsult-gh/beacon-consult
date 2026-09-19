@@ -150,6 +150,17 @@ the artefact survives in the documents teachers actually print; the fixer theref
 carries the same substitution into all four fields (and matches slots by
 `ind_code`, so one indicator's text is never read into another's).
 
+The band is read off the page's own rules, and the rules' own guards can quietly
+throw the right ones away: the career-technology print draws its content-standard
+column edge at x≈59 and its indicator column at 215–577, but the reader's `60 <= x`
+floor dropped that first edge, found only two rules, and fell back to a fixed window
+wide enough to swallow the **core-competencies column** (x 582+) into the indicator
+text. That is why some career-technology `ind_desc` values read
+`… unsafe practices in school Communication and Collaboration (CC) 1. Discuss …`: not
+a bad extraction of the right column, but a bad *band* that included the wrong one.
+Check a band against the page's own text before blaming the extraction, and remember
+that the same band bug can look like a dozen different data defects.
+
 The trap in the other direction: a tail that *mentions* the indicator is not a
 repeat. History's rows carry the whole cell — enquiry route, then a dozen steps that
 naturally name the topic — and cutting at the first marker deletes the only copy of

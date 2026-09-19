@@ -304,7 +304,11 @@ def column_edges(pdf: str, page: int) -> tuple[float, float]:
     separates that column from the indicator column, and the third closes the
     indicator column.
     """
-    rules = [x for x in page_rules(pdf, page) if 60 <= x <= 760]
+    # the career-technology print draws its content-standard column edge at x≈59
+    # and its indicator column at 215-577: a floor of 60 threw that first rule away,
+    # left two rules, and fell back to a window wide enough to swallow the
+    # core-competencies column (582+) into the indicator text
+    rules = [x for x in page_rules(pdf, page) if 40 <= x <= 760]
     if len(rules) >= 3 and 100 <= rules[1] <= 300 and rules[2] - rules[1] >= 150:
         return rules[1] + 1, rules[2] - 1
     return WINDOW[pdf]

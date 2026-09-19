@@ -161,6 +161,20 @@ files**, `ind_desc` 980, `perf_indicator` 980, `starter` 805, `main` 805. A sour
 fix that stopped at the database would have left the artefact in the documents
 teachers print.
 
+**The neighbouring column was the other half of the same defect.** These prints set
+the competence labels (`Communication and Collaboration (CC)`) and their `CC 8.2: …`
+lines in a column *beside* the indicator, and some extractions copied those into
+`ind_desc` too. Rerunning the cleanup on 2026-09-18 (after the reader's band was
+corrected — see the gotcha) took them out of **27 records in 11 databases**: 25 lost
+just the competence text, and two (computing B9 `B9.1.2.1.1` and `B9.2.4.1.1`) turned
+out to hold *nothing but* that column, so their indicator was restored from the
+print's own row — `Evaluate problems in the community that can be solved with
+technology` and `Perform data filtering, sorting and validation`. Each removed span
+is verified twice: the print prints it in the side column, and the record's own row
+does not read it as part of the indicator. Four records were refused (creative-arts
+B7–B9 `…1.3.1.1` and mathematics B3 `B3.1.2.5.1`) because the reader cannot confirm
+which row the text belongs to; they are listed in the artefact as unbacked.
+
 What it deliberately did *not* touch:
 
 * **151 records whose tail is exemplar content the indicator does not repeat**
