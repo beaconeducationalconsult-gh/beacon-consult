@@ -48,7 +48,9 @@ every served subject comes from the audited copy (`source: 'curriculum'`).
 from `data/curriculum/`, which for curriculum data no longer happens. What lives
 there now: older extractions of subjects that have a better copy in L1 (english, and
 the french B7–B9 databases whose `cs_desc` repair lives there), and the drifted
-creative-arts B4–B6 / social-studies B7–B9 copies (TODO P1-6, P1-10).
+creative-arts B4–B6 / social-studies B7–B9 copies (TODO P1-10 for the one fabricated
+record among them; the rest is tracked in the inventory, not a defect of anything
+served).
 
 Any statement of the form "this project has N indicators" must name the layer.
 The defensible sentences are:
@@ -247,11 +249,10 @@ defects are left standing and reported rather than papered over: `K1.3.2.1`'s co
 is blank in the KG print (its five records stay empty), and `K2.5.1.1`'s five records held
 indicator-column text, which the print's own sentence replaced — the displaced values are kept in
 the trail. Reference copies of subjects audited elsewhere (creative-arts B4–B6, social-studies
-B7–B9) get the same keyword tag, read off the curriculum copy of the same name — their *records*
-are a stale extraction and remain out of scope (TODO P1-1).
-
-See TODO P1-1 for what is still outstanding (promoting the eight into `data/curriculum/` with
-their counts in Audit A's `EXPECTED` table).
+B7–B9) got the same keyword tag, read off the curriculum copy of the same name — their *records*
+are a stale extraction and the fixers still report rather than rewrite them. They are out of
+scope for every served number: `find_data` resolves to `data/curriculum/`, and the promotion
+(2026-09-18) means nothing served comes from `data/reference/` any more.
 
 ### Which subject-grades have been cross-checked
 
