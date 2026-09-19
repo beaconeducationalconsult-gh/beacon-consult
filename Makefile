@@ -1,4 +1,4 @@
-.PHONY: install inventory audit check check-scripts bundle-hash verify-deploy deploy-check dev build lint test preview deploy-rules books book-skeleton boot-check list-modules build-curriculum validate-curriculum generate-schemes generate-records package-books
+.PHONY: install inventory audit check check-scripts questions build-questions generate-questions bundle-hash verify-deploy deploy-check dev build lint test preview deploy-rules books book-skeleton boot-check list-modules build-curriculum validate-curriculum generate-schemes generate-records package-books
 
 # ── Frontend (React + Vite + Yarn 4) ────────────────────────────────────────
 # The portal lives at the repository root. Node 22+ and Yarn 4 are required:
@@ -32,7 +32,7 @@ test:
 # *error* means the portal would serve part of the dataset it cannot source.
 # The tests include contract checks over public/curriculum itself, so a bundle
 # that does not join up fails here rather than in a teacher's browser.
-check: lint test check-scripts validate-curriculum inventory bundle-hash
+check: questions lint test check-scripts validate-curriculum inventory bundle-hash
 	$(YARN) build
 
 # Cheap guard for the P2-3 contract: the build writes a bundleHash and the service
@@ -85,6 +85,17 @@ list-modules:
 # Run this after any change to data/curriculum/ or data/lessons/.
 build-curriculum:
 	PYTHONPATH=. python scripts/build_app_curriculum.py
+
+# The question bank (P1-5): validate data/questions/ and copy it into the bundle.
+# Report-only by default; `make build-questions` writes. See docs/curriculum-data.md.
+questions:
+	python3 scripts/build_question_bank.py
+
+build-questions:
+	python3 scripts/build_question_bank.py --apply
+
+generate-questions:
+	python3 scripts/generate_question_bank.py
 
 # The one-shot scripts under scripts/ are documentation as much as tools: a script
 # that cannot import its own compatibility shim documents nothing (P2-8).

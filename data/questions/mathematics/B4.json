@@ -1,19 +1,35 @@
-[
+{
+ "subjectId": "mathematics",
+ "grade": "B4",
+ "note": "Hand-written questions. The generator never writes this file; see scripts/build_question_bank.py for how authored and generated items are merged.",
+ "items": [
   {
-    "indicatorCode": "B4.1.1.1.1",
-    "questions": [
-      {
-        "prompt": "What is the place value of 5 in 5,432?",
-        "options": ["Ones", "Tens", "Hundreds", "Thousands"],
-        "answer": "Thousands",
-        "difficulty": "core"
-      },
-      {
-        "prompt": "Write five thousand four hundred and thirty two in figures.",
-        "options": null,
-        "answer": "5,432",
-        "difficulty": "reinforcement"
-      }
-    ]
+   "id": "B4.1.1.1.1-authored-1",
+   "indicatorCode": "B4.1.1.1.1",
+   "prompt": "What is the place value of 5 in 5,432?",
+   "type": "mcq",
+   "options": [
+    "Ones",
+    "Tens",
+    "Hundreds",
+    "Thousands"
+   ],
+   "answer": "Thousands",
+   "answerLetter": "D",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "authored"
+  },
+  {
+   "id": "B4.1.1.1.1-authored-2",
+   "indicatorCode": "B4.1.1.1.1",
+   "prompt": "Write five thousand four hundred and thirty two in figures.",
+   "type": "short",
+   "options": null,
+   "answer": "5,432",
+   "marks": 3,
+   "difficulty": "reinforcement",
+   "source": "authored"
   }
-]
+ ]
+}

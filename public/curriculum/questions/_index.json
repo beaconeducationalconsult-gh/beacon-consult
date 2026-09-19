@@ -1,0 +1,39 @@
+{
+ "built": true,
+ "generatedBy": "scripts/build_question_bank.py",
+ "subjects": {
+  "mathematics": {
+   "B2": {
+    "questions": 25,
+    "indicators": 29,
+    "coveredIndicators": 14
+   },
+   "B3": {
+    "questions": 30,
+    "indicators": 39,
+    "coveredIndicators": 18
+   },
+   "B4": {
+    "questions": 61,
+    "indicators": 71,
+    "coveredIndicators": 32
+   },
+   "B5": {
+    "questions": 67,
+    "indicators": 67,
+    "coveredIndicators": 36
+   },
+   "B6": {
+    "questions": 44,
+    "indicators": 42,
+    "coveredIndicators": 18
+   }
+  }
+ },
+ "totals": {
+  "questions": 227,
+  "indicatorsInPacks": 248,
+  "indicatorsCovered": 118,
+  "indicatorsServed": 4040
+ }
+}

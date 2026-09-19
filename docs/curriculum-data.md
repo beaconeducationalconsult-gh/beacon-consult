@@ -222,6 +222,48 @@ Built by `scripts/build_app_curriculum.py`; validated by
 | `<grade>_indicators.json` | flat indicators, full hierarchy, the only file the generator reads |
 | `schedules/<grade>-<subject>.json` | every scheduled lesson for one subject-grade: term/week/day + phases (~0.4–0.6 MB each) |
 | `<grade>_schemes.json` | scheme rows per subject per term |
+| `questions/_index.json` | what the question bank holds, per subject-grade, with coverage totals |
+| `questions/<subject>/<grade>.json` | the questions for one subject-grade (authored first, then generated) |
+
+### The question bank
+
+The bank is the one part of the bundle the app **writes into Firestore** rather than reads
+directly: `QuestionBank` shows the index, and importing a subject-grade copies its items into
+`questions/` documents so they can be edited, deleted, printed or used for slides like any
+hand-written question (`src/lib/starterBank.js`). Nothing is imported automatically.
+
+Two scripts, split so that generating data and validating it never happen in the same run:
+
+| Script | Does |
+|---|---|
+| `scripts/generate_question_bank.py` | writes `data/questions/<subject>/<grade>.generated.json` from **rules** — report by default, `--apply` writes |
+| `scripts/build_question_bank.py` | merges authored + generated, validates both against the served indicators, writes the bundle — report by default, `--apply` writes |
+
+* **Authored files are never touched by the generator**: `data/questions/<subject>/<grade>.json`
+  is hand-written (it holds the two original mathematics B4 questions, migrated to the current
+  shape), and an id shared with a generated item is a hard error rather than an overwrite.
+* **Every item carries its provenance** — `source: "authored"` or `"generated:<rule>"` — and the
+  generated copy keeps it into Firestore as `source`, with the item's own id as `starterBankId`.
+  A teacher can always see which questions a machine wrote and which rule produced them.
+* **A generated item is correct by construction.** Each rule states its numbers in the prompt and
+  the script computes the answer (`r_place_value`, `r_round`, `r_hcf`, `r_lcm`, …); the reviewer
+  checks the rule, not 227 items. Rules follow the indicator's own wording for the number range
+  ("up to 10,000") and only fire where the wording matches, so an indicator no rule matches gets
+  no questions rather than a padded one.
+* **Coverage is printed and indexed, not assumed**: today 227 questions, 118 of the 248 indicators
+  in the five subject-grades they cover (48%), against 4,040 indicators served overall. Only
+  `mathematics` B2–B6 is generated — the rules are arithmetic, and at B7–B9 the same words appear
+  in algebra and geometry indicators where an arithmetic item would be wrong.
+* The build fails on an orphan (`indicatorCode` not served for that subject in that grade), an MCQ
+  whose answer is not among its options, a repeated option, a missing prompt/answer/marks, or a
+  duplicate id. `scripts/validate_app_curriculum.py` re-checks the committed bank against the
+  served indicators, so `make check` fails if the two ever drift apart.
+
+```bash
+make generate-questions            # report: what the rules would write
+make build-questions               # report: merge + validate + coverage
+make questions                     # report: validate what is committed
+```
 
 ### The subjects that missed the extraction pass
 
@@ -315,8 +357,9 @@ Notes and known gaps:
   (`schedules/b9-mathematics.json`, ~0.5 MB) so no screen downloads a whole grade;
   `useGradeSchedules()` pulls every subject's file for the one screen that shows them
   all (the term calendar).
-* **There is no `questions/` directory** even though `MathModule` declares the
-  `questions` capability and requests `/curriculum/questions/math/<grade>.json`.
+* **The question bank is a fifth file family** — `questions/_index.json` plus
+  `questions/<subject>/<grade>.json` (P1-5, 2026-09-19). See *The question bank* under
+  *L3 — bundle*.
 * The bundle's `extra` field is empty for every indicator in every grade, so
   subject-specific callouts render as `n/a`.
 

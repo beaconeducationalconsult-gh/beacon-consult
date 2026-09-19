@@ -245,8 +245,7 @@
    "ScienceModule.ts does not declare 'record_of_work' although L2 has 1620 lesson slots",
    "ScienceModule.ts validate() returns [] unconditionally — legacy boot cannot catch bad ids",
    "SocialStudiesModule.ts does not declare 'record_of_work' although L2 has 540 lesson slots",
-   "SocialStudiesModule.ts validate() returns [] unconditionally — legacy boot cannot catch bad ids",
-   "public/curriculum/questions/ does not exist, yet the legacy math module declares the 'questions' capability"
+   "SocialStudiesModule.ts validate() returns [] unconditionally — legacy boot cannot catch bad ids"
   ],
   "warnings": [
    "legacy app (legacy/kernel-app) is out of step with the dataset in 34 places — it is retired reference code, so this does not fail the audit; see checks.legacy in data/inventory.json"
@@ -2690,10 +2689,16 @@
   },
   "l3": {
    "grades": 11,
-   "hasQuestions": false,
+   "hasQuestions": true,
    "indicators": 4040,
    "label": "bundle",
    "megabytes": 39.6,
+   "questions": {
+    "indicatorsCovered": 118,
+    "indicatorsInPacks": 248,
+    "questions": 227,
+    "subjectGrades": 5
+   },
    "subjectGrades": 84,
    "subjects": 14
   },
