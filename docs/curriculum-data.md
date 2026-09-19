@@ -297,15 +297,24 @@ Two scripts, split so that generating data and validating it never happen in the
   number range ("up to 10,000", "four-digit numbers", "more than 1,000,000,000") and only fire
   where the wording matches, so an indicator no rule matches gets no questions rather than a
   padded one.
+* **The relations and algebra gap is the interesting one.** The exam builder's coverage line names
+  what a term schedules and nothing in the bank asks about, and for B7 mathematics that line read
+  57% — the gaps were *Patterns and Relations*, *Algebraic Expressions* and *Shape and Space*. Five
+  JHS rules now answer them (`jhs-sequences`, `jhs-table-of-values`, `jhs-algebra-simplify`,
+  `jhs-algebra-expand`, `jhs-gradient`), which lifted B7's term-1 coverage to 70% — and each one is
+  scoped to its own lesson: a sequence question does not answer "locate points on the number plane"
+  (that is `jhs-table-of-values`), and collecting like terms does not answer "remove brackets"
+  (that is `jhs-algebra-expand`). Both splits exist because the first draft got them wrong.
 * **Two grade bands, because the vocabulary is shared and the answers are not.** The primary rules
   (B2–B6) are arithmetic over primary wording; the JHS rules (B7–B9) were written for JHS wording,
   where "multiply" usually means binomials. Every rule declares its band, and a shared rule carries
   a `veto` for the wording that would make it misfire (rounding must not answer an indicator about
   decimal places). Where the syllabus wants a construction — bisect an angle, draw a net, plot a
   locus — there is deliberately no rule: that is classroom work, not a printed question.
-* **Coverage is printed and indexed, not assumed**: today 378 questions (2 authored, 376
-  generated), 186 of the 407 indicators in the eight subject-grades they cover (46%), against 4,040
-  indicators served overall — B7 102, B8 67, B9 72, the rest in B2–B6.
+* **Coverage is printed and indexed, not assumed**: today 412 questions (2 authored, 410
+  generated), 199 of the 407 indicators in the eight subject-grades they cover (49%), against 4,040
+  indicators served overall — B7 122 (48 indicators, 72% of its schedule), B8 77, B9 76, the rest
+  in B2–B6.
 * **Rules read the indicator, never the content standard.** `ind_desc` is the sentence a teacher
   teaches; `cs_desc` is the heading above it, and at JHS it shares nearly all of its vocabulary
   with indicators it does not describe — matching on it produced money questions on a

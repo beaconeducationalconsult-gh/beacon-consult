@@ -157,6 +157,90 @@ def short(prompt, answer, marks=2, difficulty="core"):
 # draw a net, plot a locus) there is no rule on purpose — that is classroom work,
 # not a printed question.
 
+def r_jhs_sequences(rng, ctx):
+    """Rule-and-pattern questions, built from the formula so the two agree."""
+    step = rng.choice([2, 3, 4, 5, 7, 10, 12])
+    start = rng.randint(1, 9)
+    terms = [step * n + start for n in range(1, 6)]
+    nth = rng.randint(7, 9)
+    listed = ", ".join(str(v) for v in terms)
+    return [
+        short(f"Write the next two terms of the sequence: {listed}.",
+              f"{step * 6 + start}, {step * 7 + start}", marks=2),
+        mcq(f"What is the rule for the sequence {listed}?",
+            f"Add {step} to the previous term",
+            [f"Add {step + 1} to the previous term", f"Multiply the previous term by {step}",
+             f"Subtract {step} from the previous term"]),
+        # The formula and the sequence are the same relation, so the answer is
+        # the formula's own value — not a guess about a pattern.
+        short(f"The nth term of a sequence is given by {step}n + {start}. "
+              f"Find the {nth}th term.", step * nth + start, marks=3),
+    ]
+
+
+def r_jhs_algebra_simplify(rng, ctx):
+    a, b, c, d = rng.randint(2, 9), rng.randint(2, 9), rng.randint(1, 9), rng.randint(1, 9)
+    x, y = rng.randint(2, 9), rng.randint(1, 9)
+    p, q = rng.randint(1, 9), rng.randint(1, 9)
+    return [
+        short(f"Simplify: {a}x + {b}y + {c}x - {d}y",
+              linear([(a + c, "x"), (b - d, "y")]), marks=2),
+        short(f"Simplify: ({a}x + {x}) + ({c}x + {q})",
+              linear([(a + c, "x")], x + q), marks=2),
+        short(f"Subtract ({c}x + {q}) from ({a}x + {p}).",
+              linear([(a - c, "x")], p - q), marks=2),
+    ]
+
+
+def r_jhs_algebra_expand(rng, ctx):
+    """The distributive property, on its own: expanding brackets is a different
+    lesson from collecting like terms, and an indicator that names one should not
+    be answered with the other."""
+    b, d = rng.randint(2, 9), rng.randint(1, 9)
+    a, e = rng.randint(2, 5), rng.randint(1, 9)
+    return [
+        short(f"Expand: {b}(x + {d})", linear([(b, "x")], b * d), marks=2),
+        short(f"Expand and simplify: {a}(x + {e}) + {b}x", linear([(a + b, "x")], a * e), marks=3),
+        mcq(f"Expand: 3(x + {d})", f"3x + {3 * d}",
+            [f"3x + {d}", f"x + {3 * d}", f"{3 * d}x"]),
+    ]
+
+
+def r_jhs_gradient(rng, ctx):
+    a, b = rng.randint(1, 6), rng.randint(1, 9)
+    x1 = rng.randint(1, 5)
+    x2 = x1 + rng.randint(1, 4)
+    y1 = a * x1 + b
+    y2 = a * x2 + b
+    return [
+        short(f"Find the gradient of the line joining the points ({x1}, {y1}) and ({x2}, {y2}).",
+              a, marks=2),
+        short(f"A straight line passes through ({x1}, {y1}) and ({x2}, {y2}). "
+              f"Find the equation of the line in the form y = mx + c.",
+              f"y = {a}x + {b}" if a != 1 else f"y = x + {b}", marks=3),
+        short(f"A straight line passes through ({x1}, {y1}) and has gradient {a}. "
+              f"Find the value of y when x = {x2}.",
+              a * x2 + b, marks=2),
+    ]
+
+
+def r_jhs_table_of_values(rng, ctx):
+    """Ordered pairs and tables of values — the *graphing* half of the relations
+    sub-strand, which a sequence question does not answer."""
+    a, b = rng.randint(2, 5), rng.randint(1, 9)
+    x0 = rng.randint(0, 4)
+    y0 = a * x0 + b
+    ask = x0 + rng.randint(2, 4)
+    return [
+        mcq(f"The relation between x and y is y = {a}x + {b}. "
+            f"Which of these ordered pairs lies on its graph?",
+            f"({x0}, {y0})",
+            [f"({x0}, {y0 + 1})", f"({y0}, {x0})", f"({x0 + 1}, {y0 + 1})"]),
+        short(f"A table of values for the relation y = {a}x + {b} gives y = {y0} when x = {x0}. "
+              f"Find the value of y when x = {ask}.", a * ask + b, marks=2),
+    ]
+
+
 def r_jhs_significant_figures(rng, ctx):
     value = Decimal(rng.choice(["0.0473821", "27.3941", "4.73821", "381.946", "0.0051483"]))
     figures = rng.choice([2, 3, 4])
@@ -722,6 +806,16 @@ RULES = [
     # script computes. Where the syllabus asks for a construction — bisect an
     # angle, draw a net, plot a locus — there is deliberately no rule: that is
     # classroom work, not a printed question.
+    # The relations sub-strand splits in two, and the split matters: extending a
+    # pattern is not the same lesson as plotting it, and a sequence question on a
+    # "locate points on the number plane" indicator is the wrong question.
+    ("jhs-sequences", r"extend a given relation|rule for a given relation|relation or rule in a pattern|predict subsequent elements", r_jhs_sequences, "jhs"),
+    ("jhs-table-of-values", r"table of values|number plane|ordered pairs|linear relations?|graph of a linear", r_jhs_table_of_values, "jhs"),
+    # The veto keeps a like-term question off "multiplication and division of
+    # algebraic expressions" — that indicator is a different lesson.
+    ("jhs-algebra-expand", r"remove brackets|distributive property|\bexpand\b", r_jhs_algebra_expand, "jhs"),
+    ("jhs-algebra-simplify", r"algebraic expressions|collect like terms", r_jhs_algebra_simplify, "jhs", r"multiplication and division of algebraic|multiply and divide algebraic|remove brackets|distributive property|substitute values"),
+    ("jhs-gradient", r"gradient of a line|equation of a line", r_jhs_gradient, "jhs"),
     ("jhs-significant-figures", r"significant (?:figures|places)|decimal places", r_jhs_significant_figures, "jhs"),
     ("jhs-index-form", r"index form|powers? of (?:numbers|natural numbers)|zero as its exponent|repeated factors", r_jhs_index_form, "jhs"),
     ("jhs-laws-of-indices", r"laws of indices", r_jhs_laws_of_indices, "jhs"),
@@ -790,6 +884,37 @@ def frac(value) -> str:
     """`Fraction` as a printed fraction: 3/4, or 2 when it is whole."""
     f = Fraction(value)
     return str(f.numerator) if f.denominator == 1 else f"{f.numerator}/{f.denominator}"
+
+
+def linear(pairs, const: int = 0) -> str:
+    """`[(3, "x"), (-2, "y")], 5` -> "3x - 2y + 5".
+
+    Negative and unit coefficients are formatted the way a teacher writes them,
+    because the answer string is what a marking scheme prints.
+    """
+    parts = []
+    for coef, letter in pairs:
+        if coef == 0:
+            continue
+        if coef == 1:
+            parts.append(letter)
+        elif coef == -1:
+            parts.append(f"-{letter}")
+        else:
+            parts.append(f"{coef}{letter}")
+    out = ""
+    for part in parts:
+        if not out:
+            out = part
+        elif part.startswith("-"):
+            out += f" - {part[1:]}"
+        else:
+            out += f" + {part}"
+    if const:
+        if not out:
+            return str(const)
+        return f"{out} + {const}" if const > 0 else f"{out} - {-const}"
+    return out or "0"
 
 
 def power(base: int, exponent: int) -> str:

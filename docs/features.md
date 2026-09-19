@@ -94,6 +94,15 @@ through `src/lib/examPaper.js`, whose two rules are the page's whole behaviour:
 - **coverage before depth** — while filling, every indicator's first question goes in before any
   indicator's second, so a class paper does not test one sub-strand six times.
 
+**It is scoped to a term.** *Which work does it cover?* restricts the pool to the indicators the
+chosen term actually schedules — read from `public/curriculum/schedules/<grade>-<subject>.json`,
+because that is the only thing in the repo that knows what term 2 teaches (a term-2 paper built
+from the whole grade tests the third term in the second). Under the picker it prints the honest
+half: *"Term 2 schedules 56 indicators — the pool asks about 41 (73%). 15 indicators have no
+question in the pool: 5 in Patterns and Relations, 4 in Data and Probability …"*, so a teacher can
+see which work their paper will not test before they print it. A subject-grade with no schedule
+(KG, or an unscheduled subject) says so and covers the whole year.
+
 The composition is pure, which is what makes the preview honest: `targetMarks` is a target, the
 paper stops before overshooting, the shortfall is printed ("4 marks short — no single question
 fitted the gap"), and a section whose cheapest question no longer fits the paper is **named and
@@ -103,7 +112,7 @@ with the marking scheme, with the teacher copy offered to **My library**
 (`<SaveToLibrary kind="question_paper">`). Nothing is written to Firestore — the paper is the
 PDF, not a document.
 
-**Starter bank (P1-5).** The bundle ships 378 practice questions for mathematics B2–B9 —
+**Starter bank (P1-5).** The bundle ships 412 practice questions for mathematics B2–B9 —
 including a JHS bank for the BECE years — see *The question bank* in
 [curriculum-data.md](curriculum-data.md). The bank page has
 a **Starter bank** panel: choose a subject-grade, see the count and the indicator coverage, then

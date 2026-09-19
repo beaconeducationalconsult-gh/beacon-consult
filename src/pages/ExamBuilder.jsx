@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import { useToast } from '../context/ToastContext'
-import { useCurriculum } from '../hooks/useCurriculum'
+import { useCurriculum, useSchedules } from '../hooks/useCurriculum'
 import { usePagedCollection } from '../hooks/useCollection'
 import LoadMore from '../components/LoadMore'
 import SubjectSelect from '../components/SubjectSelect'
@@ -10,7 +10,7 @@ import EmptyState from '../components/EmptyState'
 import SaveToLibrary from '../components/SaveToLibrary'
 import { GRADES, TERMS, gradeLabel } from '../lib/grades'
 import { buildQuestionPaper, downloadQuestionPaper } from '../lib/questionPaper'
-import { buildPool, composePaper, summarise } from '../lib/examPaper'
+import { buildPool, composePaper, coverageOf, filterByIndicators, groupMissing, summarise, termScope } from '../lib/examPaper'
 import { loadStarterPack } from '../lib/starterBank'
 import { suggestFilename } from '../lib/generatedDocs'
 
@@ -37,6 +37,10 @@ export default function ExamBuilder() {
   const [grade, setGrade] = useState('B7')
   const [subjectId, setSubjectId] = useState('')
   const [term, setTerm] = useState(1)
+  // 'all' | 1 | 2 | 3 — which term's work the paper covers. A paper for term 2
+  // built from the whole grade tests the third term in the second, so the
+  // schedule decides what is in scope (see `termScope` in src/lib/examPaper.js).
+  const [scope, setScope] = useState('all')
   const [targetMarks, setTargetMarks] = useState(50)
   const [duration, setDuration] = useState(120)
   const [school, setSchool] = useState('')
@@ -49,6 +53,7 @@ export default function ExamBuilder() {
   const [paper, setPaper] = useState(null)
 
   const { subjects, loading: loadingSubjects, error: subjectsError } = useCurriculum(grade)
+  const { lessons, loading: loadingSchedule } = useSchedules(grade, subjectId)
   // The member's own questions, newest first, filtered to this paper below. The
   // filters are client-side on purpose: two equality filters on Firestore would
   // need another composite index, and a teacher building a paper can page for
@@ -84,11 +89,31 @@ export default function ExamBuilder() {
 
   const subjectName = subjects.find((s) => s.id === subjectId)?.name || subjectId
 
+  /** What this term schedules — empty until the schedule loads, and for
+   *  subject-grades that have none (KG, unscheduled subjects). */
+  const scopeCodes = useMemo(() => termScope(lessons, scope), [lessons, scope])
+
   const pool = useMemo(
-    () => buildPool(mine, starter || []).filter((q) => !dropped.includes(q.id)),
-    [mine, starter, dropped]
+    () =>
+      filterByIndicators(buildPool(mine, starter || []), scopeCodes).filter(
+        (q) => !dropped.includes(q.id)
+      ),
+    [mine, starter, dropped, scopeCodes]
   )
   const summary = useMemo(() => summarise(pool), [pool])
+
+  /**
+   * Which of the term's indicators the pool can actually ask about, and which
+   * it cannot — the honest half of the coverage line. A teacher setting an
+   * end-of-term paper wants the missing sub-strands named, not a percentage.
+   */
+  const coverage = useMemo(() => coverageOf(pool, scopeCodes), [pool, scopeCodes])
+
+  /** What the gaps are, grouped by sub-strand, for the line under the count. */
+  const missingGroups = useMemo(
+    () => groupMissing(lessons, coverage.missing),
+    [lessons, coverage.missing]
+  )
 
   const build = () => {
     if (!subjectId) return toast.error('Choose a subject first.')
@@ -169,14 +194,32 @@ export default function ExamBuilder() {
             />
           </div>
           <div>
-            <label className="label-caps" htmlFor="exam-term">Term</label>
+            <label className="label-caps" htmlFor="exam-term">Term on the paper</label>
             <select id="exam-term" className="input" value={term} onChange={(e) => setTerm(e.target.value)}>
               {TERMS.map((t) => <option key={t} value={t}>Term {t}</option>)}
             </select>
           </div>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div>
+            <label className="label-caps" htmlFor="exam-scope">Which work does it cover?</label>
+            <select
+              id="exam-scope"
+              className="input"
+              value={scope}
+              onChange={(e) => { setScope(e.target.value); setPaper(null); setDropped([]) }}
+              disabled={!subjectId || (!loadingSchedule && !lessons.length)}
+            >
+              <option value="all">The whole year</option>
+              {TERMS.map((t) => <option key={t} value={t}>Term {t}&rsquo;s scheduled work</option>)}
+            </select>
+            {subjectId && !loadingSchedule && !lessons.length && (
+              <p className="card-meta mt-1">
+                This subject-grade has no term schedule, so the paper covers the whole year.
+              </p>
+            )}
+          </div>
           <div>
             <label className="label-caps" htmlFor="exam-marks">Target total marks</label>
             <input
@@ -228,7 +271,29 @@ export default function ExamBuilder() {
               {starterState === 'loading' && ' · loading the served bank…'}
               {starterState === 'ready' && ` · ${starter.length} from the served bank`}
               {starterState === 'none' && ' · the served bank has none for this subject-grade'}
-              {mine.length + (starter?.length || 0) > 0 && ` — ${summarise(buildPool(mine, starter || [])).marks} marks to choose from`}
+              {mine.length + (starter?.length || 0) > 0 && ` — ${summarise(pool).marks} marks in scope`}
+            </p>
+          )}
+          {subjectId && coverage.total > 0 && (
+            <p className="card-meta">
+              {scope === 'all'
+                ? 'The year schedules'
+                : `Term ${scope} schedules`}{' '}
+              <span className="font-semibold">{coverage.total}</span> indicator(s) for{' '}
+              {gradeLabel(grade)} {subjectName} — the pool asks about{' '}
+              <span className="font-semibold">{coverage.covered}</span> ({coverage.percent}%)
+              {coverage.missing.length > 0 && (
+                <>
+                  . <span className="font-semibold">{coverage.missing.length}</span> indicator(s) have no
+                  question in the pool:{' '}
+                  {missingGroups
+                    .slice(0, 3)
+                    .map((group) => `${group.count} in ${group.name}`)
+                    .join(', ')}
+                  {missingGroups.length > 3 && ` and ${missingGroups.length - 3} more area(s)`}
+                  {' '}— write a question for them, or the paper will not test that work.
+                </>
+              )}
             </p>
           )}
         </div>

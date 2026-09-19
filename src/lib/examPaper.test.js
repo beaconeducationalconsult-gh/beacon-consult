@@ -1,5 +1,16 @@
 import { describe, expect, it } from 'vitest'
-import { SECTION_PLAN, buildPool, composePaper, sectionForType, summarise } from './examPaper'
+import {
+  SECTION_PLAN,
+  buildPool,
+  composePaper,
+  coverageOf,
+  groupMissing,
+  filterByIndicators,
+  indicatorOf,
+  sectionForType,
+  summarise,
+  termScope,
+} from './examPaper'
 
 /*
  * The composition rules, without a browser. `questionPaper.js` prints; this
@@ -128,6 +139,81 @@ describe('sectionForType', () => {
     expect(sectionForType('mcq', SECTION_PLAN).id).toBe('A')
     expect(sectionForType('essay', SECTION_PLAN).id).toBe('C')
     expect(sectionForType('matching', SECTION_PLAN)).toBe(null)
+  })
+})
+
+describe('the term scope — a paper for the term, not the year', () => {
+  // The schedule is the curriculum map's own answer to "what is taught in term 2".
+  const LESSONS = [
+    { term: 1, indicatorCode: 'B7.1.1.1.1', subStrandName: 'Number and Numeration Systems' },
+    { term: 1, indicatorCode: 'B7.1.1.1.1', subStrandName: 'Number and Numeration Systems' },
+    { term: 2, indicatorCode: 'B7.1.2.1.1', subStrandName: 'Number Operations' },
+    { term: 2, indicatorCode: 'B7.2.1.1.1', subStrandName: 'Patterns and Relations' },
+    { term: 3, indicatorCode: 'B7.4.1.1.1', subStrandName: 'Data and Probability' },
+  ]
+
+  it('collects the distinct indicators a term schedules', () => {
+    expect([...termScope(LESSONS, 1)]).toEqual(['B7.1.1.1.1'])
+    expect([...termScope(LESSONS, 2)].sort()).toEqual(['B7.1.2.1.1', 'B7.2.1.1.1'])
+    expect(termScope(LESSONS, 3).size).toBe(1)
+  })
+
+  it("takes the whole year for 'all', and tolerates an empty schedule", () => {
+    expect(termScope(LESSONS, 'all').size).toBe(4)
+    expect(termScope([], 2).size).toBe(0)
+    expect(termScope(undefined, 'all').size).toBe(0)
+  })
+
+  it('restricts a pool to the scope, reading both question shapes', () => {
+    const pool = [
+      { id: 'a', indicatorCode: 'B7.1.1.1.1' },
+      // Firestore questions carry an array (`QuestionForm`/`starterToFirestore`).
+      { id: 'b', indicatorCodes: ['B7.1.2.1.1'] },
+      { id: 'c', indicatorCodes: ['B7.4.1.1.1'] },
+      { id: 'd' },
+    ]
+    expect(filterByIndicators(pool, termScope(LESSONS, 2)).map((x) => x.id)).toEqual(['b'])
+    expect(filterByIndicators(pool, termScope(LESSONS, 1)).map((x) => x.id)).toEqual(['a'])
+    // An empty scope means "no restriction", not "nothing" — a subject-grade
+    // with no schedule must not produce an empty paper.
+    expect(filterByIndicators(pool, new Set()).map((x) => x.id)).toEqual(['a', 'b', 'c', 'd'])
+  })
+
+  it('reports which scheduled indicators nothing in the pool asks about', () => {
+    const pool = [{ id: 'b', indicatorCodes: ['B7.1.2.1.1'] }]
+    const cover = coverageOf(pool, termScope(LESSONS, 2))
+    expect(cover.total).toBe(2)
+    expect(cover.covered).toBe(1)
+    expect(cover.percent).toBe(50)
+    expect(cover.missing).toEqual(['B7.2.1.1.1'])
+  })
+
+  it('groups the gaps by sub-strand, counting each indicator once', () => {
+    // The same code appears on five lessons (one a week); counting lessons
+    // would report a gap five times its size.
+    const weekly = Array.from({ length: 5 }, () => ({
+      term: 2,
+      indicatorCode: 'B7.2.1.1.1',
+      subStrandName: 'Patterns and Relations',
+    }))
+    const groups = groupMissing([...LESSONS, ...weekly], ['B7.2.1.1.1', 'B7.9.9.9.9'])
+    expect(groups).toContainEqual({ name: 'Patterns and Relations', count: 1 })
+    // A missing code the schedule never mentions is still reported, by name.
+    expect(groups).toContainEqual({ name: 'codes the schedule does not name', count: 1 })
+  })
+
+  it('says zero rather than NaN when there is no scope at all', () => {
+    expect(coverageOf([], new Set())).toMatchObject({ total: 0, covered: 0, percent: 0, missing: [] })
+  })
+})
+
+describe('indicatorOf', () => {
+  it('reads the served bank string and the Firestore array alike', () => {
+    expect(indicatorOf({ indicatorCode: 'B4.1.1.1.1' })).toBe('B4.1.1.1.1')
+    expect(indicatorOf({ indicatorCodes: ['B4.1.1.1.2', 'B4.1.1.1.3'] })).toBe('B4.1.1.1.2')
+    expect(indicatorOf({ indicatorCode: 'x', indicatorCodes: ['y'] })).toBe('x')
+    expect(indicatorOf({})).toBe(null)
+    expect(indicatorOf(undefined)).toBe(null)
   })
 })
 

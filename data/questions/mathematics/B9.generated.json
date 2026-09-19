@@ -424,6 +424,34 @@
    "source": "generated:jhs-rate-speed"
   },
   {
+   "id": "B9.2.1.1.1-jhs-table-of-values-1",
+   "indicatorCode": "B9.2.1.1.1",
+   "prompt": "The relation between x and y is y = 3x + 3. Which of these ordered pairs lies on its graph?",
+   "type": "mcq",
+   "options": [
+    "(4, 15)",
+    "(5, 16)",
+    "(15, 4)",
+    "(4, 16)"
+   ],
+   "answer": "(4, 15)",
+   "answerLetter": "A",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:jhs-table-of-values"
+  },
+  {
+   "id": "B9.2.1.1.1-jhs-table-of-values-2",
+   "indicatorCode": "B9.2.1.1.1",
+   "prompt": "A table of values for the relation y = 3x + 3 gives y = 15 when x = 4. Find the value of y when x = 8.",
+   "type": "short",
+   "options": null,
+   "answer": "27",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:jhs-table-of-values"
+  },
+  {
    "id": "B9.2.1.1.2-jhs-substitution-1",
    "indicatorCode": "B9.2.1.1.2",
    "prompt": "Evaluate 3a + 2b when a = 6 and b = 3.",
@@ -444,6 +472,34 @@
    "marks": 2,
    "difficulty": "core",
    "source": "generated:jhs-substitution"
+  },
+  {
+   "id": "B9.2.1.1.3-jhs-table-of-values-1",
+   "indicatorCode": "B9.2.1.1.3",
+   "prompt": "The relation between x and y is y = 4x + 5. Which of these ordered pairs lies on its graph?",
+   "type": "mcq",
+   "options": [
+    "(4, 18)",
+    "(3, 17)",
+    "(17, 3)",
+    "(3, 18)"
+   ],
+   "answer": "(3, 17)",
+   "answerLetter": "B",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:jhs-table-of-values"
+  },
+  {
+   "id": "B9.2.1.1.3-jhs-table-of-values-2",
+   "indicatorCode": "B9.2.1.1.3",
+   "prompt": "A table of values for the relation y = 4x + 5 gives y = 17 when x = 3. Find the value of y when x = 7.",
+   "type": "short",
+   "options": null,
+   "answer": "33",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:jhs-table-of-values"
   },
   {
    "id": "B9.2.3.2.1-jhs-inequalities-1",

@@ -574,6 +574,45 @@
    "source": "generated:jhs-inequalities"
   },
   {
+   "id": "B8.2.12.1.1-jhs-algebra-expand-1",
+   "indicatorCode": "B8.2.12.1.1",
+   "prompt": "Expand: 7(x + 8)",
+   "type": "short",
+   "options": null,
+   "answer": "7x + 56",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:jhs-algebra-expand"
+  },
+  {
+   "id": "B8.2.12.1.1-jhs-algebra-expand-2",
+   "indicatorCode": "B8.2.12.1.1",
+   "prompt": "Expand and simplify: 2(x + 2) + 7x",
+   "type": "short",
+   "options": null,
+   "answer": "9x + 4",
+   "marks": 3,
+   "difficulty": "core",
+   "source": "generated:jhs-algebra-expand"
+  },
+  {
+   "id": "B8.2.12.1.1-jhs-algebra-expand-3",
+   "indicatorCode": "B8.2.12.1.1",
+   "prompt": "Expand: 3(x + 8)",
+   "type": "mcq",
+   "options": [
+    "x + 24",
+    "3x + 8",
+    "24x",
+    "3x + 24"
+   ],
+   "answer": "3x + 24",
+   "answerLetter": "D",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:jhs-algebra-expand"
+  },
+  {
    "id": "B8.2.12.1.3-jhs-substitution-1",
    "indicatorCode": "B8.2.12.1.3",
    "prompt": "Evaluate 2a + 4b when a = 3 and b = 2.",
@@ -812,6 +851,95 @@
    "marks": 2,
    "difficulty": "core",
    "source": "generated:percentage"
+  },
+  {
+   "id": "B8.2.1.1.2-jhs-gradient-1",
+   "indicatorCode": "B8.2.1.1.2",
+   "prompt": "Find the gradient of the line joining the points (2, 7) and (6, 19).",
+   "type": "short",
+   "options": null,
+   "answer": "3",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:jhs-gradient"
+  },
+  {
+   "id": "B8.2.1.1.2-jhs-gradient-2",
+   "indicatorCode": "B8.2.1.1.2",
+   "prompt": "A straight line passes through (2, 7) and (6, 19). Find the equation of the line in the form y = mx + c.",
+   "type": "short",
+   "options": null,
+   "answer": "y = 3x + 1",
+   "marks": 3,
+   "difficulty": "core",
+   "source": "generated:jhs-gradient"
+  },
+  {
+   "id": "B8.2.1.1.2-jhs-gradient-3",
+   "indicatorCode": "B8.2.1.1.2",
+   "prompt": "A straight line passes through (2, 7) and has gradient 3. Find the value of y when x = 6.",
+   "type": "short",
+   "options": null,
+   "answer": "19",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:jhs-gradient"
+  },
+  {
+   "id": "B8.2.1.1.3-jhs-table-of-values-1",
+   "indicatorCode": "B8.2.1.1.3",
+   "prompt": "The relation between x and y is y = 3x + 3. Which of these ordered pairs lies on its graph?",
+   "type": "mcq",
+   "options": [
+    "(0, 3)",
+    "(0, 4)",
+    "(3, 0)",
+    "(1, 4)"
+   ],
+   "answer": "(0, 3)",
+   "answerLetter": "A",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:jhs-table-of-values"
+  },
+  {
+   "id": "B8.2.1.1.3-jhs-table-of-values-2",
+   "indicatorCode": "B8.2.1.1.3",
+   "prompt": "A table of values for the relation y = 3x + 3 gives y = 3 when x = 0. Find the value of y when x = 3.",
+   "type": "short",
+   "options": null,
+   "answer": "12",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:jhs-table-of-values"
+  },
+  {
+   "id": "B8.2.1.1.4-jhs-table-of-values-1",
+   "indicatorCode": "B8.2.1.1.4",
+   "prompt": "The relation between x and y is y = 3x + 1. Which of these ordered pairs lies on its graph?",
+   "type": "mcq",
+   "options": [
+    "(4, 11)",
+    "(3, 11)",
+    "(10, 3)",
+    "(3, 10)"
+   ],
+   "answer": "(3, 10)",
+   "answerLetter": "D",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:jhs-table-of-values"
+  },
+  {
+   "id": "B8.2.1.1.4-jhs-table-of-values-2",
+   "indicatorCode": "B8.2.1.1.4",
+   "prompt": "A table of values for the relation y = 3x + 1 gives y = 10 when x = 3. Find the value of y when x = 7.",
+   "type": "short",
+   "options": null,
+   "answer": "22",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:jhs-table-of-values"
   }
  ]
 }

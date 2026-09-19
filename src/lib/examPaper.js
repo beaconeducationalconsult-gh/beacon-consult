@@ -47,6 +47,69 @@ export const SECTION_PLAN = [
 /** The type a question is treated as when it does not say. */
 const typeOf = (question) => question.type || 'short'
 
+/**
+ * The indicator a question hangs off.
+ *
+ * Two shapes live in the app: the served bank's items carry `indicatorCode`
+ * (a string), and everything written through `QuestionForm` /
+ * `starterToFirestore` carries `indicatorCodes` (an array, because a plan can
+ * cite several). A paper that read only one of them would silently treat half
+ * its pool as unassigned.
+ */
+export const indicatorOf = (question) =>
+  question?.indicatorCode || question?.indicatorCodes?.[0] || null
+
+/**
+ * The indicator codes a term actually schedules (or the whole year for
+ * 'all'), read from `public/curriculum/schedules/<grade>-<subject>.json`.
+ *
+ * This is the curriculum map doing the job only it can do: an end-of-term paper
+ * should ask about the term's work, and the schedule is the only thing in the
+ * repo that knows which indicators that is. It is deliberately the *scheduled*
+ * codes, not every indicator in the grade — a term-2 paper built from the whole
+ * grade would test the third term in the second.
+ */
+export function termScope(lessons = [], term = 'all') {
+  const codes = new Set()
+  for (const lesson of lessons) {
+    if (term !== 'all' && Number(lesson?.term) !== Number(term)) continue
+    const code = lesson?.indicatorCode || lesson?.code
+    if (code) codes.add(code)
+  }
+  return codes
+}
+
+/** The pool restricted to questions that hang off one of `codes`. */
+export function filterByIndicators(pool = [], codes) {
+  if (!codes || !codes.size) return pool
+  return pool.filter((question) => {
+    const code = indicatorOf(question)
+    return code ? codes.has(code) : false
+  })
+}
+
+/**
+ * How much of a scope the pool actually covers.
+ *
+ * `missing` is the honest half and the reason this exists: a teacher about to
+ * set an end-of-term paper wants to know *which* scheduled indicators nothing
+ * in the bank asks about, not just a percentage.
+ */
+export function coverageOf(pool = [], codes = new Set()) {
+  const covered = new Set()
+  for (const question of pool) {
+    const code = indicatorOf(question)
+    if (code && codes.has(code)) covered.add(code)
+  }
+  const missing = [...codes].filter((code) => !covered.has(code)).sort()
+  return {
+    total: codes.size,
+    covered: covered.size,
+    missing,
+    percent: codes.size ? Math.round((covered.size / codes.size) * 100) : 0,
+  }
+}
+
 const marksOf = (question) => Math.max(1, Number(question.marks) || 1)
 
 /** Which section a question belongs to, or null when the plan has no home for it. */
@@ -79,6 +142,35 @@ export function summarise(pool = [], plan = SECTION_PLAN) {
 }
 
 /**
+ * Group the uncovered indicators by the sub-strand they sit in, for the gap
+ * line under the coverage count.
+ *
+ * Naming the sub-strand alone would overstate the gap — a sub-strand can be
+ * half covered — so the count travels with the name ("3 in Shape and Space").
+ * Distinct codes only: a code appears on several lessons (one per week), and
+ * counting lessons would report a gap five times its size.
+ */
+export function groupMissing(lessons = [], missing = []) {
+  const wanted = new Set(missing)
+  const byStrand = new Map()
+  const seen = new Set()
+  for (const lesson of lessons) {
+    const code = lesson?.indicatorCode || lesson?.code
+    if (!code || !wanted.has(code) || seen.has(code)) continue
+    seen.add(code)
+    const name = lesson?.subStrandName || lesson?.strandName || 'unscheduled'
+    if (!byStrand.has(name)) byStrand.set(name, new Set())
+    byStrand.get(name).add(code)
+  }
+  const groups = [...byStrand.entries()]
+    .map(([name, codes]) => ({ name, count: codes.size }))
+    .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name))
+  const unnamed = missing.filter((code) => !seen.has(code))
+  if (unnamed.length) groups.push({ name: 'codes the schedule does not name', count: unnamed.length })
+  return groups
+}
+
+/**
  * Order candidates so coverage comes first: one question per indicator, in a
  * stable order, then the section's remaining depth. Deterministic by design —
  * indicator code, then question id — so the same pool always builds the same
@@ -87,12 +179,12 @@ export function summarise(pool = [], plan = SECTION_PLAN) {
 function spreadByIndicator(candidates) {
   const groups = new Map()
   for (const question of [...candidates].sort((a, b) => {
-    const codeA = String(a.indicatorCode || a.indicatorCodes?.[0] || '')
-    const codeB = String(b.indicatorCode || b.indicatorCodes?.[0] || '')
+    const codeA = String(indicatorOf(a) || '')
+    const codeB = String(indicatorOf(b) || '')
     if (codeA !== codeB) return codeA < codeB ? -1 : 1
     return String(a.id).localeCompare(String(b.id))
   })) {
-    const code = String(question.indicatorCode || question.indicatorCodes?.[0] || 'unassigned')
+    const code = String(indicatorOf(question) || 'unassigned')
     if (!groups.has(code)) groups.set(code, [])
     groups.get(code).push(question)
   }
@@ -178,9 +270,7 @@ export function composePaper(pool = [], { targetMarks = 50, plan = SECTION_PLAN 
     // Flat, in paper order — what the PDF exporter takes.
     questions: sections.flatMap((section) => section.questions),
     indicators: new Set(
-      sections.flatMap((section) =>
-        section.questions.map((q) => q.indicatorCode || q.indicatorCodes?.[0]).filter(Boolean)
-      )
+      sections.flatMap((section) => section.questions.map(indicatorOf).filter(Boolean))
     ).size,
   }
 }
