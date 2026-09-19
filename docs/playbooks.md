@@ -3,6 +3,31 @@
 Step-by-step recipes for the common changes. Each mirrors an existing feature — copy the
 nearest one and adapt.
 
+## Generating and publishing a subject's books
+
+The book skeletons are build outputs: a textbook and a workbook per subject-grade, one
+lesson per indicator, every unwritten section marked as an AUTHOR-TODO box rather than
+filled with invented prose.
+
+```bash
+pip install -r requirements.txt          # python-docx writes real .docx files
+make books-rollout                       # report: what exists, what is missing
+make books-generate                      # build everything missing (~90 s for all 84)
+make books-publish SUBJECT=mathematics GRADE=B1   # one zip to send a school
+```
+
+`books/` is gitignored and a re-run **never overwrites**: an existing document is left
+alone and the new one lands beside it as `-v2`. What the repository records is
+`data/books/manifest.json` — every served subject-grade, its structure counts
+(chapters · units · topics · lessons) and a content hash per document. `make check`
+fails if that manifest drifts from the served curriculum or from the generator's
+contract of one lesson per indicator.
+
+Roll out subject by subject: generate one, read it, and only then move on. The document
+is a draft skeleton, not a finished book — the AUTHOR-TODO boxes are the authoring work,
+and the pilot (mathematics B1) is the one to read first.
+
+
 ## Add a new portal page
 
 1. Create `src/pages/MyThing.jsx` (default export). Wrap in `mx-auto max-w-2xl`, use

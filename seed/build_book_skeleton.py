@@ -703,6 +703,18 @@ def build_workbook(subject_label: str, grade: str, chapters: list[Chapter], flav
 
 # ── entry point ─────────────────────────────────────────────────────────────
 
+def display(path: Path) -> str:
+    """The path as the reader should see it: repo-relative when it lives here.
+
+    `--out` can point anywhere (the rollout measures into a temporary
+    directory), and a bare `relative_to(ROOT)` raises for those.
+    """
+    try:
+        return str(path.relative_to(ROOT))
+    except ValueError:
+        return str(path)
+
+
 def unique_path(path: Path) -> Path:
     """Never overwrite: books/…-skeleton.docx → …-skeleton-v2.docx → -v3 …"""
     if not path.exists():
@@ -721,6 +733,11 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("subject", help="subject id or name, e.g. mathematics")
     parser.add_argument("grade", help="grade id, e.g. B1")
     parser.add_argument("--series", default="Beacon Curriculum Series", help="series title on the cover")
+    parser.add_argument(
+        "--out", default=None,
+        help="write under this directory instead of books/ (the rollout measures a "
+             "subject-grade into a temporary directory with it)",
+    )
     parser.add_argument("--textbook-only", action="store_true")
     parser.add_argument("--workbook-only", action="store_true")
     args = parser.parse_args(argv)
@@ -742,17 +759,17 @@ def main(argv: list[str] | None = None) -> int:
 
     flavour = FLAVOURS.get(subject, FLAVOURS["_default"])
     subject_label = subject.replace("-", " ").replace("_", " ").title()
-    out_dir = BOOKS / grade
+    out_dir = (Path(args.out).expanduser() if args.out else BOOKS) / grade
     out_dir.mkdir(parents=True, exist_ok=True)
 
     if not args.workbook_only:
         textbook = unique_path(out_dir / f"{subject}-textbook-skeleton.docx")
         build_textbook(subject_label, grade, chapters, flavour, args.series, textbook)
-        print(f"  textbook:   {textbook.relative_to(ROOT)}")
+        print(f"  textbook:   {display(textbook)}")
     if not args.textbook_only:
         workbook = unique_path(out_dir / f"{subject}-workbook-skeleton.docx")
         build_workbook(subject_label, grade, chapters, flavour, args.series, workbook)
-        print(f"  workbook:   {workbook.relative_to(ROOT)}")
+        print(f"  workbook:   {display(workbook)}")
 
     print("Done. Authors complete the AUTHOR-TODO boxes in Word; re-runs never overwrite.")
     return 0

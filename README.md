@@ -37,6 +37,7 @@ Other useful commands:
 | `make deploy-check URL=…` | Check a live deploy from the outside (Firebase config, curriculum hash, SPA rewrite) — see [verification.md](docs/verification.md) |
 | `make audit` (`make inventory`) | The data audit: regenerate `data/inventory.json`, list every dataset gap |
 | `make build-curriculum` | Rebuild `public/curriculum/` from `data/` after a dataset change |
+| `make books-rollout` / `make books-generate` | Report / build the book skeletons for every served subject-grade (needs `python-docx`); `make books-publish SUBJECT=… GRADE=…` zips one to send a school |
 
 Firestore rules and indexes deploy separately from the app:
 

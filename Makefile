@@ -1,4 +1,4 @@
-.PHONY: install inventory audit audit-l2 check check-scripts bundle-size bundle-check questions build-questions generate-questions bundle-hash verify-deploy deploy-check dev build lint test preview deploy-rules books book-skeleton boot-check list-modules build-curriculum validate-curriculum generate-schemes generate-records package-books
+.PHONY: install inventory audit audit-l2 check check-scripts bundle-size bundle-check books-rollout books-generate books-publish questions build-questions generate-questions bundle-hash verify-deploy deploy-check dev build lint test preview deploy-rules books book-skeleton boot-check list-modules build-curriculum validate-curriculum generate-schemes generate-records package-books
 
 # ── Frontend (React + Vite + Yarn 4) ────────────────────────────────────────
 # The portal lives at the repository root. Node 22+ and Yarn 4 are required:
@@ -151,3 +151,16 @@ SUBJECT ?= mathematics
 GRADE ?= B1
 book-skeleton:
 	python3 seed/build_book_skeleton.py $(SUBJECT) $(GRADE)
+
+# The rollout (P3-1): report what exists and what is missing across the served
+# subject-grades, build the missing ones, and keep data/books/manifest.json —
+# `books/` is gitignored, so the manifest is what the repository knows about it.
+# Needs python-docx (pip install -r requirements.txt).
+books-rollout:
+	python3 scripts/build_books_rollout.py
+
+books-generate:
+	python3 scripts/build_books_rollout.py --generate
+
+books-publish:
+	python3 scripts/build_books_rollout.py --subject $(SUBJECT) --grade $(GRADE) --publish
