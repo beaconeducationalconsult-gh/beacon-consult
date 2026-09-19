@@ -298,6 +298,20 @@ runs. This is the most common "it works locally / on my emulator but 403s in pro
 runs it. Note that rules pasted into the Firebase console are **not** version-controlled:
 the console and `firestore.rules` can silently disagree, and only the repo file is reviewed.
 
+## 🟠 A rule that matches on the wrong text answers the wrong question
+The question generator fires rules at an indicator by matching its wording, and that is a
+sharp edge worth remembering before writing the next generator: **match the indicator, never
+the content standard.** `cs_desc` is the heading above the indicator and at JHS it shares
+almost all of its vocabulary with indicators it does not describe — matching on both made the
+money rule fire on a data-collection indicator (the word "cost" inside "…taking into
+consideration…") and the rounding rule fire on four-digit addition. The same generator shipped
+a rule with the pattern `cedi`, which matches inside "pre**cedi**ng", and `\bmode\b` was
+missing from the central-tendency rule, so "**Mode**l number quantities…" was asked for a
+median. Two guards came out of it: every pattern that names a word gets `\b` boundaries, and
+`make check` runs `generate_question_bank.py --verify`, which fails if the committed questions
+differ from what the rules produce today — a rule that starts or stops firing cannot reach a
+teacher unnoticed.
+
 ## 🔴 `matches()` is a full-string match, so a prefix pattern denies everything
 In the rules language `'generated/alice/x.pdf'.matches('^generated/alice/')` is **false**:
 `matches()` anchors the pattern at both ends (RE2 full match), so the pattern has to describe

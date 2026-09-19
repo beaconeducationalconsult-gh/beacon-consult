@@ -124,6 +124,7 @@ bundle-check:
 # Report-only by default; `make build-questions` writes. See docs/curriculum-data.md.
 questions:
 	python3 scripts/build_question_bank.py
+	python3 scripts/generate_question_bank.py --verify
 
 build-questions:
 	python3 scripts/build_question_bank.py --apply

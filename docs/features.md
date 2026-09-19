@@ -83,8 +83,9 @@ Collection: `lesson_plans`. Exporters: `lib/lessonPlanPdf.js`, `lib/lessonPlanDo
 subject/strand/sub-strand; carries `weekKey` for the weekly quota.
 Collection: `questions`.
 
-**Starter bank (P1-5).** The bundle ships 227 practice questions for primary mathematics
-(B2–B6) — see *The question bank* in [curriculum-data.md](curriculum-data.md). The bank page has
+**Starter bank (P1-5).** The bundle ships 378 practice questions for mathematics B2–B9 —
+including a JHS bank for the BECE years — see *The question bank* in
+[curriculum-data.md](curriculum-data.md). The bank page has
 a **Starter bank** panel: choose a subject-grade, see the count and the indicator coverage, then
 import. Imported questions become ordinary `questions` documents (batched writes, `status:
 published`, `source` kept, `starterBankId` for provenance) and are editable, printable and

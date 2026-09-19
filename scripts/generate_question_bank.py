@@ -15,6 +15,14 @@ construction and a reviewer checks the rule, not 500 items:
     hcf / lcm       the two numbers are stated, the answer computed
     …
 
+The rules come in two bands. The primary rules (B2–B6) are arithmetic over
+primary wording. The JHS rules (B7–B9) were written because the primary ones
+must **not** fire there: at JHS the same words sit inside algebra and geometry
+indicators ("multiplication of binomial expressions"), where an arithmetic item
+is wrong for the indicator it hangs off. Every JHS rule matches JHS wording and
+computes its own answer; the shared primary rules carry a `veto` for wording
+that would make them misfire.
+
 Two rules matter more than the amount:
 
   * **Generated is labelled.** Each item carries `source: "generated:<rule>"`,
@@ -26,7 +34,13 @@ Two rules matter more than the amount:
 
     python3 scripts/generate_question_bank.py                    # report
     python3 scripts/generate_question_bank.py --apply            # write files
+    python3 scripts/generate_question_bank.py --verify           # committed files match
     python3 scripts/generate_question_bank.py --subject mathematics --apply
+
+`--verify` is the regression guard, and it is what `make check` runs: it
+regenerates every file in memory and fails if the committed one differs by a
+single character. A rule that starts (or stops) firing — the whole misfire class
+this script has been bitten by — cannot reach a teacher unnoticed.
 """
 from __future__ import annotations
 
@@ -35,6 +49,8 @@ import json
 import random
 import re
 import sys
+from decimal import Decimal
+from fractions import Fraction
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -46,18 +62,31 @@ OUT = ROOT / "data" / "questions"
 # rule would need a human author, so those subjects stay authored-only.
 GENERATED_SUBJECTS = ("mathematics",)
 
-# Primary only. The rules are arithmetic, and they match the primary syllabus'
-# wording ("add whole numbers", "find the perimeter …"). At B7-B9 the same words
-# appear in algebra and geometry indicators where an arithmetic item would be
-# wrong for the indicator it hangs off, so the JHS grades stay authored-only
-# until there are rules written for them.
-GENERATED_GRADES = ("B2", "B3", "B4", "B5", "B6")
+# Primary first, JHS second. The split is real, not cosmetic: see `bands` on the
+# rules below, and the JHS section at the foot of the rules.
+PRIMARY_GRADES = ("B2", "B3", "B4", "B5", "B6")
+JHS_GRADES = ("B7", "B8", "B9")
+GENERATED_GRADES = PRIMARY_GRADES + JHS_GRADES
 
 ITEMS_PER_INDICATOR = 3
 
 
 def indicator_text(record: dict) -> str:
-    return " ".join(str(record.get(k) or "") for k in ("ind_desc", "cs_desc")).lower()
+    """The text a rule is allowed to fire on: **the indicator alone**.
+
+    Not `cs_desc`. The content standard is the heading above the indicator
+    ("…addition, subtraction, multiplication and division of (i) whole numbers
+    within 10,000…"), and at JHS it shares almost all of its vocabulary with
+    indicators it does not describe. Matching on it made the money rule fire on
+    a data-collection indicator (the word "cost" inside "…taking into
+    consideration…") and the rounding rule fire on four-digit addition. A rule
+    that fires on the wrong question is worse than no question.
+
+    The `\b` boundaries on the rules exist for the same reason: "cedi" is inside
+    "preceding", and before the boundary a B7 relation indicator was asked what
+    five pens cost.
+    """
+    return str(record.get("ind_desc") or "").lower()
 
 
 def up_to(text: str, default: int) -> int:
@@ -74,7 +103,33 @@ def up_to(text: str, default: int) -> int:
 
 
 # Default ceilings per grade, used when the indicator states no range.
-GRADE_CEILING = {"B2": 1000, "B3": 10000, "B4": 10000, "B5": 100000, "B6": 1000000}
+GRADE_CEILING = {"B2": 1000, "B3": 10000, "B4": 10000, "B5": 100000, "B6": 1000000,
+                 # B7 counts past a billion ("more than 1,000,000,000"), and the
+                 # JHS number work is deliberately large-number arithmetic.
+                 "B7": 1_000_000_000, "B8": 1_000_000_000, "B9": 1_000_000_000}
+
+DIGIT_WORDS = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6,
+               "seven": 7, "eight": 8, "nine": 9}
+
+
+def ceiling_for(text: str, grade: str) -> int:
+    """The number range the indicator itself states — "up to 100,000",
+    "four-digit numbers", "more than 1,000,000,000" — else the grade's default.
+
+    Following the indicator matters: an item about a nine-digit number in an
+    indicator that tops out at four digits is off the lesson being taught, and
+    it is the first thing a teacher would notice.
+    """
+    stated = up_to(text, 0)
+    if stated:
+        return stated
+    match = re.search(r"\b(one|two|three|four|five|six|seven|eight|nine)-digit", text)
+    if match:
+        return 10 ** DIGIT_WORDS[match.group(1)] - 1
+    match = re.search(r"more than ([\d][\d,]*)", text)
+    if match:
+        return int(match.group(1).replace(",", "")) * 10 - 1
+    return GRADE_CEILING.get(grade, 10000)
 
 
 def num(n: int) -> str:
@@ -92,6 +147,296 @@ def mcq(prompt, answer, distractors, marks=1, difficulty="core"):
 def short(prompt, answer, marks=2, difficulty="core"):
     return {"type": "short", "prompt": prompt, "answer": str(answer),
             "options": None, "marks": marks, "difficulty": difficulty}
+
+
+# ──────────────────────────────────────────────────── JHS rules (B7–B9) ────
+# Written for JHS wording, and only where this script can compute the answer.
+# Nothing here is arithmetic borrowed from the primary band: at B7–B9 "multiply"
+# usually means binomials, and an item that answers the wrong question is worse
+# than no item at all. Where the syllabus wants a construction (bisect an angle,
+# draw a net, plot a locus) there is no rule on purpose — that is classroom work,
+# not a printed question.
+
+def r_jhs_significant_figures(rng, ctx):
+    value = Decimal(rng.choice(["0.0473821", "27.3941", "4.73821", "381.946", "0.0051483"]))
+    figures = rng.choice([2, 3, 4])
+    places = rng.choice([1, 2, 3])
+    return [
+        short(f"Express {value} correct to {figures} significant figures.",
+              round_sig(value, figures), marks=2),
+        short(f"Express {value} correct to {places} decimal place(s).",
+              f"{value:.{places}f}", marks=2),
+    ]
+
+
+def r_jhs_index_form(rng, ctx):
+    base = rng.choice([2, 3, 4, 5, 6, 7, 10])
+    exponent = rng.randint(2, 5)
+    value = base ** exponent
+    composite = rng.choice([360, 504, 540, 720, 900, 1080, 1260, 1800, 2250])
+    return [
+        mcq(f"Find the value of {power(base, exponent)}.", num(value),
+            [num(base * exponent), num(value + base), num(value - base)]),
+        mcq(f"What is the value of {power(base, 0)}?", "1", ["0", str(base), "10"]),
+        short(f"Write {num(composite)} as a product of its prime factors, in index form.",
+              prime_factorisation(composite), marks=3),
+    ]
+
+
+def r_jhs_laws_of_indices(rng, ctx):
+    base = rng.choice([2, 3, 4, 5, 10])
+    m, n = rng.randint(4, 7), rng.randint(2, 3)
+    product = power(base, m + n)
+    distractors = [power(base, m * n), power(base, abs(m - n)), f"{base * (m + n)}"]
+    return [
+        mcq(f"Simplify {power(base, m)} x {power(base, n)}, leaving your answer in index form.",
+            product, [d for d in distractors if d != product]),
+        short(f"Simplify {power(base, m + n)} \u00f7 {power(base, n)}, leaving your answer in index form.",
+              power(base, m), marks=2),
+        short(f"Simplify ({power(base, 2)})^{n}, leaving your answer in index form.",
+              power(base, 2 * n), marks=2),
+    ]
+
+
+def r_jhs_exponential_equations(rng, ctx):
+    base = rng.choice([2, 3, 5, 10])
+    exponent = rng.randint(2, 5)
+    return [
+        short(f"Solve for x: {power(base, 'x')} = {num(base ** exponent)}.", exponent, marks=2),
+    ]
+
+
+def r_jhs_squares_and_roots(rng, ctx):
+    n = rng.randint(11, 30)
+    square = n * n
+    return [
+        short(f"Find the square root of {num(square)}.", n, marks=2),
+        # Consecutive integers are never both perfect squares, so square +/- 1
+        # and square +/- 2 are safe distractors with no arithmetic needed.
+        mcq("Which of these numbers is a perfect square?", num(square),
+            [num(square + 1), num(square - 1), num(square + 2)]),
+    ]
+
+
+def r_jhs_sets(rng, ctx):
+    a, b = rng.choice([(12, 18), (16, 24), (20, 30), (15, 25), (18, 27), (24, 36), (28, 42)])
+    factors_a = {d for d in range(1, a + 1) if a % d == 0}
+    factors_b = {d for d in range(1, b + 1) if b % d == 0}
+    shared = sorted(factors_a & factors_b)
+    together = sorted(factors_a | factors_b)
+    return [
+        short(f"A is the set of factors of {a} and B is the set of factors of {b}. "
+              f"List the members of the intersection of A and B.",
+              ", ".join(str(v) for v in shared), marks=2),
+        mcq("How many members are in the union of the two sets?", len(together),
+            [len(shared), len(together) - 1, len(shared) + 1]),
+    ]
+
+
+def r_jhs_fraction_operations(rng, ctx):
+    denominators = [2, 3, 4, 5, 6, 8]
+    a = Fraction(rng.randint(1, 5), rng.choice(denominators))
+    b = Fraction(rng.randint(1, 5), rng.choice(denominators))
+    while b == a:
+        b = Fraction(rng.randint(1, 5), rng.choice(denominators))
+    whole, part = rng.randint(1, 3), Fraction(rng.randint(1, 5), rng.choice([2, 3, 4]))
+    mixed = whole + part
+    return [
+        short(f"Simplify: {frac(a)} + {frac(b)}", frac(a + b), marks=2),
+        short(f"Simplify: {frac(a)} x {frac(b)}", frac(a * b), marks=2),
+        short(f"Simplify: {frac(a)} \u00f7 {frac(b)}", frac(a / b), marks=2),
+        short(f"Simplify: {whole} {frac(part)} + {frac(b)}", frac(mixed + b), marks=3),
+    ]
+
+
+def r_jhs_ratio(rng, ctx):
+    a, b = rng.choice([(2, 3), (3, 4), (2, 5), (3, 5), (4, 5), (5, 6), (3, 7)])
+    factor = rng.randint(3, 12)
+    return [
+        short(f"Express {a * factor}:{b * factor} in its simplest form.", f"{a}:{b}", marks=2),
+        short(f"Find the value of x in the proportion {a}:{b} = {a * factor}:x.",
+              b * factor, marks=2),
+    ]
+
+
+def r_jhs_simple_interest(rng, ctx):
+    principal = rng.choice([200, 500, 800, 1000, 1500, 2000, 2500, 4000])
+    rate = rng.choice([5, 8, 10, 12, 15])
+    years = rng.randint(2, 4)
+    interest = principal * rate * years // 100
+    sales = principal * rng.choice([2, 3, 5])
+    return [
+        short(f"Find the simple interest on GH\u00a2{num(principal)} for {years} years "
+              f"at {rate}% per annum.", f"GH\u00a2{num(interest)}", marks=3),
+        short(f"A trader marks a bag of maize at GH\u00a2{num(principal)} and allows a discount "
+              f"of {rate}%. Find the discount.", f"GH\u00a2{num(principal * rate // 100)}", marks=2),
+        short(f"An agent earns a commission of {rate}% on sales of GH\u00a2{num(sales)}. "
+              f"Find the commission.", f"GH\u00a2{num(sales * rate // 100)}", marks=2),
+    ]
+
+
+def r_jhs_rate_and_speed(rng, ctx):
+    speed = rng.choice([40, 50, 60, 75, 80, 90])
+    hours = rng.randint(2, 6)
+    books = rng.randint(3, 12)
+    each = rng.choice([2, 3, 5, 8, 10, 15])
+    return [
+        short(f"A car travels {num(speed * hours)} km in {hours} hours. "
+              f"Find its average speed in km/h.", f"{num(speed)} km/h", marks=2),
+        short(f"A trader sells one book for GH\u00a2{each}. "
+              f"Find the cost of {books} of the same book.",
+              f"GH\u00a2{num(each * books)}", marks=2),
+    ]
+
+
+def r_jhs_linear_equations(rng, ctx):
+    a, x, b = rng.randint(2, 9), rng.randint(2, 12), rng.randint(1, 20)
+    word_a, word_x, word_b = rng.randint(2, 6), rng.randint(2, 9), rng.randint(1, 9)
+    return [
+        short(f"Solve for x: {a}x + {b} = {a * x + b}.", x, marks=3),
+        short(f"When a number is multiplied by {word_a} and {word_b} is added to the result, "
+              f"the answer is {word_a * word_x + word_b}. Find the number.", word_x, marks=3),
+    ]
+
+
+def r_jhs_substitution(rng, ctx):
+    a, b = rng.randint(2, 6), rng.randint(2, 6)
+    x, y = rng.randint(2, 9), rng.randint(2, 9)
+    length, breadth = rng.randint(3, 15), rng.randint(2, 12)
+    return [
+        short(f"Evaluate {a}a + {b}b when a = {x} and b = {y}.", a * x + b * y, marks=2),
+        short(f"Use the formula P = 2(l + b) to find P when l = {length} cm and b = {breadth} cm.",
+              f"{2 * (length + breadth)} cm", marks=2),
+    ]
+
+
+def r_jhs_inequalities(rng, ctx):
+    a, x, b = rng.randint(2, 6), rng.randint(2, 8), rng.randint(1, 12)
+    limit = a * x + b
+    domain = list(range(0, x + 4))
+    members = [n for n in domain if a * n + b < limit]
+    listed = "{" + ", ".join(str(n) for n in domain) + "}"
+    return [
+        short(f"Solve the inequality {a}x + {b} < {limit}.", f"x < {x}", marks=2),
+        short(f"List the members of the solution set of {a}x + {b} < {limit} from {listed}.",
+              ", ".join(str(n) for n in members) or "no member", marks=2),
+    ]
+
+
+def r_jhs_central_tendency(rng, ctx):
+    while True:
+        values = [rng.randint(2, 20) for _ in range(5)]
+        data = sorted(values + [values[0]])
+        if len(set(data)) == 5 and data.count(values[0]) == 2 and sum(data) % len(data) == 0:
+            break
+    mean = sum(data) // len(data)
+    middle = (data[2] + data[3]) / 2
+    listed = ", ".join(str(n) for n in data)
+    return [
+        short(f"Find the mean of the following data: {listed}.", mean, marks=2),
+        short(f"Find the median of the following data: {listed}.",
+              frac(middle), marks=2),
+        mcq(f"State the mode of the following data: {listed}.", values[0],
+            [n for n in data if n != values[0]]),
+        short(f"Find the range of the following data: {listed}.", data[-1] - data[0], marks=1),
+    ]
+
+
+def r_jhs_probability(rng, ctx):
+    red, blue, green = rng.randint(2, 6), rng.randint(2, 6), rng.randint(1, 4)
+    total = red + blue + green
+    bag = f"A bag contains {red} red, {blue} blue and {green} green bottle tops."
+    return [
+        short(f"{bag} One bottle top is picked at random. Find the probability that it is red.",
+              frac(Fraction(red, total)), marks=2),
+        short(f"{bag} Two bottle tops are picked one after the other, the first one being "
+              f"replaced before the second is picked. Find the probability that both are red.",
+              frac(Fraction(red, total) * Fraction(red, total)), marks=3),
+        short(f"{bag} Two bottle tops are picked one after the other, without replacement. "
+              f"Find the probability that the first is red and the second is blue.",
+              frac(Fraction(red, total) * Fraction(blue, total - 1)), marks=3),
+    ]
+
+
+def r_jhs_angles(rng, ctx):
+    angle = rng.randint(25, 65)
+    first, second = rng.randint(35, 75), rng.randint(30, 70)
+    sides = rng.randint(5, 10)
+    return [
+        mcq(f"Two angles are complementary. One of them is {angle}\u00b0. Find the other.",
+            f"{90 - angle}\u00b0", [f"{180 - angle}\u00b0", f"{angle}\u00b0", f"{90 + angle}\u00b0"]),
+        short(f"Two of the angles of a triangle are {first}\u00b0 and {second}\u00b0. "
+              f"Find the third angle.", f"{180 - first - second}\u00b0", marks=2),
+        short(f"Find the sum of the interior angles of a polygon with {sides} sides.",
+              f"{(sides - 2) * 180}\u00b0", marks=2),
+    ]
+
+
+def r_jhs_pythagoras(rng, ctx):
+    a, b, c = rng.choice([(3, 4, 5), (6, 8, 10), (5, 12, 13), (9, 12, 15),
+                          (8, 15, 17), (7, 24, 25), (12, 16, 20)])
+    return [
+        short(f"In a right-angled triangle the two shorter sides are {a} cm and {b} cm. "
+              f"Find the length of the hypotenuse.", f"{c} cm", marks=3),
+        short(f"The hypotenuse of a right-angled triangle is {c} cm and one of the shorter "
+              f"sides is {a} cm. Find the length of the third side.", f"{b} cm", marks=3),
+    ]
+
+
+def r_jhs_circle(rng, ctx):
+    radius = rng.choice([7, 14, 21, 28])
+    circumference = 2 * 22 * radius // 7
+    area = 22 * radius * radius // 7
+    return [
+        short(f"A circle has a radius of {radius} cm. Taking pi as 22/7, find its circumference.",
+              f"{num(circumference)} cm", marks=2),
+        short(f"A circle has a radius of {radius} cm. Taking pi as 22/7, find its area.",
+              f"{num(area)} cm\u00b2", marks=3),
+    ]
+
+
+def r_jhs_surface_area(rng, ctx):
+    length, width, height = rng.randint(2, 9), rng.randint(2, 9), rng.randint(2, 9)
+    cuboid = 2 * (length * width + length * height + width * height)
+    prism_length = rng.randint(6, 12)
+    # A 3-4-5 right-angled end: two ends of 6 cm2, and a rectangular wrap of
+    # (3 + 4 + 5) by the length of the prism.
+    prism = 2 * 6 + (3 + 4 + 5) * prism_length
+    return [
+        short(f"Find the total surface area of a cuboid measuring {length} cm by {width} cm "
+              f"by {height} cm.", f"{num(cuboid)} cm\u00b2", marks=3),
+        short(f"A triangular prism has ends that are right-angled triangles with sides 3 cm, "
+              f"4 cm and 5 cm, and a length of {prism_length} cm. "
+              f"Find its total surface area.", f"{num(prism)} cm\u00b2", marks=3),
+    ]
+
+
+def r_jhs_vectors_and_bearings(rng, ctx):
+    a, b = rng.choice([(3, 4), (6, 8), (5, 12), (9, 12), (8, 15)])
+    magnitude = int((a ** 2 + b ** 2) ** 0.5)
+    bearing = rng.choice([45, 63, 120, 150, 210, 305])
+    back = bearing + 180 if bearing < 180 else bearing - 180
+    return [
+        short(f"Find the magnitude of the vector ({a}, {b}).", magnitude, marks=2),
+        short(f"The bearing of B from A is {bearing:03d}\u00b0. "
+              f"Find the bearing of A from B.", f"{back:03d}\u00b0", marks=2),
+        mcq(f"Which of these vectors is perpendicular to ({a}, {b})?", f"({-b}, {a})",
+            [f"({a}, {b})", f"({b}, {a})", f"({-a}, {b})"]),
+    ]
+
+
+def r_jhs_transformations(rng, ctx):
+    x, y = rng.randint(-6, 6), rng.randint(-6, 6)
+    dx, dy = rng.randint(-5, 5) or 1, rng.randint(-5, 5) or 1
+    return [
+        mcq(f"The point ({x}, {y}) is translated by the vector ({dx}, {dy}). "
+            f"Find the coordinates of its image.",
+            f"({x + dx}, {y + dy})",
+            [f"({x - dx}, {y - dy})", f"({dx}, {dy})", f"({x + dy}, {y + dx})"]),
+        mcq(f"Find the image of the point ({x}, {y}) under a reflection in the x-axis.",
+            f"({x}, {-y})", [f"({-x}, {y})", f"({-x}, {-y})", f"({y}, {x})"]),
+    ]
+
 
 
 # ─────────────────────────────────────────────────────────────── the rules ────
@@ -271,7 +616,11 @@ def r_equivalent_fraction(rng, ctx):
 
 
 def r_decimal_place(rng, ctx):
-    value = round(rng.uniform(0.1, 99.9), rng.choice([1, 2]))
+    places = rng.choice([1, 2])
+    value = round(rng.uniform(0.1, 99.9), places)
+    # "Write 96.0 as a fraction" is a whole number wearing a decimal point.
+    if value == int(value):
+        value = round(value + 0.5, places)
     return [
         short(f"Write {value} as a fraction in its simplest form.", _decimal_to_fraction(value), marks=2),
     ]
@@ -345,29 +694,55 @@ def r_percentage(rng, ctx):
 
 
 RULES = [
-    ("place-value", r"\bplace value\b|positions? (?:around|in) a given number|values? of (?:the )?digits?", r_place_value),
-    ("read-write-numbers", r"read and write numbers|in figures and in words", r_read_write),
-    ("compare-order", r"compare and order|arrange .*order|order(?:ing)? whole numbers", r_compare),
-    ("rounding", r"\bround(?:ing)?\b", r_round),
-    ("factors", r"factors of whole numbers|identify the factors|factors? of any", r_factors),
-    ("primes", r"prime numbers? and composite|prime numbers? between", r_prime),
-    ("odd-even", r"even and odd numbers", r_odd_even),
-    ("hcf", r"highest common factor", r_hcf),
-    ("lcm", r"lowest common multiple|least common multiple", r_lcm),
-    ("multiples", r"multiples of whole numbers|common multiples|multiples of \d", r_multiples),
-    ("addition", r"add(?:ing)? (?:and subtract )?(?:up to )?(?:whole )?numbers|addition of", r_addition),
-    ("subtraction", r"subtract(?:ing|ion)? (?:whole )?numbers", r_subtraction),
-    ("multiplication", r"multipl(y|ication)|times table", r_multiplication),
-    ("division", r"divid(e|ing|es)|division of", r_division),
-    ("fraction-of", r"fraction of (?:a )?(?:whole |given )?(?:number|quantity)|find the fraction of", r_fraction_of),
-    ("equivalent-fractions", r"equivalent fractions", r_equivalent_fraction),
-    ("decimals", r"decimal (?:place value|numbers|fractions)|decimals?", r_decimal_place),
-    ("measurement", r"convert .*(?:kilomet|metre|meter)|length|mass|capacity", r_measurement),
-    ("perimeter-area", r"perimeter|area of (?:a )?(?:rectangle|square|triangle)", r_perimeter_area),
-    ("time", r"\btime\b|clock|duration", r_time),
-    ("money", r"money|cedi|GH¢|cost|price", r_money),
-    ("average", r"average|mean of", r_average),
-    ("percentage", r"percentage|per cent|percent", r_percentage),
+    ("place-value", r"\bplace value\b|positions? (?:around|in) a given number|values? of (?:the )?digits?", r_place_value, "both"),
+    ("read-write-numbers", r"read and write numbers|in figures and in words", r_read_write, "both"),
+    ("compare-order", r"compare and order|arrange .*order|order(?:ing)? whole numbers", r_compare, "both", r"fractions?|decimals?|percent"),
+    ("rounding", r"\bround(?:ing)?\b", r_round, "both", r"decimals? to the nearest|significant"),
+    ("factors", r"factors of whole numbers|identify the factors|factors? of any", r_factors, "both"),
+    ("primes", r"prime numbers? and composite|prime numbers? between", r_prime, "both"),
+    ("odd-even", r"even and odd numbers", r_odd_even, "both"),
+    ("hcf", r"highest common factor", r_hcf, "both"),
+    ("lcm", r"lowest common multiple|least common multiple", r_lcm, "both"),
+    ("multiples", r"multiples of whole numbers|common multiples|multiples of \d", r_multiples, "both"),
+    ("addition", r"add(?:ing)? (?:and subtract )?(?:up to )?(?:whole )?numbers|addition of", r_addition, "both", r"algebraic|binomial|expression|inequalit"),
+    ("subtraction", r"subtract(?:ing|ion)? (?:whole )?numbers", r_subtraction, "both", r"algebraic|binomial|expression|inequalit"),
+    ("multiplication", r"multipl(y|ication)|times table", r_multiplication, "both", r"algebraic|binomial|expression|inequalit|brackets"),
+    ("division", r"divid(e|ing|es)|division of", r_division, "both", r"algebraic|binomial|expression|inequalit"),
+    ("fraction-of", r"fraction of (?:a )?(?:whole |given )?(?:number|quantity)|find the fraction of", r_fraction_of, "both"),
+    ("equivalent-fractions", r"equivalent fractions", r_equivalent_fraction, "both"),
+    ("decimals", r"decimal (?:place value|numbers|fractions)|decimals?", r_decimal_place, "both"),
+    ("measurement", r"convert .*(?:kilomet|metre|meter)|\b(?:length|mass|capacity)\b", r_measurement, "both"),
+    ("perimeter-area", r"perimeter|area of (?:a )?(?:rectangle|square|triangle)", r_perimeter_area, "both"),
+    ("time", r"\btime\b|clock|duration", r_time, "primary"),
+    ("money", r"\b(?:money|cedis?|GH¢|costs?|prices?)\b", r_money, "both"),
+    ("average", r"average|mean of", r_average, "both"),
+    ("percentage", r"percentage|per cent|percent", r_percentage, "both"),
+    # ── JHS only (B7–B9) ─────────────────────────────────────────────────────
+    # Every one of these matches JHS wording, and answers with arithmetic the
+    # script computes. Where the syllabus asks for a construction — bisect an
+    # angle, draw a net, plot a locus — there is deliberately no rule: that is
+    # classroom work, not a printed question.
+    ("jhs-significant-figures", r"significant (?:figures|places)|decimal places", r_jhs_significant_figures, "jhs"),
+    ("jhs-index-form", r"index form|powers? of (?:numbers|natural numbers)|zero as its exponent|repeated factors", r_jhs_index_form, "jhs"),
+    ("jhs-laws-of-indices", r"laws of indices", r_jhs_laws_of_indices, "jhs"),
+    ("jhs-exponential-equations", r"exponential equations", r_jhs_exponential_equations, "jhs"),
+    ("jhs-squares-roots", r"perfect squares|square roots", r_jhs_squares_and_roots, "jhs"),
+    ("jhs-sets", r"union and intersection|concept of sets|sets of factors", r_jhs_sets, "jhs"),
+    ("jhs-fraction-operations", r"unlike and mixed fractions|operations on fractions|dividing a fraction|multiplying a fraction|basic operations on fractions", r_jhs_fraction_operations, "jhs"),
+    ("jhs-ratio", r"ratio language|equivalent ratios|proportional reasoning|proportional relationships", r_jhs_ratio, "jhs"),
+    ("jhs-simple-interest", r"simple interest|discount|commission", r_jhs_simple_interest, "jhs"),
+    ("jhs-rate-speed", r"unit rate|constant speed|unit pricing", r_jhs_rate_and_speed, "jhs"),
+    ("jhs-linear-equations", r"linear equations", r_jhs_linear_equations, "jhs"),
+    ("jhs-substitution", r"substitute values", r_jhs_substitution, "jhs"),
+    ("jhs-inequalities", r"linear inequalities", r_jhs_inequalities, "jhs"),
+    ("jhs-central-tendency", r"\bmedian\b|\bmodes?\b|measures of central tendency|ungrouped data", r_jhs_central_tendency, "jhs"),
+    ("jhs-probability", r"probability", r_jhs_probability, "jhs"),
+    ("jhs-angles", r"complementary angles|sum of angles in any polygon|interior angles|third angle", r_jhs_angles, "jhs"),
+    ("jhs-pythagoras", r"pythagorean theorem|hypotenuse", r_jhs_pythagoras, "jhs"),
+    ("jhs-circle", r"circumference of a circle", r_jhs_circle, "jhs"),
+    ("jhs-surface-area", r"surface area", r_jhs_surface_area, "jhs"),
+    ("jhs-vectors-bearings", r"\bbearing|column \(component\) form|magnitude", r_jhs_vectors_and_bearings, "jhs"),
+    ("jhs-transformations", r"under translation|under reflection|reflectional", r_jhs_transformations, "jhs"),
 ]
 
 
@@ -411,13 +786,78 @@ def _decimal_to_fraction(value: float) -> str:
     return f"{f.numerator}/{f.denominator}" if f.denominator != 1 else str(f.numerator)
 
 
+def frac(value) -> str:
+    """`Fraction` as a printed fraction: 3/4, or 2 when it is whole."""
+    f = Fraction(value)
+    return str(f.numerator) if f.denominator == 1 else f"{f.numerator}/{f.denominator}"
+
+
+def power(base: int, exponent: int) -> str:
+    """Index form, written in ASCII so a PDF renders it: 2^3.
+
+    The syllabus prints a superscript; jsPDF's standard fonts do not carry one,
+    so the papers this bank feeds write the same value as `2^3`.
+    """
+    return f"{base}^{exponent}"
+
+
+def prime_factorisation(n: int) -> str:
+    """`360` -> "2^3 x 3^2 x 5", the form the syllabus asks for."""
+    parts, d = [], 2
+    while d * d <= n:
+        count = 0
+        while n % d == 0:
+            n //= d
+            count += 1
+        if count:
+            parts.append(power(d, count) if count > 1 else str(d))
+        d += 1
+    if n > 1:
+        parts.append(str(n))
+    return " x ".join(parts)
+
+
+def round_sig(value, figures: int) -> str:
+    """`4.73821` to 3 significant figures -> "4.74" (Decimal, so no float drift)."""
+    d = Decimal(str(value))
+    if d == 0:
+        return "0"
+    return f"{d.quantize(Decimal(1).scaleb(d.adjusted() - figures + 1)):f}"
+
+
+def rules_for(grade: str) -> list[tuple]:
+    """The rules that may fire for a grade: (id, pattern, builder, veto).
+
+    `bands` is the split that matters. A primary rule matching primary wording
+    ("multiply whole numbers") must not fire at B7, where the same word turns up
+    in "multiplication of binomial expressions"; a JHS rule must not fire at B4.
+    A vetO is the narrower version of the same problem inside one band — for
+    example rounding is arithmetic at both levels, but not for an indicator that
+    asks about decimal places.
+    """
+    jhs = grade in JHS_GRADES
+    rules = []
+    for entry in RULES:
+        rule_id, pattern, builder = entry[:3]
+        bands = entry[3] if len(entry) > 3 else "both"
+        veto = entry[4] if len(entry) > 4 else None
+        if bands == "primary" and jhs:
+            continue
+        if bands == "jhs" and not jhs:
+            continue
+        rules.append((rule_id, pattern, builder, veto))
+    return rules
+
+
 def questions_for(code: str, record: dict, grade: str = "B4") -> list[dict]:
     """Every rule that matches the indicator's text, run deterministically."""
     text = indicator_text(record)
-    ctx = {"ceiling": up_to(text, GRADE_CEILING.get(grade, 10000)), "grade": grade, "text": text}
+    ctx = {"ceiling": ceiling_for(text, grade), "grade": grade, "text": text}
     out = []
-    for rule_id, pattern, builder in RULES:
+    for rule_id, pattern, builder, veto in rules_for(grade):
         if not re.search(pattern, text):
+            continue
+        if veto and re.search(veto, text):
             continue
         rng = random.Random(f"{code}|{rule_id}")
         for item in builder(rng, ctx)[:ITEMS_PER_INDICATOR]:
@@ -464,9 +904,12 @@ def main() -> int:
     ap.add_argument("--subject", action="append", default=None,
                     help=f"subject to generate for (default: {' '.join(GENERATED_SUBJECTS)})")
     ap.add_argument("--apply", action="store_true", help="write the generated files")
+    ap.add_argument("--verify", action="store_true",
+                    help="fail if the committed generated files are not what the rules produce now")
     args = ap.parse_args()
 
     subjects = args.subject or list(GENERATED_SUBJECTS)
+    problems: list[str] = []
     total_items = total_indicators = covered = 0
 
     for subject, grade, path in db_paths(subjects):
@@ -488,21 +931,36 @@ def main() -> int:
         print(f"  {subject:12} {grade:4} {len(items):4} questions · "
               f"{hit:3}/{len(rows):3} indicators covered ({hit / max(1, len(rows)) * 100:4.0f}%)  {rules}")
 
+        payload = {
+            "subjectId": subject,
+            "grade": grade,
+            "generatedBy": "scripts/generate_question_bank.py",
+            "items": items,
+        }
+        path = OUT / subject / f"{grade}.generated.json"
         if args.apply and items:
-            out_dir = OUT / subject
-            out_dir.mkdir(parents=True, exist_ok=True)
-            payload = {
-                "subjectId": subject,
-                "grade": grade,
-                "generatedBy": "scripts/generate_question_bank.py",
-                "items": items,
-            }
-            (out_dir / f"{grade}.generated.json").write_text(
-                json.dumps(payload, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(json.dumps(payload, ensure_ascii=False, indent=1) + "\n",
+                            encoding="utf-8")
+        if args.verify:
+            want = json.dumps(payload, ensure_ascii=False, indent=1) + "\n"
+            if not path.exists():
+                problems.append(f"{path.relative_to(ROOT)} is missing — run --apply")
+            elif path.read_text(encoding="utf-8") != want:
+                problems.append(
+                    f"{path.relative_to(ROOT)} has drifted from the rules — run --apply "
+                    f"and check the diff: a rule firing on the wrong indicator shows up here")
 
     print(f"\n{total_items} questions for {total_indicators} indicators "
           f"({covered} covered, {total_indicators - covered} left for an author)")
-    if not args.apply:
+    if problems:
+        print(f"\n{len(problems)} problem(s):")
+        for problem in problems:
+            print(f"  x {problem}")
+        return 1
+    if args.verify:
+        print("\nverified — the committed generated files are exactly what the rules produce")
+    if not args.apply and not args.verify:
         print("report only — pass --apply to write data/questions/<subject>/<grade>.generated.json")
     return 0
 

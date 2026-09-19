@@ -32,28 +32,6 @@
    "source": "generated:place-value"
   },
   {
-   "id": "B2.1.1.1.3-measurement-1",
-   "indicatorCode": "B2.1.1.1.3",
-   "prompt": "Convert 36 m 12 cm to centimetres.",
-   "type": "short",
-   "options": null,
-   "answer": "3612",
-   "marks": 2,
-   "difficulty": "core",
-   "source": "generated:measurement"
-  },
-  {
-   "id": "B2.1.1.1.3-measurement-2",
-   "indicatorCode": "B2.1.1.1.3",
-   "prompt": "Convert 3612 cm to metres and centimetres.",
-   "type": "short",
-   "options": null,
-   "answer": "36 m 12 cm",
-   "marks": 2,
-   "difficulty": "core",
-   "source": "generated:measurement"
-  },
-  {
    "id": "B2.1.1.1.4-place-value-1",
    "indicatorCode": "B2.1.1.1.4",
    "prompt": "What is the value of the digit 2 in 2,270?",
@@ -246,28 +224,6 @@
    "source": "generated:measurement"
   },
   {
-   "id": "B2.3.3.1.2-measurement-1",
-   "indicatorCode": "B2.3.3.1.2",
-   "prompt": "Convert 26 m 54 cm to centimetres.",
-   "type": "short",
-   "options": null,
-   "answer": "2654",
-   "marks": 2,
-   "difficulty": "core",
-   "source": "generated:measurement"
-  },
-  {
-   "id": "B2.3.3.1.2-measurement-2",
-   "indicatorCode": "B2.3.3.1.2",
-   "prompt": "Convert 2654 cm to metres and centimetres.",
-   "type": "short",
-   "options": null,
-   "answer": "26 m 54 cm",
-   "marks": 2,
-   "difficulty": "core",
-   "source": "generated:measurement"
-  },
-  {
    "id": "B2.3.3.2.1-measurement-1",
    "indicatorCode": "B2.3.3.2.1",
    "prompt": "Convert 40 m 18 cm to centimetres.",
@@ -288,17 +244,6 @@
    "marks": 2,
    "difficulty": "core",
    "source": "generated:measurement"
-  },
-  {
-   "id": "B2.3.3.3.1-time-1",
-   "indicatorCode": "B2.3.3.3.1",
-   "prompt": "A lesson starts at 7:00 and lasts 2 hour(s) 15 minutes. What time does it end?",
-   "type": "short",
-   "options": null,
-   "answer": "9:15",
-   "marks": 2,
-   "difficulty": "core",
-   "source": "generated:time"
   },
   {
    "id": "B2.3.3.3.2-time-1",

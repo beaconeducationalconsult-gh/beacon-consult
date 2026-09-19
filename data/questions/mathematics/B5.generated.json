@@ -4,62 +4,7 @@
  "generatedBy": "scripts/generate_question_bank.py",
  "items": [
   {
-   "id": "B5.1.1.1.1-place-value-1",
-   "indicatorCode": "B5.1.1.1.1",
-   "prompt": "What is the value of the digit 6 in 914,162?",
-   "type": "mcq",
-   "options": [
-    "60",
-    "6",
-    "600"
-   ],
-   "answer": "60",
-   "answerLetter": "A",
-   "marks": 1,
-   "difficulty": "core",
-   "source": "generated:place-value"
-  },
-  {
-   "id": "B5.1.1.1.1-place-value-2",
-   "indicatorCode": "B5.1.1.1.1",
-   "prompt": "Write 914,162 in expanded form.",
-   "type": "short",
-   "options": null,
-   "answer": "9 x 100000 + 1 x 10000 + 4 x 1000 + 1 x 100 + 6 x 10 + 2 x 1",
-   "marks": 2,
-   "difficulty": "core",
-   "source": "generated:place-value"
-  },
-  {
-   "id": "B5.1.1.1.2-place-value-1",
-   "indicatorCode": "B5.1.1.1.2",
-   "prompt": "What is the value of the digit 9 in 189,827?",
-   "type": "mcq",
-   "options": [
-    "9,000",
-    "90,000",
-    "900",
-    "9"
-   ],
-   "answer": "9,000",
-   "answerLetter": "A",
-   "marks": 1,
-   "difficulty": "core",
-   "source": "generated:place-value"
-  },
-  {
-   "id": "B5.1.1.1.2-place-value-2",
-   "indicatorCode": "B5.1.1.1.2",
-   "prompt": "Write 189,827 in expanded form.",
-   "type": "short",
-   "options": null,
-   "answer": "1 x 100000 + 8 x 10000 + 9 x 1000 + 8 x 100 + 2 x 10 + 7 x 1",
-   "marks": 2,
-   "difficulty": "core",
-   "source": "generated:place-value"
-  },
-  {
-   "id": "B5.1.1.1.2-read-write-numbers-3",
+   "id": "B5.1.1.1.2-read-write-numbers-1",
    "indicatorCode": "B5.1.1.1.2",
    "prompt": "Write 53,739 in words.",
    "type": "short",
@@ -70,18 +15,29 @@
    "source": "generated:read-write-numbers"
   },
   {
+   "id": "B5.1.1.1.2-read-write-numbers-2",
+   "indicatorCode": "B5.1.1.1.2",
+   "prompt": "Write 'fifty-three thousand seven hundred and thirty-nine' in figures.",
+   "type": "short",
+   "options": null,
+   "answer": "53,739",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:read-write-numbers"
+  },
+  {
    "id": "B5.1.1.1.3-place-value-1",
    "indicatorCode": "B5.1.1.1.3",
-   "prompt": "What is the value of the digit 7 in 982,702?",
+   "prompt": "What is the value of the digit 2 in 35,271?",
    "type": "mcq",
    "options": [
-    "7,000",
-    "7",
-    "700",
-    "70"
+    "2",
+    "2,000",
+    "20",
+    "200"
    ],
-   "answer": "700",
-   "answerLetter": "C",
+   "answer": "200",
+   "answerLetter": "D",
    "marks": 1,
    "difficulty": "core",
    "source": "generated:place-value"
@@ -89,43 +45,16 @@
   {
    "id": "B5.1.1.1.3-place-value-2",
    "indicatorCode": "B5.1.1.1.3",
-   "prompt": "Write 982,702 in expanded form.",
+   "prompt": "Write 35,271 in expanded form.",
    "type": "short",
    "options": null,
-   "answer": "9 x 100000 + 8 x 10000 + 2 x 1000 + 7 x 100 + 2 x 1",
+   "answer": "3 x 10000 + 5 x 1000 + 2 x 100 + 7 x 10 + 1 x 1",
    "marks": 2,
    "difficulty": "core",
    "source": "generated:place-value"
   },
   {
-   "id": "B5.1.1.1.4-place-value-1",
-   "indicatorCode": "B5.1.1.1.4",
-   "prompt": "What is the value of the digit 5 in 53,050?",
-   "type": "mcq",
-   "options": [
-    "500",
-    "50",
-    "5"
-   ],
-   "answer": "50",
-   "answerLetter": "B",
-   "marks": 1,
-   "difficulty": "core",
-   "source": "generated:place-value"
-  },
-  {
-   "id": "B5.1.1.1.4-place-value-2",
-   "indicatorCode": "B5.1.1.1.4",
-   "prompt": "Write 53,050 in expanded form.",
-   "type": "short",
-   "options": null,
-   "answer": "5 x 10000 + 3 x 1000 + 5 x 10",
-   "marks": 2,
-   "difficulty": "core",
-   "source": "generated:place-value"
-  },
-  {
-   "id": "B5.1.1.1.4-compare-order-3",
+   "id": "B5.1.1.1.4-compare-order-1",
    "indicatorCode": "B5.1.1.1.4",
    "prompt": "Which symbol makes this true?  97,493  ___  81,810",
    "type": "mcq",
@@ -141,35 +70,18 @@
    "source": "generated:compare-order"
   },
   {
-   "id": "B5.1.1.1.5-place-value-1",
-   "indicatorCode": "B5.1.1.1.5",
-   "prompt": "What is the value of the digit 1 in 93,143?",
-   "type": "mcq",
-   "options": [
-    "100",
-    "1",
-    "10",
-    "1,000"
-   ],
-   "answer": "100",
-   "answerLetter": "A",
-   "marks": 1,
-   "difficulty": "core",
-   "source": "generated:place-value"
-  },
-  {
-   "id": "B5.1.1.1.5-place-value-2",
-   "indicatorCode": "B5.1.1.1.5",
-   "prompt": "Write 93,143 in expanded form.",
+   "id": "B5.1.1.1.4-compare-order-2",
+   "indicatorCode": "B5.1.1.1.4",
+   "prompt": "Arrange in order from smallest to largest: 97,493, 81,810.",
    "type": "short",
    "options": null,
-   "answer": "9 x 10000 + 3 x 1000 + 1 x 100 + 4 x 10 + 3 x 1",
+   "answer": "81,810, 97,493",
    "marks": 2,
    "difficulty": "core",
-   "source": "generated:place-value"
+   "source": "generated:compare-order"
   },
   {
-   "id": "B5.1.1.1.5-rounding-3",
+   "id": "B5.1.1.1.5-rounding-1",
    "indicatorCode": "B5.1.1.1.5",
    "prompt": "Round 98,608 to the nearest hundred.",
    "type": "mcq",
@@ -183,33 +95,6 @@
    "marks": 1,
    "difficulty": "core",
    "source": "generated:rounding"
-  },
-  {
-   "id": "B5.1.1.1.6-place-value-1",
-   "indicatorCode": "B5.1.1.1.6",
-   "prompt": "What is the value of the digit 3 in 29,530?",
-   "type": "mcq",
-   "options": [
-    "300",
-    "3",
-    "30"
-   ],
-   "answer": "30",
-   "answerLetter": "C",
-   "marks": 1,
-   "difficulty": "core",
-   "source": "generated:place-value"
-  },
-  {
-   "id": "B5.1.1.1.6-place-value-2",
-   "indicatorCode": "B5.1.1.1.6",
-   "prompt": "Write 29,530 in expanded form.",
-   "type": "short",
-   "options": null,
-   "answer": "2 x 10000 + 9 x 1000 + 5 x 100 + 3 x 10",
-   "marks": 2,
-   "difficulty": "core",
-   "source": "generated:place-value"
   },
   {
    "id": "B5.1.1.3.1-factors-1",
@@ -422,18 +307,7 @@
    "source": "generated:division"
   },
   {
-   "id": "B5.1.3.1.1-multiplication-1",
-   "indicatorCode": "B5.1.3.1.1",
-   "prompt": "Multiply: 931 x 48 = ",
-   "type": "short",
-   "options": null,
-   "answer": "44,688",
-   "marks": 2,
-   "difficulty": "core",
-   "source": "generated:multiplication"
-  },
-  {
-   "id": "B5.1.3.1.1-equivalent-fractions-2",
+   "id": "B5.1.3.1.1-equivalent-fractions-1",
    "indicatorCode": "B5.1.3.1.1",
    "prompt": "Which fraction is equivalent to 5/7?",
    "type": "mcq",
@@ -450,56 +324,7 @@
    "source": "generated:equivalent-fractions"
   },
   {
-   "id": "B5.1.3.1.2-compare-order-1",
-   "indicatorCode": "B5.1.3.1.2",
-   "prompt": "Which symbol makes this true?  40,441  ___  2,559",
-   "type": "mcq",
-   "options": [
-    ">",
-    "<",
-    "="
-   ],
-   "answer": ">",
-   "answerLetter": "A",
-   "marks": 1,
-   "difficulty": "core",
-   "source": "generated:compare-order"
-  },
-  {
-   "id": "B5.1.3.1.2-compare-order-2",
-   "indicatorCode": "B5.1.3.1.2",
-   "prompt": "Arrange in order from smallest to largest: 40,441, 2,559.",
-   "type": "short",
-   "options": null,
-   "answer": "2,559, 40,441",
-   "marks": 2,
-   "difficulty": "core",
-   "source": "generated:compare-order"
-  },
-  {
-   "id": "B5.1.3.1.2-multiplication-3",
-   "indicatorCode": "B5.1.3.1.2",
-   "prompt": "Multiply: 233 x 12 = ",
-   "type": "short",
-   "options": null,
-   "answer": "2,796",
-   "marks": 2,
-   "difficulty": "core",
-   "source": "generated:multiplication"
-  },
-  {
-   "id": "B5.1.3.1.3-multiplication-1",
-   "indicatorCode": "B5.1.3.1.3",
-   "prompt": "Multiply: 488 x 83 = ",
-   "type": "short",
-   "options": null,
-   "answer": "40,504",
-   "marks": 2,
-   "difficulty": "core",
-   "source": "generated:multiplication"
-  },
-  {
-   "id": "B5.1.3.1.3-equivalent-fractions-2",
+   "id": "B5.1.3.1.3-equivalent-fractions-1",
    "indicatorCode": "B5.1.3.1.3",
    "prompt": "Which fraction is equivalent to 3/11?",
    "type": "mcq",
@@ -516,18 +341,7 @@
    "source": "generated:equivalent-fractions"
   },
   {
-   "id": "B5.1.3.1.4-multiplication-1",
-   "indicatorCode": "B5.1.3.1.4",
-   "prompt": "Multiply: 278 x 41 = ",
-   "type": "short",
-   "options": null,
-   "answer": "11,398",
-   "marks": 2,
-   "difficulty": "core",
-   "source": "generated:multiplication"
-  },
-  {
-   "id": "B5.1.3.1.4-equivalent-fractions-2",
+   "id": "B5.1.3.1.4-equivalent-fractions-1",
    "indicatorCode": "B5.1.3.1.4",
    "prompt": "Which fraction is equivalent to 5/11?",
    "type": "mcq",
@@ -568,75 +382,32 @@
   {
    "id": "B5.1.4.1.1-decimals-1",
    "indicatorCode": "B5.1.4.1.1",
-   "prompt": "Write 88.87 as a fraction in its simplest form.",
+   "prompt": "Write 59.5 as a fraction in its simplest form.",
    "type": "short",
    "options": null,
-   "answer": "8887/100",
+   "answer": "119/2",
    "marks": 2,
    "difficulty": "core",
    "source": "generated:decimals"
   },
   {
-   "id": "B5.1.4.1.2-compare-order-1",
+   "id": "B5.1.4.1.2-decimals-1",
    "indicatorCode": "B5.1.4.1.2",
-   "prompt": "Which symbol makes this true?  44,394  ___  32,707",
-   "type": "mcq",
-   "options": [
-    "<",
-    "=",
-    ">"
-   ],
-   "answer": ">",
-   "answerLetter": "C",
-   "marks": 1,
-   "difficulty": "core",
-   "source": "generated:compare-order"
-  },
-  {
-   "id": "B5.1.4.1.2-compare-order-2",
-   "indicatorCode": "B5.1.4.1.2",
-   "prompt": "Arrange in order from smallest to largest: 44,394, 32,707.",
+   "prompt": "Write 71.03 as a fraction in its simplest form.",
    "type": "short",
    "options": null,
-   "answer": "32,707, 44,394",
-   "marks": 2,
-   "difficulty": "core",
-   "source": "generated:compare-order"
-  },
-  {
-   "id": "B5.1.4.1.2-decimals-3",
-   "indicatorCode": "B5.1.4.1.2",
-   "prompt": "Write 61.78 as a fraction in its simplest form.",
-   "type": "short",
-   "options": null,
-   "answer": "3089/50",
+   "answer": "7103/100",
    "marks": 2,
    "difficulty": "core",
    "source": "generated:decimals"
   },
   {
-   "id": "B5.1.4.1.3-rounding-1",
+   "id": "B5.1.4.1.3-decimals-1",
    "indicatorCode": "B5.1.4.1.3",
-   "prompt": "Round 3,980 to the nearest ten.",
-   "type": "mcq",
-   "options": [
-    "3,970",
-    "3,990",
-    "3,980"
-   ],
-   "answer": "3,980",
-   "answerLetter": "C",
-   "marks": 1,
-   "difficulty": "core",
-   "source": "generated:rounding"
-  },
-  {
-   "id": "B5.1.4.1.3-decimals-2",
-   "indicatorCode": "B5.1.4.1.3",
-   "prompt": "Write 48.18 as a fraction in its simplest form.",
+   "prompt": "Write 59.11 as a fraction in its simplest form.",
    "type": "short",
    "options": null,
-   "answer": "2409/50",
+   "answer": "5911/100",
    "marks": 2,
    "difficulty": "core",
    "source": "generated:decimals"
@@ -644,10 +415,10 @@
   {
    "id": "B5.1.4.1.4-decimals-1",
    "indicatorCode": "B5.1.4.1.4",
-   "prompt": "Write 26.2 as a fraction in its simplest form.",
+   "prompt": "Write 38.8 as a fraction in its simplest form.",
    "type": "short",
    "options": null,
-   "answer": "131/5",
+   "answer": "194/5",
    "marks": 2,
    "difficulty": "core",
    "source": "generated:decimals"
@@ -666,10 +437,10 @@
   {
    "id": "B5.1.4.1.5-decimals-2",
    "indicatorCode": "B5.1.4.1.5",
-   "prompt": "Write 32.3 as a fraction in its simplest form.",
+   "prompt": "Write 32.03 as a fraction in its simplest form.",
    "type": "short",
    "options": null,
-   "answer": "323/10",
+   "answer": "3203/100",
    "marks": 2,
    "difficulty": "core",
    "source": "generated:decimals"
@@ -706,39 +477,6 @@
    "marks": 2,
    "difficulty": "core",
    "source": "generated:percentage"
-  },
-  {
-   "id": "B5.2.1.1.1-money-1",
-   "indicatorCode": "B5.2.1.1.1",
-   "prompt": "A pen costs GH¢6.75. How much do 6 pens cost?",
-   "type": "short",
-   "options": null,
-   "answer": "GH¢40.50",
-   "marks": 2,
-   "difficulty": "core",
-   "source": "generated:money"
-  },
-  {
-   "id": "B5.2.2.1.1-multiplication-1",
-   "indicatorCode": "B5.2.2.1.1",
-   "prompt": "Multiply: 550 x 36 = ",
-   "type": "short",
-   "options": null,
-   "answer": "19,800",
-   "marks": 2,
-   "difficulty": "core",
-   "source": "generated:multiplication"
-  },
-  {
-   "id": "B5.2.2.1.1-division-2",
-   "indicatorCode": "B5.2.2.1.1",
-   "prompt": "Divide: 966 ÷ 21 = ",
-   "type": "short",
-   "options": null,
-   "answer": "46",
-   "marks": 2,
-   "difficulty": "core",
-   "source": "generated:division"
   },
   {
    "id": "B5.3.2.1.1-perimeter-area-1",
@@ -780,28 +518,6 @@
    "type": "short",
    "options": null,
    "answer": "147 cm²",
-   "marks": 2,
-   "difficulty": "core",
-   "source": "generated:perimeter-area"
-  },
-  {
-   "id": "B5.3.2.1.3-perimeter-area-1",
-   "indicatorCode": "B5.3.2.1.3",
-   "prompt": "A rectangle is 29 cm long and 20 cm wide. Find its perimeter.",
-   "type": "short",
-   "options": null,
-   "answer": "98 cm",
-   "marks": 2,
-   "difficulty": "core",
-   "source": "generated:perimeter-area"
-  },
-  {
-   "id": "B5.3.2.1.3-perimeter-area-2",
-   "indicatorCode": "B5.3.2.1.3",
-   "prompt": "A rectangle is 29 cm long and 20 cm wide. Find its area.",
-   "type": "short",
-   "options": null,
-   "answer": "580 cm²",
    "marks": 2,
    "difficulty": "core",
    "source": "generated:perimeter-area"

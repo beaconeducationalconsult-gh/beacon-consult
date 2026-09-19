@@ -32,40 +32,23 @@
    "source": "generated:place-value"
   },
   {
-   "id": "B4.1.1.1.2-place-value-1",
+   "id": "B4.1.1.1.2-read-write-numbers-1",
    "indicatorCode": "B4.1.1.1.2",
-   "prompt": "What is the value of the digit 3 in 42,308?",
-   "type": "mcq",
-   "options": [
-    "30",
-    "3",
-    "3,000",
-    "300"
-   ],
-   "answer": "300",
-   "answerLetter": "D",
-   "marks": 1,
-   "difficulty": "core",
-   "source": "generated:place-value"
-  },
-  {
-   "id": "B4.1.1.1.2-place-value-2",
-   "indicatorCode": "B4.1.1.1.2",
-   "prompt": "Write 42,308 in expanded form.",
+   "prompt": "Write 1,266 in words.",
    "type": "short",
    "options": null,
-   "answer": "4 x 10000 + 2 x 1000 + 3 x 100 + 8 x 1",
+   "answer": "one thousand two hundred and sixty-six",
    "marks": 2,
    "difficulty": "core",
-   "source": "generated:place-value"
+   "source": "generated:read-write-numbers"
   },
   {
-   "id": "B4.1.1.1.2-read-write-numbers-3",
+   "id": "B4.1.1.1.2-read-write-numbers-2",
    "indicatorCode": "B4.1.1.1.2",
-   "prompt": "Write 3,130 in words.",
+   "prompt": "Write 'one thousand two hundred and sixty-six' in figures.",
    "type": "short",
    "options": null,
-   "answer": "three thousand one hundred and thirty",
+   "answer": "1,266",
    "marks": 2,
    "difficulty": "core",
    "source": "generated:read-write-numbers"
@@ -73,15 +56,15 @@
   {
    "id": "B4.1.1.1.3-place-value-1",
    "indicatorCode": "B4.1.1.1.3",
-   "prompt": "What is the value of the digit 5 in 65,699?",
+   "prompt": "What is the value of the digit 9 in 7,962?",
    "type": "mcq",
    "options": [
-    "50,000",
-    "500",
-    "5",
-    "5,000"
+    "9,000",
+    "90",
+    "9",
+    "900"
    ],
-   "answer": "5,000",
+   "answer": "900",
    "answerLetter": "D",
    "marks": 1,
    "difficulty": "core",
@@ -90,44 +73,16 @@
   {
    "id": "B4.1.1.1.3-place-value-2",
    "indicatorCode": "B4.1.1.1.3",
-   "prompt": "Write 65,699 in expanded form.",
+   "prompt": "Write 7,962 in expanded form.",
    "type": "short",
    "options": null,
-   "answer": "6 x 10000 + 5 x 1000 + 6 x 100 + 9 x 10 + 9 x 1",
+   "answer": "7 x 1000 + 9 x 100 + 6 x 10 + 2 x 1",
    "marks": 2,
    "difficulty": "core",
    "source": "generated:place-value"
   },
   {
-   "id": "B4.1.1.1.4-place-value-1",
-   "indicatorCode": "B4.1.1.1.4",
-   "prompt": "What is the value of the digit 5 in 7,522?",
-   "type": "mcq",
-   "options": [
-    "5",
-    "5,000",
-    "50",
-    "500"
-   ],
-   "answer": "500",
-   "answerLetter": "D",
-   "marks": 1,
-   "difficulty": "core",
-   "source": "generated:place-value"
-  },
-  {
-   "id": "B4.1.1.1.4-place-value-2",
-   "indicatorCode": "B4.1.1.1.4",
-   "prompt": "Write 7,522 in expanded form.",
-   "type": "short",
-   "options": null,
-   "answer": "7 x 1000 + 5 x 100 + 2 x 10 + 2 x 1",
-   "marks": 2,
-   "difficulty": "core",
-   "source": "generated:place-value"
-  },
-  {
-   "id": "B4.1.1.1.4-compare-order-3",
+   "id": "B4.1.1.1.4-compare-order-1",
    "indicatorCode": "B4.1.1.1.4",
    "prompt": "Which symbol makes this true?  693  ___  8,663",
    "type": "mcq",
@@ -143,35 +98,18 @@
    "source": "generated:compare-order"
   },
   {
-   "id": "B4.1.1.1.5-place-value-1",
-   "indicatorCode": "B4.1.1.1.5",
-   "prompt": "What is the value of the digit 9 in 9,617?",
-   "type": "mcq",
-   "options": [
-    "900",
-    "9",
-    "90,000",
-    "9,000"
-   ],
-   "answer": "9,000",
-   "answerLetter": "D",
-   "marks": 1,
-   "difficulty": "core",
-   "source": "generated:place-value"
-  },
-  {
-   "id": "B4.1.1.1.5-place-value-2",
-   "indicatorCode": "B4.1.1.1.5",
-   "prompt": "Write 9,617 in expanded form.",
+   "id": "B4.1.1.1.4-compare-order-2",
+   "indicatorCode": "B4.1.1.1.4",
+   "prompt": "Arrange in order from smallest to largest: 8,663, 693.",
    "type": "short",
    "options": null,
-   "answer": "9 x 1000 + 6 x 100 + 1 x 10 + 7 x 1",
+   "answer": "693, 8,663",
    "marks": 2,
    "difficulty": "core",
-   "source": "generated:place-value"
+   "source": "generated:compare-order"
   },
   {
-   "id": "B4.1.1.1.5-rounding-3",
+   "id": "B4.1.1.1.5-rounding-1",
    "indicatorCode": "B4.1.1.1.5",
    "prompt": "Round 4,576 to the nearest hundred.",
    "type": "mcq",
@@ -185,33 +123,6 @@
    "marks": 1,
    "difficulty": "core",
    "source": "generated:rounding"
-  },
-  {
-   "id": "B4.1.1.1.6-place-value-1",
-   "indicatorCode": "B4.1.1.1.6",
-   "prompt": "What is the value of the digit 5 in 2,658?",
-   "type": "mcq",
-   "options": [
-    "5",
-    "500",
-    "50"
-   ],
-   "answer": "50",
-   "answerLetter": "C",
-   "marks": 1,
-   "difficulty": "core",
-   "source": "generated:place-value"
-  },
-  {
-   "id": "B4.1.1.1.6-place-value-2",
-   "indicatorCode": "B4.1.1.1.6",
-   "prompt": "Write 2,658 in expanded form.",
-   "type": "short",
-   "options": null,
-   "answer": "2 x 1000 + 6 x 100 + 5 x 10 + 8 x 1",
-   "marks": 2,
-   "difficulty": "core",
-   "source": "generated:place-value"
   },
   {
    "id": "B4.1.1.3.2-hcf-1",
@@ -330,34 +241,7 @@
    "source": "generated:division"
   },
   {
-   "id": "B4.1.3.2.1-compare-order-1",
-   "indicatorCode": "B4.1.3.2.1",
-   "prompt": "Which symbol makes this true?  4,665  ___  5,306",
-   "type": "mcq",
-   "options": [
-    "=",
-    ">",
-    "<"
-   ],
-   "answer": "<",
-   "answerLetter": "C",
-   "marks": 1,
-   "difficulty": "core",
-   "source": "generated:compare-order"
-  },
-  {
-   "id": "B4.1.3.2.1-compare-order-2",
-   "indicatorCode": "B4.1.3.2.1",
-   "prompt": "Arrange in order from smallest to largest: 5,306, 4,665.",
-   "type": "short",
-   "options": null,
-   "answer": "4,665, 5,306",
-   "marks": 2,
-   "difficulty": "core",
-   "source": "generated:compare-order"
-  },
-  {
-   "id": "B4.1.3.2.1-equivalent-fractions-3",
+   "id": "B4.1.3.2.1-equivalent-fractions-1",
    "indicatorCode": "B4.1.3.2.1",
    "prompt": "Which fraction is equivalent to 2/6?",
    "type": "mcq",
@@ -374,132 +258,34 @@
    "source": "generated:equivalent-fractions"
   },
   {
-   "id": "B4.1.4.1.1-place-value-1",
+   "id": "B4.1.4.1.1-decimals-1",
    "indicatorCode": "B4.1.4.1.1",
-   "prompt": "What is the value of the digit 5 in 4,750?",
-   "type": "mcq",
-   "options": [
-    "5",
-    "50",
-    "500"
-   ],
-   "answer": "50",
-   "answerLetter": "B",
-   "marks": 1,
-   "difficulty": "core",
-   "source": "generated:place-value"
-  },
-  {
-   "id": "B4.1.4.1.1-place-value-2",
-   "indicatorCode": "B4.1.4.1.1",
-   "prompt": "Write 4,750 in expanded form.",
+   "prompt": "Write 72.68 as a fraction in its simplest form.",
    "type": "short",
    "options": null,
-   "answer": "4 x 1000 + 7 x 100 + 5 x 10",
-   "marks": 2,
-   "difficulty": "core",
-   "source": "generated:place-value"
-  },
-  {
-   "id": "B4.1.4.1.1-decimals-3",
-   "indicatorCode": "B4.1.4.1.1",
-   "prompt": "Write 27.4 as a fraction in its simplest form.",
-   "type": "short",
-   "options": null,
-   "answer": "137/5",
+   "answer": "1817/25",
    "marks": 2,
    "difficulty": "core",
    "source": "generated:decimals"
   },
   {
-   "id": "B4.1.4.1.2-place-value-1",
+   "id": "B4.1.4.1.2-decimals-1",
    "indicatorCode": "B4.1.4.1.2",
-   "prompt": "What is the value of the digit 3 in 1,637?",
-   "type": "mcq",
-   "options": [
-    "300",
-    "3",
-    "30"
-   ],
-   "answer": "30",
-   "answerLetter": "C",
-   "marks": 1,
-   "difficulty": "core",
-   "source": "generated:place-value"
-  },
-  {
-   "id": "B4.1.4.1.2-place-value-2",
-   "indicatorCode": "B4.1.4.1.2",
-   "prompt": "Write 1,637 in expanded form.",
+   "prompt": "Write 43.49 as a fraction in its simplest form.",
    "type": "short",
    "options": null,
-   "answer": "1 x 1000 + 6 x 100 + 3 x 10 + 7 x 1",
-   "marks": 2,
-   "difficulty": "core",
-   "source": "generated:place-value"
-  },
-  {
-   "id": "B4.1.4.1.2-rounding-3",
-   "indicatorCode": "B4.1.4.1.2",
-   "prompt": "Round 3,090 to the nearest ten.",
-   "type": "mcq",
-   "options": [
-    "3,080",
-    "3,100",
-    "3,090"
-   ],
-   "answer": "3,090",
-   "answerLetter": "C",
-   "marks": 1,
-   "difficulty": "core",
-   "source": "generated:rounding"
-  },
-  {
-   "id": "B4.1.4.1.2-decimals-4",
-   "indicatorCode": "B4.1.4.1.2",
-   "prompt": "Write 90.65 as a fraction in its simplest form.",
-   "type": "short",
-   "options": null,
-   "answer": "1813/20",
+   "answer": "4349/100",
    "marks": 2,
    "difficulty": "core",
    "source": "generated:decimals"
   },
   {
-   "id": "B4.1.4.1.3-place-value-1",
+   "id": "B4.1.4.1.3-decimals-1",
    "indicatorCode": "B4.1.4.1.3",
-   "prompt": "What is the value of the digit 2 in 8,297?",
-   "type": "mcq",
-   "options": [
-    "2",
-    "200",
-    "20",
-    "2,000"
-   ],
-   "answer": "200",
-   "answerLetter": "B",
-   "marks": 1,
-   "difficulty": "core",
-   "source": "generated:place-value"
-  },
-  {
-   "id": "B4.1.4.1.3-place-value-2",
-   "indicatorCode": "B4.1.4.1.3",
-   "prompt": "Write 8,297 in expanded form.",
+   "prompt": "Write 77.5 as a fraction in its simplest form.",
    "type": "short",
    "options": null,
-   "answer": "8 x 1000 + 2 x 100 + 9 x 10 + 7 x 1",
-   "marks": 2,
-   "difficulty": "core",
-   "source": "generated:place-value"
-  },
-  {
-   "id": "B4.1.4.1.3-decimals-3",
-   "indicatorCode": "B4.1.4.1.3",
-   "prompt": "Write 96.0 as a fraction in its simplest form.",
-   "type": "short",
-   "options": null,
-   "answer": "96",
+   "answer": "155/2",
    "marks": 2,
    "difficulty": "core",
    "source": "generated:decimals"
@@ -516,45 +302,18 @@
    "source": "generated:percentage"
   },
   {
-   "id": "B4.1.5.1.2-compare-order-1",
+   "id": "B4.1.5.1.2-decimals-1",
    "indicatorCode": "B4.1.5.1.2",
-   "prompt": "Which symbol makes this true?  4,658  ___  1,359",
-   "type": "mcq",
-   "options": [
-    ">",
-    "<",
-    "="
-   ],
-   "answer": ">",
-   "answerLetter": "A",
-   "marks": 1,
-   "difficulty": "core",
-   "source": "generated:compare-order"
-  },
-  {
-   "id": "B4.1.5.1.2-compare-order-2",
-   "indicatorCode": "B4.1.5.1.2",
-   "prompt": "Arrange in order from smallest to largest: 4,658, 1,359.",
+   "prompt": "Write 13.12 as a fraction in its simplest form.",
    "type": "short",
    "options": null,
-   "answer": "1,359, 4,658",
-   "marks": 2,
-   "difficulty": "core",
-   "source": "generated:compare-order"
-  },
-  {
-   "id": "B4.1.5.1.2-decimals-3",
-   "indicatorCode": "B4.1.5.1.2",
-   "prompt": "Write 98.0 as a fraction in its simplest form.",
-   "type": "short",
-   "options": null,
-   "answer": "98",
+   "answer": "328/25",
    "marks": 2,
    "difficulty": "core",
    "source": "generated:decimals"
   },
   {
-   "id": "B4.1.5.1.2-percentage-4",
+   "id": "B4.1.5.1.2-percentage-2",
    "indicatorCode": "B4.1.5.1.2",
    "prompt": "What is 50% of 120?",
    "type": "short",
@@ -563,61 +322,6 @@
    "marks": 2,
    "difficulty": "core",
    "source": "generated:percentage"
-  },
-  {
-   "id": "B4.2.1.1.1-multiplication-1",
-   "indicatorCode": "B4.2.1.1.1",
-   "prompt": "Multiply: 652 x 13 = ",
-   "type": "short",
-   "options": null,
-   "answer": "8,476",
-   "marks": 2,
-   "difficulty": "core",
-   "source": "generated:multiplication"
-  },
-  {
-   "id": "B4.2.1.1.2-multiplication-1",
-   "indicatorCode": "B4.2.1.1.2",
-   "prompt": "Multiply: 722 x 78 = ",
-   "type": "short",
-   "options": null,
-   "answer": "56,316",
-   "marks": 2,
-   "difficulty": "core",
-   "source": "generated:multiplication"
-  },
-  {
-   "id": "B4.2.1.1.3-multiplication-1",
-   "indicatorCode": "B4.2.1.1.3",
-   "prompt": "Multiply: 657 x 85 = ",
-   "type": "short",
-   "options": null,
-   "answer": "55,845",
-   "marks": 2,
-   "difficulty": "core",
-   "source": "generated:multiplication"
-  },
-  {
-   "id": "B4.3.3.1.1-perimeter-area-1",
-   "indicatorCode": "B4.3.3.1.1",
-   "prompt": "A rectangle is 4 cm long and 19 cm wide. Find its perimeter.",
-   "type": "short",
-   "options": null,
-   "answer": "46 cm",
-   "marks": 2,
-   "difficulty": "core",
-   "source": "generated:perimeter-area"
-  },
-  {
-   "id": "B4.3.3.1.1-perimeter-area-2",
-   "indicatorCode": "B4.3.3.1.1",
-   "prompt": "A rectangle is 4 cm long and 19 cm wide. Find its area.",
-   "type": "short",
-   "options": null,
-   "answer": "76 cm²",
-   "marks": 2,
-   "difficulty": "core",
-   "source": "generated:perimeter-area"
   },
   {
    "id": "B4.3.3.1.2-perimeter-area-1",
@@ -725,17 +429,6 @@
    "type": "short",
    "options": null,
    "answer": "11:20",
-   "marks": 2,
-   "difficulty": "core",
-   "source": "generated:time"
-  },
-  {
-   "id": "B4.3.3.3.3-time-1",
-   "indicatorCode": "B4.3.3.3.3",
-   "prompt": "A lesson starts at 9:00 and lasts 4 hour(s) 20 minutes. What time does it end?",
-   "type": "short",
-   "options": null,
-   "answer": "13:20",
    "marks": 2,
    "difficulty": "core",
    "source": "generated:time"

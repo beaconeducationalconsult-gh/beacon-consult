@@ -1,0 +1,817 @@
+{
+ "subjectId": "mathematics",
+ "grade": "B8",
+ "generatedBy": "scripts/generate_question_bank.py",
+ "items": [
+  {
+   "id": "B8.1.1.2.1-jhs-squares-roots-1",
+   "indicatorCode": "B8.1.1.2.1",
+   "prompt": "Find the square root of 529.",
+   "type": "short",
+   "options": null,
+   "answer": "23",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:jhs-squares-roots"
+  },
+  {
+   "id": "B8.1.1.2.1-jhs-squares-roots-2",
+   "indicatorCode": "B8.1.1.2.1",
+   "prompt": "Which of these numbers is a perfect square?",
+   "type": "mcq",
+   "options": [
+    "529",
+    "530",
+    "531",
+    "528"
+   ],
+   "answer": "529",
+   "answerLetter": "A",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:jhs-squares-roots"
+  },
+  {
+   "id": "B8.1.1.2.1-jhs-sets-3",
+   "indicatorCode": "B8.1.1.2.1",
+   "prompt": "A is the set of factors of 18 and B is the set of factors of 27. List the members of the intersection of A and B.",
+   "type": "short",
+   "options": null,
+   "answer": "1, 3, 9",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:jhs-sets"
+  },
+  {
+   "id": "B8.1.1.2.2-jhs-sets-1",
+   "indicatorCode": "B8.1.1.2.2",
+   "prompt": "A is the set of factors of 12 and B is the set of factors of 18. List the members of the intersection of A and B.",
+   "type": "short",
+   "options": null,
+   "answer": "1, 2, 3, 6",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:jhs-sets"
+  },
+  {
+   "id": "B8.1.1.2.2-jhs-sets-2",
+   "indicatorCode": "B8.1.1.2.2",
+   "prompt": "How many members are in the union of the two sets?",
+   "type": "mcq",
+   "options": [
+    "7",
+    "4",
+    "8",
+    "5"
+   ],
+   "answer": "8",
+   "answerLetter": "C",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:jhs-sets"
+  },
+  {
+   "id": "B8.1.2.1.1-multiples-1",
+   "indicatorCode": "B8.1.2.1.1",
+   "prompt": "Write the first five multiples of 10.",
+   "type": "short",
+   "options": null,
+   "answer": "10, 20, 30, 40, 50",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:multiples"
+  },
+  {
+   "id": "B8.1.2.1.1-multiples-2",
+   "indicatorCode": "B8.1.2.1.1",
+   "prompt": "Which of these is a multiple of 10?",
+   "type": "mcq",
+   "options": [
+    "32",
+    "29",
+    "30",
+    "31"
+   ],
+   "answer": "30",
+   "answerLetter": "C",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:multiples"
+  },
+  {
+   "id": "B8.1.2.1.1-multiplication-3",
+   "indicatorCode": "B8.1.2.1.1",
+   "prompt": "Multiply: 343 x 72 = ",
+   "type": "short",
+   "options": null,
+   "answer": "24,696",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:multiplication"
+  },
+  {
+   "id": "B8.1.2.1.1-division-4",
+   "indicatorCode": "B8.1.2.1.1",
+   "prompt": "Divide: 480 ÷ 15 = ",
+   "type": "short",
+   "options": null,
+   "answer": "32",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:division"
+  },
+  {
+   "id": "B8.1.2.1.1-decimals-5",
+   "indicatorCode": "B8.1.2.1.1",
+   "prompt": "Write 93.9 as a fraction in its simplest form.",
+   "type": "short",
+   "options": null,
+   "answer": "939/10",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:decimals"
+  },
+  {
+   "id": "B8.1.2.2.2-multiplication-1",
+   "indicatorCode": "B8.1.2.2.2",
+   "prompt": "Multiply: 673 x 69 = ",
+   "type": "short",
+   "options": null,
+   "answer": "46,437",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:multiplication"
+  },
+  {
+   "id": "B8.1.2.2.2-division-2",
+   "indicatorCode": "B8.1.2.2.2",
+   "prompt": "Divide: 418 ÷ 22 = ",
+   "type": "short",
+   "options": null,
+   "answer": "19",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:division"
+  },
+  {
+   "id": "B8.1.2.2.3-decimals-1",
+   "indicatorCode": "B8.1.2.2.3",
+   "prompt": "Write 49.2 as a fraction in its simplest form.",
+   "type": "short",
+   "options": null,
+   "answer": "246/5",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:decimals"
+  },
+  {
+   "id": "B8.1.2.3.1-jhs-laws-of-indices-1",
+   "indicatorCode": "B8.1.2.3.1",
+   "prompt": "Simplify 2^5 x 2^3, leaving your answer in index form.",
+   "type": "mcq",
+   "options": [
+    "16",
+    "2^2",
+    "2^15",
+    "2^8"
+   ],
+   "answer": "2^8",
+   "answerLetter": "D",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:jhs-laws-of-indices"
+  },
+  {
+   "id": "B8.1.2.3.1-jhs-laws-of-indices-2",
+   "indicatorCode": "B8.1.2.3.1",
+   "prompt": "Simplify 2^8 ÷ 2^3, leaving your answer in index form.",
+   "type": "short",
+   "options": null,
+   "answer": "2^5",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:jhs-laws-of-indices"
+  },
+  {
+   "id": "B8.1.2.3.1-jhs-laws-of-indices-3",
+   "indicatorCode": "B8.1.2.3.1",
+   "prompt": "Simplify (2^2)^3, leaving your answer in index form.",
+   "type": "short",
+   "options": null,
+   "answer": "2^6",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:jhs-laws-of-indices"
+  },
+  {
+   "id": "B8.1.2.3.2-jhs-index-form-1",
+   "indicatorCode": "B8.1.2.3.2",
+   "prompt": "Find the value of 4^5.",
+   "type": "mcq",
+   "options": [
+    "1,020",
+    "20",
+    "1,024",
+    "1,028"
+   ],
+   "answer": "1,024",
+   "answerLetter": "C",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:jhs-index-form"
+  },
+  {
+   "id": "B8.1.2.3.2-jhs-index-form-2",
+   "indicatorCode": "B8.1.2.3.2",
+   "prompt": "What is the value of 4^0?",
+   "type": "mcq",
+   "options": [
+    "0",
+    "4",
+    "10",
+    "1"
+   ],
+   "answer": "1",
+   "answerLetter": "D",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:jhs-index-form"
+  },
+  {
+   "id": "B8.1.2.3.2-jhs-index-form-3",
+   "indicatorCode": "B8.1.2.3.2",
+   "prompt": "Write 2,250 as a product of its prime factors, in index form.",
+   "type": "short",
+   "options": null,
+   "answer": "2 x 3^2 x 5^3",
+   "marks": 3,
+   "difficulty": "core",
+   "source": "generated:jhs-index-form"
+  },
+  {
+   "id": "B8.1.2.3.2-jhs-laws-of-indices-4",
+   "indicatorCode": "B8.1.2.3.2",
+   "prompt": "Simplify 3^4 x 3^3, leaving your answer in index form.",
+   "type": "mcq",
+   "options": [
+    "3^12",
+    "3^7",
+    "21",
+    "3^1"
+   ],
+   "answer": "3^7",
+   "answerLetter": "B",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:jhs-laws-of-indices"
+  },
+  {
+   "id": "B8.1.2.3.3-jhs-exponential-equations-1",
+   "indicatorCode": "B8.1.2.3.3",
+   "prompt": "Solve for x: 2^x = 32.",
+   "type": "short",
+   "options": null,
+   "answer": "5",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:jhs-exponential-equations"
+  },
+  {
+   "id": "B8.1.2.3.4-jhs-index-form-1",
+   "indicatorCode": "B8.1.2.3.4",
+   "prompt": "Find the value of 3^2.",
+   "type": "mcq",
+   "options": [
+    "6",
+    "12",
+    "9"
+   ],
+   "answer": "9",
+   "answerLetter": "C",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:jhs-index-form"
+  },
+  {
+   "id": "B8.1.2.3.4-jhs-index-form-2",
+   "indicatorCode": "B8.1.2.3.4",
+   "prompt": "What is the value of 3^0?",
+   "type": "mcq",
+   "options": [
+    "3",
+    "10",
+    "1",
+    "0"
+   ],
+   "answer": "1",
+   "answerLetter": "C",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:jhs-index-form"
+  },
+  {
+   "id": "B8.1.2.3.4-jhs-index-form-3",
+   "indicatorCode": "B8.1.2.3.4",
+   "prompt": "Write 360 as a product of its prime factors, in index form.",
+   "type": "short",
+   "options": null,
+   "answer": "2^3 x 3^2 x 5",
+   "marks": 3,
+   "difficulty": "core",
+   "source": "generated:jhs-index-form"
+  },
+  {
+   "id": "B8.1.3.1.1-jhs-fraction-operations-1",
+   "indicatorCode": "B8.1.3.1.1",
+   "prompt": "Simplify: 1 + 1/2",
+   "type": "short",
+   "options": null,
+   "answer": "3/2",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:jhs-fraction-operations"
+  },
+  {
+   "id": "B8.1.3.1.1-jhs-fraction-operations-2",
+   "indicatorCode": "B8.1.3.1.1",
+   "prompt": "Simplify: 1 x 1/2",
+   "type": "short",
+   "options": null,
+   "answer": "1/2",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:jhs-fraction-operations"
+  },
+  {
+   "id": "B8.1.3.1.1-jhs-fraction-operations-3",
+   "indicatorCode": "B8.1.3.1.1",
+   "prompt": "Simplify: 1 ÷ 1/2",
+   "type": "short",
+   "options": null,
+   "answer": "2",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:jhs-fraction-operations"
+  },
+  {
+   "id": "B8.1.3.1.2-multiplication-1",
+   "indicatorCode": "B8.1.3.1.2",
+   "prompt": "Multiply: 91 x 55 = ",
+   "type": "short",
+   "options": null,
+   "answer": "5,005",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:multiplication"
+  },
+  {
+   "id": "B8.1.3.1.2-division-2",
+   "indicatorCode": "B8.1.3.1.2",
+   "prompt": "Divide: 105 ÷ 3 = ",
+   "type": "short",
+   "options": null,
+   "answer": "35",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:division"
+  },
+  {
+   "id": "B8.1.3.1.3-jhs-fraction-operations-1",
+   "indicatorCode": "B8.1.3.1.3",
+   "prompt": "Simplify: 5/8 + 3/8",
+   "type": "short",
+   "options": null,
+   "answer": "1",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:jhs-fraction-operations"
+  },
+  {
+   "id": "B8.1.3.1.3-jhs-fraction-operations-2",
+   "indicatorCode": "B8.1.3.1.3",
+   "prompt": "Simplify: 5/8 x 3/8",
+   "type": "short",
+   "options": null,
+   "answer": "15/64",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:jhs-fraction-operations"
+  },
+  {
+   "id": "B8.1.3.1.3-jhs-fraction-operations-3",
+   "indicatorCode": "B8.1.3.1.3",
+   "prompt": "Simplify: 5/8 ÷ 3/8",
+   "type": "short",
+   "options": null,
+   "answer": "5/3",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:jhs-fraction-operations"
+  },
+  {
+   "id": "B8.1.4.1.1-multiplication-1",
+   "indicatorCode": "B8.1.4.1.1",
+   "prompt": "Multiply: 131 x 27 = ",
+   "type": "short",
+   "options": null,
+   "answer": "3,537",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:multiplication"
+  },
+  {
+   "id": "B8.1.4.1.1-division-2",
+   "indicatorCode": "B8.1.4.1.1",
+   "prompt": "Divide: 910 ÷ 13 = ",
+   "type": "short",
+   "options": null,
+   "answer": "70",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:division"
+  },
+  {
+   "id": "B8.1.4.1.2-jhs-rate-speed-1",
+   "indicatorCode": "B8.1.4.1.2",
+   "prompt": "A car travels 300 km in 4 hours. Find its average speed in km/h.",
+   "type": "short",
+   "options": null,
+   "answer": "75 km/h",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:jhs-rate-speed"
+  },
+  {
+   "id": "B8.1.4.1.2-jhs-rate-speed-2",
+   "indicatorCode": "B8.1.4.1.2",
+   "prompt": "A trader sells one book for GH¢2. Find the cost of 9 of the same book.",
+   "type": "short",
+   "options": null,
+   "answer": "GH¢18",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:jhs-rate-speed"
+  },
+  {
+   "id": "B8.1.4.1.4-jhs-ratio-1",
+   "indicatorCode": "B8.1.4.1.4",
+   "prompt": "Express 12:28 in its simplest form.",
+   "type": "short",
+   "options": null,
+   "answer": "3:7",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:jhs-ratio"
+  },
+  {
+   "id": "B8.1.4.1.4-jhs-ratio-2",
+   "indicatorCode": "B8.1.4.1.4",
+   "prompt": "Find the value of x in the proportion 3:7 = 12:x.",
+   "type": "short",
+   "options": null,
+   "answer": "28",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:jhs-ratio"
+  },
+  {
+   "id": "B8.1.4.1.5-jhs-ratio-1",
+   "indicatorCode": "B8.1.4.1.5",
+   "prompt": "Express 18:24 in its simplest form.",
+   "type": "short",
+   "options": null,
+   "answer": "3:4",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:jhs-ratio"
+  },
+  {
+   "id": "B8.1.4.1.5-jhs-ratio-2",
+   "indicatorCode": "B8.1.4.1.5",
+   "prompt": "Find the value of x in the proportion 3:4 = 18:x.",
+   "type": "short",
+   "options": null,
+   "answer": "24",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:jhs-ratio"
+  },
+  {
+   "id": "B8.1.4.1.5-jhs-rate-speed-3",
+   "indicatorCode": "B8.1.4.1.5",
+   "prompt": "A car travels 160 km in 2 hours. Find its average speed in km/h.",
+   "type": "short",
+   "options": null,
+   "answer": "80 km/h",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:jhs-rate-speed"
+  },
+  {
+   "id": "B8.2.3.1.1-jhs-inequalities-1",
+   "indicatorCode": "B8.2.3.1.1",
+   "prompt": "Solve the inequality 5x + 7 < 27.",
+   "type": "short",
+   "options": null,
+   "answer": "x < 4",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:jhs-inequalities"
+  },
+  {
+   "id": "B8.2.3.1.1-jhs-inequalities-2",
+   "indicatorCode": "B8.2.3.1.1",
+   "prompt": "List the members of the solution set of 5x + 7 < 27 from {0, 1, 2, 3, 4, 5, 6, 7}.",
+   "type": "short",
+   "options": null,
+   "answer": "0, 1, 2, 3",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:jhs-inequalities"
+  },
+  {
+   "id": "B8.2.3.1.2-jhs-inequalities-1",
+   "indicatorCode": "B8.2.3.1.2",
+   "prompt": "Solve the inequality 5x + 2 < 27.",
+   "type": "short",
+   "options": null,
+   "answer": "x < 5",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:jhs-inequalities"
+  },
+  {
+   "id": "B8.2.3.1.2-jhs-inequalities-2",
+   "indicatorCode": "B8.2.3.1.2",
+   "prompt": "List the members of the solution set of 5x + 2 < 27 from {0, 1, 2, 3, 4, 5, 6, 7, 8}.",
+   "type": "short",
+   "options": null,
+   "answer": "0, 1, 2, 3, 4",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:jhs-inequalities"
+  },
+  {
+   "id": "B8.2.3.1.3-jhs-inequalities-1",
+   "indicatorCode": "B8.2.3.1.3",
+   "prompt": "Solve the inequality 6x + 6 < 30.",
+   "type": "short",
+   "options": null,
+   "answer": "x < 4",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:jhs-inequalities"
+  },
+  {
+   "id": "B8.2.3.1.3-jhs-inequalities-2",
+   "indicatorCode": "B8.2.3.1.3",
+   "prompt": "List the members of the solution set of 6x + 6 < 30 from {0, 1, 2, 3, 4, 5, 6, 7}.",
+   "type": "short",
+   "options": null,
+   "answer": "0, 1, 2, 3",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:jhs-inequalities"
+  },
+  {
+   "id": "B8.2.12.1.3-jhs-substitution-1",
+   "indicatorCode": "B8.2.12.1.3",
+   "prompt": "Evaluate 2a + 4b when a = 3 and b = 2.",
+   "type": "short",
+   "options": null,
+   "answer": "14",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:jhs-substitution"
+  },
+  {
+   "id": "B8.2.12.1.3-jhs-substitution-2",
+   "indicatorCode": "B8.2.12.1.3",
+   "prompt": "Use the formula P = 2(l + b) to find P when l = 15 cm and b = 8 cm.",
+   "type": "short",
+   "options": null,
+   "answer": "46 cm",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:jhs-substitution"
+  },
+  {
+   "id": "B8.3.1.1.2-jhs-angles-1",
+   "indicatorCode": "B8.3.1.1.2",
+   "prompt": "Two angles are complementary. One of them is 57°. Find the other.",
+   "type": "mcq",
+   "options": [
+    "123°",
+    "147°",
+    "57°",
+    "33°"
+   ],
+   "answer": "33°",
+   "answerLetter": "D",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:jhs-angles"
+  },
+  {
+   "id": "B8.3.1.1.2-jhs-angles-2",
+   "indicatorCode": "B8.3.1.1.2",
+   "prompt": "Two of the angles of a triangle are 42° and 53°. Find the third angle.",
+   "type": "short",
+   "options": null,
+   "answer": "85°",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:jhs-angles"
+  },
+  {
+   "id": "B8.3.1.1.2-jhs-angles-3",
+   "indicatorCode": "B8.3.1.1.2",
+   "prompt": "Find the sum of the interior angles of a polygon with 10 sides.",
+   "type": "short",
+   "options": null,
+   "answer": "1440°",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:jhs-angles"
+  },
+  {
+   "id": "B8.3.2.1.2-jhs-pythagoras-1",
+   "indicatorCode": "B8.3.2.1.2",
+   "prompt": "In a right-angled triangle the two shorter sides are 7 cm and 24 cm. Find the length of the hypotenuse.",
+   "type": "short",
+   "options": null,
+   "answer": "25 cm",
+   "marks": 3,
+   "difficulty": "core",
+   "source": "generated:jhs-pythagoras"
+  },
+  {
+   "id": "B8.3.2.1.2-jhs-pythagoras-2",
+   "indicatorCode": "B8.3.2.1.2",
+   "prompt": "The hypotenuse of a right-angled triangle is 25 cm and one of the shorter sides is 7 cm. Find the length of the third side.",
+   "type": "short",
+   "options": null,
+   "answer": "24 cm",
+   "marks": 3,
+   "difficulty": "core",
+   "source": "generated:jhs-pythagoras"
+  },
+  {
+   "id": "B8.3.2.1.3-jhs-pythagoras-1",
+   "indicatorCode": "B8.3.2.1.3",
+   "prompt": "In a right-angled triangle the two shorter sides are 3 cm and 4 cm. Find the length of the hypotenuse.",
+   "type": "short",
+   "options": null,
+   "answer": "5 cm",
+   "marks": 3,
+   "difficulty": "core",
+   "source": "generated:jhs-pythagoras"
+  },
+  {
+   "id": "B8.3.2.1.3-jhs-pythagoras-2",
+   "indicatorCode": "B8.3.2.1.3",
+   "prompt": "The hypotenuse of a right-angled triangle is 5 cm and one of the shorter sides is 3 cm. Find the length of the third side.",
+   "type": "short",
+   "options": null,
+   "answer": "4 cm",
+   "marks": 3,
+   "difficulty": "core",
+   "source": "generated:jhs-pythagoras"
+  },
+  {
+   "id": "B8.4.1.2.1-jhs-central-tendency-1",
+   "indicatorCode": "B8.4.1.2.1",
+   "prompt": "Find the mean of the following data: 3, 5, 8, 8, 17, 19.",
+   "type": "short",
+   "options": null,
+   "answer": "10",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:jhs-central-tendency"
+  },
+  {
+   "id": "B8.4.1.2.1-jhs-central-tendency-2",
+   "indicatorCode": "B8.4.1.2.1",
+   "prompt": "Find the median of the following data: 3, 5, 8, 8, 17, 19.",
+   "type": "short",
+   "options": null,
+   "answer": "8",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:jhs-central-tendency"
+  },
+  {
+   "id": "B8.4.1.2.1-jhs-central-tendency-3",
+   "indicatorCode": "B8.4.1.2.1",
+   "prompt": "State the mode of the following data: 3, 5, 8, 8, 17, 19.",
+   "type": "mcq",
+   "options": [
+    "5",
+    "3",
+    "8",
+    "17",
+    "19"
+   ],
+   "answer": "8",
+   "answerLetter": "C",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:jhs-central-tendency"
+  },
+  {
+   "id": "B8.4.1.2.2-jhs-central-tendency-1",
+   "indicatorCode": "B8.4.1.2.2",
+   "prompt": "Find the mean of the following data: 5, 8, 12, 12, 16, 19.",
+   "type": "short",
+   "options": null,
+   "answer": "12",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:jhs-central-tendency"
+  },
+  {
+   "id": "B8.4.1.2.2-jhs-central-tendency-2",
+   "indicatorCode": "B8.4.1.2.2",
+   "prompt": "Find the median of the following data: 5, 8, 12, 12, 16, 19.",
+   "type": "short",
+   "options": null,
+   "answer": "12",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:jhs-central-tendency"
+  },
+  {
+   "id": "B8.4.1.2.2-jhs-central-tendency-3",
+   "indicatorCode": "B8.4.1.2.2",
+   "prompt": "State the mode of the following data: 5, 8, 12, 12, 16, 19.",
+   "type": "mcq",
+   "options": [
+    "16",
+    "8",
+    "12",
+    "19",
+    "5"
+   ],
+   "answer": "12",
+   "answerLetter": "C",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:jhs-central-tendency"
+  },
+  {
+   "id": "B8.4.2.1.1-jhs-probability-1",
+   "indicatorCode": "B8.4.2.1.1",
+   "prompt": "A bag contains 2 red, 6 blue and 2 green bottle tops. One bottle top is picked at random. Find the probability that it is red.",
+   "type": "short",
+   "options": null,
+   "answer": "1/5",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:jhs-probability"
+  },
+  {
+   "id": "B8.4.2.1.1-jhs-probability-2",
+   "indicatorCode": "B8.4.2.1.1",
+   "prompt": "A bag contains 2 red, 6 blue and 2 green bottle tops. Two bottle tops are picked one after the other, the first one being replaced before the second is picked. Find the probability that both are red.",
+   "type": "short",
+   "options": null,
+   "answer": "1/25",
+   "marks": 3,
+   "difficulty": "core",
+   "source": "generated:jhs-probability"
+  },
+  {
+   "id": "B8.4.2.1.1-jhs-probability-3",
+   "indicatorCode": "B8.4.2.1.1",
+   "prompt": "A bag contains 2 red, 6 blue and 2 green bottle tops. Two bottle tops are picked one after the other, without replacement. Find the probability that the first is red and the second is blue.",
+   "type": "short",
+   "options": null,
+   "answer": "2/15",
+   "marks": 3,
+   "difficulty": "core",
+   "source": "generated:jhs-probability"
+  },
+  {
+   "id": "B8.4.2.1.2-decimals-1",
+   "indicatorCode": "B8.4.2.1.2",
+   "prompt": "Write 83.5 as a fraction in its simplest form.",
+   "type": "short",
+   "options": null,
+   "answer": "167/2",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:decimals"
+  },
+  {
+   "id": "B8.4.2.1.2-percentage-2",
+   "indicatorCode": "B8.4.2.1.2",
+   "prompt": "What is 20% of 80?",
+   "type": "short",
+   "options": null,
+   "answer": "16",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:percentage"
+  }
+ ]
+}

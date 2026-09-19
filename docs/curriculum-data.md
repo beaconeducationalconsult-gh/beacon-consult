@@ -282,7 +282,7 @@ Two scripts, split so that generating data and validating it never happen in the
 
 | Script | Does |
 |---|---|
-| `scripts/generate_question_bank.py` | writes `data/questions/<subject>/<grade>.generated.json` from **rules** — report by default, `--apply` writes |
+| `scripts/generate_question_bank.py` | writes `data/questions/<subject>/<grade>.generated.json` from **rules** — report by default, `--apply` writes, `--verify` fails if the committed files have drifted (this is what `make check` runs) |
 | `scripts/build_question_bank.py` | merges authored + generated, validates both against the served indicators, writes the bundle — report by default, `--apply` writes |
 
 * **Authored files are never touched by the generator**: `data/questions/<subject>/<grade>.json`
@@ -292,14 +292,28 @@ Two scripts, split so that generating data and validating it never happen in the
   generated copy keeps it into Firestore as `source`, with the item's own id as `starterBankId`.
   A teacher can always see which questions a machine wrote and which rule produced them.
 * **A generated item is correct by construction.** Each rule states its numbers in the prompt and
-  the script computes the answer (`r_place_value`, `r_round`, `r_hcf`, `r_lcm`, …); the reviewer
-  checks the rule, not 227 items. Rules follow the indicator's own wording for the number range
-  ("up to 10,000") and only fire where the wording matches, so an indicator no rule matches gets
-  no questions rather than a padded one.
-* **Coverage is printed and indexed, not assumed**: today 227 questions, 118 of the 248 indicators
-  in the five subject-grades they cover (48%), against 4,040 indicators served overall. Only
-  `mathematics` B2–B6 is generated — the rules are arithmetic, and at B7–B9 the same words appear
-  in algebra and geometry indicators where an arithmetic item would be wrong.
+  the script computes the answer (`r_place_value`, `r_round`, `r_hcf`, `r_lcm`, `r_jhs_pythagoras`,
+  …); the reviewer checks the rule, not 376 items. Rules follow the indicator's own wording for the
+  number range ("up to 10,000", "four-digit numbers", "more than 1,000,000,000") and only fire
+  where the wording matches, so an indicator no rule matches gets no questions rather than a
+  padded one.
+* **Two grade bands, because the vocabulary is shared and the answers are not.** The primary rules
+  (B2–B6) are arithmetic over primary wording; the JHS rules (B7–B9) were written for JHS wording,
+  where "multiply" usually means binomials. Every rule declares its band, and a shared rule carries
+  a `veto` for the wording that would make it misfire (rounding must not answer an indicator about
+  decimal places). Where the syllabus wants a construction — bisect an angle, draw a net, plot a
+  locus — there is deliberately no rule: that is classroom work, not a printed question.
+* **Coverage is printed and indexed, not assumed**: today 378 questions (2 authored, 376
+  generated), 186 of the 407 indicators in the eight subject-grades they cover (46%), against 4,040
+  indicators served overall — B7 102, B8 67, B9 72, the rest in B2–B6.
+* **Rules read the indicator, never the content standard.** `ind_desc` is the sentence a teacher
+  teaches; `cs_desc` is the heading above it, and at JHS it shares nearly all of its vocabulary
+  with indicators it does not describe — matching on it produced money questions on a
+  data-collection indicator (the word "cost" inside "…taking into consideration…"). Word boundaries
+  matter for the same reason: "cedi" is inside "preceding", "mode" inside "Model".
+* **`--verify` makes the committed bank a check, not a snapshot.** `make check` regenerates every
+  file in memory and fails if one differs by a character, so a rule that starts or stops firing
+  cannot reach a teacher unnoticed.
 * The build fails on an orphan (`indicatorCode` not served for that subject in that grade), an MCQ
   whose answer is not among its options, a repeated option, a missing prompt/answer/marks, or a
   duplicate id. `scripts/validate_app_curriculum.py` re-checks the committed bank against the

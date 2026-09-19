@@ -4,36 +4,51 @@
  "subjects": {
   "mathematics": {
    "B2": {
-    "questions": 25,
+    "questions": 20,
     "indicators": 29,
-    "coveredIndicators": 14
+    "coveredIndicators": 11
    },
    "B3": {
-    "questions": 30,
+    "questions": 15,
     "indicators": 39,
-    "coveredIndicators": 18
+    "coveredIndicators": 10
    },
    "B4": {
-    "questions": 61,
+    "questions": 38,
     "indicators": 71,
-    "coveredIndicators": 32
+    "coveredIndicators": 26
    },
    "B5": {
-    "questions": 67,
+    "questions": 45,
     "indicators": 67,
-    "coveredIndicators": 36
+    "coveredIndicators": 30
    },
    "B6": {
-    "questions": 44,
+    "questions": 19,
     "indicators": 42,
-    "coveredIndicators": 18
+    "coveredIndicators": 13
+   },
+   "B7": {
+    "questions": 102,
+    "indicators": 67,
+    "coveredIndicators": 41
+   },
+   "B8": {
+    "questions": 67,
+    "indicators": 49,
+    "coveredIndicators": 27
+   },
+   "B9": {
+    "questions": 72,
+    "indicators": 43,
+    "coveredIndicators": 28
    }
   }
  },
  "totals": {
-  "questions": 227,
-  "indicatorsInPacks": 248,
-  "indicatorsCovered": 118,
+  "questions": 378,
+  "indicatorsInPacks": 407,
+  "indicatorsCovered": 186,
   "indicatorsServed": 4040
  }
 }

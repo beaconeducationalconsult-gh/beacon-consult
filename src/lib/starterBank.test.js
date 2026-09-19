@@ -46,6 +46,37 @@ describe('the served starter bank', () => {
     }
   })
 
+  it('serves a JHS bank, not just a primary one', () => {
+    // B7-B9 used to be empty on purpose: the primary rules are arithmetic, and at
+    // JHS the same words sit inside algebra and geometry indicators. The JHS rules
+    // exist now, and this holds them in place — a grade that quietly lost its bank
+    // (or a rule that stopped firing) fails here rather than in a teacher's paper.
+    for (const grade of ['B7', 'B8', 'B9']) {
+      const pack = read(`questions/mathematics/${grade}.json`)
+      expect(pack.items.length, `${grade} items`).toBeGreaterThanOrEqual(60)
+      expect(pack.coveredIndicators, `${grade} coverage`).toBeGreaterThanOrEqual(25)
+      expect(read('questions/_index.json').subjects.mathematics[grade].questions).toBe(pack.items.length)
+    }
+  })
+
+  it('labels every generated item with the rule that produced it', () => {
+    // The provenance is the review surface: a teacher (or an audit) reads the
+    // rule, not 376 items. Authored items carry `authored` instead.
+    for (const [subject, grades] of Object.entries(index.subjects)) {
+      for (const grade of Object.keys(grades)) {
+        for (const item of read(`questions/${subject}/${grade}.json`).items) {
+          expect(['authored', 'generated'], `${item.id} source kind`).toContain(
+            String(item.source).split(':')[0]
+          )
+          if (String(item.source).startsWith('generated:')) {
+            expect(String(item.source), `${item.id} rule id`).toMatch(/^generated:[a-z0-9-]+$/)
+          }
+          expect(item.indicatorCode.startsWith(grade), `${item.id} hangs off another grade`).toBe(true)
+        }
+      }
+    }
+  })
+
   it('gives every multiple-choice question an answer among its options', () => {
     for (const [subject, grades] of Object.entries(index.subjects)) {
       for (const grade of Object.keys(grades)) {
