@@ -41,13 +41,14 @@ list queries the new build makes.
 The rules can also be asked directly, before publishing anything:
 
 ```bash
-yarn test:rules     # Firestore emulator + tests/rules/ (needs Java 21)
+yarn test:rules     # Firestore + Storage emulators, tests/rules/ (needs Java 21)
 ```
 
 That suite is the permission matrix — a pending member refused, an un-filtered list denied, a
-like unable to inflate its tally, a library record unable to point at another member's folder.
-It needs a JVM and downloads firebase-tools plus the emulator jar, which is why it is not part
-of `make check`; CI runs it in its own job.
+like unable to inflate its tally, a library record unable to point at another member's folder,
+and the files themselves: an upload only under your own uid, the 8 MB cap, reads owner-or-admin,
+everything outside `generated/` denied. It needs a JVM and downloads firebase-tools plus the
+emulator jars, which is why it is not part of `make check`; CI runs it in its own job.
 
 ## 2. The flows (needs a signed-in account on the live project)
 

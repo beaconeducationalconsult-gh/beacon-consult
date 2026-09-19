@@ -2,13 +2,13 @@ import { defineConfig } from 'vitest/config'
 
 /*
  * The emulator config. Deliberately separate from vitest.config.js: these tests
- * need a running Firestore emulator (a JVM program), so they cannot be part of
- * `make check` — `yarn test` only ever collects `src/**`. Run them with:
+ * need running Firestore and Storage emulators (JVM programs), so they cannot be
+ * part of `make check` — `yarn test` only ever collects `src/**`. Run them with:
  *
  *   yarn test:rules
  *
- * which starts the emulator, runs this config, and shuts the emulator down
- * again. CI runs the same command (the `rules` job in .github/workflows/ci.yml).
+ * which starts both emulators, runs this config, and shuts them down again.
+ * CI runs the same command (the `rules` job in .github/workflows/ci.yml).
  */
 export default defineConfig({
   test: {
