@@ -1,6 +1,399 @@
 {
  "cut": [
   {
+   "file": "career-technology_B8_curriculum_db_clean.json",
+   "code": "B8.2.2.1.1",
+   "marker": "numbered exemplar",
+   "kind": "repeats",
+   "before": "Explain the basic properties of resistant materials 1. Discuss the physical properties of resistant materials",
+   "after": "Explain the basic properties of resistant materials",
+   "removed": "Discuss the physical properties of resistant materials",
+   "furniture": [],
+   "rowAnchored": false,
+   "pages": [
+    85
+   ],
+   "print_head": "",
+   "ratio": 0.0,
+   "verified": false,
+   "reason": "print reads the lead differently (0.00)"
+  },
+  {
+   "file": "career-technology_B8_curriculum_db_clean.json",
+   "code": "B8.2.2.1.2",
+   "marker": "numbered exemplar",
+   "kind": "repeats",
+   "before": "Describe the properties of building materials 1. Describe the properties of cement, sand, stones",
+   "after": "Describe the properties of building materials",
+   "removed": "Describe the properties of cement, sand, stones",
+   "furniture": [],
+   "rowAnchored": false,
+   "pages": [],
+   "print_head": "",
+   "ratio": 0.0,
+   "verified": false,
+   "reason": "indicator not in the print"
+  },
+  {
+   "file": "career-technology_B8_curriculum_db_clean.json",
+   "code": "B8.6.1.1.1",
+   "marker": "numbered exemplar",
+   "kind": "repeats",
+   "before": "Explore the various career pathways and opportunities in Career Technology,,. 1. Research in groups, the various career pathways and opportunities using different sources. 2. Write a brief report and present in class. 3. Examine your interests, skills a",
+   "after": "Explore the various career pathways and opportunities in Career Technology,,.",
+   "removed": "Research in groups, the various career pathways and opportunities using different sources. 2. Write a brief report and present in class. 3. Examine your interests, skills a",
+   "furniture": [],
+   "rowAnchored": true,
+   "pages": [
+    111
+   ],
+   "print_head": "Explore the various career pathways and opportunities in Career Technology",
+   "ratio": 1.0,
+   "verified": true
+  },
+  {
+   "file": "creative-arts_B5_curriculum_db_clean.json",
+   "code": "B5.1.1.1.2",
+   "marker": "learners are to",
+   "kind": "dangling",
+   "before": "Explore to generate ideas by studying visual artworks created by selected Ghanaian and other African visual artists living in Africa that reflect the history and culture of the people of Africa Learners are to",
+   "after": "Explore to generate ideas by studying visual artworks created by selected Ghanaian and other African visual artists living in Africa that reflect the history and culture of the people of Africa",
+   "removed": "",
+   "furniture": [],
+   "rowAnchored": true,
+   "pages": [
+    62
+   ],
+   "print_head": "Explore to generate ideas by study ing visual art works created by selected Ghanaian and other African visual artists living in Africa that reflect the history and culture of the people of Africa",
+   "ratio": 1.0,
+   "verified": true
+  },
+  {
+   "file": "creative-arts_B5_curriculum_db_clean.json",
+   "code": "B5.1.1.1.3",
+   "marker": "learners are to",
+   "kind": "dangling",
+   "before": "Study some artworks created by Ghanaian and other African visual artists studied that reflect the physical and social environments of some African communities Learners are to",
+   "after": "Study some artworks created by Ghanaian and other African visual artists studied that reflect the physical and social environments of some African communities",
+   "removed": "",
+   "furniture": [],
+   "rowAnchored": false,
+   "pages": [],
+   "print_head": "",
+   "ratio": 0.0,
+   "verified": false,
+   "reason": "indicator not in the print"
+  },
+  {
+   "file": "creative-arts_B5_curriculum_db_clean.json",
+   "code": "B5.1.1.1.4",
+   "marker": "learners are to",
+   "kind": "dangling",
+   "before": "Generate own ideas for designing and creating own visual artworks that reflect the physical and social environments of some African communities Learners are to",
+   "after": "Generate own ideas for designing and creating own visual artworks that reflect the physical and social environments of some African communities",
+   "removed": "",
+   "furniture": [],
+   "rowAnchored": false,
+   "pages": [
+    98
+   ],
+   "print_head": "INDICATORS AND EXEMPLARS B 6 . 1.1.1.4 Generate own ideas for designing and creating own visual artworks based on the physical and social environment s of some communities in the world",
+   "ratio": 0.87,
+   "verified": false,
+   "reason": "print reads the lead differently (0.87)"
+  },
+  {
+   "file": "creative-arts_B5_curriculum_db_clean.json",
+   "code": "B5.1.1.1.5",
+   "marker": "learners are to",
+   "kind": "dangling",
+   "before": "Study the artworks of Ghanaian and other African visual artists that reflect topical issues in Africa Learners are to",
+   "after": "Study the artworks of Ghanaian and other African visual artists that reflect topical issues in Africa",
+   "removed": "",
+   "furniture": [],
+   "rowAnchored": false,
+   "pages": [
+    64
+   ],
+   "print_head": "",
+   "ratio": 0.0,
+   "verified": false,
+   "reason": "print reads the lead differently (0.00)"
+  },
+  {
+   "file": "creative-arts_B5_curriculum_db_clean.json",
+   "code": "B5.1.1.1.6",
+   "marker": "learners are to",
+   "kind": "dangling",
+   "before": "Brainstorm and come out with ideas for creating own visual works that will reflect topical issues in Africa Learners are to",
+   "after": "Brainstorm and come out with ideas for creating own visual works that will reflect topical issues in Africa",
+   "removed": "",
+   "furniture": [],
+   "rowAnchored": false,
+   "pages": [
+    64
+   ],
+   "print_head": "",
+   "ratio": 0.0,
+   "verified": false,
+   "reason": "print reads the lead differently (0.00)"
+  },
+  {
+   "file": "creative-arts_B5_curriculum_db_clean.json",
+   "code": "B5.2.1.1.2",
+   "marker": "learners are to",
+   "kind": "dangling",
+   "before": "Study how the compositions and performances of the Ghanaian and other African performing artists studied reflect the history and culture of the people of Africa and generate ideas for creating own artworks Learners are to",
+   "after": "Study how the compositions and performances of the Ghanaian and other African performing artists studied reflect the history and culture of the people of Africa and generate ideas for creating own artworks",
+   "removed": "",
+   "furniture": [],
+   "rowAnchored": true,
+   "pages": [
+    65
+   ],
+   "print_head": "Study how the compositions and performances of the Ghanaian and other African performing artist s studied reflect the history and culture of the people of Africa and generate ideas for creating own artworks",
+   "ratio": 1.0,
+   "verified": true
+  },
+  {
+   "file": "creative-arts_B5_curriculum_db_clean.json",
+   "code": "B5.2.1.1.3",
+   "marker": "learners are to",
+   "kind": "dangling",
+   "before": "Study some compositions and performances of Ghanaian and other African performing artists that reflect the physical and social environments of some African communities Learners are to",
+   "after": "Study some compositions and performances of Ghanaian and other African performing artists that reflect the physical and social environments of some African communities",
+   "removed": "",
+   "furniture": [],
+   "rowAnchored": true,
+   "pages": [
+    65,
+    66
+   ],
+   "print_head": "Study some compositions and performances of Ghanaian and other African  performing artists that reflect the physical and social environments of some African communities",
+   "ratio": 1.0,
+   "verified": true
+  },
+  {
+   "file": "creative-arts_B5_curriculum_db_clean.json",
+   "code": "B5.2.1.1.4",
+   "marker": "learners are to",
+   "kind": "dangling",
+   "before": "Generate own ideas for composing and performing own artworks that will reflect the physical and social environments of some African communities Learners are to",
+   "after": "Generate own ideas for composing and performing own artworks that will reflect the physical and social environments of some African communities",
+   "removed": "",
+   "furniture": [],
+   "rowAnchored": true,
+   "pages": [
+    32,
+    66
+   ],
+   "print_head": "Generate own ideas for composing and performing own a rtworks that will reflect the physical and social environment s of some African communities",
+   "ratio": 1.0,
+   "verified": true
+  },
+  {
+   "file": "creative-arts_B5_curriculum_db_clean.json",
+   "code": "B5.2.1.1.5",
+   "marker": "learners are to",
+   "kind": "dangling",
+   "before": "Study the compositions and performances of Ghanaian and other African performing artists that reflect topical issues in Africa Learners are to",
+   "after": "Study the compositions and performances of Ghanaian and other African performing artists that reflect topical issues in Africa",
+   "removed": "",
+   "furniture": [],
+   "rowAnchored": true,
+   "pages": [
+    65,
+    67
+   ],
+   "print_head": " Study the compositions and performances of Ghanaian and other African performing artist s that reflect topical issues in Africa",
+   "ratio": 1.0,
+   "verified": true
+  },
+  {
+   "file": "creative-arts_B5_curriculum_db_clean.json",
+   "code": "B5.2.1.1.6",
+   "marker": "learners are to",
+   "kind": "dangling",
+   "before": "Brainstorm to generate ideas for creating own compositions and performances that reflect topical issues in Africa Learners are to",
+   "after": "Brainstorm to generate ideas for creating own compositions and performances that reflect topical issues in Africa",
+   "removed": "",
+   "furniture": [],
+   "rowAnchored": true,
+   "pages": [
+    67
+   ],
+   "print_head": "Brainstorm to generate ideas for creating own compositions and performances that reflect topical issues in Africa",
+   "ratio": 1.0,
+   "verified": true
+  },
+  {
+   "file": "creative-arts_B6_curriculum_db_clean.json",
+   "code": "B6.1.1.1.2",
+   "marker": "learners are to",
+   "kind": "dangling",
+   "before": "Study how the artworks of the international visual artists studied reflect the history and culture of some communities in the world and generate own ideas for creating own artworks Learners are to",
+   "after": "Study how the artworks of the international visual artists studied reflect the history and culture of some communities in the world and generate own ideas for creating own artworks",
+   "removed": "",
+   "furniture": [],
+   "rowAnchored": true,
+   "pages": [
+    96,
+    100,
+    101,
+    102
+   ],
+   "print_head": "Study how the artworks of the international visual artists studied reflect the history and culture of some communities in the world and generate own ideas for creating own art works",
+   "ratio": 1.0,
+   "verified": true
+  },
+  {
+   "file": "creative-arts_B6_curriculum_db_clean.json",
+   "code": "B6.1.1.1.3",
+   "marker": "learners are to",
+   "kind": "dangling",
+   "before": "Study some artworks created by international visual artists that reflect the physical and social environments of some communities in the world Learners are to",
+   "after": "Study some artworks created by international visual artists that reflect the physical and social environments of some communities in the world",
+   "removed": "",
+   "furniture": [],
+   "rowAnchored": true,
+   "pages": [
+    97
+   ],
+   "print_head": "Study some artworks created by international visual artists that reflect the physical and social environments of some communities in the world",
+   "ratio": 1.0,
+   "verified": true
+  },
+  {
+   "file": "creative-arts_B6_curriculum_db_clean.json",
+   "code": "B6.1.1.1.6",
+   "marker": "learners are to",
+   "kind": "dangling",
+   "before": "Brainstorm and generate ideas for creating own visual artworks that will reflect topical issues in some communities in the world Learners are to",
+   "after": "Brainstorm and generate ideas for creating own visual artworks that will reflect topical issues in some communities in the world",
+   "removed": "",
+   "furniture": [],
+   "rowAnchored": true,
+   "pages": [
+    99,
+    102,
+    105
+   ],
+   "print_head": "B rainstorm and generate ideas for creating own visual art works that will reflect topical issues in some communities in the world",
+   "ratio": 1.0,
+   "verified": true
+  },
+  {
+   "file": "creative-arts_B6_curriculum_db_clean.json",
+   "code": "B6.2.1.1.3",
+   "marker": "learners are to",
+   "kind": "dangling",
+   "before": "Study how the artworks of the international performing artists studied reflect the physical and social environments of some communities in the world Learners are to",
+   "after": "Study how the artworks of the international performing artists studied reflect the physical and social environments of some communities in the world",
+   "removed": "",
+   "furniture": [],
+   "rowAnchored": true,
+   "pages": [
+    96,
+    100,
+    101,
+    102
+   ],
+   "print_head": "Study how the artworks of the international performing artists studied reflect the physical and social environments of some communities in the world",
+   "ratio": 1.0,
+   "verified": true
+  },
+  {
+   "file": "creative-arts_B6_curriculum_db_clean.json",
+   "code": "B6.2.1.1.4",
+   "marker": "learners are to",
+   "kind": "dangling",
+   "before": "Generate own ideas for creating own performing artworks based on the physical and social environments of some communities in the world Learners are to",
+   "after": "Generate own ideas for creating own performing artworks based on the physical and social environments of some communities in the world",
+   "removed": "",
+   "furniture": [],
+   "rowAnchored": true,
+   "pages": [
+    96,
+    100,
+    101
+   ],
+   "print_head": "Generate own ideas for c reat ing own performing artworks based on the physical and social environment s of some communities in the world",
+   "ratio": 1.0,
+   "verified": true
+  },
+  {
+   "file": "creative-arts_B6_curriculum_db_clean.json",
+   "code": "B6.2.1.1.6",
+   "marker": "learners are to",
+   "kind": "dangling",
+   "before": "Brainstorm and generate ideas for creating own performing artworks that reflect topical issues in some communities in the world Learners are to",
+   "after": "Brainstorm and generate ideas for creating own performing artworks that reflect topical issues in some communities in the world",
+   "removed": "",
+   "furniture": [],
+   "rowAnchored": true,
+   "pages": [
+    99,
+    102,
+    105
+   ],
+   "print_head": "B rainstorm and generate id eas for c reat ing own performing artworks that reflect topical issues in some communities in the world",
+   "ratio": 1.0,
+   "verified": true
+  },
+  {
+   "file": "creative-arts_B6_curriculum_db_clean.json",
+   "code": "B6.2.2.2.3",
+   "marker": "learners are to",
+   "kind": "dangling",
+   "before": "Generate ideas for creating own performing artworks that reflect topical issues in the world Learners are to",
+   "after": "Generate ideas for creating own performing artworks that reflect topical issues in the world",
+   "removed": "",
+   "furniture": [],
+   "rowAnchored": false,
+   "pages": [
+    66,
+    102,
+    105
+   ],
+   "print_head": "iscuss and share their experiences through peer review . B6 2.2.2.2 Brainstorm and generate ideas for c reat ing own performing artworks that reflect the physical and social environments o f some communities in the world",
+   "ratio": 0.697,
+   "verified": false,
+   "reason": "print reads the lead differently (0.70)"
+  },
+  {
+   "file": "creative_arts_curriculum_db_clean.json",
+   "code": "B1.1.3.4.1",
+   "marker": "learners are to",
+   "kind": "dangling",
+   "before": "Plan a display of own artworks to share creative experiences based on visual artworks produced or found in the local community that reflect the history and culture of the people Learners are to",
+   "after": "Plan a display of own artworks to share creative experiences based on visual artworks produced or found in the local community that reflect the history and culture of the people",
+   "removed": "",
+   "furniture": [],
+   "rowAnchored": false,
+   "pages": [
+    41,
+    43,
+    73,
+    75
+   ],
+   "print_head": "r ing INDICATORS AND EXEMPLARS B2 1.3.4.1 Plan for a display of own artworks to sha re creative experiences based on ideas from visual artworks that reflect the history and culture of people in other Ghanaian communities",
+   "ratio": 0.743,
+   "verified": false,
+   "reason": "print reads the lead differently (0.74)"
+  },
+  {
+   "file": "kindergarten_KG1_curriculum_db_clean.json",
+   "code": "K1.1.1.1.1",
+   "marker": "e.g.",
+   "kind": "dangling",
+   "before": "Identify and talk in simple sentences, about the features of our body that make us unique and different from other God’s creation. E.g. animals",
+   "after": "Identify and talk in simple sentences, about the features of our body that make us unique and different from other God’s creation.",
+   "removed": "animals",
+   "furniture": [],
+   "verified": false,
+   "reason": "no print"
+  },
+  {
    "file": "career-technology_B7_curriculum_db_clean.json",
    "code": "B7.3.2.1.3",
    "marker": "numbered exemplar",
@@ -52,38 +445,6 @@
    "print_head": "INDICATORS AND EXEMPLARS B7.6.2.1.3 : Explain the advantages and disadvantages of being an entrepreneur",
    "ratio": 1.0,
    "verified": true
-  },
-  {
-   "file": "career-technology_B8_curriculum_db_clean.json",
-   "code": "B8.2.2.1.1",
-   "marker": "numbered exemplar",
-   "kind": "repeats",
-   "before": "Explain the basic properties of resistant materials 1. Discuss the physical properties of resistant materials",
-   "after": "Explain the basic properties of resistant materials",
-   "removed": "Discuss the physical properties of resistant materials",
-   "furniture": [],
-   "pages": [
-    85
-   ],
-   "print_head": "",
-   "ratio": 0.0,
-   "verified": false,
-   "reason": "print reads the lead differently (0.00)"
-  },
-  {
-   "file": "career-technology_B8_curriculum_db_clean.json",
-   "code": "B8.2.2.1.2",
-   "marker": "numbered exemplar",
-   "kind": "repeats",
-   "before": "Describe the properties of building materials 1. Describe the properties of cement, sand, stones",
-   "after": "Describe the properties of building materials",
-   "removed": "Describe the properties of cement, sand, stones",
-   "furniture": [],
-   "pages": [],
-   "print_head": "",
-   "ratio": 0.0,
-   "verified": false,
-   "reason": "indicator not in the print"
   },
   {
    "file": "career-technology_B8_curriculum_db_clean.json",
@@ -212,342 +573,6 @@
    "print_head": "STRAND 6: ENTREPRENEURIAL SKILLS SUB-STRAND 2: ESTABLISHING AND MANAGING A SMALL BUSINESS ENTERPRISE INDICATORS AND EXEMPLARS B9.6.2.1.1 : Describe how to start and run a small business",
    "ratio": 1.0,
    "verified": true
-  },
-  {
-   "file": "creative-arts_B5_curriculum_db_clean.json",
-   "code": "B5.1.1.1.2",
-   "marker": "learners are to",
-   "kind": "dangling",
-   "before": "Explore to generate ideas by studying visual artworks created by selected Ghanaian and other African visual artists living in Africa that reflect the history and culture of the people of Africa Learners are to",
-   "after": "Explore to generate ideas by studying visual artworks created by selected Ghanaian and other African visual artists living in Africa that reflect the history and culture of the people of Africa",
-   "removed": "",
-   "furniture": [],
-   "pages": [
-    62
-   ],
-   "print_head": "INDICATORS AND EXEMPLARS B5 1.1.1 .1 S tudy some visual artworks created by Ghanaian and other African visual artists living in Africa and examine how the art works reflect the history and culture of the people in Africa",
-   "ratio": 0.804,
-   "verified": false,
-   "reason": "print reads the lead differently (0.80)"
-  },
-  {
-   "file": "creative-arts_B5_curriculum_db_clean.json",
-   "code": "B5.1.1.1.3",
-   "marker": "learners are to",
-   "kind": "dangling",
-   "before": "Study some artworks created by Ghanaian and other African visual artists studied that reflect the physical and social environments of some African communities Learners are to",
-   "after": "Study some artworks created by Ghanaian and other African visual artists studied that reflect the physical and social environments of some African communities",
-   "removed": "",
-   "furniture": [],
-   "pages": [],
-   "print_head": "",
-   "ratio": 0.0,
-   "verified": false,
-   "reason": "indicator not in the print"
-  },
-  {
-   "file": "creative-arts_B5_curriculum_db_clean.json",
-   "code": "B5.1.1.1.4",
-   "marker": "learners are to",
-   "kind": "dangling",
-   "before": "Generate own ideas for designing and creating own visual artworks that reflect the physical and social environments of some African communities Learners are to",
-   "after": "Generate own ideas for designing and creating own visual artworks that reflect the physical and social environments of some African communities",
-   "removed": "",
-   "furniture": [],
-   "pages": [
-    98
-   ],
-   "print_head": "INDICATORS AND EXEMPLARS B 6 . 1.1.1.4 Generate own ideas for designing and creating own visual artworks based on the physical and social environment s of some communities in the world",
-   "ratio": 0.87,
-   "verified": false,
-   "reason": "print reads the lead differently (0.87)"
-  },
-  {
-   "file": "creative-arts_B5_curriculum_db_clean.json",
-   "code": "B5.1.1.1.5",
-   "marker": "learners are to",
-   "kind": "dangling",
-   "before": "Study the artworks of Ghanaian and other African visual artists that reflect topical issues in Africa Learners are to",
-   "after": "Study the artworks of Ghanaian and other African visual artists that reflect topical issues in Africa",
-   "removed": "",
-   "furniture": [],
-   "pages": [
-    64
-   ],
-   "print_head": "",
-   "ratio": 0.0,
-   "verified": false,
-   "reason": "print reads the lead differently (0.00)"
-  },
-  {
-   "file": "creative-arts_B5_curriculum_db_clean.json",
-   "code": "B5.1.1.1.6",
-   "marker": "learners are to",
-   "kind": "dangling",
-   "before": "Brainstorm and come out with ideas for creating own visual works that will reflect topical issues in Africa Learners are to",
-   "after": "Brainstorm and come out with ideas for creating own visual works that will reflect topical issues in Africa",
-   "removed": "",
-   "furniture": [],
-   "pages": [
-    64
-   ],
-   "print_head": "",
-   "ratio": 0.0,
-   "verified": false,
-   "reason": "print reads the lead differently (0.00)"
-  },
-  {
-   "file": "creative-arts_B5_curriculum_db_clean.json",
-   "code": "B5.2.1.1.2",
-   "marker": "learners are to",
-   "kind": "dangling",
-   "before": "Study how the compositions and performances of the Ghanaian and other African performing artists studied reflect the history and culture of the people of Africa and generate ideas for creating own artworks Learners are to",
-   "after": "Study how the compositions and performances of the Ghanaian and other African performing artists studied reflect the history and culture of the people of Africa and generate ideas for creating own artworks",
-   "removed": "",
-   "furniture": [],
-   "pages": [
-    65
-   ],
-   "print_head": "LARS B5 2. 1.1 .1 Explore and study some compositions and performances of Ghanaian and other African performing artists living in Africa and discuss how their works reflect the history and culture of the people of Africa",
-   "ratio": 0.718,
-   "verified": false,
-   "reason": "print reads the lead differently (0.72)"
-  },
-  {
-   "file": "creative-arts_B5_curriculum_db_clean.json",
-   "code": "B5.2.1.1.3",
-   "marker": "learners are to",
-   "kind": "dangling",
-   "before": "Study some compositions and performances of Ghanaian and other African performing artists that reflect the physical and social environments of some African communities Learners are to",
-   "after": "Study some compositions and performances of Ghanaian and other African performing artists that reflect the physical and social environments of some African communities",
-   "removed": "",
-   "furniture": [],
-   "pages": [
-    65,
-    66
-   ],
-   "print_head": "LARS B5 2. 1.1 .1 Explore and study some compositions and performances of Ghanaian and other African performing artists living in Africa and discuss how their works reflect the history and culture of the people of Africa",
-   "ratio": 0.684,
-   "verified": false,
-   "reason": "print reads the lead differently (0.68)"
-  },
-  {
-   "file": "creative-arts_B5_curriculum_db_clean.json",
-   "code": "B5.2.1.1.4",
-   "marker": "learners are to",
-   "kind": "dangling",
-   "before": "Generate own ideas for composing and performing own artworks that will reflect the physical and social environments of some African communities Learners are to",
-   "after": "Generate own ideas for composing and performing own artworks that will reflect the physical and social environments of some African communities",
-   "removed": "",
-   "furniture": [],
-   "pages": [
-    32,
-    66
-   ],
-   "print_head": "INDICATORS AND EXEMPLARS B4 2 .1.1.4 . Generate own ideas for composing and performing own artworks that will reflect the natural and manmade environment s of some communities in Ghana",
-   "ratio": 0.854,
-   "verified": false,
-   "reason": "print reads the lead differently (0.85)"
-  },
-  {
-   "file": "creative-arts_B5_curriculum_db_clean.json",
-   "code": "B5.2.1.1.5",
-   "marker": "learners are to",
-   "kind": "dangling",
-   "before": "Study the compositions and performances of Ghanaian and other African performing artists that reflect topical issues in Africa Learners are to",
-   "after": "Study the compositions and performances of Ghanaian and other African performing artists that reflect topical issues in Africa",
-   "removed": "",
-   "furniture": [],
-   "pages": [
-    65,
-    67
-   ],
-   "print_head": "LARS B5 2. 1.1 .1 Explore and study some compositions and performances of Ghanaian and other African performing artists living in Africa and discuss how their works reflect the history and culture of the people of Africa",
-   "ratio": 0.555,
-   "verified": false,
-   "reason": "print reads the lead differently (0.55)"
-  },
-  {
-   "file": "creative-arts_B5_curriculum_db_clean.json",
-   "code": "B5.2.1.1.6",
-   "marker": "learners are to",
-   "kind": "dangling",
-   "before": "Brainstorm to generate ideas for creating own compositions and performances that reflect topical issues in Africa Learners are to",
-   "after": "Brainstorm to generate ideas for creating own compositions and performances that reflect topical issues in Africa",
-   "removed": "",
-   "furniture": [],
-   "pages": [
-    67
-   ],
-   "print_head": "",
-   "ratio": 0.0,
-   "verified": false,
-   "reason": "print reads the lead differently (0.00)"
-  },
-  {
-   "file": "creative-arts_B6_curriculum_db_clean.json",
-   "code": "B6.1.1.1.2",
-   "marker": "learners are to",
-   "kind": "dangling",
-   "before": "Study how the artworks of the international visual artists studied reflect the history and culture of some communities in the world and generate own ideas for creating own artworks Learners are to",
-   "after": "Study how the artworks of the international visual artists studied reflect the history and culture of some communities in the world and generate own ideas for creating own artworks",
-   "removed": "",
-   "furniture": [],
-   "pages": [
-    96,
-    100,
-    101,
-    102
-   ],
-   "print_head": " Exploring Ideas INDICATORS AND EXEMPLARS B6 1. 1.1.1 Explore and study the artworks of s o me international visual artists and analyse how their art works reflect the history and culture of some communities in the world",
-   "ratio": 0.671,
-   "verified": false,
-   "reason": "print reads the lead differently (0.67)"
-  },
-  {
-   "file": "creative-arts_B6_curriculum_db_clean.json",
-   "code": "B6.1.1.1.3",
-   "marker": "learners are to",
-   "kind": "dangling",
-   "before": "Study some artworks created by international visual artists that reflect the physical and social environments of some communities in the world Learners are to",
-   "after": "Study some artworks created by international visual artists that reflect the physical and social environments of some communities in the world",
-   "removed": "",
-   "furniture": [],
-   "pages": [
-    97
-   ],
-   "print_head": "",
-   "ratio": 0.0,
-   "verified": false,
-   "reason": "print reads the lead differently (0.00)"
-  },
-  {
-   "file": "creative-arts_B6_curriculum_db_clean.json",
-   "code": "B6.1.1.1.6",
-   "marker": "learners are to",
-   "kind": "dangling",
-   "before": "Brainstorm and generate ideas for creating own visual artworks that will reflect topical issues in some communities in the world Learners are to",
-   "after": "Brainstorm and generate ideas for creating own visual artworks that will reflect topical issues in some communities in the world",
-   "removed": "",
-   "furniture": [],
-   "pages": [
-    99,
-    102,
-    105
-   ],
-   "print_head": "iscuss and share their experiences through peer review . B6 2.2.2.2 Brainstorm and generate ideas for c reat ing own performing artworks that reflect the physical and social environments o f some communities in the world",
-   "ratio": 0.782,
-   "verified": false,
-   "reason": "print reads the lead differently (0.78)"
-  },
-  {
-   "file": "creative-arts_B6_curriculum_db_clean.json",
-   "code": "B6.2.1.1.3",
-   "marker": "learners are to",
-   "kind": "dangling",
-   "before": "Study how the artworks of the international performing artists studied reflect the physical and social environments of some communities in the world Learners are to",
-   "after": "Study how the artworks of the international performing artists studied reflect the physical and social environments of some communities in the world",
-   "removed": "",
-   "furniture": [],
-   "pages": [
-    96,
-    100,
-    101,
-    102
-   ],
-   "print_head": "INDICATORS AND EXEMPLARS B6. 2 .1.1.5. Study how the artworks of the international performing artist s studied reflect topical issues in some communities in t he world",
-   "ratio": 0.787,
-   "verified": false,
-   "reason": "print reads the lead differently (0.79)"
-  },
-  {
-   "file": "creative-arts_B6_curriculum_db_clean.json",
-   "code": "B6.2.1.1.4",
-   "marker": "learners are to",
-   "kind": "dangling",
-   "before": "Generate own ideas for creating own performing artworks based on the physical and social environments of some communities in the world Learners are to",
-   "after": "Generate own ideas for creating own performing artworks based on the physical and social environments of some communities in the world",
-   "removed": "",
-   "furniture": [],
-   "pages": [
-    96,
-    100,
-    101
-   ],
-   "print_head": "NDICATORS AND EXEMPLARS B6 2 .1.1 .1 Explore and study perform ing a rtwork s of so me international performing artists and analyse how their composition s reflect the history and culture of some communities in the world",
-   "ratio": 0.579,
-   "verified": false,
-   "reason": "print reads the lead differently (0.58)"
-  },
-  {
-   "file": "creative-arts_B6_curriculum_db_clean.json",
-   "code": "B6.2.1.1.6",
-   "marker": "learners are to",
-   "kind": "dangling",
-   "before": "Brainstorm and generate ideas for creating own performing artworks that reflect topical issues in some communities in the world Learners are to",
-   "after": "Brainstorm and generate ideas for creating own performing artworks that reflect topical issues in some communities in the world",
-   "removed": "",
-   "furniture": [],
-   "pages": [
-    99,
-    102,
-    105
-   ],
-   "print_head": "iscuss and share their experiences through peer review . B6 2.2.2.2 Brainstorm and generate ideas for c reat ing own performing artworks that reflect the physical and social environments o f some communities in the world",
-   "ratio": 0.857,
-   "verified": false,
-   "reason": "print reads the lead differently (0.86)"
-  },
-  {
-   "file": "creative-arts_B6_curriculum_db_clean.json",
-   "code": "B6.2.2.2.3",
-   "marker": "learners are to",
-   "kind": "dangling",
-   "before": "Generate ideas for creating own performing artworks that reflect topical issues in the world Learners are to",
-   "after": "Generate ideas for creating own performing artworks that reflect topical issues in the world",
-   "removed": "",
-   "furniture": [],
-   "pages": [
-    66,
-    102,
-    105
-   ],
-   "print_head": "iscuss and share their experiences through peer review . B6 2.2.2.2 Brainstorm and generate ideas for c reat ing own performing artworks that reflect the physical and social environments o f some communities in the world",
-   "ratio": 0.697,
-   "verified": false,
-   "reason": "print reads the lead differently (0.70)"
-  },
-  {
-   "file": "creative_arts_curriculum_db_clean.json",
-   "code": "B1.1.3.4.1",
-   "marker": "learners are to",
-   "kind": "dangling",
-   "before": "Plan a display of own artworks to share creative experiences based on visual artworks produced or found in the local community that reflect the history and culture of the people Learners are to",
-   "after": "Plan a display of own artworks to share creative experiences based on visual artworks produced or found in the local community that reflect the history and culture of the people",
-   "removed": "",
-   "furniture": [],
-   "pages": [
-    41,
-    43,
-    73,
-    75
-   ],
-   "print_head": "r ing INDICATORS AND EXEMPLARS B2 1.3.4.1 Plan for a display of own artworks to sha re creative experiences based on ideas from visual artworks that reflect the history and culture of people in other Ghanaian communities",
-   "ratio": 0.743,
-   "verified": false,
-   "reason": "print reads the lead differently (0.74)"
-  },
-  {
-   "file": "kindergarten_KG1_curriculum_db_clean.json",
-   "code": "K1.1.1.1.1",
-   "marker": "e.g.",
-   "kind": "dangling",
-   "before": "Identify and talk in simple sentences, about the features of our body that make us unique and different from other God’s creation. E.g. animals",
-   "after": "Identify and talk in simple sentences, about the features of our body that make us unique and different from other God’s creation.",
-   "removed": "animals",
-   "furniture": [],
-   "verified": false,
-   "reason": "no print"
   },
   {
    "file": "career-technology_B7_curriculum_db_clean.json",
@@ -4644,8 +4669,8 @@
    "code": "B7.2.1.1.2",
    "marker": "numbered exemplar",
    "kind": "content",
-   "before": "Distinguish between types of compliant materials 1. Classify the various compliant materials under their types: - Paper - Card - Fabric/Textile CP6.3: Ability to identify important and appropriate criteria to evaluate each alternative 2. Give examples of each class of compliant materials: - Paper—copy paper, construction paper - Card—solid white board, corrugated card, - Fabric/Textile—cotton",
-   "after": "Distinguish between types of compliant materials 1. Classify the various compliant materials under their types: - Paper - Card - Fabric/Textile CP6.3: Ability to identify important and appropriate criteria to evaluate each alternative 2. Give examples of each class of compliant materials: - Paper—copy paper, construction paper - Card—solid white board, corrugated card, - Fabric/Textile—cotton",
+   "before": "Distinguish between types of compliant materials 1. Classify the various compliant materials under their types: - Paper - Card - Fabric/Textile Give examples of each class of compliant materials: - Paper—copy paper, construction paper - Card—solid white board, corrugated card, - Fabric/Textile—cotton",
+   "after": "Distinguish between types of compliant materials 1. Classify the various compliant materials under their types: - Paper - Card - Fabric/Textile Give examples of each class of compliant materials: - Paper—copy paper, construction paper - Card—solid white board, corrugated card, - Fabric/Textile—cotton",
    "removed": "",
    "furniture": []
   },
@@ -4744,8 +4769,8 @@
    "code": "B7.3.2.1.2",
    "marker": "numbered exemplar",
    "kind": "content",
-   "before": "Use appropriate skills in cutting, chopping, slicing, dicing and shaping products 1. Demonstrate the appropriate techniques in cutting, chopping, slicing and dicing in food production. 2. Demonstrate the appropriate techniques in cutting, paring, moulding in wood, metal and building. CP6.7: Implement strategies with accuracy. 20",
-   "after": "Use appropriate skills in cutting, chopping, slicing, dicing and shaping products 1. Demonstrate the appropriate techniques in cutting, chopping, slicing and dicing in food production. 2. Demonstrate the appropriate techniques in cutting, paring, moulding in wood, metal and building. CP6.7: Implement strategies with accuracy. 20",
+   "before": "Use appropriate skills in cutting, chopping, slicing, dicing and shaping products 1. Demonstrate the appropriate techniques in cutting, chopping, slicing and dicing in food production. 2. Demonstrate the appropriate techniques in cutting, paring, moulding in wood, metal and building. 20",
+   "after": "Use appropriate skills in cutting, chopping, slicing, dicing and shaping products 1. Demonstrate the appropriate techniques in cutting, chopping, slicing and dicing in food production. 2. Demonstrate the appropriate techniques in cutting, paring, moulding in wood, metal and building. 20",
    "removed": "",
    "furniture": []
   },
@@ -4874,13 +4899,10 @@
    "code": "B7.5.4.1.1",
    "marker": "numbered exemplar",
    "kind": "content",
-   "before": "Demonstrate skills in preparing food using moist methods of cooking BOILING & STEWING Communication and Collaboration (CC) Critical Thinking and Problem Solving (CP), Creativity and Innovation (CI) 1. Prepare a meal by choosing from any one of the three (3) types of boiling methods of cooking with an accompaniment stew, in groups. 2. Present /display meals for appraisal. Note: Guide learner",
-   "after": "Demonstrate skills in preparing food using moist methods of cooking BOILING & STEWING Communication and Collaboration (CC) Critical Thinking and Problem Solving (CP), Creativity and Innovation (CI) 1. Prepare a meal by choosing from any one of the three (3) types of boiling methods of cooking with an accompaniment stew, in groups. 2. Present /display meals for appraisal. Note: Guide learner",
+   "before": "Demonstrate skills in preparing food using moist methods of cooking BOILING & STEWING, 1. Prepare a meal by choosing from any one of the three (3) types of boiling methods of cooking with an accompaniment stew, in groups. 2. Present /display meals for appraisal. Note: Guide learner",
+   "after": "Demonstrate skills in preparing food using moist methods of cooking BOILING & STEWING, 1. Prepare a meal by choosing from any one of the three (3) types of boiling methods of cooking with an accompaniment stew, in groups. 2. Present /display meals for appraisal. Note: Guide learner",
    "removed": "",
-   "furniture": [
-    " Communication and Collaboration (CC) Critical Thinking and Problem Solving (CP)",
-    " Creativity and Innovation (CI)"
-   ]
+   "furniture": []
   },
   {
    "file": "career-technology_B7_curriculum_db_clean.json",
@@ -5037,8 +5059,8 @@
    "code": "B8.3.2.1.3",
    "marker": "numbered exemplar",
    "kind": "content",
-   "before": "Demonstrate how to care for and maintain shaping and cutting tools and equipment 1. Discuss how to care for and maintain cutting and shaping tools and equipment used in: - Food laboratory (kitchen) - Sewing workshop/laboratory - Building site - Wood workshop - Metal/plastics workshop CC 8.2: Explain ideas in a clear order with relevant details. 57",
-   "after": "Demonstrate how to care for and maintain shaping and cutting tools and equipment 1. Discuss how to care for and maintain cutting and shaping tools and equipment used in: - Food laboratory (kitchen) - Sewing workshop/laboratory - Building site - Wood workshop - Metal/plastics workshop CC 8.2: Explain ideas in a clear order with relevant details. 57",
+   "before": "Demonstrate how to care for and maintain shaping and cutting tools and equipment 1. Discuss how to care for and maintain cutting and shaping tools and equipment used in: - Food laboratory (kitchen) - Sewing workshop/laboratory - Building site - Wood workshop - Metal/plastics workshop 57",
+   "after": "Demonstrate how to care for and maintain shaping and cutting tools and equipment 1. Discuss how to care for and maintain cutting and shaping tools and equipment used in: - Food laboratory (kitchen) - Sewing workshop/laboratory - Building site - Wood workshop - Metal/plastics workshop 57",
    "removed": "",
    "furniture": []
   },
@@ -5137,21 +5159,18 @@
    "code": "B8.5.2.1.1",
    "marker": "numbered exemplar",
    "kind": "content",
-   "before": "Write a design brief Communication and Collaboration (CC) Critical Thinking and Problem Solving (CP), Creativity and Innovation (CI) 1. Observe problem situations in the environment. 2. Write the problem situation. 3. State a suitable design brief to address the problem. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion",
-   "after": "Write a design brief Communication and Collaboration (CC) Critical Thinking and Problem Solving (CP), Creativity and Innovation (CI) 1. Observe problem situations in the environment. 2. Write the problem situation. 3. State a suitable design brief to address the problem. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion",
+   "before": "Write a design brief, 1. Observe problem situations in the environment. 2. Write the problem situation. 3. State a suitable design brief to address the problem",
+   "after": "Write a design brief, 1. Observe problem situations in the environment. 2. Write the problem situation. 3. State a suitable design brief to address the problem",
    "removed": "",
-   "furniture": [
-    " Communication and Collaboration (CC) Critical Thinking and Problem Solving (CP)",
-    " Creativity and Innovation (CI)"
-   ]
+   "furniture": []
   },
   {
    "file": "career-technology_B8_curriculum_db_clean.json",
    "code": "B8.5.2.1.2",
    "marker": "numbered exemplar",
    "kind": "content",
-   "before": "Research into design problems 1. Develop analysis chart of the problem. 2. State questions to address the analysis chart. 3. Conduct a research into the problem analysis through prepared questionnaires and interview guides. 4. Develop observation schedules and take photos/make sketches. 5. Analyse the research data and write a report. 6. Present report for appraisal CP5.1: Ability to combine information a",
-   "after": "Research into design problems 1. Develop analysis chart of the problem. 2. State questions to address the analysis chart. 3. Conduct a research into the problem analysis through prepared questionnaires and interview guides. 4. Develop observation schedules and take photos/make sketches. 5. Analyse the research data and write a report. 6. Present report for appraisal CP5.1: Ability to combine information a",
+   "before": "Research into design problems 1. Develop analysis chart of the problem. 2. State questions to address the analysis chart. 3. Conduct a research into the problem analysis through prepared questionnaires and interview guides. 4. Develop observation schedules and take photos/make sketches. 5. Analyse the research data and write a report. 6. Present report for appraisal",
+   "after": "Research into design problems 1. Develop analysis chart of the problem. 2. State questions to address the analysis chart. 3. Conduct a research into the problem analysis through prepared questionnaires and interview guides. 4. Develop observation schedules and take photos/make sketches. 5. Analyse the research data and write a report. 6. Present report for appraisal",
    "removed": "",
    "furniture": []
   },
@@ -5160,8 +5179,8 @@
    "code": "B8.5.2.1.3",
    "marker": "numbered exemplar",
    "kind": "content",
-   "before": "Write Design Specifications 1. Develop and write the design specifications based on the areas analysed, to serve as a guide for idea generation. 2. Give reasons for the specifications developed. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion. CC 8.2: Explain ideas in a clear order with relevant details. 66",
-   "after": "Write Design Specifications 1. Develop and write the design specifications based on the areas analysed, to serve as a guide for idea generation. 2. Give reasons for the specifications developed. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion. CC 8.2: Explain ideas in a clear order with relevant details. 66",
+   "before": "Write Design Specifications 1. Develop and write the design specifications based on the areas analysed, to serve as a guide for idea generation. 2. Give reasons for the specifications developed. 66",
+   "after": "Write Design Specifications 1. Develop and write the design specifications based on the areas analysed, to serve as a guide for idea generation. 2. Give reasons for the specifications developed. 66",
    "removed": "",
    "furniture": []
   },
@@ -5170,8 +5189,8 @@
    "code": "B8.5.2.1.4",
    "marker": "numbered exemplar",
    "kind": "content",
-   "before": "Generate Ideas/possible solutions 1. Use freehand to sketch at least three possible ideas/solutions. 2. Write descriptive/annotated notes on each of the generated ideas 3. Compare and select the best idea or design 4. Develop the selected idea and prepare the working drawings and folios. CP6.5: Ability to select alternatives that adequately meet selected criteria. CI 6.10: Reflect on work and explore thinki",
-   "after": "Generate Ideas/possible solutions 1. Use freehand to sketch at least three possible ideas/solutions. 2. Write descriptive/annotated notes on each of the generated ideas 3. Compare and select the best idea or design 4. Develop the selected idea and prepare the working drawings and folios. CP6.5: Ability to select alternatives that adequately meet selected criteria. CI 6.10: Reflect on work and explore thinki",
+   "before": "Generate Ideas/possible solutions 1. Use freehand to sketch at least three possible ideas/solutions. 2. Write descriptive/annotated notes on each of the generated ideas 3. Compare and select the best idea or design 4. Develop the selected idea and prepare the working drawings and folios",
+   "after": "Generate Ideas/possible solutions 1. Use freehand to sketch at least three possible ideas/solutions. 2. Write descriptive/annotated notes on each of the generated ideas 3. Compare and select the best idea or design 4. Develop the selected idea and prepare the working drawings and folios",
    "removed": "",
    "furniture": []
   },
@@ -5220,8 +5239,8 @@
    "code": "B8.5.3.1.2",
    "marker": "numbered exemplar",
    "kind": "content",
-   "before": "Plan and make building artefacts 1. Describe the properties of cement, sand, stones. 2. Prepare a chart on properties of building materials. 3. Discuss reasons for choosing a type of material for a building project. 4. Make mock-ups of simple building projects. 5. Display mock-ups for appraisal. CC 8.2: Explain ideas in a clear order with relevant details. CI 5.2: Ability to merge simple/complex ideas to c",
-   "after": "Plan and make building artefacts 1. Describe the properties of cement, sand, stones. 2. Prepare a chart on properties of building materials. 3. Discuss reasons for choosing a type of material for a building project. 4. Make mock-ups of simple building projects. 5. Display mock-ups for appraisal. CC 8.2: Explain ideas in a clear order with relevant details. CI 5.2: Ability to merge simple/complex ideas to c",
+   "before": "Plan and make building artefacts 1. Describe the properties of cement, sand, stones. 2. Prepare a chart on properties of building materials. 3. Discuss reasons for choosing a type of material for a building project. 4. Make mock-ups of simple building projects. 5. Display mock-ups for appraisal",
+   "after": "Plan and make building artefacts 1. Describe the properties of cement, sand, stones. 2. Prepare a chart on properties of building materials. 3. Discuss reasons for choosing a type of material for a building project. 4. Make mock-ups of simple building projects. 5. Display mock-ups for appraisal",
    "removed": "",
    "furniture": []
   },
@@ -5266,33 +5285,14 @@
    "furniture": []
   },
   {
-   "file": "career-technology_B8_curriculum_db_clean.json",
-   "code": "B8.6.1.1.1",
-   "marker": "numbered exemplar",
-   "kind": "content",
-   "before": "Explore the various career pathways and opportunities in Career Technology Communication and Collaboration (CC) Critical Thinking and Problem Solving (CP), Creativity and Innovation (CI), Personal Development and Leadership (PL). 1. Research in groups, the various career pathways and opportunities using different sources. 2. Write a brief report and present in class. 3. Examine your interests, skills a",
-   "after": "Explore the various career pathways and opportunities in Career Technology Communication and Collaboration (CC) Critical Thinking and Problem Solving (CP), Creativity and Innovation (CI), Personal Development and Leadership (PL). 1. Research in groups, the various career pathways and opportunities using different sources. 2. Write a brief report and present in class. 3. Examine your interests, skills a",
-   "removed": "",
-   "furniture": [
-    " Communication and Collaboration (CC) Critical Thinking and Problem Solving (CP)",
-    " Creativity and Innovation (CI)",
-    " Personal Development and Leadership (PL)"
-   ]
-  },
-  {
    "file": "career-technology_B9_curriculum_db_clean.json",
    "code": "B9.1.1.1.1",
    "marker": "numbered exemplar",
    "kind": "content",
-   "before": "Practice good grooming Communication and Collaboration (CC), Critical Thinking and Problem Solving (CP), Creativity and Innovation (CI), Personal Development and Leadership (PL) 1. Explain what is meant by good grooming and relate it to personal hygiene",
-   "after": "Practice good grooming Communication and Collaboration (CC), Critical Thinking and Problem Solving (CP), Creativity and Innovation (CI), Personal Development and Leadership (PL) 1. Explain what is meant by good grooming and relate it to personal hygiene",
+   "before": "Practice good grooming,,, 1. Explain what is meant by good grooming and relate it to personal hygiene",
+   "after": "Practice good grooming,,, 1. Explain what is meant by good grooming and relate it to personal hygiene",
    "removed": "",
-   "furniture": [
-    " Communication and Collaboration (CC)",
-    " Critical Thinking and Problem Solving (CP)",
-    " Creativity and Innovation (CI)",
-    " Personal Development and Leadership (PL)"
-   ]
+   "furniture": []
   },
   {
    "file": "career-technology_B9_curriculum_db_clean.json",
@@ -5499,16 +5499,10 @@
    "code": "B9.4.1.1.1",
    "marker": "numbered exemplar",
    "kind": "content",
-   "before": "Describe mechanisms used for making products/ artefacts Communication and Collaboration (CC), Critical Thinking and Problem Solving (CP), Creativity and Innovation (CI), Digital Literacy (DL), Personal Development and Leadership (PL) 1. Explain what is meant by mechanisms",
-   "after": "Describe mechanisms used for making products/ artefacts Communication and Collaboration (CC), Critical Thinking and Problem Solving (CP), Creativity and Innovation (CI), Digital Literacy (DL), Personal Development and Leadership (PL) 1. Explain what is meant by mechanisms",
+   "before": "Describe mechanisms used for making products/ artefacts,,,, 1. Explain what is meant by mechanisms",
+   "after": "Describe mechanisms used for making products/ artefacts,,,, 1. Explain what is meant by mechanisms",
    "removed": "",
-   "furniture": [
-    " Communication and Collaboration (CC)",
-    " Critical Thinking and Problem Solving (CP)",
-    " Creativity and Innovation (CI)",
-    " Digital Literacy (DL)",
-    " Personal Development and Leadership (PL)"
-   ]
+   "furniture": []
   },
   {
    "file": "career-technology_B9_curriculum_db_clean.json",
@@ -5565,14 +5559,10 @@
    "code": "B9.5.2.1.1",
    "marker": "numbered exemplar",
    "kind": "content",
-   "before": "Identify user requirements Communication and Collaboration (CC), Critical Thinking and Problem Solving (CP), Creativity and Innovation (CI) 1. Explore several situations within the community. 2. Discuss issues identified in the situations. 3. State main issues identified for discussion. 4. Identify needs, wants and lacks within the environment which if not addressed can lead to problems. 5. Discuss the",
-   "after": "Identify user requirements Communication and Collaboration (CC), Critical Thinking and Problem Solving (CP), Creativity and Innovation (CI) 1. Explore several situations within the community. 2. Discuss issues identified in the situations. 3. State main issues identified for discussion. 4. Identify needs, wants and lacks within the environment which if not addressed can lead to problems. 5. Discuss the",
+   "before": "Identify user requirements,, 1. Explore several situations within the community. 2. Discuss issues identified in the situations. 3. State main issues identified for discussion. 4. Identify needs, wants and lacks within the environment which if not addressed can lead to problems. 5. Discuss the",
+   "after": "Identify user requirements,, 1. Explore several situations within the community. 2. Discuss issues identified in the situations. 3. State main issues identified for discussion. 4. Identify needs, wants and lacks within the environment which if not addressed can lead to problems. 5. Discuss the",
    "removed": "",
-   "furniture": [
-    " Communication and Collaboration (CC)",
-    " Critical Thinking and Problem Solving (CP)",
-    " Creativity and Innovation (CI)"
-   ]
+   "furniture": []
   },
   {
    "file": "career-technology_B9_curriculum_db_clean.json",
@@ -5589,8 +5579,8 @@
    "code": "B9.5.2.1.3",
    "marker": "numbered exemplar",
    "kind": "content",
-   "before": "Generate Ideas 1. Study the specifications as a guide to generate at least three possible ideas using freehand. 2. Write short notes to describe each of the ideas. 3. Compare the ideas with the specifications to ensure that all requirements are met. CI 5.1: Examine alternatives in creating new things. CC 8.2: Explain ideas in a clear order with relevant details, using correct construction and structure of",
-   "after": "Generate Ideas 1. Study the specifications as a guide to generate at least three possible ideas using freehand. 2. Write short notes to describe each of the ideas. 3. Compare the ideas with the specifications to ensure that all requirements are met. CI 5.1: Examine alternatives in creating new things. CC 8.2: Explain ideas in a clear order with relevant details, using correct construction and structure of",
+   "before": "Generate Ideas 1. Study the specifications as a guide to generate at least three possible ideas using freehand. 2. Write short notes to describe each of the ideas. 3. Compare the ideas with the specifications to ensure that all requirements are met",
+   "after": "Generate Ideas 1. Study the specifications as a guide to generate at least three possible ideas using freehand. 2. Write short notes to describe each of the ideas. 3. Compare the ideas with the specifications to ensure that all requirements are met",
    "removed": "",
    "furniture": []
   },
@@ -5599,8 +5589,8 @@
    "code": "B9.5.2.1.4",
    "marker": "numbered exemplar",
    "kind": "content",
-   "before": "Develop the selected solution 1. Identify the best design that meets the specifications and select it for further consideration. 2. Indicate the reasons for selecting a design for development. 3. Examine the selected design to identify parts that need to be modified. 4. Redesign the selected solution to obtain the final design. CP 6.4: Ability to identify important and appropriate criteria and use them to e",
-   "after": "Develop the selected solution 1. Identify the best design that meets the specifications and select it for further consideration. 2. Indicate the reasons for selecting a design for development. 3. Examine the selected design to identify parts that need to be modified. 4. Redesign the selected solution to obtain the final design. CP 6.4: Ability to identify important and appropriate criteria and use them to e",
+   "before": "Develop the selected solution 1. Identify the best design that meets the specifications and select it for further consideration. 2. Indicate the reasons for selecting a design for development. 3. Examine the selected design to identify parts that need to be modified. 4. Redesign the selected solution to obtain the final design",
+   "after": "Develop the selected solution 1. Identify the best design that meets the specifications and select it for further consideration. 2. Indicate the reasons for selecting a design for development. 3. Examine the selected design to identify parts that need to be modified. 4. Redesign the selected solution to obtain the final design",
    "removed": "",
    "furniture": []
   },
@@ -5761,16 +5751,6 @@
    "kind": "content",
    "before": "Practise file management techniques (file & folder management, Users & Accounts) 1. Explore different account levels for users of computer systems. 2. Explore different permission levels that are applied to files and folders",
    "after": "Practise file management techniques (file & folder management, Users & Accounts) 1. Explore different account levels for users of computer systems. 2. Explore different permission levels that are applied to files and folders",
-   "removed": "",
-   "furniture": []
-  },
-  {
-   "file": "computing_B9_curriculum_db_clean.json",
-   "code": "B9.2.4.1.1",
-   "marker": "numbered exemplar",
-   "kind": "content",
-   "before": "). 3. Insert a pivot chart to display the number of males and females in the class. 4. Demonstrate the use of the sort and filter features of the pivot table. CC9.6: Ability to work with all group members to complete a task successfully. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion. 50",
-   "after": "). 3. Insert a pivot chart to display the number of males and females in the class. 4. Demonstrate the use of the sort and filter features of the pivot table. CC9.6: Ability to work with all group members to complete a task successfully. CP5.1: Ability to combine information and ideas from several sources to reach a conclusion. 50",
    "removed": "",
    "furniture": []
   },
@@ -5939,8 +5919,8 @@
    "code": "B8.2.2.1.1",
    "marker": "numbered exemplar",
    "kind": "content",
-   "before": "Listen to a level-appropriate dialogue attentively and identify key information 1. Listen to and note important issues in a dialogue e.g. message, mood, tone. 2. Listen and compare the issues noted in the dialogue with peers. Communication and Collaboration (CC) CC 7.4: Identify underlying themes, implications and issues when listening",
-   "after": "Listen to a level-appropriate dialogue attentively and identify key information 1. Listen to and note important issues in a dialogue e.g. message, mood, tone. 2. Listen and compare the issues noted in the dialogue with peers. Communication and Collaboration (CC) CC 7.4: Identify underlying themes, implications and issues when listening",
+   "before": "Listen to a level-appropriate dialogue attentively and identify key information 1. Listen to and note important issues in a dialogue e.g. message, mood, tone. 2. Listen and compare the issues noted in the dialogue with peers",
+   "after": "Listen to a level-appropriate dialogue attentively and identify key information 1. Listen to and note important issues in a dialogue e.g. message, mood, tone. 2. Listen and compare the issues noted in the dialogue with peers",
    "removed": "",
    "furniture": []
   },
@@ -5949,8 +5929,8 @@
    "code": "B8.2.2.1.2",
    "marker": "numbered exemplar",
    "kind": "content",
-   "before": "Listen to and discuss the ideas and share opinions from a level-appropriate text 1. Listen and write down key information from texts/talk shows/news. 2. Discuss the key information from texts and add opinions. Communication and Collaboration (CC) CC 7.4: Identify underlying themes, implications and issues when listening. 41",
-   "after": "Listen to and discuss the ideas and share opinions from a level-appropriate text 1. Listen and write down key information from texts/talk shows/news. 2. Discuss the key information from texts and add opinions. Communication and Collaboration (CC) CC 7.4: Identify underlying themes, implications and issues when listening. 41",
+   "before": "Listen to and discuss the ideas and share opinions from a level-appropriate text 1. Listen and write down key information from texts/talk shows/news. 2. Discuss the key information from texts and add opinions. 41",
+   "after": "Listen to and discuss the ideas and share opinions from a level-appropriate text 1. Listen and write down key information from texts/talk shows/news. 2. Discuss the key information from texts and add opinions. 41",
    "removed": "",
    "furniture": []
   },
@@ -6109,256 +6089,13 @@
    "code": "B8.5.1.1.1",
    "marker": "numbered exemplar",
    "kind": "content",
-   "before": "in their communities. 2. Evaluate the waste management practices carried out in a community and present a report. Critical Thinking and Problem Solving (CP), Communication and Collaboration (CC), Creativity and Innovation (CI), Digital Literacy (DL) CP 6.1: Ability to effectively define goals towards solving a problem CP 6.1: Ability to effectively define goals towards solving a problem CC 8.2: Expla",
-   "after": "in their communities. 2. Evaluate the waste management practices carried out in a community and present a report. Critical Thinking and Problem Solving (CP), Communication and Collaboration (CC), Creativity and Innovation (CI), Digital Literacy (DL) CP 6.1: Ability to effectively define goals towards solving a problem CP 6.1: Ability to effectively define goals towards solving a problem CC 8.2: Expla",
+   "before": "in their communities. 2. Evaluate the waste management practices carried out in a community and present a report.,,,1: Ability to effectively define goals towards solving a problem",
+   "after": "in their communities. 2. Evaluate the waste management practices carried out in a community and present a report.,,,1: Ability to effectively define goals towards solving a problem",
    "removed": "",
    "furniture": []
   }
  ],
  "lessons": [
-  {
-   "file": "career_technology_b7_lessons_enriched.json",
-   "slots": [
-    {
-     "lesson_num": 8,
-     "ind_code": "B7.2.1.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 17,
-     "ind_code": "B7.3.2.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 21,
-     "ind_code": "B7.5.2.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 22,
-     "ind_code": "B7.3.2.1.3",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 25,
-     "ind_code": "B7.6.2.1.3",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 41,
-     "ind_code": "B7.5.4.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 48,
-     "ind_code": "B7.2.1.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 65,
-     "ind_code": "B7.6.2.1.3",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 67,
-     "ind_code": "B7.3.2.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 72,
-     "ind_code": "B7.3.2.1.3",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 76,
-     "ind_code": "B7.5.2.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 88,
-     "ind_code": "B7.2.1.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 96,
-     "ind_code": "B7.5.4.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 105,
-     "ind_code": "B7.6.2.1.3",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 117,
-     "ind_code": "B7.3.2.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 122,
-     "ind_code": "B7.3.2.1.3",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 128,
-     "ind_code": "B7.2.1.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 131,
-     "ind_code": "B7.5.2.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 145,
-     "ind_code": "B7.6.2.1.3",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 151,
-     "ind_code": "B7.5.4.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 167,
-     "ind_code": "B7.3.2.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 168,
-     "ind_code": "B7.2.1.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 172,
-     "ind_code": "B7.3.2.1.3",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    }
-   ],
-   "slots_changed": 23,
-   "fields": {
-    "ind_desc": 23,
-    "perf_indicator": 23,
-    "starter": 23,
-    "main": 23
-   },
-   "field_occurrences": 92
-  },
   {
    "file": "career_technology_b8_lessons_enriched.json",
    "slots": [
@@ -6373,98 +6110,8 @@
      ]
     },
     {
-     "lesson_num": 11,
-     "ind_code": "B8.5.2.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 15,
-     "ind_code": "B8.6.2.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 16,
-     "ind_code": "B8.5.2.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 18,
-     "ind_code": "B8.2.3.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 21,
-     "ind_code": "B8.5.2.1.3",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
      "lesson_num": 25,
      "ind_code": "B8.6.1.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 26,
-     "ind_code": "B8.5.2.1.4",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 32,
-     "ind_code": "B8.3.2.1.3",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 35,
-     "ind_code": "B8.6.2.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 43,
-     "ind_code": "B8.2.3.1.1",
      "fields": [
       "ind_desc",
       "main",
@@ -6483,26 +6130,6 @@
      ]
     },
     {
-     "lesson_num": 51,
-     "ind_code": "B8.5.3.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 55,
-     "ind_code": "B8.6.2.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
      "lesson_num": 65,
      "ind_code": "B8.6.1.1.1",
      "fields": [
@@ -6513,98 +6140,8 @@
      ]
     },
     {
-     "lesson_num": 66,
-     "ind_code": "B8.5.4.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 68,
-     "ind_code": "B8.2.3.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 75,
-     "ind_code": "B8.6.2.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
      "lesson_num": 85,
      "ind_code": "B8.6.1.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 91,
-     "ind_code": "B8.5.2.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 93,
-     "ind_code": "B8.2.3.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 95,
-     "ind_code": "B8.6.2.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 96,
-     "ind_code": "B8.5.2.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 97,
-     "ind_code": "B8.3.2.1.3",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 101,
-     "ind_code": "B8.5.2.1.3",
      "fields": [
       "ind_desc",
       "main",
@@ -6623,68 +6160,8 @@
      ]
     },
     {
-     "lesson_num": 106,
-     "ind_code": "B8.5.2.1.4",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 115,
-     "ind_code": "B8.6.2.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 118,
-     "ind_code": "B8.2.3.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
      "lesson_num": 125,
      "ind_code": "B8.6.1.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 131,
-     "ind_code": "B8.5.3.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 135,
-     "ind_code": "B8.6.2.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 143,
-     "ind_code": "B8.2.3.1.1",
      "fields": [
       "ind_desc",
       "main",
@@ -6703,933 +6180,8 @@
      ]
     },
     {
-     "lesson_num": 146,
-     "ind_code": "B8.5.4.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 155,
-     "ind_code": "B8.6.2.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 162,
-     "ind_code": "B8.3.2.1.3",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
      "lesson_num": 165,
      "ind_code": "B8.6.1.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 168,
-     "ind_code": "B8.2.3.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 171,
-     "ind_code": "B8.5.2.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 175,
-     "ind_code": "B8.6.2.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 176,
-     "ind_code": "B8.5.2.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    }
-   ],
-   "slots_changed": 42,
-   "fields": {
-    "ind_desc": 42,
-    "perf_indicator": 42,
-    "starter": 42,
-    "main": 42
-   },
-   "field_occurrences": 168
-  },
-  {
-   "file": "career_technology_b9_lessons_enriched.json",
-   "slots": [
-    {
-     "lesson_num": 4,
-     "ind_code": "B9.1.1.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 9,
-     "ind_code": "B9.4.1.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 15,
-     "ind_code": "B9.6.1.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 16,
-     "ind_code": "B9.5.2.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 20,
-     "ind_code": "B9.4.1.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 24,
-     "ind_code": "B9.1.2.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 26,
-     "ind_code": "B9.5.2.1.3",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 31,
-     "ind_code": "B9.5.2.1.4",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 35,
-     "ind_code": "B9.6.2.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 37,
-     "ind_code": "B9.3.4.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 39,
-     "ind_code": "B9.4.1.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 50,
-     "ind_code": "B9.4.1.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 64,
-     "ind_code": "B9.1.3.2.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 65,
-     "ind_code": "B9.6.1.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 69,
-     "ind_code": "B9.4.1.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 74,
-     "ind_code": "B9.1.3.2.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 80,
-     "ind_code": "B9.4.1.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 84,
-     "ind_code": "B9.1.1.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 85,
-     "ind_code": "B9.6.2.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 86,
-     "ind_code": "B9.5.2.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 87,
-     "ind_code": "B9.3.4.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 96,
-     "ind_code": "B9.5.2.1.3",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 99,
-     "ind_code": "B9.4.1.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 101,
-     "ind_code": "B9.5.2.1.4",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 104,
-     "ind_code": "B9.1.2.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 110,
-     "ind_code": "B9.4.1.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 115,
-     "ind_code": "B9.6.1.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 129,
-     "ind_code": "B9.4.1.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 135,
-     "ind_code": "B9.6.2.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 137,
-     "ind_code": "B9.3.4.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 140,
-     "ind_code": "B9.4.1.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 144,
-     "ind_code": "B9.1.3.2.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 154,
-     "ind_code": "B9.1.3.2.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 156,
-     "ind_code": "B9.5.2.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 159,
-     "ind_code": "B9.4.1.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 164,
-     "ind_code": "B9.1.1.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 165,
-     "ind_code": "B9.6.1.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 166,
-     "ind_code": "B9.5.2.1.3",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 170,
-     "ind_code": "B9.4.1.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 171,
-     "ind_code": "B9.5.2.1.4",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    }
-   ],
-   "slots_changed": 40,
-   "fields": {
-    "ind_desc": 40,
-    "perf_indicator": 40,
-    "starter": 40,
-    "main": 40
-   },
-   "field_occurrences": 160
-  },
-  {
-   "file": "computing_b9_lessons_enriched.json",
-   "slots": [
-    {
-     "lesson_num": 11,
-     "ind_code": "B9.1.2.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 35,
-     "ind_code": "B9.1.2.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 52,
-     "ind_code": "B9.2.4.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 56,
-     "ind_code": "B9.1.2.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 80,
-     "ind_code": "B9.1.2.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 101,
-     "ind_code": "B9.1.2.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 117,
-     "ind_code": "B9.2.4.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 125,
-     "ind_code": "B9.1.2.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 146,
-     "ind_code": "B9.1.2.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 170,
-     "ind_code": "B9.1.2.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    }
-   ],
-   "slots_changed": 10,
-   "fields": {
-    "ind_desc": 10,
-    "perf_indicator": 10,
-    "starter": 10,
-    "main": 10
-   },
-   "field_occurrences": 40
-  },
-  {
-   "file": "creative_arts_design_b7_lessons_enriched.json",
-   "slots": [
-    {
-     "lesson_num": 20,
-     "ind_code": "B7.1.3.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 22,
-     "ind_code": "B7.2.2.2.4",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 41,
-     "ind_code": "B7.1.3.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 62,
-     "ind_code": "B7.2.2.2.4",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 65,
-     "ind_code": "B7.1.3.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 86,
-     "ind_code": "B7.1.3.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 102,
-     "ind_code": "B7.2.2.2.4",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 110,
-     "ind_code": "B7.1.3.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 131,
-     "ind_code": "B7.1.3.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 142,
-     "ind_code": "B7.2.2.2.4",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 155,
-     "ind_code": "B7.1.3.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 176,
-     "ind_code": "B7.1.3.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    }
-   ],
-   "slots_changed": 12,
-   "fields": {
-    "ind_desc": 12,
-    "perf_indicator": 12,
-    "starter": 12,
-    "main": 12
-   },
-   "field_occurrences": 48
-  },
-  {
-   "file": "creative_arts_design_b8_lessons_enriched.json",
-   "slots": [
-    {
-     "lesson_num": 20,
-     "ind_code": "B8.1.3.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 41,
-     "ind_code": "B8.1.3.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 65,
-     "ind_code": "B8.1.3.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 86,
-     "ind_code": "B8.1.3.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 110,
-     "ind_code": "B8.1.3.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 131,
-     "ind_code": "B8.1.3.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 155,
-     "ind_code": "B8.1.3.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 176,
-     "ind_code": "B8.1.3.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    }
-   ],
-   "slots_changed": 8,
-   "fields": {
-    "ind_desc": 8,
-    "perf_indicator": 8,
-    "starter": 8,
-    "main": 8
-   },
-   "field_occurrences": 32
-  },
-  {
-   "file": "creative_arts_design_b9_lessons_enriched.json",
-   "slots": [
-    {
-     "lesson_num": 16,
-     "ind_code": "B9.1.3.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 36,
-     "ind_code": "B9.1.3.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 56,
-     "ind_code": "B9.1.3.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 76,
-     "ind_code": "B9.1.3.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 96,
-     "ind_code": "B9.1.3.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 116,
-     "ind_code": "B9.1.3.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 136,
-     "ind_code": "B9.1.3.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 156,
-     "ind_code": "B9.1.3.1.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 176,
-     "ind_code": "B9.1.3.1.2",
      "fields": [
       "ind_desc",
       "main",
@@ -7648,34 +6200,41 @@
    "field_occurrences": 36
   },
   {
-   "file": "english_b6_lessons_enriched.json",
+   "file": "creative_arts_b5_lessons_enriched.json",
    "slots": [
     {
-     "lesson_num": 89,
-     "ind_code": "B6.4.9.1.1",
+     "lesson_num": 3,
+     "ind_code": "B5.1.1.1.2",
      "fields": [
       "ind_desc",
       "main",
       "perf_indicator",
       "starter"
      ]
-    }
-   ],
-   "slots_changed": 1,
-   "fields": {
-    "ind_desc": 1,
-    "perf_indicator": 1,
-    "starter": 1,
-    "main": 1
-   },
-   "field_occurrences": 4
-  },
-  {
-   "file": "ghanaian_b8_lessons_enriched.json",
-   "slots": [
+    },
+    {
+     "lesson_num": 4,
+     "ind_code": "B5.2.1.1.2",
+     "fields": [
+      "ind_desc",
+      "main",
+      "perf_indicator",
+      "starter"
+     ]
+    },
     {
      "lesson_num": 7,
-     "ind_code": "B8.2.2.1.1",
+     "ind_code": "B5.2.1.1.3",
+     "fields": [
+      "ind_desc",
+      "main",
+      "perf_indicator",
+      "starter"
+     ]
+    },
+    {
+     "lesson_num": 9,
+     "ind_code": "B5.2.1.1.4",
      "fields": [
       "ind_desc",
       "main",
@@ -7685,7 +6244,7 @@
     },
     {
      "lesson_num": 12,
-     "ind_code": "B8.2.2.1.2",
+     "ind_code": "B5.2.1.1.5",
      "fields": [
       "ind_desc",
       "main",
@@ -7694,8 +6253,8 @@
      ]
     },
     {
-     "lesson_num": 32,
-     "ind_code": "B8.2.2.1.1",
+     "lesson_num": 14,
+     "ind_code": "B5.2.1.1.6",
      "fields": [
       "ind_desc",
       "main",
@@ -7704,8 +6263,8 @@
      ]
     },
     {
-     "lesson_num": 37,
-     "ind_code": "B8.2.2.1.2",
+     "lesson_num": 43,
+     "ind_code": "B5.1.1.1.2",
      "fields": [
       "ind_desc",
       "main",
@@ -7714,8 +6273,8 @@
      ]
     },
     {
-     "lesson_num": 57,
-     "ind_code": "B8.2.2.1.1",
+     "lesson_num": 64,
+     "ind_code": "B5.2.1.1.2",
      "fields": [
       "ind_desc",
       "main",
@@ -7724,8 +6283,8 @@
      ]
     },
     {
-     "lesson_num": 62,
-     "ind_code": "B8.2.2.1.2",
+     "lesson_num": 67,
+     "ind_code": "B5.2.1.1.3",
      "fields": [
       "ind_desc",
       "main",
@@ -7734,8 +6293,8 @@
      ]
     },
     {
-     "lesson_num": 82,
-     "ind_code": "B8.2.2.1.1",
+     "lesson_num": 69,
+     "ind_code": "B5.2.1.1.4",
      "fields": [
       "ind_desc",
       "main",
@@ -7744,8 +6303,8 @@
      ]
     },
     {
-     "lesson_num": 87,
-     "ind_code": "B8.2.2.1.2",
+     "lesson_num": 72,
+     "ind_code": "B5.2.1.1.5",
      "fields": [
       "ind_desc",
       "main",
@@ -7754,8 +6313,8 @@
      ]
     },
     {
-     "lesson_num": 107,
-     "ind_code": "B8.2.2.1.1",
+     "lesson_num": 74,
+     "ind_code": "B5.2.1.1.6",
      "fields": [
       "ind_desc",
       "main",
@@ -7764,8 +6323,48 @@
      ]
     },
     {
-     "lesson_num": 112,
-     "ind_code": "B8.2.2.1.2",
+     "lesson_num": 83,
+     "ind_code": "B5.1.1.1.2",
+     "fields": [
+      "ind_desc",
+      "main",
+      "perf_indicator",
+      "starter"
+     ]
+    },
+    {
+     "lesson_num": 123,
+     "ind_code": "B5.1.1.1.2",
+     "fields": [
+      "ind_desc",
+      "main",
+      "perf_indicator",
+      "starter"
+     ]
+    },
+    {
+     "lesson_num": 124,
+     "ind_code": "B5.2.1.1.2",
+     "fields": [
+      "ind_desc",
+      "main",
+      "perf_indicator",
+      "starter"
+     ]
+    },
+    {
+     "lesson_num": 127,
+     "ind_code": "B5.2.1.1.3",
+     "fields": [
+      "ind_desc",
+      "main",
+      "perf_indicator",
+      "starter"
+     ]
+    },
+    {
+     "lesson_num": 129,
+     "ind_code": "B5.2.1.1.4",
      "fields": [
       "ind_desc",
       "main",
@@ -7775,7 +6374,7 @@
     },
     {
      "lesson_num": 132,
-     "ind_code": "B8.2.2.1.1",
+     "ind_code": "B5.2.1.1.5",
      "fields": [
       "ind_desc",
       "main",
@@ -7784,8 +6383,8 @@
      ]
     },
     {
-     "lesson_num": 137,
-     "ind_code": "B8.2.2.1.2",
+     "lesson_num": 134,
+     "ind_code": "B5.2.1.1.6",
      "fields": [
       "ind_desc",
       "main",
@@ -7794,18 +6393,8 @@
      ]
     },
     {
-     "lesson_num": 157,
-     "ind_code": "B8.2.2.1.1",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    },
-    {
-     "lesson_num": 162,
-     "ind_code": "B8.2.2.1.2",
+     "lesson_num": 163,
+     "ind_code": "B5.1.1.1.2",
      "fields": [
       "ind_desc",
       "main",
@@ -7814,21 +6403,21 @@
      ]
     }
    ],
-   "slots_changed": 14,
+   "slots_changed": 20,
    "fields": {
-    "ind_desc": 14,
-    "perf_indicator": 14,
-    "starter": 14,
-    "main": 14
+    "ind_desc": 20,
+    "perf_indicator": 20,
+    "starter": 20,
+    "main": 20
    },
-   "field_occurrences": 56
+   "field_occurrences": 80
   },
   {
-   "file": "science_b7_lessons_enriched.json",
+   "file": "creative_arts_b6_lessons_enriched.json",
    "slots": [
     {
-     "lesson_num": 39,
-     "ind_code": "B7.4.2.2.2",
+     "lesson_num": 3,
+     "ind_code": "B6.1.1.1.2",
      "fields": [
       "ind_desc",
       "main",
@@ -7836,32 +6425,9 @@
       "starter"
      ]
     },
-    {
-     "lesson_num": 144,
-     "ind_code": "B7.4.2.2.2",
-     "fields": [
-      "ind_desc",
-      "main",
-      "perf_indicator",
-      "starter"
-     ]
-    }
-   ],
-   "slots_changed": 2,
-   "fields": {
-    "ind_desc": 2,
-    "perf_indicator": 2,
-    "starter": 2,
-    "main": 2
-   },
-   "field_occurrences": 8
-  },
-  {
-   "file": "science_b8_lessons_enriched.json",
-   "slots": [
     {
      "lesson_num": 5,
-     "ind_code": "B8.5.1.1.1",
+     "ind_code": "B6.1.1.1.3",
      "fields": [
       "ind_desc",
       "main",
@@ -7870,8 +6436,8 @@
      ]
     },
     {
-     "lesson_num": 60,
-     "ind_code": "B8.5.1.1.1",
+     "lesson_num": 7,
+     "ind_code": "B6.2.1.1.3",
      "fields": [
       "ind_desc",
       "main",
@@ -7880,8 +6446,198 @@
      ]
     },
     {
-     "lesson_num": 115,
-     "ind_code": "B8.5.1.1.1",
+     "lesson_num": 9,
+     "ind_code": "B6.2.1.1.4",
+     "fields": [
+      "ind_desc",
+      "main",
+      "perf_indicator",
+      "starter"
+     ]
+    },
+    {
+     "lesson_num": 10,
+     "ind_code": "B6.1.1.1.6",
+     "fields": [
+      "ind_desc",
+      "main",
+      "perf_indicator",
+      "starter"
+     ]
+    },
+    {
+     "lesson_num": 14,
+     "ind_code": "B6.2.1.1.6",
+     "fields": [
+      "ind_desc",
+      "main",
+      "perf_indicator",
+      "starter"
+     ]
+    },
+    {
+     "lesson_num": 43,
+     "ind_code": "B6.1.1.1.2",
+     "fields": [
+      "ind_desc",
+      "main",
+      "perf_indicator",
+      "starter"
+     ]
+    },
+    {
+     "lesson_num": 45,
+     "ind_code": "B6.1.1.1.3",
+     "fields": [
+      "ind_desc",
+      "main",
+      "perf_indicator",
+      "starter"
+     ]
+    },
+    {
+     "lesson_num": 50,
+     "ind_code": "B6.1.1.1.6",
+     "fields": [
+      "ind_desc",
+      "main",
+      "perf_indicator",
+      "starter"
+     ]
+    },
+    {
+     "lesson_num": 62,
+     "ind_code": "B6.2.1.1.3",
+     "fields": [
+      "ind_desc",
+      "main",
+      "perf_indicator",
+      "starter"
+     ]
+    },
+    {
+     "lesson_num": 64,
+     "ind_code": "B6.2.1.1.4",
+     "fields": [
+      "ind_desc",
+      "main",
+      "perf_indicator",
+      "starter"
+     ]
+    },
+    {
+     "lesson_num": 69,
+     "ind_code": "B6.2.1.1.6",
+     "fields": [
+      "ind_desc",
+      "main",
+      "perf_indicator",
+      "starter"
+     ]
+    },
+    {
+     "lesson_num": 83,
+     "ind_code": "B6.1.1.1.2",
+     "fields": [
+      "ind_desc",
+      "main",
+      "perf_indicator",
+      "starter"
+     ]
+    },
+    {
+     "lesson_num": 85,
+     "ind_code": "B6.1.1.1.3",
+     "fields": [
+      "ind_desc",
+      "main",
+      "perf_indicator",
+      "starter"
+     ]
+    },
+    {
+     "lesson_num": 90,
+     "ind_code": "B6.1.1.1.6",
+     "fields": [
+      "ind_desc",
+      "main",
+      "perf_indicator",
+      "starter"
+     ]
+    },
+    {
+     "lesson_num": 117,
+     "ind_code": "B6.2.1.1.3",
+     "fields": [
+      "ind_desc",
+      "main",
+      "perf_indicator",
+      "starter"
+     ]
+    },
+    {
+     "lesson_num": 119,
+     "ind_code": "B6.2.1.1.4",
+     "fields": [
+      "ind_desc",
+      "main",
+      "perf_indicator",
+      "starter"
+     ]
+    },
+    {
+     "lesson_num": 123,
+     "ind_code": "B6.1.1.1.2",
+     "fields": [
+      "ind_desc",
+      "main",
+      "perf_indicator",
+      "starter"
+     ]
+    },
+    {
+     "lesson_num": 124,
+     "ind_code": "B6.2.1.1.6",
+     "fields": [
+      "ind_desc",
+      "main",
+      "perf_indicator",
+      "starter"
+     ]
+    },
+    {
+     "lesson_num": 125,
+     "ind_code": "B6.1.1.1.3",
+     "fields": [
+      "ind_desc",
+      "main",
+      "perf_indicator",
+      "starter"
+     ]
+    },
+    {
+     "lesson_num": 130,
+     "ind_code": "B6.1.1.1.6",
+     "fields": [
+      "ind_desc",
+      "main",
+      "perf_indicator",
+      "starter"
+     ]
+    },
+    {
+     "lesson_num": 163,
+     "ind_code": "B6.1.1.1.2",
+     "fields": [
+      "ind_desc",
+      "main",
+      "perf_indicator",
+      "starter"
+     ]
+    },
+    {
+     "lesson_num": 165,
+     "ind_code": "B6.1.1.1.3",
      "fields": [
       "ind_desc",
       "main",
@@ -7891,7 +6647,37 @@
     },
     {
      "lesson_num": 170,
-     "ind_code": "B8.5.1.1.1",
+     "ind_code": "B6.1.1.1.6",
+     "fields": [
+      "ind_desc",
+      "main",
+      "perf_indicator",
+      "starter"
+     ]
+    },
+    {
+     "lesson_num": 172,
+     "ind_code": "B6.2.1.1.3",
+     "fields": [
+      "ind_desc",
+      "main",
+      "perf_indicator",
+      "starter"
+     ]
+    },
+    {
+     "lesson_num": 174,
+     "ind_code": "B6.2.1.1.4",
+     "fields": [
+      "ind_desc",
+      "main",
+      "perf_indicator",
+      "starter"
+     ]
+    },
+    {
+     "lesson_num": 179,
+     "ind_code": "B6.2.1.1.6",
      "fields": [
       "ind_desc",
       "main",
@@ -7900,14 +6686,14 @@
      ]
     }
    ],
-   "slots_changed": 4,
+   "slots_changed": 27,
    "fields": {
-    "ind_desc": 4,
-    "perf_indicator": 4,
-    "starter": 4,
-    "main": 4
+    "ind_desc": 27,
+    "perf_indicator": 27,
+    "starter": 27,
+    "main": 27
    },
-   "field_occurrences": 16
+   "field_occurrences": 108
   }
  ],
  "furniture": [
@@ -8787,31 +7573,31 @@
   }
  ],
  "applied": {
-  "records": 253,
-  "repeats": 14,
-  "dangling": 239,
+  "records": 266,
+  "repeats": 15,
+  "dangling": 251,
   "files": {
+   "career-technology_B8_curriculum_db_clean.json": 4,
+   "creative-arts_B5_curriculum_db_clean.json": 43,
+   "creative-arts_B6_curriculum_db_clean.json": 44,
    "career-technology_B7_curriculum_db_clean.json": 5,
-   "career-technology_B8_curriculum_db_clean.json": 3,
    "career-technology_B9_curriculum_db_clean.json": 6,
    "creative-arts_B2_curriculum_db_clean.json": 42,
    "creative-arts_B3_curriculum_db_clean.json": 35,
    "creative-arts_B4_curriculum_db_clean.json": 46,
-   "creative-arts_B5_curriculum_db_clean.json": 37,
-   "creative-arts_B6_curriculum_db_clean.json": 38,
    "creative_arts_curriculum_db_clean.json": 41
   },
-  "lesson_slots": 1137,
+  "lesson_slots": 1193,
   "lesson_files": {
-   "career_technology_b7_lessons_enriched.json": 30,
-   "career_technology_b8_lessons_enriched.json": 45,
-   "career_technology_b9_lessons_enriched.json": 40,
+   "career_technology_b7_lessons_enriched.json": 18,
+   "career_technology_b8_lessons_enriched.json": 28,
+   "career_technology_b9_lessons_enriched.json": 16,
    "computing_b9_lessons_enriched.json": 2,
    "creative_arts_b2_lessons_enriched.json": 180,
    "creative_arts_b3_lessons_enriched.json": 157,
    "creative_arts_b4_lessons_enriched.json": 177,
-   "creative_arts_b5_lessons_enriched.json": 135,
-   "creative_arts_b6_lessons_enriched.json": 146,
+   "creative_arts_b5_lessons_enriched.json": 155,
+   "creative_arts_b6_lessons_enriched.json": 173,
    "creative_arts_design_b7_lessons_enriched.json": 12,
    "creative_arts_design_b8_lessons_enriched.json": 8,
    "creative_arts_design_b9_lessons_enriched.json": 9,
@@ -8822,10 +7608,10 @@
    "science_b8_lessons_enriched.json": 4
   },
   "lesson_fields": {
-   "ind_desc": 1137,
-   "perf_indicator": 1137,
-   "starter": 962,
-   "main": 962
+   "ind_desc": 1193,
+   "perf_indicator": 1193,
+   "starter": 1018,
+   "main": 1018
   },
   "furniture_records": 27,
   "furniture_files": {
@@ -8862,13 +7648,20 @@
    "repeats": 11,
    "dangling": 0,
    "lesson_slots": 165,
-   "lesson_fields": {
-    "ind_desc": 165,
-    "perf_indicator": 165,
-    "starter": 165,
-    "main": 165
-   },
    "furniture_records": 27
+  },
+  {
+   "records": 13,
+   "repeats": 1,
+   "dangling": 12,
+   "lesson_slots": 56,
+   "lesson_fields": {
+    "ind_desc": 56,
+    "perf_indicator": 56,
+    "starter": 56,
+    "main": 56
+   },
+   "furniture_records": 0
   }
  ]
 }

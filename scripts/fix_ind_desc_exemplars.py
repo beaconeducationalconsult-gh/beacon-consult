@@ -132,17 +132,67 @@ def print_for(subject: str, grade: str) -> str | None:
 # --------------------------------------------------------------------------- #
 # reading one field
 
-def split_marker(text: str) -> tuple[str, str, str] | None:
-    """(marker name, text before it, text after it) — the print's own exemplar intro."""
+def dekern(text: str) -> tuple[str, list[int]]:
+    """(the text with the print's stray space after a lone capital removed, map).
+
+    These PDFs break "Learners" into "L earners" wherever the letters are kerned
+    apart, so a marker regex that looks for the word misses it and the row is
+    read as if it had no exemplar intro at all. The map makes it possible to
+    find a marker in the repaired text and report its position in the original —
+    the text is never rewritten, only searched in a repaired copy.
+    """
+    out: list[str] = []
+    index: list[int] = []
+    i = 0
+    while i < len(text):
+        out.append(text[i])
+        index.append(i)
+        if (text[i].isupper()
+                and (i == 0 or not text[i - 1].isalpha())
+                and text[i + 1:i + 2] == " "
+                and text[i + 2:i + 3].islower()):
+            i += 2  # skip the gap; the next character keeps its own entry
+            continue
+        i += 1
+    return "".join(out), index
+
+
+def marker_span(text: str) -> tuple[str, int, int] | None:
+    """(marker name, start, end) in `text` — the earliest marker, de-kerning aside.
+
+    Both readings are searched and the earlier marker wins: the print breaks
+    "Learners are to:" into "L earners are to:", so a row's own exemplar intro is
+    invisible to a plain search — but a *later* numbered step is not, and taking
+    that one would cut the indicator at the wrong place (or, where the row holds
+    the intro only, at a nonsense one). The comparison is on positions in the
+    original text, so "earlier" always means earlier in the row.
+    """
     best = None
     for name, rx in MARKERS:
         m = rx.search(text)
-        if m and (best is None or m.start() < best[1].start()):
-            best = (name, m)
-    if not best:
+        if m and (best is None or m.start() < best[1]):
+            best = (name, m.start(), m.end())
+    repaired, index = dekern(text)
+    if repaired == text:
+        return best
+    for name, rx in MARKERS:
+        m = rx.search(repaired)
+        if not m:
+            continue
+        # map back into the original: the last kept character + 1
+        start, end = index[m.start()], index[m.end() - 1] + 1
+        if best is None or start < best[1]:
+            best = (name, start, end)
+    return best
+
+
+def split_marker(text: str) -> tuple[str, str, str] | None:
+    """(marker name, text before it, text after it) — the print's own exemplar intro."""
+    found = marker_span(text)
+    if not found:
         return None
-    name, m = best
-    return name, text[:m.start()].strip(), text[m.end():].strip()
+    name, start, end = found
+    return name, text[:start].strip(), text[end:].strip()
 
 
 def longest_run(one: str, two: str) -> int:
@@ -279,6 +329,36 @@ def printed_head(pdf: str, pages: list[int], head: str) -> tuple[str, float]:
     return best
 
 
+def printed_lead(pdf: str, pages: list[int], code: str, head: str) -> tuple[str, float]:
+    """(the print's own reading of *this record's* row, how close it is to `head`).
+
+    Anchored on the record's own code, unlike `printed_head`, which searches the
+    whole page for the text in front of any exemplar marker. A page carries
+    several rows, so that search can compare a record against the row above it —
+    which is exactly what it did on the creative-arts pages, reporting seventeen
+    records whose indicator the print sets verbatim (see the note in
+    docs/curriculum-data.md). Anchoring costs nothing and removes the class.
+    """
+    wanted = F.blob(code)
+    for page in pages:
+        text = page_text(pdf, page)
+        for m in F.INDICATOR.finditer(text):
+            if F.blob(m.group(0)) != wanted:
+                continue
+            rest = F.strip_code_prefix(text[m.end():]).strip()
+            if not rest:
+                continue
+            found = marker_span(" " + rest)
+            if not found:
+                continue
+            lead = (" " + rest)[:found[1]].strip()
+            if len(re.sub(r"\W+", " ", lead).split()) < 3:
+                continue
+            ratio = difflib.SequenceMatcher(None, F.blob(head), F.blob(lead)).ratio()
+            return F.compact(lead), ratio
+    return "", 0.0
+
+
 def plan() -> tuple[list[dict], list[dict], dict]:
     """Every record with an exemplar tail: what to cut, what to report, the tally."""
     cut: list[dict] = []
@@ -317,7 +397,11 @@ def plan() -> tuple[list[dict], list[dict], dict]:
                 cut.append(entry)
                 continue
             pages = sorted(set(F.pages_of(pdf, code)) | set(pages_with(pdf, head)))
-            want, ratio = printed_head(pdf, pages, head)
+            # the record's own row first: see printed_lead() for why
+            want, ratio = printed_lead(pdf, pages, code, head)
+            entry["rowAnchored"] = bool(want)
+            if not want:
+                want, ratio = printed_head(pdf, pages, head)
             entry["pages"] = pages[:6]
             entry["print_head"] = want[:300]
             entry["ratio"] = round(ratio, 3)
@@ -708,6 +792,16 @@ def main() -> int:
                 continue
             seen.add(key)
             merged_cut.append(entry)
+
+    # What this run actually still finds: the evidence a clean tree should show.
+    # `applied` is cumulative and must not be regenerated from a read of the
+    # current tree — running this on an already-cleaned tree finds nothing to cut
+    # (verified 2026-09-19: the run printed 265 verified cuts against databases
+    # that carry none of them), so recomputing it would claim work this run did
+    # not do and overwrite what earlier runs recorded.
+    fresh_verified = sum(1 for e in cut if e.get("verified"))
+    if old and not args.apply and fresh_verified < old.get("applied", {}).get("records", 0):
+        audit["applied"] = old["applied"]
     audit = {
         "cut": merged_cut,
         "report": report or old.get("report", report),
@@ -780,10 +874,18 @@ def main() -> int:
         if lessons:
             print(f"          {run['lesson_slots']} lesson slot(s) in {len(lessons)} "
                   f"lesson file(s), {run['lesson_fields']}")
+        # What the lesson layer now holds, for the reader — but what is
+        # *recorded* is the previous total plus this run's changes. Reading the
+        # current tree undercounts: the pairs this cleanup stands on are the ones
+        # the databases used to carry, so a later pass over an already-cleaned
+        # tree finds fewer of them and would report less work than was done.
         state = lesson_state(by_code)
-        audit["applied"].update({"lesson_slots": state["slots"],
-                                 "lesson_files": state["files"],
-                                 "lesson_fields": state["fields"]})
+        previous = old.get("applied", {})
+        audit["applied"]["lesson_slots"] = previous.get("lesson_slots", 0) + run["lesson_slots"]
+        for field, n in run["lesson_fields"].items():
+            audit["applied"]["lesson_fields"][field] = (
+                previous.get("lesson_fields", {}).get(field, 0) + n)
+        audit["applied"]["lesson_files"] = {**previous.get("lesson_files", {}), **state["files"]}
         print(f"          lesson layer now: {state['slots']} slot(s) in "
               f"{len(state['files'])} file(s), {state['fields']}")
 

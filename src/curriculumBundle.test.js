@@ -451,12 +451,15 @@ describe.each(ids)('%s', (grade) => {
 
     it('took the print\u2019s exemplar tail back off the indicators it cut', () => {
       const trail = readData('audit/ind_desc_exemplars.json')
-      // 242 stops and 11 the corrected column band exposed (the career-technology
-      // print's content-standard edge sits at x≈59, which the reader had dropped)
-      expect(trail.applied.records).toBe(253)
-      expect(trail.applied.repeats + trail.applied.dangling).toBe(253)
+      // 242 stops, 11 the corrected column band exposed (the career-technology
+      // print's content-standard edge sits at x≈59, which the reader had dropped),
+      // and 13 more on 2026-09-19 once the verifier read the record's *own* row and
+      // could see the print's de-kerning — the records that had been reported as
+      // creative-arts "mismatches" were the reader's fault, not the data's.
+      expect(trail.applied.records).toBe(266)
+      expect(trail.applied.repeats + trail.applied.dangling).toBe(266)
       expect(trail.history[0]).toMatchObject({ records: 242, lesson_slots: 980 })
-      expect(trail.history.at(-1)).toMatchObject({ records: 11, furniture_records: 27 })
+      expect(trail.history.at(-1)).toMatchObject({ records: 13, lesson_slots: 56 })
 
       // a cut is only ever a deletion: what each record says now is a prefix of
       // what it said, and the print backed the reading before it was made
@@ -471,10 +474,17 @@ describe.each(ids)('%s', (grade) => {
 
       // and the lesson template, which is a copy of the database, was cleaned with
       // it — the generated books read the lesson file, not the database
-      expect(trail.applied.lesson_slots).toBe(1137)
+      // 1,137 slots from the first two passes, 56 more on 2026-09-19 (the 13
+      // records the corrected verifier resolved), each carrying the indicator in
+      // four fields: ind_desc, the perf_indicator built from it, and the
+      // starter/main steps the template writes around it.
+      expect(trail.applied.lesson_slots).toBe(1193)
       expect(trail.applied.lesson_fields).toMatchObject({
-        ind_desc: 1137, perf_indicator: 1137, starter: 962, main: 962,
+        ind_desc: 1193, perf_indicator: 1193, starter: 1018, main: 1018,
       })
+      // …and the runner-up: the *recorded* total is the previous one plus this
+      // run's changes, never a re-read of a tree those passes already cleaned
+      // (a re-read reported 1,079 slots where 1,193 were cleaned).
       const slots = readData('lessons/creative_arts_b2_lessons_enriched.json')
       const dangling = slots.filter((s) => /learners? (are|is) to:?\s*$/i.test(s.ind_desc || ''))
       expect(dangling).toEqual([])

@@ -213,20 +213,37 @@ What it deliberately did *not* touch:
   `Enquiry route:` blocks). Cutting those deletes a sentence that no other field
   holds; that is a decision about the data, not a cleanup, so they are listed in the
   artefact instead.
-* **32 records the print does not back** (see the next paragraph) — the great
-  majority are career-technology's, where the **core-competencies column bled into
-  `ind_desc` itself** (`… opportunities in Career Technology Communication and
-  Collaboration (CC) Critical Thinking and Problem Solving (CP) …`), so cutting at
-  the exemplar marker would leave the tag soup behind. Those records need the
-  column-bleed pass the french/kindergarten subjects got, and are the remaining
-  work under P1-6.
+* **20 records the print does not back** (down from 32: the anchored read above
+  resolved twelve of them) — the rest are rows whose code the print sets in a form
+  the reader does not match (`B5 1.1.1.3` without the dot after the grade, or a row
+  that moved between grades) and one kindergarten record whose print is not
+  registered. They are listed in the artefact with `verified: false` and the reason,
+  and are the remaining work under P1-6.
 
-The same verification surfaced a fidelity finding that is *not* a cleanup: ten
-creative-arts B5/B6 indicators do not match their print word for word (the database
-reads `Explore to generate ideas by studying visual artworks …` where the print
-sets `Study some visual artworks … and examine how the artworks reflect …`). The
-cut was refused for each and they are listed in the artefact under `cut` with
-`verified: false` and the print's own reading next to them.
+**The creative-arts "mismatches" were a reader bug, and it is fixed (2026-09-19).**
+Ten creative-arts B5/B6 records were carried in the artefact as mismatches — the
+database read `Explore to generate ideas by studying visual artworks …` where the
+print supposedly set `Study some visual artworks …`. They were not mismatches.
+Two faults in the verifier together hid the fact:
+
+1. **It compared against the wrong row.** `printed_head()` searched a whole page for
+   the text in front of *any* exemplar marker, and a page carries several rows, so a
+   record could be graded against the row above it. It now reads **the record's own
+   row** first (`printed_lead()`), anchored on the record's code — the same anchor
+   `row_lead()` has always used for records that hold no indicator at all. The
+   artefact records which reads were anchored (`rowAnchored`).
+2. **It could not see the print's de-kerning.** These PDFs break `Learners` into
+   `L earners`, so a marker search that looked for the word missed the row's own
+   exemplar intro — and, worse, then latched onto a *later* numbered step. Both the
+   marker search (`marker_span()`, which now searches a de-kerned copy and takes the
+   earliest marker, mapping positions back) and the row read repair it.
+
+With both fixed, twelve creative-arts records and one career-technology record had
+their dangling `Learners are to` tail taken off with the print's own row confirming
+it verbatim (ratio 1.0) — the very records that were reported as mismatches. The
+database never disagreed with the print; the reader did. No verified cut was lost:
+the change is +1 verified, −0, and the remaining **20 unbacked records** are listed
+in the artefact with the reason the reader gives.
 
 ## L3 — bundle
 
