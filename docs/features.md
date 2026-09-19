@@ -97,6 +97,27 @@ says so after a fill, and both exports mark those headings `(teaching template)`
 explaining the marker, so a printed plan never passes the syllabus' routine off as the teacher's
 own writing. See `src/lib/lessonTemplate.js`.
 
+## Teaching models — `/portal/models`
+`Models.jsx` + `src/components/models/*`. **The pilot, not a library**: five interactive models
+for mathematics B4, each named after the served indicators it teaches
+(`src/lib/teachingModels.js`), so a teacher can see what the screen is for. Everything is local
+state and inline SVG/CSS — no external service, no API key, and it works offline like the rest of
+the portal.
+
+| Model | Teaches |
+|---|---|
+| Place value frame | B4.1.1.1.1, B4.1.1.1.2 — digit columns, expanded form, number in words |
+| Compare, order and round | B4.1.1.1.4, B4.1.1.1.5 — two markers, comparison sentence, roundings |
+| Fraction strips | B4.1.3.1.2, B4.1.3.2.1 — equivalent fractions you can line up |
+| Factor arrays | B4.1.1.3.1, B4.1.1.3.6 — factor pairs as rectangles, primes, squares |
+| Perimeter and area | B4.3.3.1.3, B4.3.3.1.4, B4.3.3.2.1 — count, then the formula; every shape with the same fence |
+
+The catalogue is data and the components are code, held together by
+`src/teachingModels.test.js`: every model must name indicators that are really served for its own
+subject and grade, every component it points at must exist, and the pilot must stay between three
+and five models. A model for an indicator that is not served would be a demo, not teaching
+material. More subject-grades get models once these have been used in a classroom.
+
 ## My library — `/portal/library`
 `DocumentLibrary.jsx`. Every document the portal generates — lesson plans, schemes, exam papers,
 quiz decks, study notes — can be kept instead of existing only as whatever landed in the

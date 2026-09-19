@@ -7,6 +7,7 @@ import SubjectIcon from '../components/SubjectIcon'
 import { subjectTheme } from '../lib/subjectThemes'
 import { GRADES, gradeLabel } from '../lib/grades'
 import { packFiles, warmPack } from '../lib/offlinePack'
+import { modelsFor } from '../lib/teachingModels'
 
 /**
  * Strand → sub-strand → content standard → indicators. Static JSON only.
@@ -77,6 +78,11 @@ export default function SubjectBrowser() {
           </p>
         </div>
         <div className="flex flex-col items-stretch gap-2 sm:items-end">
+          {/* Teaching models (P3-4) exist for one subject-grade so far; the link
+              only appears where there is something to open. */}
+          {modelsFor(subjectId, grade).length > 0 && (
+            <Link to="/portal/models" className="btn-secondary">Teaching models</Link>
+          )}
           <div>
             <label className="label-caps" htmlFor="grade-switch">Grade</label>
             {/* A subject id rarely exists in every grade, so switching grade
