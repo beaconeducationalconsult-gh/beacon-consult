@@ -1,7 +1,7 @@
 {
  "B2.2.3.1.1": {
   "strand": "Reading",
-  "sub_strand": "Sub-strand B2.2.3",
+  "sub_strand": "3. Word Families - Rhyming Endings and Common Digraphs",
   "cs_code": "B2.2.3.1",
   "cs_desc": "Employ knowledge of rhyming endings and common digraphs to enhance reading comprehension",
   "ind_desc": "Use common rhyming/ending words for decoding of words (last syllable rhymes)",
@@ -12,7 +12,7 @@
  },
  "B2.1.1.1.1": {
   "strand": "Oral Language",
-  "sub_strand": "Sub-strand B2.1.1",
+  "sub_strand": "1. Songs",
   "cs_code": "B2.1.1.1",
   "cs_desc": "Demonstrate understanding of a variety of songs",
   "ind_desc": "Interpret familiar songs",
@@ -23,7 +23,7 @@
  },
  "B2.1.2.1.1": {
   "strand": "Oral Language",
-  "sub_strand": "Sub-strand B2.1.2",
+  "sub_strand": "2. Rhymes",
   "cs_code": "B2.1.2.1",
   "cs_desc": "Show understanding of a variety of literary pieces",
   "ind_desc": "Interpret rhymes and tongue-twisters in own words",
@@ -34,7 +34,7 @@
  },
  "B2.1.4.1.1": {
   "strand": "Oral Language",
-  "sub_strand": "Sub-strand B2.1.4",
+  "sub_strand": "4. Story Telling",
   "cs_code": "B2.1.4.1",
   "cs_desc": "Respond to stories",
   "ind_desc": "Identify characters in a story and relate them to real life situations",
@@ -45,7 +45,7 @@
  },
  "B2.1.4.1.2": {
   "strand": "Oral Language",
-  "sub_strand": "Sub-strand B2.1.4",
+  "sub_strand": "4. Story Telling",
   "cs_code": "B2.1.4.1",
   "cs_desc": "Respond to stories",
   "ind_desc": "Retell stories sequentially, following story structure (beginning, middle and ending)",
@@ -56,7 +56,7 @@
  },
  "B2.1.4.1.3": {
   "strand": "Oral Language",
-  "sub_strand": "Sub-strand B2.1.4",
+  "sub_strand": "4. Story Telling",
   "cs_code": "B2.1.4.1",
   "cs_desc": "Respond to stories",
   "ind_desc": "Tell stories from cultural background",
@@ -67,7 +67,7 @@
  },
  "B2.1.5.1.1": {
   "strand": "Oral Language",
-  "sub_strand": "Sub-strand B2.1.5",
+  "sub_strand": "5. Dramatisati on and Role Play",
   "cs_code": "B2.1.5.1",
   "cs_desc": "Perform Stories",
   "ind_desc": "Dramatise/role-play stories heard or read",
@@ -78,7 +78,7 @@
  },
  "B2.1.6.1.1": {
   "strand": "Oral Language",
-  "sub_strand": "Sub-strand B2.1.6",
+  "sub_strand": "6. Conversation and Talking about Oneself, Family, People, Places, Customs, Events, Social/ Cult ural Values and Manners and other Themes",
   "cs_code": "B2.1.6.1",
   "cs_desc": "Explore using certain culturally acceptable language for communication",
   "ind_desc": "Use appropriate greetings for special occasions",
@@ -89,7 +89,7 @@
  },
  "B2.1.6.1.2": {
   "strand": "Oral Language",
-  "sub_strand": "Sub-strand B2.1.6",
+  "sub_strand": "6. Conversation and Talking about Oneself, Family, People, Places, Customs, Events, Social/ Cult ural Values and Manners and other Themes",
   "cs_code": "B2.1.6.1",
   "cs_desc": "Explore using certain culturally acceptable language for communication",
   "ind_desc": "Talk about events at home",
@@ -100,7 +100,7 @@
  },
  "B2.1.6.1.3": {
   "strand": "Oral Language",
-  "sub_strand": "Sub-strand B2.1.6",
+  "sub_strand": "6. Conversation and Talking about Oneself, Family, People, Places, Customs, Events, Social/ Cult ural Values and Manners and other Themes",
   "cs_code": "B2.1.6.1",
   "cs_desc": "Explore using certain culturally acceptable language for communication",
   "ind_desc": "Talk about things and places in their homes",
@@ -111,7 +111,7 @@
  },
  "B2.1.6.1.4": {
   "strand": "Oral Language",
-  "sub_strand": "Sub-strand B2.1.6",
+  "sub_strand": "6. Conversation and Talking about Oneself, Family, People, Places, Customs, Events, Social/ Cult ural Values and Manners and other Themes",
   "cs_code": "B2.1.6.1",
   "cs_desc": "Explore using certain culturally acceptable language for communication",
   "ind_desc": "Use a wide variety of words to talk about manners",
@@ -122,7 +122,7 @@
  },
  "B2.1.6.2.1": {
   "strand": "Oral Language",
-  "sub_strand": "Sub-strand B2.1.6",
+  "sub_strand": "6. Conversation and Talking about Oneself, Family, People, Places, Customs, Events, Social/ Cult ural Values and Manners and other Themes",
   "cs_code": "B2.1.6.2",
   "cs_desc": "Apply knowledge of language and communicative skills to participate in conversation",
   "ind_desc": "Demonstrate turn-taking in conversations",
@@ -133,7 +133,7 @@
  },
  "B2.1.6.2.2": {
   "strand": "Oral Language",
-  "sub_strand": "Sub-strand B2.1.6",
+  "sub_strand": "6. Conversation and Talking about Oneself, Family, People, Places, Customs, Events, Social/ Cult ural Values and Manners and other Themes",
   "cs_code": "B2.1.6.2",
   "cs_desc": "Apply knowledge of language and communicative skills to participate in conversation",
   "ind_desc": "Ask and answer questions for clarifications about what other people say",
@@ -144,7 +144,7 @@
  },
  "B2.1.7.1.1": {
   "strand": "Oral Language",
-  "sub_strand": "Sub-strand B2.1.7",
+  "sub_strand": "7. Listening Comprehension",
   "cs_code": "B2.1.7.1",
   "cs_desc": "Use appropriate skills and strategies to process meaning from texts",
   "ind_desc": "Listen to and interact actively with drama",
@@ -155,7 +155,7 @@
  },
  "B2.1.7.1.2": {
   "strand": "Oral Language",
-  "sub_strand": "Sub-strand B2.1.7",
+  "sub_strand": "7. Listening Comprehension",
   "cs_code": "B2.1.7.1",
   "cs_desc": "Use appropriate skills and strategies to process meaning from texts",
   "ind_desc": "Recognise and relate the sequence of events (beginning, middle and end) in drama",
@@ -166,7 +166,7 @@
  },
  "B2.1.7.1.3": {
   "strand": "Oral Language",
-  "sub_strand": "Sub-strand B2.1.7",
+  "sub_strand": "7. Listening Comprehension",
   "cs_code": "B2.1.7.1",
   "cs_desc": "Use appropriate skills and strategies to process meaning from texts",
   "ind_desc": "Recognise and discuss events in a story (characters, settings, moral, etc.)",
@@ -177,7 +177,7 @@
  },
  "B2.1.7.1.4": {
   "strand": "Oral Language",
-  "sub_strand": "Sub-strand B2.1.7",
+  "sub_strand": "7. Listening Comprehension",
   "cs_code": "B2.1.7.1",
   "cs_desc": "Use appropriate skills and strategies to process meaning from texts",
   "ind_desc": "Share facts from texts heard with a partner, groups or the teacher",
@@ -188,7 +188,7 @@
  },
  "B2.1.8.1.1": {
   "strand": "Oral Language",
-  "sub_strand": "Sub-strand B2.1.8",
+  "sub_strand": "8. Asking and Answering Questions",
   "cs_code": "B2.1.8.1",
   "cs_desc": "Demonstrate understanding in asking and answering questions",
   "ind_desc": "Use appropriate pronunciation and intonation in asking and answering Wh – questions",
@@ -199,7 +199,7 @@
  },
  "B2.1.9.1.1": {
   "strand": "Oral Language",
-  "sub_strand": "Sub-strand B2.1.9",
+  "sub_strand": "9. Giving and Responding to Commands, Instructions, Directions and Making Requests",
   "cs_code": "B2.1.9.1",
   "cs_desc": "Demonstrate understanding in commands, instructions, directions and requests",
   "ind_desc": "Give and respond to commands",
@@ -210,7 +210,7 @@
  },
  "B2.1.9.1.2": {
   "strand": "Oral Language",
-  "sub_strand": "Sub-strand B2.1.9",
+  "sub_strand": "9. Giving and Responding to Commands, Instructions, Directions and Making Requests",
   "cs_code": "B2.1.9.1",
   "cs_desc": "Demonstrate understanding in commands, instructions, directions and requests",
   "ind_desc": "Make and respond to polite requests",
@@ -221,7 +221,7 @@
  },
  "B2.1.9.1.3": {
   "strand": "Oral Language",
-  "sub_strand": "Sub-strand B2.1.9",
+  "sub_strand": "9. Giving and Responding to Commands, Instructions, Directions and Making Requests",
   "cs_code": "B2.1.9.1",
   "cs_desc": "Demonstrate understanding in commands, instructions, directions and requests",
   "ind_desc": "Respond to commands, instructions and requests",
@@ -232,7 +232,7 @@
  },
  "B2.1.10.1.1": {
   "strand": "Oral Language",
-  "sub_strand": "Sub-strand B2.1.10",
+  "sub_strand": "10. Giving and Responding to Commands, Instructions, Directions and Making Requests",
   "cs_code": "B2.1.10.1",
   "cs_desc": "Plan and present information and ideas for a variety of purposes",
   "ind_desc": "Speak with confidence before different audience",
@@ -243,7 +243,7 @@
  },
  "B2.1.10.1.2": {
   "strand": "Oral Language",
-  "sub_strand": "Sub-strand B2.1.10",
+  "sub_strand": "10. Giving and Responding to Commands, Instructions, Directions and Making Requests",
   "cs_code": "B2.1.10.1",
   "cs_desc": "Plan and present information and ideas for a variety of purposes",
   "ind_desc": "Maintain appropriate posture, eye contact and use appropriate verbal and non-verbal cues to convey meaning",
@@ -254,7 +254,7 @@
  },
  "B2.2.2.1.1": {
   "strand": "Reading",
-  "sub_strand": "Sub-strand B2.2.2",
+  "sub_strand": "2. Phonics",
   "cs_code": "B2.2.2.1",
   "cs_desc": "Connect sounds to letters and blend letters/syllables in order to read and write",
   "ind_desc": "Blend syllables to produce words",
@@ -265,7 +265,7 @@
  },
  "B2.2.2.1.2": {
   "strand": "Reading",
-  "sub_strand": "Sub-strand B2.2.2",
+  "sub_strand": "2. Phonics",
   "cs_code": "B2.2.2.1",
   "cs_desc": "Connect sounds to letters and blend letters/syllables in order to read and write",
   "ind_desc": "Use the alphabetic knowledge to decode unknown words (e. g. use beginning and ending consonants, consonant blends, consonant digraphs, vowel sounds, vowel digraphs and word patterns)",
@@ -276,7 +276,7 @@
  },
  "B2.2.2.1.3": {
   "strand": "Reading",
-  "sub_strand": "Sub-strand B2.2.2",
+  "sub_strand": "2. Phonics",
   "cs_code": "B2.2.2.1",
   "cs_desc": "Connect sounds to letters and blend letters/syllables in order to read and write",
   "ind_desc": "Use elements of structural analysis to decode unknown words",
@@ -287,7 +287,7 @@
  },
  "B2.2.3.1.2": {
   "strand": "Reading",
-  "sub_strand": "Sub-strand B2.2.3",
+  "sub_strand": "3. Word Families - Rhyming Endings and Common Digraphs",
   "cs_code": "B2.2.3.1",
   "cs_desc": "Employ knowledge of rhyming endings and common digraphs to enhance reading comprehension",
   "ind_desc": "Use words containing digraphs to make meaningful sentences",
@@ -298,7 +298,7 @@
  },
  "B2.2.6.1.1": {
   "strand": "Reading",
-  "sub_strand": "Sub-strand B2.2.6",
+  "sub_strand": "6. Vocabulary",
   "cs_code": "B2.2.6.1",
   "cs_desc": "Understand word meanings and usages",
   "ind_desc": "Read level-appropriate sight words, understand and use many of them in meaningful sentences",
@@ -309,7 +309,7 @@
  },
  "B2.2.6.1.2": {
   "strand": "Reading",
-  "sub_strand": "Sub-strand B2.2.6",
+  "sub_strand": "6. Vocabulary",
   "cs_code": "B2.2.6.1",
   "cs_desc": "Understand word meanings and usages",
   "ind_desc": "Use context clues to infer meanings of words",
@@ -320,7 +320,7 @@
  },
  "B2.2.6.1.3": {
   "strand": "Reading",
-  "sub_strand": "Sub-strand B2.2.6",
+  "sub_strand": "6. Vocabulary",
   "cs_code": "B2.2.6.1",
   "cs_desc": "Understand word meanings and usages",
   "ind_desc": "Show awareness that homonyms have different meanings in different contexts",
@@ -331,7 +331,7 @@
  },
  "B2.2.6.1.4": {
   "strand": "Reading",
-  "sub_strand": "Sub-strand B2.2.6",
+  "sub_strand": "6. Vocabulary",
   "cs_code": "B2.2.6.1",
   "cs_desc": "Understand word meanings and usages",
   "ind_desc": "Use dictionaries and glossaries to clarify meaning of words",
@@ -342,7 +342,7 @@
  },
  "B2.2.7.1.1": {
   "strand": "Reading",
-  "sub_strand": "Sub-strand B2.2.7",
+  "sub_strand": "7. Comprehension",
   "cs_code": "B2.2.7.1",
   "cs_desc": "Understand and analyse texts read",
   "ind_desc": "Use illustrations, text clues and context to make predictions during reading",
@@ -353,7 +353,7 @@
  },
  "B2.2.7.1.2": {
   "strand": "Reading",
-  "sub_strand": "Sub-strand B2.2.7",
+  "sub_strand": "7. Comprehension",
   "cs_code": "B2.2.7.1",
   "cs_desc": "Understand and analyse texts read",
   "ind_desc": "Ask and answer factual and inferential questions about level- appropriate texts",
@@ -364,7 +364,7 @@
  },
  "B2.2.7.1.3": {
   "strand": "Reading",
-  "sub_strand": "Sub-strand B2.2.7",
+  "sub_strand": "7. Comprehension",
   "cs_code": "B2.2.7.1",
   "cs_desc": "Understand and analyse texts read",
   "ind_desc": "Retell level-appropriate texts in own words",
@@ -375,7 +375,7 @@
  },
  "B2.2.7.2.1": {
   "strand": "Reading",
-  "sub_strand": "Sub-strand B2.2.7",
+  "sub_strand": "7. Comprehension",
   "cs_code": "B2.2.7.2",
   "cs_desc": "Use knowledge skills and techniques of reading to understand and interpret texts",
   "ind_desc": "Demonstrate understanding of the purpose and features of information texts",
@@ -386,7 +386,7 @@
  },
  "B2.2.7.2.2": {
   "strand": "Reading",
-  "sub_strand": "Sub-strand B2.2.7",
+  "sub_strand": "7. Comprehension",
   "cs_code": "B2.2.7.2",
   "cs_desc": "Use knowledge skills and techniques of reading to understand and interpret texts",
   "ind_desc": "Describe events in a story",
@@ -397,7 +397,7 @@
  },
  "B2.2.7.2.3": {
   "strand": "Reading",
-  "sub_strand": "Sub-strand B2.2.7",
+  "sub_strand": "7. Comprehension",
   "cs_code": "B2.2.7.2",
   "cs_desc": "Use knowledge skills and techniques of reading to understand and interpret texts",
   "ind_desc": "Connect characters, ideas and information within a text",
@@ -408,7 +408,7 @@
  },
  "B2.2.7.2.4": {
   "strand": "Reading",
-  "sub_strand": "Sub-strand B2.2.7",
+  "sub_strand": "7. Comprehension",
   "cs_code": "B2.2.7.2",
   "cs_desc": "Use knowledge skills and techniques of reading to understand and interpret texts",
   "ind_desc": "Read level-appropriate texts with little support",
@@ -419,7 +419,7 @@
  },
  "B2.2.7.2.5": {
   "strand": "Reading",
-  "sub_strand": "Sub-strand B2.2.7",
+  "sub_strand": "7. Comprehension",
   "cs_code": "B2.2.7.2",
   "cs_desc": "Use knowledge skills and techniques of reading to understand and interpret texts",
   "ind_desc": "Use visualisation strategy (form mental images about texts) to enhance understanding of level-appropriate texts",
@@ -430,7 +430,7 @@
  },
  "B2.2.9.1.1": {
   "strand": "Reading",
-  "sub_strand": "Sub-strand B2.2.9",
+  "sub_strand": "9. Fluency",
   "cs_code": "B2.2.9.1",
   "cs_desc": "Read texts fluently",
   "ind_desc": "Read texts/stories/passages with good pace, accuracy and expression",
@@ -441,7 +441,7 @@
  },
  "B2.2.9.1.2": {
   "strand": "Reading",
-  "sub_strand": "Sub-strand B2.2.9",
+  "sub_strand": "9. Fluency",
   "cs_code": "B2.2.9.1",
   "cs_desc": "Read texts fluently",
   "ind_desc": "Read and recognise 120 sight words",
@@ -452,7 +452,7 @@
  },
  "B2.2.9.1.3": {
   "strand": "Reading",
-  "sub_strand": "Sub-strand B2.2.9",
+  "sub_strand": "9. Fluency",
   "cs_code": "B2.2.9.1",
   "cs_desc": "Read texts fluently",
   "ind_desc": "Use contextual clues to confirm or self-correct pronunciation while reading aloud",
@@ -463,7 +463,7 @@
  },
  "B2.4.2.1.1": {
   "strand": "Writing",
-  "sub_strand": "Sub-strand B2.4.2",
+  "sub_strand": "2. Fluency",
   "cs_code": "B2.4.2.1",
   "cs_desc": "Copy and rewrite sentences correctly",
   "ind_desc": "Copy sentences clearly",
@@ -474,7 +474,7 @@
  },
  "B2.4.3.1.1": {
   "strand": "Writing",
-  "sub_strand": "Sub-strand B2.4.3",
+  "sub_strand": "3. Writing Letters – Small and Capital",
   "cs_code": "B2.4.3.1",
   "cs_desc": "Use general skills, strategies and knowledge of letter sounds to enable them write legibly and boldly",
   "ind_desc": "Copy words in lower and upper case using correct spacing",
@@ -485,7 +485,7 @@
  },
  "B2.4.3.1.2": {
   "strand": "Writing",
-  "sub_strand": "Sub-strand B2.4.3",
+  "sub_strand": "3. Writing Letters – Small and Capital",
   "cs_code": "B2.4.3.1",
   "cs_desc": "Use general skills, strategies and knowledge of letter sounds to enable them write legibly and boldly",
   "ind_desc": "Use lower and upper case letters appropriately in words and simple sentences",
@@ -496,7 +496,7 @@
  },
  "B2.4.3.1.3": {
   "strand": "Writing",
-  "sub_strand": "Sub-strand B2.4.3",
+  "sub_strand": "3. Writing Letters – Small and Capital",
   "cs_code": "B2.4.3.1",
   "cs_desc": "Use general skills, strategies and knowledge of letter sounds to enable them write legibly and boldly",
   "ind_desc": "Space words appropriately in sentences",
@@ -507,7 +507,7 @@
  },
  "B2.4.4.1.1": {
   "strand": "Writing",
-  "sub_strand": "Sub-strand B2.4.4",
+  "sub_strand": "4. Labelling Items",
   "cs_code": "B2.4.4.1",
   "cs_desc": "Draw and label simple pictures",
   "ind_desc": "Draw and label objects found in their environment",
@@ -518,7 +518,7 @@
  },
  "B2.4.5.1.1": {
   "strand": "Writing",
-  "sub_strand": "Sub-strand B2.4.5",
+  "sub_strand": "5. Writing Simple Words and Sentences",
   "cs_code": "B2.4.5.1",
   "cs_desc": "Use knowledge of grammar and vocabulary to write words and sentences correctly. CONT’D CONTENT STANDARDS",
   "ind_desc": "Write simple sentences to express feelings",
@@ -529,7 +529,7 @@
  },
  "B2.4.5.1.2": {
   "strand": "Writing",
-  "sub_strand": "Sub-strand B2.4.5",
+  "sub_strand": "5. Writing Simple Words and Sentences",
   "cs_code": "B2.4.5.1",
   "cs_desc": "Use knowledge of grammar and vocabulary to write words and sentences correctly. CONT’D CONTENT STANDARDS",
   "ind_desc": "Write simple and meaningful sentences on objects found in the environment",
@@ -540,7 +540,7 @@
  },
  "B2.4.5.1.3": {
   "strand": "Writing",
-  "sub_strand": "Sub-strand B2.4.5",
+  "sub_strand": "5. Writing Simple Words and Sentences",
   "cs_code": "B2.4.5.1",
   "cs_desc": "Use knowledge of grammar and vocabulary to write words and sentences correctly. CONT’D CONTENT STANDARDS",
   "ind_desc": "Draw a picture and write at least a sentence to share an opinion",
@@ -551,7 +551,7 @@
  },
  "B2.4.7.1.1": {
   "strand": "Writing",
-  "sub_strand": "Sub-strand B2.4.7",
+  "sub_strand": "7. Controlled Writing",
   "cs_code": "B2.4.7.1",
   "cs_desc": "Write simple compositions",
   "ind_desc": "Write or copy correct sentences from substitution tables",
@@ -562,7 +562,7 @@
  },
  "B2.4.7.1.2": {
   "strand": "Writing",
-  "sub_strand": "Sub-strand B2.4.7",
+  "sub_strand": "7. Controlled Writing",
   "cs_code": "B2.4.7.1",
   "cs_desc": "Write simple compositions",
   "ind_desc": "Match parts of sentences to compose meaningful texts",
@@ -573,7 +573,7 @@
  },
  "B2.4.7.2.1": {
   "strand": "Writing",
-  "sub_strand": "Sub-strand B2.4.7",
+  "sub_strand": "7. Controlled Writing",
   "cs_code": "B2.4.7.2",
   "cs_desc": "Matching parts of sentences to composition",
   "ind_desc": "Re-arrange jumbled sentences logically",
@@ -584,7 +584,7 @@
  },
  "B2.4.8.1.1": {
   "strand": "Writing",
-  "sub_strand": "Sub-strand B2.4.8",
+  "sub_strand": "8. Guided Composition",
   "cs_code": "B2.4.8.1",
   "cs_desc": "Compose short paragraphs through answering questions",
   "ind_desc": "Develop two coherent paragraphs on one idea or concepts using leading questions",
@@ -595,7 +595,7 @@
  },
  "B2.4.10.1.1": {
   "strand": "Writing",
-  "sub_strand": "Sub-strand B2.4.10",
+  "sub_strand": "10. Narrative Writing",
   "cs_code": "B2.4.10.1",
   "cs_desc": "Narrate situations, express feelings and convey point of view about the real or fictional world",
   "ind_desc": "Write about real or imagined experiences or events using the process approach",
@@ -606,7 +606,7 @@
  },
  "B2.4.12.1.1": {
   "strand": "Writing",
-  "sub_strand": "Sub-strand B2.4.12",
+  "sub_strand": "12. Descriptive Writing",
   "cs_code": "B2.4.12.1",
   "cs_desc": "Demonstrate knowledge of description in writing",
   "ind_desc": "Use simple sentences to describe feelings",
@@ -617,7 +617,7 @@
  },
  "B2.5.1.1.1": {
   "strand": "Using Writing Conventions / Grammar Usage",
-  "sub_strand": "Sub-strand B2.5.1",
+  "sub_strand": "1. Using Capitalisation",
   "cs_code": "B2.5.1.1",
   "cs_desc": "Apply knowledge of capitalisation in writing",
   "ind_desc": "Use capital letter to write names of particular places and days of the week",
@@ -628,7 +628,7 @@
  },
  "B2.5.1.1.2": {
   "strand": "Using Writing Conventions / Grammar Usage",
-  "sub_strand": "Sub-strand B2.5.1",
+  "sub_strand": "1. Using Capitalisation",
   "cs_code": "B2.5.1.1",
   "cs_desc": "Apply knowledge of capitalisation in writing",
   "ind_desc": "Use capital letters to begin the first words of sentences",
@@ -639,7 +639,7 @@
  },
  "B2.5.2.1.1": {
   "strand": "Using Writing Conventions / Grammar Usage",
-  "sub_strand": "Sub-strand B2.5.2",
+  "sub_strand": "2. Using Punctuation",
   "cs_code": "B2.5.2.1",
   "cs_desc": "Apply knowledge of punctuation in written communication",
   "ind_desc": "Use full stops at the end of sentences and question marks at the end of questions",
@@ -650,7 +650,7 @@
  },
  "B2.5.4.1.1": {
   "strand": "Using Writing Conventions / Grammar Usage",
-  "sub_strand": "Sub-strand B2.5.4",
+  "sub_strand": "4. Using Action Words",
   "cs_code": "B2.5.4.1",
   "cs_desc": "Apply knowledge of action words in communication",
   "ind_desc": "Use the simple present tense to express habitual actions (simple truths, interest, feelings and opinions)",
@@ -661,7 +661,7 @@
  },
  "B2.5.5.1.1": {
   "strand": "Using Writing Conventions / Grammar Usage",
-  "sub_strand": "Sub-strand B2.5.5",
+  "sub_strand": "5. Using Adjectives",
   "cs_code": "B2.5.5.1",
   "cs_desc": "Apply knowledge of adjectives in communication",
   "ind_desc": "Identify and use simple sentences to describe the weather and show quantity and position or order of people and things",
@@ -672,7 +672,7 @@
  },
  "B2.5.7.1.1": {
   "strand": "Using Writing Conventions / Grammar Usage",
-  "sub_strand": "Sub-strand B2.5.7",
+  "sub_strand": "7. Using Adjectives",
   "cs_code": "B2.5.7.1",
   "cs_desc": "Understand and identify the use of prepositions",
   "ind_desc": "Identify prepositions in sentences to indicate days, dates and places",
@@ -683,7 +683,7 @@
  },
  "B2.5.7.1.2": {
   "strand": "Using Writing Conventions / Grammar Usage",
-  "sub_strand": "Sub-strand B2.5.7",
+  "sub_strand": "7. Using Adjectives",
   "cs_code": "B2.5.7.1",
   "cs_desc": "Understand and identify the use of prepositions",
   "ind_desc": "Use prepositions to form simple sentences to indicate position and time",
@@ -694,7 +694,7 @@
  },
  "B2.5.9.1.1": {
   "strand": "Using Writing Conventions / Grammar Usage",
-  "sub_strand": "Sub-strand B2.5.9",
+  "sub_strand": "9. Using Simple and Compound Sentences",
   "cs_code": "B2.5.9.1",
   "cs_desc": "Understand simple sentences in writing",
   "ind_desc": "Identify the structure of simple sentences",
@@ -705,7 +705,7 @@
  },
  "B2.5.9.1.2": {
   "strand": "Using Writing Conventions / Grammar Usage",
-  "sub_strand": "Sub-strand B2.5.9",
+  "sub_strand": "9. Using Simple and Compound Sentences",
   "cs_code": "B2.5.9.1",
   "cs_desc": "Understand simple sentences in writing",
   "ind_desc": "Identify nouns and verbs in simple sentences",
@@ -716,7 +716,7 @@
  },
  "B2.5.10.1.1": {
   "strand": "Using Writing Conventions / Grammar Usage",
-  "sub_strand": "Sub-strand B2.5.10",
+  "sub_strand": "10. Spelling",
   "cs_code": "B2.5.10.1",
   "cs_desc": "Use phonics knowledge to spell words",
   "ind_desc": "Use phonics knowledge to spell words with irregular phonic letter pattern",
@@ -727,7 +727,7 @@
  },
  "B2.6.1.1.1": {
   "strand": "Extensive Reading",
-  "sub_strand": "Sub-strand B2.6.1",
+  "sub_strand": "1. Building The Love And Culture Of Reading",
   "cs_code": "B2.6.1.1",
   "cs_desc": "Read widely for pleasure and to demonstrate independent reading and learning in the literary area",
   "ind_desc": "Read a variety of age and level-appropriate books and texts from print and non-print",

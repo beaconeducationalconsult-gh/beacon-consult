@@ -1,7 +1,7 @@
 {
  "B5.1.1.1.1": {
   "strand": "1. INTRODUCTION TO COMPUTING",
-  "sub_strand": "Sub-strand B5.1.1",
+  "sub_strand": "1. GENERATION OF COMPUTERS AND PARTS OF A COMPUTER AND OTHER GADGETS",
   "cs_code": "B5.1.1.1",
   "cs_desc": "Identify parts of a computer and technology tools CONT’D",
   "ind_desc": "Recognise and use output devices. Guide learners to recall what they learnt in the previous classes and ask them to mention computer devices that produce output Softcopy- computer monitor/projector, audio electrical signals etc. Hardcopy- printed images, pictures documents, NB: This is to help the learner with hardware knowledge",
@@ -12,7 +12,7 @@
  },
  "B5.1.1.1.2": {
   "strand": "1. INTRODUCTION TO COMPUTING",
-  "sub_strand": "Sub-strand B5.1.1",
+  "sub_strand": "1. GENERATION OF COMPUTERS AND PARTS OF A COMPUTER AND OTHER GADGETS",
   "cs_code": "B5.1.1.1",
   "cs_desc": "Identify parts of a computer and technology tools CONT’D",
   "ind_desc": "Describe the types of output device and identify their uses. Guide learners to identify types of output devices and their uses. Assist them to list them on the board as well as their uses",
@@ -23,7 +23,7 @@
  },
  "B5.1.1.1.3": {
   "strand": "1. INTRODUCTION TO COMPUTING",
-  "sub_strand": "Sub-strand B5.1.1",
+  "sub_strand": "1. GENERATION OF COMPUTERS AND PARTS OF A COMPUTER AND OTHER GADGETS",
   "cs_code": "B5.1.1.1",
   "cs_desc": "Identify parts of a computer and technology tools CONT’D",
   "ind_desc": "Distinguish the difference and similarities between analogue and digital devices e.g. telephone, mobile phone, radio, tablets, satellite etc. Guide the learners to identify the similarities and differences between analogue and digital devices. Present examples of analogue and digital devices to learners. Aid them to mention other examples of anal",
@@ -34,7 +34,7 @@
  },
  "B5.1.1.1.4": {
   "strand": "1. INTRODUCTION TO COMPUTING",
-  "sub_strand": "Sub-strand B5.1.1",
+  "sub_strand": "1. GENERATION OF COMPUTERS AND PARTS OF A COMPUTER AND OTHER GADGETS",
   "cs_code": "B5.1.1.1",
   "cs_desc": "Identify parts of a computer and technology tools CONT’D",
   "ind_desc": "Identify the left, right mouse button, holding of mouse, performing single, double and triple clicking and dragging object. Guide learners to use the mouse to perform performing single, double and triple clicking and dragging object into a folder or bring picture(s) describing the processes; single, double and triple clicking and dragging objects",
@@ -45,7 +45,7 @@
  },
  "B5.1.1.1.5": {
   "strand": "1. INTRODUCTION TO COMPUTING",
-  "sub_strand": "Sub-strand B5.1.1",
+  "sub_strand": "1. GENERATION OF COMPUTERS AND PARTS OF A COMPUTER AND OTHER GADGETS",
   "cs_code": "B5.1.1.1",
   "cs_desc": "Identify parts of a computer and technology tools CONT’D",
   "ind_desc": "Identify home row keys, top row, bottom row keys, numerical pad and type (short sentences). Guide learners to type using top row keys (Q, W, E, R, and T keys for the left-hand and Y, U, I, O, and P keys for the right-hand), bottom row keys (Z, X, C, V, and B keys for the left-hand and N, M, comma, period, and forward slash keys for the right-hand",
@@ -56,7 +56,7 @@
  },
  "B5.1.1.1.6": {
   "strand": "1. INTRODUCTION TO COMPUTING",
-  "sub_strand": "Sub-strand B5.1.1",
+  "sub_strand": "1. GENERATION OF COMPUTERS AND PARTS OF A COMPUTER AND OTHER GADGETS",
   "cs_code": "B5.1.1.1",
   "cs_desc": "Identify parts of a computer and technology tools CONT’D",
   "ind_desc": "Introduction to Windows Interface. Guide learners to list the features (i.e. Start Menu Returns, Cortana on Desktop, Xbox App, Project Spartan Browser, etc.) and compatibility issues of Windows 10. Do this by using leading questions, or any other method",
@@ -67,7 +67,7 @@
  },
  "B5.1.1.1.7": {
   "strand": "1. INTRODUCTION TO COMPUTING",
-  "sub_strand": "Sub-strand B5.1.1",
+  "sub_strand": "1. GENERATION OF COMPUTERS AND PARTS OF A COMPUTER AND OTHER GADGETS",
   "cs_code": "B5.1.1.1",
   "cs_desc": "Identify parts of a computer and technology tools CONT’D",
   "ind_desc": "Summarise the generation of computers. Guide learners to recall what has been learnt in previous classes and ask leading questions, use scenarios to help learners identify the difference between the types of computers, their advantages and disadvantages. NB: Learners can practice with the keyboard only in the absence of the applications. Learners",
@@ -78,7 +78,7 @@
  },
  "B5.1.2.1.1": {
   "strand": "1. INTRODUCTION TO COMPUTING",
-  "sub_strand": "Sub-strand B5.1.2",
+  "sub_strand": "2. INTRODUCTION TO MS - WINDOWS INTERFACE",
   "cs_code": "B5.1.2.1",
   "cs_desc": "Demonstrate the use of the Desktop Background as well as working with folders",
   "ind_desc": "Personalise the Desktop Background and edit its images (e.g. image, icons and Taskbar of the background). Guide learners to create their own background picture using any application (e.g. paints). Guide them to use it as background picture",
@@ -89,7 +89,7 @@
  },
  "B5.1.2.1.2": {
   "strand": "1. INTRODUCTION TO COMPUTING",
-  "sub_strand": "Sub-strand B5.1.2",
+  "sub_strand": "2. INTRODUCTION TO MS - WINDOWS INTERFACE",
   "cs_code": "B5.1.2.1",
   "cs_desc": "Demonstrate the use of the Desktop Background as well as working with folders",
   "ind_desc": "Recognise how to customise the Desktop Background using Change Background, Start menu and Pin to taskbar or start menu. Guide learners to identify and use task bar, start menu, etc",
@@ -100,7 +100,7 @@
  },
  "B5.1.2.1.3": {
   "strand": "1. INTRODUCTION TO COMPUTING",
-  "sub_strand": "Sub-strand B5.1.2",
+  "sub_strand": "2. INTRODUCTION TO MS - WINDOWS INTERFACE",
   "cs_code": "B5.1.2.1",
   "cs_desc": "Demonstrate the use of the Desktop Background as well as working with folders",
   "ind_desc": "Describe how to Personalise the Desktop Background using advance tools and settings. Guide learners to customize the Start Menu and the Notification Area",
@@ -111,7 +111,7 @@
  },
  "B5.1.2.1.4": {
   "strand": "1. INTRODUCTION TO COMPUTING",
-  "sub_strand": "Sub-strand B5.1.2",
+  "sub_strand": "2. INTRODUCTION TO MS - WINDOWS INTERFACE",
   "cs_code": "B5.1.2.1",
   "cs_desc": "Demonstrate the use of the Desktop Background as well as working with folders",
   "ind_desc": "Creating a short cut, adding or removing common icons on the desktop. Guide learners to create shortcuts of icons on the computers’ desktop",
@@ -122,7 +122,7 @@
  },
  "B5.1.2.1.5": {
   "strand": "1. INTRODUCTION TO COMPUTING",
-  "sub_strand": "Sub-strand B5.1.2",
+  "sub_strand": "2. INTRODUCTION TO MS - WINDOWS INTERFACE",
   "cs_code": "B5.1.2.1",
   "cs_desc": "Demonstrate the use of the Desktop Background as well as working with folders",
   "ind_desc": "Moving, copying and pasting a file or icon into and from a folder on the desktop Guide learners to copy and paste a file or icon into and from a folder on the desktop",
@@ -133,7 +133,7 @@
  },
  "B5.1.2.1.6": {
   "strand": "1. INTRODUCTION TO COMPUTING",
-  "sub_strand": "Sub-strand B5.1.2",
+  "sub_strand": "2. INTRODUCTION TO MS - WINDOWS INTERFACE",
   "cs_code": "B5.1.2.1",
   "cs_desc": "Demonstrate the use of the Desktop Background as well as working with folders",
   "ind_desc": "Demonstrate understanding of the File Explorer window and locations of the computer through the file explorer. Guide learners to use the file explorer to locate files. NB: This is to help the learner with the fundamental skills of creativity in computing and Computer Science.",
@@ -144,7 +144,7 @@
  },
  "B5.1.3.1.1": {
   "strand": "1. INTRODUCTION TO COMPUTING",
-  "sub_strand": "Sub-strand B5.1.3",
+  "sub_strand": "3. DATA, SOURCES AND USAGE",
   "cs_code": "B5.1.3.1",
   "cs_desc": "Illustrate the use of Data and identify their sources",
   "ind_desc": "Use Strategies for identifying data from results of an experiment. Guide learners to identify the types of data (qualitative and quantitative) by asking leading questions. Task them to convert data from one format to another without losing its value",
@@ -155,7 +155,7 @@
  },
  "B5.1.3.1.10": {
   "strand": "1. INTRODUCTION TO COMPUTING",
-  "sub_strand": "Sub-strand B5.1.3",
+  "sub_strand": "3. DATA, SOURCES AND USAGE",
   "cs_code": "B5.1.3.1",
   "cs_desc": "Illustrate the use of Data and identify their sources",
   "ind_desc": "Analyse tables, maps, diagrams, photographs and charts, and generalize the results and make suggestions (e.g. Finding sum or grand total). Task learners to calculate the average, mean, sum and difference between data collected in an earlier class. NB: This is to help the learner with fundamental principle of problem solving skills and creativity i",
@@ -166,7 +166,7 @@
  },
  "B5.1.3.1.2": {
   "strand": "1. INTRODUCTION TO COMPUTING",
-  "sub_strand": "Sub-strand B5.1.3",
+  "sub_strand": "3. DATA, SOURCES AND USAGE",
   "cs_code": "B5.1.3.1",
   "cs_desc": "Illustrate the use of Data and identify their sources",
   "ind_desc": "Identify primary sources of information e.g. photographs, audio, video recordings, letters etc. Guide learners to mention or talk about primary sources of information. Task learners to record data from the primary source and bring them to class for discussion. List items recorded and ask learners to group according to their similarities",
@@ -177,7 +177,7 @@
  },
  "B5.1.3.1.3": {
   "strand": "1. INTRODUCTION TO COMPUTING",
-  "sub_strand": "Sub-strand B5.1.3",
+  "sub_strand": "3. DATA, SOURCES AND USAGE",
   "cs_code": "B5.1.3.1",
   "cs_desc": "Illustrate the use of Data and identify their sources",
   "ind_desc": "Identify secondary sources of information e.g. radio, fax, telephones calls, SMS etc. Guide learners to mention or talk about where one can receive or send information by asking leading questions. Task learners to record data from the news on the radio and bring to class for discussion. List items recorded and ask learners to group according to t",
@@ -188,7 +188,7 @@
  },
  "B5.1.3.1.4": {
   "strand": "1. INTRODUCTION TO COMPUTING",
-  "sub_strand": "Sub-strand B5.1.3",
+  "sub_strand": "3. DATA, SOURCES AND USAGE",
   "cs_code": "B5.1.3.1",
   "cs_desc": "Illustrate the use of Data and identify their sources",
   "ind_desc": "Demonstrate sending and sharing information e.g. arranging data, sorting and calculations etc. Task learners to sort data in alphabetical order (increasing and decreasing order) and perform basic calculations such as multiplying, dividing and adding vales of sample data. Learners can also be guided to generate age data from their dates of birth",
@@ -199,7 +199,7 @@
  },
  "B5.1.3.1.5": {
   "strand": "1. INTRODUCTION TO COMPUTING",
-  "sub_strand": "Sub-strand B5.1.3",
+  "sub_strand": "3. DATA, SOURCES AND USAGE",
   "cs_code": "B5.1.3.1",
   "cs_desc": "Illustrate the use of Data and identify their sources",
   "ind_desc": "Demonstrate basic calculations on sample data e.g. arranging and summing and averaging data. Guide learners to add and find the average data collected and present their findings to the class",
@@ -210,7 +210,7 @@
  },
  "B5.1.3.1.6": {
   "strand": "1. INTRODUCTION TO COMPUTING",
-  "sub_strand": "Sub-strand B5.1.3",
+  "sub_strand": "3. DATA, SOURCES AND USAGE",
   "cs_code": "B5.1.3.1",
   "cs_desc": "Illustrate the use of Data and identify their sources",
   "ind_desc": "Recognise data types (integer, double, float). Divide learners into two groups and ask one group to mention a number and the other group to identify the type of data mentioned",
@@ -221,7 +221,7 @@
  },
  "B5.1.3.1.7": {
   "strand": "1. INTRODUCTION TO COMPUTING",
-  "sub_strand": "Sub-strand B5.1.3",
+  "sub_strand": "3. DATA, SOURCES AND USAGE",
   "cs_code": "B5.1.3.1",
   "cs_desc": "Illustrate the use of Data and identify their sources",
   "ind_desc": "Demonstrate sending and sharing information. Guide learners to send messages to each other via SMS, email. etc. NB: This is to help the learner with fundamental principle of problem solving skills and creativity in computing and computer science",
@@ -232,7 +232,7 @@
  },
  "B5.1.3.1.8": {
   "strand": "1. INTRODUCTION TO COMPUTING",
-  "sub_strand": "Sub-strand B5.1.3",
+  "sub_strand": "3. DATA, SOURCES AND USAGE",
   "cs_code": "B5.1.3.1",
   "cs_desc": "Illustrate the use of Data and identify their sources",
   "ind_desc": "Select the samples and collect data (e.g. listening to radio, newspaper, talking to people etc.) Put learners into groups, task them to interview teachers using simple questionnaire, and record the data in books",
@@ -243,7 +243,7 @@
  },
  "B5.1.3.1.9": {
   "strand": "1. INTRODUCTION TO COMPUTING",
-  "sub_strand": "Sub-strand B5.1.3",
+  "sub_strand": "3. DATA, SOURCES AND USAGE",
   "cs_code": "B5.1.3.1",
   "cs_desc": "Illustrate the use of Data and identify their sources",
   "ind_desc": "Make simple tables and diagrams from the collected data. Bring tools or pictures of the tools in a box or container and ask learners to select tools for collecting data out of the box or container. Alternatively, ask learners to bring tools for collecting data for a class discussion",
@@ -254,7 +254,7 @@
  },
  "B5.1.4.1.1": {
   "strand": "1. INTRODUCTION TO COMPUTING",
-  "sub_strand": "Sub-strand B5.1.4",
+  "sub_strand": "4. TECHNOLOGY IN THE COMMUNITY (COMMUNICATION)",
   "cs_code": "B5.1.4.1",
   "cs_desc": "Demonstrate the use of Technology in the community",
   "ind_desc": "List the effects of technology on the community. Guide learners to investigate the types and types importance of compression of document Positive effects",
@@ -265,7 +265,7 @@
  },
  "B5.1.4.1.2": {
   "strand": "1. INTRODUCTION TO COMPUTING",
-  "sub_strand": "Sub-strand B5.1.4",
+  "sub_strand": "4. TECHNOLOGY IN THE COMMUNITY (COMMUNICATION)",
   "cs_code": "B5.1.4.1",
   "cs_desc": "Demonstrate the use of Technology in the community",
   "ind_desc": "Explain the fundamentals of digital system components (hardware, software and networks). Guide learners to brainstorm the basics of digital system components such as hardware, software and networks)",
@@ -276,7 +276,7 @@
  },
  "B5.1.4.1.3": {
   "strand": "1. INTRODUCTION TO COMPUTING",
-  "sub_strand": "Sub-strand B5.1.4",
+  "sub_strand": "4. TECHNOLOGY IN THE COMMUNITY (COMMUNICATION)",
   "cs_code": "B5.1.4.1",
   "cs_desc": "Demonstrate the use of Technology in the community",
   "ind_desc": "Discuss how technology is used to save lives in community and how they are used Guide learners to explore how technology is used to save lives in communities. Group them into groups of a maximum of five and let them present their findings to the class",
@@ -287,7 +287,7 @@
  },
  "B5.1.4.1.4": {
   "strand": "1. INTRODUCTION TO COMPUTING",
-  "sub_strand": "Sub-strand B5.1.4",
+  "sub_strand": "4. TECHNOLOGY IN THE COMMUNITY (COMMUNICATION)",
   "cs_code": "B5.1.4.1",
   "cs_desc": "Demonstrate the use of Technology in the community",
   "ind_desc": "Discuss the effects of technology on the community. Guide learners to brainstorm the effects of technology on the community. Show learners videos or pictures of effects of technology on the community. Let them discuss in groups, the effects of technology on their own community. Positive effects",
@@ -298,7 +298,7 @@
  },
  "B5.2.1.1.1": {
   "strand": "2. PRESENTATION",
-  "sub_strand": "Sub-strand B5.2.1",
+  "sub_strand": "1. INTRODUCTION TO MS - POWERPOINT ( TABS AND RIBBONS OF MS - POWERPOINT)",
   "cs_code": "B5.2.1.1",
   "cs_desc": "Demonstrate how to use Microsoft PowerPoint",
   "ind_desc": "Show the use of Insert, design, animation and transition in the ribbons section. (New, Open, Save, Save As, Print and Close) and the Insert and design ribbon. Ask learners to use “File menu”, “Insert” and “Design Ribbons” to create a new MS-PowerPoint slide and use shapes in the “Insert ribbon” to draw the Ghana flag”",
@@ -309,7 +309,7 @@
  },
  "B5.2.1.1.2": {
   "strand": "2. PRESENTATION",
-  "sub_strand": "Sub-strand B5.2.1",
+  "sub_strand": "1. INTRODUCTION TO MS - POWERPOINT ( TABS AND RIBBONS OF MS - POWERPOINT)",
   "cs_code": "B5.2.1.1",
   "cs_desc": "Demonstrate how to use Microsoft PowerPoint",
   "ind_desc": "Show a 5-slide presentation using of Insert, design, animation and transition of the ribbons studied. Ask learners to use “File menu”, “Insert” and “Design Ribbons” to design a colourful 5-paged MS-PowerPoint on the topic “Myself” NB. This is to help learners with software knowledge). to understand the concept well in office applications (Microso",
@@ -320,7 +320,7 @@
  },
  "B5.3.1.1.1": {
   "strand": "3. WORD PROCESSING",
-  "sub_strand": "Sub-strand B5.3.1",
+  "sub_strand": "1. INTRODUCTION TO WORD PROCESSING (TABS AND RIBBONS OF WORD PROCESSING)",
   "cs_code": "B5.3.1.1",
   "cs_desc": "Illustrate the use of word processing",
   "ind_desc": "Demonstrate the use of Insert, Design, and Layout (New, Open, Save, Save As, Print and Close) and Insert, Design, and Layout ribbons. (i.e. clipboard, slides, fonts and paragraph). Guide learners to use File menu, Insert, Design and Layout Ribbon",
@@ -331,7 +331,7 @@
  },
  "B5.3.1.1.2": {
   "strand": "3. WORD PROCESSING",
-  "sub_strand": "Sub-strand B5.3.1",
+  "sub_strand": "1. INTRODUCTION TO WORD PROCESSING (TABS AND RIBBONS OF WORD PROCESSING)",
   "cs_code": "B5.3.1.1",
   "cs_desc": "Illustrate the use of word processing",
   "ind_desc": "Illustrate the use Insert, Design and Layout. Guide the learners to create and format a document. NB. This is to help learners with software knowledge such as office applications (word processing).",
@@ -342,7 +342,7 @@
  },
  "B5.5.1.2.1": {
   "strand": "5. PROGRAMMING AND DATABASES",
-  "sub_strand": "Sub-strand B5.5.1",
+  "sub_strand": "1. INTRODUCTION TO ELECTRONIC SPREADSHEET(TABS AND RIBBONS MANIPULATION)",
   "cs_code": "B5.5.1.2",
   "cs_desc": "Demonstrate how to use Electronic Spreadsheet",
   "ind_desc": "Identify Electronic Spreadsheets and their uses. Play video on Electronic Spreadsheets and their uses in society. Assist learners to list examples of Electronic Spreadsheets (MS Excel, Numbers, Google sheets, Lotus 1-2-3 etc.). Guide learners to explore the uses of electronic spreadsheets",
@@ -353,7 +353,7 @@
  },
  "B5.5.1.2.2": {
   "strand": "5. PROGRAMMING AND DATABASES",
-  "sub_strand": "Sub-strand B5.5.1",
+  "sub_strand": "1. INTRODUCTION TO ELECTRONIC SPREADSHEET(TABS AND RIBBONS MANIPULATION)",
   "cs_code": "B5.5.1.2",
   "cs_desc": "Demonstrate how to use Electronic Spreadsheet",
   "ind_desc": "Learners discuss the importance of Electronic Spreadsheets. Guide learners to discuss the importance of Electronic Spreadsheets and what they are used for",
@@ -364,7 +364,7 @@
  },
  "B5.5.1.2.3": {
   "strand": "5. PROGRAMMING AND DATABASES",
-  "sub_strand": "Sub-strand B5.5.1",
+  "sub_strand": "1. INTRODUCTION TO ELECTRONIC SPREADSHEET(TABS AND RIBBONS MANIPULATION)",
   "cs_code": "B5.5.1.2",
   "cs_desc": "Demonstrate how to use Electronic Spreadsheet",
   "ind_desc": "Learners get familiar with the interface of MS-Excel Guide Learners to demonstrate how to access MS-Excel on any computer or gadget and display text in MS-Excel. NB. This is to help the learner with an understanding of application softwares (Electronic Spreadsheet application).",
@@ -375,7 +375,7 @@
  },
  "B5.5.1.3.1": {
   "strand": "5. PROGRAMMING AND DATABASES",
-  "sub_strand": "Sub-strand B5.5.1",
+  "sub_strand": "1. INTRO DUCTION TO DATABASES, ALGORITHM AND PROGRAMMING",
   "cs_code": "B5.5.1.3",
   "cs_desc": "Demonstrate how to use Databases",
   "ind_desc": "Describe databases. Guide learners to identify the features of a database and the types of databases that exist. Ask learners to select the databases form a list of items written on the board",
@@ -386,7 +386,7 @@
  },
  "B5.5.1.3.2": {
   "strand": "5. PROGRAMMING AND DATABASES",
-  "sub_strand": "Sub-strand B5.5.1",
+  "sub_strand": "1. INTRO DUCTION TO DATABASES, ALGORITHM AND PROGRAMMING",
   "cs_code": "B5.5.1.3",
   "cs_desc": "Demonstrate how to use Databases",
   "ind_desc": "Discuss the importance and uses of database. Play a video of the importance and uses of databases and ask learners to mention other uses of database and their importance. Assist learners to realise that Database designers typically organise the data to model aspects of reality in a way that supports processes requiring information",
@@ -397,7 +397,7 @@
  },
  "B5.5.1.3.3": {
   "strand": "5. PROGRAMMING AND DATABASES",
-  "sub_strand": "Sub-strand B5.5.1",
+  "sub_strand": "1. INTRO DUCTION TO DATABASES, ALGORITHM AND PROGRAMMING",
   "cs_code": "B5.5.1.3",
   "cs_desc": "Demonstrate how to use Databases",
   "ind_desc": "Describe the types of database. Guide learners to describe the types of database",
@@ -408,7 +408,7 @@
  },
  "B5.5.1.3.4": {
   "strand": "5. PROGRAMMING AND DATABASES",
-  "sub_strand": "Sub-strand B5.5.1",
+  "sub_strand": "1. INTRO DUCTION TO DATABASES, ALGORITHM AND PROGRAMMING",
   "cs_code": "B5.5.1.3",
   "cs_desc": "Demonstrate how to use Databases",
   "ind_desc": "Identify types of databases and data. Guide learners to investigate on the types of databases and data. Let learners present their findings to the class",
@@ -419,7 +419,7 @@
  },
  "B5.5.1.3.5": {
   "strand": "5. PROGRAMMING AND DATABASES",
-  "sub_strand": "Sub-strand B5.5.1",
+  "sub_strand": "1. INTRO DUCTION TO DATABASES, ALGORITHM AND PROGRAMMING",
   "cs_code": "B5.5.1.3",
   "cs_desc": "Demonstrate how to use Databases",
   "ind_desc": "Explain fundamental database concepts. Guide learners to explore the fundamental database concepts e.g. tables and data types, data selection and manipulation, security, and backup and restore",
@@ -430,7 +430,7 @@
  },
  "B5.5.1.3.6": {
   "strand": "5. PROGRAMMING AND DATABASES",
-  "sub_strand": "Sub-strand B5.5.1",
+  "sub_strand": "1. INTRO DUCTION TO DATABASES, ALGORITHM AND PROGRAMMING",
   "cs_code": "B5.5.1.3",
   "cs_desc": "Demonstrate how to use Databases",
   "ind_desc": "Discuss programming languages and their use (e.g. scratch, vb.net etc.) Guide learners to investigate in groups on the programming languages and their use (e.g. scratch, vb.net etc.) NB: This is to give a foundation to the learner in computing and Computer Science which is more concerned with uses of and development of programming together with fu",
@@ -441,7 +441,7 @@
  },
  "B5.6.1.1.1": {
   "strand": "6. INTERNET AND SOCIAL MEDIA",
-  "sub_strand": "Sub-strand B5.6.1",
+  "sub_strand": "1. INTRODUCTION TO ELECTRONIC SPREADSHEET(TABS AND RIBBONS MANIPULATION)",
   "cs_code": "B5.6.1.1",
   "cs_desc": "Demonstrate how to Network computers",
   "ind_desc": "Explain what a network is. Guide the learners to discuss how devices communicate. Demonstrate simple connectivity between nodes",
@@ -452,7 +452,7 @@
  },
  "B5.6.1.1.2": {
   "strand": "6. INTERNET AND SOCIAL MEDIA",
-  "sub_strand": "Sub-strand B5.6.1",
+  "sub_strand": "1. INTRODUCTION TO ELECTRONIC SPREADSHEET(TABS AND RIBBONS MANIPULATION)",
   "cs_code": "B5.6.1.1",
   "cs_desc": "Demonstrate how to Network computers",
   "ind_desc": "Describe how the internet works. Guide learners to distinguish between PAN, LAN, MAN, WAN and Internet",
@@ -463,7 +463,7 @@
  },
  "B5.6.1.1.3": {
   "strand": "6. INTERNET AND SOCIAL MEDIA",
-  "sub_strand": "Sub-strand B5.6.1",
+  "sub_strand": "1. INTRODUCTION TO ELECTRONIC SPREADSHEET(TABS AND RIBBONS MANIPULATION)",
   "cs_code": "B5.6.1.1",
   "cs_desc": "Demonstrate how to Network computers",
   "ind_desc": "Explain what the Internet is. Guide learners to discuss the inter-connection of the internet computers (learners should be made to realise that the internet is a network of networks). Also, guide learners to come out with examples of Internet Communication.",
@@ -474,7 +474,7 @@
  },
  "B5.6.10.1.1": {
   "strand": "6. INTERNET AND SOCIAL MEDIA",
-  "sub_strand": "Sub-strand B5.6.10",
+  "sub_strand": "10. DIGITAL LITERACY",
   "cs_code": "B5.6.10.1",
   "cs_desc": "Demonstrated the application of Network Etiquette (Netiquette)",
   "ind_desc": "Define digital footprint. Guide learners to explain digital footprint",
@@ -485,7 +485,7 @@
  },
  "B5.6.10.1.2": {
   "strand": "6. INTERNET AND SOCIAL MEDIA",
-  "sub_strand": "Sub-strand B5.6.10",
+  "sub_strand": "10. DIGITAL LITERACY",
   "cs_code": "B5.6.10.1",
   "cs_desc": "Demonstrated the application of Network Etiquette (Netiquette)",
   "ind_desc": "Illustrate how to keep some information from public when using the internet. Guide learner to avoid posting personal information",
@@ -496,7 +496,7 @@
  },
  "B5.6.2.1.1": {
   "strand": "6. INTERNET AND SOCIAL MEDIA",
-  "sub_strand": "Sub-strand B5.6.2",
+  "sub_strand": "2. WEB BROWSERS AND WEB PAGES",
   "cs_code": "B5.6.2.1",
   "cs_desc": "Demonstrate how to use Web Pages CONT’D",
   "ind_desc": "Explain what a web browser is and its use. Guide learners to understand the concept and use of browsers through practical lessons. Show interfaces or images of browsers to learners",
@@ -507,7 +507,7 @@
  },
  "B5.6.2.1.2": {
   "strand": "6. INTERNET AND SOCIAL MEDIA",
-  "sub_strand": "Sub-strand B5.6.2",
+  "sub_strand": "2. WEB BROWSERS AND WEB PAGES",
   "cs_code": "B5.6.2.1",
   "cs_desc": "Demonstrate how to use Web Pages CONT’D",
   "ind_desc": "Identify web browsers. Guide learners to list the various types of browsers e.g. Firefox, Internet Explorer, Chrome etc. through practical lessons or the use of pictures",
@@ -518,7 +518,7 @@
  },
  "B5.6.2.1.3": {
   "strand": "6. INTERNET AND SOCIAL MEDIA",
-  "sub_strand": "Sub-strand B5.6.2",
+  "sub_strand": "2. WEB BROWSERS AND WEB PAGES",
   "cs_code": "B5.6.2.1",
   "cs_desc": "Demonstrate how to use Web Pages CONT’D",
   "ind_desc": "Demonstrate the use of MS-Internet Explorer. Guide learners to launch MS-Internet Explorer and use the components (navigation, browse, etc.)",
@@ -529,7 +529,7 @@
  },
  "B5.6.2.1.4": {
   "strand": "6. INTERNET AND SOCIAL MEDIA",
-  "sub_strand": "Sub-strand B5.6.2",
+  "sub_strand": "2. WEB BROWSERS AND WEB PAGES",
   "cs_code": "B5.6.2.1",
   "cs_desc": "Demonstrate how to use Web Pages CONT’D",
   "ind_desc": "Show how to create and remove a favorites link. Guide learners to practice how to create or remove favorite links in practical session(s)",
@@ -540,7 +540,7 @@
  },
  "B5.6.2.1.5": {
   "strand": "6. INTERNET AND SOCIAL MEDIA",
-  "sub_strand": "Sub-strand B5.6.2",
+  "sub_strand": "2. WEB BROWSERS AND WEB PAGES",
   "cs_code": "B5.6.2.1",
   "cs_desc": "Demonstrate how to use Web Pages CONT’D",
   "ind_desc": "Create favorites folder. Guide learners to practice how to create a favorites folder through practical session(s)",
@@ -551,7 +551,7 @@
  },
  "B5.6.2.1.6": {
   "strand": "6. INTERNET AND SOCIAL MEDIA",
-  "sub_strand": "Sub-strand B5.6.2",
+  "sub_strand": "2. WEB BROWSERS AND WEB PAGES",
   "cs_code": "B5.6.2.1",
   "cs_desc": "Demonstrate how to use Web Pages CONT’D",
   "ind_desc": "Use the links toolbar. Guide learners to practice the use of link toolbar through practical session(s). NB: This is to help the learner with the fundamental skills of creativity in computing and Computer Science.",
@@ -562,7 +562,7 @@
  },
  "B5.6.2.1.7": {
   "strand": "6. INTERNET AND SOCIAL MEDIA",
-  "sub_strand": "Sub-strand B5.6.2",
+  "sub_strand": "2. WEB BROWSERS AND WEB PAGES",
   "cs_code": "B5.6.2.1",
   "cs_desc": "Demonstrate how to use Web Pages CONT’D",
   "ind_desc": "Explain what a Web Page is. Guide learners to explore features of a Web Page (text, graphics, audio, video, animation etc. through practical lessons)",
@@ -573,7 +573,7 @@
  },
  "B5.6.2.1.8": {
   "strand": "6. INTERNET AND SOCIAL MEDIA",
-  "sub_strand": "Sub-strand B5.6.2",
+  "sub_strand": "2. WEB BROWSERS AND WEB PAGES",
   "cs_code": "B5.6.2.1",
   "cs_desc": "Demonstrate how to use Web Pages CONT’D",
   "ind_desc": "Explain what a home page is. Guide learners to identify a home page from other web pages, through practical lessons",
@@ -584,7 +584,7 @@
  },
  "B5.6.2.1.9": {
   "strand": "6. INTERNET AND SOCIAL MEDIA",
-  "sub_strand": "Sub-strand B5.6.2",
+  "sub_strand": "2. WEB BROWSERS AND WEB PAGES",
   "cs_code": "B5.6.2.1",
   "cs_desc": "Demonstrate how to use Web Pages CONT’D",
   "ind_desc": "Movement within and between web pages using hyperlinks. Guide learners to practice clicking hyperlinks, through practical lessons. NB: This is to help the learner with the fundamental skills of creativity in computing and Computer Science",
@@ -595,7 +595,7 @@
  },
  "B5.6.3.1.1": {
   "strand": "6. INTERNET AND SOCIAL MEDIA",
-  "sub_strand": "Sub-strand B5.6.3",
+  "sub_strand": "3. SURFING THE WORLD WIDE WEB",
   "cs_code": "B5.6.3.1",
   "cs_desc": "Demonstrate how to use Favorite places",
   "ind_desc": "Show how to create a favorite link. Guide learners to create a favorite link",
@@ -606,7 +606,7 @@
  },
  "B5.6.3.1.2": {
   "strand": "6. INTERNET AND SOCIAL MEDIA",
-  "sub_strand": "Sub-strand B5.6.3",
+  "sub_strand": "3. SURFING THE WORLD WIDE WEB",
   "cs_code": "B5.6.3.1",
   "cs_desc": "Demonstrate how to use Favorite places",
   "ind_desc": "Demonstrate deleting favorite links. Guide learners to delete favorite links they have created in the previous lesson",
@@ -617,7 +617,7 @@
  },
  "B5.6.3.1.3": {
   "strand": "6. INTERNET AND SOCIAL MEDIA",
-  "sub_strand": "Sub-strand B5.6.3",
+  "sub_strand": "3. SURFING THE WORLD WIDE WEB",
   "cs_code": "B5.6.3.1",
   "cs_desc": "Demonstrate how to use Favorite places",
   "ind_desc": "Create favorite folder. Guide learners to create a favorite folder",
@@ -628,7 +628,7 @@
  },
  "B5.6.3.1.4": {
   "strand": "6. INTERNET AND SOCIAL MEDIA",
-  "sub_strand": "Sub-strand B5.6.3",
+  "sub_strand": "3. SURFING THE WORLD WIDE WEB",
   "cs_code": "B5.6.3.1",
   "cs_desc": "Demonstrate how to use Favorite places",
   "ind_desc": "Use the links toolbar. Guide learners to use the links toolbar. NB: This is to help the learner with the fundamental skills of surfing and navigating the internet.",
@@ -639,7 +639,7 @@
  },
  "B5.6.4.1.1": {
   "strand": "6. INTERNET AND SOCIAL MEDIA",
-  "sub_strand": "Sub-strand B5.6.4",
+  "sub_strand": "4. FAVOURITE PLACES AND SEARCH ENGINE",
   "cs_code": "B5.6.4.1",
   "cs_desc": "Demonstrate how to use Search Engines",
   "ind_desc": "Identify common search engines. Guide learners to discuss search engines and the different types search engines (Google, DuckDuckGo, Yahoo etc.)",
@@ -650,7 +650,7 @@
  },
  "B5.6.4.1.2": {
   "strand": "6. INTERNET AND SOCIAL MEDIA",
-  "sub_strand": "Sub-strand B5.6.4",
+  "sub_strand": "4. FAVOURITE PLACES AND SEARCH ENGINE",
   "cs_code": "B5.6.4.1",
   "cs_desc": "Demonstrate how to use Search Engines",
   "ind_desc": "Explore how smart search engines work. Guide learners to how smart search engines work (i.e. how professionals or people seek information for their work or interests and what information they draw from it)",
@@ -661,7 +661,7 @@
  },
  "B5.6.4.1.3": {
   "strand": "6. INTERNET AND SOCIAL MEDIA",
-  "sub_strand": "Sub-strand B5.6.4",
+  "sub_strand": "4. FAVOURITE PLACES AND SEARCH ENGINE",
   "cs_code": "B5.6.4.1",
   "cs_desc": "Demonstrate how to use Search Engines",
   "ind_desc": "Demonstrate how to handle search results. Guide learners to explore how to handle search results from a search engine. NB: This is to help the learner with the fundamental skills of surfing and navigating the internet",
@@ -672,7 +672,7 @@
  },
  "B5.6.4.9.1": {
   "strand": "6. INTERNET AND SOCIAL MEDIA",
-  "sub_strand": "Sub-strand B5.6.4",
+  "sub_strand": "4. DIGITAL LITERACY",
   "cs_code": "B5.6.4.9",
   "cs_desc": "Demonstrate proficiency in Digital Literacy.",
   "ind_desc": "1. Describe private and personal information. Encourage learners to tell you what they know about private and personal information online. Ask leading questions to help them bring out points they could not make out",
@@ -683,7 +683,7 @@
  },
  "B5.6.5.1.1": {
   "strand": "6. INTERNET AND SOCIAL MEDIA",
-  "sub_strand": "Sub-strand B5.6.5",
+  "sub_strand": "5. USING ONLINE FORMS",
   "cs_code": "B5.6.5.1",
   "cs_desc": "Demonstrate the Usage of Forms",
   "ind_desc": "Identify and describe forms in a web page. Guide learners to fill out dropdown boxes, combo box, Text fields etc",
@@ -694,7 +694,7 @@
  },
  "B5.6.5.1.2": {
   "strand": "6. INTERNET AND SOCIAL MEDIA",
-  "sub_strand": "Sub-strand B5.6.5",
+  "sub_strand": "5. USING ONLINE FORMS",
   "cs_code": "B5.6.5.1",
   "cs_desc": "Demonstrate the Usage of Forms",
   "ind_desc": "Demonstrate working on or offline. Guide learners to register or fill out online forms as well as offline through practical sessions. Learners can be guided to use created PDF or Word forms to practice filling out forms offline",
@@ -705,7 +705,7 @@
  },
  "B5.6.5.1.3": {
   "strand": "6. INTERNET AND SOCIAL MEDIA",
-  "sub_strand": "Sub-strand B5.6.5",
+  "sub_strand": "5. USING ONLINE FORMS",
   "cs_code": "B5.6.5.1",
   "cs_desc": "Demonstrate the Usage of Forms",
   "ind_desc": "Demonstrate downloading of files (e.g. pictures, audio, pdf etc.). Guide learners to download a file through practical session(s).",
@@ -716,7 +716,7 @@
  },
  "B5.6.6.1.1": {
   "strand": "6. INTERNET AND SOCIAL MEDIA",
-  "sub_strand": "Sub-strand B5.6.6",
+  "sub_strand": "6. CUSTOMIZING YOUR BROWSER",
   "cs_code": "B5.6.6.1",
   "cs_desc": "Show how to Customize a Browser",
   "ind_desc": "Demonstrate how to set default search engines. Guide learners to set default search engines",
@@ -727,7 +727,7 @@
  },
  "B5.6.6.1.2": {
   "strand": "6. INTERNET AND SOCIAL MEDIA",
-  "sub_strand": "Sub-strand B5.6.6",
+  "sub_strand": "6. CUSTOMIZING YOUR BROWSER",
   "cs_code": "B5.6.6.1",
   "cs_desc": "Show how to Customize a Browser",
   "ind_desc": "Show how to set homepages. Guide learners to set homepages",
@@ -738,7 +738,7 @@
  },
  "B5.6.6.1.3": {
   "strand": "6. INTERNET AND SOCIAL MEDIA",
-  "sub_strand": "Sub-strand B5.6.6",
+  "sub_strand": "6. CUSTOMIZING YOUR BROWSER",
   "cs_code": "B5.6.6.1",
   "cs_desc": "Show how to Customize a Browser",
   "ind_desc": "Show how to make Browser apps, add-ons, plug-ins, and extensions. Guide learners to make Browser apps, add-ons, plug-ins, and extensions",
@@ -749,7 +749,7 @@
  },
  "B5.6.6.1.4": {
   "strand": "6. INTERNET AND SOCIAL MEDIA",
-  "sub_strand": "Sub-strand B5.6.6",
+  "sub_strand": "6. CUSTOMIZING YOUR BROWSER",
   "cs_code": "B5.6.6.1",
   "cs_desc": "Show how to Customize a Browser",
   "ind_desc": "Illustrate how to customise the browser toolbar. Facilitate learners to customise the browser toolbar",
@@ -760,7 +760,7 @@
  },
  "B5.6.6.1.5": {
   "strand": "6. INTERNET AND SOCIAL MEDIA",
-  "sub_strand": "Sub-strand B5.6.6",
+  "sub_strand": "6. CUSTOMIZING YOUR BROWSER",
   "cs_code": "B5.6.6.1",
   "cs_desc": "Show how to Customize a Browser",
   "ind_desc": "Identify cookies in web browsers. Aid learners to recognize cookies in web browsers",
@@ -771,7 +771,7 @@
  },
  "B5.6.6.1.6": {
   "strand": "6. INTERNET AND SOCIAL MEDIA",
-  "sub_strand": "Sub-strand B5.6.6",
+  "sub_strand": "6. CUSTOMIZING YOUR BROWSER",
   "cs_code": "B5.6.6.1",
   "cs_desc": "Show how to Customize a Browser",
   "ind_desc": "Illustrate how to set disk space or cache usage. Guide learners to set disk space or cache usage.",
@@ -782,7 +782,7 @@
  },
  "B5.6.7.1.1": {
   "strand": "6. INTERNET AND SOCIAL MEDIA",
-  "sub_strand": "Sub-strand B5.6.7",
+  "sub_strand": "7. ELECTRONIC EMAIL",
   "cs_code": "B5.6.7.1",
   "cs_desc": "Demonstrate the use of Electronic Mail",
   "ind_desc": "Identify the various e-mail service providers. Guide learners to explore on the various email service providers (email, outlook.com, icloud mail)",
@@ -793,7 +793,7 @@
  },
  "B5.6.7.1.2": {
   "strand": "6. INTERNET AND SOCIAL MEDIA",
-  "sub_strand": "Sub-strand B5.6.7",
+  "sub_strand": "7. ELECTRONIC EMAIL",
   "cs_code": "B5.6.7.1",
   "cs_desc": "Demonstrate the use of Electronic Mail",
   "ind_desc": "Demonstrate the use of internet e-mail addresses. Guide learners to start an email address. Assist learners to use email address",
@@ -804,7 +804,7 @@
  },
  "B5.6.7.1.3": {
   "strand": "6. INTERNET AND SOCIAL MEDIA",
-  "sub_strand": "Sub-strand B5.6.7",
+  "sub_strand": "7. ELECTRONIC EMAIL",
   "cs_code": "B5.6.7.1",
   "cs_desc": "Demonstrate the use of Electronic Mail",
   "ind_desc": "Creating an email account e.g. Yahoo mail or Gmail account. (Yahoo Mail or Gmail account.). Guide learners to create email account (i.e. the possible steps)",
@@ -815,7 +815,7 @@
  },
  "B5.6.7.1.4": {
   "strand": "6. INTERNET AND SOCIAL MEDIA",
-  "sub_strand": "Sub-strand B5.6.7",
+  "sub_strand": "7. ELECTRONIC EMAIL",
   "cs_code": "B5.6.7.1",
   "cs_desc": "Demonstrate the use of Electronic Mail",
   "ind_desc": "Illustrate viewing received messages and Create or Compose messages. Guide learners to write messages, format text, etc",
@@ -826,7 +826,7 @@
  },
  "B5.6.8.1.1": {
   "strand": "6. INTERNET AND SOCIAL MEDIA",
-  "sub_strand": "Sub-strand B5.6.8",
+  "sub_strand": "8. INTERNET OF THINGS (IOT)",
   "cs_code": "B5.6.8.1",
   "cs_desc": "Demonstrate the use of Internet of Things (IoT) CONT’D",
   "ind_desc": "Describe the purpose Internet of Things. Guide learners to discuss the IoT in groups",
@@ -837,7 +837,7 @@
  },
  "B5.6.8.1.2": {
   "strand": "6. INTERNET AND SOCIAL MEDIA",
-  "sub_strand": "Sub-strand B5.6.8",
+  "sub_strand": "8. INTERNET OF THINGS (IOT)",
   "cs_code": "B5.6.8.1",
   "cs_desc": "Demonstrate the use of Internet of Things (IoT) CONT’D",
   "ind_desc": "Give examples of Internet of Things with a consumer part and an industrial/business segment. Guide learners to give, explore and present in class examples of Internet of Things with a consumer part and an industrial/business segment",
@@ -848,7 +848,7 @@
  },
  "B5.6.8.1.3": {
   "strand": "6. INTERNET AND SOCIAL MEDIA",
-  "sub_strand": "Sub-strand B5.6.8",
+  "sub_strand": "8. INTERNET OF THINGS (IOT)",
   "cs_code": "B5.6.8.1",
   "cs_desc": "Demonstrate the use of Internet of Things (IoT) CONT’D",
   "ind_desc": "Identify components of Internet of Things. Guide learners to explore the components of the Internet of Things. e.g. Hardware, Data, Software and Connectivity.",
@@ -859,7 +859,7 @@
  },
  "B5.6.8.1.4": {
   "strand": "6. INTERNET AND SOCIAL MEDIA",
-  "sub_strand": "Sub-strand B5.6.8",
+  "sub_strand": "8. INTERNET OF THINGS (IOT)",
   "cs_code": "B5.6.8.1",
   "cs_desc": "Demonstrate the use of Internet of Things (IoT) CONT’D",
   "ind_desc": "Identify the role of smart sensors in the Internet of Things. Guide learners to the explore the role of smart sensors in the Internet of Things e.g. Sensing and data collection capability such as climatic change (e.g. Electronic Doors, RFID, CCTV camera, etc.), define at least five terms and acronyms of IoT. NB: This is to help the learner to fun",
@@ -870,7 +870,7 @@
  },
  "B5.7.1.1.1": {
   "strand": "7. HEALTH AND SAFETY IN USING ICT TOOLS",
-  "sub_strand": "Sub-strand B5.7.1",
+  "sub_strand": "1. HEALTH AND SAFETY IN USING ICT TOOLS",
   "cs_code": "B5.7.1.1",
   "cs_desc": "Demonstrate the application of Health and safety measures, in using ICT tools",
   "ind_desc": "Identify some major health hazards associated with the use of ICT tools’ use. Guide the learners to discuss wrist pain and sitting posture (neck, back and waist pain)",
@@ -881,7 +881,7 @@
  },
  "B5.7.1.1.2": {
   "strand": "7. HEALTH AND SAFETY IN USING ICT TOOLS",
-  "sub_strand": "Sub-strand B5.7.1",
+  "sub_strand": "1. HEALTH AND SAFETY IN USING ICT TOOLS",
   "cs_code": "B5.7.1.1",
   "cs_desc": "Demonstrate the application of Health and safety measures, in using ICT tools",
   "ind_desc": "Describe proper sitting posture. Guide learners in groups to discuss, identify and practise the proper sitting posture (i.e. siting at 90 degrees, wrist should be supported with a wrist pad, take short breaks etc.) when using the computer",

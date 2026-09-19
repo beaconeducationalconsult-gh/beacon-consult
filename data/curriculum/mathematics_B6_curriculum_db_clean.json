@@ -1,7 +1,7 @@
 {
  "B6.1.1.1.1": {
   "strand": "1. NUMBER",
-  "sub_strand": "Sub-strand B6.1.1",
+  "sub_strand": "1. Counting, Representation, Cardinality & Ordinality",
   "cs_code": "B6.1.1.1",
   "cs_desc": "Demonstrate an understanding of quantities and place value for multi-digit numerals up to 1,000, 000,000 or 1 billion.",
   "ind_desc": "Model number quantities up to 1,000,000 using graph sheets and multi-base block",
@@ -12,7 +12,7 @@
  },
  "B6.1.1.1.2": {
   "strand": "1. NUMBER",
-  "sub_strand": "Sub-strand B6.1.1",
+  "sub_strand": "1. Counting, Representation, Cardinality & Ordinality",
   "cs_code": "B6.1.1.1",
   "cs_desc": "Demonstrate an understanding of quantities and place value for multi-digit numerals up to 1,000, 000,000 or 1 billion.",
   "ind_desc": "Read and write numbers in figures and in words up to 1,000,000,000",
@@ -23,7 +23,7 @@
  },
  "B6.1.1.1.3": {
   "strand": "1. NUMBER",
-  "sub_strand": "Sub-strand B6.1.1",
+  "sub_strand": "1. Counting, Representation, Cardinality & Ordinality",
   "cs_code": "B6.1.1.1",
   "cs_desc": "Demonstrate an understanding of quantities and place value for multi-digit numerals up to 1,000, 000,000 or 1 billion.",
   "ind_desc": "Identify numbers in different positions around a given number in a number chart",
@@ -34,7 +34,7 @@
  },
  "B6.1.1.1.4": {
   "strand": "1. NUMBER",
-  "sub_strand": "Sub-strand B6.1.1",
+  "sub_strand": "1. Counting, Representation, Cardinality & Ordinality",
   "cs_code": "B6.1.1.1",
   "cs_desc": "Demonstrate an understanding of quantities and place value for multi-digit numerals up to 1,000, 000,000 or 1 billion.",
   "ind_desc": "Compare and order whole numbers up to 100,000 and represent the comparison using \">, <, or =\"",
@@ -45,7 +45,7 @@
  },
  "B6.1.1.1.5": {
   "strand": "1. NUMBER",
-  "sub_strand": "Sub-strand B6.1.1",
+  "sub_strand": "1. Counting, Representation, Cardinality & Ordinality",
   "cs_code": "B6.1.1.1",
   "cs_desc": "Demonstrate an understanding of quantities and place value for multi-digit numerals up to 1,000, 000,000 or 1 billion.",
   "ind_desc": "Round (off, up, down) whole numbers up to 100,000 to the nearest ten thousands, thousands, hundreds and tens",
@@ -56,7 +56,7 @@
  },
  "B6.1.1.1.6": {
   "strand": "1. NUMBER",
-  "sub_strand": "Sub-strand B6.1.1",
+  "sub_strand": "1. Counting, Representation, Cardinality & Ordinality",
   "cs_code": "B6.1.1.1",
   "cs_desc": "Demonstrate an understanding of quantities and place value for multi-digit numerals up to 1,000, 000,000 or 1 billion.",
   "ind_desc": "Skip count forwards and backwards in 5000s, 10,000s etc. up to and from 1,000,000",
@@ -67,7 +67,7 @@
  },
  "B6.1.1.2.1": {
   "strand": "1. NUMBER",
-  "sub_strand": "Sub-strand B6.1.1",
+  "sub_strand": "1. Counting, Representation, Cardinality & Ordinality",
   "cs_code": "B6.1.1.2",
   "cs_desc": "Demonstrate understanding of Roman Numerals up to C (i.e. 100).",
   "ind_desc": "Recognise Roman Numerals system up to C (i.e. 100)",
@@ -78,7 +78,7 @@
  },
  "B6.1.1.2.2": {
   "strand": "1. NUMBER",
-  "sub_strand": "Sub-strand B6.1.1",
+  "sub_strand": "1. Counting, Representation, Cardinality & Ordinality",
   "cs_code": "B6.1.1.2",
   "cs_desc": "Demonstrate understanding of Roman Numerals up to C (i.e. 100).",
   "ind_desc": "Count and convert Hindu Arabic numbers to Roman numerals up to 100 (C) and vice versa",
@@ -89,7 +89,7 @@
  },
  "B6.1.1.3.1": {
   "strand": "1. NUMBER",
-  "sub_strand": "Sub-strand B6.1.1",
+  "sub_strand": "1. Counting, Representation, Cardinality & Ordinality",
   "cs_code": "B6.1.1.3",
   "cs_desc": "Demonstrate understanding of factors, multiples and prime numbers from 1 to 100.",
   "ind_desc": "Determine the HCF and the LCM of two or three numbers using prime factors",
@@ -100,7 +100,7 @@
  },
  "B6.1.1.4.3": {
   "strand": "1. NUMBER",
-  "sub_strand": "Sub-strand B6.1.1",
+  "sub_strand": "1. Number Operations",
   "cs_code": "B6.1.1.4",
   "cs_desc": "Demonstrate an understanding of integers.",
   "ind_desc": "Perform simple multiplication with integers",
@@ -111,7 +111,7 @@
  },
  "B6.1.1.6.1": {
   "strand": "1. NUMBER",
-  "sub_strand": "Sub-strand B6.1.1",
+  "sub_strand": "1. Number Operations",
   "cs_code": "B6.1.1.6",
   "cs_desc": "Demonstrate an understanding of integers.",
   "ind_desc": "Locate, compare and order sets of integers using the number line and symbols \"< or >\"",
@@ -122,7 +122,7 @@
  },
  "B6.1.2.1.1": {
   "strand": "1. NUMBER",
-  "sub_strand": "Sub-strand B6.1.2",
+  "sub_strand": "2. Number Operations",
   "cs_code": "B6.1.2.1",
   "cs_desc": "Describe and apply mental mathematics strategies and number properties to determine answers for basic multiplication facts to 144 and related division facts.",
   "ind_desc": "Apply mental mathematics strategies and number properties, such as skip counting from a known fact, using doubling or halving, using patterns in the 9s and 11s facts, using repeated doubling or halving, to determine answers for basic multiplication facts to 81 and related division facts",
@@ -133,7 +133,7 @@
  },
  "B6.1.2.1.2": {
   "strand": "1. NUMBER",
-  "sub_strand": "Sub-strand B6.1.2",
+  "sub_strand": "2. Number Operations",
   "cs_code": "B6.1.2.1",
   "cs_desc": "Describe and apply mental mathematics strategies and number properties to determine answers for basic multiplication facts to 144 and related division facts.",
   "ind_desc": "Apply mental mathematics strategies for multiplication, such as annexing then adding zero halving and doubling using the distributive property",
@@ -144,7 +144,7 @@
  },
  "B6.1.2.2.1": {
   "strand": "1. NUMBER",
-  "sub_strand": "Sub-strand B6.1.2",
+  "sub_strand": "2. Number Operations",
   "cs_code": "B6.1.2.2",
   "cs_desc": "Demonstrate understanding of multiplication of a 2 or 3-digit number by a 2 or 3-digit number",
   "ind_desc": "Multiply multi digit numbers by 2 or 3-digit numbers efficiently",
@@ -155,7 +155,7 @@
  },
  "B6.1.2.3.1": {
   "strand": "1. NUMBER",
-  "sub_strand": "Sub-strand B6.1.2",
+  "sub_strand": "2. Number Operations",
   "cs_code": "B6.1.2.3",
   "cs_desc": "Manipulate numbers, using basic division fact up to 144",
   "ind_desc": "Determine basic division fact up to 81",
@@ -166,7 +166,7 @@
  },
  "B6.1.2.4.1": {
   "strand": "1. NUMBER",
-  "sub_strand": "Sub-strand B6.1.2",
+  "sub_strand": "2. Number Operations",
   "cs_code": "B6.1.2.4",
   "cs_desc": "Demonstrate understanding of division of a 2 or 3-digit number by a 1 or 2-digit number",
   "ind_desc": "Divide 3-digit numbers by 1-digit number efficiently",
@@ -177,7 +177,7 @@
  },
  "B6.1.2.5.1": {
   "strand": "1. NUMBER",
-  "sub_strand": "Sub-strand B6.1.2",
+  "sub_strand": "2. Number Operations",
   "cs_code": "B6.1.2.5",
   "cs_desc": "Translate word problems into mathematical sentences and solve",
   "ind_desc": "Solve multi step word problems involving the four basic operations",
@@ -188,7 +188,7 @@
  },
  "B6.1.2.6.2": {
   "strand": "1. NUMBER",
-  "sub_strand": "Sub-strand B6.1.2",
+  "sub_strand": "2. Number Operations",
   "cs_code": "B6.1.2.6",
   "cs_desc": "Demonstrate an understanding of integers.",
   "ind_desc": "Solve simple addition and subtraction problems involving integers (excluding subtraction of negative numbers)",
@@ -199,7 +199,7 @@
  },
  "B6.1.3.1.1": {
   "strand": "1. NUMBER",
-  "sub_strand": "Sub-strand B6.1.3",
+  "sub_strand": "3. Fractions",
   "cs_code": "B6.1.3.1",
   "cs_desc": "Demonstrate understanding of strategies for comparing, adding, subtracting, multiplying and dividing common, decimal and percent fractions.",
   "ind_desc": "Compare and order a mixture of fractions: common, percent and decimal fractions (up to thousandths)",
@@ -210,7 +210,7 @@
  },
  "B6.1.3.1.2": {
   "strand": "1. NUMBER",
-  "sub_strand": "Sub-strand B6.1.3",
+  "sub_strand": "3. Fractions",
   "cs_code": "B6.1.3.1",
   "cs_desc": "Demonstrate understanding of strategies for comparing, adding, subtracting, multiplying and dividing common, decimal and percent fractions.",
   "ind_desc": "Add and subtract unlike and mixed fractions",
@@ -221,7 +221,7 @@
  },
  "B6.1.3.1.3": {
   "strand": "1. NUMBER",
-  "sub_strand": "Sub-strand B6.1.3",
+  "sub_strand": "3. Fractions",
   "cs_code": "B6.1.3.1",
   "cs_desc": "Demonstrate understanding of strategies for comparing, adding, subtracting, multiplying and dividing common, decimal and percent fractions.",
   "ind_desc": "Use models to explain the result of multiplying a fraction by whole number, a whole number by a fraction and a fraction by fraction",
@@ -232,7 +232,7 @@
  },
  "B6.1.4.1.1": {
   "strand": "1. NUMBER",
-  "sub_strand": "Sub-strand B6.1.4",
+  "sub_strand": "4. Ratios and Proportion",
   "cs_code": "B6.1.4.1",
   "cs_desc": "Demonstrate understanding of the concept of ratios and its relationship to fractions and to the multiplication and division of whole numbers.",
   "ind_desc": "Use concrete models and pictorial representations to explain a ratio as a concept that shows the number of times one quantity can be obtained in another and write this symbolically and in its simplest form",
@@ -243,7 +243,7 @@
  },
  "B6.1.4.1.2": {
   "strand": "1. NUMBER",
-  "sub_strand": "Sub-strand B6.1.4",
+  "sub_strand": "4. Ratios and Proportion",
   "cs_code": "B6.1.4.1",
   "cs_desc": "Demonstrate understanding of the concept of ratios and its relationship to fractions and to the multiplication and division of whole numbers.",
   "ind_desc": "Express ratios in equivalent forms, compare and order ratios",
@@ -254,7 +254,7 @@
  },
  "B6.1.4.2.1": {
   "strand": "1. NUMBER",
-  "sub_strand": "Sub-strand B6.1.4",
+  "sub_strand": "4. Ratios and Proportion",
   "cs_code": "B6.1.4.2",
   "cs_desc": "Understand the concept of proportion and its relationship to ratios and rates. Use proportional reasoning and rates to solve real- world and mathematical problems.",
   "ind_desc": "Use models to explain proportion as a comparison between quantities with equal ratios",
@@ -265,7 +265,7 @@
  },
  "B6.1.4.2.3": {
   "strand": "1. NUMBER",
-  "sub_strand": "Sub-strand B6.1.4",
+  "sub_strand": "4. Ratios and Proportion",
   "cs_code": "B6.1.4.2",
   "cs_desc": "Understand the concept of proportion and its relationship to ratios and rates. Use proportional reasoning and rates to solve real- world and mathematical problems.",
   "ind_desc": "Use various strategies to solve proportional reasoning problems involving rates and scales",
@@ -276,7 +276,7 @@
  },
  "B6.2.1.1.4": {
   "strand": "2. ALGEBRA",
-  "sub_strand": "Sub-strand B6.2.1",
+  "sub_strand": "1. Pattern and Relationships",
   "cs_code": "B6.2.1.1",
   "cs_desc": "Determine the pattern rule to make predictions about subsequent elements.",
   "ind_desc": "Represent a given pattern visually to verify predictions",
@@ -287,7 +287,7 @@
  },
  "B6.2.1.1.7": {
   "strand": "2. ALGEBRA",
-  "sub_strand": "Sub-strand B6.2.1",
+  "sub_strand": "1. Pattern and Relationships",
   "cs_code": "B6.2.1.1",
   "cs_desc": "Determine the pattern rule to make predictions about subsequent elements.",
   "ind_desc": "Write a rule in words and in algebra to represent a given pattern",
@@ -298,7 +298,7 @@
  },
  "B6.2.1.1.8": {
   "strand": "2. ALGEBRA",
-  "sub_strand": "Sub-strand B6.2.1",
+  "sub_strand": "1. Pattern and Relationships",
   "cs_code": "B6.2.1.1",
   "cs_desc": "Determine the pattern rule to make predictions about subsequent elements.",
   "ind_desc": "Describe the relationship in a given table or chart, using a mathematical expression",
@@ -309,7 +309,7 @@
  },
  "B6.2.2.1.1": {
   "strand": "2. ALGEBRA",
-  "sub_strand": "Sub-strand B6.2.2",
+  "sub_strand": "2. Pattern and Relationships",
   "cs_code": "B6.2.2.1",
   "cs_desc": "Demonstrate understanding of algebraic expressions.",
   "ind_desc": "Demonstrate understanding of algebraic expressions as mathematical phrases that can contain letters which represent ordinary numbers and operators (like add, subtract, multiply, and divide)",
@@ -320,7 +320,7 @@
  },
  "B6.2.3.1.2": {
   "strand": "2. ALGEBRA",
-  "sub_strand": "Sub-strand B6.2.3",
+  "sub_strand": "3. Variables and Equations",
   "cs_code": "B6.2.3.1",
   "cs_desc": "Solve problems involving single-variable, one-step equations with whole number coefficients.",
   "ind_desc": "Identify the unknown in a problem; represent the problem with an equation; and solve the problem concretely, pictorially or symbolically",
@@ -331,7 +331,7 @@
  },
  "B6.2.3.1.3": {
   "strand": "2. ALGEBRA",
-  "sub_strand": "Sub-strand B6.2.3",
+  "sub_strand": "3. Variables and Equations",
   "cs_code": "B6.2.3.1",
   "cs_desc": "Solve problems involving single-variable, one-step equations with whole number coefficients.",
   "ind_desc": "Create a problem for a given equation",
@@ -342,7 +342,7 @@
  },
  "B6.3.1.1.1": {
   "strand": "3. GEOMETRY AND MEASUREMENT",
-  "sub_strand": "Sub-strand B6.3.1",
+  "sub_strand": "1. Variables and Equations",
   "cs_code": "B6.3.1.1",
   "cs_desc": "Demonstrate an understanding of prisms.",
   "ind_desc": "Identify examples of rectangular and triangular prisms in the classroom and the community",
@@ -353,7 +353,7 @@
  },
  "B6.3.1.1.2": {
   "strand": "3. GEOMETRY AND MEASUREMENT",
-  "sub_strand": "Sub-strand B6.3.1",
+  "sub_strand": "1. Variables and Equations",
   "cs_code": "B6.3.1.1",
   "cs_desc": "Demonstrate an understanding of prisms.",
   "ind_desc": "Construct rectangular and triangular prisms from their nets",
@@ -364,7 +364,7 @@
  },
  "B6.3.3.5.1": {
   "strand": "3. GEOMETRY AND MEASUREMENT",
-  "sub_strand": "Sub-strand B6.3.3",
+  "sub_strand": "3. Geometric Reasoning",
   "cs_code": "B6.3.3.5",
   "cs_desc": "Perform a single transformation (i.e. reflection translation) on a 2D shape.",
   "ind_desc": "Tell the position and motion of objects in space using the cardinal points north- east, north-west, south-east and south-west",
@@ -375,7 +375,7 @@
  },
  "B6.3.3.5.2": {
   "strand": "3. GEOMETRY AND MEASUREMENT",
-  "sub_strand": "Sub-strand B6.3.3",
+  "sub_strand": "3. Geometric Reasoning",
   "cs_code": "B6.3.3.5",
   "cs_desc": "Perform a single transformation (i.e. reflection translation) on a 2D shape.",
   "ind_desc": "Identify images of a single transformation (i.e. reflection and translation) of a 2D shapes in a plane",
@@ -386,7 +386,7 @@
  },
  "B6.4.1.1.1": {
   "strand": "4. DATA",
-  "sub_strand": "Sub-strand B6.4.1",
+  "sub_strand": "1. Data Collection, Organization, Presentation, Interpretation and Analysis",
   "cs_code": "B6.4.1.1",
   "cs_desc": "Create, label, and interpret line graphs to draw conclusions.",
   "ind_desc": "Draw a line graph by determining the common attributes (title, axes and intervals) and draw the graph for a given table of values",
@@ -397,7 +397,7 @@
  },
  "B6.4.1.1.2": {
   "strand": "4. DATA",
-  "sub_strand": "Sub-strand B6.4.1",
+  "sub_strand": "1. Data Collection, Organization, Presentation, Interpretation and Analysis",
   "cs_code": "B6.4.1.1",
   "cs_desc": "Create, label, and interpret line graphs to draw conclusions.",
   "ind_desc": "Determine whether a given set of data can be represented by a line graph (continuous data) or a series of points (discrete data) and explain why",
@@ -408,7 +408,7 @@
  },
  "B6.4.1.1.3": {
   "strand": "4. DATA",
-  "sub_strand": "Sub-strand B6.4.1",
+  "sub_strand": "1. Data Collection, Organization, Presentation, Interpretation and Analysis",
   "cs_code": "B6.4.1.1",
   "cs_desc": "Create, label, and interpret line graphs to draw conclusions.",
   "ind_desc": "Apply understanding of how to create a line graph by using a given table of values (or set of data) to draw a line graph and answer questions based on them to interpret and draw conclusions",
@@ -419,7 +419,7 @@
  },
  "B6.4.1.2.1": {
   "strand": "4. DATA",
-  "sub_strand": "Sub-strand B6.4.1",
+  "sub_strand": "1. Data Collection, Organization, Presentation, Interpretation and Analysis",
   "cs_code": "B6.4.1.2",
   "cs_desc": "Select, justify, and use appropriate methods of collecting data, including questionnaires, interviews, observations, experiments, databases, electronic media, etc.",
   "ind_desc": "Select a method for collecting data to answer a given question and justify the choice",
@@ -430,7 +430,7 @@
  },
  "B6.4.1.2.3": {
   "strand": "4. DATA",
-  "sub_strand": "Sub-strand B6.4.1",
+  "sub_strand": "1. Data Collection, Organization, Presentation, Interpretation and Analysis",
   "cs_code": "B6.4.1.2",
   "cs_desc": "Select, justify, and use appropriate methods of collecting data, including questionnaires, interviews, observations, experiments, databases, electronic media, etc.",
   "ind_desc": "Design and administer a questionnaire for collecting data to answer given question(s), record the data, analyse and graph the results to solve problems",
@@ -441,7 +441,7 @@
  },
  "B6.4.2.2.1": {
   "strand": "4. DATA",
-  "sub_strand": "Sub-strand B6.4.2",
+  "sub_strand": "2. Chance or Probability",
   "cs_code": "B6.4.2.2",
   "cs_desc": "Demonstrate an understanding of probability by identifying all possible outcomes of a probability experiment, determining the theoretical and experimental probability of outcomes in a probability experiment.",
   "ind_desc": "List the possible outcomes of a probability experiment, such as tossing a coin, rolling a die with a given number of sides, spinning a spinner with a given number of sectors and determine the theoretical probability of an outcome occurring for a given probability experiment",
@@ -452,7 +452,7 @@
  },
  "B6.4.2.2.2": {
   "strand": "4. DATA",
-  "sub_strand": "Sub-strand B6.4.2",
+  "sub_strand": "2. Chance or Probability",
   "cs_code": "B6.4.2.2",
   "cs_desc": "Demonstrate an understanding of probability by identifying all possible outcomes of a probability experiment, determining the theoretical and experimental probability of outcomes in a probability experiment.",
   "ind_desc": "Predict the probability of a given outcome occurring for a given probability experiment by using theoretical probability",

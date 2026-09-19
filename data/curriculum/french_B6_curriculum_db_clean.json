@@ -1,7 +1,7 @@
 {
  "B6.1.1.1.1": {
   "strand": "1. Définir les aspects de l’identité",
-  "sub_strand": "Sub-strand B6.1.1",
+  "sub_strand": "1. Saluer et prendre conge",
   "cs_code": "B6.1.1.1",
   "cs_desc": "Compréhension Orale",
   "ind_desc": "Écouter/Regarder et comprendre un document audio-visuel dans lequel deux personnes se saluent Exemples : Salut ! Bonjour ! Bonsoir !",
@@ -12,7 +12,7 @@
  },
  "B6.1.1.2.1": {
   "strand": "1. Définir les aspects de l’identité",
-  "sub_strand": "Sub-strand B6.1.1",
+  "sub_strand": "1. Saluer et prendre conge",
   "cs_code": "B6.1.1.2",
   "cs_desc": "Production Orale",
   "ind_desc": "Saluer et répondre oralement aux salutations et respecter le code et les valeurs sociales Exemples : - Salut, Joe ! Salut cher ami ! Comment ça va ? Ça va bien et toi. Je vais bien, merci",
@@ -23,7 +23,7 @@
  },
  "B6.1.1.3.1": {
   "strand": "1. Définir les aspects de l’identité",
-  "sub_strand": "Sub-strand B6.1.1",
+  "sub_strand": "1. Saluer et prendre conge",
   "cs_code": "B6.1.1.3",
   "cs_desc": "Compréhension Écrite",
   "ind_desc": "Lire et comprendre un texte, regarder une image qui décrit une scène, des personnes qui se saluent",
@@ -34,7 +34,7 @@
  },
  "B6.1.1.4.1": {
   "strand": "1. Définir les aspects de l’identité",
-  "sub_strand": "Sub-strand B6.1.1",
+  "sub_strand": "1. Saluer et prendre conge",
   "cs_code": "B6.1.1.4",
   "cs_desc": "Production Écrite",
   "ind_desc": "Écrire une note pour saluer quelqu’un -Écrire une phrase de 6 mots Ex. Je vais très bien, et toi ?",
@@ -45,7 +45,7 @@
  },
  "B6.1.2.1.1": {
   "strand": "1. Définir les aspects de l’identité",
-  "sub_strand": "Sub-strand B6.1.2",
+  "sub_strand": "2. Se présenter",
   "cs_code": "B6.1.2.1",
   "cs_desc": "Compréhension Orale",
   "ind_desc": "Écouter et comprendre le dialogue où des personnes qui se présentent. - Le professeur se présente à la classe",
@@ -56,7 +56,7 @@
  },
  "B6.1.2.2.1": {
   "strand": "1. Définir les aspects de l’identité",
-  "sub_strand": "Sub-strand B6.1.2",
+  "sub_strand": "2. Se présenter",
   "cs_code": "B6.1.2.2",
   "cs_desc": "Production Orale",
   "ind_desc": "Demander et donner sa date de naissance, son lieu de naissance, son adresse, son numéro de téléphone",
@@ -67,7 +67,7 @@
  },
  "B6.1.2.3.1": {
   "strand": "1. Définir les aspects de l’identité",
-  "sub_strand": "Sub-strand B6.1.2",
+  "sub_strand": "2. Se présenter",
   "cs_code": "B6.1.2.3",
   "cs_desc": "Compréhension Écrite",
   "ind_desc": "Lire et comprendre un texte où des personnes se présentent",
@@ -78,7 +78,7 @@
  },
  "B6.1.2.4.1": {
   "strand": "1. Définir les aspects de l’identité",
-  "sub_strand": "Sub-strand B6.1.2",
+  "sub_strand": "2. Se présenter",
   "cs_code": "B6.1.2.4",
   "cs_desc": "Production Écrite",
   "ind_desc": "Écrire une carte postale à un/une correspondant(e) pour se présenter; donner sa date de naissance, son lieu de naissance, son numéro de téléphone",
@@ -89,7 +89,7 @@
  },
  "B6.1.2.5.3": {
   "strand": "1. Définir les aspects de l’identité",
-  "sub_strand": "Sub-strand B6.1.2",
+  "sub_strand": "2. Se présenter",
   "cs_code": "B6.1.2.5",
   "cs_desc": "",
   "ind_desc": "Remplir une fiche d’identité Ex. A la douane : une fiche d’immigration ou un passeport vide à remplir",
@@ -100,7 +100,7 @@
  },
  "B6.1.3.1.1": {
   "strand": "1. Définir les aspects de l’identité",
-  "sub_strand": "Sub-strand B6.1.3",
+  "sub_strand": "3. présenter quelqu’un",
   "cs_code": "B6.1.3.1",
   "cs_desc": "Compréhension Orale",
   "ind_desc": "Écouter et comprendre un texte dans lequel on présente quelqu’un Exemple : Posez des questions sur le texte - Qui est-ce ? - Quel âge a-t-il ? - D’où vient-il ? - Etc. Le professeur présente quelques apprenants à la classe",
@@ -111,7 +111,7 @@
  },
  "B6.1.3.2.1": {
   "strand": "1. Définir les aspects de l’identité",
-  "sub_strand": "Sub-strand B6.1.3",
+  "sub_strand": "3. présenter quelqu’un",
   "cs_code": "B6.1.3.2",
   "cs_desc": "Production Orale",
   "ind_desc": "Présenter quelqu’un en donnant sa date de naissance, son lieu de naissance, son adresse, son numéro de téléphone Ex. Kwame Atta est né le 6 juin 1952 à Attakrom dans la région d’Ashanti. Il habite Dansoman, un quartier d’Accra. Voici on numéro de téléphone : 042 2534025.",
@@ -122,7 +122,7 @@
  },
  "B6.1.3.3.1": {
   "strand": "1. Définir les aspects de l’identité",
-  "sub_strand": "Sub-strand B6.1.3",
+  "sub_strand": "3. présenter quelqu’un",
   "cs_code": "B6.1.3.3",
   "cs_desc": "Compréhension Écrite",
   "ind_desc": "Lire et comprendre le portrait/biographie d’une personne historique",
@@ -133,7 +133,7 @@
  },
  "B6.1.3.4.1": {
   "strand": "1. Définir les aspects de l’identité",
-  "sub_strand": "Sub-strand B6.1.3",
+  "sub_strand": "3. présenter quelqu’un",
   "cs_code": "B6.1.3.4",
   "cs_desc": "Production Écrite",
   "ind_desc": "Écrire une carte postale à un/une correspondant(e) pour présenter quelqu’un en donnant sa date de naissance, son lieu de naissance, son numéro de téléphone",
@@ -144,7 +144,7 @@
  },
  "B6.1.4.1.1": {
   "strand": "1. Définir les aspects de l’identité",
-  "sub_strand": "Sub-strand B6.1.4",
+  "sub_strand": "4. Décrirequelqu’un",
   "cs_code": "B6.1.4.1",
   "cs_desc": "Compréhension Orale",
   "ind_desc": "Écouter/Regarder et comprendre un document audio-visuel sur les caractéristiques physiques, l’habillement et les comportements d’une personne Ref. YouTube/Documents aux CREF",
@@ -155,7 +155,7 @@
  },
  "B6.1.4.2.1": {
   "strand": "1. Définir les aspects de l’identité",
-  "sub_strand": "Sub-strand B6.1.4",
+  "sub_strand": "4. Décrirequelqu’un",
   "cs_code": "B6.1.4.2",
   "cs_desc": "Production Orale",
   "ind_desc": "Poser et répondre à des questions sur les caractéristiques physiques, l’habillement et les comportements d’une personne Ex. Jeu de rôles Comment est-elle ? - Elle est petite, intelligente, belle et gentille. - Qu’est-ce qu’elle porte ? - Elle porte une jupe.",
@@ -166,7 +166,7 @@
  },
  "B6.1.4.2.2": {
   "strand": "1. Définir les aspects de l’identité",
-  "sub_strand": "Sub-strand B6.1.4",
+  "sub_strand": "4. Décrirequelqu’un",
   "cs_code": "B6.1.4.2",
   "cs_desc": "Production Orale",
   "ind_desc": "Réciter un poème/chanter une chanson sur les caractéristiques physiques, l’habillement et les comportements d’une personne Ref. YouTube/Documents aux CREF",
@@ -177,7 +177,7 @@
  },
  "B6.1.4.3.1": {
   "strand": "1. Définir les aspects de l’identité",
-  "sub_strand": "Sub-strand B6.1.4",
+  "sub_strand": "4. Décrirequelqu’un",
   "cs_code": "B6.1.4.3",
   "cs_desc": "Compréhension Écrite",
   "ind_desc": "Lire et comprendre des textes simples sur les caractéristiques physiques, l’habillement et les comportements d’une personne Ex. : Méthode du primaire",
@@ -188,7 +188,7 @@
  },
  "B6.1.4.4.1": {
   "strand": "1. Définir les aspects de l’identité",
-  "sub_strand": "Sub-strand B6.1.4",
+  "sub_strand": "4. Décrirequelqu’un",
   "cs_code": "B6.1.4.4",
   "cs_desc": "Production Écrite",
   "ind_desc": "Décrire quelqu’un en indiquant ses caractéristiques physiques, l’habillement et les comportements Ex. : Écrire une carte postale pour décrire quelqu’un en indiquant ses caractéristiques physiques, son habillement et ses comportements : gros yeux ; cheveux noirs ; grande bouche ; gros ventre, etc.",
@@ -199,7 +199,7 @@
  },
  "B6.1.5.1.1": {
   "strand": "1. Définir les aspects de l’identité",
-  "sub_strand": "Sub-strand B6.1.5",
+  "sub_strand": "5. Décrire la famille et les liens familiaux",
   "cs_code": "B6.1.5.1",
   "cs_desc": "Compréhension Orale",
   "ind_desc": "Écouter/Regarder et comprendre un document audio-visuel qui décrit une famille élargie",
@@ -210,7 +210,7 @@
  },
  "B6.1.5.2.1": {
   "strand": "1. Définir les aspects de l’identité",
-  "sub_strand": "Sub-strand B6.1.5",
+  "sub_strand": "5. Décrire la famille et les liens familiaux",
   "cs_code": "B6.1.5.2",
   "cs_desc": "Production Orale",
   "ind_desc": "Poser des questions et répondre à des questions sur les liens de parenté d’une famille élargie en images ou photos. : Ex: Qui est le jeune garçon à gauche ? Ans : C’est Kofi, mon cousin. C’est le fils de ma tante. La fille à droite, c’est qui ? Ans : C’est Akos. C’est la sœur de mon père. C’est ma tante",
@@ -221,7 +221,7 @@
  },
  "B6.1.5.2.2": {
   "strand": "1. Définir les aspects de l’identité",
-  "sub_strand": "Sub-strand B6.1.5",
+  "sub_strand": "5. Décrire la famille et les liens familiaux",
   "cs_code": "B6.1.5.2",
   "cs_desc": "Production Orale",
   "ind_desc": "Décrire les membres de sa famille ; donner leur âge, profession, etc. : les grands-parents, le grand-père et la grand-mère la tante et l’oncle la cousine et le cousin la nièce et le",
@@ -232,7 +232,7 @@
  },
  "B6.1.5.3.1": {
   "strand": "1. Définir les aspects de l’identité",
-  "sub_strand": "Sub-strand B6.1.5",
+  "sub_strand": "5. Décrire la famille et les liens familiaux",
   "cs_code": "B6.1.5.3",
   "cs_desc": "Compréhension Écrite",
   "ind_desc": "Lire et comprendre un texte simple sur une famille illustre",
@@ -243,7 +243,7 @@
  },
  "B6.1.5.4.1": {
   "strand": "1. Définir les aspects de l’identité",
-  "sub_strand": "Sub-strand B6.1.5",
+  "sub_strand": "5. Décrire la famille et les liens familiaux",
   "cs_code": "B6.1.5.4",
   "cs_desc": "Production Écrite",
   "ind_desc": "Décrire les membres de sa famille élargie -Précisez les liens de parenté, les professions et les goûts et préférences.",
@@ -254,7 +254,7 @@
  },
  "B6.2.1.1.1": {
   "strand": "2. Parler de son environnement",
-  "sub_strand": "Sub-strand B6.2.1",
+  "sub_strand": "1. Parler de sa maison",
   "cs_code": "B6.2.1.1",
   "cs_desc": "Compréhension Orale",
   "ind_desc": "Écouter/Regarder et comprendre un document audio-visuel sur les pièces, les objets de la maison",
@@ -265,7 +265,7 @@
  },
  "B6.2.1.2.1": {
   "strand": "2. Parler de son environnement",
-  "sub_strand": "Sub-strand B6.2.1",
+  "sub_strand": "1. Parler de sa maison",
   "cs_code": "B6.2.1.2",
   "cs_desc": "Production Orale",
   "ind_desc": "Poser et répondre à des questions sur les objets de la maison",
@@ -276,7 +276,7 @@
  },
  "B6.2.1.2.2": {
   "strand": "2. Parler de son environnement",
-  "sub_strand": "Sub-strand B6.2.1",
+  "sub_strand": "1. Parler de sa maison",
   "cs_code": "B6.2.1.2",
   "cs_desc": "Production Orale",
   "ind_desc": "Décrire les pièces de sa maison ; : les chambres à coucher, le salon (la salle de séjour), la cuisine, la salle à manger, la salle de bains, etc",
@@ -287,7 +287,7 @@
  },
  "B6.2.1.2.3": {
   "strand": "2. Parler de son environnement",
-  "sub_strand": "Sub-strand B6.2.1",
+  "sub_strand": "1. Parler de sa maison",
   "cs_code": "B6.2.1.2",
   "cs_desc": "Production Orale",
   "ind_desc": "Décrire les différents objets dans sa maison Ex : A partir d’un document audio-visuel, identifier les différents objets et pièces d’une maison et les caractériser avec des adjectifs qualificatifs; - beau (belle) spacieux (spacieuse), joli(e), ensoleillé(e), blanc (blanche), rouge, etc. - demander aux élèves de décrire en 3 phrases simples 3 pièces",
@@ -298,7 +298,7 @@
  },
  "B6.2.1.3.1": {
   "strand": "2. Parler de son environnement",
-  "sub_strand": "Sub-strand B6.2.1",
+  "sub_strand": "1. Parler de sa maison",
   "cs_code": "B6.2.1.3",
   "cs_desc": "Compréhension Écrite",
   "ind_desc": "Lire et comprendre un texte, une vidéo, une publicité, surles objets, les pièces, les animaux, les fruits, etc",
@@ -309,7 +309,7 @@
  },
  "B6.2.1.4.1": {
   "strand": "2. Parler de son environnement",
-  "sub_strand": "Sub-strand B6.2.1",
+  "sub_strand": "1. Parler de sa maison",
   "cs_code": "B6.2.1.4",
   "cs_desc": "Production Écrite",
   "ind_desc": "A l’aide d’un dessin animé ou d’un film, écrire les noms des objets, pièces, animaux ou fruits identifiés.",
@@ -320,7 +320,7 @@
  },
  "B6.2.1.4.2": {
   "strand": "2. Parler de son environnement",
-  "sub_strand": "Sub-strand B6.2.1",
+  "sub_strand": "1. Parler de sa maison",
   "cs_code": "B6.2.1.4",
   "cs_desc": "Production Écrite",
   "ind_desc": "Caractériser les différents objets, pièces, animaux de la maison. ex. : Utilisez des images ou des photos réelles de sa maison.",
@@ -331,7 +331,7 @@
  },
  "B6.2.2.1.1": {
   "strand": "2. Parler de son environnement",
-  "sub_strand": "Sub-strand B6.2.2",
+  "sub_strand": "2. Parler de son école",
   "cs_code": "B6.2.2.1",
   "cs_desc": "Compréhension Orale",
   "ind_desc": "Écouter/Regarder et comprendre un document audio-visuel sur les activités de l’école. Exemple : Pendant la récréation, les activités sportives, les cours, etc. Ref. YouTube/Documents aux CREF",
@@ -342,7 +342,7 @@
  },
  "B6.2.2.2.1": {
   "strand": "2. Parler de son environnement",
-  "sub_strand": "Sub-strand B6.2.2",
+  "sub_strand": "2. Parler de son école",
   "cs_code": "B6.2.2.2",
   "cs_desc": "Production Orale",
   "ind_desc": "Discuter des différentes activités de l’école Exemple : Téléphoner à un(e) correspondant(e)/ un(e) ami(e) pour lui demander les activités de son école. -Qu’est-ce que tu fais à l’école ? - Je joue avec les amis ; Je lis mon cahier ; je fais des devoirs ; je bala",
@@ -353,7 +353,7 @@
  },
  "B6.2.2.2.2": {
   "strand": "2. Parler de son environnement",
-  "sub_strand": "Sub-strand B6.2.2",
+  "sub_strand": "2. Parler de son école",
   "cs_code": "B6.2.2.2",
   "cs_desc": "Production Orale",
   "ind_desc": "Raconter ses activités journalières de l’école. Exemple : Le matin, nous arrivons à l’école à 7 h. Nous balayons les salles et la cour. etc. L’après-midi... Le soir...",
@@ -364,7 +364,7 @@
  },
  "B6.2.2.2.3": {
   "strand": "2. Parler de son environnement",
-  "sub_strand": "Sub-strand B6.2.2",
+  "sub_strand": "2. Parler de son école",
   "cs_code": "B6.2.2.2",
   "cs_desc": "Production Orale",
   "ind_desc": "Dire ce que l’on fait avec les objets de la classe. Exemple : En classe, J’écris dans mon cahier avec un stylo. Je lis mon livre de français et je fais des exercices. etc",
@@ -375,7 +375,7 @@
  },
  "B6.2.2.3.1": {
   "strand": "2. Parler de son environnement",
-  "sub_strand": "Sub-strand B6.2.2",
+  "sub_strand": "2. Parler de son école",
   "cs_code": "B6.2.2.3",
   "cs_desc": "Compréhension Écrite",
   "ind_desc": "Lire et comprendre un texte, un dépliant, sur l’école et ses activités. Exemple :Ref. Google images/Manuel",
@@ -386,7 +386,7 @@
  },
  "B6.2.2.4.1": {
   "strand": "2. Parler de son environnement",
-  "sub_strand": "Sub-strand B6.2.2",
+  "sub_strand": "2. Parler de son école",
   "cs_code": "B6.2.2.4",
   "cs_desc": "Production Écrite",
   "ind_desc": "Créer des slogans, des publicités, des dépliants l’école. Exemple : BONJOUR ! J’AIME L’ÉCOLE! ET TOI ?",
@@ -397,7 +397,7 @@
  },
  "B6.3.1.1.1": {
   "strand": "3. Exprimer ses goûts et ses préférences",
-  "sub_strand": "Sub-strand B6.3.1",
+  "sub_strand": "1. Dire ce que l'on aime",
   "cs_code": "B6.3.1.1",
   "cs_desc": "Compréhension Orale",
   "ind_desc": "Écouter/Regarder et comprendre un document audio-visuel sur les comportements qu’on aime chez les gens Exemple : Une vidéo sur les habitudes et les comportements",
@@ -408,7 +408,7 @@
  },
  "B6.3.1.2.1": {
   "strand": "3. Exprimer ses goûts et ses préférences",
-  "sub_strand": "Sub-strand B6.3.1",
+  "sub_strand": "1. Dire ce que l'on aime",
   "cs_code": "B6.3.1.2",
   "cs_desc": "Production Orale",
   "ind_desc": "Poser et répondre à des questions sur les mauvais comportements des gens Exemple 1 : - Comment est ton voisin? - Il a un mauvais comportement. - c’est vrai ? - Oui,, il est méchant. Il n’est pas du tout sympa. - Et sa femme ? - Elle aussi, elle a un mauvais comportement. Elles jettent des ordures partout. - Comment sont les gens de votre village ?",
@@ -419,7 +419,7 @@
  },
  "B6.3.1.2.2": {
   "strand": "3. Exprimer ses goûts et ses préférences",
-  "sub_strand": "Sub-strand B6.3.1",
+  "sub_strand": "1. Dire ce que l'on aime",
   "cs_code": "B6.3.1.2",
   "cs_desc": "Production Orale",
   "ind_desc": "Dire quels comportements l’on aime chez quelqu’un Deux apprenants se posent des questions sur les caractères. - Le/la professeur(e) est strict(e). - Oui et il est discipliné - Non, il/elle est gentil(le).",
@@ -430,7 +430,7 @@
  },
  "B6.3.1.3.1": {
   "strand": "3. Exprimer ses goûts et ses préférences",
-  "sub_strand": "Sub-strand B6.3.1",
+  "sub_strand": "1. Dire ce que l'on aime",
   "cs_code": "B6.3.1.3",
   "cs_desc": "Compréhension Écrite",
   "ind_desc": "Lire et comprendre un texte en français sur les bons comportements des gens. Exemple :Suma en promenade, etc",
@@ -441,7 +441,7 @@
  },
  "B6.3.1.4.1": {
   "strand": "3. Exprimer ses goûts et ses préférences",
-  "sub_strand": "Sub-strand B6.3.1",
+  "sub_strand": "1. Dire ce que l'on aime",
   "cs_code": "B6.3.1.4",
   "cs_desc": "Production Écrite",
   "ind_desc": "Écrire au moins deux phrases sur ce que l’on aime faire et ce que l’on n’aime pas faire.",
@@ -452,7 +452,7 @@
  },
  "B6.4.1.1.1": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.1",
+  "sub_strand": "1. Compter et faire des calculs simples",
   "cs_code": "B6.4.1.1",
   "cs_desc": "Compréhension Orale",
   "ind_desc": "Écouter/Regarder et comprendre un document audiovisuelsur les nombres Exemples : - Des chansons et des poèmes(Youtude) sur les nombres (Chantez plus fort) - Quels nombres entendez-vous ? Combien de fois vous entendez ce nombre ? Questions",
@@ -463,7 +463,7 @@
  },
  "B6.4.1.2.1": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.1",
+  "sub_strand": "1. Compter et faire des calculs simples",
   "cs_code": "B6.4.1.2",
   "cs_desc": "Production Orale",
   "ind_desc": "Faire oralement des calculs mentaux simples",
@@ -474,7 +474,7 @@
  },
  "B6.4.1.2.2": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.1",
+  "sub_strand": "1. Compter et faire des calculs simples",
   "cs_code": "B6.4.1.2",
   "cs_desc": "Production Orale",
   "ind_desc": "Jouer aux jeux avec des chiffres Exemple : - Jeu de loto",
@@ -485,7 +485,7 @@
  },
  "B6.4.1.2.3": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.1",
+  "sub_strand": "1. Compter et faire des calculs simples",
   "cs_code": "B6.4.1.2",
   "cs_desc": "Production Orale",
   "ind_desc": "Faire un inventaire Exemples : Comptez e notez le nombre des articles scolaires/des produits ménagers/des articles dans une boutique. - Par groupes, les élèves établit des listes des objets dans la classe/ la maison/un supermarché/etc. - Qu’est-ce qu’il y a dans la salle de classe/ton cartable/etc. ? - Comptez et notez le nombredes meubles dans le",
@@ -496,7 +496,7 @@
  },
  "B6.4.1.3.1": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.1",
+  "sub_strand": "1. Compter et faire des calculs simples",
   "cs_code": "B6.4.1.3",
   "cs_desc": "Compréhension Écrite",
   "ind_desc": "Lire et comprendre un inventaire Exemples : - Des listes d’objets avec le nombre de chaque objet. - Il y a combien de crayons en tout dans la boîte ? - Il y a combien de chaises au total dans la classe? Quel est le montant total des articlessur la liste (faire l’addition en GHS) ? - 13 cedis + 12 cedis = 25 cedis 4 cahiers x 5 cahiers = 20 cahiers",
@@ -507,7 +507,7 @@
  },
  "B6.4.1.3.2": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.1",
+  "sub_strand": "1. Compter et faire des calculs simples",
   "cs_code": "B6.4.1.3",
   "cs_desc": "Compréhension Écrite",
   "ind_desc": "Lire et comprendredes problèmes arithmétiques",
@@ -518,7 +518,7 @@
  },
  "B6.4.1.4.1": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.1",
+  "sub_strand": "1. Compter et faire des calculs simples",
   "cs_code": "B6.4.1.4",
   "cs_desc": "Production Écrite",
   "ind_desc": "Faire des calculs simples à l’écrit avec des chiffres en lettres",
@@ -529,7 +529,7 @@
  },
  "B6.4.1.4.2": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.1",
+  "sub_strand": "1. Compter et faire des calculs simples",
   "cs_code": "B6.4.1.4",
   "cs_desc": "Production Écrite",
   "ind_desc": "Ecrire en lettres les chiffres Exemple : 6 = six 22 + 18 = quarante 20",
@@ -540,7 +540,7 @@
  },
  "B6.4.2.1.1": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.2",
+  "sub_strand": "2. Demander et donner l’heure",
   "cs_code": "B6.4.2.1",
   "cs_desc": "Compréhension Orale",
   "ind_desc": "Écouter/Regarder et comprendre un document audio-visuel sur les horaires Ex : restaurant, cinéma, programmes de télévision Exemples : - Documents audio des annonces des horaires de départ et arrivée des avions à l’aéroport - Les horaires de la SNCF - les horaires des repas au restaurant, les heures des films au cinéma, les horaires des programmes",
@@ -551,7 +551,7 @@
  },
  "B6.4.2.2.1": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.2",
+  "sub_strand": "2. Demander et donner l’heure",
   "cs_code": "B6.4.2.2",
   "cs_desc": "Production Orale",
   "ind_desc": "Poser et répondre à des questions sur ce que l’on fait à certaines heures de la journée. Exemples : Jeu de rôle",
@@ -562,7 +562,7 @@
  },
  "B6.4.2.2.2": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.2",
+  "sub_strand": "2. Demander et donner l’heure",
   "cs_code": "B6.4.2.2",
   "cs_desc": "Production Orale",
   "ind_desc": "Raconter ce que l’on fait à certaines heures de la journée. Exemples : - Kwame, qu’est-ce que tu fais les samedis ? - Moi ? Eh bien. D’habitude je me réveille à 6 h parce que je ne vais pas au cours. Je fais le ménage : je balaie les chambres et la cour. A 8 h, je prends mon petit déjeuner. Après, je fais la lessive. A 11 h, je vais au marché avec",
@@ -573,7 +573,7 @@
  },
  "B6.4.2.3.1": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.2",
+  "sub_strand": "2. Demander et donner l’heure",
   "cs_code": "B6.4.2.3",
   "cs_desc": "Compréhension Écrite",
   "ind_desc": "Lire et comprendreles heures d’activités sur un programme scolaire",
@@ -584,7 +584,7 @@
  },
  "B6.4.2.3.2": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.2",
+  "sub_strand": "2. Demander et donner l’heure",
   "cs_code": "B6.4.2.3",
   "cs_desc": "Compréhension Écrite",
   "ind_desc": "Lire et comprendreles heures les programmes d’événements",
@@ -595,7 +595,7 @@
  },
  "B6.4.2.4.1": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.2",
+  "sub_strand": "2. Demander et donner l’heure",
   "cs_code": "B6.4.2.4",
   "cs_desc": "Production Écrite",
   "ind_desc": "Ecrire son agenda pour la journée ou la semaine indiquant les heures des activités Exemple : - Les heures de rendez-vous avec le directeur/le médecin de l’école, etc. Les heures des repas etc",
@@ -606,7 +606,7 @@
  },
  "B6.4.2.4.2": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.2",
+  "sub_strand": "2. Demander et donner l’heure",
   "cs_code": "B6.4.2.4",
   "cs_desc": "Production Écrite",
   "ind_desc": "Ecrire une affiche/une note de service avec les heures de rendez-vous Exemple : Un rendez-vous avec le directeur/le médecin de l’école. - À 9 heures, c’est l’accueil des invités.",
@@ -617,7 +617,7 @@
  },
  "B6.4.3.1.1": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.3",
+  "sub_strand": "3. Parler des jours de la semaine",
   "cs_code": "B6.4.3.1",
   "cs_desc": "Compréhension Orale",
   "ind_desc": "Écouter/Regarder et comprendre un document audio/audio-visuel sur les jours de la semaine",
@@ -628,7 +628,7 @@
  },
  "B6.4.3.2.1": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.3",
+  "sub_strand": "3. Parler des jours de la semaine",
   "cs_code": "B6.4.3.2",
   "cs_desc": "Production Orale",
   "ind_desc": "Poser et répondre à des questions sur les activités de la semaine culturelle de l’école",
@@ -639,7 +639,7 @@
  },
  "B6.4.3.2.2": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.3",
+  "sub_strand": "3. Parler des jours de la semaine",
   "cs_code": "B6.4.3.2",
   "cs_desc": "Production Orale",
   "ind_desc": "Dire ce que quelqu’un fait chaque jour de la semaine Lundi, le",
@@ -650,7 +650,7 @@
  },
  "B6.4.3.3.1": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.3",
+  "sub_strand": "3. Parler des jours de la semaine",
   "cs_code": "B6.4.3.3",
   "cs_desc": "Compréhension Écrite",
   "ind_desc": "Lire et comprendre un texte simple sur les activités quotidiennes de quelqu’un. Exemple : un(e) commerçant(e), enseignant(e), infirmière, chauffeur, policier(e), comptable, etc",
@@ -661,7 +661,7 @@
  },
  "B6.4.3.4.1": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.3",
+  "sub_strand": "3. Parler des jours de la semaine",
   "cs_code": "B6.4.3.4",
   "cs_desc": "Production Écrite",
   "ind_desc": "Écrire une carte postale à un(e) correspondant(e) pour lui décrire ses activités à l’école durant la semaine",
@@ -672,7 +672,7 @@
  },
  "B6.4.4.2.1": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.4",
+  "sub_strand": "4. Situer les mois et les saisons dans le temps",
   "cs_code": "B6.4.4.2",
   "cs_desc": "Production Orale",
   "ind_desc": "Poser et répondre à des questions sur les mois des saisons Exemple : : l’hiver ; le printemps ; l’automne ; l’été Exemple : - Dans quels mois on a l’hiver ? L’hiver est en décembre, janvier et février, et mars",
@@ -683,7 +683,7 @@
  },
  "B6.4.4.2.2": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.4",
+  "sub_strand": "4. Situer les mois et les saisons dans le temps",
   "cs_code": "B6.4.4.2",
   "cs_desc": "Production Orale",
   "ind_desc": "Dire en quels mois se passent certains évènements Exemple : la fête des mères, la fêtedes pères, Saint Valentin, la fête de l’indépendance, etc",
@@ -694,7 +694,7 @@
  },
  "B6.4.4.3.1": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.4",
+  "sub_strand": "4. Situer les mois et les saisons dans le temps",
   "cs_code": "B6.4.4.3",
   "cs_desc": "Compréhension Écrite",
   "ind_desc": "Lire et comprendre un texte simple sur les saisons et les mois où des fêtes importantes sont célébrées au Ghana",
@@ -705,7 +705,7 @@
  },
  "B6.4.4.4.1": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.4",
+  "sub_strand": "4. Situer les mois et les saisons dans le temps",
   "cs_code": "B6.4.4.4",
   "cs_desc": "Production Écrite",
   "ind_desc": "Écrire une carte postale à un(e) correspondant(e) pour lui indiquer des dates d’évènements importants dans votre pays",
@@ -716,7 +716,7 @@
  },
  "B6.4.5.1.1": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.5",
+  "sub_strand": "5. Entreren contact par telephone",
   "cs_code": "B6.4.5.1",
   "cs_desc": "Compréhension Orale",
   "ind_desc": "Écouter/Regarder et comprendre un clip sur deux personnes qui communiquent par téléphone",
@@ -727,7 +727,7 @@
  },
  "B6.4.5.2.1": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.5",
+  "sub_strand": "5. Entreren contact par telephone",
   "cs_code": "B6.4.5.2",
   "cs_desc": "Production Orale",
   "ind_desc": "Simuler une conversation téléphonique entre deux interlocuteurs. Ref. YouTube/Documents aux CREF",
@@ -738,7 +738,7 @@
  },
  "B6.4.5.2.2": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.5",
+  "sub_strand": "5. Entreren contact par telephone",
   "cs_code": "B6.4.5.2",
   "cs_desc": "Production Orale",
   "ind_desc": "Présenter quelqu’un au téléphone Exemple : Présenter son ami e) à ses parents, un(e) ami(e), etc. par téléphone",
@@ -749,7 +749,7 @@
  },
  "B6.4.5.3.1": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.5",
+  "sub_strand": "5. Entreren contact par telephone",
   "cs_code": "B6.4.5.3",
   "cs_desc": "Compréhension Écrite",
   "ind_desc": "Lire et comprendre de petites conversations téléphoniques entre deux personnes.",
@@ -760,7 +760,7 @@
  },
  "B6.4.5.4.1": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.5",
+  "sub_strand": "5. Entreren contact par telephone",
   "cs_code": "B6.4.5.4",
   "cs_desc": "Production Écrite",
   "ind_desc": "Échanger des textos ou des petits messages écrits par téléphone",
@@ -771,7 +771,7 @@
  },
  "B6.4.6.1.1": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.6",
+  "sub_strand": "6. Inviter quelqu’un et accepter une invitation",
   "cs_code": "B6.4.6.1",
   "cs_desc": "Compréhension Orale",
   "ind_desc": "Écouter/Regarder un document audiovisuel sur l’invitation.",
@@ -782,7 +782,7 @@
  },
  "B6.4.6.2.1": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.6",
+  "sub_strand": "6. Inviter quelqu’un et accepter une invitation",
   "cs_code": "B6.4.6.2",
   "cs_desc": "Production Orale",
   "ind_desc": "Inviter quelqu’un au téléphone à manger ou à une fête",
@@ -793,7 +793,7 @@
  },
  "B6.4.6.2.2": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.6",
+  "sub_strand": "6. Inviter quelqu’un et accepter une invitation",
   "cs_code": "B6.4.6.2",
   "cs_desc": "Production Orale",
   "ind_desc": "Dire pourquoi on accepte ou on refuse une invitation",
@@ -804,7 +804,7 @@
  },
  "B6.4.6.3.1": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.6",
+  "sub_strand": "6. Inviter quelqu’un et accepter une invitation",
   "cs_code": "B6.4.6.3",
   "cs_desc": "Compréhension Écrite",
   "ind_desc": "Lire et comprendre une lettre/une carte d’invitation",
@@ -815,7 +815,7 @@
  },
  "B6.4.6.4.1": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.6",
+  "sub_strand": "6. Inviter quelqu’un et accepter une invitation",
   "cs_code": "B6.4.6.4",
   "cs_desc": "Production Écrite",
   "ind_desc": "Écrire une carte postale, un poster ou une carte d’invitation pour inviter des personnes Exemple : Une invitation à votre prochaine anniversaire/au baptême de votre frère ou sœur/à la fête de votre école.",
@@ -826,7 +826,7 @@
  },
  "B6.4.7.1.1": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.7",
+  "sub_strand": "7. Identifier les professions et les métiers",
   "cs_code": "B6.4.7.1",
   "cs_desc": "Compréhension Orale",
   "ind_desc": "Écouter/Regarder et comprendre un document audiovisuel sur les professions et les métiers.",
@@ -837,7 +837,7 @@
  },
  "B6.4.7.2.1": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.7",
+  "sub_strand": "7. Identifier les professions et les métiers",
   "cs_code": "B6.4.7.2",
   "cs_desc": "Production Orale",
   "ind_desc": "Poser et répondre à des questions sur ce que font les membres d’une famille. Exemple : Quel est ton métier préféré ? J’aime être acteur. Quelle profession aimes-tu beaucoup ? J’aime être avocat",
@@ -848,7 +848,7 @@
  },
  "B6.4.7.2.2": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.7",
+  "sub_strand": "7. Identifier les professions et les métiers",
   "cs_code": "B6.4.7.2",
   "cs_desc": "Production Orale",
   "ind_desc": "Dire la profession ou le métier que l’on veut exercer dans l’avenir Exemple : Je veux être jardinier. J’aimerais être banquier.",
@@ -859,7 +859,7 @@
  },
  "B6.4.7.3.1": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.7",
+  "sub_strand": "7. Identifier les professions et les métiers",
   "cs_code": "B6.4.7.3",
   "cs_desc": "Compréhension Écrite",
   "ind_desc": "Identifier et associer les noms de professions et métiers à leurs dessins",
@@ -870,7 +870,7 @@
  },
  "B6.4.7.4.1": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.7",
+  "sub_strand": "7. Identifier les professions et les métiers",
   "cs_code": "B6.4.7.4",
   "cs_desc": "Production Écrite",
   "ind_desc": "Ecrire les professions ou métiers des membres de sa famille.",
@@ -881,7 +881,7 @@
  },
  "B6.4.8.1.1": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.8",
+  "sub_strand": "8. Demander et expliquer la position des personnes ou des objets les uns par rapport aux autres",
   "cs_code": "B6.4.8.1",
   "cs_desc": "Compréhension Orale",
   "ind_desc": "Écouter/Regarder et comprendre un document audiovisuel et prendre note des positions des personnes et des objets.",
@@ -892,7 +892,7 @@
  },
  "B6.4.8.2.1": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.8",
+  "sub_strand": "8. Demander et expliquer la position des personnes ou des objets les uns par rapport aux autres",
   "cs_code": "B6.4.8.2",
   "cs_desc": "Production Orale",
   "ind_desc": "Poser et répondre à des questions sur la position d’une personne ou d’un objet. Exemples : - Où se trouve Kofi ? Kofi se trouve devant la télévision. Où se trouve la chaise ? La chaise se trouve sur la table",
@@ -903,7 +903,7 @@
  },
  "B6.4.8.2.2": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.8",
+  "sub_strand": "8. Demander et expliquer la position des personnes ou des objets les uns par rapport aux autres",
   "cs_code": "B6.4.8.2",
   "cs_desc": "Production Orale",
   "ind_desc": "Indiquer à quelqu’un la position d’un objet par rapport à une personne Exemples : Kofi se trouve à droite de l’armoire. Ama se trouve derrière le bus.",
@@ -914,7 +914,7 @@
  },
  "B6.4.8.3.1": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.8",
+  "sub_strand": "8. Demander et expliquer la position des personnes ou des objets les uns par rapport aux autres",
   "cs_code": "B6.4.8.3",
   "cs_desc": "Compréhension Écrite",
   "ind_desc": "Situer sur une carte de la ville, la position des lieux publics Exemple l’école, l’hôpital, le parc, le musée, l’église, la poste, l’université, la banque, la mosquée, la gare, etc. La carte de ville d’une ville (Accra, Kumasi), etc. - Le musée se trouve à gauche de la gare.",
@@ -925,7 +925,7 @@
  },
  "B6.4.8.4.1": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.8",
+  "sub_strand": "8. Demander et expliquer la position des personnes ou des objets les uns par rapport aux autres",
   "cs_code": "B6.4.8.4",
   "cs_desc": "Production Écrite",
   "ind_desc": "Indiquer par écrit la position d’une personne ou d’un objet par rapport à l’autre Exemples : Où est ........... ? Où se trouve/est situé(e)? Kofi est à droite/à gauche/devant/derrière Ama. Le chat est sous/sur la table",
@@ -936,7 +936,7 @@
  },
  "B6.4.9.1.1": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.9",
+  "sub_strand": "9. Donner et réagir à un ordre",
   "cs_code": "B6.4.9.1",
   "cs_desc": "Compréhension Orale",
   "ind_desc": "Écouter/Regarder et comprendre un document audio/audio-visuel où l’on parle des ordres et des conseils ou des consignes simples. Exemple : Ecoutez un ordre et faites l’action. Le professeur donne des consignes et des conseils : Soulignez (Souligne) la bonne ré",
@@ -947,7 +947,7 @@
  },
  "B6.4.9.2.1": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.9",
+  "sub_strand": "9. Donner et réagir à un ordre",
   "cs_code": "B6.4.9.2",
   "cs_desc": "Production Orale",
   "ind_desc": "Donner et réagir à des ordres Exemple :  En classe, les apprenants se donnent des ordres et régissent en faisant l’action. - Sortons dans la cour - Allons à la cantine. - Jouons à la balle - Prête-moi ton stylo. - Mangeons. - Etc. - etc",
@@ -958,7 +958,7 @@
  },
  "B6.4.9.3.1": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.9",
+  "sub_strand": "9. Donner et réagir à un ordre",
   "cs_code": "B6.4.9.3",
   "cs_desc": "Compréhension Écrite",
   "ind_desc": "Lisez et comprendre des ordres Exemple : - Lisez un ordre et associez-le à une image correspondante - Lisez un ordre et faites l’action",
@@ -969,7 +969,7 @@
  },
  "B6.4.9.4.1": {
   "strand": "4. Les activités",
-  "sub_strand": "Sub-strand B6.4.9",
+  "sub_strand": "9. Donner et réagir à un ordre",
   "cs_code": "B6.4.9.4",
   "cs_desc": "Production Écrite",
   "ind_desc": "Écrire pour donner des ordres Exemple1 : Associez un ordre à l’image correspondante",

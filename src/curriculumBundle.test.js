@@ -670,6 +670,72 @@ describe.each(ids)('%s', (grade) => {
     })
   })
 
+  describe('the sub-strand names the prints set (P1-12)', () => {
+    const readData = (path) => JSON.parse(readFileSync(new URL(`../data/${path}`, import.meta.url), 'utf8'))
+    const ledger = readData('audit/sub_strand_names.json')
+    const codeShaped = /^(?:Strand|Sub-?strand)\s+[BK]?\s*\d/
+
+    // The ledger names a refusal by database file; the bundle names the same
+    // record by subjectId + grade. `english-language_B4_curriculum_db_clean.json`
+    // splits on its last underscore into `english-language` and `B4`.
+    const refused = new Set(ledger.refused.map(
+      (r) => `${r.file.replace('_curriculum_db_clean.json', '')}/${r.code}`))
+
+    it('fills a code-shaped sub-strand with the heading the print sets', () => {
+      // 3,679 served indicators read `Sub-strand B4.1.1` while the print sets a
+      // name once per block, above the table. The read is the same one P1-11
+      // used, widened: computing B6.1.1.1.3 sits under
+      // `SUB - STRAND 1: GENERATION OF COMPUTERS ...`, which the print itself
+      // kerns as `GENE RATION` and the reader joins back.
+      expect(ledger.applied).toBe(true)
+      expect(ledger.written).toHaveLength(3642)
+      const computing = read('b6_indicators.json').find((r) => r.code === 'B6.1.1.1.3')
+      expect(computing.subStrandName)
+        .toBe('GENERATION OF COMPUTERS AND PARTS OF A COMPUTER AND OTHER GADGETS')
+      expect(computing.strandName).toBe('INTRODUCTION TO COMPUTING')
+    })
+
+    it('leaves a code only where the print does not name the block one way', () => {
+      // 37 readings are refused: 18 are blocks the rme print sets no heading
+      // for, and the rest are blocks the print itself names two ways
+      // (`PLANTS- 1` / `PLANTS- 2`, `MY NATIONAL AND CIVIC VALUES` /
+      // `OUR BELIEFS`). Keeping the code is the honest result there - the
+      // alternative is picking one of two names for the teacher.
+      expect(refused.size).toBe(37)
+      const offenders = []
+      for (const [grade, { indicators }] of bundle) {
+        for (const row of indicators) {
+          if (!codeShaped.test(row.subStrandName || '')) continue
+          const key = `${row.subjectId}_${grade}/${row.code}`
+          if (!refused.has(key)) offenders.push(`${key} = ${row.subStrandName}`)
+        }
+      }
+      expect(offenders).toEqual([])
+    })
+
+    it('carries the names into the schedules, and refuses the same records there', () => {
+      // The scheme of learning prints the lesson's own `sub_strand`, so filling
+      // the databases alone would have left the code on the document teachers
+      // print. The lesson files repeated it in 11,506 of their 13,140 rows.
+      expect(ledger.written_lessons.records).toBe(11506)
+      const offenders = []
+      let rows = 0
+      for (const [gradeId, { subjects }] of bundle) {
+        for (const subject of subjects.filter((s) => s.hasSchedule)) {
+          const lessons = read(`schedules/${gradeId.toLowerCase()}-${subject.id}.json`)
+          for (const row of lessons) {
+            rows += 1
+            if (!codeShaped.test(row.subStrandName || '')) continue
+            const key = `${row.subjectId}_${gradeId}/${row.indicatorCode}`
+            if (!refused.has(key)) offenders.push(`${key} = ${row.subStrandName}`)
+          }
+        }
+      }
+      expect(rows).toBe(13140)
+      expect(offenders).toEqual([])
+    })
+  })
+
   describe('known gaps stay known', () => {
     it('has no schedules file for the kindergarten grades', () => {
       const kg = grades.filter((g) => g.id.startsWith('KG'))

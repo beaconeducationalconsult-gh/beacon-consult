@@ -1,7 +1,7 @@
 {
  "B2.2.1.1.1": {
   "strand": "2. MY COUNTRY GHANA",
-  "sub_strand": "Sub-strand B2.2.1",
+  "sub_strand": "1. The People Of Ghana",
   "cs_code": "B2.2.1.1",
   "cs_desc": "Show understanding of the characteristics of some of the ethnic groups in Ghana",
   "ind_desc": "State the characteristics of the ethnic groups in Ghana",
@@ -12,7 +12,7 @@
  },
  "B2.2.4.1.1": {
   "strand": "2. MY COUNTRY GHANA",
-  "sub_strand": "Sub-strand B2.2.4",
+  "sub_strand": "4. Major Historical Locations",
   "cs_code": "B2.2.4.1",
   "cs_desc": "Exhibit knowledge of the history of the major historical locations in Ghana",
   "ind_desc": "Discuss the history of Ghana’s major historical locations. Examples include Kumasi military museum, Komfo Anokye Sword, Assin Manso slave site, Gbewa Palace",
@@ -23,7 +23,7 @@
  },
  "B2.2.5.1.1": {
   "strand": "2. MY COUNTRY GHANA",
-  "sub_strand": "Sub-strand B2.2.5",
+  "sub_strand": "5. Some Selected Individuals",
   "cs_code": "B2.2.5.1",
   "cs_desc": "Exhibit understanding of Ghanaian women who have contributed significantly to Ghana’s development.",
   "ind_desc": "Identify Ghanaian women who have made significant contributions to national development Enquiry Route: Which Ghanaian women contributed to national development? How did they contribute? Which woman inspires you most and why? 1.Name some outstanding women in the history of Ghana 2.Match these women with their achievements in Ghana e.g. Mrs Charity Zormelo-Fiawoo – first woman university graduate); Squadron",
@@ -34,7 +34,7 @@
  },
  "B2.3.2.1.1": {
   "strand": "3. EUROPEANS IN GHANA",
-  "sub_strand": "Sub-strand B2.3.2",
+  "sub_strand": "2. International Trade Including Slave Trade",
   "cs_code": "B2.3.2.1",
   "cs_desc": "Understand that trade was the major reason why the Europeans settled in Ghana",
   "ind_desc": "Describe how early trade was carried out between Ghanaians and Europeans",

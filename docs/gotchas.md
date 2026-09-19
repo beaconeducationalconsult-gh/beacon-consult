@@ -184,6 +184,32 @@ naturally name the topic — and cutting at the first marker deletes the only co
 that text. The script cuts a tail only when it is short and says the indicator back
 (≥4-word run covering half the indicator); everything else is reported.
 
+## 🟠 A print's heading is a block property, and the print breaks its own words
+
+`scripts/fix_sub_strand_names.py` (P1-12) reads the name a curriculum print sets once per block,
+above its table, and writes it where the record still said `Sub-strand B4.1.1`. Three traps, each
+one measured on the prints:
+
+* **A name is not a row's property.** The heading sits above the whole block, so a record is
+  anchored on its own row when the print carries it, then on its content standard, then on the
+  same block in its grade, and — one step weaker, reported as such — on the same block in another
+  grade of the same print. The CCP prints repeat a block across B7–B9, which is where 14 of the
+  3,642 readings come from.
+* **The same code can be reprinted under a different heading pages later** (english
+  `B6.2.3.1.1` is read under `Word Families` on p192 and `Diphthongs` on p193, five blocks on).
+  A reading whose heading number agrees with the row's own components settles it; a print that
+  numbers by another scheme has no agreeing readings and the whole set speaks. Conflicts that
+  remain are refusals — never merge two names because they are *nearly* the same.
+* **The print kerns words apart.** Headings arrive as `GENE RATION`, `Appreciati n g`,
+  `Organi s ation` and `samaison`, and the page gate must compare *folded* text (`F.blob_in`) or
+  the whole pass refuses itself (that mistake cost 1,353 refusals before the gate was folded).
+  Repairing the words is a **curated table**, each pair applied only after that print's own
+  vocabulary spells the joined word — a general "join the pieces when the print spells the joined
+  word" rule is not safe: the prints also join words of their own (`PhonicsLetter`, `StoryTelling`),
+  and a rule wide enough to fix `Appreciati n g` also invents `RolePlay` and `ceque`. What the
+  print itself sets (`TECHNOLOGY INTHE COMMUNITY` in the computing CCP's own table of contents)
+  stays verbatim.
+
 ## 🟠 A print's notation example parses as a record
 
 Every CCP front matter explains the code with a worked example — `Example: B7/JHS1 .4.2.3.1

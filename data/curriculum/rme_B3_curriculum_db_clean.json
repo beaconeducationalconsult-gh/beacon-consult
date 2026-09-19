@@ -1,7 +1,7 @@
 {
  "B3.1.2.1.1": {
   "strand": "1. GOD, HIS CREATION AND ATTRIBUTES",
-  "sub_strand": "Sub-strand B3.1.2",
+  "sub_strand": "2. Personal Safety in the Community",
   "cs_code": "B3.1.2.1",
   "cs_desc": "Identify ways of ensuring environmental safety",
   "ind_desc": "Demonstrate ways to care for the environment",
@@ -12,7 +12,7 @@
  },
  "B3.1.3.1.1": {
   "strand": "1. GOD, HIS CREATION AND ATTRIBUTES",
-  "sub_strand": "Sub-strand B3.1.3",
+  "sub_strand": "3. The Purpose of God’s Creation",
   "cs_code": "B3.1.3.1",
   "cs_desc": "Explain the purpose of God’s creation COND’",
   "ind_desc": "Explain the purpose of God’s creation of humankind",
@@ -23,7 +23,7 @@
  },
  "B3.1.3.1.2": {
   "strand": "1. GOD, HIS CREATION AND ATTRIBUTES",
-  "sub_strand": "Sub-strand B3.1.3",
+  "sub_strand": "3. The Purpose of God’s Creation",
   "cs_code": "B3.1.3.1",
   "cs_desc": "Explain the purpose of God’s creation COND’",
   "ind_desc": "Give reasons for protecting God’s creation",
@@ -34,7 +34,7 @@
  },
  "B3.1.3.1.3": {
   "strand": "1. GOD, HIS CREATION AND ATTRIBUTES",
-  "sub_strand": "Sub-strand B3.1.3",
+  "sub_strand": "3. The Purpose of God’s Creation",
   "cs_code": "B3.1.3.1",
   "cs_desc": "Explain the purpose of God’s creation COND’",
   "ind_desc": "Explain the need for good relationship among people of different ethnic groups",
@@ -45,7 +45,7 @@
  },
  "B3.2.1.1.1": {
   "strand": "2. RELIGIOUS PRACTICES AND THEIR MORAL IMPLICATIONS",
-  "sub_strand": "Sub-strand B3.2.1",
+  "sub_strand": "1. Religious Worship in the Three Major Religions in Ghana",
   "cs_code": "B3.2.1.1",
   "cs_desc": "Appreciate the importance of religious worship",
   "ind_desc": "Name the sacred scriptures of the three major religions",
@@ -56,7 +56,7 @@
  },
  "B3.2.2.1.1": {
   "strand": "2. RELIGIOUS PRACTICES AND THEIR MORAL IMPLICATIONS",
-  "sub_strand": "Sub-strand B3.2.2",
+  "sub_strand": "2. Festivals in the Three Major Religions",
   "cs_code": "B3.2.2.1",
   "cs_desc": "Explain the importance of religious festivals",
   "ind_desc": "Describe how various festivals are celebrated",
@@ -67,7 +67,7 @@
  },
  "B3.3.1.1.1": {
   "strand": "3. RELIGIOUS LEADERS",
-  "sub_strand": "Sub-strand B3.3.1",
+  "sub_strand": "1. Early Life of the Leaders of the three Major Religions",
   "cs_code": "B3.3.1.1",
   "cs_desc": "Narrate the youthful life stories of the leaders of the major religions",
   "ind_desc": "Describe the youthful lives of the leaders of the three major religions in Ghana",
@@ -78,7 +78,7 @@
  },
  "B3.3.1.1.2": {
   "strand": "3. RELIGIOUS LEADERS",
-  "sub_strand": "Sub-strand B3.3.1",
+  "sub_strand": "1. Early Life of the Leaders of the three Major Religions",
   "cs_code": "B3.3.1.1",
   "cs_desc": "Narrate the youthful life stories of the leaders of the major religions",
   "ind_desc": "Identify and explain the moral lessons of the youthful life of the religious leaders",
@@ -89,7 +89,7 @@
  },
  "B3.4.1.1.1": {
   "strand": "4. THE FAMILY AND THE COMMUNITY",
-  "sub_strand": "Sub-strand B3.4.1",
+  "sub_strand": "1. Roles and Relationships",
   "cs_code": "B3.4.1.1",
   "cs_desc": "Appreciate the role of the family and the community in their relationship with God CONTD’",
   "ind_desc": "Discuss God’s promises to humankind",
@@ -100,7 +100,7 @@
  },
  "B3.4.2.1.1": {
   "strand": "4. THE FAMILY AND THE COMMUNITY",
-  "sub_strand": "Sub-strand B3.4.2",
+  "sub_strand": "2. Roles and Relationships",
   "cs_code": "B3.4.2.1",
   "cs_desc": "Explain the role of the family members in living safely with each other",
   "ind_desc": "Explain the need to live in harmony with one another",
@@ -111,7 +111,7 @@
  },
  "B3.4.1.1.3": {
   "strand": "4. THE FAMILY AND THE COMMUNITY",
-  "sub_strand": "Sub-strand B3.4.1",
+  "sub_strand": "1. Roles and Relationships",
   "cs_code": "B3.4.1.1",
   "cs_desc": "Appreciate the role of the family and the community in their relationship with God CONTD’",
   "ind_desc": "Identify moral lessons learnt from responding to God’s call",
@@ -122,7 +122,7 @@
  },
  "B3.2.1.1.2": {
   "strand": "2. RELIGIOUS PRACTICES AND THEIR MORAL IMPLICATIONS",
-  "sub_strand": "Sub-strand B3.2.1",
+  "sub_strand": "1. Religious Worship in the Three Major Religions in Ghana",
   "cs_code": "B3.2.1.1",
   "cs_desc": "Appreciate the importance of religious worship",
   "ind_desc": "Give reasons for studying the sacred scriptures of the three major religions among their followers.",
@@ -133,7 +133,7 @@
  },
  "B3.2.2.1.2": {
   "strand": "2. RELIGIOUS PRACTICES AND THEIR MORAL IMPLICATIONS",
-  "sub_strand": "Sub-strand B3.2.2",
+  "sub_strand": "2. Festivals in the Three Major Religions",
   "cs_code": "B3.2.2.1",
   "cs_desc": "Explain the importance of religious festivals",
   "ind_desc": "Demonstrate the importance of religious festivals.",
@@ -144,7 +144,7 @@
  },
  "B3.4.1.1.2": {
   "strand": "4. THE FAMILY AND THE COMMUNITY",
-  "sub_strand": "Sub-strand B3.4.1",
+  "sub_strand": "1. Roles and Relationships",
   "cs_code": "B3.4.1.1",
   "cs_desc": "Appreciate the role of the family and the community in their relationship with God CONTD’",
   "ind_desc": "Identify the benefits of responding to God’s call.",

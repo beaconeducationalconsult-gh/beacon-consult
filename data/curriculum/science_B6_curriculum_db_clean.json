@@ -1,7 +1,7 @@
 {
  "B6.1.1.1.1": {
   "strand": "1. DIVERSITY OF MATTER",
-  "sub_strand": "Sub-strand B6.1.1",
+  "sub_strand": "1. LIVING AND NON - LIVING TH INGS",
   "cs_code": "B6.1.1.1",
   "cs_desc": "Show understanding of the physical features and life processes of living things and use this understanding to classify them",
   "ind_desc": "Classify plants based on their root system",
@@ -12,7 +12,7 @@
  },
  "B6.1.2.1.1": {
   "strand": "1. DIVERSITY OF MATTER",
-  "sub_strand": "Sub-strand B6.1.2",
+  "sub_strand": "2. MATERIALS",
   "cs_code": "B6.1.2.1",
   "cs_desc": "Recognise materials as important resources for providing human needs.",
   "ind_desc": "Know the general properties of metals such as lustre, malleability, conductivity and ductility",
@@ -23,7 +23,7 @@
  },
  "B6.1.2.1.2": {
   "strand": "1. DIVERSITY OF MATTER",
-  "sub_strand": "Sub-strand B6.1.2",
+  "sub_strand": "2. MATERIALS",
   "cs_code": "B6.1.2.1",
   "cs_desc": "Recognise materials as important resources for providing human needs.",
   "ind_desc": "Investigate the uses of metals in everyday life and link the uses to their properties",
@@ -34,7 +34,7 @@
  },
  "B6.1.2.2.1": {
   "strand": "1. DIVERSITY OF MATTER",
-  "sub_strand": "Sub-strand B6.1.2",
+  "sub_strand": "2. MATERIALS",
   "cs_code": "B6.1.2.2",
   "cs_desc": "Understand mixtures, the types of formation, uses and ways of separating them into their components",
   "ind_desc": "Examine some uses of mixtures in everyday life",
@@ -45,7 +45,7 @@
  },
  "B6.2.1.1.1": {
   "strand": "2. CYCLES",
-  "sub_strand": "Sub-strand B6.2.1",
+  "sub_strand": "1. EARTH SCIENCE",
   "cs_code": "B6.2.1.1",
   "cs_desc": "Recognise the relationship between the earth and the sun",
   "ind_desc": "Describe the relative sizes of the earth and sun and their importance",
@@ -56,7 +56,7 @@
  },
  "B6.2.1.2.1": {
   "strand": "2. CYCLES",
-  "sub_strand": "Sub-strand B6.2.1",
+  "sub_strand": "1. EARTH SCIENCE",
   "cs_code": "B6.2.1.2",
   "cs_desc": "Show understanding of the roles of condensation, evaporation, transpiration and precipitation in the hydrological (water) cycle",
   "ind_desc": "Explain how rain falls from clouds",
@@ -67,7 +67,7 @@
  },
  "B6.2.1.4.1": {
   "strand": "2. CYCLES",
-  "sub_strand": "Sub-strand B6.2.1",
+  "sub_strand": "1. EARTH SCIENCE",
   "cs_code": "B6.2.1.4",
   "cs_desc": "Recognise water and air as important natural resources",
   "ind_desc": "Investigate ways of conserving water in the home, school and community",
@@ -78,7 +78,7 @@
  },
  "B6.2.1.5.2": {
   "strand": "2. CYCLES",
-  "sub_strand": "Sub-strand B6.2.1",
+  "sub_strand": "1. EARTH SCIENCE",
   "cs_code": "B6.2.1.5",
   "cs_desc": "Recognise water and air as important natural resources.",
   "ind_desc": "Demonstrate that air supports burning",
@@ -89,7 +89,7 @@
  },
  "B6.2.2.1.1": {
   "strand": "2. CYCLES",
-  "sub_strand": "Sub-strand B6.2.2",
+  "sub_strand": "2. LIFE CYCLES OF ORGANISMS",
   "cs_code": "B6.2.2.1",
   "cs_desc": "Demonstrate understanding of the life cycle of a plant",
   "ind_desc": "Know the materials needed for the survival of plants in the environment (water, carbon dioxide, oxygen, sunlight)",
@@ -100,7 +100,7 @@
  },
  "B6.2.2.1.2": {
   "strand": "2. CYCLES",
-  "sub_strand": "Sub-strand B6.2.2",
+  "sub_strand": "2. LIFE CYCLES OF ORGANISMS",
   "cs_code": "B6.2.2.1",
   "cs_desc": "Demonstrate understanding of the life cycle of a plant",
   "ind_desc": "Observe the life cycle of a plant (okra or maize plant)",
@@ -111,7 +111,7 @@
  },
  "B6.3.1.1.1": {
   "strand": "3. SYSTEMS",
-  "sub_strand": "Sub-strand B6.3.1",
+  "sub_strand": "1. THE HUMAN BODY SYSTEMS",
   "cs_code": "B6.3.1.1",
   "cs_desc": "Recognise that different parts of the human body work interdependently to perform a specific function",
   "ind_desc": "Explain the functions of organs in the excretory system of humans",
@@ -122,7 +122,7 @@
  },
  "B6.3.2.1.1": {
   "strand": "3. SYSTEMS",
-  "sub_strand": "Sub-strand B6.3.2",
+  "sub_strand": "2. THE SOLAR SYSTEM",
   "cs_code": "B6.3.2.1",
   "cs_desc": "Show understanding of the motion of bodies in the solar system",
   "ind_desc": "Explain the difference between a star, a planet and a satellite",
@@ -133,7 +133,7 @@
  },
  "B6.3.3.1.1": {
   "strand": "3. SYSTEMS",
-  "sub_strand": "Sub-strand B6.3.3",
+  "sub_strand": "3. ECOSYSTEM",
   "cs_code": "B6.3.3.1",
   "cs_desc": "Show understanding of ecosystems, interdependency of organisms in an ecosystem and appreciate the interactions",
   "ind_desc": "Investigate various interactions in an ecosystem and the effect on humans",
@@ -144,7 +144,7 @@
  },
  "B6.4.1.1.1": {
   "strand": "4. FORCES AND ENERGY",
-  "sub_strand": "Sub-strand B6.4.1",
+  "sub_strand": "1. SOURCES AND FORMS OF ENERGY",
   "cs_code": "B6.4.1.1",
   "cs_desc": "Demonstrate understanding of the concept of energy, its various forms and sources and the ways in which it can be transformed and conserved",
   "ind_desc": "Compare renewable and non-renewable sources of energy",
@@ -155,7 +155,7 @@
  },
  "B6.4.1.2.1": {
   "strand": "4. FORCES AND ENERGY",
-  "sub_strand": "Sub-strand B6.4.1",
+  "sub_strand": "1. SOURCES AND FORMS OF ENERGY",
   "cs_code": "B6.4.1.2",
   "cs_desc": "Show understanding of the concept of heat energy in terms of its importance, effects, sources and transfer from one medium to another",
   "ind_desc": "Measure the temperature of a body using a thermometer",
@@ -166,7 +166,7 @@
  },
  "B6.4.2.1.1": {
   "strand": "4. FORCES AND ENERGY",
-  "sub_strand": "Sub-strand B6.4.2",
+  "sub_strand": "2. ELECTRICITY AND ELECTRONICS",
   "cs_code": "B6.4.2.1",
   "cs_desc": "Demonstrate knowledge of generation of electricity, its transmission and transformation into other forms",
   "ind_desc": "Construct an electric circuit and know the functions of its components",
@@ -177,7 +177,7 @@
  },
  "B6.4.2.1.2": {
   "strand": "4. FORCES AND ENERGY",
-  "sub_strand": "Sub-strand B6.4.2",
+  "sub_strand": "2. ELECTRICITY AND ELECTRONICS",
   "cs_code": "B6.4.2.1",
   "cs_desc": "Demonstrate knowledge of generation of electricity, its transmission and transformation into other forms",
   "ind_desc": "Identify the symbols used in representing various components in a given circuit diagram",
@@ -188,7 +188,7 @@
  },
  "B6.4.2.1.3": {
   "strand": "4. FORCES AND ENERGY",
-  "sub_strand": "Sub-strand B6.4.2",
+  "sub_strand": "2. ELECTRICITY AND ELECTRONICS",
   "cs_code": "B6.4.2.1",
   "cs_desc": "Demonstrate knowledge of generation of electricity, its transmission and transformation into other forms",
   "ind_desc": "Know conductors, semi-conductors and insulators",
@@ -199,7 +199,7 @@
  },
  "B6.4.2.2.1": {
   "strand": "4. FORCES AND ENERGY",
-  "sub_strand": "Sub-strand B6.4.2",
+  "sub_strand": "2. ELECTRICITY AND ELECTRONICS",
   "cs_code": "B6.4.2.2",
   "cs_desc": "Know the functions and assemblage of basic electronic components",
   "ind_desc": "Construct an electronic circuit using battery, connecting wire and LED",
@@ -210,7 +210,7 @@
  },
  "B6.4.3.1.1": {
   "strand": "4. FORCES AND ENERGY",
-  "sub_strand": "Sub-strand B6.4.3",
+  "sub_strand": "3. FORCES AND MOVEMENT",
   "cs_code": "B6.4.3.1",
   "cs_desc": "Know that movement is caused by applied forces due to the release of stored energy",
   "ind_desc": "Recognise the relationship between energy and forces",
@@ -221,7 +221,7 @@
  },
  "B6.4.3.2.1": {
   "strand": "4. FORCES AND ENERGY",
-  "sub_strand": "Sub-strand B6.4.3",
+  "sub_strand": "3. FORCES AND MOVEMENT",
   "cs_code": "B6.4.3.2",
   "cs_desc": "Recognise some simple machines used for making work easier, analyse their advantages and know their uses.",
   "ind_desc": "Identify levers, pulleys, inclined planes as classes of simple machines and cite some common examples",
@@ -232,7 +232,7 @@
  },
  "B6.5.1.1.1": {
   "strand": "5. HUMANS AND THE ENVIRONMENT",
-  "sub_strand": "Sub-strand B6.5.1",
+  "sub_strand": "1. PERSONAL HYGIENE AND SANITATION",
   "cs_code": "B6.5.1.1",
   "cs_desc": "Recognise the importance of personal hygiene",
   "ind_desc": "Identify the causes and effects of foul body odour on humans and how it can be prevented",
@@ -243,7 +243,7 @@
  },
  "B6.5.1.1.2": {
   "strand": "5. HUMANS AND THE ENVIRONMENT",
-  "sub_strand": "Sub-strand B6.5.1",
+  "sub_strand": "1. PERSONAL HYGIENE AND SANITATION",
   "cs_code": "B6.5.1.1",
   "cs_desc": "Recognise the importance of personal hygiene",
   "ind_desc": "Describe ways of minimising waste",
@@ -254,7 +254,7 @@
  },
  "B6.5.2.1.1": {
   "strand": "5. HUMANS AND THE ENVIRONMENT",
-  "sub_strand": "Sub-strand B6.5.2",
+  "sub_strand": "2. DISEASES",
   "cs_code": "B6.5.2.1",
   "cs_desc": "Demonstrate knowledge of common diseases of humans; causes, symptoms, effects and prevention",
   "ind_desc": "Explain the causes, symptoms and prevention of Eczema",
@@ -265,7 +265,7 @@
  },
  "B6.5.2.1.2": {
   "strand": "5. HUMANS AND THE ENVIRONMENT",
-  "sub_strand": "Sub-strand B6.5.2",
+  "sub_strand": "2. DISEASES",
   "cs_code": "B6.5.2.1",
   "cs_desc": "Demonstrate knowledge of common diseases of humans; causes, symptoms, effects and prevention",
   "ind_desc": "Know how to prevent meningitis",
@@ -276,7 +276,7 @@
  },
  "B6.5.4.1.1": {
   "strand": "5. HUMANS AND THE ENVIRONMENT",
-  "sub_strand": "Sub-strand B6.5.4",
+  "sub_strand": "4. CLIMATE CHANGE",
   "cs_code": "B6.5.4.1",
   "cs_desc": "Know that climate change is one of the most important environmental issues facing the world today",
   "ind_desc": "Know the effects of climate change on humans",

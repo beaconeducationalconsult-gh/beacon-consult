@@ -1,7 +1,7 @@
 {
  "B7.1.1.1.1": {
   "strand": "1. CUSTOMS AND INSTITUTIONS",
-  "sub_strand": "Sub-strand B7.1.1",
+  "sub_strand": "1. RITES OF PASSAGE - CHILDHOOD RITES",
   "cs_code": "B7.1.1.1",
   "cs_desc": "Demonstrate knowledge and understanding of the childhood rites of their culture and compare with other Ghanaian cultures",
   "ind_desc": "Identify the processes involved in naming a child",
@@ -12,7 +12,7 @@
  },
  "B7.1.1.1.2": {
   "strand": "1. CUSTOMS AND INSTITUTIONS",
-  "sub_strand": "Sub-strand B7.1.1",
+  "sub_strand": "1. RITES OF PASSAGE - CHILDHOOD RITES",
   "cs_code": "B7.1.1.1",
   "cs_desc": "Demonstrate knowledge and understanding of the childhood rites of their culture and compare with other Ghanaian cultures",
   "ind_desc": "Discuss the significance of the processes in naming a child",
@@ -23,7 +23,7 @@
  },
  "B7.1.1.1.3": {
   "strand": "1. CUSTOMS AND INSTITUTIONS",
-  "sub_strand": "Sub-strand B7.1.1",
+  "sub_strand": "1. RITES OF PASSAGE - CHILDHOOD RITES",
   "cs_code": "B7.1.1.1",
   "cs_desc": "Demonstrate knowledge and understanding of the childhood rites of their culture and compare with other Ghanaian cultures",
   "ind_desc": "Compare and contrast the naming processes in their culture to other Ghanaian cultures",
@@ -34,7 +34,7 @@
  },
  "B7.1.1.1.4": {
   "strand": "1. CUSTOMS AND INSTITUTIONS",
-  "sub_strand": "Sub-strand B7.1.1",
+  "sub_strand": "1. RITES OF PASSAGE - CHILDHOOD RITES",
   "cs_code": "B7.1.1.1",
   "cs_desc": "Demonstrate knowledge and understanding of the childhood rites of their culture and compare with other Ghanaian cultures",
   "ind_desc": "Compare and contrast the traditional naming process to the contemporary naming process",
@@ -45,7 +45,7 @@
  },
  "B7.1.1.1.5": {
   "strand": "1. CUSTOMS AND INSTITUTIONS",
-  "sub_strand": "Sub-strand B7.1.1",
+  "sub_strand": "1. RITES OF PASSAGE - CHILDHOOD RITES",
   "cs_code": "B7.1.1.1",
   "cs_desc": "Demonstrate knowledge and understanding of the childhood rites of their culture and compare with other Ghanaian cultures",
   "ind_desc": "Role play a naming ceremony session in their culture",
@@ -56,7 +56,7 @@
  },
  "B7.1.2.1.1": {
   "strand": "1. CUSTOMS AND INSTITUTIONS",
-  "sub_strand": "Sub-strand B7.1.2",
+  "sub_strand": "2. NAMING SYSTEMS: DAY NAMES, ORDER OF BIRTH NAMES",
   "cs_code": "B7.1.2.1",
   "cs_desc": "Exhibit understanding of day- born names and order of birth names and relate the names to the days and order of birth",
   "ind_desc": "State the names of the days of the week and relate their names to the days",
@@ -67,7 +67,7 @@
  },
  "B7.1.2.1.2": {
   "strand": "1. CUSTOMS AND INSTITUTIONS",
-  "sub_strand": "Sub-strand B7.1.2",
+  "sub_strand": "2. NAMING SYSTEMS: DAY NAMES, ORDER OF BIRTH NAMES",
   "cs_code": "B7.1.2.1",
   "cs_desc": "Exhibit understanding of day- born names and order of birth names and relate the names to the days and order of birth",
   "ind_desc": "State the order of birth (i.e. first, second, and so on.) and relate the names accordingly",
@@ -78,7 +78,7 @@
  },
  "B7.1.2.1.3": {
   "strand": "1. CUSTOMS AND INSTITUTIONS",
-  "sub_strand": "Sub-strand B7.1.2",
+  "sub_strand": "2. NAMING SYSTEMS: DAY NAMES, ORDER OF BIRTH NAMES",
   "cs_code": "B7.1.2.1",
   "cs_desc": "Exhibit understanding of day- born names and order of birth names and relate the names to the days and order of birth",
   "ind_desc": "Compare and contrast the day names and order of birth names in their culture to other cultures in Ghana",
@@ -89,7 +89,7 @@
  },
  "B7.1.3.1.1": {
   "strand": "1. CUSTOMS AND INSTITUTIONS",
-  "sub_strand": "Sub-strand B7.1.3",
+  "sub_strand": "3. THE CLAN SYSTEM",
   "cs_code": "B7.1.3.1",
   "cs_desc": "Demonstrate an understanding of the clan system among their people",
   "ind_desc": "Describe the clan system and state some clans in their ethnic community",
@@ -100,7 +100,7 @@
  },
  "B7.1.3.1.2": {
   "strand": "1. CUSTOMS AND INSTITUTIONS",
-  "sub_strand": "Sub-strand B7.1.3",
+  "sub_strand": "3. THE CLAN SYSTEM",
   "cs_code": "B7.1.3.1",
   "cs_desc": "Demonstrate an understanding of the clan system among their people",
   "ind_desc": "Discuss the features of the clan system in relation to their community",
@@ -111,7 +111,7 @@
  },
  "B7.1.4.1.1": {
   "strand": "1. CUSTOMS AND INSTITUTIONS",
-  "sub_strand": "Sub-strand B7.1.4",
+  "sub_strand": "4. CHIEFTAINCY — INSTALLMENT AND DESTOOLMENT",
   "cs_code": "B7.1.4.1",
   "cs_desc": "Demonstrate knowledge in and an understanding of how chiefs and queenmothers are selected, enstooled/ enskinned and compare their duties and responsibilities",
   "ind_desc": "Discuss how chiefs and queenmothers are selected in their ethnic community",
@@ -122,7 +122,7 @@
  },
  "B7.1.4.1.2": {
   "strand": "1. CUSTOMS AND INSTITUTIONS",
-  "sub_strand": "Sub-strand B7.1.4",
+  "sub_strand": "4. CHIEFTAINCY — INSTALLMENT AND DESTOOLMENT",
   "cs_code": "B7.1.4.1",
   "cs_desc": "Demonstrate knowledge in and an understanding of how chiefs and queenmothers are selected, enstooled/ enskinned and compare their duties and responsibilities",
   "ind_desc": "Discuss the processes involved in enstooling/enskinning chiefs and queenmothers",
@@ -133,7 +133,7 @@
  },
  "B7.1.4.1.3": {
   "strand": "1. CUSTOMS AND INSTITUTIONS",
-  "sub_strand": "Sub-strand B7.1.4",
+  "sub_strand": "4. CHIEFTAINCY — INSTALLMENT AND DESTOOLMENT",
   "cs_code": "B7.1.4.1",
   "cs_desc": "Demonstrate knowledge in and an understanding of how chiefs and queenmothers are selected, enstooled/ enskinned and compare their duties and responsibilities",
   "ind_desc": "Discuss the duties and responsibilities of chiefs and queenmothers among their people",
@@ -144,7 +144,7 @@
  },
  "B7.1.4.1.4": {
   "strand": "1. CUSTOMS AND INSTITUTIONS",
-  "sub_strand": "Sub-strand B7.1.4",
+  "sub_strand": "4. CHIEFTAINCY — INSTALLMENT AND DESTOOLMENT",
   "cs_code": "B7.1.4.1",
   "cs_desc": "Demonstrate knowledge in and an understanding of how chiefs and queenmothers are selected, enstooled/ enskinned and compare their duties and responsibilities",
   "ind_desc": "Discuss and compare modern trends affecting the enstoolment/enskinement of chiefs and queenmothers",
@@ -155,7 +155,7 @@
  },
  "B7.2.1.1.1": {
   "strand": "2. LISTENING AND SPEAKING",
-  "sub_strand": "Sub-strand B7.2.1",
+  "sub_strand": "1. CONVERSATION/EVERYDAY DISCOURSE",
   "cs_code": "B7.2.1.1",
   "cs_desc": "Demonstrate use of appropriate language orally in specific situations",
   "ind_desc": "Use appropriate register in everyday communication (informal and formal) with diverse partners on grade-level topics/ texts/issues",
@@ -166,7 +166,7 @@
  },
  "B7.2.1.1.2": {
   "strand": "2. LISTENING AND SPEAKING",
-  "sub_strand": "Sub-strand B7.2.1",
+  "sub_strand": "1. CONVERSATION/EVERYDAY DISCOURSE",
   "cs_code": "B7.2.1.1",
   "cs_desc": "Demonstrate use of appropriate language orally in specific situations",
   "ind_desc": "Ask questions that elicit elaboration and respond to others’ questions in a conversation",
@@ -177,7 +177,7 @@
  },
  "B7.2.1.1.3": {
   "strand": "2. LISTENING AND SPEAKING",
-  "sub_strand": "Sub-strand B7.2.1",
+  "sub_strand": "1. CONVERSATION/EVERYDAY DISCOURSE",
   "cs_code": "B7.2.1.1",
   "cs_desc": "Demonstrate use of appropriate language orally in specific situations",
   "ind_desc": "Use appropriate language orally to describe experiences about oneself and others",
@@ -188,7 +188,7 @@
  },
  "B7.2.1.1.4": {
   "strand": "2. LISTENING AND SPEAKING",
-  "sub_strand": "Sub-strand B7.2.1",
+  "sub_strand": "1. CONVERSATION/EVERYDAY DISCOURSE",
   "cs_code": "B7.2.1.1",
   "cs_desc": "Demonstrate use of appropriate language orally in specific situations",
   "ind_desc": "Listen to and give accurate directions to familiar places",
@@ -199,7 +199,7 @@
  },
  "B7.2.1.1.5": {
   "strand": "2. LISTENING AND SPEAKING",
-  "sub_strand": "Sub-strand B7.2.1",
+  "sub_strand": "1. CONVERSATION/EVERYDAY DISCOURSE",
   "cs_code": "B7.2.1.1",
   "cs_desc": "Demonstrate use of appropriate language orally in specific situations",
   "ind_desc": "Use techniques (voice modulation and eye contact) for effective oral communication",
@@ -210,7 +210,7 @@
  },
  "B7.2.2.1.1": {
   "strand": "2. LISTENING AND SPEAKING",
-  "sub_strand": "Sub-strand B7.2.2",
+  "sub_strand": "2. LISTENING COMPREHENSION",
   "cs_code": "B7.2.2.1",
   "cs_desc": "Demonstrate the ability to listen to extended reading and identify key information",
   "ind_desc": "Listen to a level-appropriate text attentively and identify key information",
@@ -221,7 +221,7 @@
  },
  "B7.2.2.1.2": {
   "strand": "2. LISTENING AND SPEAKING",
-  "sub_strand": "Sub-strand B7.2.2",
+  "sub_strand": "2. LISTENING COMPREHENSION",
   "cs_code": "B7.2.2.1",
   "cs_desc": "Demonstrate the ability to listen to extended reading and identify key information",
   "ind_desc": "Listen to, discuss ideas and share opinions from a level- appropriate text",
@@ -232,7 +232,7 @@
  },
  "B7.2.3.1.1": {
   "strand": "2. LISTENING AND SPEAKING",
-  "sub_strand": "Sub-strand B7.2.3",
+  "sub_strand": "3. SPEECH SOUNDS — VOWELS, CONSONANTS AND SYLLABLES",
   "cs_code": "B7.2.3.1",
   "cs_desc": "Recognise and sound vowels and consonants and read one syllable words of their linguistic community 2. Read two to three syllable words.",
   "ind_desc": "Identify and produce the vowels in the language of study",
@@ -243,7 +243,7 @@
  },
  "B7.2.3.1.2": {
   "strand": "2. LISTENING AND SPEAKING",
-  "sub_strand": "Sub-strand B7.2.3",
+  "sub_strand": "3. SPEECH SOUNDS — VOWELS, CONSONANTS AND SYLLABLES",
   "cs_code": "B7.2.3.1",
   "cs_desc": "Recognise and sound vowels and consonants and read one syllable words of their linguistic community 2. Read two to three syllable words.",
   "ind_desc": "Identify and produce the consonants in the language of study",
@@ -254,7 +254,7 @@
  },
  "B7.2.3.1.3": {
   "strand": "2. LISTENING AND SPEAKING",
-  "sub_strand": "Sub-strand B7.2.3",
+  "sub_strand": "3. SPEECH SOUNDS — VOWELS, CONSONANTS AND SYLLABLES",
   "cs_code": "B7.2.3.1",
   "cs_desc": "Recognise and sound vowels and consonants and read one syllable words of their linguistic community 2. Read two to three syllable words.",
   "ind_desc": "Identify and produce one to four syllable words of the language of study",
@@ -265,7 +265,7 @@
  },
  "B7.2.4.1.1": {
   "strand": "2. LISTENING AND SPEAKING",
-  "sub_strand": "Sub-strand B7.2.4",
+  "sub_strand": "4. TONE",
   "cs_code": "B7.2.4.1",
   "cs_desc": "Recognise the basic tones in their language",
   "ind_desc": "Identify and produce the basic tones in their language",
@@ -276,7 +276,7 @@
  },
  "B7.2.5.1.1": {
   "strand": "2. LISTENING AND SPEAKING",
-  "sub_strand": "Sub-strand B7.2.5",
+  "sub_strand": "5. VOCABULARY DEVELOPMENT (SIGHT AND CONTENT VOCABULARY)",
   "cs_code": "B7.2.5.1",
   "cs_desc": "Exhibit an understanding of recognising and producing words and using them in sentences",
   "ind_desc": "Identify and produce words in the home and school environments and use them to form meaningful sentences",
@@ -287,7 +287,7 @@
  },
  "B7.2.6.1.1": {
   "strand": "2. LISTENING AND SPEAKING",
-  "sub_strand": "Sub-strand B7.2.6",
+  "sub_strand": "6. PRESENTATION — EVERYDAY EXPERIENCE",
   "cs_code": "B7.2.6.1",
   "cs_desc": "Present information effectively on familiar topics using appropriate language",
   "ind_desc": "Describe daily activities using appropriate register, structure and gestures for the contest being presented",
@@ -298,7 +298,7 @@
  },
  "B7.3.1.1.1": {
   "strand": "3. READING",
-  "sub_strand": "Sub-strand B7.3.1",
+  "sub_strand": "1. READING",
   "cs_code": "B7.3.1.1",
   "cs_desc": "Understand the main ideas and supporting points in texts",
   "ind_desc": "Read and understand main ideas and supporting points in a range of texts on familiar and unfamiliar topics",
@@ -309,7 +309,7 @@
  },
  "B7.3.1.1.2": {
   "strand": "3. READING",
-  "sub_strand": "Sub-strand B7.3.1",
+  "sub_strand": "1. READING",
   "cs_code": "B7.3.1.1",
   "cs_desc": "Understand the main ideas and supporting points in texts",
   "ind_desc": "Read to understand and summarise the main ideas in a given grade level passage",
@@ -320,7 +320,7 @@
  },
  "B7.3.2.1.1": {
   "strand": "3. READING",
-  "sub_strand": "Sub-strand B7.3.2",
+  "sub_strand": "2. TRANSLATION",
   "cs_code": "B7.3.2.1",
   "cs_desc": "Demonstrate knowledge of translating words. Phrases and simple sentences",
   "ind_desc": "Translate words and phrases in his/her language",
@@ -331,7 +331,7 @@
  },
  "B7.4.1.1.1": {
   "strand": "4. LANGUAGE AND USAGE",
-  "sub_strand": "Sub-strand B7.4.1",
+  "sub_strand": "1. SENTENCES — SIMPLE, COMPOUND AND COMPLEX",
   "cs_code": "B7.4.1.1",
   "cs_desc": "Demonstrate knowledge and understanding of the components of sentences",
   "ind_desc": "Discuss the components of sentences",
@@ -342,7 +342,7 @@
  },
  "B7.4.1.1.2": {
   "strand": "4. LANGUAGE AND USAGE",
-  "sub_strand": "Sub-strand B7.4.1",
+  "sub_strand": "1. SENTENCES — SIMPLE, COMPOUND AND COMPLEX",
   "cs_code": "B7.4.1.1",
   "cs_desc": "Demonstrate knowledge and understanding of the components of sentences",
   "ind_desc": "Discuss the types of sentence structure (simple, compound and complex)",
@@ -353,7 +353,7 @@
  },
  "B7.4.1.1.3": {
   "strand": "4. LANGUAGE AND USAGE",
-  "sub_strand": "Sub-strand B7.4.1",
+  "sub_strand": "1. SENTENCES — SIMPLE, COMPOUND AND COMPLEX",
   "cs_code": "B7.4.1.1",
   "cs_desc": "Demonstrate knowledge and understanding of the components of sentences",
   "ind_desc": "Classify sentences according to functions (declarative, imperative and interrogative)",
@@ -364,7 +364,7 @@
  },
  "B7.4.2.1.1": {
   "strand": "4. LANGUAGE AND USAGE",
-  "sub_strand": "Sub-strand B7.4.2",
+  "sub_strand": "2. INTEGRATING GRAMMAR IN WRITTEN LANGUAGE (NOUNS, PRONOUNS AND ADJECTIVES)",
   "cs_code": "B7.4.2.1",
   "cs_desc": "Demonstrate knowledge of identifying and using the various forms of nouns (common, proper, collective), pronouns and adjectives in sentences and passages",
   "ind_desc": "Categorise nouns under common, proper and collective and use them correctly in speech and in texts",
@@ -375,7 +375,7 @@
  },
  "B7.4.2.1.2": {
   "strand": "4. LANGUAGE AND USAGE",
-  "sub_strand": "Sub-strand B7.4.2",
+  "sub_strand": "2. INTEGRATING GRAMMAR IN WRITTEN LANGUAGE (NOUNS, PRONOUNS AND ADJECTIVES)",
   "cs_code": "B7.4.2.1",
   "cs_desc": "Demonstrate knowledge of identifying and using the various forms of nouns (common, proper, collective), pronouns and adjectives in sentences and passages",
   "ind_desc": "Categorise pronouns according to their types and construct sentences with them",
@@ -386,7 +386,7 @@
  },
  "B7.4.2.1.3": {
   "strand": "4. LANGUAGE AND USAGE",
-  "sub_strand": "Sub-strand B7.4.2",
+  "sub_strand": "2. INTEGRATING GRAMMAR IN WRITTEN LANGUAGE (NOUNS, PRONOUNS AND ADJECTIVES)",
   "cs_code": "B7.4.2.1",
   "cs_desc": "Demonstrate knowledge of identifying and using the various forms of nouns (common, proper, collective), pronouns and adjectives in sentences and passages",
   "ind_desc": "Categorise adjectives into their types and construct simple sentences with them",
@@ -397,7 +397,7 @@
  },
  "B7.4.3.1.1": {
   "strand": "4. LANGUAGE AND USAGE",
-  "sub_strand": "Sub-strand B7.4.3",
+  "sub_strand": "3. INTEGRATING GRAMMAR IN WRITTEN LANGUAGE (VERBS, ADVERBS, CONJUNCTIONS, POSTPOSITIONS/PREPOSITIONS)",
   "cs_code": "B7.4.3.1",
   "cs_desc": "Recognise the use of verbs, adverbs, conjunctions and postpositions/ Prepositions in sentences",
   "ind_desc": "Identify and classify verbs into their types",
@@ -408,7 +408,7 @@
  },
  "B7.4.3.1.2": {
   "strand": "4. LANGUAGE AND USAGE",
-  "sub_strand": "Sub-strand B7.4.3",
+  "sub_strand": "3. INTEGRATING GRAMMAR IN WRITTEN LANGUAGE (VERBS, ADVERBS, CONJUNCTIONS, POSTPOSITIONS/PREPOSITIONS)",
   "cs_code": "B7.4.3.1",
   "cs_desc": "Recognise the use of verbs, adverbs, conjunctions and postpositions/ Prepositions in sentences",
   "ind_desc": "Identify and classify adverbs into their various types",
@@ -419,7 +419,7 @@
  },
  "B7.4.3.1.3": {
   "strand": "4. LANGUAGE AND USAGE",
-  "sub_strand": "Sub-strand B7.4.3",
+  "sub_strand": "3. INTEGRATING GRAMMAR IN WRITTEN LANGUAGE (VERBS, ADVERBS, CONJUNCTIONS, POSTPOSITIONS/PREPOSITIONS)",
   "cs_code": "B7.4.3.1",
   "cs_desc": "Recognise the use of verbs, adverbs, conjunctions and postpositions/ Prepositions in sentences",
   "ind_desc": "Identify and classify conjunctions and use them appropriately in a range of texts",
@@ -430,7 +430,7 @@
  },
  "B7.4.3.1.4": {
   "strand": "4. LANGUAGE AND USAGE",
-  "sub_strand": "Sub-strand B7.4.3",
+  "sub_strand": "3. INTEGRATING GRAMMAR IN WRITTEN LANGUAGE (VERBS, ADVERBS, CONJUNCTIONS, POSTPOSITIONS/PREPOSITIONS)",
   "cs_code": "B7.4.3.1",
   "cs_desc": "Recognise the use of verbs, adverbs, conjunctions and postpositions/ Prepositions in sentences",
   "ind_desc": "Explore the use of postpositions/prepositions appropriately and correctly in a range of texts",
@@ -441,7 +441,7 @@
  },
  "B7.4.4.1.1": {
   "strand": "4. LANGUAGE AND USAGE",
-  "sub_strand": "Sub-strand B7.4.4",
+  "sub_strand": "4. VOCABULARY, SPELLING AND PUNCTUATION",
   "cs_code": "B7.4.4.1",
   "cs_desc": "Demonstrate knowledge and understanding of vocabulary, spelling and punctuations in writing",
   "ind_desc": "Use vocabulary appropriately and correctly in writing",
@@ -452,7 +452,7 @@
  },
  "B7.4.4.1.2": {
   "strand": "4. LANGUAGE AND USAGE",
-  "sub_strand": "Sub-strand B7.4.4",
+  "sub_strand": "4. VOCABULARY, SPELLING AND PUNCTUATION",
   "cs_code": "B7.4.4.1",
   "cs_desc": "Demonstrate knowledge and understanding of vocabulary, spelling and punctuations in writing",
   "ind_desc": "Spell words related to home and school correctly",
@@ -463,7 +463,7 @@
  },
  "B7.4.4.1.3": {
   "strand": "4. LANGUAGE AND USAGE",
-  "sub_strand": "Sub-strand B7.4.4",
+  "sub_strand": "4. VOCABULARY, SPELLING AND PUNCTUATION",
   "cs_code": "B7.4.4.1",
   "cs_desc": "Demonstrate knowledge and understanding of vocabulary, spelling and punctuations in writing",
   "ind_desc": "Identify and use punctuations appropriately and correctly in writing",
@@ -474,7 +474,7 @@
  },
  "B7.5.1.1.1": {
   "strand": "5. COMPOSITION WRITING",
-  "sub_strand": "Sub-strand B7.5.1",
+  "sub_strand": "1. STRUCTURE AND ORGANISE IDEAS IN COMPOSITION WRITING",
   "cs_code": "B7.5.1.1",
   "cs_desc": "Demonstrate knowledge and understanding of the features of a paragraph and the various text types (narrative, descriptive, creative/free writing)",
   "ind_desc": "Discuss the features of a paragraph",
@@ -485,7 +485,7 @@
  },
  "B7.5.1.1.2": {
   "strand": "5. COMPOSITION WRITING",
-  "sub_strand": "Sub-strand B7.5.1",
+  "sub_strand": "1. STRUCTURE AND ORGANISE IDEAS IN COMPOSITION WRITING",
   "cs_code": "B7.5.1.1",
   "cs_desc": "Demonstrate knowledge and understanding of the features of a paragraph and the various text types (narrative, descriptive, creative/free writing)",
   "ind_desc": "Develop a three-paragraph essay using the features of a given text type",
@@ -496,7 +496,7 @@
  },
  "B7.6.1.1.1": {
   "strand": "6. LITERATURE",
-  "sub_strand": "Sub-strand B7.6.1",
+  "sub_strand": "1. FOLKTALES, SONGS, PROSE, DRAMA, POETRY",
   "cs_code": "B7.6.1.1",
   "cs_desc": "Demonstrate the knowledge and understanding of literature (Oral and Written).",
   "ind_desc": "Discuss the components of literature",
@@ -507,7 +507,7 @@
  },
  "B7.6.1.1.2": {
   "strand": "6. LITERATURE",
-  "sub_strand": "Sub-strand B7.6.1",
+  "sub_strand": "1. FOLKTALES, SONGS, PROSE, DRAMA, POETRY",
   "cs_code": "B7.6.1.1",
   "cs_desc": "Demonstrate the knowledge and understanding of literature (Oral and Written).",
   "ind_desc": "Discuss the components of oral literature (folktales and songs-lullabies and play songs)",
@@ -518,7 +518,7 @@
  },
  "B7.6.1.1.3": {
   "strand": "6. LITERATURE",
-  "sub_strand": "Sub-strand B7.6.1",
+  "sub_strand": "1. FOLKTALES, SONGS, PROSE, DRAMA, POETRY",
   "cs_code": "B7.6.1.1",
   "cs_desc": "Demonstrate the knowledge and understanding of literature (Oral and Written).",
   "ind_desc": "Discuss the components of written literature (prose, drama and poetry)",

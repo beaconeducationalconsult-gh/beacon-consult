@@ -1,7 +1,7 @@
 {
  "B8.1.1.1.1": {
   "strand": "1. DIVERSITY OF MATTER",
-  "sub_strand": "Sub-strand B8.1.1",
+  "sub_strand": "1. MATERIALS",
   "cs_code": "B8.1.1.1",
   "cs_desc": "Demonstrate knowledge of types of mixtures, and understanding of the processes of scientific ways of separating the components of mixtures",
   "ind_desc": "Identify types of mixtures by name and characteristics",
@@ -12,7 +12,7 @@
  },
  "B8.1.1.1.2": {
   "strand": "1. DIVERSITY OF MATTER",
-  "sub_strand": "Sub-strand B8.1.1",
+  "sub_strand": "1. MATERIALS",
   "cs_code": "B8.1.1.1",
   "cs_desc": "Demonstrate knowledge of types of mixtures, and understanding of the processes of scientific ways of separating the components of mixtures",
   "ind_desc": "Design and perform processes for separating kinds of mixtures",
@@ -23,7 +23,7 @@
  },
  "B8.1.1.2.1": {
   "strand": "1. DIVERSITY OF MATTER",
-  "sub_strand": "Sub-strand B8.1.1",
+  "sub_strand": "1. MATERIALS",
   "cs_code": "B8.1.1.2",
   "cs_desc": "Demonstrate understanding of atoms and the atomic structure of elements in the periodic table",
   "ind_desc": "Describe atoms as composed of sub-atomic particles",
@@ -34,7 +34,7 @@
  },
  "B8.1.1.2.2": {
   "strand": "1. DIVERSITY OF MATTER",
-  "sub_strand": "Sub-strand B8.1.1",
+  "sub_strand": "1. MATERIALS",
   "cs_code": "B8.1.1.2",
   "cs_desc": "Demonstrate understanding of atoms and the atomic structure of elements in the periodic table",
   "ind_desc": "Explain the arrangement of elements in terms of the number of protons in the nuclei of atoms of each element",
@@ -45,7 +45,7 @@
  },
  "B8.1.2.1.1": {
   "strand": "1. DIVERSITY OF MATTER",
-  "sub_strand": "Sub-strand B8.1.2",
+  "sub_strand": "2. LIVING CELLS",
   "cs_code": "B8.1.2.1",
   "cs_desc": "Demonstrate an understanding of the types of cells and their structure in relation to different organisms",
   "ind_desc": "Examine and describe the structure of prokaryotic and eukaryotic cells",
@@ -56,7 +56,7 @@
  },
  "B8.1.2.1.2": {
   "strand": "1. DIVERSITY OF MATTER",
-  "sub_strand": "Sub-strand B8.1.2",
+  "sub_strand": "2. LIVING CELLS",
   "cs_code": "B8.1.2.1",
   "cs_desc": "Demonstrate an understanding of the types of cells and their structure in relation to different organisms",
   "ind_desc": "Classify organisms (plants or animals) as prokaryotic or eukaryotic based on the type of cells they are made of",
@@ -67,7 +67,7 @@
  },
  "B8.2.1.1.1": {
   "strand": "2. CYCLES",
-  "sub_strand": "Sub-strand B8.2.1",
+  "sub_strand": "1. EARTH SCIENCE",
   "cs_code": "B8.2.1.1",
   "cs_desc": "Demonstrate understanding of the process of Carbon cycle as an example of repeated pattern of change in nature and how it relates to the environment",
   "ind_desc": "Explain the process of the carbon cycle",
@@ -78,7 +78,7 @@
  },
  "B8.2.1.1.2": {
   "strand": "2. CYCLES",
-  "sub_strand": "Sub-strand B8.2.1",
+  "sub_strand": "1. EARTH SCIENCE",
   "cs_code": "B8.2.1.1",
   "cs_desc": "Demonstrate understanding of the process of Carbon cycle as an example of repeated pattern of change in nature and how it relates to the environment",
   "ind_desc": "Describe the role of the carbon cycle to the environment",
@@ -89,7 +89,7 @@
  },
  "B8.2.2.1.1": {
   "strand": "2. CYCLES",
-  "sub_strand": "Sub-strand B8.2.2",
+  "sub_strand": "2. LIFE CYCLE OF ORGANISMS",
   "cs_code": "B8.2.2.1",
   "cs_desc": "Demonstrate an activity to show the life cycle of the Anopheles mosquito and show how the effects of the mosquito on humans can be managed",
   "ind_desc": "Describe the life cycle and economic importance of the Anopheles mosquito",
@@ -100,7 +100,7 @@
  },
  "B8.2.2.1.2": {
   "strand": "2. CYCLES",
-  "sub_strand": "Sub-strand B8.2.2",
+  "sub_strand": "2. LIFE CYCLE OF ORGANISMS",
   "cs_code": "B8.2.2.1",
   "cs_desc": "Demonstrate an activity to show the life cycle of the Anopheles mosquito and show how the effects of the mosquito on humans can be managed",
   "ind_desc": "Discuss the impact of the Anopheles mosquito on humans and how it can be controlled",
@@ -111,7 +111,7 @@
  },
  "B8.2.3.1.1": {
   "strand": "2. CYCLES",
-  "sub_strand": "Sub-strand B8.2.3",
+  "sub_strand": "3. CROP PRODUCTION",
   "cs_code": "B8.2.3.1",
   "cs_desc": "Demonstrate knowledge and skills in planting crops on different seed beds",
   "ind_desc": "Explore the different seed beds for planting crops in your community",
@@ -122,7 +122,7 @@
  },
  "B8.2.3.1.2": {
   "strand": "2. CYCLES",
-  "sub_strand": "Sub-strand B8.2.3",
+  "sub_strand": "3. CROP PRODUCTION",
   "cs_code": "B8.2.3.1",
   "cs_desc": "Demonstrate knowledge and skills in planting crops on different seed beds",
   "ind_desc": "Plant different types of crops on different seed beds",
@@ -133,7 +133,7 @@
  },
  "B8.2.3.2.1": {
   "strand": "2. CYCLES",
-  "sub_strand": "Sub-strand B8.2.3",
+  "sub_strand": "3. CROP PRODUCTION",
   "cs_code": "B8.2.3.2",
   "cs_desc": "Demonstrate understanding of the differences in height, size, and flowering of crops grown in different seed beds",
   "ind_desc": "Compare and contrast the differences in height, size, and flowering of crops grown in different seed beds",
@@ -144,7 +144,7 @@
  },
  "B8.2.4.1.1": {
   "strand": "2. CYCLES",
-  "sub_strand": "Sub-strand B8.2.4",
+  "sub_strand": "4. ANIMAL PRODUCTION",
   "cs_code": "B8.2.4.1",
   "cs_desc": "Recognise the different types of feed for different types of animals",
   "ind_desc": "Compare and contrast the different types of feed for different types of animals",
@@ -155,7 +155,7 @@
  },
  "B8.2.4.2.1": {
   "strand": "2. CYCLES",
-  "sub_strand": "Sub-strand B8.2.4",
+  "sub_strand": "4. ANIMAL PRODUCTION",
   "cs_code": "B8.2.4.2",
   "cs_desc": "Demonstrate understanding of the importance of water and animal feed to the growth of animals",
   "ind_desc": "Explain the importance of water and animal feed to the growth of animals",
@@ -166,7 +166,7 @@
  },
  "B8.3.1.1.1": {
   "strand": "3. SYSTEMS",
-  "sub_strand": "Sub-strand B8.3.1",
+  "sub_strand": "1. THE HUMAN BODY SYSTEM",
   "cs_code": "B8.3.1.1",
   "cs_desc": "Demonstrate knowledge of parts of mammalian tooth and the functions of the different types of teeth in relation to feeding in man",
   "ind_desc": "Identify parts of a mammalian tooth",
@@ -177,7 +177,7 @@
  },
  "B8.3.1.1.2": {
   "strand": "3. SYSTEMS",
-  "sub_strand": "Sub-strand B8.3.1",
+  "sub_strand": "1. THE HUMAN BODY SYSTEM",
   "cs_code": "B8.3.1.1",
   "cs_desc": "Demonstrate knowledge of parts of mammalian tooth and the functions of the different types of teeth in relation to feeding in man",
   "ind_desc": "Discuss the functions of the different types of teeth such as incisors, canines, premolars, and molars",
@@ -188,7 +188,7 @@
  },
  "B8.3.1.1.3": {
   "strand": "3. SYSTEMS",
-  "sub_strand": "Sub-strand B8.3.1",
+  "sub_strand": "1. THE HUMAN BODY SYSTEM",
   "cs_code": "B8.3.1.1",
   "cs_desc": "Demonstrate knowledge of parts of mammalian tooth and the functions of the different types of teeth in relation to feeding in man",
   "ind_desc": "Explain the causes and prevention of tooth and gum decay",
@@ -199,7 +199,7 @@
  },
  "B8.3.2.1.1": {
   "strand": "3. SYSTEMS",
-  "sub_strand": "Sub-strand B8.3.2",
+  "sub_strand": "2. THE SOLAR SYSTEM",
   "cs_code": "B8.3.2.1",
   "cs_desc": "Demonstrate knowledge of the outer planets of the solar system",
   "ind_desc": "Identify the outer planets of the solar system and describe their properties",
@@ -210,7 +210,7 @@
  },
  "B8.3.3.1.1": {
   "strand": "3. SYSTEMS",
-  "sub_strand": "Sub-strand B8.3.3",
+  "sub_strand": "3. ECOSYSTEM",
   "cs_code": "B8.3.3.1",
   "cs_desc": "Demonstrate an understanding of the interdependence of organisms in an ecosystem and their interaction",
   "ind_desc": "Explore the feeding relationships within an ecosystem",
@@ -221,7 +221,7 @@
  },
  "B8.3.4.1.1": {
   "strand": "3. SYSTEMS",
-  "sub_strand": "Sub-strand B8.3.4",
+  "sub_strand": "4. FARMING SYSTEMS",
   "cs_code": "B8.3.4.1",
   "cs_desc": "Demonstrate understanding of the different crop, animal and land combinations under various farming systems",
   "ind_desc": "Identify and describe the types of crops, animals and land combinations for the different farming systems",
@@ -232,7 +232,7 @@
  },
  "B8.3.4.1.2": {
   "strand": "3. SYSTEMS",
-  "sub_strand": "Sub-strand B8.3.4",
+  "sub_strand": "4. FARMING SYSTEMS",
   "cs_code": "B8.3.4.1",
   "cs_desc": "Demonstrate understanding of the different crop, animal and land combinations under various farming systems",
   "ind_desc": "Discuss the usefulness of the different crops and animals involved in the different farming systems",
@@ -243,7 +243,7 @@
  },
  "B8.4.1.1.1": {
   "strand": "4. FORCES AND ENERGY",
-  "sub_strand": "Sub-strand B8.4.1",
+  "sub_strand": "1. ENERGY",
   "cs_code": "B8.4.1.1",
   "cs_desc": "Demonstrate the skill to evaluate the conversion of energy from one form to another",
   "ind_desc": "Describe energy conversion",
@@ -254,7 +254,7 @@
  },
  "B8.4.1.1.2": {
   "strand": "4. FORCES AND ENERGY",
-  "sub_strand": "Sub-strand B8.4.1",
+  "sub_strand": "1. ENERGY",
   "cs_code": "B8.4.1.1",
   "cs_desc": "Demonstrate the skill to evaluate the conversion of energy from one form to another",
   "ind_desc": "Discuss the importance of conversion of energy",
@@ -265,7 +265,7 @@
  },
  "B8.4.1.2.1": {
   "strand": "4. FORCES AND ENERGY",
-  "sub_strand": "Sub-strand B8.4.1",
+  "sub_strand": "1. ENERGY",
   "cs_code": "B8.4.1.2",
   "cs_desc": "Show an understanding of the sources of renewable energy and how to manage these sources in a sustainable manner",
   "ind_desc": "Describe renewable and non-renewable forms of energy",
@@ -276,7 +276,7 @@
  },
  "B8.4.1.2.2": {
   "strand": "4. FORCES AND ENERGY",
-  "sub_strand": "Sub-strand B8.4.1",
+  "sub_strand": "1. ENERGY",
   "cs_code": "B8.4.1.2",
   "cs_desc": "Show an understanding of the sources of renewable energy and how to manage these sources in a sustainable manner",
   "ind_desc": "Demonstrate how to manage sources of renewable energy sustainably",
@@ -287,7 +287,7 @@
  },
  "B8.4.1.3.1": {
   "strand": "4. FORCES AND ENERGY",
-  "sub_strand": "Sub-strand B8.4.1",
+  "sub_strand": "1. ENERGY",
   "cs_code": "B8.4.1.3",
   "cs_desc": "Demonstrate an understanding of the relationship between heat and temperature",
   "ind_desc": "Discuss the differences and the relationship between heat and temperature in the environment",
@@ -298,7 +298,7 @@
  },
  "B8.4.2.1.1": {
   "strand": "4. FORCES AND ENERGY",
-  "sub_strand": "Sub-strand B8.4.2",
+  "sub_strand": "2. ELECTRICITY AND ELECTRONICS",
   "cs_code": "B8.4.2.1",
   "cs_desc": "Demonstrate knowledge of electricity transmission",
   "ind_desc": "Explain how electricity transmission occurs",
@@ -309,7 +309,7 @@
  },
  "B8.4.2.2.1": {
   "strand": "4. FORCES AND ENERGY",
-  "sub_strand": "Sub-strand B8.4.2",
+  "sub_strand": "2. ELECTRICITY AND ELECTRONICS",
   "cs_code": "B8.4.2.2",
   "cs_desc": "Demonstrate understanding of the functions of capacitors in relation to LEDs, Diodes and resistors in electronic circuits",
   "ind_desc": "Demonstrate the charging and discharging action of a capacitor in a DC electronic circuit",
@@ -320,7 +320,7 @@
  },
  "B8.4.3.1.1": {
   "strand": "4. FORCES AND ENERGY",
-  "sub_strand": "Sub-strand B8.4.3",
+  "sub_strand": "3. CONVERSION AND CONSERVATION OF ENERGY",
   "cs_code": "B8.4.3.1",
   "cs_desc": "Evaluate the impact of conversion of energy and energy conservation on the environment",
   "ind_desc": "Explain the importance of conversion of energy and energy conservation in daily life",
@@ -331,7 +331,7 @@
  },
  "B8.4.4.1.1": {
   "strand": "4. FORCES AND ENERGY",
-  "sub_strand": "Sub-strand B8.4.4",
+  "sub_strand": "4. FORCE AND MOTION",
   "cs_code": "B8.4.4.1",
   "cs_desc": "Demonstrate the production of magnet, domestic and industrial application of Magnetic force and its relationship with Newton’s Second law of motion and in everyday life",
   "ind_desc": "Demonstrate simple ways of making magnets and show how magnetic force can be applied in domestic and industrial activities",
@@ -342,7 +342,7 @@
  },
  "B8.4.4.1.2": {
   "strand": "4. FORCES AND ENERGY",
-  "sub_strand": "Sub-strand B8.4.4",
+  "sub_strand": "4. FORCE AND MOTION",
   "cs_code": "B8.4.4.1",
   "cs_desc": "Demonstrate the production of magnet, domestic and industrial application of Magnetic force and its relationship with Newton’s Second law of motion and in everyday life",
   "ind_desc": "Explain the relationship between magnetic force and Newton’s Second Law of motion; and show the law’s application to life",
@@ -353,7 +353,7 @@
  },
  "B8.4.4.2.1": {
   "strand": "4. FORCES AND ENERGY",
-  "sub_strand": "Sub-strand B8.4.4",
+  "sub_strand": "4. FORCE AND MOTION",
   "cs_code": "B8.4.4.2",
   "cs_desc": "Demonstrate understanding of complex machines and how they work",
   "ind_desc": "Identify complex machines and describe their functions in life",
@@ -364,7 +364,7 @@
  },
  "B8.4.5.1.1": {
   "strand": "4. FORCES AND ENERGY",
-  "sub_strand": "Sub-strand B8.4.5",
+  "sub_strand": "5. AGRICULTURAL TOOLS",
   "cs_code": "B8.4.5.1",
   "cs_desc": "Demonstrate knowledge and skills in the use of basic and simple agricultural tools for basic on-farm activities",
   "ind_desc": "Show and discuss the use of basic and simple agricultural tools for basic on-farm activities",
@@ -375,7 +375,7 @@
  },
  "B8.4.5.1.2": {
   "strand": "4. FORCES AND ENERGY",
-  "sub_strand": "Sub-strand B8.4.5",
+  "sub_strand": "5. AGRICULTURAL TOOLS",
   "cs_code": "B8.4.5.1",
   "cs_desc": "Demonstrate knowledge and skills in the use of basic and simple agricultural tools for basic on-farm activities",
   "ind_desc": "Engage in the use of basic and simple agricultural tools for basic farm activities",
@@ -386,7 +386,7 @@
  },
  "B8.5.1.1.1": {
   "strand": "5. HUMANS AND THE ENVIRONMENT",
-  "sub_strand": "Sub-strand B8.5.1",
+  "sub_strand": "1. WASTE MANAGEMENT",
   "cs_code": "B8.5.1.1",
   "cs_desc": "Demonstrate knowledge of waste management systems and apply it in an environment",
   "ind_desc": "in their communities. 2. Evaluate the waste management practices carried out in a community and present a report.,,,1: Ability to effectively define goals towards solving a problem",
@@ -397,7 +397,7 @@
  },
  "B8.5.1.1.2": {
   "strand": "5. HUMANS AND THE ENVIRONMENT",
-  "sub_strand": "Sub-strand B8.5.1",
+  "sub_strand": "1. WASTE MANAGEMENT",
   "cs_code": "B8.5.1.1",
   "cs_desc": "Demonstrate knowledge of waste management systems and apply it in an environment",
   "ind_desc": "Apply knowledge of waste management practices to manage waste in a community",
@@ -408,7 +408,7 @@
  },
  "B8.5.2.1.1": {
   "strand": "5. HUMANS AND THE ENVIRONMENT",
-  "sub_strand": "Sub-strand B8.5.2",
+  "sub_strand": "2. HUMAN HEALTH",
   "cs_code": "B8.5.2.1",
   "cs_desc": "Demonstrate knowledge of common communicable diseases, such as Hepatitis, of humans, causes, symptoms, effects and their prevention",
   "ind_desc": "Explain the symptoms, effects and prevention of common communicable diseases",
@@ -419,7 +419,7 @@
  },
  "B8.5.2.1.2": {
   "strand": "5. HUMANS AND THE ENVIRONMENT",
-  "sub_strand": "Sub-strand B8.5.2",
+  "sub_strand": "2. HUMAN HEALTH",
   "cs_code": "B8.5.2.1",
   "cs_desc": "Demonstrate knowledge of common communicable diseases, such as Hepatitis, of humans, causes, symptoms, effects and their prevention",
   "ind_desc": "Analyse the risk factors of communicable diseases",
@@ -430,7 +430,7 @@
  },
  "B8.5.2.2.1": {
   "strand": "5. HUMANS AND THE ENVIRONMENT",
-  "sub_strand": "Sub-strand B8.5.2",
+  "sub_strand": "2. HUMAN HEALTH",
   "cs_code": "B8.5.2.2",
   "cs_desc": "Demonstrate knowledge of the nature of selected bacterial diseases of humans, their causes, symptoms, effects and prevention",
   "ind_desc": "Explain the nature of bacterial diseases with special emphasis on food poisoning/gonorrhoea/ meningitis their causes, symptoms, effects on humans and prevention",
@@ -441,7 +441,7 @@
  },
  "B8.5.3.1.1": {
   "strand": "5. HUMANS AND THE ENVIRONMENT",
-  "sub_strand": "Sub-strand B8.5.3",
+  "sub_strand": "3. SCIENCE AND INDUSTRY",
   "cs_code": "B8.5.3.1",
   "cs_desc": "Demonstrate an understanding of connections among science, technology, innovation, society and the environment",
   "ind_desc": "Examine the relationship among science, technology, innovation and society",
@@ -452,7 +452,7 @@
  },
  "B8.5.4.1.1": {
   "strand": "5. HUMANS AND THE ENVIRONMENT",
-  "sub_strand": "Sub-strand B8.5.4",
+  "sub_strand": "4. CLIMATE CHANGE AND GREEN ECONOMY",
   "cs_code": "B8.5.4.1",
   "cs_desc": "Demonstrate an understanding of the effects of climate change in the world and greening of other tropical countries including Ghana",
   "ind_desc": "Explain the concept of climate change and its effect on the environment",
@@ -463,7 +463,7 @@
  },
  "B8.5.4.1.2": {
   "strand": "5. HUMANS AND THE ENVIRONMENT",
-  "sub_strand": "Sub-strand B8.5.4",
+  "sub_strand": "4. CLIMATE CHANGE AND GREEN ECONOMY",
   "cs_code": "B8.5.4.1",
   "cs_desc": "Demonstrate an understanding of the effects of climate change in the world and greening of other tropical countries including Ghana",
   "ind_desc": "Describe climate change and green economy actions",
@@ -474,7 +474,7 @@
  },
  "B8.5.5.1.1": {
   "strand": "5. HUMANS AND THE ENVIRONMENT",
-  "sub_strand": "Sub-strand B8.5.5",
+  "sub_strand": "5. UNDERSTANDING THE ENVIRONMENT",
   "cs_code": "B8.5.5.1",
   "cs_desc": "Demonstrate understanding of the differences among soils, plant roots, stems, leaves, flowers, and fruits of plants in the different environments",
   "ind_desc": "Discuss physical properties of soils",
@@ -485,7 +485,7 @@
  },
  "B8.5.5.1.2": {
   "strand": "5. HUMANS AND THE ENVIRONMENT",
-  "sub_strand": "Sub-strand B8.5.5",
+  "sub_strand": "5. UNDERSTANDING THE ENVIRONMENT",
   "cs_code": "B8.5.5.1",
   "cs_desc": "Demonstrate understanding of the differences among soils, plant roots, stems, leaves, flowers, and fruits of plants in the different environments",
   "ind_desc": "Analyse the physical properties of soils and soil water content and demonstrate their importance in crop production",
@@ -496,7 +496,7 @@
  },
  "B8.5.6.1.1": {
   "strand": "5. HUMANS AND THE ENVIRONMENT",
-  "sub_strand": "Sub-strand B8.5.6",
+  "sub_strand": "6. UNDERSTANDING THE ENVIRONMENT",
   "cs_code": "B8.5.6.1",
   "cs_desc": "Recognise the different types of rocks as origin of different types of soils",
   "ind_desc": "Observe and describe different types of rocks as origins of soils",

@@ -1,7 +1,7 @@
 {
  "B5.1.1.1.1": {
   "strand": "1. ORAL LANGUAGE (LISTENING AND SPEAKING)",
-  "sub_strand": "Sub-strand B5.1.1",
+  "sub_strand": "1. SONGS",
   "cs_code": "B5.1.1.1",
   "cs_desc": "Show an understanding of cradle songs/lullaby",
   "ind_desc": "Sing cradle songs/lullaby with the correct rhythms and discuss importance of cradle songs/lullaby to the baby, mother and caretaker",
@@ -12,7 +12,7 @@
  },
  "B5.1.3.1.1": {
   "strand": "1. ORAL LANGUAGE (LISTENING AND SPEAKING)",
-  "sub_strand": "Sub-strand B5.1.3",
+  "sub_strand": "3. Poems",
   "cs_code": "B5.1.3.1",
   "cs_desc": "Demonstrate knowledge and understanding of selected poems by discussing them",
   "ind_desc": "Explore a poem of about six to seven lines correctly",
@@ -23,7 +23,7 @@
  },
  "B5.1.3.1.2": {
   "strand": "1. ORAL LANGUAGE (LISTENING AND SPEAKING)",
-  "sub_strand": "Sub-strand B5.1.3",
+  "sub_strand": "3. Poems",
   "cs_code": "B5.1.3.1",
   "cs_desc": "Demonstrate knowledge and understanding of selected poems by discussing them",
   "ind_desc": "Recognise the key words in the poem and discuss the theme of the poem",
@@ -34,7 +34,7 @@
  },
  "B5.1.4.1.1": {
   "strand": "1. ORAL LANGUAGE (LISTENING AND SPEAKING)",
-  "sub_strand": "Sub-strand B5.1.4",
+  "sub_strand": "4. Listening and Story Telling",
   "cs_code": "B5.1.4.1",
   "cs_desc": "Demonstrate knowledge on the structure and features of folktales",
   "ind_desc": "Retell a folktale of about five scenes and discuss the moral/values of it",
@@ -45,7 +45,7 @@
  },
  "B5.1.4.1.2": {
   "strand": "1. ORAL LANGUAGE (LISTENING AND SPEAKING)",
-  "sub_strand": "Sub-strand B5.1.4",
+  "sub_strand": "4. Listening and Story Telling",
   "cs_code": "B5.1.4.1",
   "cs_desc": "Demonstrate knowledge on the structure and features of folktales",
   "ind_desc": "Recognise the characters in the folktales",
@@ -56,7 +56,7 @@
  },
  "B5.1.5.1.1": {
   "strand": "1. ORAL LANGUAGE (LISTENING AND SPEAKING)",
-  "sub_strand": "Sub-strand B5.1.5",
+  "sub_strand": "5. Dramatisation and Role Play",
   "cs_code": "B5.1.5.1",
   "cs_desc": "Demonstrate an understanding of how a story can be changed into a drama",
   "ind_desc": "Narrate a story of about six to seven characters and recognise the characters, setting and stage",
@@ -67,7 +67,7 @@
  },
  "B5.1.5.1.3": {
   "strand": "1. ORAL LANGUAGE (LISTENING AND SPEAKING)",
-  "sub_strand": "Sub-strand B5.1.5",
+  "sub_strand": "5. Dramatisation and Role Play",
   "cs_code": "B5.1.5.1",
   "cs_desc": "Demonstrate an understanding of how a story can be changed into a drama",
   "ind_desc": "Perform a drama of about six to seven characters",
@@ -78,7 +78,7 @@
  },
  "B5.1.6.1.1": {
   "strand": "1. ORAL LANGUAGE (LISTENING AND SPEAKING)",
-  "sub_strand": "Sub-strand B5.1.6",
+  "sub_strand": "6. Conversation",
   "cs_code": "B5.1.6.1",
   "cs_desc": "Name and discuss some basic items used at home and in school",
   "ind_desc": "Recognise and discuss items used at home",
@@ -89,7 +89,7 @@
  },
  "B5.1.6.1.2": {
   "strand": "1. ORAL LANGUAGE (LISTENING AND SPEAKING)",
-  "sub_strand": "Sub-strand B5.1.6",
+  "sub_strand": "6. Conversation",
   "cs_code": "B5.1.6.1",
   "cs_desc": "Name and discuss some basic items used at home and in school",
   "ind_desc": "Recognise and discuss things used at school",
@@ -100,7 +100,7 @@
  },
  "B5.1.6.1.3": {
   "strand": "1. ORAL LANGUAGE (LISTENING AND SPEAKING)",
-  "sub_strand": "Sub-strand B5.1.6",
+  "sub_strand": "6. Conversation",
   "cs_code": "B5.1.6.1",
   "cs_desc": "Name and discuss some basic items used at home and in school",
   "ind_desc": "Demonstrate how some of the items used at home and in school are maintained",
@@ -111,7 +111,7 @@
  },
  "B5.1.7.1.1": {
   "strand": "1. ORAL LANGUAGE (LISTENING AND SPEAKING)",
-  "sub_strand": "Sub-strand B5.1.7",
+  "sub_strand": "7. Talking about Oneself, Family, People and Places",
   "cs_code": "B5.1.7.1",
   "cs_desc": "Demonstrate knowledge on the recognition of expressions and behaviour that show courtesies",
   "ind_desc": "Demonstrate and say expressions that show courtesy",
@@ -122,7 +122,7 @@
  },
  "B5.1.7.1.3": {
   "strand": "1. ORAL LANGUAGE (LISTENING AND SPEAKING)",
-  "sub_strand": "Sub-strand B5.1.7",
+  "sub_strand": "7. Talking about Oneself, Family, People and Places",
   "cs_code": "B5.1.7.1",
   "cs_desc": "Demonstrate knowledge on the recognition of expressions and behaviour that show courtesies",
   "ind_desc": "Demonstrate non-verbal behaviour that depict courtesy",
@@ -133,7 +133,7 @@
  },
  "B5.1.9.1.1": {
   "strand": "1. ORAL LANGUAGE (LISTENING AND SPEAKING)",
-  "sub_strand": "Sub-strand B5.1.9",
+  "sub_strand": "9. Asking and Answering Questions",
   "cs_code": "B5.1.9.1",
   "cs_desc": "Demonstrate knowledge on understanding and use of polar question markers",
   "ind_desc": "Recognise and use polar question markers",
@@ -144,7 +144,7 @@
  },
  "B5.1.9.1.2": {
   "strand": "1. ORAL LANGUAGE (LISTENING AND SPEAKING)",
-  "sub_strand": "Sub-strand B5.1.9",
+  "sub_strand": "9. Asking and Answering Questions",
   "cs_code": "B5.1.9.1",
   "cs_desc": "Demonstrate knowledge on understanding and use of polar question markers",
   "ind_desc": "Explain and use polar question markers",
@@ -155,7 +155,7 @@
  },
  "B5.1.10.1.1": {
   "strand": "1. ORAL LANGUAGE (LISTENING AND SPEAKING)",
-  "sub_strand": "Sub-strand B5.1.10",
+  "sub_strand": "10. Giving and Following Commands/Instructions",
   "cs_code": "B5.1.10.1",
   "cs_desc": "Exhibit knowledge of understanding and use of landmarks in giving directions",
   "ind_desc": "Recognise landmarks in your area and other areas",
@@ -166,7 +166,7 @@
  },
  "B5.1.10.1.2": {
   "strand": "1. ORAL LANGUAGE (LISTENING AND SPEAKING)",
-  "sub_strand": "Sub-strand B5.1.10",
+  "sub_strand": "10. Giving and Following Commands/Instructions",
   "cs_code": "B5.1.10.1",
   "cs_desc": "Exhibit knowledge of understanding and use of landmarks in giving directions",
   "ind_desc": "Use landmarks to give directions",
@@ -177,7 +177,7 @@
  },
  "B5.1.11.1.1": {
   "strand": "1. ORAL LANGUAGE (LISTENING AND SPEAKING)",
-  "sub_strand": "Sub-strand B5.1.11",
+  "sub_strand": "11. Giving and Following Commands/Instructions",
   "cs_code": "B5.1.11.1",
   "cs_desc": "Demonstrate an understanding of the process of cleaning the home",
   "ind_desc": "Discuss things that make the home unclean",
@@ -188,7 +188,7 @@
  },
  "B5.1.11.1.2": {
   "strand": "1. ORAL LANGUAGE (LISTENING AND SPEAKING)",
-  "sub_strand": "Sub-strand B5.1.11",
+  "sub_strand": "11. Giving and Following Commands/Instructions",
   "cs_code": "B5.1.11.1",
   "cs_desc": "Demonstrate an understanding of the process of cleaning the home",
   "ind_desc": "Discuss the items used in cleaning the home",
@@ -199,7 +199,7 @@
  },
  "B5.1.11.1.3": {
   "strand": "1. ORAL LANGUAGE (LISTENING AND SPEAKING)",
-  "sub_strand": "Sub-strand B5.1.11",
+  "sub_strand": "11. Giving and Following Commands/Instructions",
   "cs_code": "B5.1.11.1",
   "cs_desc": "Demonstrate an understanding of the process of cleaning the home",
   "ind_desc": "Give reasons for cleaning the home",
@@ -210,7 +210,7 @@
  },
  "B5.2.4.1.1": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B5.2.4",
+  "sub_strand": "4. Phonics: Letter and sound knowledge",
   "cs_code": "B5.2.4.1",
   "cs_desc": "Demonstrate the ability to listen to and pronounce words with identical sounds from a list of words",
   "ind_desc": "Read and recognise words with familiar sounds",
@@ -221,7 +221,7 @@
  },
  "B5.2.4.1.2": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B5.2.4",
+  "sub_strand": "4. Phonics: Letter and sound knowledge",
   "cs_code": "B5.2.4.1",
   "cs_desc": "Demonstrate the ability to listen to and pronounce words with identical sounds from a list of words",
   "ind_desc": "Read and recognise diagraphs in words found in paragraphs",
@@ -232,7 +232,7 @@
  },
  "B5.2.4.1.3": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B5.2.4",
+  "sub_strand": "4. Phonics: Letter and sound knowledge",
   "cs_code": "B5.2.4.1",
   "cs_desc": "Demonstrate the ability to listen to and pronounce words with identical sounds from a list of words",
   "ind_desc": "Blend two or more syllables to form words and read them",
@@ -243,7 +243,7 @@
  },
  "B5.2.5.1.1": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B5.2.5",
+  "sub_strand": "5. Vocabulary (Sight and content vocabulary)",
   "cs_code": "B5.2.5.1",
   "cs_desc": "Show an understanding of recognising and reading about things in their environment",
   "ind_desc": "Read paragraphs of passages aloud with correct pronunciation and tone",
@@ -254,7 +254,7 @@
  },
  "B5.2.5.1.2": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B5.2.5",
+  "sub_strand": "5. Vocabulary (Sight and content vocabulary)",
   "cs_code": "B5.2.5.1",
   "cs_desc": "Show an understanding of recognising and reading about things in their environment",
   "ind_desc": "Read stories aloud with correct pronunciation and tone",
@@ -265,7 +265,7 @@
  },
  "B5.2.6.1.1": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B5.2.6",
+  "sub_strand": "6. Comprehension",
   "cs_code": "B5.2.6.1",
   "cs_desc": "Exhibit knowledge of answering questions based on texts presented",
   "ind_desc": "Explain the meaning of unfamiliar words in context",
@@ -276,7 +276,7 @@
  },
  "B5.2.7.1.1": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B5.2.7",
+  "sub_strand": "7. Silent Reading",
   "cs_code": "B5.2.7.1",
   "cs_desc": "Demonstrate knowledge on reading for comprehension",
   "ind_desc": "Explain the meaning of unfamiliar words in a text",
@@ -287,7 +287,7 @@
  },
  "B5.2.7.1.2": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B5.2.7",
+  "sub_strand": "7. Silent Reading",
   "cs_code": "B5.2.7.1",
   "cs_desc": "Demonstrate knowledge on reading for comprehension",
   "ind_desc": "Explain the meaning of figurative expression in a text and answer questions on the passage",
@@ -298,7 +298,7 @@
  },
  "B5.2.8.1.1": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B5.2.8",
+  "sub_strand": "8. Fluency",
   "cs_code": "B5.2.8.1",
   "cs_desc": "Exhibit the ability to read longer texts with minimal mistakes",
   "ind_desc": "Read longer texts with minimal mistakes",
@@ -309,7 +309,7 @@
  },
  "B5.2.8.1.2": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B5.2.8",
+  "sub_strand": "8. Fluency",
   "cs_code": "B5.2.8.1",
   "cs_desc": "Exhibit the ability to read longer texts with minimal mistakes",
   "ind_desc": "Read naturally.",
@@ -320,7 +320,7 @@
  },
  "B5.2.9.1.1": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B5.2.9",
+  "sub_strand": "9. Summarising",
   "cs_code": "B5.2.9.1",
   "cs_desc": "Show an understanding of how main ideas are extracted from a text",
   "ind_desc": "Give the summary of longer texts",
@@ -331,7 +331,7 @@
  },
  "B5.2.9.1.2": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B5.2.9",
+  "sub_strand": "9. Summarising",
   "cs_code": "B5.2.9.1",
   "cs_desc": "Show an understanding of how main ideas are extracted from a text",
   "ind_desc": "Write main ideas in a given text",
@@ -342,7 +342,7 @@
  },
  "B5.3.1.1.1": {
   "strand": "3. WRITING",
-  "sub_strand": "Sub-strand B5.3.1",
+  "sub_strand": "1. Penmanship/Handwriting",
   "cs_code": "B5.3.1.1",
   "cs_desc": "Exhibit knowledge in the use of full stops, commas and question marks appropriately in sentences; and write simple sentences boldly and clearly",
   "ind_desc": "Recognise the use of full stops at the end of a complete sentence, and to separate initials",
@@ -353,7 +353,7 @@
  },
  "B5.3.1.1.2": {
   "strand": "3. WRITING",
-  "sub_strand": "Sub-strand B5.3.1",
+  "sub_strand": "1. Penmanship/Handwriting",
   "cs_code": "B5.3.1.1",
   "cs_desc": "Exhibit knowledge in the use of full stops, commas and question marks appropriately in sentences; and write simple sentences boldly and clearly",
   "ind_desc": "Recognise that a comma is used to separate a list of items. It serves as a pause in sentences and speech",
@@ -364,7 +364,7 @@
  },
  "B5.3.1.1.3": {
   "strand": "3. WRITING",
-  "sub_strand": "Sub-strand B5.3.1",
+  "sub_strand": "1. Penmanship/Handwriting",
   "cs_code": "B5.3.1.1",
   "cs_desc": "Exhibit knowledge in the use of full stops, commas and question marks appropriately in sentences; and write simple sentences boldly and clearly",
   "ind_desc": "Recognise that a colon is used to list and explain a statement, or to mention a list of items",
@@ -375,7 +375,7 @@
  },
  "B5.3.1.1.4": {
   "strand": "3. WRITING",
-  "sub_strand": "Sub-strand B5.3.1",
+  "sub_strand": "1. Penmanship/Handwriting",
   "cs_code": "B5.3.1.1",
   "cs_desc": "Exhibit knowledge in the use of full stops, commas and question marks appropriately in sentences; and write simple sentences boldly and clearly",
   "ind_desc": "Recognise that quotation marks are used when you want to write or quote the same words a person said or wrote",
@@ -386,7 +386,7 @@
  },
  "B5.3.1.1.5": {
   "strand": "3. WRITING",
-  "sub_strand": "Sub-strand B5.3.1",
+  "sub_strand": "1. Penmanship/Handwriting",
   "cs_code": "B5.3.1.1",
   "cs_desc": "Exhibit knowledge in the use of full stops, commas and question marks appropriately in sentences; and write simple sentences boldly and clearly",
   "ind_desc": "Write simple sentences",
@@ -397,7 +397,7 @@
  },
  "B5.4.1.1.1": {
   "strand": "4. COMPOSITION WRITING",
-  "sub_strand": "Sub-strand B5.4.1",
+  "sub_strand": "1. Narrative Writing",
   "cs_code": "B5.4.1.1",
   "cs_desc": "Comprehend and use punctuation marks in narrative writing",
   "ind_desc": "Recognise and use commas, full stops, and question marks appropriately in narrative writing",
@@ -408,7 +408,7 @@
  },
  "B5.4.1.1.2": {
   "strand": "4. COMPOSITION WRITING",
-  "sub_strand": "Sub-strand B5.4.1",
+  "sub_strand": "1. Narrative Writing",
   "cs_code": "B5.4.1.1",
   "cs_desc": "Comprehend and use punctuation marks in narrative writing",
   "ind_desc": "Understand and use exclamation mark in narrative writing appropriately",
@@ -419,7 +419,7 @@
  },
  "B5.4.1.1.3": {
   "strand": "4. COMPOSITION WRITING",
-  "sub_strand": "Sub-strand B5.4.1",
+  "sub_strand": "1. Narrative Writing",
   "cs_code": "B5.4.1.1",
   "cs_desc": "Comprehend and use punctuation marks in narrative writing",
   "ind_desc": "Know the appropriate use of colon and quotation marks in narrative writing",
@@ -430,7 +430,7 @@
  },
  "B5.4.2.1.1": {
   "strand": "4. COMPOSITION WRITING",
-  "sub_strand": "Sub-strand B5.4.2",
+  "sub_strand": "2. Creative/ Free Writing",
   "cs_code": "B5.4.2.1",
   "cs_desc": "Show an understanding of creating and writing longer stories on their own",
   "ind_desc": "Write a short story on their own",
@@ -441,7 +441,7 @@
  },
  "B5.4.2.1.2": {
   "strand": "4. COMPOSITION WRITING",
-  "sub_strand": "Sub-strand B5.4.2",
+  "sub_strand": "2. Creative/ Free Writing",
   "cs_code": "B5.4.2.1",
   "cs_desc": "Show an understanding of creating and writing longer stories on their own",
   "ind_desc": "Write an imaginative longer story on their own",
@@ -452,7 +452,7 @@
  },
  "B5.4.2.1.3": {
   "strand": "4. COMPOSITION WRITING",
-  "sub_strand": "Sub-strand B5.4.2",
+  "sub_strand": "2. Creative/ Free Writing",
   "cs_code": "B5.4.2.1",
   "cs_desc": "Show an understanding of creating and writing longer stories on their own",
   "ind_desc": "Create a story that relates to their environment",
@@ -463,7 +463,7 @@
  },
  "B5.4.3.1.1": {
   "strand": "4. COMPOSITION WRITING",
-  "sub_strand": "Sub-strand B5.4.3",
+  "sub_strand": "3. Descriptive Writing",
   "cs_code": "B5.4.3.1",
   "cs_desc": "Exhibit knowledge of writing descriptive essays using controlled composition or on their own",
   "ind_desc": "Write simple descriptive essays about human beings using controlled composition",
@@ -474,7 +474,7 @@
  },
  "B5.4.3.1.2": {
   "strand": "4. COMPOSITION WRITING",
-  "sub_strand": "Sub-strand B5.4.3",
+  "sub_strand": "3. Descriptive Writing",
   "cs_code": "B5.4.3.1",
   "cs_desc": "Exhibit knowledge of writing descriptive essays using controlled composition or on their own",
   "ind_desc": "Give simple descriptive essays about objects using controlled composition",
@@ -485,7 +485,7 @@
  },
  "B5.4.3.1.3": {
   "strand": "4. COMPOSITION WRITING",
-  "sub_strand": "Sub-strand B5.4.3",
+  "sub_strand": "3. Descriptive Writing",
   "cs_code": "B5.4.3.1",
   "cs_desc": "Exhibit knowledge of writing descriptive essays using controlled composition or on their own",
   "ind_desc": "Write their own simple descriptive essays on given topics",
@@ -496,7 +496,7 @@
  },
  "B5.4.4.1.1": {
   "strand": "4. COMPOSITION WRITING",
-  "sub_strand": "Sub-strand B5.4.4",
+  "sub_strand": "4. Persuasive Writing",
   "cs_code": "B5.4.4.1",
   "cs_desc": "Exhibit knowledge of writing simple persuasive essays using controlled composition on their own",
   "ind_desc": "Write a simple persuasive essay through controlled composition",
@@ -507,7 +507,7 @@
  },
  "B5.4.4.1.2": {
   "strand": "4. COMPOSITION WRITING",
-  "sub_strand": "Sub-strand B5.4.4",
+  "sub_strand": "4. Persuasive Writing",
   "cs_code": "B5.4.4.1",
   "cs_desc": "Exhibit knowledge of writing simple persuasive essays using controlled composition on their own",
   "ind_desc": "Write simple persuasive essays about domestic issues",
@@ -518,7 +518,7 @@
  },
  "B5.4.4.1.3": {
   "strand": "4. COMPOSITION WRITING",
-  "sub_strand": "Sub-strand B5.4.4",
+  "sub_strand": "4. Persuasive Writing",
   "cs_code": "B5.4.4.1",
   "cs_desc": "Exhibit knowledge of writing simple persuasive essays using controlled composition on their own",
   "ind_desc": "Write persuasive essays on given topics",
@@ -529,7 +529,7 @@
  },
  "B5.4.5.1.1": {
   "strand": "4. COMPOSITION WRITING",
-  "sub_strand": "Sub-strand B5.4.5",
+  "sub_strand": "5. Argumentative Writing",
   "cs_code": "B5.4.5.1",
   "cs_desc": "Exhibit knowledge and understanding of good argumentative essays by gathering information",
   "ind_desc": "Gather information for the writing of good argumentative essays",
@@ -540,7 +540,7 @@
  },
  "B5.4.5.1.2": {
   "strand": "4. COMPOSITION WRITING",
-  "sub_strand": "Sub-strand B5.4.5",
+  "sub_strand": "5. Argumentative Writing",
   "cs_code": "B5.4.5.1",
   "cs_desc": "Exhibit knowledge and understanding of good argumentative essays by gathering information",
   "ind_desc": "Comprehend and discuss how to write for or against a motion in an argumentative essay",
@@ -551,7 +551,7 @@
  },
  "B5.4.5.1.3": {
   "strand": "4. COMPOSITION WRITING",
-  "sub_strand": "Sub-strand B5.4.5",
+  "sub_strand": "5. Argumentative Writing",
   "cs_code": "B5.4.5.1",
   "cs_desc": "Exhibit knowledge and understanding of good argumentative essays by gathering information",
   "ind_desc": "Write a simple argumentative essay on a given topic",
@@ -562,7 +562,7 @@
  },
  "B5.4.6.1.1": {
   "strand": "4. COMPOSITION WRITING",
-  "sub_strand": "Sub-strand B5.4.6",
+  "sub_strand": "6. Informative/ Academic Writing",
   "cs_code": "B5.4.6.1",
   "cs_desc": "Demonstrate knowledge of creating a journal",
   "ind_desc": "Write articles for a journal and edit the articles",
@@ -573,7 +573,7 @@
  },
  "B5.4.6.1.2": {
   "strand": "4. COMPOSITION WRITING",
-  "sub_strand": "Sub-strand B5.4.6",
+  "sub_strand": "6. Informative/ Academic Writing",
   "cs_code": "B5.4.6.1",
   "cs_desc": "Demonstrate knowledge of creating a journal",
   "ind_desc": "Publish and appreciate the articles in the journal",
@@ -584,7 +584,7 @@
  },
  "B5.4.7.1.1": {
   "strand": "4. COMPOSITION WRITING",
-  "sub_strand": "Sub-strand B5.4.7",
+  "sub_strand": "7. Literary Writing",
   "cs_code": "B5.4.7.1",
   "cs_desc": "Demonstrate knowledge of creating short literary works",
   "ind_desc": "Write short poems",
@@ -595,7 +595,7 @@
  },
  "B5.4.7.1.2": {
   "strand": "4. COMPOSITION WRITING",
-  "sub_strand": "Sub-strand B5.4.7",
+  "sub_strand": "7. Literary Writing",
   "cs_code": "B5.4.7.1",
   "cs_desc": "Demonstrate knowledge of creating short literary works",
   "ind_desc": "Create short prose",
@@ -606,7 +606,7 @@
  },
  "B5.4.7.1.3": {
   "strand": "4. COMPOSITION WRITING",
-  "sub_strand": "Sub-strand B5.4.7",
+  "sub_strand": "7. Literary Writing",
   "cs_code": "B5.4.7.1",
   "cs_desc": "Demonstrate knowledge of creating short literary works",
   "ind_desc": "Write a short and simple play",
@@ -617,7 +617,7 @@
  },
  "B5.4.8.1.1": {
   "strand": "4. COMPOSITION WRITING",
-  "sub_strand": "Sub-strand B5.4.8",
+  "sub_strand": "8. Letter Writing",
   "cs_code": "B5.4.8.1",
   "cs_desc": "Exhibit knowledge in the writing of semi- formal letters",
   "ind_desc": "Comprehend and discuss the process in writing good semi-formal letters",
@@ -628,7 +628,7 @@
  },
  "B5.4.8.1.2": {
   "strand": "4. COMPOSITION WRITING",
-  "sub_strand": "Sub-strand B5.4.8",
+  "sub_strand": "8. Letter Writing",
   "cs_code": "B5.4.8.1",
   "cs_desc": "Exhibit knowledge in the writing of semi- formal letters",
   "ind_desc": "Write semi-formal letters using controlled composition",
@@ -639,7 +639,7 @@
  },
  "B5.4.8.1.3": {
   "strand": "4. COMPOSITION WRITING",
-  "sub_strand": "Sub-strand B5.4.8",
+  "sub_strand": "8. Letter Writing",
   "cs_code": "B5.4.8.1",
   "cs_desc": "Exhibit knowledge in the writing of semi- formal letters",
   "ind_desc": "Write good semi-formal letters",
@@ -650,7 +650,7 @@
  },
  "B5.5.1.1.1": {
   "strand": "5. WRITING CONVENTIONS/ USAGE",
-  "sub_strand": "Sub-strand B5.5.1",
+  "sub_strand": "1. Integrating Grammar in Written Language (capitalization)",
   "cs_code": "B5.5.1.1",
   "cs_desc": "Show an understanding in the use of capital letters appropriately",
   "ind_desc": "Understand that capital letters begin proper nouns",
@@ -661,7 +661,7 @@
  },
  "B5.5.1.1.2": {
   "strand": "5. WRITING CONVENTIONS/ USAGE",
-  "sub_strand": "Sub-strand B5.5.1",
+  "sub_strand": "1. Integrating Grammar in Written Language (capitalization)",
   "cs_code": "B5.5.1.1",
   "cs_desc": "Show an understanding in the use of capital letters appropriately",
   "ind_desc": "Comprehend the use of capital letters after a colon",
@@ -672,7 +672,7 @@
  },
  "B5.5.1.1.3": {
   "strand": "5. WRITING CONVENTIONS/ USAGE",
-  "sub_strand": "Sub-strand B5.5.1",
+  "sub_strand": "1. Integrating Grammar in Written Language (capitalization)",
   "cs_code": "B5.5.1.1",
   "cs_desc": "Show an understanding in the use of capital letters appropriately",
   "ind_desc": "Understand the use of capital letters after a question mark",
@@ -683,7 +683,7 @@
  },
  "B5.5.2.1.1": {
   "strand": "5. WRITING CONVENTIONS/ USAGE",
-  "sub_strand": "Sub-strand B5.5.2",
+  "sub_strand": "2. Integrating Grammar in Written Language (Punctuation)",
   "cs_code": "B5.5.2.1",
   "cs_desc": "Demonstrate knowledge in the use of punctuation marks in passages",
   "ind_desc": "Recognise and use commas, full stops, and question marks appropriately in writing",
@@ -694,7 +694,7 @@
  },
  "B5.5.2.1.2": {
   "strand": "5. WRITING CONVENTIONS/ USAGE",
-  "sub_strand": "Sub-strand B5.5.2",
+  "sub_strand": "2. Integrating Grammar in Written Language (Punctuation)",
   "cs_code": "B5.5.2.1",
   "cs_desc": "Demonstrate knowledge in the use of punctuation marks in passages",
   "ind_desc": "Understand and use exclamation mark in writing appropriately",
@@ -705,7 +705,7 @@
  },
  "B5.5.2.1.3": {
   "strand": "5. WRITING CONVENTIONS/ USAGE",
-  "sub_strand": "Sub-strand B5.5.2",
+  "sub_strand": "2. Integrating Grammar in Written Language (Punctuation)",
   "cs_code": "B5.5.2.1",
   "cs_desc": "Demonstrate knowledge in the use of punctuation marks in passages",
   "ind_desc": "Use colon and quotation marks in writing appropriately",
@@ -716,7 +716,7 @@
  },
  "B5.5.3.1.1": {
   "strand": "5. WRITING CONVENTIONS/ USAGE",
-  "sub_strand": "Sub-strand B5.5.3",
+  "sub_strand": "3. Integrating Grammar in Written Language (Use of action words)",
   "cs_code": "B5.5.3.1",
   "cs_desc": "Demonstrate knowledge on use of action words appropriately",
   "ind_desc": "Recognise and use simple present tense action words in sentences",
@@ -727,7 +727,7 @@
  },
  "B5.5.3.1.2": {
   "strand": "5. WRITING CONVENTIONS/ USAGE",
-  "sub_strand": "Sub-strand B5.5.3",
+  "sub_strand": "3. Integrating Grammar in Written Language (Use of action words)",
   "cs_code": "B5.5.3.1",
   "cs_desc": "Demonstrate knowledge on use of action words appropriately",
   "ind_desc": "Use simple past tense action words in sentences",
@@ -738,7 +738,7 @@
  },
  "B5.5.4.1.1": {
   "strand": "5. WRITING CONVENTIONS/ USAGE",
-  "sub_strand": "Sub-strand B5.5.4",
+  "sub_strand": "4. Integrating Grammar in Written Language (Use of qualifying words)",
   "cs_code": "B5.5.4.1",
   "cs_desc": "Demonstrate knowledge in the use of adjectives and adverbs",
   "ind_desc": "Recognise and use the types of adjectives (dimension, colour, age)",
@@ -749,7 +749,7 @@
  },
  "B5.5.4.1.2": {
   "strand": "5. WRITING CONVENTIONS/ USAGE",
-  "sub_strand": "Sub-strand B5.5.4",
+  "sub_strand": "4. Integrating Grammar in Written Language (Use of qualifying words)",
   "cs_code": "B5.5.4.1",
   "cs_desc": "Demonstrate knowledge in the use of adjectives and adverbs",
   "ind_desc": "Use of comparative and superlative words/adjectives forms in sentences",
@@ -760,7 +760,7 @@
  },
  "B5.5.5.1.1": {
   "strand": "5. WRITING CONVENTIONS/ USAGE",
-  "sub_strand": "Sub-strand B5.5.5",
+  "sub_strand": "5. Integrating Grammar in Written Language (Use of postpositions)",
   "cs_code": "B5.5.5.1",
   "cs_desc": "Demonstrate the use of postpositions",
   "ind_desc": "Recognise and use postpositions in complex sentences",
@@ -771,7 +771,7 @@
  },
  "B5.5.5.1.3": {
   "strand": "5. WRITING CONVENTIONS/ USAGE",
-  "sub_strand": "Sub-strand B5.5.5",
+  "sub_strand": "5. Integrating Grammar in Written Language (Use of postpositions)",
   "cs_code": "B5.5.5.1",
   "cs_desc": "Demonstrate the use of postpositions",
   "ind_desc": "Recognise postpositions in paragraphs",
@@ -782,7 +782,7 @@
  },
  "B5.5.6.1.1": {
   "strand": "5. WRITING CONVENTIONS/ USAGE",
-  "sub_strand": "Sub-strand B5.5.6",
+  "sub_strand": "6. Integrating Grammar in Written Language (Use of simple and compound sentences)",
   "cs_code": "B5.5.6.1",
   "cs_desc": "Exhibit knowledge in the use of conjunctions in forming compound sentences",
   "ind_desc": "Recognise single conjunctions such as “but” and “because” in compound sentences",
@@ -793,7 +793,7 @@
  },
  "B5.5.6.1.2": {
   "strand": "5. WRITING CONVENTIONS/ USAGE",
-  "sub_strand": "Sub-strand B5.5.6",
+  "sub_strand": "6. Integrating Grammar in Written Language (Use of simple and compound sentences)",
   "cs_code": "B5.5.6.1",
   "cs_desc": "Exhibit knowledge in the use of conjunctions in forming compound sentences",
   "ind_desc": "Use single conjunctions in forming compound sentences",
@@ -804,7 +804,7 @@
  },
  "B5.5.6.1.3": {
   "strand": "5. WRITING CONVENTIONS/ USAGE",
-  "sub_strand": "Sub-strand B5.5.6",
+  "sub_strand": "6. Integrating Grammar in Written Language (Use of simple and compound sentences)",
   "cs_code": "B5.5.6.1",
   "cs_desc": "Exhibit knowledge in the use of conjunctions in forming compound sentences",
   "ind_desc": "Form compound sentences with appropriate conjunctions",
@@ -815,7 +815,7 @@
  },
  "B5.5.7.1.1": {
   "strand": "5. WRITING CONVENTIONS/ USAGE",
-  "sub_strand": "Sub-strand B5.5.7",
+  "sub_strand": "7. Integrating Grammar in Written Language (Spelling)",
   "cs_code": "B5.5.7.1",
   "cs_desc": "Recognise and spell out words correctly",
   "ind_desc": "Write eight and nine-letter words correctly",
@@ -826,7 +826,7 @@
  },
  "B5.5.7.1.2": {
   "strand": "5. WRITING CONVENTIONS/ USAGE",
-  "sub_strand": "Sub-strand B5.5.7",
+  "sub_strand": "7. Integrating Grammar in Written Language (Spelling)",
   "cs_code": "B5.5.7.1",
   "cs_desc": "Recognise and spell out words correctly",
   "ind_desc": "Rearrange letters to form new words",
@@ -837,7 +837,7 @@
  },
  "B5.5.7.1.3": {
   "strand": "5. WRITING CONVENTIONS/ USAGE",
-  "sub_strand": "Sub-strand B5.5.7",
+  "sub_strand": "7. Integrating Grammar in Written Language (Spelling)",
   "cs_code": "B5.5.7.1",
   "cs_desc": "Recognise and spell out words correctly",
   "ind_desc": "Fill in missing words from passages",
@@ -848,7 +848,7 @@
  },
  "B5.5.8.1.1": {
   "strand": "5. WRITING CONVENTIONS/ USAGE",
-  "sub_strand": "Sub-strand B5.5.8",
+  "sub_strand": "8. Integrating Grammar in Written Language( Conjunctions )",
   "cs_code": "B5.5.8.1",
   "cs_desc": "Apply the knowledge on the use of conjunctions in writing sentences",
   "ind_desc": "Identify conjunctions (because, since, so, although etc.) appropriately in sentences to give reasons, link contrasting ideas and show results",
@@ -859,7 +859,7 @@
  },
  "B5.6.1.1.1": {
   "strand": "6. EXTENSIVE READING/CHILDREN’S LITERATURE/ LIBRARY",
-  "sub_strand": "Sub-strand B5.6.1",
+  "sub_strand": "1. Building the Love and Culture of Reading in Learners",
   "cs_code": "B5.6.1.1",
   "cs_desc": "Exhibit the ability to read other materials like newspapers, novels, other than the class Reader alone",
   "ind_desc": "Read aloud passages from novels and newspapers with correct pronunciation and tone",
@@ -870,7 +870,7 @@
  },
  "B5.6.1.1.2": {
   "strand": "6. EXTENSIVE READING/CHILDREN’S LITERATURE/ LIBRARY",
-  "sub_strand": "Sub-strand B5.6.1",
+  "sub_strand": "1. Building the Love and Culture of Reading in Learners",
   "cs_code": "B5.6.1.1",
   "cs_desc": "Exhibit the ability to read other materials like newspapers, novels, other than the class Reader alone",
   "ind_desc": "Demonstrate correct speech, rhythm and tone",
@@ -881,7 +881,7 @@
  },
  "B5.6.2.1.1": {
   "strand": "6. EXTENSIVE READING/CHILDREN’S LITERATURE/ LIBRARY",
-  "sub_strand": "Sub-strand B5.6.2",
+  "sub_strand": "2. Read Aloud with Children",
   "cs_code": "B5.6.2.1",
   "cs_desc": "Exhibit knowledge in reading sentences, paragraphs and stories aloud",
   "ind_desc": "Read aloud passages with correct pronunciation and tone",
@@ -892,7 +892,7 @@
  },
  "B5.6.2.1.2": {
   "strand": "6. EXTENSIVE READING/CHILDREN’S LITERATURE/ LIBRARY",
-  "sub_strand": "Sub-strand B5.6.2",
+  "sub_strand": "2. Read Aloud with Children",
   "cs_code": "B5.6.2.1",
   "cs_desc": "Exhibit knowledge in reading sentences, paragraphs and stories aloud",
   "ind_desc": "Demonstrate correct speech, rhythm and tone",
@@ -903,7 +903,7 @@
  },
  "B5.6.3.1.1": {
   "strand": "6. EXTENSIVE READING/CHILDREN’S LITERATURE/ LIBRARY",
-  "sub_strand": "Sub-strand B5.6.3",
+  "sub_strand": "3. Reading Texts , Poems , Narrative, and Short Stories and Respond to them",
   "cs_code": "B5.6.3.1",
   "cs_desc": "Demonstrate knowledge in reading materials other than the reader provided in class with understanding",
   "ind_desc": "Read short texts, narratives or stories from other materials with correct intonation/tone",
@@ -914,7 +914,7 @@
  },
  "B5.6.3.1.2": {
   "strand": "6. EXTENSIVE READING/CHILDREN’S LITERATURE/ LIBRARY",
-  "sub_strand": "Sub-strand B5.6.3",
+  "sub_strand": "3. Reading Texts , Poems , Narrative, and Short Stories and Respond to them",
   "cs_code": "B5.6.3.1",
   "cs_desc": "Demonstrate knowledge in reading materials other than the reader provided in class with understanding",
   "ind_desc": "Answer questions on the narratives/passage read",
@@ -925,7 +925,7 @@
  },
  "B5.6.3.1.3": {
   "strand": "6. EXTENSIVE READING/CHILDREN’S LITERATURE/ LIBRARY",
-  "sub_strand": "Sub-strand B5.6.3",
+  "sub_strand": "3. Reading Texts , Poems , Narrative, and Short Stories and Respond to them",
   "cs_code": "B5.6.3.1",
   "cs_desc": "Demonstrate knowledge in reading materials other than the reader provided in class with understanding",
   "ind_desc": "Retell the short stories or narratives read",
@@ -936,7 +936,7 @@
  },
  "B5.6.3.1.4": {
   "strand": "6. EXTENSIVE READING/CHILDREN’S LITERATURE/ LIBRARY",
-  "sub_strand": "Sub-strand B5.6.3",
+  "sub_strand": "3. Reading Texts , Poems , Narrative, and Short Stories and Respond to them",
   "cs_code": "B5.6.3.1",
   "cs_desc": "Demonstrate knowledge in reading materials other than the reader provided in class with understanding",
   "ind_desc": "Read paragraphs, passages and stories of different texts",
@@ -947,7 +947,7 @@
  },
  "B5.6.3.1.5": {
   "strand": "6. EXTENSIVE READING/CHILDREN’S LITERATURE/ LIBRARY",
-  "sub_strand": "Sub-strand B5.6.3",
+  "sub_strand": "3. Reading Texts , Poems , Narrative, and Short Stories and Respond to them",
   "cs_code": "B5.6.3.1",
   "cs_desc": "Demonstrate knowledge in reading materials other than the reader provided in class with understanding",
   "ind_desc": "Answer factual questions based on the passage read",
@@ -958,7 +958,7 @@
  },
  "B5.6.3.1.6": {
   "strand": "6. EXTENSIVE READING/CHILDREN’S LITERATURE/ LIBRARY",
-  "sub_strand": "Sub-strand B5.6.3",
+  "sub_strand": "3. Reading Texts , Poems , Narrative, and Short Stories and Respond to them",
   "cs_code": "B5.6.3.1",
   "cs_desc": "Demonstrate knowledge in reading materials other than the reader provided in class with understanding",
   "ind_desc": "Write a summary of passage/text read",
@@ -969,7 +969,7 @@
  },
  "B5.2.6.1.2": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B5.2.6",
+  "sub_strand": "6. Comprehension",
   "cs_code": "B5.2.6.1",
   "cs_desc": "Exhibit knowledge of answering questions based on texts presented",
   "ind_desc": "Answer factual and inferential questions.",

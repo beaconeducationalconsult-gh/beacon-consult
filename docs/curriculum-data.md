@@ -63,6 +63,18 @@ read from, is in `data/audit/label_form_text.json`. The one shape that *was* fab
 notation example — was removed on 2026-09-19: four records, all in the reference layer
 (TODO P1-10).
 
+**The sub-strand names came from the print as well.** 3,679 served indicators carried
+`Sub-strand B4.1.1` where the curriculum sets a name once per block, above the table;
+`scripts/fix_sub_strand_names.py` (P1-12, 2026-09-19) read the heading for **3,642 of
+them** — 3,551 from the record's own row, 59 from its content standard, and 32 from the same
+block read elsewhere in the print (18 in the same grade, 14 in another grade) — and wrote them into the databases *and*
+into the 11,506 lesson rows of `data/lessons/` that carried the code, because the scheme
+of learning prints the lesson's own `sub_strand`. 37 blocks are refused (the rme print
+sets no heading for 18 of them; the rest are blocks the print itself names two ways) and
+keep the code, as do the 194 schedule rows and the 18 scheme cells they own. The reads,
+the refusals and the 1,105 curated word repairs (the prints kern words apart:
+`GENE RATION`, `Appreciati n g`) are in `data/audit/sub_strand_names.json`.
+
 Any statement of the form "this project has N indicators" must name the layer.
 The defensible sentences are:
 

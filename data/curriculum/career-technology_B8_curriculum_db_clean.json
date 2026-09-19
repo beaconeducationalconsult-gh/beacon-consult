@@ -1,7 +1,7 @@
 {
  "B8.1.1.1.1": {
   "strand": "1. HEALTH AND SAFETY",
-  "sub_strand": "Sub-strand B8.1.1",
+  "sub_strand": "1. PERSONAL HYGIENE AND FOOD HYGIENE",
   "cs_code": "B8.1.1.1",
   "cs_desc": "Demonstrate understanding of basic practices that depict personal and food hygiene.",
   "ind_desc": "Demonstrate skills of personal hygiene 1. Think-pair-share on the causes of bad body odour",
@@ -12,7 +12,7 @@
  },
  "B8.1.1.1.2": {
   "strand": "1. HEALTH AND SAFETY",
-  "sub_strand": "Sub-strand B8.1.1",
+  "sub_strand": "1. PERSONAL HYGIENE AND FOOD HYGIENE",
   "cs_code": "B8.1.1.1",
   "cs_desc": "Demonstrate understanding of basic practices that depict personal and food hygiene.",
   "ind_desc": "Demonstrate skills in keeping food safe (food hygiene) 1. Watch videos and pictures of the processes and skills of maintaining food hygiene and write down the observations",
@@ -23,7 +23,7 @@
  },
  "B8.1.2.1.1": {
   "strand": "1. HEALTH AND SAFETY",
-  "sub_strand": "Sub-strand B8.1.2",
+  "sub_strand": "2. PERSONAL, WORKSHOP AND FOOD LABORATORY SAFETY",
   "cs_code": "B8.1.2.1",
   "cs_desc": "Demonstrate knowledge of preventing accidents in the workshop/site/ food/sewing laboratory",
   "ind_desc": "Demonstrate basic skills in applying First Aid to self and others 1. Explain what is meant by First Aid",
@@ -34,7 +34,7 @@
  },
  "B8.1.3.1.1": {
   "strand": "1. HEALTH AND SAFETY",
-  "sub_strand": "Sub-strand B8.1.3",
+  "sub_strand": "3. ENVIRONMENTAL HEALTH",
   "cs_code": "B8.1.3.1",
   "cs_desc": "Demonstrate understanding of the basic concept of Environmental health",
   "ind_desc": "Discuss the causal factors, effects and prevention of desertification and deforestation 1. Identify the causal factors and discuss the effects and preventive measures of desertification and deforestation, in groups",
@@ -45,7 +45,7 @@
  },
  "B8.1.3.2.1": {
   "strand": "1. HEALTH AND SAFETY",
-  "sub_strand": "Sub-strand B8.1.3",
+  "sub_strand": "3. ENVIRONMENTAL HEALTH",
   "cs_code": "B8.1.3.2",
   "cs_desc": "Demonstrate understanding of basic ways of disposing of household and industrial/workshop/site/ laboratory waste",
   "ind_desc": "Identify proper management and disposal of household and industrial waste Research the proper management and disposal of household and industrial waste, in groups. 1.Discuss and report on the following: i. The different ways of disposing off home and industrial waste;",
@@ -56,7 +56,7 @@
  },
  "B8.2.1.1.2": {
   "strand": "2. MATERIALS FOR PRODUCTION",
-  "sub_strand": "Sub-strand B8.2.1",
+  "sub_strand": "1. COMPLIANT MATERIALS",
   "cs_code": "B8.2.1.1",
   "cs_desc": "Demonstrate understanding of the properties of compliant materials",
   "ind_desc": "Discuss the basic characteristics of compliant materials 1. Identify the properties of paper and card board that make them suitable for use",
@@ -67,7 +67,7 @@
  },
  "B8.2.2.1.1": {
   "strand": "2. MATERIALS FOR PRODUCTION",
-  "sub_strand": "Sub-strand B8.2.2",
+  "sub_strand": "2. RESISTANT MATERIALS",
   "cs_code": "B8.2.2.1",
   "cs_desc": "Demonstrate understanding of properties of resistant materials",
   "ind_desc": "Explain the basic properties of resistant materials 1. Discuss the physical properties of resistant materials",
@@ -78,7 +78,7 @@
  },
  "B8.2.2.1.2": {
   "strand": "2. MATERIALS FOR PRODUCTION",
-  "sub_strand": "Sub-strand B8.2.2",
+  "sub_strand": "2. RESISTANT MATERIALS",
   "cs_code": "B8.2.2.1",
   "cs_desc": "Demonstrate understanding of properties of resistant materials",
   "ind_desc": "Describe the properties of building materials 1. Describe the properties of cement, sand, stones",
@@ -89,7 +89,7 @@
  },
  "B8.2.3.1.1": {
   "strand": "2. MATERIALS FOR PRODUCTION",
-  "sub_strand": "Sub-strand B8.2.3",
+  "sub_strand": "3. SMART AND MODERN MATERIALS",
   "cs_code": "B8.2.3.1",
   "cs_desc": "Demonstrate understanding and the use of smart and modern materials",
   "ind_desc": "Discuss smart and modern materials",
@@ -100,7 +100,7 @@
  },
  "B8.2.4.1.1": {
   "strand": "2. MATERIALS FOR PRODUCTION",
-  "sub_strand": "Sub-strand B8.2.4",
+  "sub_strand": "4. FOOD COMMODITIES (ANIMAL AND PLANT SOURCES)",
   "cs_code": "B8.2.4.1",
   "cs_desc": "Demonstrate understanding of the functions of food commodities",
   "ind_desc": "Explore the functions of food to the body 1. Classify food according to their basic functions",
@@ -111,7 +111,7 @@
  },
  "B8.3.1.1.1": {
   "strand": "3. TOOLS, EQUIPMENT AND PROCESSES",
-  "sub_strand": "Sub-strand B8.3.1",
+  "sub_strand": "1. MEASURING AND MARKING OUT",
   "cs_code": "B8.3.1.1",
   "cs_desc": "Demonstrate understanding of measuring and marking out tools and equipment for production.",
   "ind_desc": "Identify tools and equipment for measuring and marking out 1. Describe the procedure for measuring and marking out artefacts/articles/products in the: - Food laboratory (kitchen) - Sewing workshop/laboratory - Building site - Wood workshop - Metal/plastic workshop 2. Sketch and label parts of some measuring and marking out tools and equipment. 3. Present the sketched tools and equipment for appraisal in c",
@@ -122,7 +122,7 @@
  },
  "B8.3.1.1.2": {
   "strand": "3. TOOLS, EQUIPMENT AND PROCESSES",
-  "sub_strand": "Sub-strand B8.3.1",
+  "sub_strand": "1. MEASURING AND MARKING OUT",
   "cs_code": "B8.3.1.1",
   "cs_desc": "Demonstrate understanding of measuring and marking out tools and equipment for production.",
   "ind_desc": "Take measurements of products/artefacts/articles (A) Take body measurements 1. Discuss the importance of taking body measurements in sewing: 2. Discuss the guidelines for taking body measurements",
@@ -133,7 +133,7 @@
  },
  "B8.3.1.1.3": {
   "strand": "3. TOOLS, EQUIPMENT AND PROCESSES",
-  "sub_strand": "Sub-strand B8.3.1",
+  "sub_strand": "1. MEASURING AND MARKING OUT",
   "cs_code": "B8.3.1.1",
   "cs_desc": "Demonstrate understanding of measuring and marking out tools and equipment for production.",
   "ind_desc": "Use appropriate techniques to measure 1. Discuss portion control, equipment used and reasons",
@@ -144,7 +144,7 @@
  },
  "B8.3.1.1.4": {
   "strand": "3. TOOLS, EQUIPMENT AND PROCESSES",
-  "sub_strand": "Sub-strand B8.3.1",
+  "sub_strand": "1. MEASURING AND MARKING OUT",
   "cs_code": "B8.3.1.1",
   "cs_desc": "Demonstrate understanding of measuring and marking out tools and equipment for production.",
   "ind_desc": "Demonstrate how to care for and maintain measuring and marking out tools used for production 1. Share experiences from home on how to care for tools and equipment for production. 2. Identify cleaning agents/materials used to clean and maintain tools and equipment based on the respective material used in making the tool",
@@ -155,7 +155,7 @@
  },
  "B8.3.2.1.1": {
   "strand": "3. TOOLS, EQUIPMENT AND PROCESSES",
-  "sub_strand": "Sub-strand B8.3.2",
+  "sub_strand": "2. CUTTING/SHAPING",
   "cs_code": "B8.3.2.1",
   "cs_desc": "Demonstrate understanding of cutting and shaping tools and equipment for making artefacts/products.",
   "ind_desc": "Identify and use of cutting and shaping tools and equipment",
@@ -166,7 +166,7 @@
  },
  "B8.3.2.1.2": {
   "strand": "3. TOOLS, EQUIPMENT AND PROCESSES",
-  "sub_strand": "Sub-strand B8.3.2",
+  "sub_strand": "2. CUTTING/SHAPING",
   "cs_code": "B8.3.2.1",
   "cs_desc": "Demonstrate understanding of cutting and shaping tools and equipment for making artefacts/products.",
   "ind_desc": "Use appropriate techniques to cut and shape artefacts/products 1. Use appropriate techniques to shape a design in: - Food laboratory (kitchen)—moulding of banku, aparansa, tuo zaafi, biscuit cutting, designing of fruits and vegetables - Sewing workshop/laboratory—use French curves to shape necklines and armholes. Design different styles for dresses, shirts and shorts, blouses on paper and practice design c",
@@ -177,7 +177,7 @@
  },
  "B8.3.2.1.3": {
   "strand": "3. TOOLS, EQUIPMENT AND PROCESSES",
-  "sub_strand": "Sub-strand B8.3.2",
+  "sub_strand": "2. CUTTING/SHAPING",
   "cs_code": "B8.3.2.1",
   "cs_desc": "Demonstrate understanding of cutting and shaping tools and equipment for making artefacts/products.",
   "ind_desc": "Demonstrate how to care for and maintain shaping and cutting tools and equipment 1. Discuss how to care for and maintain cutting and shaping tools and equipment used in: - Food laboratory (kitchen) - Sewing workshop/laboratory - Building site - Wood workshop - Metal/plastics workshop 57",
@@ -188,7 +188,7 @@
  },
  "B8.3.3.1.1": {
   "strand": "3. TOOLS, EQUIPMENT AND PROCESSES",
-  "sub_strand": "Sub-strand B8.3.3",
+  "sub_strand": "3. JOINING AND ASSEMBLING",
   "cs_code": "B8.3.3.1",
   "cs_desc": "Demonstrate understanding of joining and assembling materials, tools and equipment used for making artefacts/ products.",
   "ind_desc": "Identify joining and assembling materials, tools and equipment used for making artefacts/products 1. Identify materials, tools and equipment used for joining and assembling artefacts/products from displayed charts, pictures or realia in the following areas: - Food laboratory (kitchen)—modern methods of joining/combining using silicon, gelatin, oats - Sewing workshop/laboratory—sewing machine, crocheting and",
@@ -199,7 +199,7 @@
  },
  "B8.3.3.1.2": {
   "strand": "3. TOOLS, EQUIPMENT AND PROCESSES",
-  "sub_strand": "Sub-strand B8.3.3",
+  "sub_strand": "3. JOINING AND ASSEMBLING",
   "cs_code": "B8.3.3.1",
   "cs_desc": "Demonstrate understanding of joining and assembling materials, tools and equipment used for making artefacts/ products.",
   "ind_desc": "Use appropriate tools, equipment and techniques to join and assemble patterns/artefacts/products 1. Demonstrate the appropriate techniques used in the sewing workshop/ laboratory",
@@ -210,7 +210,7 @@
  },
  "B8.3.3.1.3": {
   "strand": "3. TOOLS, EQUIPMENT AND PROCESSES",
-  "sub_strand": "Sub-strand B8.3.3",
+  "sub_strand": "3. JOINING AND ASSEMBLING",
   "cs_code": "B8.3.3.1",
   "cs_desc": "Demonstrate understanding of joining and assembling materials, tools and equipment used for making artefacts/ products.",
   "ind_desc": "Demonstrate how to care for and maintain tools and equipment used for joining and assembling 1. Demonstrate how to care for and maintain tools and equipment used for joining and assembling the following: - Sewing workshop/laboratory—dust and oil sewing machine after use - Building site—wash and clean tools - Wood workshop—clean tools, oil metal parts of tools - Metal/plastic workshop—clean tools, oil",
@@ -221,7 +221,7 @@
  },
  "B8.3.4.1.1": {
   "strand": "3. TOOLS, EQUIPMENT AND PROCESSES",
-  "sub_strand": "Sub-strand B8.3.4",
+  "sub_strand": "4. KITCHEN ESSENTIALS",
   "cs_code": "B8.3.4.1",
   "cs_desc": "Demonstrate understanding of maintaining kitchen essentials",
   "ind_desc": "Demonstrate how to care for and maintain kitchen essentials 1. Discuss suitable materials for cleaning kitchen essentials according to the materials used in making them",
@@ -232,7 +232,7 @@
  },
  "B8.3.5.1.1": {
   "strand": "3. TOOLS, EQUIPMENT AND PROCESSES",
-  "sub_strand": "Sub-strand B8.3.5",
+  "sub_strand": "5. FINISHES AND FINISHING",
   "cs_code": "B8.3.5.1",
   "cs_desc": "Demonstrate understanding of application of finishes.",
   "ind_desc": "Demonstrate how to mix the various finishes 1. Identify tools used for mixing finishes",
@@ -243,7 +243,7 @@
  },
  "B8.3.5.1.2": {
   "strand": "3. TOOLS, EQUIPMENT AND PROCESSES",
-  "sub_strand": "Sub-strand B8.3.5",
+  "sub_strand": "5. FINISHES AND FINISHING",
   "cs_code": "B8.3.5.1",
   "cs_desc": "Demonstrate understanding of application of finishes.",
   "ind_desc": "Demonstrate skills of finishing edges of sewing articles and food products 1. Review B7 lesson on finishes and finishing. 2. Discuss reasons why edges of sewing articles are finished",
@@ -254,7 +254,7 @@
  },
  "B8.4.1.1.1": {
   "strand": "4. TECHNOLOGY",
-  "sub_strand": "Sub-strand B8.4.1",
+  "sub_strand": "1. SIMPLE STRUCTURES AND MECHANISMS, ELECTRIC AND ELECTRONIC SYSTEMS",
   "cs_code": "B8.4.1.1",
   "cs_desc": "Demonstrate understanding of application of principles of forces acting on structures.",
   "ind_desc": "Perform experiments of principles of forces on structures 1. Research for types of forces that can act on structural members in construction",
@@ -265,7 +265,7 @@
  },
  "B8.5.1.1.1": {
   "strand": "5. DESIGNING AND MAKING OF ARTEFACTS/PRODUCTS",
-  "sub_strand": "Sub-strand B8.5.1",
+  "sub_strand": "1. COMMUNICATING DESIGN",
   "cs_code": "B8.5.1.1",
   "cs_desc": "Demonstrate understanding of drawing plane figures and solid objects using drawing instruments",
   "ind_desc": "Draw plane figures using instruments 1. Identify two dimensional (2-D) figures/ objects",
@@ -276,7 +276,7 @@
  },
  "B8.5.1.1.2": {
   "strand": "5. DESIGNING AND MAKING OF ARTEFACTS/PRODUCTS",
-  "sub_strand": "Sub-strand B8.5.1",
+  "sub_strand": "1. COMMUNICATING DESIGN",
   "cs_code": "B8.5.1.1",
   "cs_desc": "Demonstrate understanding of drawing plane figures and solid objects using drawing instruments",
   "ind_desc": "Draw objects in pictorial using instruments 1. Explain what is meant by pictorial drawing",
@@ -287,7 +287,7 @@
  },
  "B8.5.2.1.1": {
   "strand": "5. DESIGNING AND MAKING OF ARTEFACTS/PRODUCTS",
-  "sub_strand": "Sub-strand B8.5.2",
+  "sub_strand": "2. DESIGNING",
   "cs_code": "B8.5.2.1",
   "cs_desc": "Demonstrate knowledge and skills of Designing.",
   "ind_desc": "Write a design brief, 1. Observe problem situations in the environment. 2. Write the problem situation. 3. State a suitable design brief to address the problem",
@@ -298,7 +298,7 @@
  },
  "B8.5.2.1.2": {
   "strand": "5. DESIGNING AND MAKING OF ARTEFACTS/PRODUCTS",
-  "sub_strand": "Sub-strand B8.5.2",
+  "sub_strand": "2. DESIGNING",
   "cs_code": "B8.5.2.1",
   "cs_desc": "Demonstrate knowledge and skills of Designing.",
   "ind_desc": "Research into design problems 1. Develop analysis chart of the problem. 2. State questions to address the analysis chart. 3. Conduct a research into the problem analysis through prepared questionnaires and interview guides. 4. Develop observation schedules and take photos/make sketches. 5. Analyse the research data and write a report. 6. Present report for appraisal",
@@ -309,7 +309,7 @@
  },
  "B8.5.2.1.3": {
   "strand": "5. DESIGNING AND MAKING OF ARTEFACTS/PRODUCTS",
-  "sub_strand": "Sub-strand B8.5.2",
+  "sub_strand": "2. DESIGNING",
   "cs_code": "B8.5.2.1",
   "cs_desc": "Demonstrate knowledge and skills of Designing.",
   "ind_desc": "Write Design Specifications 1. Develop and write the design specifications based on the areas analysed, to serve as a guide for idea generation. 2. Give reasons for the specifications developed. 66",
@@ -320,7 +320,7 @@
  },
  "B8.5.2.1.4": {
   "strand": "5. DESIGNING AND MAKING OF ARTEFACTS/PRODUCTS",
-  "sub_strand": "Sub-strand B8.5.2",
+  "sub_strand": "2. DESIGNING",
   "cs_code": "B8.5.2.1",
   "cs_desc": "Demonstrate knowledge and skills of Designing.",
   "ind_desc": "Generate Ideas/possible solutions 1. Use freehand to sketch at least three possible ideas/solutions. 2. Write descriptive/annotated notes on each of the generated ideas 3. Compare and select the best idea or design 4. Develop the selected idea and prepare the working drawings and folios",
@@ -331,7 +331,7 @@
  },
  "B8.5.2.1.5": {
   "strand": "5. DESIGNING AND MAKING OF ARTEFACTS/PRODUCTS",
-  "sub_strand": "Sub-strand B8.5.2",
+  "sub_strand": "2. DESIGNING",
   "cs_code": "B8.5.2.1",
   "cs_desc": "Demonstrate knowledge and skills of Designing.",
   "ind_desc": "Make artefact using resistant materials 1. Study the design folios with reference to the design, working drawings and cutting list developed in communication design. 2. Identify the materials, tools and manufacturing processes involved, and check the conditions suitable for working. 3. Organise the working environment to ensure health and safety during the making of the artefact. 4. Undertake in sequence the",
@@ -342,7 +342,7 @@
  },
  "B8.5.2.1.6": {
   "strand": "5. DESIGNING AND MAKING OF ARTEFACTS/PRODUCTS",
-  "sub_strand": "Sub-strand B8.5.2",
+  "sub_strand": "2. DESIGNING",
   "cs_code": "B8.5.2.1",
   "cs_desc": "Demonstrate knowledge and skills of Designing.",
   "ind_desc": "Test and evaluate made products/artefacts 1. Test the artefact using the design specifications as a guide",
@@ -353,7 +353,7 @@
  },
  "B8.5.2.1.7": {
   "strand": "5. DESIGNING AND MAKING OF ARTEFACTS/PRODUCTS",
-  "sub_strand": "Sub-strand B8.5.2",
+  "sub_strand": "2. DESIGNING",
   "cs_code": "B8.5.2.1",
   "cs_desc": "Demonstrate knowledge and skills of Designing.",
   "ind_desc": "Demonstrate basic skills in cutting out designs without patterns in SEWING 1. Explain what is meant by free-hand cutting technique",
@@ -364,7 +364,7 @@
  },
  "B8.5.3.1.1": {
   "strand": "5. DESIGNING AND MAKING OF ARTEFACTS/PRODUCTS",
-  "sub_strand": "Sub-strand B8.5.3",
+  "sub_strand": "3. PLANNING FOR MAKING ARTEFACTS/PRODUCTS",
   "cs_code": "B8.5.3.1",
   "cs_desc": "Demonstrate understanding of planning for making artefacts/products and table setting",
   "ind_desc": "Plan and make wooden, metal/plastic artefacts 1. Study the design folio and critically examine the working drawings",
@@ -375,7 +375,7 @@
  },
  "B8.5.3.1.2": {
   "strand": "5. DESIGNING AND MAKING OF ARTEFACTS/PRODUCTS",
-  "sub_strand": "Sub-strand B8.5.3",
+  "sub_strand": "3. PLANNING FOR MAKING ARTEFACTS/PRODUCTS",
   "cs_code": "B8.5.3.1",
   "cs_desc": "Demonstrate understanding of planning for making artefacts/products and table setting",
   "ind_desc": "Plan and make building artefacts 1. Describe the properties of cement, sand, stones. 2. Prepare a chart on properties of building materials. 3. Discuss reasons for choosing a type of material for a building project. 4. Make mock-ups of simple building projects. 5. Display mock-ups for appraisal",
@@ -386,7 +386,7 @@
  },
  "B8.5.3.1.3": {
   "strand": "5. DESIGNING AND MAKING OF ARTEFACTS/PRODUCTS",
-  "sub_strand": "Sub-strand B8.5.3",
+  "sub_strand": "3. PLANNING FOR MAKING ARTEFACTS/PRODUCTS",
   "cs_code": "B8.5.3.1",
   "cs_desc": "Demonstrate understanding of planning for making artefacts/products and table setting",
   "ind_desc": "Planning to make sewing artefacts/products 1. Explain what is meant by seams",
@@ -397,7 +397,7 @@
  },
  "B8.5.3.1.4": {
   "strand": "5. DESIGNING AND MAKING OF ARTEFACTS/PRODUCTS",
-  "sub_strand": "Sub-strand B8.5.3",
+  "sub_strand": "3. PLANNING FOR MAKING ARTEFACTS/PRODUCTS",
   "cs_code": "B8.5.3.1",
   "cs_desc": "Demonstrate understanding of planning for making artefacts/products and table setting",
   "ind_desc": "Planning to set a table 1. Explain what is meant by table setting/laying",
@@ -408,7 +408,7 @@
  },
  "B8.5.4.1.1": {
   "strand": "5. DESIGNING AND MAKING OF ARTEFACTS/PRODUCTS",
-  "sub_strand": "Sub-strand B8.5.4",
+  "sub_strand": "4. MAKING ARTEFACTS FROM COMPLIANT, RESISTANT MATERIALS AND FOOD INGREDIENTS",
   "cs_code": "B8.5.4.1",
   "cs_desc": "Demonstrate understanding of designing artefacts/ products, and models and table setting.",
   "ind_desc": "Demonstrate Skills in table setting Set a table for one person (cover) for appraisal, in groups",
@@ -419,7 +419,7 @@
  },
  "B8.5.4.1.2": {
   "strand": "5. DESIGNING AND MAKING OF ARTEFACTS/PRODUCTS",
-  "sub_strand": "Sub-strand B8.5.4",
+  "sub_strand": "4. MAKING ARTEFACTS FROM COMPLIANT, RESISTANT MATERIALS AND FOOD INGREDIENTS",
   "cs_code": "B8.5.4.1",
   "cs_desc": "Demonstrate understanding of designing artefacts/ products, and models and table setting.",
   "ind_desc": "Demonstrate skills in making sewing artefacts/products using seams and arrangement of fullness SEAMS 1. Make specimen or samples of basic seams",
@@ -430,7 +430,7 @@
  },
  "B8.5.4.1.3": {
   "strand": "5. DESIGNING AND MAKING OF ARTEFACTS/PRODUCTS",
-  "sub_strand": "Sub-strand B8.5.4",
+  "sub_strand": "4. MAKING ARTEFACTS FROM COMPLIANT, RESISTANT MATERIALS AND FOOD INGREDIENTS",
   "cs_code": "B8.5.4.1",
   "cs_desc": "Demonstrate understanding of designing artefacts/ products, and models and table setting.",
   "ind_desc": "Make artefacts/products using wood, metal/plastics 1. Organise the workshop in readiness for working. 2. Check the dimensions on the cutting list and on the working drawings. 3. Follow the operation sequence to make the artefact",
@@ -441,7 +441,7 @@
  },
  "B8.6.1.1.1": {
   "strand": "6. ENTREPRENEURIAL SKILLS",
-  "sub_strand": "Sub-strand B8.6.1",
+  "sub_strand": "1. CAREER PATHWAYS AND CAREER OPPORTUNITIES",
   "cs_code": "B8.6.1.1",
   "cs_desc": "Demonstrate knowledge of career opportunities in Career Technology",
   "ind_desc": "Explore the various career pathways and opportunities in Career Technology,,.",
@@ -452,7 +452,7 @@
  },
  "B8.6.2.1.1": {
   "strand": "6. ENTREPRENEURIAL SKILLS",
-  "sub_strand": "Sub-strand B8.6.2",
+  "sub_strand": "2. ESTABLISHING AND MANAGING A SMALL BUSINESS ENTERPRISE",
   "cs_code": "B8.6.2.1",
   "cs_desc": "Demonstrate understanding of establishing and managing micro and small business enterprises",
   "ind_desc": "Explain what is meant by Micro, Small and Medium-sized Business Enterprises",

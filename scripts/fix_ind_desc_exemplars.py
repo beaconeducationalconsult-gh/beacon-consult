@@ -85,6 +85,10 @@ PRINTS = {
     "career-technology": (("B7", "B8", "B9"), "career_tech_CCP_B7-B9.pdf", (220.0, 590.0)),
     "creative-arts-design": (("B7", "B8", "B9"), "creative_arts_design_CCP_B7-B9.pdf", (140.0, 560.0)),
     "french|B7-B9": (("B7", "B8", "B9"), "french_CCP_B7-B9.pdf", (140.0, 560.0)),
+    # registered for P1-12: neither print was in this table, so every tool that reads a
+    # record's row refused these subject-grades as "no print for this subject-grade"
+    "kindergarten": (("KG1", "KG2"), "kindergarten_KG1-KG2.pdf", (185.0, 545.0)),
+    "social-studies": (("B7", "B8", "B9"), "social_studies_CCP_B7-B9.pdf", (140.0, 560.0)),
 }
 
 # B1 databases are named without their grade: `math_`, `english_`, `creative_arts_` …
