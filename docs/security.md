@@ -180,6 +180,20 @@ Before publishing, check the two invariants that a rules edit can quietly destro
 
 `yarn test` checks both, plus that every collection `src/` touches has a match block and that
 each authored collection pins `authorId` on create and calls `keepsAuthor()` on update
-(`src/firestoreRules.test.js`). Those checks are **static**: they prove a guard was not
-deleted, not that a permission decision is correct — that needs the emulator (P2-1 in
-docs/TODO.md). Each one was verified by re-introducing the bug and watching it fail.
+(`src/firestoreRules.test.js`). Each one was verified by re-introducing the bug and watching it
+fail — but those checks are **static**: they prove a guard was not deleted, not that a
+permission decision is correct.
+
+The decisions themselves are tested against a real rules engine:
+
+```bash
+yarn test:rules        # starts the Firestore emulator, runs tests/rules/, shuts it down
+```
+
+`tests/rules/firestore.rules.test.js` asks the emulator the questions this document answers
+with prose — can an approved member read a colleague's private draft (no), does an un-filtered
+list of `notes` survive for an ordinary member (no), can a like inflate its own tally (no), can
+a `generated_documents` record point at another member's storage folder (no), can a school
+admin move a member into a school that is not theirs (no). It needs Java 21 and the network, so
+it is **not** part of `make check`; CI runs it in its own `rules` job. Re-run it before
+publishing a rules change, not after.

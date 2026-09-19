@@ -38,6 +38,17 @@ Nothing below can pass until the console matches this checkout:
 Publish the Firestore rules **after** the new build is live: the new rules require the scoped
 list queries the new build makes.
 
+The rules can also be asked directly, before publishing anything:
+
+```bash
+yarn test:rules     # Firestore emulator + tests/rules/ (needs Java 21)
+```
+
+That suite is the permission matrix — a pending member refused, an un-filtered list denied, a
+like unable to inflate its tally, a library record unable to point at another member's folder.
+It needs a JVM and downloads firebase-tools plus the emulator jar, which is why it is not part
+of `make check`; CI runs it in its own job.
+
 ## 2. The flows (needs a signed-in account on the live project)
 
 Do these in **one ordinary member account** (not an admin — admins pass branches ordinary

@@ -340,6 +340,11 @@ bundle. Edit a bundle file by hand and nothing renames the cache — clear site 
   output never fails the audit.
 - **`make audit` is only about data.** Errors mean the portal cannot source part of the
   dataset; the 9 subject-grades backed only by `data/reference/` are warnings by design.
+- **The rules suite needs a JVM and the network.** `yarn test:rules` starts the Firestore
+  emulator — a Java program — and downloads a pinned `firebase-tools` plus the emulator jar
+  on its first run, so it cannot be part of `make check` and cannot run in a sandbox with
+  no JVM and a restricted egress (this one: `java` is absent and Debian mirrors, Maven and
+  `storage.googleapis.com` are blocked). CI's `rules` job installs Temurin 21 and runs it.
 - **The dev server runs on port 5199**, and `vite.config.js` needs
   `allowedHosts: ['.e2b.app', 'localhost']` for cloud sandboxes (Vite answers 403
   "Blocked request" otherwise).

@@ -11,6 +11,7 @@
     "preview": "vite preview",
     "lint": "eslint .",
     "test": "vitest run",
+    "test:rules": "npx --yes firebase-tools@15.30.2 emulators:exec --only firestore --project demo-beacon-rules \"vitest run --config vitest.rules.config.js\"",
     "test:watch": "vitest"
   },
   "dependencies": {
@@ -35,6 +36,7 @@
   "devDependencies": {
     "@babel/core": "^8.0.5",
     "@eslint/js": "^9.39.0",
+    "@firebase/rules-unit-testing": "^5.0.2",
     "@rolldown/plugin-babel": "^0.2.4",
     "@tailwindcss/typography": "^0.5.20",
     "@tailwindcss/vite": "^4.3.3",

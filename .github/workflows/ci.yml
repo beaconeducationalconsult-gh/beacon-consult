@@ -37,6 +37,35 @@ jobs:
       - name: Build
         run: yarn build
 
+  rules:
+    name: Firestore rules (emulator)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # The Firestore emulator is a JVM program. The runner image ships JDKs,
+      # but pinning one keeps this job from depending on the image's default.
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - run: corepack enable
+
+      - name: Install
+        run: yarn install --immutable
+
+      # The one check that asks the rules engine instead of reading the rules
+      # file: `yarn test:rules` starts the Firestore emulator (via
+      # firebase-tools, downloaded pinned) and runs tests/rules/ against it.
+      # It cannot run inside `make check`, which is why it has its own job.
+      - name: Ask the emulator for every permission decision
+        run: yarn test:rules
+
   dataset:
     name: Curriculum data audit
     runs-on: ubuntu-latest

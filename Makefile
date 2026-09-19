@@ -1,4 +1,4 @@
-.PHONY: install inventory audit audit-l2 check check-scripts bundle-size bundle-check books-rollout books-generate books-publish deploy-storage questions build-questions generate-questions bundle-hash verify-deploy deploy-check dev build lint test preview deploy-rules books book-skeleton boot-check list-modules build-curriculum validate-curriculum generate-schemes generate-records package-books
+.PHONY: install inventory audit audit-l2 check check-scripts bundle-size bundle-check books-rollout books-generate books-publish deploy-storage questions build-questions generate-questions bundle-hash verify-deploy deploy-check dev build lint test test-rules preview deploy-rules books book-skeleton boot-check list-modules build-curriculum validate-curriculum generate-schemes generate-records package-books
 
 # ── Frontend (React + Vite + Yarn 4) ────────────────────────────────────────
 # The portal lives at the repository root. Node 22+ and Yarn 4 are required:
@@ -25,6 +25,14 @@ lint:
 # Unit tests + contract tests over the committed curriculum bundle (vitest).
 test:
 	$(YARN) test
+
+# The rules suite against the Firestore emulator (tests/rules/). Kept out of
+# `check` because the emulator is a JVM program: a machine without Java 21
+# cannot run it, and `make check` must not depend on one being installed. It
+# also downloads firebase-tools and the emulator jar on its first run, so it
+# needs the network. CI runs it in its own job, where both are guaranteed.
+test-rules:
+	$(YARN) test:rules
 
 # ── Everything that must pass before a deploy ───────────────────────────────
 # The build is included so that "yarn build fails" cannot be discovered for the
