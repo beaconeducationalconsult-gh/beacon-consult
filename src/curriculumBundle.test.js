@@ -588,6 +588,78 @@ describe.each(ids)('%s', (grade) => {
     })
   })
 
+  describe('the placeholder text the print backs (P1-11)', () => {
+    const readData = (path) => JSON.parse(readFileSync(new URL(`../data/${path}`, import.meta.url), 'utf8'))
+    const ledger = () => readData('audit/label_form_text.json')
+
+    it('fills every served label-form record with the print\u2019s own wording', () => {
+      // `owop_B4`/`B5`/`B6` said `Our World Our People Learning Indicator B4.1.1.1.1`
+      // in every record — the code restated, not the curriculum. 793 fields were
+      // filled from the print's own cells (269 records, 21 files, the rest of them
+      // inert `data/reference/` copies)
+      expect(ledger().applied.fields).toBe(793)
+      const label = /^\w[\w &-]* (?:Learning Indicator|Content Standard)\s+[BK]?\s*\d[\d.\s]*$/
+      for (const grade of ['B4', 'B5', 'B6']) {
+        const rows = readData(`curriculum/owop_${grade}_curriculum_db_clean.json`)
+        expect(Object.keys(rows)).toHaveLength(grade === 'B6' ? 24 : 25)
+        for (const [code, row] of Object.entries(rows)) {
+          expect(row.ind_desc, `${code}.ind_desc`).not.toMatch(label)
+          expect(row.strand, `${code}.strand`).not.toMatch(/^Strand /)
+          expect(row.sub_strand, `${code}.sub_strand`).not.toMatch(/^Sub-?strand /)
+          // B6.4.4.1.1 is the exception, and it is the print's: its row sets the
+          // indicator beside `B6.4.6.1`, another standard's code, so the read is
+          // refused rather than guessed (ledger `.refused` records it)
+          if (code !== 'B6.4.4.1.1') expect(row.cs_desc, `${code}.cs_desc`).not.toMatch(label)
+        }
+      }
+      expect(ledger().refused).toContainEqual(expect.objectContaining({
+        layer: 'curriculum', code: 'B6.4.4.1.1', field: 'cs_desc',
+      }))
+      expect(readData('curriculum/owop_B6_curriculum_db_clean.json')['B6.4.4.1.1'].cs_desc)
+        .toBe('Our World Our People Content Standard B6.4.4.1')
+
+      // the summary agrees with the database it summarises
+      const summary = readData('curriculum/owop_B4_curriculum_summary.json')
+      expect(summary.strands.map((s) => s.name))
+        .toEqual(['ALL ABOUT US', 'ALL AROUND US', 'OUR BELIEFS AND VALUES',
+                  'OUR NATION GHANA', 'MY GLOBAL COMMUNITY'])
+    })
+
+    it('serves the print\u2019s wording rather than the placeholder', () => {
+      const owop = read('b4_indicators.json').filter((r) => r.subjectId === 'owop')
+      const first = owop.find((r) => r.code === 'B4.1.1.1.1')
+      expect(first.description).toBe('Explain how special each individual is')
+      expect(first.contentStandardDescription)
+        .toBe('Demonstrate understanding of the Nature of God as the Creator of human beings')
+      expect(first.strandName).toBe('ALL ABOUT US')
+      expect(first.subStrandName).toBe('Nature of God')
+    })
+
+    it('leaves no label-form text anywhere the portal serves', () => {
+      // The status quo is now a claim about all 4,040 indicators, not just owop:
+      // Audit A prints `placeholder=0` for all 84 subject-grades, and this is the
+      // same claim from the other side — what the bundle actually carries
+      const label = /^\w[\w &-]* (?:Learning Indicator|Content Standard)\s+[BK]?\s*\d[\d.\s]*$/
+      const codeShaped = /^(?:Strand|Sub-?strand)\s+[BK]?\s*\d[\d.\s]*$/
+      // the one print defect: owop B6.4.4.1.1's row sets `B6.4.6.1` beside the
+      // indicator, so its content standard has no reading and stays a label
+      const excused = new Set(['owop_B6.4.4.1.1'])
+      const offenders = []
+      for (const [grade, { indicators }] of bundle) {
+        for (const row of indicators) {
+          const where = `${grade}/${row.subjectId}/${row.code}`
+          if (label.test(row.description || '')) offenders.push(`${where}/description`)
+          if (label.test(row.contentStandardDescription || '')
+              && !excused.has(`${row.subjectId}_${row.code}`)) {
+            offenders.push(`${where}/contentStandardDescription`)
+          }
+          if (codeShaped.test(row.strandName || '')) offenders.push(`${where}/strandName`)
+        }
+      }
+      expect(offenders).toEqual([])
+    })
+  })
+
   describe('known gaps stay known', () => {
     it('has no schedules file for the kindergarten grades', () => {
     const kg = grades.filter((g) => g.id.startsWith('KG'))

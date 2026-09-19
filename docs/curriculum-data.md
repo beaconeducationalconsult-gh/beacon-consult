@@ -52,12 +52,14 @@ creative-arts B4–B6 / social-studies B7–B9 copies (the rest is tracked in th
 not a defect of anything served; the four fabricated records these copies carried were
 deleted on 2026-09-19 — TODO P1-10).
 
-**Some records restate their code instead of carrying its text.** 302 of them do: 74 served
-(`owop_B4`/`B5`/`B6`, 25/25/24) and 228 in `data/reference/`. All 302 are listed with their reason
-in `data/audit/front_matter_records.json`, and they are a **filling** job, not a deletion — the
-prints carry the real standard and indicator wording (the owop print at pp. 18/40/61) — the
-extraction wrote `"Content Standard B4.1.1.1"` where the print sets its sentence
-(TODO P1-11). The one shape that *was* fabrication — a record built from a print's front-matter
+**Some records restated their code instead of carrying its text**, and the ones the prints back
+have been filled: 302 records were label-form, 74 of them served (`owop_B4`/`B5`/`B6`, 25/25/24) and
+228 in `data/reference/`. `scripts/fill_label_form_text.py` read the print's own cells for them and
+wrote **793 fields across 269 records** — the served three subject-grades now carry the standard's
+sentence, the indicator's sentence, and the strand / sub-strand names the print sets, and Audit A
+prints `placeholder=0` for all 84 subject-grades. Two fields are left as labels on purpose (the
+print's own row pairs `owop_B6.4.4.1.1` with `B6.4.6.1`); everything written, with the page it was
+read from, is in `data/audit/label_form_text.json`. The one shape that *was* fabrication — a record built from a print's front-matter
 notation example — was removed on 2026-09-19: four records, all in the reference layer
 (TODO P1-10).
 

@@ -1,7 +1,7 @@
 {
  "B6.1.1.1.1": {
   "strand": "ORAL LANGUAGE",
-  "sub_strand": "Sub-strand B6.1.1",
+  "sub_strand": "1. Songs",
   "cs_code": "B6.1.1.1",
   "cs_desc": "English Language Content Standard B6.1.1.1",
   "ind_desc": "Relate the central messages in songs to personal experiences",
@@ -12,7 +12,7 @@
  },
  "B6.1.1.1.2": {
   "strand": "ORAL LANGUAGE",
-  "sub_strand": "Sub-strand B6.1.1",
+  "sub_strand": "1. Songs",
   "cs_code": "B6.1.1.1",
   "cs_desc": "English Language Content Standard B6.1.1.1",
   "ind_desc": "Compose songs around values discussed",
@@ -1222,7 +1222,7 @@
  },
  "B6.4.14.1.1": {
   "strand": "Writing",
-  "sub_strand": "Sub-strand B6.4.14",
+  "sub_strand": "14. Expository /Informative Writing",
   "cs_code": "B6.4.14.1",
   "cs_desc": "English Language Content Standard B6.4.14.1",
   "ind_desc": "Write short paragraphs to describe incidents. E.g. accidents, fire outbreak",

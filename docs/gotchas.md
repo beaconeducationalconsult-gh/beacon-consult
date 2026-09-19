@@ -190,6 +190,27 @@ a page whose line says `Example:`/`ANNOTATION` — plus no body row. Everything 
 placeholder with its reason, and the deleted records are kept verbatim in
 `data/audit/front_matter_records.json`, so a deletion can be undone from the artifact alone.
 
+## 🟠 A pypdf page has an empty ContentStream, and it is falsy
+
+A page that draws no rectangles still has a `ContentStream` object, but `bool()` of it is
+**False** while `len(contents.operations)` is in the hundreds — the object only becomes truthy
+once something has iterated it. So the natural guard
+
+```python
+for op in (contents.operations if contents else []):   # silently reads nothing
+```
+
+skips every page and reports "this page draws no rules". `scripts/fill_label_form_text.py` (and
+the probe that led to it) uses `if contents is not None`; the lesson cost six probing rounds of
+"the rules are there in one script and gone in the next". The same trap waits in anything that
+reads a page's graphics for the first time: assert the operation count, not the truthiness.
+
+Related, for the same reader: **a page can set two tables whose columns are not the same width**
+(the owop B4 print draws 66/228/390/552 in one block and 66/174/322/561 in the next). A column
+band is only meaningful together with the y-span of the rules that drew it, or a line from the
+narrower table below is read as a cell of the wider one above — which is how a read came back
+holding the content standard and the indicator glued together.
+
 ## 🟠 Two copies of the same database, and only one of them is audited
 
 `data/reference/` is searched **after** `data/curriculum/` and **silently**, so which copy a tool
