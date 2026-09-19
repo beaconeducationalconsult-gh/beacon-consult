@@ -16,7 +16,7 @@ export default function Vacancies() {
   const { user, isAdmin } = useAuth()
   const toast = useToast()
   const [scope, setScope] = useState('all')
-  const { rows, loading, error } = useCollection('vacancies', { max: 60 })
+  const { rows, loading, error } = useCollection('vacancies', { max: 60, ordered: true })
   const [pendingDelete, setPendingDelete] = useState(null)
 
   const mine = rows.filter((v) => v.authorId === user.uid)

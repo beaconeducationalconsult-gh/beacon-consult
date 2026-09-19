@@ -39,6 +39,11 @@ export default function NoteForm() {
     setSaving(true)
     const payload = {
       ...form,
+      // `visibility: 'private'` is what the rules enforce (author only). `status`
+      // is the human word for the same choice, and is what a future
+      // status-filtered list would read — it cannot gate reads today, because
+      // notes written before it existed have no such field.
+      status: form.visibility === 'private' ? 'draft' : 'published',
       subjectName: subjects.find((s) => s.id === form.subjectId)?.name || form.subjectId,
       updatedAt: serverTimestamp(),
     }
@@ -105,8 +110,9 @@ export default function NoteForm() {
           <div>
             <label className="label-caps" htmlFor="note-visibility">Who can see it</label>
             <select id="note-visibility" className="input" value={form.visibility} onChange={(e) => setForm({ ...form, visibility: e.target.value })}>
-              <option value="members">Members</option>
+              <option value="members">Members of the network</option>
               <option value="public">Public</option>
+              <option value="private">Only me (draft)</option>
             </select>
           </div>
         </div>

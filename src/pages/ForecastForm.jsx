@@ -175,6 +175,7 @@ export default function ForecastForm() {
             <select id="visibility" className="input" value={visibility} onChange={(e) => setVisibility(e.target.value)}>
               <option value="members">Members of the network</option>
               <option value="public">Public</option>
+              <option value="private">Only me (draft)</option>
             </select>
           </div>
 

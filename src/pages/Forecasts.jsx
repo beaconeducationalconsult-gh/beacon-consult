@@ -4,7 +4,8 @@ import { deleteDoc, doc } from 'firebase/firestore'
 import { db } from '../firebase'
 import { useAuth } from '../context/AuthContext'
 import { useToast } from '../context/ToastContext'
-import { useCollection } from '../hooks/useCollection'
+import { usePagedCollection } from '../hooks/useCollection'
+import LoadMore from '../components/LoadMore'
 import { SkeletonList } from '../components/Skeleton'
 import DataError from '../components/DataError'
 import EmptyState from '../components/EmptyState'
@@ -13,15 +14,19 @@ import NotesTabs from '../components/NotesTabs'
 import SubjectIcon from '../components/SubjectIcon'
 import { gradeLabel } from '../lib/grades'
 
+/* Shared = readable by the network; `private` is author-only (rules-enforced). */
+const SHARED = [['visibility', 'in', ['members', 'public']]]
+
 export default function Forecasts() {
   const { user, isAdmin } = useAuth()
   const toast = useToast()
-  const [scope, setScope] = useState('all')
-  const { rows, loading, error } = useCollection('weekly_forecasts', { max: 60 })
+  const [scope, setScope] = useState('shared')
+  const {
+    rows, loading, error, hasMore, loadingMore, loadMore, moreError,
+  } = usePagedCollection('weekly_forecasts', {
+    filters: scope === 'mine' ? [['authorId', '==', user.uid]] : SHARED,
+  })
   const [pendingDelete, setPendingDelete] = useState(null)
-
-  const mine = rows.filter((r) => r.authorId === user.uid)
-  const visible = scope === 'mine' ? mine : rows
 
   const remove = async () => {
     try {
@@ -46,8 +51,8 @@ export default function Forecasts() {
 
       <NotesTabs
         tabs={[
-          { value: 'all', label: 'All', count: rows.length },
-          { value: 'mine', label: 'Mine', count: mine.length },
+          { value: 'shared', label: 'Shared' },
+          { value: 'mine', label: 'Mine' },
         ]}
         active={scope}
         onChange={setScope}
@@ -55,7 +60,7 @@ export default function Forecasts() {
 
       {error && <DataError what="schemes" error={error} />}
 {loading && <SkeletonList rows={3} />}
-      {!loading && !error && visible.length === 0 && (
+      {!loading && !error && rows.length === 0 && (
         <EmptyState
           title="No schemes yet"
           message="A scheme takes about five minutes: pick a subject, grade and term, and edit the weekly rows."
@@ -64,7 +69,7 @@ export default function Forecasts() {
       )}
 
       <ul className="grid gap-4 sm:grid-cols-2">
-        {visible.map((scheme) => (
+        {rows.map((scheme) => (
           <li key={scheme.id} className="card card-hover p-5">
             <div className="flex items-start gap-3">
               <SubjectIcon subjectId={scheme.subjectId} name={scheme.subjectName} />
@@ -85,6 +90,8 @@ export default function Forecasts() {
           </li>
         ))}
       </ul>
+
+      <LoadMore hasMore={hasMore} loading={loadingMore} error={moreError} onLoad={loadMore} loaded={rows.length} />
 
       <ConfirmModal
         open={Boolean(pendingDelete)}

@@ -33,12 +33,15 @@ Content is **HTML** produced by Tiptap. Collection: `articles` — `public` read
 `Notes.jsx`, `NoteForm.jsx`, `NoteView.jsx`. Study notes with a `comments` subcollection.
 Collection: `notes`.
 
-*Documented honestly:* the form saves a `visibility` field ('members' | 'public') that nothing
-reads, and **no UI can set `status: 'published'`** — only vacancies have a publish flow. So
-notes are simply member-readable, and the rule does not gate reads on `status` (it cannot: the
-list page queries un-filtered — see [gotchas.md](gotchas.md)). The "like" fields are
-`likes`/`likesBy` but no note-like UI exists yet. Restoring per-document privacy means giving
-the list a query filter first (P2-7 in [TODO.md](TODO.md)).
+The list has two tabs, and each one is a *scoped* Firestore query rather than a client-side
+filter of one big read: **Mine** (`where('authorId','==',uid)`) and **Shared**
+(`where('visibility','in',['members','public'])`). That shape is what lets the read rule gate on
+the document: `visibility: 'private'` ("Only me (draft)") is readable only by its author and
+admins, and the form also records `status: 'draft' | 'published'` for the same choice — which
+cannot gate reads, because notes written before 2026-09-19 have no `status` field. The lists
+paginate (`usePagedCollection`, 24 per page) so the cap never silently hides old notes. The
+"like" fields are `likes`/`likesBy` but no note-like UI exists yet (P2-7 in
+[TODO.md](TODO.md)).
 
 ### Author page — `/portal/authors/:authorId`
 `AuthorPage.jsx`. A member's public profile + their published notes/slides.

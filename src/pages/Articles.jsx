@@ -16,7 +16,7 @@ export default function Articles() {
   const { user, isAdmin } = useAuth()
   const toast = useToast()
   const [scope, setScope] = useState('all')
-  const { rows, loading, error } = useCollection('articles', { max: 60 })
+  const { rows, loading, error } = useCollection('articles', { max: 60, ordered: true })
   const [pendingDelete, setPendingDelete] = useState(null)
 
   const visible = scope === 'mine' ? rows.filter((a) => a.authorId === user.uid) : rows

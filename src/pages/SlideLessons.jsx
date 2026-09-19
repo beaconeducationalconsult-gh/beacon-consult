@@ -24,7 +24,7 @@ export default function SlideLessons() {
   const [busy, setBusy] = useState(false)
   const { subjects, loading: loadingSubjects, error: subjectsError } = useCurriculum(grade)
   const { lessons } = useSchedules(grade, subjectId)
-  const { rows: decks, loading, error } = useCollection('lesson_slides', { max: 40 })
+  const { rows: decks, loading, error } = useCollection('lesson_slides', { max: 40, ordered: true })
 
   const buildDeck = () => {
     const subjectName = subjects.find((s) => s.id === subjectId)?.name || subjectId

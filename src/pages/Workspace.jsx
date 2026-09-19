@@ -146,7 +146,11 @@ const SECTIONS = [
 ]
 
 function ContributionsSection({ collection, label, to, all, uid }) {
-  const { rows, loading, error } = useCollection(collection, { filters: [['authorId', '==', uid]], max: 20 })
+  // Ordered server-side, so "20" means the 20 most recent of yours rather than
+  // twenty documents in internal-id order re-sorted in the browser.
+  const { rows, loading, error } = useCollection(collection, {
+    filters: [['authorId', '==', uid]], max: 20, ordered: true,
+  })
   return (
     <div className="card p-5">
       <div className="flex items-center justify-between">

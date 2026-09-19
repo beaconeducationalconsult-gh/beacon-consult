@@ -80,21 +80,24 @@ and `isAdmin()` both read the very document the caller just created.
   fields — the self-service update path cannot change them.
 - **`posts`**: any approved member may like — the diff is limited to `likedBy`,`likesCount`
   **and** the tally is checked with `likeDelta`.
-- **`notes`**: read is `isApprovedOrAdmin()` — see below. Like fields diff-limited to
+- **`notes`**: read is `isApprovedOrAdmin()` **and** the document must be visible to the
+  reader — `isAdmin() || isOwner(authorId) || visibility in ['members','public']`, so a note
+  saved `visibility: 'private'` is the author's draft. The list pages scope their queries to
+  match (Mine / Shared) — see gotchas.md. Like fields diff-limited to
   `likes`,`likesBy` and checked with `likeDelta`. Has a `comments` subcollection (approved
   read/create; author/admin delete).
   *The note-like UI is not built, so nothing writes these fields yet. They are `likes`+`likesBy`
   to match the app-wide counted-array pattern (`posts`, `articles`) — a pair of bare
   `likes`/`dislikes` counters could not be tamper-checked. Change both the rule and this line
   together if that design wins.*
-  *`NoteForm` saves a `visibility` field ('members' | 'public') and nothing reads it; the rule
-  reads neither. Until a note moderation flow exists (nothing can set `status: 'published'`),
-  notes are simply member-readable.*
-- **`lesson_plans` / `weekly_forecasts` / `lesson_slides`**: read is `isApprovedOrAdmin()`. The
-  `visibility`/`status` fields still order the UI but cannot gate the read — the client lists
-  all three un-filtered, and a document-dependent clause would deny the whole query (see
-  gotchas.md). Gating on `visibility` again means giving those list pages a `where(...)` filter
-  or splitting them into "mine" and "published" queries first.
+  *`NoteForm` writes `visibility` ('members' | 'public' | 'private') and now does set
+  `status` ('published', or 'draft' for private). `status` still cannot gate reads: notes
+  written before 2026-09-19 have no such field, and a status-filtered list would hide them.
+  `visibility` is the field the rule reads — every note has carried it since the form existed.*
+- **`lesson_plans` / `weekly_forecasts`**: read follows the same document-dependent shape as
+  `notes` (`isAdmin() || owner || shared visibility`), and both list pages plus `Search.jsx`
+  scope their queries to match. **`lesson_slides`** is still `isApprovedOrAdmin()`: its list is
+  un-filtered and its `status` field only orders the UI.
 - **`vacancies`**: read if `status=='published'` **without auth** (public page) OR
   owner/approved.
 - **`progress/{uid}`**: owner-only read/write in practice. The second read clause (members of

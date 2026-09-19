@@ -192,14 +192,21 @@ service cloud.firestore {
     // at all yet, so nothing writes either shape. Decide when that UI is built
     // — a two-counter design cannot be tamper-checked the way likeDelta does.
     match /notes/{noteId} {
-      // Deliberately NOT gated on document fields. Firestore evaluates a list
-      // query against every document it might return, so a condition on
-      // resource.data here makes `collection('notes').get()` — which
-      // src/pages/Notes.jsx runs un-filtered — fail with permission-denied for
-      // every ordinary member. Only an admin reads every document, so only an
-      // admin would see the app working. "Members can read members' notes" is
-      // the model the UI implements.
-      allow read: if isApprovedOrAdmin();
+      // visibility: 'private' (author only) | 'members' (default) | 'public' |
+      //             'school' (Phase 2)
+      //
+      // This reads a document field, which is legal only while every list query
+      // in the client is scoped to something the rule can prove for the whole
+      // result: `where('authorId', '==', uid)` (the Mine tab) or
+      // `where('visibility', 'in', ['members', 'public'])` (Shared). Never list
+      // this collection unfiltered — Firestore is not a filter, so an
+      // unprovable list query is denied outright, for every ordinary member.
+      // src/firestoreRules.test.js fails if a screen stops scoping it.
+      allow read: if isApprovedOrAdmin() && (
+        isAdmin()
+        || isOwner(resource.data.authorId)
+        || resource.data.visibility in ['members', 'public']
+      );
       allow create: if isApprovedOrAdmin()
         && request.resource.data.authorId == request.auth.uid
         && (request.resource.data.status != 'school'
@@ -223,9 +230,14 @@ service cloud.firestore {
     // visibility: 'members' (network-wide, the default) | 'public' |
     //             'school' (members of the author's school — Phase 2)
     match /weekly_forecasts/{forecastId} {
-      // See the note on the /notes/ read rule — src/pages/Forecasts.jsx lists
-      // these un-filtered, so this must not depend on document fields.
-      allow read: if isApprovedOrAdmin();
+      // See the note on the /notes/ read rule: reads depend on `visibility`, so
+      // src/pages/Forecasts.jsx scopes its two lists (Mine / Shared) to queries
+      // the rule can prove. 'private' is the author's own draft.
+      allow read: if isApprovedOrAdmin() && (
+        isAdmin()
+        || isOwner(resource.data.authorId)
+        || resource.data.visibility in ['members', 'public']
+      );
       allow create: if isApprovedOrAdmin()
         && request.resource.data.authorId == request.auth.uid
         && (request.resource.data.visibility != 'school'
@@ -239,9 +251,14 @@ service cloud.firestore {
     // ── Lesson plans ──────────────────────────────────────────────────────
     // Same visibility model as schemes.
     match /lesson_plans/{planId} {
-      // See the note on the /notes/ read rule: a document-dependent clause
-      // breaks the un-filtered list in src/pages/LessonPlans.jsx.
-      allow read: if isApprovedOrAdmin();
+      // See the note on the /notes/ read rule: reads depend on `visibility`, so
+      // src/pages/LessonPlans.jsx scopes its two lists to queries the rule can
+      // prove and src/pages/Search.jsx asks for the same two slices.
+      allow read: if isApprovedOrAdmin() && (
+        isAdmin()
+        || isOwner(resource.data.authorId)
+        || resource.data.visibility in ['members', 'public']
+      );
       allow create: if isApprovedOrAdmin()
         && request.resource.data.authorId == request.auth.uid
         && (request.resource.data.visibility != 'school'

@@ -22,7 +22,7 @@ export default function Members() {
   const { user, isAdmin } = useAuth()
   const toast = useToast()
   const [scope, setScope] = useState('pending')
-  const { rows, loading, error } = useCollection('users', { max: 200, sort: 'createdAt' })
+  const { rows, loading, error } = useCollection('users', { max: 200, sort: 'createdAt', ordered: true })
   const [pendingAction, setPendingAction] = useState(null)
 
   if (!isAdmin) {

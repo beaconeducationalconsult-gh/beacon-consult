@@ -9,8 +9,12 @@ import { fmtDate } from '../lib/academicCalendar'
 export default function AuthorPage() {
   const { authorId } = useParams()
   const { row: profile, loading, error } = useDoc('users', authorId)
-  const { rows: posts, error: postsError } = useCollection('posts', { filters: [['authorId', '==', authorId]], max: 20 })
-  const { rows: plans, error: plansError } = useCollection('lesson_plans', { filters: [['authorId', '==', authorId]], max: 20 })
+  const { rows: posts, error: postsError } = useCollection('posts', {
+    filters: [['authorId', '==', authorId]], sort: 'timestamp', max: 20, ordered: true,
+  })
+  const { rows: plans, error: plansError } = useCollection('lesson_plans', {
+    filters: [['authorId', '==', authorId]], max: 20, ordered: true,
+  })
 
   if (loading) return <SkeletonList rows={3} />
   if (error) return <DataError what="this member profile" error={error} />

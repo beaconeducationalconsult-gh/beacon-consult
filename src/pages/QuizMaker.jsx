@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { useCollection } from '../hooks/useCollection'
+import { usePagedCollection } from '../hooks/useCollection'
+import LoadMore from '../components/LoadMore'
 import { useToast } from '../context/ToastContext'
 import { SkeletonList } from '../components/Skeleton'
 import DataError from '../components/DataError'
@@ -15,7 +16,10 @@ export default function QuizMaker() {
   const [selected, setSelected] = useState([])
   const [title, setTitle] = useState('Class quiz')
   const [busy, setBusy] = useState(false)
-  const { rows, loading, error } = useCollection('questions', { max: 200 })
+  // Paged rather than capped — see the note in src/hooks/useCollection.js.
+  const {
+    rows, loading, error, hasMore, loadingMore, loadMore, moreError,
+  } = usePagedCollection('questions', { pageSize: 50 })
 
   const chosen = useMemo(() => rows.filter((q) => selected.includes(q.id)), [rows, selected])
   const totalMarks = chosen.reduce((sum, q) => sum + (Number(q.marks) || 1), 0)
@@ -69,7 +73,7 @@ export default function QuizMaker() {
           <input id="quiz-title" className="input" value={title} onChange={(e) => setTitle(e.target.value)} />
         </div>
         <div className="flex flex-wrap gap-2">
-          <button type="button" className="btn-secondary" onClick={selectAll}>Select all ({rows.length})</button>
+          <button type="button" className="btn-secondary" onClick={selectAll}>Select all loaded ({rows.length})</button>
           <button type="button" className="btn-secondary" onClick={() => setSelected([])}>Clear</button>
           <button type="button" className="btn-accent" onClick={buildPptx} disabled={busy}>
             {busy ? 'Building…' : 'Quiz slides (.pptx)'}
@@ -111,6 +115,8 @@ export default function QuizMaker() {
           </li>
         ))}
       </ul>
+
+      <LoadMore hasMore={hasMore} loading={loadingMore} error={moreError} onLoad={loadMore} loaded={rows.length} />
     </div>
   )
 }

@@ -226,7 +226,8 @@ describe('un-filtered list queries stay legal', () => {
   const unfiltered = new Set()
   for (const file of walk(new URL('src/', ROOT))) {
     const text = readFileSync(file, 'utf8')
-    for (const m of text.matchAll(/useCollection\(\s*'([a-z_]+)'\s*,\s*\{([^}]*)\}/g)) {
+    // Both list hooks: the paged one has the same duty to stay provable.
+    for (const m of text.matchAll(/use(?:Paged)?Collection\(\s*'([a-z_]+)'\s*,\s*\{([^}]*)\}/g)) {
       if (!m[2].includes('filters')) unfiltered.add(m[1])
     }
     for (const m of text.matchAll(/getDocs\(\s*query\(\s*collection\(\s*db\s*,\s*'([a-z_]+)'\s*\)\s*\)/g)) {
@@ -239,6 +240,67 @@ describe('un-filtered list queries stay legal', () => {
 
   it('finds the un-filtered list queries', () => {
     expect([...unfiltered].length).toBeGreaterThanOrEqual(4)
+  })
+
+  it('scopes every list query against a collection whose read rule needs it', () => {
+    // The three collections whose read rule depends on `visibility`. Listing any
+    // of them without a filter is denied for every ordinary member, so the
+    // scanner above must not find one — and this names them, so deleting the
+    // filter fails with an explanation instead of a permission error in prod.
+    const GATED = ['notes', 'lesson_plans', 'weekly_forecasts']
+    for (const name of GATED) {
+      expect([...unfiltered], `/${name}/ is listed un-filtered somewhere in src/`).not.toContain(name)
+    }
+    // …and the rule each of them relies on really is document-dependent.
+    for (const name of GATED) {
+      const read = allowClause(name, 'read')
+      expect(read, `/${name}/ read must require the shared visibilities`).toContain(
+        "resource.data.visibility in ['members', 'public']"
+      )
+      expect(read, `/${name}/ read must keep the author's own drafts readable`).toContain(
+        'isOwner(resource.data.authorId)'
+      )
+      expect(read, `/${name}/ read must keep admins able to read one document`).toContain('isAdmin()')
+    }
+  })
+
+  it('the paged list hook never lists a gated collection un-filtered', () => {
+    const hooks = readFileSync(new URL('src/hooks/useCollection.js', ROOT), 'utf8')
+    // The hook itself always orders and limits; the filter comes from the page.
+    expect(hooks).toContain('startAfter')
+    expect(hooks).toContain("orderBy(sort, 'desc')")
+    for (const file of walk(new URL('src/pages/', ROOT))) {
+      const text = readFileSync(file, 'utf8')
+      for (const m of text.matchAll(/usePagedCollection\(\s*'([a-z_]+)'[\s\S]{0,400}?\}\)/g)) {
+        const gated = ['notes', 'lesson_plans', 'weekly_forecasts'].includes(m[1])
+        if (gated) {
+          expect(m[0], `${file.pathname.split('/').pop()} lists /${m[1]}/ through the paged hook without filters`)
+            .toContain('filters')
+        }
+      }
+    }
+  })
+
+  it('Search asks for the scoped slice of each collection the rules gate', () => {
+    const search = readFileSync(new URL('src/pages/Search.jsx', ROOT), 'utf8')
+    for (const name of ['lesson_plans', 'notes', 'weekly_forecasts']) {
+      expect(search, `Search.jsx no longer marks ${name} as scoped`).toContain(`name: '${name}', scoped: true`)
+    }
+    expect(search).toContain("where('authorId', '==', uid)")
+    expect(search).toContain("['visibility', 'in', ['members', 'public']]")
+  })
+
+  it('the visibility a form can choose is the vocabulary the rules allow', () => {
+    const forms = ['src/pages/NoteForm.jsx', 'src/pages/LessonPlanForm.jsx', 'src/pages/ForecastForm.jsx']
+    for (const file of forms) {
+      const text = readFileSync(new URL(file, ROOT), 'utf8')
+      const options = [...text.matchAll(/<option value="(\w+)"/g)].map((m) => m[1])
+      expect(options, `${file} lost its privacy choice`).toContain('private')
+      expect(options).toContain('members')
+      // Every value a form can write must be one the read rule recognises.
+      const allowed = ['members', 'public', 'private']
+      expect(options.filter((o) => !allowed.includes(o)), `${file} writes an unknown visibility`).toEqual([])
+    }
   })
 
   it.each([...unfiltered].sort())('/%s/ read does not require document data', (name) => {

@@ -332,6 +332,7 @@ export default function LessonPlanForm() {
             <select id="plan-visibility" className="input" value={form.visibility} onChange={(e) => setForm({ ...form, visibility: e.target.value })}>
               <option value="members">Members of the network</option>
               <option value="public">Public</option>
+              <option value="private">Only me (draft)</option>
             </select>
           </div>
           <div className="flex justify-between">

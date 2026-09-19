@@ -46,21 +46,23 @@ Key fields: `name`, `status` (`'pending' | 'approved' | 'suspended'`),
 Public ones surface on `/articles` and `PublicArticleView`.
 
 ### `notes/{id}` (+ `comments/{id}`)
-`status` (`'private' | 'pending' | 'published'`), `likes`, `dislikes`, content.
-Private → visible to author/admin only; `published` → network-wide. Approved members may
-like/dislike (rules restrict the diff to `likes` + `dislikes`). Has a `comments`
-subcollection.
+`visibility` (`'members' | 'public' | 'private'`), `status` (`'draft' | 'published'` — written
+by the form, not read by the rules; older notes have neither), `likes`, `likesBy`, content.
+`private` → author/admin only, enforced by the read rule; `members`/`public` → network-wide.
+Has a `comments` subcollection. The like fields diff-limited to `likes` + `likesBy`; no
+note-like UI exists yet.
 
 ### `weekly_forecasts/{id}` — schemes of learning
 `kind: 'scheme'`, `subjectId`, `grade`, `term`, `rows[]` (per-week strand/sub-strand/
 content-standards/indicators/resources/indicatorIds), `notes`,
-`visibility` (`'public' | 'private'`). Public schemes are a shared library; a member can
-clone one as a template (`?from=<id>` in `ForecastForm`).
+`visibility` (`'members' | 'public' | 'private'`). Shared schemes are a library; a member can
+clone one as a template (`?from=<id>` in `ForecastForm`). `private` is a draft only the author
+(and admins) can read — the read rule says so and the list pages query accordingly.
 
 ### `lesson_plans/{id}`
-`visibility` (`'public' | 'private'`), `indicatorIds[]` (for curriculum-linked lookups —
-indexed), plan phases/content. Indexed on `visibility+createdAt`, `authorId+createdAt`,
-and `indicatorIds` (array-contains) combos.
+`visibility` (`'members' | 'public' | 'private'`), `indicatorIds[]` (for curriculum-linked
+lookups — indexed), plan phases/content. Indexed on `visibility+createdAt`,
+`authorId+createdAt`, and `indicatorIds` (array-contains) combos.
 
 ### `questions/{id}` — question bank
 `subjectId`, `grade`, `strandName`, `subStrandName`, `type` (`'mcq' | 'short' | 'essay'`),
@@ -111,7 +113,9 @@ by local date** (see [pwa-offline.md](pwa-offline.md)).
 
 ## Composite indexes (`firestore.indexes.json`)
 
-Defined for `posts`, `lesson_plans` (4), `weekly_forecasts` (2), `questions`,
-`lesson_slides` (2), `vacancies` (2), `notes` (2). `articles` needs **no composite index**:
-its queries are single-field equality (`where('visibility'/'authorId','==',…)`) with
-client-side sorting, which Firestore's automatic single-field indexes already cover.
+Defined for `posts` (2), `lesson_plans` (4), `weekly_forecasts` (2), `questions` (2),
+`lesson_slides` (2), `vacancies` (2), `notes` (3), `articles` (1) — the last three for the
+`authorId + createdAt`/`visibility + createdAt` shape the member lists and `Search.jsx` use.
+`articles`' public page still needs no index: `where('visibility','==','public')` is covered by
+the automatic single-field index. Every `where(...) + orderBy(...)` pair in `src/` has an index
+here; a missing one shows up as `failed-precondition` in the page's error banner.

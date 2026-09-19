@@ -21,8 +21,23 @@ false for a member, so it does not rescue the query. Where a rule genuinely must
 (like `articles.visibility == 'public'` for the anonymous public page), the *query* has to carry
 a matching `where(...)` — see `PublicArticles.jsx`.
 
+**`notes`, `lesson_plans` and `weekly_forecasts` gate reads this way again (P2-7, 2026-09-19).**
+Their rule is `isApprovedOrAdmin() && (isAdmin() || isOwner(resource.data.authorId) ||
+resource.data.visibility in ['members', 'public'])`, so `visibility: 'private'` is a real draft.
+That is only safe because every screen lists them through one of two provable queries —
+`where('authorId','==',uid)` (the Mine tab) or `where('visibility','in',['members','public'])`
+(Shared) — including the two queries `Search.jsx` runs per gated collection. Listing any of the
+three un-filtered is denied for every ordinary member.
+
+**Deploy order matters for this pair.** Publish the new rules only after the new build is live:
+an old client whose list page still queries un-filtered will go from "shows everything" to
+`permission-denied`. The composite indexes (`visibility + createdAt`, and the `authorId +
+createdAt` ones the paged lists use) must be deployed too — `firebase deploy --only
+firestore:indexes`, or the console's index page.
+
 `src/firestoreRules.test.js` fails if a collection the client lists un-filtered loses its
-document-independent branch.
+document-independent branch, and if a gated collection stops being scoped — it scans for both
+`useCollection` and `usePagedCollection`.
 
 ## 🟠 A Word style Word cannot resolve renders as body text, silently
 
