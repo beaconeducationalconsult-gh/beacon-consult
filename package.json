@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Beacon Educational Consult \u2014 NaCCA curriculum portal and teacher network for Ghanaian basic schools",
+  "description": "Beacon Educational Consult — NaCCA curriculum portal and teacher network for Ghanaian basic schools",
   "packageManager": "yarn@4.9.4",
   "scripts": {
     "dev": "vite",

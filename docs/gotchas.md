@@ -325,12 +325,6 @@ Running several production builds on the same `localhost` origin can leave an ol
 a blank shell. Unregister it + clear caches in DevTools, then reload. Harmless on the real
 domain.
 
-## 🟡 Slides are browse + export only
-`SlideLessons.jsx` builds a deck from the selected week's scheduled lessons and exports PPTX
-(`lib/lessonSlidesPptx.js`); it can also save decks to `lesson_slides`. There is **no
-authoring form and no deck-view page** — `SlideLessonForm`/`SlideLessonView` do not exist in
-this portal. Don't assume slide creation works end-to-end.
-
 ## 🟡 Note exports flatten rich text, and drop images
 `src/lib/htmlBlocks.js` reads a note's HTML into headings, paragraphs, bullets and numbered
 items for the Word/PDF exporters. Inline markup (`strong`, `em`, links) is **dropped, keeping

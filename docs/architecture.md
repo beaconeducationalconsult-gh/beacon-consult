@@ -61,7 +61,7 @@ Two zones:
 /portal/questions             Question bank  (+ /new, /generate, /quiz, /:id/edit)
 /portal/notes                 Study notes  (+ /new, /:id, /:id/edit)
 /portal/vacancies             Vacancies  (+ /new, /:id/edit)
-/portal/slides                Slide lessons (browse + PPTX export; no authoring form)
+/portal/slides                Slide lessons  (+ /:deckId, /:deckId/edit; hidden from the panel)
 /portal/wall                  → redirects to /portal (folded into Workspace)
 /portal/authors/:authorId     Author profile page
 /portal/search /progress /profile /members

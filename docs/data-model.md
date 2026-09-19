@@ -88,8 +88,9 @@ reminder on the Workspace home page; indexed `authorId+weekKey`). Consumed by th
 (`QuestionGenerator`, `QuizMaker`) and `Search`.
 
 ### `lesson_slides/{id}` (+ `comments`)
-`status` (`'published'` gates public-ish reads within the network). The browse/export page
-exists; there is no authoring form (see [gotchas.md](gotchas.md)).
+`status` (`'published'` gates public-ish reads within the network), and the slides themselves
+as arrays the PPTX exporter reads — the deck view and the authoring form write them back
+(see [features.md](features.md)).
 
 ### `vacancies/{id}`
 `status` (`'published'` is readable **without auth** — powers the public `/vacancies`

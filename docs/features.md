@@ -144,13 +144,6 @@ theories, colour-coded cards, batched/infinite-scroll loading, search, and **sha
 `Vacancies.jsx`, `VacancyForm.jsx`, `PublicVacancies.jsx`. Members post teaching vacancies;
 `published` ones are readable publicly (no login). Collection: `vacancies`.
 
-## Slides — `/portal/slides`
-`SlideLessons.jsx` — pick a grade/subject/term/week and the page builds a deck from that
-week's scheduled lessons (`useSchedules`) and exports it as PPTX via
-`lib/lessonSlidesPptx.js`; it can also save the deck to `lesson_slides`. There is **no
-authoring form or deck-view page** — `SlideLessonForm`/`SlideLessonView` do not exist in the
-portal. Collection: `lesson_slides`.
-
 ## Utility & admin
 
 - **Search** `/portal/search` (`Search.jsx`) — searches the `questions` bank.
