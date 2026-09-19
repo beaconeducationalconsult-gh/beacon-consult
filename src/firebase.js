@@ -5,6 +5,7 @@ import {
   persistentMultipleTabManager,
 } from 'firebase/firestore'
 import { getAuth } from 'firebase/auth'
+import { getStorage } from 'firebase/storage'
 
 // Firebase web config. These are public identifiers, not secrets — but the app
 // cannot reach Firebase without them, and Vite embeds them at BUILD time, so a
@@ -46,3 +47,8 @@ export const db = app
   : null
 
 export const auth = app ? getAuth(app) : null
+
+// The document library (P3-3) keeps generated files here. Null in a build with
+// no config, exactly like db and auth, so the library degrades to a message
+// instead of throwing on import. See src/lib/generatedDocs.js and storage.rules.
+export const storage = app ? getStorage(app) : null

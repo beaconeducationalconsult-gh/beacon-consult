@@ -39,6 +39,7 @@ const LINKS = [
   { to: '/portal/articles', label: 'Articles', icon: 'articles' },
   { to: '/portal/vacancies', label: 'Vacancies', icon: 'vacancies' },
   { to: '/portal/search', label: 'Search', icon: 'search' },
+  { to: '/portal/library', label: 'My library', icon: 'wall' },
   { to: '/portal/progress', label: 'Progress', icon: 'progress' },
 
   // ── Hidden from the side panel, not removed ──────────────────────────────

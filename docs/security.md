@@ -102,6 +102,13 @@ and `isAdmin()` both read the very document the caller just created.
   owner/approved.
 - **`progress/{uid}`**: owner-only read/write in practice. The second read clause (members of
   the owner's school) is Phase 2 and unreachable until `schoolId` is actually set on users.
+- **`generated_documents/{id}`** (P3-3): the record of a file a member generated. Read is
+  owner-or-admin, so the library lists only the caller's own documents —
+  `where('authorId', '==', uid)` — and an un-filtered list is denied, which
+  `src/firestoreRules.test.js` checks. Create requires `authorId == uid` **and** a
+  `storagePath` inside the caller's own folder (`^generated/<uid>/`), so a record can never
+  point at somebody else's file. Admin update; owner-or-admin delete. The file itself lives
+  in Cloud Storage — see below.
 - **`quote_likes/{quoteId}`**: approved read; create requires `count==1` + only your uid;
   update only permits adding/removing **your own** uid with `count` moving ±1 in step
   (guarded by `hasAll` + `size()` checks so no one can tamper with others' likes).
@@ -116,17 +123,47 @@ Service), and for `deliveries`, `subscriptions`, `schools`, `school_codes`, `cla
 enforce nothing that exists. They are design notes: safe to deploy, impossible to verify, and
 they must be re-checked against the real code on the day that phase ships — or deleted with it.
 
+## Cloud Storage (`storage.rules`)
+
+Storage holds exactly one thing: the documents members generate (lesson plans, schemes, exam
+papers, quiz decks, study notes) so the **library** can hand them back later instead of their
+existing only as whatever landed in a downloads folder. Layout — the only paths the rules
+allow:
+
+```
+generated/{uid}/{timestamp}-{filename}
+```
+
+The uid in the path **is** the permission: a member writes under their own uid and nowhere
+else, reads back only what they stored (or anything at all, if admin), and may not enumerate
+another member's folder. Uploads are capped at 8 MB in the rule, and anything outside
+`generated/` is denied — including reads — so a future feature has to add its own rule on
+purpose. `src/lib/generatedDocs.js` builds the path; both sides have to agree, and
+`src/storageRules.test.js` fails if they stop agreeing.
+
+Two consequences worth knowing:
+
+* **The cross-service `firestore.get()` is deliberate and its rules must match.** Status and
+  role live in Firestore, so storage rules call `firestore.get(...)` to read them — the same
+  two lookups `firestore.rules` defines, duplicated because there is no shared include. If the
+  Firestore helpers ever change, this file changes with them.
+* **Storage has no emulator-free proof here.** The emulator needs a JVM, which this
+  environment lacks (see P2-1 in docs/TODO.md), so the guarantees above are verified by
+  reading the file and by `src/storageRules.test.js`, not by exercising a real upload.
+
 ## Deploying rules
 
-Rules and indexes are **not** deployed by Vercel. After changing `firestore.rules` or
-`firestore.indexes.json`, deploy with the Firebase CLI:
+Rules and indexes are **not** deployed by Vercel. After changing `firestore.rules`,
+`firestore.indexes.json` or `storage.rules`, deploy with the Firebase CLI:
 
 ```
 firebase deploy --only firestore:rules,firestore:indexes
+firebase deploy --only storage
 ```
 
 `.firebaserc` pins the project (`beacon-educational-consu-8005e`), so the CLI resolves it
-without a `--project` flag; `make deploy-rules` wraps the command. A committed rules change
+without a `--project` flag; `make deploy-rules` wraps the Firestore half (`make
+deploy-storage` wraps the Storage half). A committed rules change
 that hasn't been deployed does **nothing** in production.
 
 **Pasting into the Firebase console also works**, and is the fastest way to unblock a fresh

@@ -44,6 +44,7 @@ const VacancyForm = lazy(() => import('./pages/VacancyForm'))
 const SlideLessons = lazy(() => import('./pages/SlideLessons'))
 const SlideLessonView = lazy(() => import('./pages/SlideLessonView'))
 const SlideLessonForm = lazy(() => import('./pages/SlideLessonForm'))
+const DocumentLibrary = lazy(() => import('./pages/DocumentLibrary'))
 const Search = lazy(() => import('./pages/Search'))
 const Progress = lazy(() => import('./pages/Progress'))
 const Profile = lazy(() => import('./pages/Profile'))
@@ -139,6 +140,8 @@ export default function App() {
         <Route path="vacancies" element={<Vacancies />} />
         <Route path="vacancies/new" element={<VacancyForm />} />
         <Route path="vacancies/:vacancyId/edit" element={<VacancyForm />} />
+
+        <Route path="library" element={<DocumentLibrary />} />
 
         <Route path="slides" element={<SlideLessons />} />
         <Route path="slides/:deckId" element={<SlideLessonView />} />

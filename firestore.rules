@@ -300,6 +300,28 @@ service cloud.firestore {
       }
     }
 
+    // ── Generated document library (P3-3) ─────────────────────────────────
+    // Metadata for the files members generate: the file itself lives in Cloud
+    // Storage (see storage.rules), this is the record the library page lists.
+    //
+    // The read rule is scoped to the owner, so every list query in the client
+    // filters on `authorId == uid` — an un-filtered list of this collection is
+    // denied for ordinary members, and src/firestoreRules.test.js fails if a
+    // screen starts listing it that way.
+    match /generated_documents/{documentId} {
+      allow read: if isApprovedOrAdmin()
+        && (isAdmin() || isOwner(resource.data.authorId));
+      allow create: if isApprovedOrAdmin()
+        && request.resource.data.authorId == request.auth.uid
+        && request.resource.data.storagePath is string
+        // The path must be inside the caller's own folder: a record pointing at
+        // another member's file would be a lie, and reading it would fail only
+        // later, in the library.
+        && request.resource.data.storagePath.matches('^generated/' + request.auth.uid + '/');
+      allow update: if isAdmin();
+      allow delete: if isOwner(resource.data.authorId) || isAdmin();
+    }
+
     // ── Vacancies ─────────────────────────────────────────────────────────
     // Public page reads published vacancies without auth
     match /vacancies/{vacancyId} {

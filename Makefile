@@ -1,4 +1,4 @@
-.PHONY: install inventory audit audit-l2 check check-scripts bundle-size bundle-check books-rollout books-generate books-publish questions build-questions generate-questions bundle-hash verify-deploy deploy-check dev build lint test preview deploy-rules books book-skeleton boot-check list-modules build-curriculum validate-curriculum generate-schemes generate-records package-books
+.PHONY: install inventory audit audit-l2 check check-scripts bundle-size bundle-check books-rollout books-generate books-publish deploy-storage questions build-questions generate-questions bundle-hash verify-deploy deploy-check dev build lint test preview deploy-rules books book-skeleton boot-check list-modules build-curriculum validate-curriculum generate-schemes generate-records package-books
 
 # ── Frontend (React + Vite + Yarn 4) ────────────────────────────────────────
 # The portal lives at the repository root. Node 22+ and Yarn 4 are required:
@@ -50,6 +50,11 @@ FIREBASE ?= firebase
 
 deploy-rules:
 	$(FIREBASE) deploy --only firestore:rules,firestore:indexes
+
+# Storage rules are a separate deploy too (P3-3): they gate the generated-document
+# library. `firebase deploy --only storage` uses the "storage" block in firebase.json.
+deploy-storage:
+	$(FIREBASE) deploy --only storage
 
 # ── Dataset audit ───────────────────────────────────────────────────────────
 # `make inventory` derives every headline number from data/ and separates:
