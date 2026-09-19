@@ -8,12 +8,11 @@ import LoadMore from '../components/LoadMore'
 import SubjectSelect from '../components/SubjectSelect'
 import EmptyState from '../components/EmptyState'
 import SaveToLibrary from '../components/SaveToLibrary'
-import { GRADES, gradeLabel } from '../lib/grades'
+import { GRADES, TERMS, gradeLabel } from '../lib/grades'
 import { buildQuestionPaper, downloadQuestionPaper } from '../lib/questionPaper'
 import { buildPool, composePaper, summarise } from '../lib/examPaper'
 import { loadStarterPack } from '../lib/starterBank'
 import { suggestFilename } from '../lib/generatedDocs'
-import { TERMS } from '../lib/grades'
 
 const TYPE_LABELS = { mcq: 'Objective', short: 'Short answer', essay: 'Essay', truefalse: 'True / false' }
 
