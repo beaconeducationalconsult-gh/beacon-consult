@@ -20,8 +20,8 @@ so no app changes are needed to read them. See docs/APP_CURRICULUM.md.
 
 Usage
 -----
-    python3 tools/build_app_curriculum.py
-    python3 tools/build_app_curriculum.py --grade B4
+    python3 scripts/build_app_curriculum.py
+    python3 scripts/build_app_curriculum.py --grade B4
     python3 scripts/build_app_curriculum.py --out public/curriculum
 """
 from __future__ import annotations
@@ -34,7 +34,7 @@ from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(ROOT / "tools"))
+sys.path.insert(0, str(ROOT / "scripts"))
 
 # Pure-data helpers; the docx import inside generate_schemes is optional.
 from generate_schemes import (  # noqa: E402

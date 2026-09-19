@@ -1,4 +1,4 @@
-.PHONY: install inventory audit check dev build lint test preview deploy-rules books book-skeleton boot-check list-modules build-curriculum validate-curriculum generate-schemes generate-records package-books
+.PHONY: install inventory audit check check-scripts dev build lint test preview deploy-rules books book-skeleton boot-check list-modules build-curriculum validate-curriculum generate-schemes generate-records package-books
 
 # ── Frontend (React + Vite + Yarn 4) ────────────────────────────────────────
 # The portal lives at the repository root. Node 22+ and Yarn 4 are required:
@@ -32,7 +32,7 @@ test:
 # *error* means the portal would serve part of the dataset it cannot source.
 # The tests include contract checks over public/curriculum itself, so a bundle
 # that does not join up fails here rather than in a teacher's browser.
-check: lint test validate-curriculum inventory
+check: lint test check-scripts validate-curriculum inventory
 	$(YARN) build
 
 # ── Firebase (rules + indexes) ──────────────────────────────────────────────
@@ -80,6 +80,11 @@ list-modules:
 # Run this after any change to data/curriculum/ or data/lessons/.
 build-curriculum:
 	PYTHONPATH=. python scripts/build_app_curriculum.py
+
+# The one-shot scripts under scripts/ are documentation as much as tools: a script
+# that cannot import its own compatibility shim documents nothing (P2-8).
+check-scripts:
+	python3 scripts/check_scripts.py
 
 validate-curriculum:
 	PYTHONPATH=. python scripts/validate_app_curriculum.py

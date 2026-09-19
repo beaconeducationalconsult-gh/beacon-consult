@@ -1,6 +1,6 @@
-# --- resolve bare data filenames against data/ (see tools/_compat.py) ---
+# --- resolve bare data filenames against data/ (see scripts/_compat.py) ---
 import sys as _sys, pathlib as _pathlib
-_sys.path.insert(0, str(_pathlib.Path(__file__).resolve().parents[2] / "tools"))
+_sys.path.insert(0, str(_pathlib.Path(__file__).resolve().parents[1]))
 from _compat import open_compat; open_compat()
 # -----------------------------------------------------------------------
 import json

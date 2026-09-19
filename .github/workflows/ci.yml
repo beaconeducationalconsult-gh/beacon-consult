@@ -50,6 +50,11 @@ jobs:
       # validate_app_curriculum.py and build_inventory.py are stdlib-only, so
       # there is nothing to pip install. `make inventory` exits non-zero on a
       # data *error*; warnings (known gaps) are printed and allowed through.
+      # Static: every script must compile and be able to import its own shim, so
+      # the graveyard of one-shot generators cannot rot further (P2-8).
+      - name: Check the scripts still point at code that exists
+        run: make check-scripts
+
       - name: Validate the app curriculum bundle
         run: make validate-curriculum
 

@@ -1,7 +1,8 @@
 """Compatibility shim for the legacy one-shot scripts.
 
 Before the restructure, data files sat next to the scripts in the repo
-root and every script opened them by bare filename::
+root (under `tools/`, which no longer exists) and every script opened them by bare
+filename::
 
     with open("math_b4_lessons_enriched.json") as f:
 
@@ -48,8 +49,8 @@ def open_compat():
 
 
 def _bootstrap():
-    """Make `tools/` importable no matter where this is called from."""
-    here = Path(__file__).resolve().parent  # <root>/tools
+    """Make `data/` importable no matter where this is called from."""
+    here = Path(__file__).resolve().parent  # <root>/scripts
     if str(here) not in sys.path:
         sys.path.insert(0, str(here))
 

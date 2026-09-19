@@ -16,9 +16,9 @@ they are reported in the manifest but excluded from bundles until the conflict i
 resolved. Pass --include-v2 to override.
 
 Usage:
-    python3 tools/package_books.py                # build everything
-    python3 tools/package_books.py --manifest-only
-    python3 tools/package_books.py --include-v2
+    python3 scripts/package_books.py                # build everything
+    python3 scripts/package_books.py --manifest-only
+    python3 scripts/package_books.py --include-v2
 """
 from __future__ import annotations
 
@@ -32,7 +32,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(ROOT / "tools"))
+sys.path.insert(0, str(ROOT / "scripts"))
 
 from _paths import BOOKS  # noqa: E402
 DIST = ROOT / "dist"
