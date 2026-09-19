@@ -71,6 +71,23 @@ fresh project — but copy from this repo's `firestore.rules`, never from a chat
 design doc, or the console copy and the repo drift with nothing to detect it. Re-run the CLI
 deploy the next time you touch the file.
 
+## Verifying the deploy
+
+```bash
+make deploy-check URL=https://your-deploy.vercel.app
+```
+
+`scripts/verify_deploy.py` fetches `/build-info.json` (written by the Vite build: whether the
+six `VITE_FIREBASE_*` values were present, the `bundleHash` of the curriculum it built, and the
+commit), then `/`, `/curriculum/grades.json`, one per-subject schedules file, and `/sw.js`. It
+fails loudly on the two silent killers: **a deploy built without Firebase config** (the app
+shows the setup notice instead of the portal, and the build was green) and **a stale curriculum**
+(a deploy whose `bundleHash` is not the one in this checkout). `make check` runs the offline half
+of it.
+
+The Firebase-backed flows still need a person: `docs/verification.md` is the step-by-step
+checklist, with what each step is really testing.
+
 ## Local verification loop
 
 1. `yarn build && yarn preview`

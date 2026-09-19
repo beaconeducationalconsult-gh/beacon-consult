@@ -33,7 +33,8 @@ Other useful commands:
 |---|---|
 | `yarn build` / `yarn preview` | Production build, then serve it (PWA behaviour only exists here) |
 | `yarn lint` | ESLint incl. the React Compiler rules — must stay clean |
-| `make check` | The pre-deploy gate: lint + curriculum validation + production build |
+| `make check` | The pre-deploy gate: lint + tests + curriculum validation + inventory + build |
+| `make deploy-check URL=…` | Check a live deploy from the outside (Firebase config, curriculum hash, SPA rewrite) — see [verification.md](docs/verification.md) |
 | `make audit` (`make inventory`) | The data audit: regenerate `data/inventory.json`, list every dataset gap |
 | `make build-curriculum` | Rebuild `public/curriculum/` from `data/` after a dataset change |
 

@@ -58,6 +58,12 @@ jobs:
       - name: Validate the app curriculum bundle
         run: make validate-curriculum
 
+      # The offline half of scripts/verify_deploy.py: the bundle hash exists and
+      # public/sw.js reads it, so a rebuilt bundle cannot ship with a service
+      # worker that keeps serving the old one (P2-3).
+      - name: Check the service worker still keys off the bundle hash
+        run: make bundle-hash
+
       - name: Rebuild the inventory and check it is current
         run: |
           make inventory

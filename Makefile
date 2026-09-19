@@ -1,4 +1,4 @@
-.PHONY: install inventory audit check check-scripts dev build lint test preview deploy-rules books book-skeleton boot-check list-modules build-curriculum validate-curriculum generate-schemes generate-records package-books
+.PHONY: install inventory audit check check-scripts bundle-hash verify-deploy deploy-check dev build lint test preview deploy-rules books book-skeleton boot-check list-modules build-curriculum validate-curriculum generate-schemes generate-records package-books
 
 # ── Frontend (React + Vite + Yarn 4) ────────────────────────────────────────
 # The portal lives at the repository root. Node 22+ and Yarn 4 are required:
@@ -32,8 +32,13 @@ test:
 # *error* means the portal would serve part of the dataset it cannot source.
 # The tests include contract checks over public/curriculum itself, so a bundle
 # that does not join up fails here rather than in a teacher's browser.
-check: lint test check-scripts validate-curriculum inventory
+check: lint test check-scripts validate-curriculum inventory bundle-hash
 	$(YARN) build
+
+# Cheap guard for the P2-3 contract: the build writes a bundleHash and the service
+# worker reads it. Full deploy verification is `make deploy-check URL=…`.
+bundle-hash:
+	python3 scripts/verify_deploy.py --offline-check
 
 # ── Firebase (rules + indexes) ──────────────────────────────────────────────
 # .firebaserc pins the project, so no --project flag is needed.
@@ -85,6 +90,13 @@ build-curriculum:
 # that cannot import its own compatibility shim documents nothing (P2-8).
 check-scripts:
 	python3 scripts/check_scripts.py
+
+# The offline half of scripts/verify_deploy.py: the local bundle hash exists and
+# public/sw.js still names its cache after it. The full check needs a URL.
+verify-deploy:
+	python3 scripts/verify_deploy.py $(URL)
+
+deploy-check: verify-deploy
 
 validate-curriculum:
 	PYTHONPATH=. python scripts/validate_app_curriculum.py
