@@ -18,7 +18,18 @@ import { describe, expect, it } from 'vitest'
 
 const ROOT = new URL('..', import.meta.url)
 
-const source = readFileSync(new URL('firestore.rules', ROOT), 'utf8')
+/*
+ * Line endings are normalized on read, and that is not cosmetic.
+ *
+ * A Windows checkout (git's `core.autocrlf`, which is on by default in Git for
+ * Windows) writes this file with CRLF, while every pattern below — and the
+ * `allow …;\n` terminator in particular — is written against LF. Without this,
+ * `allowClause()` matched nothing, every clause came back as an empty string,
+ * and 32 checks failed on a machine whose rules were perfectly correct (CI runs
+ * on Linux, so it never saw it). Normalize here rather than teaching each
+ * pattern about `\r\n`.
+ */
+const source = readFileSync(new URL('firestore.rules', ROOT), 'utf8').replace(/\r\n/g, '\n')
 
 /** Comments mention rule text (e.g. the escalation bug); only code counts. */
 const stripComments = (s) =>

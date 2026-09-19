@@ -298,6 +298,17 @@ runs. This is the most common "it works locally / on my emulator but 403s in pro
 runs it. Note that rules pasted into the Firebase console are **not** version-controlled:
 the console and `firestore.rules` can silently disagree, and only the repo file is reviewed.
 
+## 🟠 A Windows checkout carries CRLF, and a `;\n` parser silently matches nothing
+Git for Windows turns LF into CRLF on checkout (`core.autocrlf`), and a test that parses a text
+file with a regex anchored on `\n` then matches **nothing** — not "the wrong thing", nothing.
+`src/firestoreRules.test.js` read `firestore.rules` and looked for `allow …;\n`, so on a Windows
+machine every clause came back as an empty string and 32 checks failed on a file that was
+perfectly correct; CI runs on Linux and never saw it. The read is normalized now
+(`.replace(/\r\n/g, '\n')`) rather than teaching every pattern about `\r\n`, and any new test
+that parses a source file should do the same. Reproduce it anywhere with
+`python3 -c "…"`-style conversion, or by setting `core.autocrlf true` and converting the file —
+the failure mode is worth seeing once.
+
 ## 🟠 A rule that matches on the wrong text answers the wrong question
 The question generator fires rules at an indicator by matching its wording, and that is a
 sharp edge worth remembering before writing the next generator: **match the indicator, never
