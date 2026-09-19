@@ -1,4 +1,4 @@
-.PHONY: install inventory audit check check-scripts questions build-questions generate-questions bundle-hash verify-deploy deploy-check dev build lint test preview deploy-rules books book-skeleton boot-check list-modules build-curriculum validate-curriculum generate-schemes generate-records package-books
+.PHONY: install inventory audit audit-l2 check check-scripts questions build-questions generate-questions bundle-hash verify-deploy deploy-check dev build lint test preview deploy-rules books book-skeleton boot-check list-modules build-curriculum validate-curriculum generate-schemes generate-records package-books
 
 # ── Frontend (React + Vite + Yarn 4) ────────────────────────────────────────
 # The portal lives at the repository root. Node 22+ and Yarn 4 are required:
@@ -60,6 +60,12 @@ deploy-rules:
 #               data/reference/)
 # Run it before any data change and after `make build-curriculum`.
 audit: inventory
+
+# What in L2 is per-lesson content and what is a subject-wide template (P1-4).
+# Writes data/audit/l2_template.json; changes no data. `make check` fails if the
+# app's own list of routine fields drifts from this measurement.
+audit-l2:
+	python3 scripts/audit/audit_d_l2_template.py
 
 # ── Python environment (data pipeline + book generation) ────────────────────
 install-python:

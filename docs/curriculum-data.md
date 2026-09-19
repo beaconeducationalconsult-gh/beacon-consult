@@ -127,7 +127,8 @@ the full lesson skeleton: `rpk`, `starter[]`, `main[]`, `plenary[]`, `assessment
 `competencies`, `resources`, `keywords`, `perf_indicator`, `session_title`.
 
 **How bespoke is it?** Measured as *distinct values ÷ lesson slots* across all
-13,140 slots:
+13,140 slots, and per subject-grade by `scripts/audit/audit_d_l2_template.py`
+(`make audit-l2`; the numbers below are its output in `data/audit/l2_template.json`):
 
 | Field | Distinct / slots | Reading |
 |---|---|---|
@@ -140,12 +141,29 @@ the full lesson skeleton: `rpk`, `starter[]`, `main[]`, `plenary[]`, `assessment
 | `plenary` | 0.7% | **per-subject constant** |
 | `rpk` | 0.6% | **per-subject constant** |
 
+Per subject-grade the picture is sharper still: `rpk` is a single value in **70 of
+the 73** subject-grades that have lessons, `plenary` in **60**, `assessment` in
+**67**, `competencies` in **67**, `resources` in **66**, `keywords` in **66** —
+while `starter` (median **156** distinct values in a subject-grade's 180 slots),
+`main` (**60**), `perf_indicator`/`ind_desc` (**42**) and `session_title` (**21**)
+are content, not repetition.
+
 So: L2 is a **template applied across the year with per-lesson `starter`/`main`
 content**, not 13,140 hand-written lesson plans. That is a perfectly good product —
 the generated books are real and usable — but the distinction matters when selling
 it, when deciding what to generate in the browser, and when planning authoring work.
 The honest headline is *"13,140 scheduled lesson slots with a filled teaching
 template"*, not *"13,140 authored lesson plans"*.
+
+**And the product now says so** (P1-4, 2026-09-19). `src/lib/lessonTemplate.js` makes
+the same measurement from the loaded schedule: the fields that hold one value across a
+subject-grade's lessons are its *routine* fields. When a teacher fills a lesson plan
+from the curriculum, the plan records which sections it inherited
+(`inheritedFields`, plus `prefilledFrom`) and the form says so out loud. Both exports
+then label exactly those headings — `Relevant Previous Knowledge (teaching template)`
+— with a line explaining the marker, so a printed plan never passes the syllabus'
+printed routine off as the teacher's own wording. Starter and main activities are
+never labelled, because the measurement shows they are the lesson's own.
 
 `ind_desc` also carried the print's exemplar tail in some records. Every one of
 these prints sets its rows as `<indicator>` followed by the exemplar column in the
@@ -317,6 +335,7 @@ the build stamps it from `data/audit/` rather than a hand-kept list. Two audits 
 | Audit A (`audit_a_databases.py`) | indicator counts against the expected count recorded per file | only `data/curriculum/` |
 | Audit B (`audit_b_pdf_crosscheck.py`) | every code re-extracted from the PDF, set-compared with the database | both copies, via `find_data` |
 | Audit C (`audit_c_lessons.py`) | the L2 layer: 180-slot grid, required fields, codes present in the database; and the generated `Basic1_*` documents, if they are here | `data/lessons/` + `data/curriculum/`; the documents are build outputs, so an absent one is `MISSING`, not a defect |
+| Audit D (`audit_d_l2_template.py`, `make audit-l2`) | what L2 *is*: how many distinct values each field takes inside one subject-grade, field by field | `data/lessons/`; writes `data/audit/l2_template.json`, changes no data |
 
 Audit A used to see only the 75 databases in `data/curriculum/` — which is why Audit B exists as
 a second route to the same claim. Since the promotion it enumerates **all 84**, kindergarten's

@@ -9,6 +9,7 @@ import SubjectSelect from '../components/SubjectSelect'
 import { GRADES, TERMS, gradeLabel } from '../lib/grades'
 import Stepper from '../components/Stepper'
 import IndicatorPicker from '../components/IndicatorPicker'
+import { templateFields, templateNote } from '../lib/lessonTemplate'
 
 const STEPS = ['Class & indicators', 'Lesson content', 'Review & save']
 
@@ -121,11 +122,28 @@ export default function LessonPlanForm() {
   }, [editing, planId])
 
   /** Pull the curriculum row for the first chosen indicator into the plan. */
+  /*
+   * Pull the curriculum row for the first chosen indicator into the plan.
+   *
+   * Part of what arrives was never written for this lesson: the measurement
+   * (`src/lib/lessonTemplate.js`) shows rpk, plenary, assessment, competencies,
+   * resources and keywords are one value across a subject-grade's whole year.
+   * The plan records which sections it inherited, so the exports can label them
+   * instead of passing the template off as the teacher's own wording (P1-4).
+   */
   const prefillFromCurriculum = () => {
     const first = form.indicatorIds[0]
     if (!first) return toast.error('Choose an indicator first.')
     setPrefilling(true)
     const scheduled = lessons.find((lesson) => [lesson.indicatorCode, lesson.code].includes(first.code))
+    const templated = templateFields(lessons)
+    // Only the sections this prefill actually supplied: a field the teacher had
+    // already written stays theirs, whatever the template says.
+    const inherited = templated.filter((field) => {
+      const current = form[field]
+      const empty = Array.isArray(current) ? current.length === 0 : !current
+      return empty && scheduled?.[field]
+    })
     setForm((current) => ({
       ...current,
       strandName: first.strandName || scheduled?.strandName || '',
@@ -143,9 +161,14 @@ export default function LessonPlanForm() {
       plenary: current.plenary.length ? current.plenary : [].concat(scheduled?.plenary || []),
       rpk: current.rpk || scheduled?.rpk || '',
       assessment: current.assessment || scheduled?.assessment || '',
+      templatedFields: templated,
+      prefilledFrom: scheduled ? 'curriculum-schedule' : 'curriculum-indicator',
+      inheritedFields: inherited,
     }))
     setPrefilling(false)
-    toast.success('Filled from the curriculum — edit anything you like.')
+    toast.success(inherited.length
+      ? `Filled from the curriculum. ${templateNote(inherited)}`
+      : 'Filled from the curriculum — edit anything you like.')
   }
 
   const subjectName = useMemo(
@@ -249,6 +272,12 @@ export default function LessonPlanForm() {
             </button>
             <p className="card-meta">Uses the indicator, plus the scheduled lesson content if the grade has a schedule.</p>
           </div>
+
+          {form.inheritedFields?.length > 0 && (
+            <p className="rounded-lg bg-amber-50 p-3 text-sm text-amber-800">
+              {templateNote(form.inheritedFields)} Edit anything you like — the plan is yours once saved.
+            </p>
+          )}
 
           <div className="flex justify-end">
             <button type="button" className="btn-primary" onClick={() => setStep(1)} disabled={form.indicatorIds.length === 0}>

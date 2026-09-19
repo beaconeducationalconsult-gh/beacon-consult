@@ -90,7 +90,14 @@ import. Imported questions become ordinary `questions` documents (batched writes
 published`, `source` kept, `starterBankId` for provenance) and are editable, printable and
 deletable like any other. Nothing is fetched or imported until the panel is opened.
 
-### Generators — `/portal/questions/generate` and `/quiz`
+#**Templated sections are labelled (P1-4).** Filling a plan from the curriculum inherits the
+subject's printed routine — RPK, plenary, assessment, competencies, resources and keywords are one
+value across a subject-grade's whole year (see `scripts/audit/audit_d_l2_template.py`). The form
+says so after a fill, and both exports mark those headings `(teaching template)` with a line
+explaining the marker, so a printed plan never passes the syllabus' routine off as the teacher's
+own writing. See `src/lib/lessonTemplate.js`.
+
+## Generators — `/portal/questions/generate` and `/quiz`
 `QuestionGenerator.jsx` (builds a printable exam paper — PDF), `QuizMaker.jsx` (builds a
 classroom quiz slideshow — PPTX). Both read the shared `questions` bank.
 Exporters: `lib/questionPaper.js`, `lib/quizPptx.js`.

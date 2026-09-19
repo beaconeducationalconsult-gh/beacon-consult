@@ -13,6 +13,7 @@ import {
   signatureLines,
 } from './docxShared'
 import { gradeLabel } from './grades'
+import { headingWithProvenance, templateNote } from './lessonTemplate'
 
 const PHASES = [
   { key: 'starter', title: 'Starter / Introduction' },
@@ -87,12 +88,17 @@ export async function downloadLessonPlanDocx(plan, { school, teacher } = {}) {
     children.push(para('By the end of the lesson, learners will be able to…', { italics: true }))
   }
 
+  // Sections inherited verbatim from the syllabus template are labelled, so the
+  // document never passes the printed routine off as the teacher's own writing.
+  const inherited = plan.inheritedFields || []
+  const sectionHeading = (field, title) => heading(headingWithProvenance(field, title, inherited))
+
   if (plan.keywords?.length) {
-    children.push(heading('Key Words'), para([].concat(plan.keywords).join('  ·  ')))
+    children.push(sectionHeading('keywords', 'Key Words'), para([].concat(plan.keywords).join('  ·  ')))
   }
 
   if (plan.rpk) {
-    children.push(heading("Relevant Previous Knowledge (Let's Remember)"), para(plan.rpk))
+    children.push(sectionHeading('rpk', "Relevant Previous Knowledge (Let's Remember)"), para(plan.rpk))
   }
 
   // Numbered, because a lesson is taught in order — and the numbers are text,
@@ -101,24 +107,28 @@ export async function downloadLessonPlanDocx(plan, { school, teacher } = {}) {
   for (const phase of PHASES) {
     const items = plan[phase.key]
     if (!items?.length) continue
-    children.push(heading(phase.title))
+    children.push(sectionHeading(phase.key, phase.title))
     items.forEach((item, index) => children.push(step(index + 1, item)))
   }
 
   if (plan.competencies?.length) {
-    children.push(heading('Core Competencies'), para([].concat(plan.competencies).join('; ')))
+    children.push(sectionHeading('competencies', 'Core Competencies'), para([].concat(plan.competencies).join('; ')))
   }
 
   if (plan.resources?.length) {
-    children.push(heading('Teaching & Learning Materials'), para([].concat(plan.resources).join('; ')))
+    children.push(sectionHeading('resources', 'Teaching & Learning Materials'), para([].concat(plan.resources).join('; ')))
   }
 
   if (plan.assessment) {
-    children.push(heading('Assessment'), para(plan.assessment))
+    children.push(sectionHeading('assessment', 'Assessment'), para(plan.assessment))
   }
 
   if (plan.differentiation) {
     children.push(heading('Differentiation / Support'), para(plan.differentiation))
+  }
+
+  if (inherited.length) {
+    children.push(para(`Sections marked "teaching template": ${templateNote(inherited)}`, { italics: true }))
   }
 
   children.push(

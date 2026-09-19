@@ -68,6 +68,9 @@ const SCHEME = {
   ],
 }
 
+const buildPlanWith = (over) =>
+  downloadLessonPlanDocx({ ...PLAN, ...over }, { school: 'Beacon Basic School', teacher: 'Mr K. Mensah' })
+
 const build = {
   lessonPlan: () => downloadLessonPlanDocx(PLAN, { school: 'Beacon Basic School', teacher: 'Mr K. Mensah' }),
   scheme: () => downloadSchemeDocx(SCHEME, { school: 'Beacon Basic School', teacher: 'Mr K. Mensah' }),
@@ -160,6 +163,31 @@ describe('lesson plan layout', () => {
     // An earlier version emitted a "⏱ n" line after each activity, where n was
     // just the array index — 12 meaningless lines per plan.
     expect(parts['word/document.xml']).not.toContain('\u23f1')
+  })
+
+  it('labels the sections a prefill took from the syllabus template (P1-4)', async () => {
+    const parts = await unzip(await build.lessonPlan())
+    const plain = parts['word/document.xml']
+    // The fixture has no inheritedFields, so nothing is labelled.
+    expect(plain).not.toContain('teaching template')
+
+    const inherited = await unzip(await buildPlanWith({
+      inheritedFields: ['rpk', 'plenary', 'assessment'],
+    }))
+    const doc = inherited['word/document.xml']
+    const headings = [...doc.matchAll(/<w:pStyle w:val="Heading2"\/><\/w:pPr>(?:(?!<\/w:p>).)*?<w:t[^>]*>([^<]*)</gs)].map((m) => m[1])
+    // Only the inherited ones carry the marker; the written activity phases do not.
+    // (Compared by prefix: docx escapes the apostrophe in "Let's" as `&apos;`.)
+    const labelled = headings.filter((h) => h.includes('(teaching template)'))
+    expect(labelled).toHaveLength(3)
+    expect(labelled.some((h) => h.startsWith('Relevant Previous Knowledge'))).toBe(true)
+    expect(labelled).toContain('Plenary / Conclusion (teaching template)')
+    expect(labelled).toContain('Assessment (teaching template)')
+    expect(headings).toContain('Starter / Introduction')
+    expect(headings).toContain('Main Activities (Development)')
+    // …and the document explains the marker rather than leaving it a riddle.
+    expect(doc).toContain('Sections marked')
+    expect(doc).toContain('teaching template')
   })
 
   it('leaves the curriculum reference as a table, not run-on prose', async () => {
