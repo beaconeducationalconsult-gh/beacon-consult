@@ -81,7 +81,9 @@ a quarter of the time; and one sub-strand is numbered as if it had a fifth stand
 `find_data()` searches `data/curriculum/` before `data/reference/`, so for the six subjects that
 exist in both, the *curriculum* copy is what the portal serves and the *reference* copy is inert.
 The copies are not kept in step by anything: the French B7–B9 reference copies carried the
-CORE COMPETENCIES column in `cs_desc` and a fabricated `B7.4.2.3.1` stub record, while the served
+CORE COMPETENCIES column in `cs_desc` and a fabricated `B7.4.2.3.1` stub record (the four the front
+matter fabricated were deleted from these copies on 2026-09-19 — see the notation-example gotcha
+above), while the served
 copies were clean — so a fix written against the wrong copy changes nothing a teacher sees, and a
 fix against the right one leaves a defect behind in the file someone may later promote.
 
@@ -166,6 +168,27 @@ repeat. History's rows carry the whole cell — enquiry route, then a dozen step
 naturally name the topic — and cutting at the first marker deletes the only copy of
 that text. The script cuts a tail only when it is short and says the indicator back
 (≥4-word run covering half the indicator); everything else is reported.
+
+## 🟠 A print's notation example parses as a record
+
+Every CCP front matter explains the code with a worked example — `Example: B7/JHS1 .4.2.3.1
+ANNOTATION` — and an extractor that walks the whole document turns it into a record whose only
+text is the code restated (`"French Learning Indicator B7.4.2.3.1"`). Four such records were built
+(this session: french B7, ghanaian-language B7, rme B7, science B4 — all inert `data/reference/`
+copies, none served). Two things make them hard to see:
+
+* **the year annotation hides the code.** The english print writes `B7/JHS1 .4.2.3.1`, so a plain
+  code search finds nothing anywhere — and that absence of a body row *is* the evidence. A finder
+  has to tolerate `/\s*JHS\s*\d` and blank space between the parts.
+* **label form proves nothing by itself.** 302 other records are label-form too, and the prints
+  *do* carry their text (the owop B4–B6 print at pp. 18/40/61) — those are a filling job, not a
+  deletion. Dropping on the shape alone would delete real curriculum.
+
+`scripts/drop_front_matter_records.py` (report by default, `--apply` deletes) therefore requires
+all three: label form, **exactly one** occurrence of the code in the print, and that occurrence on
+a page whose line says `Example:`/`ANNOTATION` — plus no body row. Everything else is recorded as a
+placeholder with its reason, and the deleted records are kept verbatim in
+`data/audit/front_matter_records.json`, so a deletion can be undone from the artifact alone.
 
 ## 🟠 Two copies of the same database, and only one of them is audited
 

@@ -48,9 +48,18 @@ every served subject comes from the audited copy (`source: 'curriculum'`).
 from `data/curriculum/`, which for curriculum data no longer happens. What lives
 there now: older extractions of subjects that have a better copy in L1 (english, and
 the french B7–B9 databases whose `cs_desc` repair lives there), and the drifted
-creative-arts B4–B6 / social-studies B7–B9 copies (TODO P1-10 for the one fabricated
-record among them; the rest is tracked in the inventory, not a defect of anything
-served).
+creative-arts B4–B6 / social-studies B7–B9 copies (the rest is tracked in the inventory,
+not a defect of anything served; the four fabricated records these copies carried were
+deleted on 2026-09-19 — TODO P1-10).
+
+**Some records restate their code instead of carrying its text.** 302 of them do: 74 served
+(`owop_B4`/`B5`/`B6`, 25/25/24) and 228 in `data/reference/`. All 302 are listed with their reason
+in `data/audit/front_matter_records.json`, and they are a **filling** job, not a deletion — the
+prints carry the real standard and indicator wording (the owop print at pp. 18/40/61) — the
+extraction wrote `"Content Standard B4.1.1.1"` where the print sets its sentence
+(TODO P1-11). The one shape that *was* fabrication — a record built from a print's front-matter
+notation example — was removed on 2026-09-19: four records, all in the reference layer
+(TODO P1-10).
 
 Any statement of the form "this project has N indicators" must name the layer.
 The defensible sentences are:

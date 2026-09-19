@@ -1715,7 +1715,7 @@
    "l2IndicatorsScheduled": 64,
    "l2LessonSlots": 180,
    "l3BundleIndicators": 64,
-   "refIndicators": 65,
+   "refIndicators": 64,
    "referenceOnly": false,
    "subjectId": "french",
    "subjectName": "French"
@@ -1823,7 +1823,7 @@
    "l2IndicatorsScheduled": 48,
    "l2LessonSlots": 180,
    "l3BundleIndicators": 48,
-   "refIndicators": 49,
+   "refIndicators": 48,
    "referenceOnly": false,
    "subjectId": "ghanaian-language",
    "subjectName": "Ghanaian Language"
@@ -2183,7 +2183,7 @@
    "l2IndicatorsScheduled": 27,
    "l2LessonSlots": 180,
    "l3BundleIndicators": 27,
-   "refIndicators": 27,
+   "refIndicators": 26,
    "referenceOnly": false,
    "subjectId": "rme",
    "subjectName": "Religious and Moral Education"
@@ -2255,7 +2255,7 @@
    "l2IndicatorsScheduled": 24,
    "l2LessonSlots": 180,
    "l3BundleIndicators": 24,
-   "refIndicators": 25,
+   "refIndicators": 24,
    "referenceOnly": false,
    "subjectId": "science",
    "subjectName": "Science"

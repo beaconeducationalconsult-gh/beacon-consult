@@ -540,6 +540,54 @@ describe.each(ids)('%s', (grade) => {
     })
   })
 
+  describe('the fabricated front-matter records (P1-10)', () => {
+    const readData = (path) => JSON.parse(readFileSync(new URL(`../data/${path}`, import.meta.url), 'utf8'))
+    const ledger = () => readData('audit/front_matter_records.json')
+
+    it('deletes the records a print only ever used as its notation example', () => {
+      // The ticket named `B7.4.2.3.1`; scanning for the same shape found three
+      // more. Each one says nothing but its own code back, and the print's only
+      // sighting of that code is the worked example in its front matter
+      expect(ledger().removed.map((e) => [e.layer, e.file, e.code])).toEqual([
+        ['reference', 'french_B7_curriculum_db_clean.json', 'B7.4.2.3.1'],
+        ['reference', 'ghanaian-language_B7_curriculum_db_clean.json', 'B7.4.2.3.1'],
+        ['reference', 'rme_B7_curriculum_db_clean.json', 'B7.2.3.4.5'],
+        ['reference', 'science_B4_curriculum_db_clean.json', 'B4.2.4.1.2'],
+      ])
+      expect(ledger().removed.map((e) => e.front_matter_page)).toEqual([29, 30, 28, 18])
+      for (const e of ledger().removed) {
+        // all four were reference copies, and the served database for that
+        // subject-grade never carried the code at all
+        expect(readData(`curriculum/${e.file}`)[e.code], `${e.file} served`).toBeUndefined()
+        expect(readData(`${e.layer}/${e.file}`)[e.code], e.file).toBeUndefined()
+        // the record itself is kept in the ledger, so the deletion is reversible
+        expect(e.record.ind_desc, e.code).toMatch(new RegExp(`Indicator ${e.code.replace(/\./g, '\\.')}$`))
+      }
+    })
+
+    it('leaves the label-form records the prints do carry', () => {
+      // The opposite case: records that restate the code instead of carrying the
+      // text, where the print *does* print the text. 74 are served today (owop
+      // B4–B6) and 228 sit in data/reference/ — fill them, do not drop them
+      // (TODO P1-11)
+      const { placeholder } = ledger()
+      const served = placeholder.filter((e) => e.layer === 'curriculum')
+      expect(served).toHaveLength(74)
+      expect(served.filter((e) => !e.file.startsWith('owop_'))).toEqual([])
+      const perFile = served.reduce((n, e) => ({ ...n, [e.file]: (n[e.file] || 0) + 1 }), {})
+      expect(perFile).toEqual({
+        'owop_B4_curriculum_db_clean.json': 25,
+        'owop_B5_curriculum_db_clean.json': 25,
+        'owop_B6_curriculum_db_clean.json': 24,
+      })
+      expect(placeholder.filter((e) => e.layer === 'reference')).toHaveLength(228)
+      // none of them was dropped: every one is still in the file it was found in
+      for (const e of placeholder) {
+        expect(readData(`${e.layer}/${e.file}`)[e.code], `${e.layer}/${e.file} ${e.code}`).toBeTruthy()
+      }
+    })
+  })
+
   describe('known gaps stay known', () => {
     it('has no schedules file for the kindergarten grades', () => {
     const kg = grades.filter((g) => g.id.startsWith('KG'))
