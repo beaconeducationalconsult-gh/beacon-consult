@@ -6,6 +6,36 @@
   create a divergent lockfile.
 - A `.env.local` with the Firebase web config (below).
 
+## Updating a working copy
+
+The deployable line is the branch `arena/01a0af88-beacon-consult` (it holds the whole portal;
+`main` is still the old one-commit snapshot). A clone made with
+`git clone --branch arena/01a0af88-beacon-consult …` tracks it, so an update is four commands —
+same in PowerShell, Git Bash or a Unix shell:
+
+```bash
+git pull --ff-only        # fast-forward to the newest pushed commit
+yarn install              # new dependencies, if the lockfile moved
+yarn test                 # the suite (331 tests, no Python, no browser)
+yarn dev                  # http://localhost:5199
+```
+
+`--ff-only` is deliberate: if it refuses, the checkout has local commits or edits, and a merge
+or a stash is a decision to make on purpose rather than a surprise. `yarn install` is the only
+step that matters after a *dependency* change; a data-only or page-only update still needs it
+to be run at least once after pulling, because it is cheap and idempotent.
+
+Two optional extras, both needing more than the app does:
+
+- `yarn test:rules` — the Firestore/Storage permission matrix against the emulator. Needs a JVM
+  (Java 21) and downloads `firebase-tools` plus the emulator jars on first run.
+- `make check` — the full pre-deploy gate (lint + tests + curriculum validation + inventory +
+  build). Needs `make` and Python 3; it is what CI runs.
+
+`.env.local` is **not** in git: a fresh clone has none, and the app shows the setup notice
+instead of the portal until the six `VITE_FIREBASE_*` values are there (copy the file from an
+older checkout, or paste the values from the Firebase console).
+
 ## Environment variables
 
 Vite embeds these at **build time** (they're public web-app config, not secrets, but the
