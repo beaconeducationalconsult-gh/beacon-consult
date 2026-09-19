@@ -83,6 +83,26 @@ Collection: `lesson_plans`. Exporters: `lib/lessonPlanPdf.js`, `lib/lessonPlanDo
 subject/strand/sub-strand; carries `weekKey` for the weekly quota.
 Collection: `questions`.
 
+### Exam paper builder — `/portal/questions/exam`
+`ExamBuilder.jsx`. The bank's *Export exam paper* button prints whatever is ticked; this page
+decides **what to tick**. It draws on two pools at once — the member's own `questions` and the
+served starter bank for the chosen subject-grade (`loadStarterPack`, so the B7–B9 questions are
+usable in a paper without importing anything) — and assembles a paper of a requested size
+through `src/lib/examPaper.js`, whose two rules are the page's whole behaviour:
+
+- **a section draws only on its own types** (objectives in A, short answers in B, essays in C);
+- **coverage before depth** — while filling, every indicator's first question goes in before any
+  indicator's second, so a class paper does not test one sub-strand six times.
+
+The composition is pure, which is what makes the preview honest: `targetMarks` is a target, the
+paper stops before overshooting, the shortfall is printed ("4 marks short — no single question
+fitted the gap"), and a section whose cheapest question no longer fits the paper is **named and
+omitted** rather than quietly making the paper bigger than it said. A teacher can drop any
+question and see the paper recompose. Two exports: the student copy (PDF) and the teacher copy
+with the marking scheme, with the teacher copy offered to **My library**
+(`<SaveToLibrary kind="question_paper">`). Nothing is written to Firestore — the paper is the
+PDF, not a document.
+
 **Starter bank (P1-5).** The bundle ships 378 practice questions for mathematics B2–B9 —
 including a JHS bank for the BECE years — see *The question bank* in
 [curriculum-data.md](curriculum-data.md). The bank page has

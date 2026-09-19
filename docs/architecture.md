@@ -58,7 +58,7 @@ Two zones:
 /portal/articles              Articles  (+ /new, /:id, /:id/edit)
 /portal/forecasts             Schemes of learning  (+ /new, /:id, /:id/edit)
 /portal/plans                 Lesson plans  (+ /new, /:id, /:id/edit)
-/portal/questions             Question bank  (+ /new, /generate, /quiz, /:id/edit)
+/portal/questions             Question bank  (+ /new, /generate, /quiz, /exam, /:id/edit)
 /portal/notes                 Study notes  (+ /new, /:id, /:id/edit)
 /portal/vacancies             Vacancies  (+ /new, /:id/edit)
 /portal/slides                Slide lessons  (+ /:deckId, /:deckId/edit; hidden from the panel)

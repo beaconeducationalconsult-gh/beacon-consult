@@ -43,7 +43,8 @@ All run **client-side** (no server). Heavy ones are `import()`-ed lazily at clic
 |---|---|---|
 | `schemePdf.js` / `schemeDocx.js` | Scheme of learning (PDF / Word) | Schemes |
 | `lessonPlanPdf.js` / `lessonPlanDocx.js` | Lesson plan (PDF / Word) | Lesson plans |
-| `questionPaper.js` | Exam paper (PDF) | Question generator |
+| `questionPaper.js` | Exam paper (PDF) | Question bank, quiz maker, exam builder |
+| `examPaper.js` | *which* questions go on a paper — sections, marks budget, coverage | Exam builder |
 | `quizPptx.js` | Quiz slideshow (PPTX) | Quiz maker |
 | `docxShared.js` | Shared Word-generation helpers | the `*Docx` exporters |
 

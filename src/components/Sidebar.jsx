@@ -36,6 +36,7 @@ const LINKS = [
   { to: '/portal/forecasts', label: 'Schemes', icon: 'forecasts' },
   { to: '/portal/plans', label: 'Lesson plans', icon: 'plans' },
   { to: '/portal/questions', label: 'Question bank', icon: 'questions' },
+  { to: '/portal/questions/exam', label: 'Exam builder', icon: 'questions' },
   { to: '/portal/articles', label: 'Articles', icon: 'articles' },
   { to: '/portal/vacancies', label: 'Vacancies', icon: 'vacancies' },
   { to: '/portal/search', label: 'Search', icon: 'search' },
