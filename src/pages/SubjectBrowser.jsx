@@ -6,6 +6,7 @@ import EmptyState from '../components/EmptyState'
 import SubjectIcon from '../components/SubjectIcon'
 import { subjectTheme } from '../lib/subjectThemes'
 import { GRADES, gradeLabel } from '../lib/grades'
+import { packFiles, warmPack } from '../lib/offlinePack'
 
 /**
  * Strand → sub-strand → content standard → indicators. Static JSON only.
@@ -21,6 +22,27 @@ export default function SubjectBrowser() {
   const grade = String(gradeId || '').toUpperCase()
   const { loading, subjects, indicators, error } = useCurriculum(grade)
   const [openSub, setOpenSub] = useState(null)
+  /*
+   * Offline pack (P3-2): which files have come down for this subject-grade.
+   *
+   * The state carries the key it belongs to, so switching subject (or grade)
+   * shows the idle button again without an effect writing state on mount — the
+   * stale key simply does not match this page.
+   */
+  const packKey = `${grade}|${subjectId}`
+  const [pack, setPack] = useState({ key: null, state: 'idle', done: 0, total: 1, result: null, label: '' })
+  const idle = { state: 'idle', done: 0, total: 1, result: null, label: '' }
+  const current = pack.key === packKey ? pack : idle
+
+  const saveOffline = async () => {
+    const files = packFiles(grade, subjectId)
+    const update = (changes) => setPack((previous) => ({ key: packKey, ...(previous.key === packKey ? previous : idle), ...changes }))
+    update({ state: 'saving', done: 0, total: files.length, result: null, label: files[0].label })
+    const result = await warmPack(files, {
+      onProgress: ({ file, done }) => update({ state: 'saving', done, label: file.label }),
+    })
+    update({ state: 'done', done: files.length, total: files.length, result, label: '' })
+  }
 
   const subject = subjects.find((s) => s.id === subjectId)
   const tree = useMemo(
@@ -54,19 +76,44 @@ export default function SubjectBrowser() {
             {gradeLabel(grade)} {totalIndicators ? `· ${totalIndicators} indicators · ${tree.length} strands` : ''}
           </p>
         </div>
-        <div>
-          <label className="label-caps" htmlFor="grade-switch">Grade</label>
-          {/* A subject id rarely exists in every grade, so switching grade
-              lands on that grade's subject list rather than a dead end. */}
-          <select
-            id="grade-switch"
-            className="input"
-            value={GRADES.includes(grade) ? grade : ''}
-            onChange={(e) => navigate(`/portal/curriculum/${e.target.value}`)}
-          >
-            {!GRADES.includes(grade) && <option value="">{gradeLabel(grade)}</option>}
-            {GRADES.map((g) => <option key={g} value={g}>{gradeLabel(g)}</option>)}
-          </select>
+        <div className="flex flex-col items-stretch gap-2 sm:items-end">
+          <div>
+            <label className="label-caps" htmlFor="grade-switch">Grade</label>
+            {/* A subject id rarely exists in every grade, so switching grade
+                lands on that grade's subject list rather than a dead end. */}
+            <select
+              id="grade-switch"
+              className="input"
+              value={GRADES.includes(grade) ? grade : ''}
+              onChange={(e) => navigate(`/portal/curriculum/${e.target.value}`)}
+            >
+              {!GRADES.includes(grade) && <option value="">{gradeLabel(grade)}</option>}
+              {GRADES.map((g) => <option key={g} value={g}>{gradeLabel(g)}</option>)}
+            </select>
+          </div>
+
+          {/* Offline pack (P3-2). Offline browsing already works for anything
+              you have opened; this is for "save it now, before I leave wifi". */}
+          <div className="sm:text-right">
+            <button
+              type="button"
+              className="btn-secondary"
+              onClick={saveOffline}
+              disabled={loading || current.state === 'saving'}
+            >
+              {current.state === 'saving' ? `Saving ${current.done}/${current.total}…` : 'Save for offline'}
+            </button>
+            <p className="card-meta mt-1 max-w-56" aria-live="polite">
+              {current.state === 'idle' && 'Downloads this subject’s indicators, schemes and lesson schedule.'}
+              {current.state === 'saving' && `Fetching ${current.label}…`}
+              {current.state === 'done' && current.result?.complete
+                && `Saved ${current.result.size} — this subject now opens without a connection.`}
+              {current.state === 'done' && !current.result?.complete
+                && `Saved ${current.result?.downloaded} of ${current.result?.files} files (${current.result?.missing
+                  ?.map((m) => m.label)
+                  .join(', ')} unavailable). The rest works offline.`}
+            </p>
+          </div>
         </div>
       </header>
 

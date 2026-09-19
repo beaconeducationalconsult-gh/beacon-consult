@@ -23,6 +23,11 @@ Registered by `src/registerSW.js`, which runs **only in production builds**
 - **Same-origin assets** (`/curriculum/*`, `/quotes/*`, hashed JS/CSS, icons):
   **stale-while-revalidate** — served from cache instantly, refreshed in the background.
   Falls back to any precached copy when offline.
+- **Offline packs:** the **“Save for offline”** button on a subject page
+  (`SubjectBrowser.jsx` → `src/lib/offlinePack.js`) fetches that subject-grade's files on purpose —
+  grade list, subjects, indicators, schemes and its own `schedules/<grade>-<subject>.json` — and
+  reports progress and size. It goes through the same worker, so there is no second cache to
+  invalidate, and each file is fetched with `cache: 'reload'` so the pack is current.
 - **Precache:** the app shell. Curriculum and quotes JSON are cached on first use, so
   Quote-of-the-Day and anything already browsed work offline — and because schedules are per
   subject-grade, a class that has opened one subject's planner has that subject offline, not
