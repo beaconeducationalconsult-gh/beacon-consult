@@ -2694,9 +2694,9 @@
    "label": "bundle",
    "megabytes": 40.0,
    "questions": {
-    "indicatorsCovered": 199,
+    "indicatorsCovered": 249,
     "indicatorsInPacks": 407,
-    "questions": 412,
+    "questions": 560,
     "subjectGrades": 8
    },
    "subjectGrades": 84,
