@@ -39,6 +39,43 @@ firestore:indexes`, or the console's index page.
 document-independent branch, and if a gated collection stops being scoped — it scans for both
 `useCollection` and `usePagedCollection`.
 
+## 🔴 A Unix-only command inside the build works everywhere except the machine that deploys
+
+`execSync('cat public/curriculum/_BUILD_REPORT.json')` in `vite.config.js` ran fine in this
+container and failed on the Windows checkout — and it **failed silently**, because the call sits
+in a `try/catch` that sets `bundleHash: null`. Every build made there reported `bundle null`, so
+the one check that compares a deploy against this checkout had nothing to compare. The rule: a
+build plugin may only use Node APIs, never a shell command, because the build has to run on the
+deployer's machine too. (Same family: `make` recipes assume a Unix shell; the Windows path is
+`node scripts/…` directly.)
+
+## 🔴 Windows PowerShell writes `.env.local` as UTF-16, and the app then has no config
+
+`>` and `Out-File` under Windows PowerShell 5.1 write **UTF-16LE**. A `.env.local` created that
+way looks correct in an editor, but read as UTF-8 it is a string full of NUL bytes: no key
+matches, so the pre-flight reported all six `VITE_FIREBASE_*` values missing on a machine where
+the app runs, and Vite's own `loadEnv` would not have seen them either. `scripts/verify_deploy.mjs`
+now decodes from the bytes (BOM first, then a NUL-byte sniff), accepts `export KEY=…`, strips
+quotes — and when a key is missing it prints the **names** it did find, never the values, so the
+file explains itself. To write one that every tool reads:
+
+```powershell
+Set-Content .env.local -Encoding utf8 -Value @(
+  'VITE_FIREBASE_API_KEY=…', 'VITE_FIREBASE_AUTH_DOMAIN=…' )
+```
+
+## 🟠 The production domain serves the Production Branch, not the branch you pushed
+
+`beacon-edu-consult.vercel.app` is a **production** URL, and Vercel deploys its Production Branch
+(`main` unless it is changed) there — pushes to `arena/01a0af88-beacon-consult` become *preview*
+deployments under generated URLs. Symptom, and it is a deceptive one: the app boots, `/` serves
+the shell, and `grades.json` — a file that exists in both branches — is byte-identical, so it all
+looks healthy. What is missing is anything added since: `/build-info.json` came back as the shell
+(the rewrite answers every unknown path with `index.html`), `/curriculum/schedules/*` likewise,
+and `sw.js` did not read the bundle hash. Fix: Vercel → Settings → Git → **Production Branch** =
+the deployable branch (or publish to `main`). `scripts/verify_deploy.{py,mjs}` now compare each
+served file with this checkout and call a 200-that-is-the-shell what it is.
+
 ## 🟠 A Word style Word cannot resolve renders as body text, silently
 
 `docx` never validates what you hand it. Give a paragraph a `pStyle` naming a style the document

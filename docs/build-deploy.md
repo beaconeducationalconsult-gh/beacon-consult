@@ -84,6 +84,15 @@ Two separate concerns:
 Vercel builds the Vite app and serves `dist/`. `vercel.json` has the SPA rewrite so every
 path serves `index.html` (client-side routing). Push to the tracked branch → auto-deploy.
 
+**Set the Production Branch.** Vercel deploys its *Production Branch* — `main` unless it is
+changed — to the project's production domain; pushes to any other branch become preview
+deployments under generated URLs. This repo's deployable line is
+`arena/01a0af88-beacon-consult`, so point Production Branch at it (Settings → Git → Production
+Branch) or that domain keeps serving `main`, which is still the old one-commit snapshot. The
+failure is a quiet one: the app boots and every file that exists in both branches is identical,
+while anything newer answers with the app shell because the rewrite catches it — which is why
+`scripts/verify_deploy.mjs` compares each served file's size and shape with this checkout.
+
 ### 2. Firestore rules & indexes → Firebase CLI
 **Not** handled by Vercel. After editing `firestore.rules` or `firestore.indexes.json`:
 

@@ -1,4 +1,6 @@
 import { execSync } from 'node:child_process'
+import { readFileSync } from 'node:fs'
+import { resolve } from 'node:path'
 import { defineConfig, loadEnv } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
@@ -60,11 +62,13 @@ ${line}\n`)
       // The curriculum build writes the bundle hash the service worker names its
       // cache after; carrying it into build-info.json is what lets
       // `make verify-deploy` say whether a deploy is serving this bundle.
+      //
+      // Read it with fs, not `execSync('cat …')`: `cat` is not a Windows
+      // program, so on the machine that actually deploys every build reported
+      // `bundleHash: null` and the one check that compares a deploy against this
+      // checkout silently had nothing to compare.
       try {
-        const report = JSON.parse(
-          execSync('cat public/curriculum/_BUILD_REPORT.json', { stdio: ['ignore', 'pipe', 'ignore'] })
-            .toString(),
-        )
+        const report = JSON.parse(readFileSync(resolve(process.cwd(), 'public/curriculum/_BUILD_REPORT.json'), 'utf8'))
         info.bundleHash = report.bundleHash || null
       } catch {
         info.bundleHash = null

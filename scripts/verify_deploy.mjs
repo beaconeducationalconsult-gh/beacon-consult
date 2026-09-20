@@ -12,6 +12,7 @@
  *   node scripts/verify_deploy.mjs                          # the local half
  *   node scripts/verify_deploy.mjs -Url https://beacon.vercel.app
  *   node scripts/verify_deploy.mjs -Url https://… -SkipBuild
+ *   node scripts/verify_deploy.mjs -EnvFile other.env        # read another env file
  *
  * What it proves, in the order the answers matter:
  *
@@ -30,7 +31,7 @@
 import { execFileSync, spawnSync } from 'node:child_process'
 import { existsSync, readFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
-import { dirname, join, resolve } from 'node:path'
+import { basename, dirname, join, resolve } from 'node:path'
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const FIREBASE_KEYS = [
@@ -50,6 +51,34 @@ const CHECKED_PATHS = [
   '/curriculum/schedules/b1-mathematics.json',
   '/sw.js',
 ]
+
+/**
+ * What the same file looks like in this checkout.
+ *
+ * Comparing the served bytes with the local ones is the check that catches the
+ * deployment nobody suspects: the production domain serving a **different
+ * branch** than the one that was pushed. It answers 200, the shell renders, and
+ * every file that exists in both branches looks fine — while anything added
+ * since answers with the SPA shell instead of the file, which reads as "ok, 2
+ * KB" if all you look at is the status code.
+ */
+function localFile(urlPath) {
+  const file = join(ROOT, 'public', urlPath.replace(/^\//, ''))
+  if (!existsSync(file)) return null
+  const bytes = readFileSync(file)
+  let json = null
+  try {
+    json = JSON.parse(bytes.toString('utf8'))
+  } catch {
+    json = null
+  }
+  return { bytes: bytes.length, json }
+}
+
+/** Does this 200 look like the SPA shell rather than the file that was asked for? */
+const looksLikeHtml = (body) => /^\s*(<!doctype|<html)/i.test(body)
+
+const kb = (bytes) => `${(bytes / 1024).toFixed(bytes < 10240 ? 1 : 0)} KB`
 
 const args = process.argv.slice(2)
 const flag = (name) => args.includes(name)
@@ -85,19 +114,77 @@ try {
 }
 
 /* ── 2. the local Firebase config ────────────────────────────────────────── */
+/**
+ * Read a dotenv file the way the file actually is on Windows.
+ *
+ * `readFileSync(path, 'utf8')` was wrong, and wrong in the most annoying way:
+ * Windows PowerShell writes `>` and `Out-File` as **UTF-16LE**, so a perfectly
+ * good `.env.local` came back as a string full of NUL bytes, not one key
+ * matched, and the report said all six values were missing on a machine where
+ * the app runs fine. Decode from the bytes (BOM first, then a NUL-byte sniff),
+ * accept `export KEY=…`, strip the quotes both shells add, and report the key
+ * *names* it found — never the values — so a mismatch explains itself.
+ */
+function readEnvFile(path) {
+  const bytes = readFileSync(path)
+  let text
+  let encoding = 'UTF-8'
+  const evenLength = bytes.length % 2 === 0
+  if (bytes[0] === 0xff && bytes[1] === 0xfe) {
+    text = bytes.subarray(2).toString('utf16le')
+    encoding = 'UTF-16LE'
+  } else if (bytes[0] === 0xfe && bytes[1] === 0xff && evenLength) {
+    text = Buffer.from(bytes).swap16().toString('utf16le')
+    encoding = 'UTF-16BE'
+  } else {
+    text = bytes.toString('utf8')
+    if (text.charCodeAt(0) === 0xfeff) text = text.slice(1)
+    // No BOM, but every other byte is NUL: PowerShell again.
+    if (evenLength && /\u0000/.test(text.slice(0, 400))) {
+      text = bytes.toString('utf16le')
+      encoding = 'UTF-16LE (no byte-order mark)'
+    }
+  }
+
+  const env = {}
+  const lines = text.split(/\r?\n/)
+  for (const raw of lines) {
+    const line = raw.trim()
+    if (!line || line.startsWith('#')) continue
+    const match = /^(?:export\s+)?([A-Za-z_][A-Za-z0-9_]*)\s*=\s*(.*)$/.exec(line)
+    if (!match) continue
+    let value = match[2].trim()
+    if (value.length > 1
+      && ((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'")))) {
+      value = value.slice(1, -1)
+    }
+    env[match[1]] = value
+  }
+  return { env, encoding, lines: lines.filter((line) => line.trim()).length }
+}
+
 step('2. The local Firebase config (.env.local)')
-const envPath = join(ROOT, '.env.local')
-const env = {}
+// `-EnvFile` exists so the reader can be pointed at a fixture; the deploy
+// machine always wants the default.
+const envPath = value('-EnvFile') || value('--env-file') || join(ROOT, '.env.local')
 if (!existsSync(envPath)) {
   bad('.env.local is missing — copy .env.example to .env.local and fill in the six values from the Firebase console (Project settings → Your apps → Web app)')
 } else {
-  for (const line of readFileSync(envPath, 'utf8').split('\n')) {
-    const match = /^\s*([A-Z0-9_]+)\s*=\s*(.*)$/.exec(line)
-    if (match) env[match[1]] = match[2].trim()
+  const { env, encoding, lines } = readEnvFile(envPath)
+  const present = FIREBASE_KEYS.filter((key) => key in env)
+  const blank = present.filter((key) => !env[key])
+  const missing = FIREBASE_KEYS.filter((key) => !(key in env))
+  if (missing.length || blank.length) {
+    const label = basename(envPath)
+    bad(missing.length
+      ? `${label} does not define: ${missing.join(', ')}`
+      : `${blank.join(', ')} in ${label} ${blank.length > 1 ? 'are' : 'is'} set but empty`)
+    // The diagnostic that makes this self-explaining: what the file really says.
+    warn(`read as ${encoding}; ${lines} non-blank line(s); keys defined: ${Object.keys(env).join(', ') || 'none'}`)
+    warn('Vite only reads names starting VITE_ that are listed in .env.example')
+  } else {
+    ok(`all six VITE_FIREBASE_* values are set (project ${env.VITE_FIREBASE_PROJECT_ID})`)
   }
-  const missing = FIREBASE_KEYS.filter((key) => !env[key])
-  if (missing.length) bad(`.env.local is missing: ${missing.join(', ')}`)
-  else ok(`all six VITE_FIREBASE_* values are set (project ${env.VITE_FIREBASE_PROJECT_ID})`)
 }
 
 /* ── 3. a local build carries it ─────────────────────────────────────────── */
@@ -151,6 +238,8 @@ if (!URL_ARG) {
     const { status, body } = await get('/build-info.json')
     if (status !== 200) {
       bad(`GET /build-info.json → ${status} (the deploy predates this check, or a rewrite swallows it)`)
+    } else if (looksLikeHtml(body)) {
+      bad('GET /build-info.json returned the SPA shell — this deploy was built before build-info.json existed, so it is **not** the commit you pushed. On Vercel, check Settings → Git → Production Branch: production deploys `main` unless you change it, and `main` is still the old snapshot')
     } else {
       const remote = JSON.parse(body)
       if (remote.firebaseConfigured) {
@@ -179,16 +268,45 @@ if (!URL_ARG) {
     bad(`GET / failed (${error.message})`)
   }
 
+  let shellForMissingFile = false
   for (const path of CHECKED_PATHS.filter((p) => p.startsWith('/curriculum/'))) {
+    const local = localFile(path)
     try {
       const { status, body } = await get(path)
-      if (status !== 200) bad(`GET ${path} → ${status} — the curriculum bundle is not deployed, so grade and subject dropdowns come up empty`)
-      else if (path.endsWith('grades.json')) {
-        try { ok(`${path} is served (${JSON.parse(body).length} grades)`) } catch { bad(`${path} did not return JSON`) }
-      } else ok(`${path} is served (${Math.round(body.length / 1024)} KB)`)
+      if (status !== 200) {
+        bad(`GET ${path} → ${status} — the curriculum bundle is not deployed, so grade and subject dropdowns come up empty`)
+        continue
+      }
+      if (looksLikeHtml(body)) {
+        // A 200 that is the app shell: the rewrite caught a path the deploy does
+        // not have. This is the signature of the wrong (older) branch.
+        shellForMissingFile = true
+        bad(`GET ${path} returned the SPA shell, not the file — this deploy does not contain ${path}${local ? ` (this checkout has it, ${kb(local.bytes)})` : ''}`)
+        continue
+      }
+      let served = null
+      try { served = JSON.parse(body) } catch { served = null }
+      if (served === null) {
+        bad(`GET ${path} did not return JSON — the file is not what the app expects`)
+      } else if (!local) {
+        ok(`${path} is served (${kb(Buffer.byteLength(body))}) — no local copy to compare`)
+      } else if (Array.isArray(served) && Array.isArray(local.json) && served.length !== local.json.length) {
+        bad(`${path} holds ${served.length} entries; this checkout's copy holds ${local.json.length} — the deploy is serving a different curriculum than this checkout`)
+      } else {
+        const servedBytes = Buffer.byteLength(body)
+        const drift = Math.abs(servedBytes - local.bytes) / local.bytes
+        if (drift > 0.10) {
+          bad(`${path} is ${kb(servedBytes)} on the deploy but ${kb(local.bytes)} in this checkout (${Math.round(drift * 100)}% different) — the deploy is serving a different curriculum than this checkout`)
+        } else {
+          ok(`${path} matches this checkout (${kb(servedBytes)}${Array.isArray(served) ? `, ${served.length} entries` : ''})`)
+        }
+      }
     } catch (error) {
       bad(`GET ${path} failed (${error.message})`)
     }
+  }
+  if (shellForMissingFile) {
+    warn('a curriculum file coming back as the app shell means the rewrite served index.html — almost always the wrong branch: Vercel deploys the Production Branch to this domain (main by default), not the branch you pushed')
   }
 
   try {
