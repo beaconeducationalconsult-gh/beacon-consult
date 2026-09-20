@@ -310,11 +310,23 @@ Two scripts, split so that generating data and validating it never happen in the
   where "multiply" usually means binomials. Every rule declares its band, and a shared rule carries
   a `veto` for the wording that would make it misfire (rounding must not answer an indicator about
   decimal places). Where the syllabus wants a construction — bisect an angle, draw a net, plot a
-  locus — there is deliberately no rule: that is classroom work, not a printed question.
-* **Coverage is printed and indexed, not assumed**: today 412 questions (2 authored, 410
-  generated), 199 of the 407 indicators in the eight subject-grades they cover (49%), against 4,040
-  indicators served overall — B7 122 (48 indicators, 72% of its schedule), B8 77, B9 76, the rest
+  locus — there is deliberately no rule: that is classroom work, not a generated arithmetic answer.
+  Those indicators are covered by hand instead (see the authored bank below), as essay questions
+  whose marking scheme names the construction steps.
+* **Coverage is printed and indexed, not assumed**: today 560 questions (150 authored, 410
+  generated), 249 of the 407 indicators in the eight subject-grades they cover (61%), against 4,040
+  indicators served overall — B7 175 (all 67 indicators), B8 132 (49), B9 116 (43), the rest
   in B2–B6.
+* **The indicators a rule cannot reach are authored, not skipped.** `data/questions/mathematics/
+  B{7,8,9}.json` hold 148 hand-written items (the generator never writes those files), and they
+  cover every JHS indicator the rules leave empty: **B7 67/67, B8 49/49, B9 43/43 — 100% of each
+  term's schedule too**, so an end-of-term paper for any of the three years has a question for
+  every indicator it schedules. A few lessons genuinely are classroom work — bisect an angle,
+  construct a locus, draw an inscribed circle — and those are written as `essay` questions
+  ("construct … and state …") with the construction steps in the marking scheme, which is also
+  what gives the paper's Section C something to print: before this the bank held only mcq and
+  short items, so every composed paper omitted Section C. Items carry `source: "authored"` and
+  ids `<code>-authored-<n>`, and the merge refuses an id clash rather than overwriting.
 * **Rules read the indicator, never the content standard.** `ind_desc` is the sentence a teacher
   teaches; `cs_desc` is the heading above it, and at JHS it shares nearly all of its vocabulary
   with indicators it does not describe — matching on it produced money questions on a

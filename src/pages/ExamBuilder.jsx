@@ -282,7 +282,7 @@ export default function ExamBuilder() {
               <span className="font-semibold">{coverage.total}</span> indicator(s) for{' '}
               {gradeLabel(grade)} {subjectName} — the pool asks about{' '}
               <span className="font-semibold">{coverage.covered}</span> ({coverage.percent}%)
-              {coverage.missing.length > 0 && (
+              {coverage.missing.length > 0 ? (
                 <>
                   . <span className="font-semibold">{coverage.missing.length}</span> indicator(s) have no
                   question in the pool:{' '}
@@ -293,6 +293,8 @@ export default function ExamBuilder() {
                   {missingGroups.length > 3 && ` and ${missingGroups.length - 3} more area(s)`}
                   {' '}— write a question for them, or the paper will not test that work.
                 </>
+              ) : (
+                <> — every indicator this scope schedules has a question in the pool.</>
               )}
             </p>
           )}

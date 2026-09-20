@@ -77,6 +77,34 @@ describe('the served starter bank', () => {
     }
   })
 
+  it('keeps every question printable by the exam paper font', () => {
+    // `questionPaper.js` prints through jsPDF, whose standard fonts are WinAnsi.
+    // A character outside that set is not dropped politely: the radical sign, a
+    // Greek letter or a superscript above three comes out as garbage in the
+    // teacher's paper. Surd items are worded ("the square root of 48") for this
+    // reason, and this keeps the next author honest — see docs/gotchas.md.
+    const winAnsiExtras = new Set([
+      0x20ac, 0x201a, 0x0192, 0x201e, 0x2026, 0x2020, 0x2021, 0x02c6, 0x2030,
+      0x0160, 0x2039, 0x0152, 0x017d, 0x2018, 0x2019, 0x201c, 0x201d, 0x2022,
+      0x2013, 0x2014, 0x02dc, 0x2122, 0x0161, 0x203a, 0x0153, 0x017e, 0x0178,
+    ])
+    for (const [subject, grades] of Object.entries(index.subjects)) {
+      for (const grade of Object.keys(grades)) {
+        for (const item of read(`questions/${subject}/${grade}.json`).items) {
+          for (const text of [item.prompt, item.answer, ...(item.options || [])]) {
+            for (const char of String(text ?? '')) {
+              const point = char.codePointAt(0)
+              expect(
+                point <= 0xff || winAnsiExtras.has(point),
+                `${item.id}: ${char} (U+${point.toString(16).toUpperCase()}) is not in WinAnsi`
+              ).toBe(true)
+            }
+          }
+        }
+      }
+    }
+  })
+
   it('gives every multiple-choice question an answer among its options', () => {
     for (const [subject, grades] of Object.entries(index.subjects)) {
       for (const grade of Object.keys(grades)) {

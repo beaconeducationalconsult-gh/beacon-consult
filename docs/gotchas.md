@@ -336,6 +336,19 @@ whole string, so end it with `.*` (this is the shape Google's own docs use,
 `contentType.matches('image/.*')`). Only `firestore.rules` used `matches()` — `storage.rules`
 matches on the *path*, a different mechanism, and is unaffected.
 
+## 🟠 The exam paper's PDF font is WinAnsi, and half the maths symbols are not in it
+`questionPaper.js` prints through jsPDF, whose standard 14 fonts are encoded in **WinAnsi**
+(`°`, `²`, `×`, `÷`, `½`, `¢` and `é` are in it; the radical sign `√`, `π`, `≥` and every
+superscript above three are **not**). An unsupported character is not dropped either — jsPDF
+writes the code point's low byte, so `√48` prints as `\0"\x1a48` in the teacher's paper. Nothing
+in the app can see this: the browser renders the bank, the tests pass, the PDF is quietly wrong.
+The existing bank had dodged it by accident — the only non-ASCII characters in it are `°`, `¢`,
+`÷` and `²`, and `r_jhs_circle` writes *Taking pi as 22/7* in words — but the authored surd items
+had to be reworded: "simplify the square root of 48", never `√48`. The guard is
+`src/lib/starterBank.test.js`, which walks every served question (prompt, answer and options) and
+fails on any character outside WinAnsi; if a real radical is ever wanted, a Unicode font has to be
+embedded in `questionPaper.js` first.
+
 ## 🟠 Env vars are required at build time
 `VITE_FIREBASE_*` are embedded at build time. Without a `.env.local` (or the equivalent
 Vercel env vars) the build **succeeds** and the app fails at the first Firebase call. Copy

@@ -110,10 +110,15 @@ omitted** rather than quietly making the paper bigger than it said. A teacher ca
 question and see the paper recompose. Two exports: the student copy (PDF) and the teacher copy
 with the marking scheme, with the teacher copy offered to **My library**
 (`<SaveToLibrary kind="question_paper">`). Nothing is written to Firestore — the paper is the
-PDF, not a document.
+PDF, not a document. Every section has something to print: the bank now carries `essay` items for
+the lessons no rule can answer (construct an angle and bisect it, draw a locus, construct an
+inscribed circle) with the construction steps in the marking scheme, so Section C is no longer
+left out; and for B7–B9 the scope line reads **100%** for every term, which means a JHS paper
+tests the whole of the term it was set for.
 
-**Starter bank (P1-5).** The bundle ships 412 practice questions for mathematics B2–B9 —
-including a JHS bank for the BECE years — see *The question bank* in
+**Starter bank (P1-5).** The bundle ships 560 practice questions for mathematics B2–B9 —
+including a JHS bank that covers every B7–B9 indicator the syllabus schedules — see *The question
+bank* in
 [curriculum-data.md](curriculum-data.md). The bank page has
 a **Starter bank** panel: choose a subject-grade, see the count and the indicator coverage, then
 import. Imported questions become ordinary `questions` documents (batched writes, `status:

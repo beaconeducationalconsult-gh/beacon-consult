@@ -29,26 +29,26 @@
     "coveredIndicators": 13
    },
    "B7": {
-    "questions": 122,
+    "questions": 175,
     "indicators": 67,
-    "coveredIndicators": 48
+    "coveredIndicators": 67
    },
    "B8": {
-    "questions": 77,
+    "questions": 132,
     "indicators": 49,
-    "coveredIndicators": 31
+    "coveredIndicators": 49
    },
    "B9": {
-    "questions": 76,
+    "questions": 116,
     "indicators": 43,
-    "coveredIndicators": 30
+    "coveredIndicators": 43
    }
   }
  },
  "totals": {
-  "questions": 412,
+  "questions": 560,
   "indicatorsInPacks": 407,
-  "indicatorsCovered": 199,
+  "indicatorsCovered": 249,
   "indicatorsServed": 4040
  }
 }
