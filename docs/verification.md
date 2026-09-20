@@ -9,7 +9,14 @@ to drive. Run it before a demo, after any change to `firestore.rules` /
 
 ```bash
 make deploy-check URL=https://your-deploy.vercel.app     # scripts/verify_deploy.py
+node scripts/verify_deploy.mjs -Url https://your-deploy.vercel.app   # same checks, Node only
+.\scripts\deploy_check.ps1 -Url https://your-deploy.vercel.app       # the same, from PowerShell
 ```
+
+The two are peers — same checks, same exit code — because the machine that deploys is Windows
+and may not have Python; `src/deployCheck.test.js` fails if they drift apart. Run it from the
+repository root; without `-Url` it only checks the local half (`.env.local`, a build, the bundle
+hash), which is the part that catches a missing config before anything is deployed.
 
 It fetches the deploy (no browser, no Firebase credentials) and fails with an explanation
 for each of these:
@@ -37,6 +44,21 @@ Nothing below can pass until the console matches this checkout:
 
 Publish the Firestore rules **after** the new build is live: the new rules require the scoped
 list queries the new build makes.
+
+### The order, for a first deploy on a fresh project
+
+Four things have to happen, and three of them are on this side — the Vercel build does not
+touch the database:
+
+| # | Do | Passes when |
+|---|---|---|
+| 1 | Put the six `VITE_FIREBASE_*` values in **Vercel → Settings → Environment Variables**, for **Production *and* Preview**, then deploy | `node scripts/verify_deploy.mjs -Url <deploy>` says *the deploy has its Firebase config*. A deploy built without them is green and shows the setup notice instead of the portal |
+| 2 | Deploy the build (push, or `vercel --prod`) | The same run says *serving the curriculum this checkout builds* and *the SPA shell is served* |
+| 3 | Publish the rules and the indexes — `make deploy-rules` (Firestore rules + 19 indexes) and `make deploy-storage` (Storage rules), or paste `firestore.rules` / `storage.rules` into the console | Step 4 stops failing with `permission-denied`. The console copy most projects have predates the visibility-gated reads, the `generated_documents` block, and the `matches()` fix |
+| 4 | Create an account, set `role:'admin'` + `status:'approved'` on its `users/{uid}` doc (P0-3), approve a second account, then walk section 2 | The flows below pass for an **ordinary member**, not just an admin |
+
+Steps 3 and 4 are in that order for a reason: publishing the rules before the new build is live
+turns an old client's list pages from "shows everything" into `permission-denied`.
 
 The rules can also be asked directly, before publishing anything:
 
@@ -102,9 +124,20 @@ is what the step is actually testing.
 | # | Step | Passes when | Why |
 |---|---|---|---|
 | 17 | `/portal/questions/new` → add 3 questions | They appear in the bank | |
+| 17a | Question bank → **Starter bank** → import *Mathematics B4* | It reports 187 questions over 71/71 indicators, and the bank shows them with `source: starter-bank` | `src/lib/starterBank.js` — the served bundle is what seeds a new project, not the curriculum files |
 | 18 | Scroll the bank to the bottom | "Load more" appears while older questions exist; "N shown — that is everything" when they run out | P2-4 paging |
 | 19 | Select questions → "Question paper" and "Quiz slideshow" | PDF and PPTX download with the right total marks | |
 | 20 | On **Lesson plans**, click a plan's slides link | Deck builds from that week's scheduled lessons | `lesson_slides` |
+
+### The exam paper (P1-13 — the newest page)
+
+| # | Step | Passes when | Why |
+|---|---|---|---|
+| 19a | `/portal/questions/exam` → Mathematics **B2**, 50 marks, term 1 | The preview says **50**, and all three sections have something in them — Section C holds the long-answer items | The paper's marks are the marks asked for: a section that cannot spend its share hands them to the ones that can, and the page names the section it did not use (`too-long` / `no-candidates`) instead of quietly printing short |
+| 19b | Switch the term to **2**, then **3** | The scope line changes, and reads **100%** — *"Term 2 schedules 56 indicators — the pool asks about 56 (100%)"* | Term scope is read from `schedules/<grade>-<subject>.json`, the only file that knows what a term teaches |
+| 19c | Same page → **B7**, 60 marks | 30/50/60 compose exactly, Section C included | The JHS pool was authored to 100% per term for this |
+| 19d | Drop a question, then export **student** and **teacher** PDFs | The paper recomposes without it, and both PDFs download — the teacher copy carries the marking scheme | Composition is pure, so the preview cannot disagree with the PDF |
+| 19e | **Save to library**, then open **My library** | The paper is there and opens | `generated_documents` + Storage, the same path as 26a |
 
 ### Notes, progress, calendar
 
@@ -138,9 +171,20 @@ The service worker is registered in production builds only, so this section is
 |---|---|---|---|
 | 27 | `python3 scripts/build_app_curriculum.py`, rebuild, deploy | A returning browser gets the new data on the next load — no "clear site data" instructions | The cache is named after `bundleHash`, so the new worker renames it and drops the old one |
 
-## 3. Record what you saw
+## 3. When a row fails
 
-When a step fails, capture: the URL, the account's role/status, and the Firestore error
-code (`permission-denied` vs `failed-precondition` tells you rules vs missing index — the
-latter also names the index URL in the browser console). File it as a TODO row rather than
-fixing it silently in the console.
+Start from the symptom, because the two Firestore error codes point at completely different
+repairs — and the app now says which one it is (the message on the page, and the button beside
+it):
+
+| Symptom | Cause | Fix |
+|---|---|---|
+| "Could not load … (permission-denied)", whole list | The published rules are older than this build, or the account is not approved | `make deploy-rules`, or check the member's `status` in `/portal/members`. Publish **after** the build goes out |
+| "Could not load … (failed-precondition)" with a link | A composite index is missing | Click the link → Create index → wait a minute. `src/firestoreIndexes.test.js` is supposed to make this impossible for a shipped query — if it fires, a query was added without its index and the test's scan missed it |
+| The setup notice instead of the portal | The **deploy** was built without the six `VITE_FIREBASE_*` values (a local build can be fine) | `node scripts/verify_deploy.mjs -Url <deploy>`; set them on Vercel for Production **and** Preview, redeploy |
+| Grade or subject dropdowns come up empty | The curriculum bundle is not being served | `node scripts/verify_deploy.mjs -Url <deploy>` — it fetches the two files the dropdowns need |
+| A returning browser shows old data after a curriculum rebuild | The service worker is serving the old cache | Check the deploy's `bundleHash` against `public/curriculum/_BUILD_REPORT.json`; the new worker renames the cache |
+| Everything works for the admin and not for a member | The un-filtered-list bug, or an index the admin's query path does not need | Drive section 2 as an ordinary member, never as the admin who built it |
+
+Record what you saw before fixing it: the URL, the account's role/status, and the error code.
+File the finding as a TODO row rather than fixing it silently in the console.

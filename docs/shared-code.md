@@ -85,7 +85,7 @@ The palette (`BRAND.navy`, Calibri, rules under titles, `_` blanks for unfilled 
 | `NotesTabs.jsx` | Tab strip used in the notes area |
 | `SubjectIcon.jsx` | Per-subject icon |
 | `SubjectSelect.jsx` | Subject dropdown for a grade; reports load failures and "no subjects" distinctly instead of rendering an empty-looking select |
-| `DataError.jsx` | "Could not load X" block naming the Firestore error (pending approval, undeployed rules, offline, missing index) — used by every data page |
+| `DataError.jsx` | "Could not load X" block naming the Firestore error, its two likely causes and the repair — used by every data page. The wording lives in `src/lib/dataError.js` (unit-tested, no Firebase), including the **one-click index link** Firestore puts in a `failed-precondition` message, which used to be thrown away |
 | `TermCalendar.jsx` | One term's weeks + scheduled lessons (a section of the Workspace) |
 
 > `RichEditor` and the article views render content with Tailwind `prose` classes, backed by

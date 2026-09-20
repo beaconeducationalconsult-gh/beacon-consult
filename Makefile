@@ -1,4 +1,4 @@
-.PHONY: install inventory audit audit-l2 check check-scripts bundle-size bundle-check books-rollout books-generate books-publish deploy-storage questions build-questions generate-questions bundle-hash verify-deploy deploy-check dev build lint test test-rules preview deploy-rules books book-skeleton boot-check list-modules build-curriculum validate-curriculum generate-schemes generate-records package-books
+.PHONY: install inventory audit audit-l2 check check-scripts bundle-size bundle-check books-rollout books-generate books-publish deploy-storage questions build-questions generate-questions bundle-hash verify-deploy deploy-check preflight dev build lint test test-rules preview deploy-rules books book-skeleton boot-check list-modules build-curriculum validate-curriculum generate-schemes generate-records package-books
 
 # ── Frontend (React + Vite + Yarn 4) ────────────────────────────────────────
 # The portal lives at the repository root. Node 22+ and Yarn 4 are required:
@@ -143,6 +143,13 @@ verify-deploy:
 	python3 scripts/verify_deploy.py $(URL)
 
 deploy-check: verify-deploy
+
+# The same pre-flight for a machine with Node but no Python (Windows), plus the
+# two checks only it makes: .env.local is complete, and a build actually carries
+# the config. Both scripts are held to the same check list by
+# src/deployCheck.test.js.
+preflight:
+	node scripts/verify_deploy.mjs $(URL)
 
 validate-curriculum:
 	PYTHONPATH=. python scripts/validate_app_curriculum.py

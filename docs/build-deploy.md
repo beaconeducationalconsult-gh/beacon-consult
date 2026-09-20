@@ -16,7 +16,7 @@ same in PowerShell, Git Bash or a Unix shell:
 ```bash
 git pull --ff-only        # fast-forward to the newest pushed commit
 yarn install              # new dependencies, if the lockfile moved
-yarn test                 # the suite (341 tests, no Python, no browser)
+yarn test                 # the suite (361 tests, no Python, no browser)
 yarn dev                  # http://localhost:5199
 ```
 
@@ -104,8 +104,15 @@ deploy the next time you touch the file.
 ## Verifying the deploy
 
 ```bash
-make deploy-check URL=https://your-deploy.vercel.app
+make deploy-check URL=https://your-deploy.vercel.app     # scripts/verify_deploy.py
+node scripts/verify_deploy.mjs -Url https://your-deploy.vercel.app   # Node only
+.\scripts\deploy_check.ps1 -Url https://your-deploy.vercel.app       # the same, from PowerShell
 ```
+
+Run it **before** telling anyone the deploy is ready, and again after every rules change. It is
+also the fastest way to tell the two silent failures apart: a deploy built without the config
+(the setup notice instead of the portal) and a deploy serving an older curriculum than this
+checkout. `make preflight URL=…` is the same script.
 
 `scripts/verify_deploy.py` fetches `/build-info.json` (written by the Vite build: whether the
 six `VITE_FIREBASE_*` values were present, the `bundleHash` of the curriculum it built, and the
