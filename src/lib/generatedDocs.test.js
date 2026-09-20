@@ -191,6 +191,13 @@ describe('a project with no Storage bucket is not an error state', () => {
     expect(isStorageMissing({ message: 'bucket does not exist' })).toBe(true)
   })
 
+  it('recognises a build whose bucket name is missing entirely', () => {
+    // `getStorage()` does not throw without a bucket — `ref()` does, with this
+    // code, before any request is made.
+    expect(isStorageMissing({ code: 'storage/no-default-bucket' })).toBe(true)
+    expect(storageFailureMessage({ code: 'storage/no-default-bucket' })).toContain('no Firebase Storage bucket')
+  })
+
   it('does not mistake other failures for a missing bucket', () => {
     // The one that matters: an enabled bucket answers a read for a path that
     // does not exist with object-not-found, and treating that as "no Storage"
@@ -228,5 +235,12 @@ describe('a project with no Storage bucket is not an error state', () => {
       throw { code: 'storage/unknown', serverResponse: '{"error":{"code":404,"message":"Not Found."}}' }
     })
     expect(await probeStorage(noBucket)).toBe('missing')
+
+    // And the case that used to escape the promise chain entirely: `ref()` throws
+    // synchronously when the build has no bucket name, so the throw has to be
+    // inside the try. Before the fix this raised out of probeStorage() itself.
+    resetStorageProbe()
+    const makeRefThatThrows = () => { throw { code: 'storage/no-default-bucket' } }
+    await expect(probeStorage(vi.fn(), makeRefThatThrows)).resolves.toBe('missing')
   })
 })

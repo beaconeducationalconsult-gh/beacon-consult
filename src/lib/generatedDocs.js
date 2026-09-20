@@ -107,7 +107,10 @@ const BUCKET_ANSWERED = new Set([
 export function isStorageMissing(error) {
   if (!storage) return true
   const code = error?.code || ''
-  if (code === 'storage/bucket-not-found') return true
+  // `storage/no-default-bucket` is thrown by `ref()` itself when the build has no
+  // bucket name to build a path against (an empty VITE_FIREBASE_STORAGE_BUCKET);
+  // `bucket-not-found` is the same situation reported by an older SDK.
+  if (code === 'storage/no-default-bucket' || code === 'storage/bucket-not-found') return true
   if (BUCKET_ANSWERED.has(code)) return false
   // `storage/unknown` (or no code at all) with a 404 is what a project without a
   // bucket answers to everything. The message fallback covers SDKs that phrase
@@ -144,15 +147,27 @@ export function storageFailureMessage(error) {
  * cannot succeed. Cached per module (per page load): the answer cannot change
  * while the page is open.
  *
- * The read function is injectable so this can be tested without Firebase.
+ * Both the read and the path builder are injectable so this can be tested
+ * without Firebase.
  */
 let storageProbe = null
-export function probeStorage(readMetadata = getMetadata) {
+export function probeStorage(readMetadata = getMetadata, makeRef = ref) {
   if (!storage) return Promise.resolve('missing')
   if (storageProbe) return storageProbe
-  storageProbe = readMetadata(ref(storage, 'generated/__probe__/__none__'))
-    .then(() => 'enabled')
-    .catch((error) => (isStorageMissing(error) ? 'missing' : 'enabled'))
+  storageProbe = (async () => {
+    try {
+      // A build with no bucket name at all throws here rather than at the read —
+      // `ref()` cannot build a path without one — so the whole thing is inside the
+      // try, not just the request.
+      const target = makeRef(storage, 'generated/__probe__/__none__')
+      await readMetadata(target)
+      return 'enabled'
+    } catch (error) {
+      // Anything the bucket itself answered means Storage is there and something
+      // else went wrong; only the absence of a bucket counts as missing.
+      return isStorageMissing(error) ? 'missing' : 'enabled'
+    }
+  })()
   return storageProbe
 }
 

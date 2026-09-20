@@ -66,6 +66,11 @@ error:
 - `isStorageMissing()` must never mistake `storage/object-not-found` for a missing bucket: a
   healthy bucket answers that way for every path a teacher has not written yet, and reading it as
   "no Storage" would hide the library everywhere. There is a test for exactly that.
+- A missing bucket has **two** shapes: a bucket name in the config that does not exist (requests
+  404 — `storage/unknown` with a 404 payload) and no bucket name at all
+  (`VITE_FIREBASE_STORAGE_BUCKET` empty, where `getStorage()` still returns an object and the
+  first `ref()` throws `storage/no-default-bucket`). Both are "missing", and the probe has to keep
+  the `ref()` call inside its `try` — otherwise that throw escapes the promise chain entirely.
 
 Turning it on later: upgrade the project to Blaze → **Build → Storage → Get started** →
 `make deploy-storage` → reload. No code change.
