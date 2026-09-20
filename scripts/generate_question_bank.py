@@ -780,15 +780,6 @@ def r_money(rng, ctx):
     ]
 
 
-def r_average(rng, ctx):
-    values = [rng.randint(10, 90) for _ in range(5)]
-    total = sum(values)
-    return [
-        short(f"Find the average of {', '.join(str(v) for v in values)}.",
-              f"{total / 5:g}", marks=2),
-    ]
-
-
 def r_percentage(rng, ctx):
     percent = rng.choice([5, 10, 15, 20, 25, 50])
     of = rng.choice([20, 40, 60, 80, 120, 200])
@@ -2168,7 +2159,6 @@ RULES = [
     ("perimeter-area", r"perimeter|area of (?:a )?(?:rectangle|square|triangle)", r_perimeter_area, "both"),
     ("time", r"\btime\b|clock|duration", r_time, "primary"),
     ("money", r"\b(?:money|cedis?|GH¢|costs?|prices?)\b", r_money, "both"),
-    ("average", r"average|mean of", r_average, "both"),
     ("percentage", r"percentage|per cent|percent", r_percentage, "both"),
     # ── JHS only (B7–B9) ─────────────────────────────────────────────────────
     # Every one of these matches JHS wording, and answers with arithmetic the

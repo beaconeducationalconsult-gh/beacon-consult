@@ -103,20 +103,28 @@ question in the pool: 5 in Patterns and Relations, 4 in Data and Probability …
 see which work their paper will not test before they print it. A subject-grade with no schedule
 (KG, or an unscheduled subject) says so and covers the whole year.
 
-The composition is pure, which is what makes the preview honest: `targetMarks` is a target, the
-paper stops before overshooting, the shortfall is printed ("4 marks short — no single question
-fitted the gap"), and a section whose cheapest question no longer fits the paper is **named and
-omitted** rather than quietly making the paper bigger than it said. A teacher can drop any
+The composition is pure, which is what makes the preview honest. `targetMarks` is a promise to
+the extent the pool can keep it: each section takes its share first, and **the marks a section
+cannot spend go to the sections that can still print** — so a B2 paper, whose pool held no
+long-answer items at all, no longer came out 12 marks shorter than it said; it reaches the marks
+asked for from Sections A and B, and the page **names the section that could not appear** and
+says which of the two reasons it was ("its shortest question is worth 8 marks, and a 20-mark
+paper has no room for it after the other sections" / "the pool for this scope holds no questions
+of the type it prints"). The section shares add up to the target exactly — rounding them one by
+one is how a 50-mark paper used to come out at 51. The paper never prints more than the marks
+asked for, and only when the pool itself runs out is the shortfall printed. A teacher can drop any
 question and see the paper recompose. Two exports: the student copy (PDF) and the teacher copy
 with the marking scheme, with the teacher copy offered to **My library**
 (`<SaveToLibrary kind="question_paper">`). Nothing is written to Firestore — the paper is the
-PDF, not a document. Every section has something to print: the bank now carries `essay` items for
-the lessons no rule can answer (construct an angle and bisect it, draw a locus, construct an
-inscribed circle) with the construction steps in the marking scheme, so Section C is no longer
-left out; and for B7–B9 the scope line reads **100%** for every term, which means a JHS paper
-tests the whole of the term it was set for.
+PDF, not a document. Every section now has something to print in every year: the bank carries
+`essay` items for the lessons no rule can answer (construct an angle and bisect it, draw a locus,
+construct an inscribed circle at JHS; describe a pattern, design a questionnaire, compare two
+graphs of the same data at primary), with the steps or the expected reasoning in the marking
+scheme — and the scope line reads **100%** for every term of every year, so a paper tests the
+whole of the term it was set for, at its full length (a 50-mark B5 paper composes 50, five of
+them essays in Section C).
 
-**Starter bank (P1-5).** The bundle ships **1,073 practice questions for mathematics B2–B9 —
+**Starter bank (P1-5).** The bundle ships **1,081 practice questions for mathematics B2–B9 —
 a question for every indicator the syllabus schedules, in every year, and 100% of every term's
 scope** — see *The question bank* in
 [curriculum-data.md](curriculum-data.md). The bank page has

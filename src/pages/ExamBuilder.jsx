@@ -312,7 +312,7 @@ export default function ExamBuilder() {
               <span className="font-semibold">{paper.questions.length}</span> questions ·{' '}
               <span className="font-semibold">{paper.totalMarks}</span> marks of {paper.targetMarks} asked
               {paper.targetMarks - paper.totalMarks > 0 && (
-                <> · {paper.targetMarks - paper.totalMarks} marks short (no single question fitted the gap)</>
+                <> · {paper.targetMarks - paper.totalMarks} marks short (the pool has no more questions that fit)</>
               )}{' '}
               · {paper.indicators} indicators covered
             </p>
@@ -347,7 +347,10 @@ export default function ExamBuilder() {
                 {paper.omitted.map((section) => (
                   <span key={section.id} className="block">
                     <span className="font-semibold">{section.label} is not on this paper:</span>{' '}
-                    {section.reason}. Raise the target marks, or write a shorter question for it.
+                    {section.reason}.{' '}
+                    {section.kind === 'too-long'
+                      ? 'Raise the target marks, or write a shorter question for it.'
+                      : 'Write one for this scope, or leave the section off.'}
                   </span>
                 ))}
               </p>

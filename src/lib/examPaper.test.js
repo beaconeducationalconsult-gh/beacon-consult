@@ -73,13 +73,48 @@ describe('composePaper', () => {
     expect(a.questions.map((x) => x.id)).toEqual(b.questions.map((x) => x.id))
   })
 
-  it('leaves a section empty when the pool has nothing of that type', () => {
+  it('keeps a section empty when the pool has nothing of that type — and names it', () => {
+    // An objectives-only pool can still make a full-length paper, but Sections B
+    // and C are not on it, and the page has to be able to say why.
     const paper = composePaper(POOL.filter((x) => x.type === 'mcq'), { targetMarks: 50 })
     const [a, b, c] = paper.sections
     expect(a.questions.length).toBeGreaterThan(0)
     expect(b.questions).toEqual([])
     expect(c.questions).toEqual([])
     expect(paper.totalMarks).toBe(a.marks)
+    expect(paper.omitted.map((x) => x.id)).toEqual(['B', 'C'])
+    expect(paper.omitted.every((x) => x.kind === 'no-candidates')).toBe(true)
+  })
+
+  it('reaches the marks asked for by spending an unfillable section\'s share elsewhere', () => {
+    // Primary papers hold no essays: Section C's share of a 50-mark paper goes
+    // to Sections A and B rather than the paper being printed short of its
+    // length. The pool has to be big enough for the target, which is the line
+    // between "the paper is shorter" and "the pool is too small".
+    const noEssays = [
+      ...[...Array(40)].map((_, n) => q(`m${n}`, 'mcq', 1, `B4.1.1.1.${n}`)),
+      ...[...Array(20)].map((_, n) => q(`s${n}`, 'short', 3, `B4.1.2.1.${n}`)),
+    ]
+    const paper = composePaper(noEssays, { targetMarks: 50 })
+    expect(paper.totalMarks).toBe(50)
+    expect(paper.sections[2].questions).toEqual([])
+    expect(paper.sections.slice(0, 2).reduce((sum, s) => sum + s.marks, 0)).toBe(50)
+    expect(paper.omitted.map((x) => x.id)).toEqual(['C'])
+    expect(paper.omitted[0].kind).toBe('no-candidates')
+  })
+
+  it('adds up to the target exactly — section shares are not rounded independently', () => {
+    // 20 + 18 + 13 = 51 was a 50-mark paper one mark over. With one-mark
+    // questions of every type the pool can fill each share exactly, so the
+    // paper has to land on the target and no further.
+    const flat = [
+      ...[...Array(60)].map((_, n) => q(`m${n}`, 'mcq', 1, `B4.1.1.1.${n}`)),
+      ...[...Array(60)].map((_, n) => q(`s${n}`, 'truefalse', 1, `B4.1.2.1.${n}`)),
+      ...[...Array(60)].map((_, n) => q(`e${n}`, 'essay', 1, `B4.2.1.1.${n}`)),
+    ]
+    for (const target of [30, 50, 60]) {
+      expect(composePaper(flat, { targetMarks: target }).totalMarks, `target ${target}`).toBe(target)
+    }
   })
 
   it('keeps a section alive when its share of the marks is smaller than one question', () => {
@@ -89,20 +124,24 @@ describe('composePaper', () => {
     const sectionC = paper.sections[2]
     expect(sectionC.questions.map((x) => x.id)).toEqual(['e1'])
     expect(paper.totalMarks).toBe(8)
-    expect(paper.omitted).toEqual([])
+    // Sections A and B are named, because this one-question pool has nothing
+    // their types can print — the essay is still on the paper.
+    expect(paper.omitted.map((x) => x.id)).toEqual(['A', 'B'])
+    expect(paper.omitted.every((x) => x.kind === 'no-candidates')).toBe(true)
   })
 
-  it('leaves a section out rather than printing a bigger paper than asked for', () => {
-    // The whole pool at a 20-mark target: 8 objectives and 2 shorts use 14
-    // marks, and the cheapest essay (8) no longer fits — so Section C is
-    // omitted, and named, instead of the paper quietly becoming a 22-mark one.
+  it('leaves an essay off rather than printing a bigger paper than asked for', () => {
+    // The whole pool at a 20-mark target: the essay is 8 marks and the paper is
+    // full at 20, so Section C is omitted, and named, instead of the paper
+    // quietly becoming a 28-mark one — the 20 marks go to Sections A and B.
     const paper = composePaper(POOL, { targetMarks: 20 })
     const [a, b, c] = paper.sections
     expect(a.marks).toBe(8)
-    expect(b.marks).toBe(6)
+    expect(b.marks).toBe(12)
     expect(c.questions).toEqual([])
-    expect(paper.totalMarks).toBe(14)
+    expect(paper.totalMarks).toBe(20)
     expect(paper.omitted.map((x) => x.id)).toEqual(['C'])
+    expect(paper.omitted[0].kind).toBe('too-long')
     expect(paper.omitted[0].reason).toMatch(/8 marks/)
   })
 

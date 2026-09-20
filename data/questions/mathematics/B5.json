@@ -74,6 +74,18 @@
    "marks": 1,
    "difficulty": "core",
    "source": "authored"
+  },
+  {
+   "id": "B5.4.1.1.1-authored-1",
+   "indicatorCode": "B5.4.1.1.1",
+   "prompt": "Explain the difference between first-hand and second-hand data. Give one example of each.",
+   "type": "essay",
+   "options": null,
+   "answer": "First-hand data is data you collect yourself, for example counting how many pupils in your class walk to school. Second-hand data is data someone else collected, for example the rainfall figures printed in a newspaper.",
+   "answerLetter": null,
+   "marks": 3,
+   "difficulty": "core",
+   "source": "authored"
   }
  ]
 }

@@ -1,0 +1,43 @@
+{
+ "subjectId": "mathematics",
+ "grade": "B2",
+ "note": "Hand-written questions. The generator never writes this file; see scripts/build_question_bank.py for how authored and generated items are merged.",
+ "items": [
+  {
+   "id": "B2.2.1.1.2-authored-1",
+   "indicatorCode": "B2.2.1.1.2",
+   "prompt": "Look at this pattern: 4, 8, 12, 16, ____, ____. (a) Describe the rule in words. (b) Write the next two numbers. (c) Make up a pattern of your own that adds 5 each time, and write its first four numbers.",
+   "type": "essay",
+   "options": null,
+   "answer": "(a) Add 4 each time. (b) 20, 24. (c) Any pattern that adds 5, for example 5, 10, 15, 20 or 3, 8, 13, 18.",
+   "answerLetter": null,
+   "marks": 4,
+   "difficulty": "core",
+   "source": "authored"
+  },
+  {
+   "id": "B2.4.1.1.1-authored-1",
+   "indicatorCode": "B2.4.1.1.1",
+   "prompt": "Your class wants to find out the favourite fruit of every pupil. (a) How would you collect the answers? (b) Five pupils chose mango, three chose orange and four chose banana. Draw a tally chart for the class. (c) Which fruit is the favourite, and how many pupils chose it?",
+   "type": "essay",
+   "options": null,
+   "answer": "(a) Ask every pupil and record each answer in a tally chart or a list. (b) Mango IIII (5), Orange III (3), Banana IIII (4). (c) Mango, chosen by 5 pupils.",
+   "answerLetter": null,
+   "marks": 4,
+   "difficulty": "core",
+   "source": "authored"
+  },
+  {
+   "id": "B2.3.3.1.2-authored-1",
+   "indicatorCode": "B2.3.3.1.2",
+   "prompt": "Kofi's pencil is 12 cm long, Esi's pencil is 15 cm long and Ama's pencil is 9 cm long. (a) Which pencil is the longest? (b) Arrange the three pencils from shortest to longest. (c) Explain how you decided which one was the longest.",
+   "type": "essay",
+   "options": null,
+   "answer": "(a) Esi's pencil. (b) Ama 9 cm, Kofi 12 cm, Esi 15 cm. (c) I compared the three lengths: the pencil with the most centimetres is the longest.",
+   "answerLetter": null,
+   "marks": 3,
+   "difficulty": "core",
+   "source": "authored"
+  }
+ ]
+}

@@ -1,0 +1,55 @@
+{
+ "subjectId": "mathematics",
+ "grade": "B3",
+ "note": "Hand-written questions. The generator never writes this file; see scripts/build_question_bank.py for how authored and generated items are merged.",
+ "items": [
+  {
+   "id": "B3.1.2.4.3-authored-1",
+   "indicatorCode": "B3.1.2.4.3",
+   "prompt": "Adjoa wants to estimate 398 + 205. (a) Round each number to the nearest hundred. (b) Estimate the sum. (c) Explain why your estimate is close to the exact answer.",
+   "type": "essay",
+   "options": null,
+   "answer": "(a) 400 and 200. (b) About 600. (c) 398 and 205 are each close to the number they were rounded to, so their sum is close to 600 - the exact answer is 603.",
+   "answerLetter": null,
+   "marks": 4,
+   "difficulty": "core",
+   "source": "authored"
+  },
+  {
+   "id": "B3.1.3.1.1-authored-1",
+   "indicatorCode": "B3.1.3.1.1",
+   "prompt": "A whole orange is cut into 4 equal parts. (a) What fraction is each part? (b) Explain what the fraction means. (c) How many quarters make one whole orange?",
+   "type": "essay",
+   "options": null,
+   "answer": "(a) 1/4. (b) The orange was cut into 4 equal parts and one part is one quarter of the orange. (c) 4 quarters.",
+   "answerLetter": null,
+   "marks": 3,
+   "difficulty": "core",
+   "source": "authored"
+  },
+  {
+   "id": "B3.3.1.1.1-authored-1",
+   "indicatorCode": "B3.3.1.1.1",
+   "prompt": "(a) How many faces, edges and vertices has a cube? (b) Write one way a cube and a cylinder are different.",
+   "type": "essay",
+   "options": null,
+   "answer": "(a) 6 faces, 12 edges, 8 vertices. (b) A cube has flat faces and straight edges; a cylinder has two circular faces and a curved surface, so it can roll.",
+   "answerLetter": null,
+   "marks": 4,
+   "difficulty": "core",
+   "source": "authored"
+  },
+  {
+   "id": "B3.3.3.1.2-authored-1",
+   "indicatorCode": "B3.3.3.1.2",
+   "prompt": "Name one thing in your school that is about 1 metre long and one thing that is about 1 centimetre long. Explain how you chose each one.",
+   "type": "essay",
+   "options": null,
+   "answer": "Any sensible referents, for example the width of a doorway (about 1 m) and the width of a fingernail (about 1 cm). I compared each object with a metre rule or a ruler.",
+   "answerLetter": null,
+   "marks": 3,
+   "difficulty": "core",
+   "source": "authored"
+  }
+ ]
+}

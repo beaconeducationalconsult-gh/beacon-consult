@@ -4,12 +4,12 @@
  "subjects": {
   "mathematics": {
    "B2": {
-    "questions": 79,
+    "questions": 82,
     "indicators": 29,
     "coveredIndicators": 29
    },
    "B3": {
-    "questions": 96,
+    "questions": 100,
     "indicators": 39,
     "coveredIndicators": 39
    },
@@ -19,7 +19,7 @@
     "coveredIndicators": 71
    },
    "B5": {
-    "questions": 174,
+    "questions": 175,
     "indicators": 67,
     "coveredIndicators": 67
    },
@@ -46,7 +46,7 @@
   }
  },
  "totals": {
-  "questions": 1073,
+  "questions": 1081,
   "indicatorsInPacks": 407,
   "indicatorsCovered": 407,
   "indicatorsServed": 4040

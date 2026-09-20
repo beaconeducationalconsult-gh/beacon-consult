@@ -194,17 +194,40 @@ function spreadByIndicator(candidates) {
 }
 
 /**
+ * The marks each section may spend, adding up to the target exactly.
+ *
+ * Rounding each section's share on its own is how a 50-mark paper came out at
+ * 51 (20 + 18 + 13). The rounding difference comes off the last section that can
+ * afford it, so the sections can never between them promise more marks than the
+ * paper asks for.
+ */
+function sectionBudgets(target, plan) {
+  const budgets = plan.map((section) => Math.round(target * section.weight))
+  let drift = budgets.reduce((sum, marks) => sum + marks, 0) - target
+  for (let i = budgets.length - 1; i >= 0 && drift !== 0; i -= 1) {
+    const take = drift > 0 ? Math.min(drift, Math.max(0, budgets[i] - 1)) : drift
+    budgets[i] -= take
+    drift -= take
+  }
+  return budgets
+}
+
+/**
  * Build a paper from a pool of questions.
  *
- * `targetMarks` is a target, not a promise: each section stops before it would
- * overshoot its share, so the printed total is usually a little under what was
- * asked for — and the page says so rather than quietly rounding up.
+ * `targetMarks` is a promise to the extent the pool can keep it. Each section
+ * takes its share first; the marks a section could not spend — because the pool
+ * holds none of its types, or only questions longer than its share — then go to
+ * the sections that still have questions to print, so a primary paper with no
+ * essays still comes out at the length that was asked for. The paper never
+ * prints more than the marks asked for.
  *
  * A section can come back **empty**, and that is a decision, not an oversight:
- * a 20-mark paper cannot carry an 8-mark essay without becoming a 22-mark
- * paper, and printing a paper that is not the one that was asked for is worse
- * than printing a short one. When that happens the section is named in
- * `omitted`, so the page can tell the teacher why (and what to change).
+ * a 20-mark paper cannot carry an 8-mark essay without becoming a 22-mark one,
+ * and printing a paper that is not the one that was asked for is worse. When
+ * that happens the section is named in `omitted` — `too-long` when its shortest
+ * question did not fit, `no-candidates` when the pool for that scope holds
+ * nothing of its types — so the page can tell the teacher why.
  *
  * One exception keeps a section alive: if the section's own share is smaller
  * than a single question but the *paper* has room, its cheapest question goes
@@ -213,10 +236,11 @@ function spreadByIndicator(candidates) {
  */
 export function composePaper(pool = [], { targetMarks = 50, plan = SECTION_PLAN } = {}) {
   const target = Math.max(1, Math.round(Number(targetMarks) || 1))
+  const budgets = sectionBudgets(target, plan)
 
-  const sections = plan.map((section) => {
+  const sections = plan.map((section, index) => {
     const candidates = spreadByIndicator(pool.filter((q) => section.types.includes(typeOf(q))))
-    const budget = Math.round(target * section.weight)
+    const budget = budgets[index]
     const chosen = []
     let marks = 0
 
@@ -235,6 +259,7 @@ export function composePaper(pool = [], { targetMarks = 50, plan = SECTION_PLAN 
       candidates,
       questions: chosen,
       marks,
+      taken: new Set(chosen),
     }
   })
 
@@ -250,20 +275,53 @@ export function composePaper(pool = [], { targetMarks = 50, plan = SECTION_PLAN 
     if (total + marksOf(cheapest) <= target) {
       section.questions = [cheapest]
       section.marks = marksOf(cheapest)
+      section.taken.add(cheapest)
     } else {
       omitted.push({
         id: section.id,
         label: section.label,
-        reason: `its shortest question is worth ${marksOf(cheapest)} marks, too much for the ${Math.round(
-          target * section.weight
-        )} marks left in a ${target}-mark paper`,
+        kind: 'too-long',
+        reason: `its shortest question is worth ${marksOf(cheapest)} marks, and a ${target}-mark paper has no room for it after the other sections`,
       })
     }
   }
 
+  // Top-up pass: the marks a section could not spend go to the sections that can
+  // still print. Each section carries on with its own coverage sweep, so an
+  // indicator is still asked about once before any is asked about twice.
+  let total = sections.reduce((sum, section) => sum + section.marks, 0)
+  let progressed = true
+  while (total < target && progressed) {
+    progressed = false
+    for (const section of sections) {
+      if (total >= target) break
+      const next = section.candidates.find(
+        (question) => !section.taken.has(question) && total + marksOf(question) <= target
+      )
+      if (!next) continue
+      section.questions.push(next)
+      section.taken.add(next)
+      section.marks += marksOf(next)
+      total += marksOf(next)
+      progressed = true
+    }
+  }
+
+  // A section the pool cannot serve at all is named too — otherwise the page
+  // would show a section heading with nothing under it and no explanation.
+  for (const section of sections) {
+    if (section.questions.length || section.candidates.length) continue
+    omitted.push({
+      id: section.id,
+      label: section.label,
+      kind: 'no-candidates',
+      reason: 'the pool for this scope holds no questions of the type it prints',
+    })
+  }
+
   const totalMarks = sections.reduce((sum, section) => sum + section.marks, 0)
   return {
-    sections: sections.map(({ candidates: _candidates, ...section }) => section),
+    sections: sections.map(({ candidates: _candidates, taken: _taken, ...section }) => section),
     totalMarks,
     targetMarks: target,
     omitted,

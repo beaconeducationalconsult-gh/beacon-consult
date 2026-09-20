@@ -313,17 +313,19 @@ Two scripts, split so that generating data and validating it never happen in the
   locus — there is deliberately no rule: that is classroom work, not a generated arithmetic answer.
   Those indicators are covered by hand instead (see the authored bank below), as essay questions
   whose marking scheme names the construction steps.
-* **Coverage is printed and indexed, not assumed**: today **1,073 questions (165 authored, 908
+* **Coverage is printed and indexed, not assumed**: today **1,081 questions (173 authored, 908
   generated), 407 of 407 indicators — 100% of mathematics B2–B9**, against 4,040 indicators served
-  overall. Per grade: B2 79 (29/29), B3 96 (39/39), B4 187 (71/71), B5 174 (67/67), B6 115 (42/42),
+  overall. Per grade: B2 82 (29/29), B3 100 (39/39), B4 187 (71/71), B5 175 (67/67), B6 115 (42/42),
   B7 176 (67/67), B8 131 (49/49), B9 115 (43/43); every term's schedule reads 100% too. Three
   passes of primary rules closed B2–B6 (`nonstandard-units`, `unit-fraction`, `place-value-parts`,
   `problem-to-equation`, `reflection-coordinates`, `likelihood`, `graph-attributes`, … — the run
   prints them per grade); the last five indicators no rule could answer — compare two graphs of
   the same data, represent a pattern visually, conduct a probability experiment, design a
-  questionnaire — are hand-written like the JHS ones.
+  questionnaire — are hand-written like the JHS ones, as are the long-answer items the primary
+  pools had none of (a rule can compute an answer, but "describe the rule in words" is a marking
+  scheme, not a formula).
 * **The indicators a rule cannot reach are authored, not skipped.** `data/questions/mathematics/
-  B{4,5,6,7,8,9}.json` hold 165 hand-written items (the generator never writes those files), and
+  B{2,3,4,5,6,7,8,9}.json` hold 173 hand-written items (the generator never writes those files), and
   they cover every indicator the rules leave empty: **B4 71/71, B5 67/67, B6 42/42, B7 67/67,
   B8 49/49, B9 43/43 — 100% of each term's schedule too**, so both a primary and a JHS so an end-of-term paper for any of the three years has a question for
   every indicator it schedules. A few lessons genuinely are classroom work — bisect an angle,
