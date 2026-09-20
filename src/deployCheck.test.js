@@ -64,6 +64,18 @@ describe('the deploy checks agree with each other', () => {
     expect(python).toContain('[p for p in CHECKED_PATHS if p.startswith("/curriculum/")]')
   })
 
+  it('compares the app\'s Firebase project with the one the CLI deploys to', () => {
+    // Two files, two tools, one project: `.env.local` (Vite, gitignored) and
+    // `.firebaserc` (the CLI, committed). `firebase deploy` follows .firebaserc,
+    // so a mismatch publishes the rules to a project the app never talks to and
+    // leaves the live one as it was.
+    for (const [name, source] of [['verify_deploy.py', python], ['verify_deploy.mjs', node]]) {
+      expect(source, `${name} no longer reads .firebaserc`).toContain('.firebaserc')
+      expect(source, `${name} no longer compares project ids`).toMatch(/pinned.*!==|!==.*pinned|pinned != app_project/)
+      expect(source, `${name} no longer names the fix`).toMatch(/firebase use/)
+    }
+  })
+
   it('reads a file the rewrite swallowed as the shell, not as a pass', () => {
     // The bug this guards: every path the deploy does not have answers 200 with
     // index.html, which used to count as a served file.
@@ -165,12 +177,37 @@ describe('the .env.local reader understands what Windows writes', () => {
       .toContain('all six VITE_FIREBASE_* values are set')
   })
 
-  it('names the keys it found when one is missing, and no values', () => {
-    const partial = KEYS.slice(0, 3).map((key) => `${key}=pretend-secret`).join('\n')
+  it('names the keys it found when one is missing, and never the values', () => {
+    // The project id is public (it ships in the client bundle and in the
+    // committed .firebaserc), so it may appear; the other five must not.
+    const partial = [
+      'VITE_FIREBASE_API_KEY=pretend-secret',
+      'VITE_FIREBASE_AUTH_DOMAIN=pretend-domain',
+      'VITE_FIREBASE_PROJECT_ID=pretend-project',
+    ].join('\n')
     const output = run(Buffer.from(partial, 'utf8'))
     expect(output).toContain('does not define: VITE_FIREBASE_STORAGE_BUCKET')
     expect(output).toContain('keys defined: VITE_FIREBASE_API_KEY, VITE_FIREBASE_AUTH_DOMAIN, VITE_FIREBASE_PROJECT_ID')
     expect(output).not.toContain('pretend-secret')
+    expect(output).not.toContain('pretend-domain')
+  })
+
+  it('flags a project that is not the one .firebaserc deploys to', () => {
+    const pinned = JSON.parse(readFileSync(new URL('../.firebaserc', import.meta.url), 'utf8'))
+      .projects.default
+    const elsewhere = KEYS.map((key) => `${key}=x`).join('\n')
+      .replace('VITE_FIREBASE_PROJECT_ID=x', 'VITE_FIREBASE_PROJECT_ID=some-other-project')
+
+    const mismatch = run(Buffer.from(elsewhere, 'utf8'))
+    expect(mismatch).toContain('but the app is configured for `some-other-project`')
+    expect(mismatch).toContain('would publish the rules and indexes to the project the app never talks to')
+    expect(mismatch).toContain('firebase use some-other-project')
+
+    // And silence when they agree — otherwise the check is just noise.
+    const agreeing = Buffer.from(elsewhere.replace('some-other-project', pinned), 'utf8')
+    const output = run(agreeing)
+    expect(output).toContain(`.firebaserc pins the same project the app uses (${pinned})`)
+    expect(output).not.toContain('would publish the rules and indexes')
   })
 
   it('tells "present but empty" apart from "not there at all"', () => {

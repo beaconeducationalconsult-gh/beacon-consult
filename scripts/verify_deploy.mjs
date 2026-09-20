@@ -167,10 +167,13 @@ step('2. The local Firebase config (.env.local)')
 // `-EnvFile` exists so the reader can be pointed at a fixture; the deploy
 // machine always wants the default.
 const envPath = value('-EnvFile') || value('--env-file') || join(ROOT, '.env.local')
+const env = {}
 if (!existsSync(envPath)) {
   bad('.env.local is missing — copy .env.example to .env.local and fill in the six values from the Firebase console (Project settings → Your apps → Web app)')
 } else {
-  const { env, encoding, lines } = readEnvFile(envPath)
+  const parsed = readEnvFile(envPath)
+  const { encoding, lines } = parsed
+  Object.assign(env, parsed.env)
   const present = FIREBASE_KEYS.filter((key) => key in env)
   const blank = present.filter((key) => !env[key])
   const missing = FIREBASE_KEYS.filter((key) => !(key in env))
@@ -185,6 +188,36 @@ if (!existsSync(envPath)) {
   } else {
     ok(`all six VITE_FIREBASE_* values are set (project ${env.VITE_FIREBASE_PROJECT_ID})`)
   }
+}
+
+/*
+ * The app and the rules have to live in the same Firebase project.
+ *
+ * They are configured in two different files — `.env.local` (Vite, gitignored)
+ * and `.firebaserc` (the Firebase CLI, committed) — and nothing used to compare
+ * them. `make deploy-rules` runs `firebase deploy` with no `--project`, so it
+ * follows `.firebaserc`: point that at one project while the app talks to
+ * another and every publish is a no-op on the project that matters, while the
+ * live one keeps whatever rules it has — an open test-mode database, if the
+ * project is new.
+ */
+const projectInPlay = env.VITE_FIREBASE_PROJECT_ID
+let pinnedProject = null
+try {
+  pinnedProject = JSON.parse(readFileSync(join(ROOT, '.firebaserc'), 'utf8'))?.projects?.default || null
+} catch {
+  pinnedProject = null
+}
+if (!pinnedProject) {
+  warn('.firebaserc has no default project — `firebase deploy` will ask, or needs --project')
+} else if (projectInPlay && pinnedProject !== projectInPlay) {
+  bad(`.firebaserc pins \`${pinnedProject}\` but the app is configured for \`${projectInPlay}\` — `
+    + '`firebase deploy` (and `make deploy-rules`) would publish the rules and indexes to the '
+    + 'project the app never talks to, leaving the live one on whatever rules it has')
+  warn(`fix: run \`firebase use ${projectInPlay}\` (writes .firebaserc), or commit the change, `
+    + `or deploy with \`--project ${projectInPlay}\``)
+} else if (projectInPlay) {
+  ok(`.firebaserc pins the same project the app uses (${pinnedProject})`)
 }
 
 /* ── 3. a local build carries it ─────────────────────────────────────────── */
@@ -246,6 +279,11 @@ if (!URL_ARG) {
         ok(`the deploy has its Firebase config (project ${remote.projectId}, commit ${remote.commit}, built ${remote.builtAt})`)
       } else {
         bad(`the deploy was built WITHOUT Firebase config (missing: ${(remote.missingEnv || []).join(', ')}) — set all six VITE_FIREBASE_* values in Vercel → Settings → Environment Variables for BOTH Production and Preview, then redeploy`)
+      }
+      if (remote.projectId && projectInPlay && remote.projectId !== projectInPlay) {
+        bad(`the deploy was built for project \`${remote.projectId}\`, but this checkout's .env.local `
+          + `configures \`${projectInPlay}\` — the deployment and your local app are talking to `
+          + 'different Firebase projects')
       }
       if (remote.bundleHash && local?.bundleHash && remote.bundleHash !== local.bundleHash) {
         bad(`the deploy serves curriculum ${remote.bundleHash} but this checkout builds ${local.bundleHash} — the curriculum changed since the last deploy`)

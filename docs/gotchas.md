@@ -64,6 +64,26 @@ Set-Content .env.local -Encoding utf8 -Value @(
   'VITE_FIREBASE_API_KEY=…', 'VITE_FIREBASE_AUTH_DOMAIN=…' )
 ```
 
+## 🔴 The app and the rules can live in different Firebase projects
+
+They are configured in two files that nothing compared: `.env.local` (Vite — gitignored, per
+machine) and `.firebaserc` (the Firebase CLI — committed). `make deploy-rules` runs
+`firebase deploy` with no `--project`, so it follows `.firebaserc`. Point that at one project while
+the app talks to another and every publish is a **silent no-op on the project that matters** —
+the live database keeps whatever rules it has, which on a new project is test mode (open to
+anyone who has the project id), while the console happily reports a successful deploy to a
+project nobody uses.
+
+Both pre-flight scripts now compare the two and refuse to call it a pass. Fix by making the CLI
+agree with the app, not the other way round:
+
+```powershell
+firebase use <the project id from .env.local>   # writes .firebaserc
+git add .firebaserc && git commit -m "Point the CLI at the live project"
+```
+
+Or pass it explicitly: `firebase deploy --only firestore:rules --project <id>`.
+
 ## 🟠 The production domain serves the Production Branch, not the branch you pushed
 
 `beacon-edu-consult.vercel.app` is a **production** URL, and Vercel deploys its Production Branch

@@ -58,6 +58,61 @@ def get(url: str, timeout: int = 20):
         return None, str(e).encode()
 
 
+def read_env_file(path: Path) -> tuple[dict, str, int]:
+    """(env, encoding, non-blank lines) for a dotenv file, decoded from the bytes.
+
+    Windows PowerShell writes `>` and `Out-File` as UTF-16LE, so a perfectly good
+    `.env.local` read as UTF-8 is a string full of NUL bytes and every key
+    "disappears". Same handling as scripts/verify_deploy.mjs: byte-order mark
+    first, then a NUL-byte sniff, then `utf-8`.
+    """
+    raw = path.read_bytes()
+    encoding = "UTF-8"
+    if raw[:2] == b"\xff\xfe":
+        text, encoding = raw[2:].decode("utf-16-le"), "UTF-16LE"
+    elif raw[:2] == b"\xfe\xff" and len(raw) % 2 == 0:
+        text, encoding = raw[2:].decode("utf-16-be"), "UTF-16BE"
+    else:
+        text = raw.decode("utf-8", errors="replace")
+        if text.startswith("\ufeff"):
+            text = text[1:]
+        if len(raw) % 2 == 0 and "\x00" in text[:400]:
+            text, encoding = raw.decode("utf-16-le", errors="replace"), "UTF-16LE (no byte-order mark)"
+
+    env = {}
+    lines = text.splitlines()
+    for raw_line in lines:
+        line = raw_line.strip()
+        if not line or line.startswith("#"):
+            continue
+        match = re.match(r"^(?:export\s+)?([A-Za-z_][A-Za-z0-9_]*)\s*=\s*(.*)$", line)
+        if not match:
+            continue
+        value = match.group(2).strip()
+        if len(value) > 1 and value[0] == value[-1] and value[0] in "\"'":
+            value = value[1:-1]
+        env[match.group(1)] = value
+    return env, encoding, len([line for line in lines if line.strip()])
+
+
+def pinned_project() -> str | None:
+    """The project `.firebaserc` sends `firebase deploy` to, or None."""
+    try:
+        return json.loads((ROOT / ".firebaserc").read_text(encoding="utf-8")).get("projects", {}).get("default")
+    except Exception:  # noqa: BLE001
+        return None
+
+
+FIREBASE_KEYS = [
+    "VITE_FIREBASE_API_KEY",
+    "VITE_FIREBASE_AUTH_DOMAIN",
+    "VITE_FIREBASE_PROJECT_ID",
+    "VITE_FIREBASE_STORAGE_BUCKET",
+    "VITE_FIREBASE_MESSAGING_SENDER_ID",
+    "VITE_FIREBASE_APP_ID",
+]
+
+
 def looks_like_html(body: bytes) -> bool:
     """A 200 that is the app shell: the rewrite caught a path the deploy lacks."""
     return bool(re.match(rb"\s*(<!doctype|<html)", body[:200], re.IGNORECASE))
@@ -97,6 +152,32 @@ def main() -> int:
 
     local = local_bundle_hash()
     problems, notes = [], []
+
+    # The app and the rules have to live in the same Firebase project, and they are
+    # configured in two different files: `.env.local` (Vite, gitignored) and
+    # `.firebaserc` (the CLI, committed). `firebase deploy` follows `.firebaserc`,
+    # so a mismatch publishes the rules to a project the app never talks to — and
+    # leaves the live one on whatever rules it has.
+    env_path = ROOT / ".env.local"
+    app_project = None
+    if env_path.exists():
+        env, encoding, _ = read_env_file(env_path)
+        app_project = env.get("VITE_FIREBASE_PROJECT_ID") or None
+        missing_env = [key for key in FIREBASE_KEYS if not env.get(key)]
+        if missing_env:
+            problems.append(f".env.local does not define: {', '.join(missing_env)} "
+                            f"(read as {encoding})")
+    pinned = pinned_project()
+    if not pinned:
+        notes.append(".firebaserc has no default project — `firebase deploy` needs --project")
+    elif app_project and pinned != app_project:
+        problems.append(f".firebaserc pins `{pinned}` but the app is configured for `{app_project}` "
+                        "— `firebase deploy` (and `make deploy-rules`) would publish the rules and "
+                        "indexes to the project the app never talks to")
+        notes.append(f"fix: `firebase use {app_project}` (writes .firebaserc), or deploy with "
+                     f"`--project {app_project}`")
+    elif app_project:
+        notes.append(f".firebaserc pins the same project the app uses ({pinned})")
 
     if not local:
         problems.append("public/curriculum/_BUILD_REPORT.json has no bundleHash — run "
@@ -144,6 +225,10 @@ def main() -> int:
                             f"builds {local} — the curriculum changed since the last deploy")
         if remote:
             notes.append(f"commit {remote.get('commit')}, built {remote.get('builtAt')}")
+            if remote.get("projectId") and app_project and remote["projectId"] != app_project:
+                problems.append(f"the deploy was built for project `{remote['projectId']}`, but this "
+                                f"checkout's .env.local configures `{app_project}` — the deployment "
+                                "and your local app are talking to different Firebase projects")
 
     status, body = get(f"{base}/")
     if status != 200 or b'id="root"' not in body:
