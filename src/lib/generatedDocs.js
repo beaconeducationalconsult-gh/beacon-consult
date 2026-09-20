@@ -21,7 +21,7 @@
  */
 
 import { addDoc, collection, deleteDoc, doc, serverTimestamp } from 'firebase/firestore'
-import { deleteObject, getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage'
+import { deleteObject, getDownloadURL, getMetadata, ref, uploadBytesResumable } from 'firebase/storage'
 import { db, storage } from '../firebase'
 
 /** Keep in step with the size limit in storage.rules. */
@@ -73,6 +73,92 @@ export function documentRecord({ user, filename, kind, bytes, storagePath, stora
     authorId: user.uid,
     authorName: user.displayName || user.email || 'Member',
   }
+}
+
+/*
+ * Storage is **optional**, and the app has to say so in words a teacher can act on.
+ *
+ * Cloud Storage for Firebase has required the pay-as-you-go (Blaze) plan since
+ * October 2024 — a project on the free Spark plan cannot have a bucket at all,
+ * which is why a school can be running the whole portal with no library. When
+ * that is the case, a save is not a bug and must not read like one: the old
+ * failure was a toast saying `Could not save to your library: storage/unknown`,
+ * which names neither the cause nor the (non-)consequence — the file the teacher
+ * just downloaded is unaffected either way.
+ */
+
+/**
+ * Storage failures that prove the bucket answered us.
+ *
+ * These are the difference between "the library is off" and "something went
+ * wrong in a working library", and getting it backwards would hide the button on
+ * every healthy project: a provisioned bucket replies to a read of a path that
+ * does not exist with `object-not-found`, which is not the same thing at all.
+ */
+const BUCKET_ANSWERED = new Set([
+  'storage/object-not-found', 'storage/unauthorized', 'storage/unauthenticated',
+  'storage/canceled', 'storage/retry-limit-exceeded', 'storage/quota-exceeded',
+  'storage/invalid-argument', 'storage/invalid-format', 'storage/invalid-checksum',
+  'storage/invalid-url', 'storage/invalid-event-name', 'storage/invalid-root-operation',
+  'storage/app-deleted',
+])
+
+/** Does this error mean "this project has no Storage bucket"? */
+export function isStorageMissing(error) {
+  if (!storage) return true
+  const code = error?.code || ''
+  if (code === 'storage/bucket-not-found') return true
+  if (BUCKET_ANSWERED.has(code)) return false
+  // `storage/unknown` (or no code at all) with a 404 is what a project without a
+  // bucket answers to everything. The message fallback covers SDKs that phrase
+  // it differently; it insists on the word "bucket" so that "Object '…' does not
+  // exist" can never be read as "this project has no Storage".
+  const payload = `${error?.serverResponse || ''} ${error?.message || ''}`
+  return /\b404\b|not found|bucket.*(not exist|missing)/i.test(payload)
+}
+
+/** The sentence to show for any Storage failure. */
+export function storageFailureMessage(error) {
+  if (isStorageMissing(error)) {
+    return 'This project has no Firebase Storage bucket, so the library is off. ' +
+      'Everything you export still downloads to your computer — see docs/build-deploy.md.'
+  }
+  const code = error?.code || ''
+  if (code === 'storage/unauthorized' || code === 'storage/unauthenticated') {
+    return 'You are not allowed to store documents here. Sign in again, or ask an administrator ' +
+      'to publish storage.rules.'
+  }
+  if (code === 'storage/canceled') return 'The save was cancelled.'
+  if (code === 'storage/retry-limit-exceeded') return 'The connection dropped during the save. Try again.'
+  if (code === 'storage/quota-exceeded') return 'The project has run out of Storage quota.'
+  return `Could not save to your library: ${code || error?.message || 'unknown error'}`
+}
+
+/**
+ * Ask the bucket whether it exists, once per session.
+ *
+ * `getMetadata` on a path that certainly does not exist is the cheapest honest
+ * probe there is: an enabled bucket answers `storage/object-not-found`, a project
+ * without one answers the 404 that `isStorageMissing` recognises, and the caller
+ * can then hide the button or explain the page instead of offering work that
+ * cannot succeed. Cached per module (per page load): the answer cannot change
+ * while the page is open.
+ *
+ * The read function is injectable so this can be tested without Firebase.
+ */
+let storageProbe = null
+export function probeStorage(readMetadata = getMetadata) {
+  if (!storage) return Promise.resolve('missing')
+  if (storageProbe) return storageProbe
+  storageProbe = readMetadata(ref(storage, 'generated/__probe__/__none__'))
+    .then(() => 'enabled')
+    .catch((error) => (isStorageMissing(error) ? 'missing' : 'enabled'))
+  return storageProbe
+}
+
+/** Forget the cached probe — for tests, and for a retry after enabling Storage. */
+export function resetStorageProbe() {
+  storageProbe = null
 }
 
 /** Check before a byte leaves the browser — the rules check again, server-side. */

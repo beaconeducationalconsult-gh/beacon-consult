@@ -1,5 +1,8 @@
 import { describe, expect, it, vi, beforeEach } from 'vitest'
 import { readFileSync, readdirSync } from 'node:fs'
+import {
+  isStorageMissing, probeStorage, resetStorageProbe, storageFailureMessage,
+} from './generatedDocs'
 
 /*
  * The document library's client half (P3-3).
@@ -163,5 +166,67 @@ describe('every page that downloads a document can also keep it', () => {
   }))('%s offers SaveToLibrary', (name) => {
     const text = readFileSync(new URL(name, pagesDir), 'utf8')
     expect(text, `${name} downloads a document but never offers to keep it`).toContain('SaveToLibrary')
+  })
+})
+
+
+/*
+ * Storage is optional, and the app has to tell the difference between "you have
+ * saved nothing yet" and "this project has no bucket at all".
+ *
+ * Cloud Storage for Firebase has required the pay-as-you-go (Blaze) plan since
+ * October 2024, so a school can run the entire portal — curriculum, planners,
+ * exam papers, exports — with no library. Before this, pressing "Save to
+ * library" on such a project produced a toast reading `storage/unknown`, which
+ * names neither the cause nor the fact that the download still worked.
+ */
+describe('a project with no Storage bucket is not an error state', () => {
+  it('recognises the 404 the SDK reports for a missing bucket', () => {
+    expect(isStorageMissing({
+      code: 'storage/unknown',
+      message: 'Firebase Storage: An unknown error occurred, please check the error payload for server response.',
+      serverResponse: '{"error":{"code":404,"message":"Not Found."}}',
+    })).toBe(true)
+    expect(isStorageMissing({ code: 'storage/bucket-not-found' })).toBe(true)
+    expect(isStorageMissing({ message: 'bucket does not exist' })).toBe(true)
+  })
+
+  it('does not mistake other failures for a missing bucket', () => {
+    // The one that matters: an enabled bucket answers a read for a path that
+    // does not exist with object-not-found, and treating that as "no Storage"
+    // would hide the library on every working project.
+    expect(isStorageMissing({ code: 'storage/object-not-found' })).toBe(false)
+    expect(isStorageMissing({ code: 'storage/unauthorized' })).toBe(false)
+    expect(isStorageMissing({ code: 'storage/retry-limit-exceeded' })).toBe(false)
+    expect(isStorageMissing(new Error('network down'))).toBe(false)
+  })
+
+  it('says what happened and what still works', () => {
+    const message = storageFailureMessage({ code: 'storage/unknown', serverResponse: '{"error":{"code":404}}' })
+    expect(message).toContain('no Firebase Storage bucket')
+    expect(message).toContain('still downloads')
+    expect(message).not.toContain('storage/unknown')
+  })
+
+  it('keeps the raw code for the failures a developer has to chase', () => {
+    expect(storageFailureMessage({ code: 'storage/unauthorized' })).toContain('storage.rules')
+    expect(storageFailureMessage({ code: 'storage/retry-limit-exceeded' })).toContain('connection')
+    expect(storageFailureMessage({ code: 'storage/quota-exceeded' })).toContain('quota')
+    expect(storageFailureMessage({ code: 'storage/weird' })).toContain('storage/weird')
+  })
+
+  it('probes once, and reads the answer the way a real bucket answers', async () => {
+    resetStorageProbe()
+    const objectNotFound = vi.fn(async () => { throw { code: 'storage/object-not-found' } })
+    expect(await probeStorage(objectNotFound)).toBe('enabled')
+    // Cached: the answer cannot change while the page is open.
+    expect(await probeStorage(vi.fn(async () => { throw { code: 'storage/unknown' } }))).toBe('enabled')
+    expect(objectNotFound).toHaveBeenCalledTimes(1)
+
+    resetStorageProbe()
+    const noBucket = vi.fn(async () => {
+      throw { code: 'storage/unknown', serverResponse: '{"error":{"code":404,"message":"Not Found."}}' }
+    })
+    expect(await probeStorage(noBucket)).toBe('missing')
   })
 })

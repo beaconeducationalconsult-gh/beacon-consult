@@ -39,7 +39,7 @@ Nothing below can pass until the console matches this checkout:
 | Publish | Why now |
 |---|---|
 | `firestore.rules` (paste into the console, or `make deploy-rules`) | It carries the visibility-gated reads for `/notes/`, `/lesson_plans/` and `/weekly_forecasts/` (P2-4/P2-7) **and** the `generated_documents` block added for the document library (P3-3). The console copy predates both |
-| `storage.rules` (`make deploy-storage`, or paste it under Storage → Rules) | New in P3-3. Without it the library cannot store anything, and every upload is denied |
+| `storage.rules` (`make deploy-storage`, or paste it under Storage → Rules) — **only if the project has a Storage bucket** | New in P3-3. Without it the library cannot store anything, and every upload is denied. No bucket (Spark plan)? Skip this one and `make deploy-storage`; the library stays off and says so |
 | Firestore indexes (19; the console offers one-click links on the first error) | The library's list needs `authorId` + `createdAt` |
 
 Publish the Firestore rules **after** the new build is live: the new rules require the scoped
@@ -140,7 +140,7 @@ is what the step is actually testing.
 | 19b | Switch the term to **2**, then **3** | The scope line changes, and reads **100%** — *"Term 2 schedules 56 indicators — the pool asks about 56 (100%)"* | Term scope is read from `schedules/<grade>-<subject>.json`, the only file that knows what a term teaches |
 | 19c | Same page → **B7**, 60 marks | 30/50/60 compose exactly, Section C included | The JHS pool was authored to 100% per term for this |
 | 19d | Drop a question, then export **student** and **teacher** PDFs | The paper recomposes without it, and both PDFs download — the teacher copy carries the marking scheme | Composition is pure, so the preview cannot disagree with the PDF |
-| 19e | **Save to library**, then open **My library** | The paper is there and opens | `generated_documents` + Storage, the same path as 26a |
+| 19e | **Save to library**, then open **My library** *(needs Storage — skip if the project has no bucket; the page says why)* | The paper is there and opens | `generated_documents` + Storage, the same path as 26a |
 
 ### Notes, progress, calendar
 
@@ -160,7 +160,7 @@ The service worker is registered in production builds only, so this section is
 | 24 | Open `/portal/curriculum`, browse two subjects | DevTools → Application → Cache Storage shows one cache named `beacon-<bundleHash>` | P2-3 |
 | 25 | DevTools → Network → **Offline**, reload | The app boots; the curriculum you browsed still renders; Firebase-backed lists show the offline/error state, not a blank page | App shell + bundle cached |
 | 26 | Back online, reload | The curriculum and lists recover without clearing site data | Firestore's own offline cache |
-| 26a | Open a lesson plan → **Save to library**; then **My library** → **Open** | The document comes back, byte-identical, and **Delete** removes it | P3-3: the file is in Storage under your own uid, the record in `generated_documents` |
+| 26a | Open a lesson plan → **Save to library**; then **My library** → **Open** | The document comes back, byte-identical, and **Delete** removes it | P3-3: the file is in Storage under your own uid, the record in `generated_documents`. **Needs Storage** (Blaze plan — see build-deploy.md). Without a bucket, skip this row: the button is replaced by a line saying the library is off, and that is the pass |
 
 ### The teaching models (P3-4)
 

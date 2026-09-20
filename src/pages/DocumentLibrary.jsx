@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useAuth } from '../context/AuthContext'
 import { useToast } from '../context/ToastContext'
 import { usePagedCollection } from '../hooks/useCollection'
@@ -8,7 +8,7 @@ import DataError from '../components/DataError'
 import EmptyState from '../components/EmptyState'
 import ConfirmModal from '../components/ConfirmModal'
 import { storage } from '../firebase'
-import { deleteStoredDocument, openStoredDocument } from '../lib/generatedDocs'
+import { deleteStoredDocument, openStoredDocument, probeStorage, storageFailureMessage } from '../lib/generatedDocs'
 
 const formatSize = (bytes) => (bytes >= 1024 * 1024
   ? `${(bytes / 1024 / 1024).toFixed(1)} MB`
@@ -32,6 +32,17 @@ export default function DocumentLibrary() {
   const toast = useToast()
   const [pendingDelete, setPendingDelete] = useState(null)
   const [busy, setBusy] = useState(null)
+  // `storage` being configured is not the same as the project having a bucket:
+  // Cloud Storage needs the Blaze plan, so this page has three states and the
+  // empty one must not be mistaken for "you have saved nothing yet".
+  const [storageState, setStorageState] = useState('checking')
+
+  useEffect(() => {
+    if (!storage || !user) return undefined
+    let active = true
+    probeStorage().then((answer) => { if (active) setStorageState(answer) })
+    return () => { active = false }
+  }, [user])
 
   // Scoped to the caller on purpose: the read rule asks for the owner, and an
   // un-filtered list of this collection is denied for ordinary members.
@@ -48,7 +59,7 @@ export default function DocumentLibrary() {
     try {
       await openStoredDocument(record)
     } catch (error) {
-      toast.error(`Could not open ${record.name}: ${error?.code || error.message}`)
+      toast.error(storageFailureMessage(error))
     } finally {
       setBusy(null)
     }
@@ -59,7 +70,7 @@ export default function DocumentLibrary() {
       await deleteStoredDocument(pendingDelete)
       toast.success(`${pendingDelete.name} deleted`)
     } catch (error) {
-      toast.error(`Could not delete: ${error?.code || error.message}`)
+      toast.error(storageFailureMessage(error))
     } finally {
       setPendingDelete(null)
     }
@@ -85,7 +96,19 @@ export default function DocumentLibrary() {
       {storage && error && <DataError what="your saved documents" error={error} />}
       {storage && loading && <SkeletonList rows={4} />}
 
-      {storage && !loading && !error && rows.length === 0 && (
+      {storage && storageState === 'missing' && (
+        <EmptyState
+          title="The library needs Firebase Storage"
+          message="This project has no Storage bucket — Cloud Storage requires a billing account, so the library is off. Exports still download to your computer, and turning Storage on later makes this page work with no change to the app."
+          action={
+            <a className="btn-secondary text-xs" href="https://console.firebase.google.com/" target="_blank" rel="noreferrer">
+              Open the Firebase console
+            </a>
+          }
+        />
+      )}
+
+      {storage && storageState !== 'missing' && !loading && !error && rows.length === 0 && (
         <EmptyState
           title="Nothing saved yet"
           message="Open a lesson plan, scheme, exam paper or quiz and press “Save to library” — it will be here next time."

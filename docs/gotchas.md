@@ -49,6 +49,27 @@ build plugin may only use Node APIs, never a shell command, because the build ha
 deployer's machine too. (Same family: `make` recipes assume a Unix shell; the Windows path is
 `node scripts/…` directly.)
 
+## 🟠 Firebase Storage left the free plan, so the library is optional by design
+
+Since **October 2024** a new Cloud Storage for Firebase bucket requires the pay-as-you-go
+(Blaze) plan — a linked billing account, even at zero usage. A Spark project has no bucket, and
+the console offers none. That makes the document library (P3-3) the one feature that can be
+absent from an otherwise complete deployment, so the app treats it as a state rather than an
+error:
+
+- `probeStorage()` reads a path that cannot exist (`generated/__probe__/__none__`). An enabled
+  bucket answers `storage/object-not-found`; a project without one answers the 404 that
+  `isStorageMissing()` recognises. The answer is cached for the page.
+- `SaveToLibrary` renders one line ("Keeping documents in the portal needs Firebase Storage…")
+  instead of a button that can only fail, and the library page explains itself rather than
+  showing "Nothing saved yet".
+- `isStorageMissing()` must never mistake `storage/object-not-found` for a missing bucket: a
+  healthy bucket answers that way for every path a teacher has not written yet, and reading it as
+  "no Storage" would hide the library everywhere. There is a test for exactly that.
+
+Turning it on later: upgrade the project to Blaze → **Build → Storage → Get started** →
+`make deploy-storage` → reload. No code change.
+
 ## 🔴 Windows PowerShell writes `.env.local` as UTF-16, and the app then has no config
 
 `>` and `Out-File` under Windows PowerShell 5.1 write **UTF-16LE**. A `.env.local` created that

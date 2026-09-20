@@ -53,6 +53,16 @@ VITE_FIREBASE_APP_ID=…
 Consumed in `src/firebase.js`. On Vercel, set the same keys in the project's Environment
 Variables (Production + Preview).
 
+**The Vite `VITE_` prefix must stay**, and Vercel's editor says so in a confusing way: it warns
+that *"public prefixes expose values to the browser — if that's safe, change the variable to
+Config."* It is safe, and it is the point. Vite only exposes variables named `VITE_…` to client
+code, so the six values are **published in the JavaScript bundle** by design — Firebase's web
+config is identifiers, not secrets, and its own documentation says so. Keep them as ordinary
+(**Config**) variables rather than Sensitive/Secret ones: marking them secret changes nothing
+about the bundle, keeps them out of local `vercel env pull`, and makes the deploy look
+misconfigured. The security boundary is `firestore.rules` + `storage.rules` (published per
+project) and the Authorized Domains list in Authentication — not the API key.
+
 ## Scripts (`package.json`)
 
 | Command | Does |
@@ -90,9 +100,9 @@ that the repo can help with.
 | 1 | [console.firebase.google.com](https://console.firebase.google.com) → **Add project** | Create the project (Analytics optional) and note its **project id** — the immutable one like `beacon-edu-consult-proj`, not the display name | — |
 | 2 | **Build → Firestore Database → Create database** | **Native mode**, a location close to the users (multi-region `eur3`, or `nam5`), and **Production mode** — the real rules are published in step 6, and test mode is open to anyone with the project id | Every page fails with `unavailable` / "database does not exist" — the app has nothing to read. The location **cannot be changed later** |
 | 3 | **Build → Authentication → Get started → Sign-in method → Email/Password → Enable** | Leave "Email link" off; add the site's domain under **Settings → Authorized domains** | Sign-up fails with `auth/operation-not-allowed`, and the app shows Firebase's raw message — this is the single most common "the app is broken" on a fresh project |
-| 4 | **Build → Storage → Get started** | Create the default bucket (Production mode) | `firebase deploy --only storage` errors with no bucket to attach the rules to, and **Save to library** fails on every upload |
+| 4 *(optional)* | **Build → Storage → Get started** | Only if you want the document library. **Cloud Storage for Firebase has required the Blaze plan (a linked billing account) since October 2024** — on the free Spark plan the console offers no bucket at all, and that is Google's rule, not this app's | Skipping it costs one feature: **Save to library** (P3-3). Everything else — curriculum, planners, exam papers, quiz decks, every export — works, downloads land in the browser's downloads folder, and the app says so instead of failing. Skip `make deploy-storage` too. Turning it on later is: enable Storage, `make deploy-storage`, reload — no code change |
 | 5 | **Project settings → Your apps → Web (`</>`)** | Register a web app (nickname only — no hosting needed), then copy the six config values it prints | These are the `VITE_FIREBASE_*` values: Vercel → Settings → Environment Variables (**Production *and* Preview**) and the local `.env.local`. Without them the deploy is green and shows the setup notice |
-| 6 | Repo, once | `firebase login` → `firebase use <project id>` → `make deploy-rules` (Firestore rules + 19 indexes) → `make deploy-storage` | With production-mode rules unpublished, every read and write is denied: `permission-denied` on every page, and a sign-up that creates an Auth account but no profile doc. `firebase use` is what keeps `.firebaserc`, and therefore the CLI, on the project the app uses |
+| 6 | Repo, once | `firebase login` → `firebase use <project id>` → `make deploy-rules` (Firestore rules + 19 indexes) → `make deploy-storage` *(only if step 4 was done)*. No `firebase` on PATH, or it answers *"The system cannot find the path specified"*? Run the same commands through npx — `npx --yes firebase-tools@15.30.2 login`, and so on — or `npm install -g firebase-tools` and reopen the terminal | With production-mode rules unpublished, every read and write is denied: `permission-denied` on every page, and a sign-up that creates an Auth account but no profile doc. `firebase use` is what keeps `.firebaserc`, and therefore the CLI, on the project the app uses |
 | 7 | The running app | Sign up once with your own email, then in **Firestore → users → (that uid)** set `role: "admin"` and `status: "approved"` | Sign-up forces `status: 'pending'`/`role: 'member'` and the rules forbid changing them from the client, so **nobody** can approve anyone until this row is done by hand. It is the bootstrap (P0-3) and must be repeated for each new school's first admin |
 
 Order matters twice:
