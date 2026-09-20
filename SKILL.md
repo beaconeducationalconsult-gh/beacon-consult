@@ -451,7 +451,7 @@ nothing — the console is what counts.
 | Publish | File | What it gates |
 |---|---|---|
 | Firestore rules | `firestore.rules` (~560 lines) | every read and write: users, content, visibility, likes, progress, the document-library records |
-| Firestore indexes | `firestore.indexes.json` (19 composite indexes) | the *list* queries: without them Firestore answers `failed-precondition` and the page shows nothing |
+| Firestore indexes | `firestore.indexes.json` (18 composite indexes) | the *list* queries: without them Firestore answers `failed-precondition` and the page shows nothing |
 | Storage rules *(only if Storage is enabled)* | `storage.rules` | uploads under `generated/{uid}/…`, owner-only, ≤ 8 MiB |
 
 ### 5.1 Install the CLI once
@@ -486,6 +486,17 @@ the same commands are `make deploy-rules` and `make deploy-storage`.
 
 Expect `✔ Deploy complete!` and a list of the files it compiled. Indexes take a minute or two to
 build in the background — the console shows them as *Building*.
+
+Three things you may meet here, all covered in Part 15 (rows 21–22):
+
+- `HTTP Error: 400, this index is not necessary` — an entry in `firestore.indexes.json` with a
+  single field. It aborts the **whole** indexes deploy, so nothing else gets created either;
+  delete that entry and re-run. This command publishes the rules *before* the indexes, so a
+  failure here leaves the rules new and the indexes missing — a half-deployed project. Re-running
+  is safe and idempotent.
+- `[W] Unused function: …` — a rule helper nothing calls.
+- `[W] Invalid function name: exists` — the same warning seen from inside that unused function's
+  body; both disappear with the unused function.
 
 ### 5.3 Test the rules without touching production
 
@@ -1035,6 +1046,8 @@ Each of these cost real time. They are ordered roughly by how likely you are to 
 | 18 | `make check` exits 2 with a diff under `public/curriculum/` | The committed bundle is stale after a data change | `make build-curriculum`, then commit the bundle **and** `data/inventory.json` |
 | 19 | Windows checkout shows every rules test failing | CRLF line endings vs an LF parser | Fixed: the rules tests normalize on read. If you write a new `;\n` parser, normalize too |
 | 20 | A generated question has the wrong answer | A generator rule computed it wrongly (e.g. a fraction's operands swapped) | Re-run the answer-verification pass: recompute from the prompt text, then add a regression case |
+| 21 | `firebase deploy` ends with `HTTP Error: 400, this index is not necessary` | `firestore.indexes.json` contains an entry with a **single field** — Firestore creates single-field indexes itself | Delete that entry (an unfiltered `orderBy` needs no entry; a filtered + ordered query needs two fields or more) and re-run the deploy — it is idempotent. `src/firestoreIndexes.test.js` fails on one now |
+| 22 | `[W] Unused function: …` on every deploy | A rule helper nothing calls | Remove it, or use it. An always-present warning hides the next, real one; `src/firestoreRules.test.js` now fails on an uncalled function |
 
 The full, longer list — with the reasoning — is `docs/gotchas.md`. It is the most valuable file in
 the repository after this one.

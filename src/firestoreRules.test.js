@@ -371,3 +371,34 @@ describe('rules kept ahead of their phase stay inert', () => {
     ).toBe(false)
   })
 })
+
+describe('the rules compile without warnings', () => {
+  /*
+   * The deploy tells you when a rule function has no caller:
+   *
+   *   !  [W] 87:14 - Unused function: isPro.
+   *   !  [W] 89:12 - Invalid function name: exists.
+   *   !  [W] 89:68 - Invalid variable name: request.
+   *
+   * — five lines of noise on every `firebase deploy`, for a helper that read
+   * `subscriptions/{uid}` before anything wrote that collection. `isPro()` also
+   * showed why dead code in this file is worse than absent code: once a warning
+   * always appears, nobody reads warnings, and the next one (a real one) goes
+   * past unnoticed. This check is the equivalent of that compiler warning,
+   * available before the deploy rather than during it.
+   */
+  it('declares no function that nothing calls', () => {
+    const declared = [...code.matchAll(/\bfunction\s+([A-Za-z_][A-Za-z0-9_]*)\s*\(/g)].map((m) => m[1])
+    expect(declared.length, 'no rule functions found — has the file been rewritten?').toBeGreaterThan(8)
+
+    const unused = [...new Set(declared)].filter((name) => {
+      // Calls, not the declaration: `isAdmin(` without the preceding `function `.
+      const calls = [...code.matchAll(new RegExp(`(?:^|[^\\w])${name}\\s*\\(`, 'g'))]
+        .filter((match) => !/\bfunction\s*$/.test(code.slice(Math.max(0, match.index), match.index + match[0].length)))
+      return calls.length <= 1
+    })
+
+    expect(unused, `these rule functions are never called, and the rules compiler warns about each one on every deploy: ${unused.join(', ')}`)
+      .toEqual([])
+  })
+})

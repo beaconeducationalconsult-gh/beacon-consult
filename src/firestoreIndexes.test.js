@@ -283,11 +283,31 @@ describe('the deployable files still line up', () => {
     expect(firebaserc.projects.default).toMatch(/^[a-z0-9-]+$/)
   })
 
+  it('never asks for a single-field index, which Firestore refuses outright', () => {
+    const single = indexes
+      .filter((index) => index.fields.length < 2)
+      .map((index) => `${index.collectionGroup} | ${index.fields.map((f) => f.fieldPath).join(', ')}`)
+    expect(single, `these entries would fail the deploy (HTTP 400 "this index is not necessary"):\n  ${single.join('\n  ')}`)
+      .toEqual([])
+    // Unfiltered ordered lists need no entry at all: Firestore creates the
+    // single-field index for every field automatically. `posts` is ordered by
+    // `timestamp` in the workspace feed, and that is why removing the entry
+    // changed nothing about what the app can query — the composite
+    // `posts | authorId, timestamp` entry, which the author page needs, stays.
+    expect(indexes.some((index) => index.collectionGroup === 'posts'
+      && index.fields.map((f) => f.fieldPath).join(',') === 'authorId,timestamp')).toBe(true)
+  })
+
   it('describes every index fully — a collection, fields, and an order or array config', () => {
     for (const index of indexes) {
       expect(index.collectionGroup, 'an index with no collectionGroup').toBeTruthy()
-      // Single-field entries are legal and one is in use (`posts | timestamp`).
-      expect(index.fields.length, `${index.collectionGroup} has an index with no fields`).toBeGreaterThanOrEqual(1)
+      // Two fields, always. Firestore manages single-field indexes itself and
+      // rejects an explicit one with HTTP 400 — "this index is not necessary,
+      // configure using single field index controls" — which fails the whole
+      // `firebase deploy --only firestore:indexes` run, so one stray entry here
+      // means *none* of the others are created either. It happened with
+      // `posts | timestamp` on 2026-09-20.
+      expect(index.fields.length, `${index.collectionGroup} has a single-field entry (${index.fields[0]?.fieldPath}): Firestore rejects these with HTTP 400 "this index is not necessary" and the whole indexes deploy fails; single-field indexes are created automatically`).toBeGreaterThanOrEqual(2)
       for (const field of index.fields) {
         expect(field.fieldPath, `${index.collectionGroup} has a field with no path`).toBeTruthy()
         expect(Boolean(field.order) !== Boolean(field.arrayConfig), `${index.collectionGroup}.${field.fieldPath} needs exactly one of order/arrayConfig`).toBe(true)

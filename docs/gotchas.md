@@ -90,6 +90,40 @@ Set-Content .env.local -Encoding utf8 -Value @(
   'VITE_FIREBASE_API_KEY=…', 'VITE_FIREBASE_AUTH_DOMAIN=…' )
 ```
 
+## 🔴 One unnecessary index entry fails the whole indexes deploy
+
+`firebase deploy --only firestore:indexes` is all-or-nothing, and Firestore refuses an index it
+does not need:
+
+```
+Error: Request to https://firestore.googleapis.com/v1/projects/<project>/databases/(default)/
+collectionGroups/posts/indexes had HTTP Error: 400, this index is not necessary, configure using
+single field index controls
+```
+
+The offender was `posts | timestamp DESCENDING` — an entry with **one field**. Firestore creates
+and manages single-field indexes itself, so an explicit one is an error, not a duplicate. Because
+the deploy aborts there, *none* of the other indexes is created either, and the app then shows
+empty lists with `failed-precondition`. Two consequences worth keeping:
+
+- **Never add a one-field entry.** Unfiltered `orderBy` needs no entry at all; a filtered +
+  ordered query needs two fields or more. `src/firestoreIndexes.test.js` now fails on a
+  single-field entry and names this error.
+- **The rules in the same command are still published.** `deploy --only
+  firestore:rules,firestore:indexes` uploads the rules before it touches the indexes, so a failure
+  here leaves the rules *new* and the indexes *missing* — a half-deployed project. Re-running the
+  command is safe and idempotent; do that rather than assuming nothing happened.
+
+## 🟠 An unused rule function warns on every deploy
+
+`[W] Unused function: isPro` (plus a pair of "Invalid function name: exists" for the body the
+compiler never resolves) appeared on every `firebase deploy` while `isPro()` sat unused in
+`firestore.rules` — a helper for a paid tier nothing writes yet. Warnings that always appear are
+warnings nobody reads, and the next one would have been real. The function was removed, and
+`src/firestoreRules.test.js` now fails on any declared-but-uncalled function so it cannot come
+back quietly. Restore `isPro()` in the same change that adds the client writing
+`subscriptions/{uid}`.
+
 ## 🟠 Signing up before the rules are published strands the account
 
 The sign-up flow is two writes: Firebase Auth creates the account, then Firestore stores

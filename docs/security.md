@@ -45,7 +45,9 @@ isApproved()          signed in AND users/{uid}.status == 'approved'
 isAdmin()             signed in AND users/{uid}.role == 'admin'
 isOwner(uid)          request.auth.uid == uid
 isApprovedOrAdmin()   isApproved() || isAdmin()
-isPro()               active subscriptions/{uid}            (INERT — no client yet)
+isPro()               active subscriptions/{uid}            (removed; restore it with the
+                                                          client that writes subscriptions/{uid} —
+                                                          an unused function warns on every deploy)
 
 onlyChanged(keys)     diff().affectedKeys().hasOnly(keys)
 changedKeys()         diff().affectedKeys()

@@ -82,13 +82,11 @@ service cloud.firestore {
       return !changedKeys().hasAny(['authorId']);
     }
 
-    // True when the caller holds an active paid subscription (Phase 1 SaaS).
-    // INERT — nothing writes subscriptions/{uid} yet.
-    function isPro() {
-      return isSignedIn()
-        && exists(/databases/$(database)/documents/subscriptions/$(request.auth.uid))
-        && get(/databases/$(database)/documents/subscriptions/$(request.auth.uid)).data.status == 'active';
-    }
+    // A paid-tier helper (`isPro()`, reading subscriptions/{uid}) belongs here once
+    // something writes that collection. It was removed rather than left inert: the
+    // rules compiler reports an unused function on **every** deploy (`[W] Unused
+    // function: isPro`, plus "Invalid function name: exists" for the body it never
+    // resolves), and warnings that always appear are warnings nobody reads.
 
     // ── Phase 2 multi-tenancy helpers ────────────────────────────────────
     function selfUserData() {
