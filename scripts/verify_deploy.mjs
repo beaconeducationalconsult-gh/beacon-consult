@@ -104,8 +104,17 @@ if (!existsSync(envPath)) {
 let local = null
 if (!SKIP_BUILD) {
   step('3. A local build carries it')
-  const yarn = spawnSync('yarn', ['build'], { cwd: ROOT, stdio: 'inherit', shell: process.platform === 'win32' })
-  if (yarn.error || yarn.status !== 0) bad(`the build failed (${yarn.error?.message || `exit ${yarn.status}`}) — run \`yarn build\` on its own to see why`)
+  // The build is run through Vite's own entry point rather than through a package
+  // manager: `vite build` is exactly what the `build` script runs, and it makes
+  // this check independent of which Yarn a machine has on PATH (a global Yarn 1
+  // refuses to run a repo whose packageManager is Yarn 4, which reads as a
+  // failure of the deploy when it is a failure of the shell).
+  const vite = join(ROOT, 'node_modules', 'vite', 'bin', 'vite.js')
+  const build = existsSync(vite)
+    ? spawnSync(process.execPath, [vite, 'build'], { cwd: ROOT, stdio: 'inherit' })
+    : spawnSync('yarn', ['build'], { cwd: ROOT, stdio: 'inherit', shell: process.platform === 'win32' })
+  if (!existsSync(vite)) warn('node_modules/vite is missing — fell back to `yarn build`; run `yarn install` if this fails')
+  if (build.error || build.status !== 0) bad(`the build failed (${build.error?.message || `exit ${build.status}`}) — run \`yarn build\` on its own to see why`)
 }
 const infoPath = join(ROOT, 'dist', 'build-info.json')
 if (existsSync(infoPath)) {
