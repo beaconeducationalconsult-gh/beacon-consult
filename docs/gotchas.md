@@ -490,6 +490,25 @@ embedded in `questionPaper.js` first.
 Vercel env vars) the build **succeeds** and the app fails at the first Firebase call. Copy
 `.env.example` → `.env.local`; see [build-deploy.md](build-deploy.md).
 
+The **deployed** flavour of this is the one that bites, and it is a different problem with a
+different fix: a Vercel build gets whatever the *project* has in Settings → Environment
+Variables, so somebody's `.env.local` is irrelevant to it, and a value scoped to *Preview* only
+leaves every production build unconfigured. Two things that make it look mysterious:
+
+* **Vercel does not rebuild because a variable changed.** Add the value, then
+  *Deployments → ⋯ → Redeploy* (uncheck *Use existing Build Cache* if the old build is still
+  being served). Setting it and reloading the domain changes nothing.
+* **The build is green either way.** Nothing in the build log says the deploy cannot reach
+  Firebase, so the first person to find out is a visitor.
+
+Ask the deploy itself, in one request — no browser, no console:
+`GET /build-info.json` answers `firebaseConfigured` and `missingEnv` (the six names). The screen
+a visitor sees now branches on where they are standing, too: `src/lib/setupGuidance.js` gives a
+laptop `.env.local` + `yarn dev` and a deployment the Vercel path, the exact values the build was
+missing, the redeploy step and that URL. Found the hard way on 2026-09-20: the first real deploy
+of the new architecture served the notice to the person who had just published the rules, and the
+notice was telling them to copy a file that exists nowhere near the server.
+
 ## 🟡 Service worker is production-only
 `registerSW.js` registers only under `import.meta.env.PROD`. **PWA/offline behavior does not
 exist in `yarn dev`** — always verify with `yarn build && yarn preview`.

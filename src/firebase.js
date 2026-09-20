@@ -6,6 +6,7 @@ import {
 } from 'firebase/firestore'
 import { getAuth } from 'firebase/auth'
 import { getStorage } from 'firebase/storage'
+import { missingEnvNames } from './lib/setupGuidance'
 
 // Firebase web config. These are public identifiers, not secrets — but the app
 // cannot reach Firebase without them, and Vite embeds them at BUILD time, so a
@@ -28,6 +29,14 @@ const firebaseConfig = {
  * flag and renders SetupNotice instead, so a missing config explains itself.
  */
 export const firebaseConfigured = Boolean(firebaseConfig.apiKey && firebaseConfig.projectId)
+
+/**
+ * Which of the six values are missing, by env var name — what the setup notice
+ * prints so the reader does not have to guess which one is blank. Names only:
+ * the values are public client config, but there is nothing to show of a value
+ * that is not there.
+ */
+export const missingFirebaseEnv = missingEnvNames(firebaseConfig)
 
 if (!firebaseConfigured) {
   console.error(

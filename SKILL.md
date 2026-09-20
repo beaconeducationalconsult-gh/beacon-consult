@@ -182,7 +182,7 @@ Two other commands you will use constantly:
 yarn build            # production build into dist/  (also writes dist/build-info.json)
 yarn preview          # serves dist/ on http://localhost:4173
 yarn lint             # ESLint, including the React Compiler rules — must stay clean
-yarn test             # the unit + contract suite (~384 tests, no browser, no Python)
+yarn test             # the unit + contract suite (~408 tests, no browser, no Python)
 ```
 
 **Service workers only exist in `yarn preview`**, never in `yarn dev`. Anything offline-related
@@ -487,7 +487,7 @@ the same commands are `make deploy-rules` and `make deploy-storage`.
 Expect `✔ Deploy complete!` and a list of the files it compiled. Indexes take a minute or two to
 build in the background — the console shows them as *Building*.
 
-Three things you may meet here, all covered in Part 15 (rows 21–22):
+Three things you may meet here, all covered in Part 15 (rows 21–23):
 
 - `HTTP Error: 400, this index is not necessary` — an entry in `firestore.indexes.json` with a
   single field. It aborts the **whole** indexes deploy, so nothing else gets created either;
@@ -543,6 +543,22 @@ safe, change the variable to Config."* Save it as an ordinary **Config** variabl
   rules you published in Phase 5, plus the Authorized Domains list;
 - marking them *Sensitive* changes nothing about the bundle and breaks `vercel env pull`, which is
   how a teammate would configure their machine from Vercel.
+
+This is also the step people *think* they have done. Two things to know before you move on:
+
+1. **A variable belongs to the environment it is enabled for.** Set them for **Production** and
+   **Preview** (tick both boxes). A value that lives only under Preview leaves the production
+   build — the one on your domain — unconfigured.
+2. **Changing a variable does not rebuild anything.** Vercel builds with the values that exist at
+   build time, so after adding or editing one you must *Deployments → ⋯ → Redeploy* (or push a
+   commit). Reloading the domain proves nothing; the build has to run again.
+
+If you skip this, the deploy is **green** and the site shows the setup notice instead of the
+portal. To save yourself the round trip: `GET https://<your-domain>/build-info.json` answers in
+one request whether the build had the values, and names any that were missing
+(`firebaseConfigured`, `missingEnv`). The notice prints the same answer to whoever opens the
+site — on a real domain it lists the exact missing names, the Vercel path and the redeploy step
+(Part 15, row 23).
 
 ### 6.3 Set the Production Branch — the one setting everybody misses
 
@@ -895,7 +911,7 @@ already had rules and an index.
 `docs/gotchas.md`, and its verification steps in `docs/verification.md` (19a–19e).
 
 Copy that order — **data → pure logic + tests → page → exports → guards → docs** — for any feature
-you add. It is the reason this codebase has 384 tests and no browser tests: everything worth
+you add. It is the reason this codebase has 408 tests and no browser tests: everything worth
 testing lives outside React.
 
 ---
@@ -998,7 +1014,7 @@ gone wrong in practice — both are short and worth your time before you touch t
 
 | Suite | Command | Covers |
 |---|---|---|
-| Unit + contract | `yarn test` (384 tests, 22 files) | pure logic (`examPaper`, `generatedDocs`, `profile`, `week`, …), the rules *files* as text (`firestoreRules.test.js`, `storageRules.test.js`), the bundle's integrity (`curriculumBundle.test.js`), the sidebar/router contract, the index contract, the deploy-script contract, the WinAnsi guard |
+| Unit + contract | `yarn test` (408 tests, 23 files) | pure logic (`examPaper`, `generatedDocs`, `profile`, `week`, …), the rules *files* as text (`firestoreRules.test.js`, `storageRules.test.js`), the bundle's integrity (`curriculumBundle.test.js`), the sidebar/router contract, the index contract, the deploy-script contract, the WinAnsi guard |
 | Rules emulator | `yarn test:rules` (95 checks: 81 Firestore + 14 Storage) | real permission decisions: a pending member refused, an un-filtered list denied, a like unable to inflate its tally, uploads capped and owner-only. Needs **Java 21** |
 | The gate | `make check` | `questions lint test check-scripts validate-curriculum inventory bundle-size bundle-check bundle-hash` + `yarn build` |
 | CI | `.github/workflows/ci.yml` | three jobs: **Lint, test, build** · **Firestore rules (emulator)** · **Curriculum data audit** (plus Vercel's own preview-comment check run) |
@@ -1048,6 +1064,7 @@ Each of these cost real time. They are ordered roughly by how likely you are to 
 | 20 | A generated question has the wrong answer | A generator rule computed it wrongly (e.g. a fraction's operands swapped) | Re-run the answer-verification pass: recompute from the prompt text, then add a regression case |
 | 21 | `firebase deploy` ends with `HTTP Error: 400, this index is not necessary` | `firestore.indexes.json` contains an entry with a **single field** — Firestore creates single-field indexes itself | Delete that entry (an unfiltered `orderBy` needs no entry; a filtered + ordered query needs two fields or more) and re-run the deploy — it is idempotent. `src/firestoreIndexes.test.js` fails on one now |
 | 22 | `[W] Unused function: …` on every deploy | A rule helper nothing calls | Remove it, or use it. An always-present warning hides the next, real one; `src/firestoreRules.test.js` now fails on an uncalled function |
+| 23 | The live site shows **Firebase configuration is missing** instead of the portal | The **build** had no `VITE_FIREBASE_*` values — Vite inlines them at build time, so a `.env.local` on your laptop is not part of the deploy, and a value scoped to Preview only is not part of a production build either | `GET <domain>/build-info.json` names the missing values (`firebaseConfigured`, `missingEnv`). Add them in Vercel → Settings → Environment Variables for **Production *and* Preview**, then *Deployments → Redeploy* — a variable change does not rebuild by itself |
 
 The full, longer list — with the reasoning — is `docs/gotchas.md`. It is the most valuable file in
 the repository after this one.

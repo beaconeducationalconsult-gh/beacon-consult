@@ -16,7 +16,7 @@ same in PowerShell, Git Bash or a Unix shell:
 ```bash
 git pull --ff-only        # fast-forward to the newest pushed commit
 yarn install              # new dependencies, if the lockfile moved
-yarn test                 # the suite (361 tests, no Python, no browser)
+yarn test                 # the suite (408 tests, no Python, no browser)
 yarn dev                  # http://localhost:5199
 ```
 
@@ -51,7 +51,14 @@ VITE_FIREBASE_APP_ID=…
 ```
 
 Consumed in `src/firebase.js`. On Vercel, set the same keys in the project's Environment
-Variables (Production + Preview).
+Variables (**Production + Preview** — Vercel keeps them per environment, and a value scoped to
+Preview only leaves the production build unconfigured), then **redeploy**: Vercel does not
+rebuild because a variable changed.
+
+A deploy built without them is green and serves the setup notice instead of the portal. That
+notice prints the Vercel path, the names the build was missing and the redeploy step, and
+`GET /build-info.json` on the deploy says the same thing in one request (`firebaseConfigured`,
+`missingEnv`) — ask it before asking a browser.
 
 **The Vite `VITE_` prefix must stay**, and Vercel's editor says so in a confusing way: it warns
 that *"public prefixes expose values to the browser — if that's safe, change the variable to
