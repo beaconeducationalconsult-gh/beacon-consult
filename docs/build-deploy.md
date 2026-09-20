@@ -101,7 +101,7 @@ firebase deploy --only firestore:rules,firestore:indexes
 ```
 
 `firebase.json` points at both files and `.firebaserc` pins the project
-(`beacon-educational-consu-8005e`), so no `--project` flag is needed. `make deploy-rules`
+(`beacon-edu-consult-proj`), so no `--project` flag is needed. `make deploy-rules`
 runs the command above. **A committed-but-undeployed rule change has no effect in
 production.**
 

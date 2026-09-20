@@ -162,7 +162,8 @@ firebase deploy --only firestore:rules,firestore:indexes
 firebase deploy --only storage
 ```
 
-`.firebaserc` pins the project (`beacon-educational-consu-8005e`), so the CLI resolves it
+`.firebaserc` pins the project (`beacon-edu-consult-proj` — the live one, as of
+2026-09-20; the pre-flight fails if it and the app's `VITE_FIREBASE_PROJECT_ID` disagree), so the CLI resolves it
 without a `--project` flag; `make deploy-rules` wraps the Firestore half (`make
 deploy-storage` wraps the Storage half). A committed rules change
 that hasn't been deployed does **nothing** in production.

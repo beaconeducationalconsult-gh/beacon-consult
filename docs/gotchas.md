@@ -351,7 +351,7 @@ a test that nothing is served from the fallback. Two traps sit in the move itsel
 Vercel does **not** deploy Firestore rules/indexes. Editing `firestore.rules` and pushing
 changes nothing in production until `firebase deploy --only firestore:rules,firestore:indexes`
 runs. This is the most common "it works locally / on my emulator but 403s in prod" cause.
-`.firebaserc` pins the project (`beacon-educational-consu-8005e`); `make deploy-rules`
+`.firebaserc` pins the project (`beacon-edu-consult-proj`); `make deploy-rules`
 runs it. Note that rules pasted into the Firebase console are **not** version-controlled:
 the console and `firestore.rules` can silently disagree, and only the repo file is reviewed.
 

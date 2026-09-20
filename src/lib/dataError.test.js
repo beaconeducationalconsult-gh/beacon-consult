@@ -23,10 +23,10 @@ describe('dataErrorMessage', () => {
     const error = {
       code: 'failed-precondition',
       message: 'The query requires an index. You can create it here: '
-        + 'https://console.firebase.google.com/v1/r/project/beacon-educational-consu-8005e/firestore/indexes?create_composite=Ck8a',
+        + 'https://console.firebase.google.com/v1/r/project/beacon-edu-consult-proj/firestore/indexes?create_composite=Ck8a',
     }
     const { link, cause, hint } = dataErrorMessage(error, 'your documents')
-    expect(link.href).toBe('https://console.firebase.google.com/v1/r/project/beacon-educational-consu-8005e/firestore/indexes?create_composite=Ck8a')
+    expect(link.href).toBe('https://console.firebase.google.com/v1/r/project/beacon-edu-consult-proj/firestore/indexes?create_composite=Ck8a')
     expect(link.label).toMatch(/index/i)
     expect(cause).toContain('your documents')
     expect(hint).toContain('Create index')

@@ -274,7 +274,13 @@ describe('the deployable files still line up', () => {
   })
 
   it('pins the project so `firebase deploy` needs no flag', () => {
-    expect(firebaserc.projects.default).toBe('beacon-educational-consu-8005e')
+    // Which project that is lives in .firebaserc alone; what matters here is that
+    // it is pinned (so `make deploy-rules` cannot drift to "whatever project the
+    // CLI was last used with") and that the pre-flight's comparison with
+    // .env.local has something to compare. `src/deployCheck.test.js` covers the
+    // comparison itself.
+    expect(typeof firebaserc.projects.default).toBe('string')
+    expect(firebaserc.projects.default).toMatch(/^[a-z0-9-]+$/)
   })
 
   it('describes every index fully — a collection, fields, and an order or array config', () => {
