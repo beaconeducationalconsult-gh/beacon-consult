@@ -16,7 +16,7 @@ same in PowerShell, Git Bash or a Unix shell:
 ```bash
 git pull --ff-only        # fast-forward to the newest pushed commit
 yarn install              # new dependencies, if the lockfile moved
-yarn test                 # the suite (331 tests, no Python, no browser)
+yarn test                 # the suite (341 tests, no Python, no browser)
 yarn dev                  # http://localhost:5199
 ```
 
