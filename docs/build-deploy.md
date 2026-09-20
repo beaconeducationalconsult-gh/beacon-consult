@@ -76,6 +76,38 @@ Variables (Production + Preview).
 - jsPDF 4 + jspdf-autotable 5, docx 9, pptxgenjs 4
 - `@vercel/analytics`
 
+## Setting up a new Firebase project (console)
+
+A brand-new project is empty in five separate places, and each one has its own error when it is
+missed. Nothing here is done by the Vercel build: Firebase is configured in the console (or by the
+CLI), and the app only ever *talks* to what already exists.
+
+Do these in order. Steps 1–5 are console work; 6–7 are the two commands and the one bootstrap
+that the repo can help with.
+
+| # | Where | What to do | What breaks without it |
+|---|---|---|---|
+| 1 | [console.firebase.google.com](https://console.firebase.google.com) → **Add project** | Create the project (Analytics optional) and note its **project id** — the immutable one like `beacon-edu-consult-proj`, not the display name | — |
+| 2 | **Build → Firestore Database → Create database** | **Native mode**, a location close to the users (multi-region `eur3`, or `nam5`), and **Production mode** — the real rules are published in step 6, and test mode is open to anyone with the project id | Every page fails with `unavailable` / "database does not exist" — the app has nothing to read. The location **cannot be changed later** |
+| 3 | **Build → Authentication → Get started → Sign-in method → Email/Password → Enable** | Leave "Email link" off; add the site's domain under **Settings → Authorized domains** | Sign-up fails with `auth/operation-not-allowed`, and the app shows Firebase's raw message — this is the single most common "the app is broken" on a fresh project |
+| 4 | **Build → Storage → Get started** | Create the default bucket (Production mode) | `firebase deploy --only storage` errors with no bucket to attach the rules to, and **Save to library** fails on every upload |
+| 5 | **Project settings → Your apps → Web (`</>`)** | Register a web app (nickname only — no hosting needed), then copy the six config values it prints | These are the `VITE_FIREBASE_*` values: Vercel → Settings → Environment Variables (**Production *and* Preview**) and the local `.env.local`. Without them the deploy is green and shows the setup notice |
+| 6 | Repo, once | `firebase login` → `firebase use <project id>` → `make deploy-rules` (Firestore rules + 19 indexes) → `make deploy-storage` | With production-mode rules unpublished, every read and write is denied: `permission-denied` on every page, and a sign-up that creates an Auth account but no profile doc. `firebase use` is what keeps `.firebaserc`, and therefore the CLI, on the project the app uses |
+| 7 | The running app | Sign up once with your own email, then in **Firestore → users → (that uid)** set `role: "admin"` and `status: "approved"` | Sign-up forces `status: 'pending'`/`role: 'member'` and the rules forbid changing them from the client, so **nobody** can approve anyone until this row is done by hand. It is the bootstrap (P0-3) and must be repeated for each new school's first admin |
+
+Order matters twice:
+
+- **Step 6 before step 7.** Publishing the rules after a first sign-up leaves an Auth user with no
+  `users/{uid}` document, which the app treats as "signed in but not a member" — the portal stays
+  closed and there is nothing in the console to approve.
+- **Step 5 before the Vercel deploy** (P0-1), and the deploy **before** the rules (P0-2), because
+  the rules gate list queries the older build does not make.
+
+The project id is public — it ships in the client bundle — but it must be **the same** in three
+places: the app's `VITE_FIREBASE_PROJECT_ID`, `.firebaserc` (what `make deploy-rules` follows) and
+the console you publish from. `node scripts/verify_deploy.mjs` compares the first two and says so
+if they drift (see gotchas.md).
+
 ## Deploying
 
 Two separate concerns:

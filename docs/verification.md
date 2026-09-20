@@ -48,7 +48,10 @@ list queries the new build makes.
 ### The order, for a first deploy on a fresh project
 
 Four things have to happen, and three of them are on this side — the Vercel build does not
-touch the database:
+touch the database. **On a project that was just created, do the console setup first** — the
+database, the Email/Password provider, the Storage bucket and the web app registration are all
+prerequisites, with the error each one causes when missing: see *Setting up a new Firebase
+project* in [build-deploy.md](build-deploy.md).
 
 | # | Do | Passes when |
 |---|---|---|
