@@ -109,7 +109,9 @@ Order matters twice:
 
 - **Step 6 before step 7.** Publishing the rules after a first sign-up leaves an Auth user with no
   `users/{uid}` document, which the app treats as "signed in but not a member" — the portal stays
-  closed and there is nothing in the console to approve.
+  closed and there is nothing in the console to approve. If it happens anyway there is no need to
+  delete the Auth user: open the portal and the account is offered **"Finish setting up your
+  account"**, which writes the pending row the rules do allow.
 - **Step 5 before the Vercel deploy** (P0-1), and the deploy **before** the rules (P0-2), because
   the rules gate list queries the older build does not make.
 

@@ -90,6 +90,20 @@ Set-Content .env.local -Encoding utf8 -Value @(
   'VITE_FIREBASE_API_KEY=…', 'VITE_FIREBASE_AUTH_DOMAIN=…' )
 ```
 
+## 🟠 Signing up before the rules are published strands the account
+
+The sign-up flow is two writes: Firebase Auth creates the account, then Firestore stores
+`users/{uid}` — the membership row that every other rule reads. Publish order matters because of
+the gap between them. With `firestore.rules` unpublished (or published as production-mode defaults,
+which deny everything), the second write is refused: the account exists, is signed in, and has no
+membership. The portal showed that state as *"Awaiting approval"* with a row of dashes — a dead end,
+because an administrator cannot approve a document that does not exist.
+
+The app now recognises it (`profile === null`) and offers the one recovery the rules permit: the
+member creates their **own** row via `createOwnProfile()` — `status:'pending'`, `role:'member'`,
+the only values `users` create accepts from a client (`src/lib/profile.js`). The path that
+avoids all of this is simply the documented order: publish the rules, *then* sign up.
+
 ## 🔴 The app and the rules can live in different Firebase projects
 
 They are configured in two files that nothing compared: `.env.local` (Vite — gitignored, per

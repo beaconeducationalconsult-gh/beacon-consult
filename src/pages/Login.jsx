@@ -5,6 +5,7 @@ import { auth } from '../firebase'
 import { useAuth } from '../context/AuthContext'
 import { useToast } from '../context/ToastContext'
 import Navbar from '../components/Navbar'
+import { authMessage } from '../lib/authError'
 
 export default function Login() {
   const { user, loading } = useAuth()
@@ -25,13 +26,10 @@ export default function Login() {
       toast.success('Welcome back')
       navigate('/portal')
     } catch (err) {
-      const message =
-        err.code === 'auth/invalid-credential' || err.code === 'auth/wrong-password'
-          ? 'That email and password do not match.'
-          : err.code === 'auth/user-not-found'
-            ? 'No account found for that email.'
-            : err.message
-      setError(message)
+      // The copy lives in src/lib/authError.js: a project that has not enabled
+      // Email/Password, or has not authorized this domain, produces codes whose
+      // raw text names neither the cause nor the fix.
+      setError(authMessage(err))
     } finally {
       setBusy(false)
     }

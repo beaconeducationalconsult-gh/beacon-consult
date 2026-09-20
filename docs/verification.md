@@ -87,6 +87,7 @@ is what the step is actually testing.
 |---|---|---|---|
 | 1 | Sign up a new account | Lands on "pending approval", can browse nothing but the curriculum | `users` create forces `status:'pending'`. A self-approving sign-up would bypass every other rule |
 | 2 | In the console set `role:'admin'` on an account, approve the new one from `/portal/members` | The new account can now read content | Only an admin can approve |
+| 2a | Sign up **before** the rules are published (or with a suspended account) | The portal offers **"Finish setting up your account"** with a button that creates the pending row — not a dash-filled "Awaiting approval" | The two-write sign-up: Auth first, Firestore second. The recovery uses the one self-create the rules allow (`status:'pending'`, `role:'member'`) |
 | 3 | As the new member, open an incognito window and visit `/articles` | Public articles load **without** signing in | The anonymous read path is the only one the public sees |
 
 ### Scheme (weekly forecast)
