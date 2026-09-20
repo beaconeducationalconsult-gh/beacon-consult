@@ -1,0 +1,79 @@
+{
+ "subjectId": "mathematics",
+ "grade": "B6",
+ "note": "Hand-written questions. The generator never writes this file; see scripts/build_question_bank.py for how authored and generated items are merged.",
+ "items": [
+  {
+   "id": "B6.2.1.1.4-authored-1",
+   "indicatorCode": "B6.2.1.1.4",
+   "prompt": "A pattern is made with sticks. Figure 1 uses 4 sticks and each new figure uses 3 more sticks than the one before. Describe figure 4 and say how many sticks it uses.",
+   "type": "essay",
+   "options": null,
+   "answer": "Figure 4 uses 4 + 3 x 3 = 13 sticks.",
+   "answerLetter": null,
+   "marks": 3,
+   "difficulty": "core",
+   "source": "authored"
+  },
+  {
+   "id": "B6.2.1.1.4-authored-2",
+   "indicatorCode": "B6.2.1.1.4",
+   "prompt": "A pupil predicts that figure 10 of the stick pattern above uses 31 sticks. Use the rule to check whether the prediction is right.",
+   "type": "essay",
+   "options": null,
+   "answer": "4 + 9 x 3 = 31, so the prediction is right.",
+   "answerLetter": null,
+   "marks": 3,
+   "difficulty": "core",
+   "source": "authored"
+  },
+  {
+   "id": "B6.2.1.1.4-authored-3",
+   "indicatorCode": "B6.2.1.1.4",
+   "prompt": "A pattern of tiles grows as 2, 5, 8, 11 ... Draw or describe the fifth figure and say how many tiles it has.",
+   "type": "essay",
+   "options": null,
+   "answer": "Each figure adds 3 tiles, so the fifth figure has 11 + 3 = 14 tiles.",
+   "answerLetter": null,
+   "marks": 3,
+   "difficulty": "core",
+   "source": "authored"
+  },
+  {
+   "id": "B6.4.1.2.3-authored-1",
+   "indicatorCode": "B6.4.1.2.3",
+   "prompt": "You want to find out which of four sports pupils in your school like best. Write the question you would put in a questionnaire.",
+   "type": "essay",
+   "options": null,
+   "answer": "For example: Which of these sports do you like best? Football / Athletics / Volleyball / Table tennis. Tick one.",
+   "answerLetter": null,
+   "marks": 3,
+   "difficulty": "core",
+   "source": "authored"
+  },
+  {
+   "id": "B6.4.1.2.3-authored-2",
+   "indicatorCode": "B6.4.1.2.3",
+   "prompt": "Write two things a questionnaire question should not do.",
+   "type": "essay",
+   "options": null,
+   "answer": "It should not ask two questions at once, and it should not lead the reader to one answer.",
+   "answerLetter": null,
+   "marks": 3,
+   "difficulty": "core",
+   "source": "authored"
+  },
+  {
+   "id": "B6.4.1.2.3-authored-3",
+   "indicatorCode": "B6.4.1.2.3",
+   "prompt": "You have collected the answers to your questionnaire from 40 pupils. Say how you would record the answers and which graph you would use to present them, and why.",
+   "type": "essay",
+   "options": null,
+   "answer": "Record them in a tally chart or a table, then use a bar graph: the sports are separate groups, so the bars show how many pupils chose each one.",
+   "answerLetter": null,
+   "marks": 4,
+   "difficulty": "core",
+   "source": "authored"
+  }
+ ]
+}

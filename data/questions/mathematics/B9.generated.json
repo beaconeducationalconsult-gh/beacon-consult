@@ -143,15 +143,15 @@
    "source": "generated:multiplication"
   },
   {
-   "id": "B9.1.2.2.1-multiplication-1",
+   "id": "B9.1.2.2.1-division-1",
    "indicatorCode": "B9.1.2.2.1",
-   "prompt": "Multiply: 642 x 11 = ",
+   "prompt": "Divide: 858 ÷ 13 = ",
    "type": "short",
    "options": null,
-   "answer": "7,062",
+   "answer": "66",
    "marks": 2,
    "difficulty": "core",
-   "source": "generated:multiplication"
+   "source": "generated:division"
   },
   {
    "id": "B9.1.2.2.1-decimals-2",
@@ -176,18 +176,7 @@
    "source": "generated:jhs-significant-figures"
   },
   {
-   "id": "B9.1.2.2.2-decimals-1",
-   "indicatorCode": "B9.1.2.2.2",
-   "prompt": "Write 40.71 as a fraction in its simplest form.",
-   "type": "short",
-   "options": null,
-   "answer": "4071/100",
-   "marks": 2,
-   "difficulty": "core",
-   "source": "generated:decimals"
-  },
-  {
-   "id": "B9.1.2.2.2-jhs-significant-figures-2",
+   "id": "B9.1.2.2.2-jhs-significant-figures-1",
    "indicatorCode": "B9.1.2.2.2",
    "prompt": "Express 0.0473821 correct to 3 significant figures.",
    "type": "short",
@@ -198,7 +187,7 @@
    "source": "generated:jhs-significant-figures"
   },
   {
-   "id": "B9.1.2.2.2-jhs-significant-figures-3",
+   "id": "B9.1.2.2.2-jhs-significant-figures-2",
    "indicatorCode": "B9.1.2.2.2",
    "prompt": "Express 0.0473821 correct to 1 decimal place(s).",
    "type": "short",

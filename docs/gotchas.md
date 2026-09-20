@@ -321,7 +321,12 @@ missing from the central-tendency rule, so "**Mode**l number quantities…" was 
 median. Two guards came out of it: every pattern that names a word gets `\b` boundaries, and
 `make check` runs `generate_question_bank.py --verify`, which fails if the committed questions
 differ from what the rules produce today — a rule that starts or stops firing cannot reach a
-teacher unnoticed.
+teacher unnoticed. **The description is lower-cased before matching** (`indicator_text()`),
+so every pattern must be written in lower case: the metric rule shipped with
+`relationship between the units Kilogram` and that branch was dead from the day it was written
+(found 2026-09-20, when a B3 lesson still had no question). A pattern that never fires looks
+exactly like a lesson that needs no question, which is why the coverage report prints per rule
+and the run names the indicators still left.
 
 ## 🔴 `matches()` is a full-string match, so a prefix pattern denies everything
 In the rules language `'generated/alice/x.pdf'.matches('^generated/alice/')` is **false**:

@@ -116,9 +116,9 @@ inscribed circle) with the construction steps in the marking scheme, so Section 
 left out; and for B7–B9 the scope line reads **100%** for every term, which means a JHS paper
 tests the whole of the term it was set for.
 
-**Starter bank (P1-5).** The bundle ships 560 practice questions for mathematics B2–B9 —
-including a JHS bank that covers every B7–B9 indicator the syllabus schedules — see *The question
-bank* in
+**Starter bank (P1-5).** The bundle ships **1,073 practice questions for mathematics B2–B9 —
+a question for every indicator the syllabus schedules, in every year, and 100% of every term's
+scope** — see *The question bank* in
 [curriculum-data.md](curriculum-data.md). The bank page has
 a **Starter bank** panel: choose a subject-grade, see the count and the indicator coverage, then
 import. Imported questions become ordinary `questions` documents (batched writes, `status:

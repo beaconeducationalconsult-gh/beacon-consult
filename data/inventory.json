@@ -2692,11 +2692,11 @@
    "hasQuestions": true,
    "indicators": 4040,
    "label": "bundle",
-   "megabytes": 40.0,
+   "megabytes": 40.2,
    "questions": {
-    "indicatorsCovered": 249,
+    "indicatorsCovered": 407,
     "indicatorsInPacks": 407,
-    "questions": 560,
+    "questions": 1073,
     "subjectGrades": 8
    },
    "subjectGrades": 84,

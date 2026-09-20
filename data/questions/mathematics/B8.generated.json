@@ -831,18 +831,7 @@
    "source": "generated:jhs-probability"
   },
   {
-   "id": "B8.4.2.1.2-decimals-1",
-   "indicatorCode": "B8.4.2.1.2",
-   "prompt": "Write 83.5 as a fraction in its simplest form.",
-   "type": "short",
-   "options": null,
-   "answer": "167/2",
-   "marks": 2,
-   "difficulty": "core",
-   "source": "generated:decimals"
-  },
-  {
-   "id": "B8.4.2.1.2-percentage-2",
+   "id": "B8.4.2.1.2-percentage-1",
    "indicatorCode": "B8.4.2.1.2",
    "prompt": "What is 20% of 80?",
    "type": "short",
