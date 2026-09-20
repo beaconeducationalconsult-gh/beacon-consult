@@ -18,6 +18,13 @@ Two products share one dataset:
 
 ---
 
+## New to this project?
+
+**[SKILL.md](SKILL.md)** is a start-to-finish build guide: install the tools, create the Firebase
+project, run the app locally, become the first administrator, publish the rules and indexes,
+deploy to Vercel, verify it — then work on the data, the code, and the exports. Written to be
+readable by someone who has never seen the repository.
+
 ## Quick start
 
 ```bash
