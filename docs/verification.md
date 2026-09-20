@@ -57,8 +57,8 @@ touch the database:
 | 3 | Publish the rules and the indexes — `make deploy-rules` (Firestore rules + 19 indexes) and `make deploy-storage` (Storage rules), or paste `firestore.rules` / `storage.rules` into the console | Step 4 stops failing with `permission-denied`. The console copy most projects have predates the visibility-gated reads, the `generated_documents` block, and the `matches()` fix |
 | 4 | Create an account, set `role:'admin'` + `status:'approved'` on its `users/{uid}` doc (P0-3), approve a second account, then walk section 2 | The flows below pass for an **ordinary member**, not just an admin |
 
-Steps 3 and 4 are in that order for a reason: publishing the rules before the new build is live
-turns an old client's list pages from "shows everything" into `permission-denied`.
+Step 3 comes after step 2 for a reason: publishing the rules before the new build is live turns
+an old client's list pages from "shows everything" into `permission-denied`.
 
 The rules can also be asked directly, before publishing anything:
 

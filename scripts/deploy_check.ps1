@@ -37,9 +37,9 @@ if (-not $node) {
   exit 1
 }
 
-$args = @('scripts/verify_deploy.mjs')
-if ($Url) { $args += @('-Url', $Url) }
-if ($SkipBuild) { $args += '-SkipBuild' }
+$cliArgs = @('scripts/verify_deploy.mjs')
+if ($Url) { $cliArgs += @('-Url', $Url) }
+if ($SkipBuild) { $cliArgs += '-SkipBuild' }
 
-& $node.Source @args
+& $node.Source @cliArgs
 exit $LASTEXITCODE
