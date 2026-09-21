@@ -4,7 +4,6 @@ import { signInWithEmailAndPassword } from 'firebase/auth'
 import { auth } from '../firebase'
 import { useAuth } from '../context/AuthContext'
 import { useToast } from '../context/ToastContext'
-import Navbar from '../components/Navbar'
 import { authMessage } from '../lib/authError'
 
 export default function Login() {
@@ -36,8 +35,7 @@ export default function Login() {
   }
 
   return (
-    <div className="min-h-screen bg-bg">
-      <Navbar />
+    <div>
       <main className="mx-auto max-w-md px-4 py-14">
         <h1 className="page-title">Sign in</h1>
         <p className="page-subtitle">Members of the Beacon network only.</p>

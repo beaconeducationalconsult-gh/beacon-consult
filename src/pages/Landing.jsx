@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
-import Navbar from '../components/Navbar'
-import { TERMS, fmtDate, getAcademicStatus, currentYear } from '../lib/academicCalendar'
+import { TERMS, fmtDate, getAcademicStatus } from '../lib/academicCalendar'
 
 const FEATURES = [
   { title: 'Curriculum browser', body: 'Every NaCCA indicator from KG1 to Basic 9, arranged by strand, sub-strand and content standard.' },
@@ -15,9 +14,7 @@ export default function Landing() {
   const status = getAcademicStatus()
 
   return (
-    <div className="min-h-screen bg-bg">
-      <Navbar />
-
+    <div>
       <main>
         <section className="mx-auto max-w-6xl px-4 pb-16 pt-14 sm:pt-20">
           <p className="section-heading">Ghana · NaCCA standards-based curriculum</p>
@@ -76,17 +73,6 @@ export default function Landing() {
           </div>
         </section>
       </main>
-
-      <footer className="border-t border-line bg-surface">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-8 text-sm text-muted">
-          <p>© {currentYear()} Beacon Educational Consult. Curriculum data from NaCCA.</p>
-          <div className="flex gap-4">
-            <Link to="/articles" className="hover:text-heading">Articles</Link>
-            <Link to="/quotes" className="hover:text-heading">Quotes</Link>
-            <Link to="/calendar" className="hover:text-heading">Calendar</Link>
-          </div>
-        </div>
-      </footer>
     </div>
   )
 }

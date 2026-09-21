@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { doc, getDoc } from 'firebase/firestore'
 import { db } from '../firebase'
-import Navbar from '../components/Navbar'
 import EmptyState from '../components/EmptyState'
 import { fmtDate } from '../lib/academicCalendar'
 
@@ -21,8 +20,7 @@ export default function PublicArticleView() {
   }, [articleId])
 
   return (
-    <div className="min-h-screen bg-bg">
-      <Navbar />
+    <div>
       <main className="mx-auto max-w-3xl px-4 py-12">
         {state.loading && <div className="card h-64 animate-pulse" />}
         {!state.loading && !state.article && (

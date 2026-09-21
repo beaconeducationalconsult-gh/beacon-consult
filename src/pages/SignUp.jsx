@@ -5,7 +5,6 @@ import { auth } from '../firebase'
 import { authMessage } from '../lib/authError'
 import { createOwnProfile } from '../lib/profile'
 import { useToast } from '../context/ToastContext'
-import Navbar from '../components/Navbar'
 import { GRADES, gradeLabel } from '../lib/grades'
 
 export default function SignUp() {
@@ -60,8 +59,7 @@ export default function SignUp() {
   }
 
   return (
-    <div className="min-h-screen bg-bg">
-      <Navbar />
+    <div>
       <main className="mx-auto max-w-xl px-4 py-14">
         <h1 className="page-title">Request access</h1>
         <p className="page-subtitle">

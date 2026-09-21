@@ -1,4 +1,3 @@
-import Navbar from '../components/Navbar'
 import { ACADEMIC_YEAR, TERMS, fmtDate, getAcademicStatus, termProgress } from '../lib/academicCalendar'
 
 /** Public: the Ghana academic calendar. Static and pure — works offline. */
@@ -6,8 +5,7 @@ export default function PublicCalendar() {
   const status = getAcademicStatus()
 
   return (
-    <div className="min-h-screen bg-bg">
-      <Navbar />
+    <div>
       <main className="mx-auto max-w-3xl px-4 py-12">
         <h1 className="page-title">Academic calendar</h1>
         <p className="page-subtitle">{ACADEMIC_YEAR} school year · Ghana basic education</p>

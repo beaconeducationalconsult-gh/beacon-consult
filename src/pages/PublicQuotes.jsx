@@ -1,5 +1,4 @@
 import { useMemo, useState } from 'react'
-import Navbar from '../components/Navbar'
 import { useQuotes, useTheories, useQuoteLikes, quoteOfTheDay, theoryOfTheWeek } from '../hooks/useWisdom'
 
 /** Public: static quotes JSON. No auth, works offline. */
@@ -15,8 +14,7 @@ export default function PublicQuotes() {
   const visible = tag ? quotes.filter((q) => (q.tags || []).includes(tag)) : quotes
 
   return (
-    <div className="min-h-screen bg-bg">
-      <Navbar />
+    <div>
       <main className="mx-auto max-w-3xl px-4 py-12">
         <h1 className="page-title">Quote of the day</h1>
         <p className="page-subtitle">A daily quote or Ghanaian proverb, and a teaching theory each week.</p>
