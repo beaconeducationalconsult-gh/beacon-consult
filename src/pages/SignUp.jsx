@@ -60,7 +60,7 @@ export default function SignUp() {
   }
 
   return (
-    <div className="min-h-screen bg-cream">
+    <div className="min-h-screen bg-bg">
       <Navbar />
       <main className="mx-auto max-w-xl px-4 py-14">
         <h1 className="page-title">Request access</h1>

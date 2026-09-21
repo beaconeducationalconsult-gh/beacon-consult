@@ -24,7 +24,7 @@ export default function SetupNotice() {
   })
 
   return (
-    <div className="min-h-screen bg-cream px-4 py-12">
+    <div className="min-h-screen bg-bg px-4 py-12">
       <div className="mx-auto max-w-2xl">
         <p className="section-heading">Beacon Consult</p>
         <h1 className="page-title mt-2">{copy.title}</h1>

@@ -6,7 +6,7 @@ export default function PublicCalendar() {
   const status = getAcademicStatus()
 
   return (
-    <div className="min-h-screen bg-cream">
+    <div className="min-h-screen bg-bg">
       <Navbar />
       <main className="mx-auto max-w-3xl px-4 py-12">
         <h1 className="page-title">Academic calendar</h1>

@@ -6,6 +6,7 @@ import './index.css'
 import App from './App.jsx'
 import SetupNotice from './components/SetupNotice'
 import { AuthProvider } from './context/AuthContext'
+import { ThemeProvider } from './context/ThemeContext'
 import { ToastProvider } from './context/ToastContext'
 import { firebaseConfigured } from './firebase'
 import { registerServiceWorker } from './registerSW'
@@ -19,20 +20,24 @@ const root = createRoot(document.getElementById('root'))
 if (!firebaseConfigured) {
   root.render(
     <StrictMode>
-      <SetupNotice />
+      <ThemeProvider>
+        <SetupNotice />
+      </ThemeProvider>
     </StrictMode>
   )
 } else {
   root.render(
     <StrictMode>
-      <AuthProvider>
-        <BrowserRouter>
-          <ToastProvider>
-            <App />
-            <Analytics />
-          </ToastProvider>
-        </BrowserRouter>
-      </AuthProvider>
+      <ThemeProvider>
+        <AuthProvider>
+          <BrowserRouter>
+            <ToastProvider>
+              <App />
+              <Analytics />
+            </ToastProvider>
+          </BrowserRouter>
+        </AuthProvider>
+      </ThemeProvider>
     </StrictMode>
   )
 }

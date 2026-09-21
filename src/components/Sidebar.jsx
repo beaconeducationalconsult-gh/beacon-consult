@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
+import ThemeToggle from './ThemeToggle'
 
 /** Inline 24×24 icon — the app uses no icon library (docs/conventions.md). */
 const Icon = ({ path, className = 'h-4 w-4' }) => (
@@ -63,7 +64,9 @@ export default function Sidebar() {
 
   const linkClass = ({ isActive }) =>
     `flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
-      isActive ? 'bg-brand-50 text-brand-700' : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
+      isActive
+        ? 'bg-brand-50 text-brand-700 dark:bg-brand-500/15 dark:text-brand-300'
+        : 'text-muted hover:bg-surface-2 hover:text-heading'
     }`
 
   const nav = (
@@ -79,14 +82,14 @@ export default function Sidebar() {
   )
 
   const footer = (
-    <div className="border-t border-slate-200 p-3">
-      <NavLink to="/portal/profile" className="flex items-center gap-3 rounded-lg px-2 py-2 hover:bg-slate-100" onClick={() => setOpen(false)}>
+    <div className="border-t border-line p-3">
+      <NavLink to="/portal/profile" className="flex items-center gap-3 rounded-lg px-2 py-2 hover:bg-surface-2" onClick={() => setOpen(false)}>
         <span className="grid h-9 w-9 place-items-center rounded-full bg-brand-600 text-sm font-bold text-white">
           {(profile?.name || '?').slice(0, 1).toUpperCase()}
         </span>
         <span className="min-w-0 flex-1">
-          <span className="block truncate text-sm font-semibold text-slate-800">{profile?.name || 'Member'}</span>
-          <span className="block truncate text-xs text-slate-500">{profile?.school || 'Beacon Consult'}</span>
+          <span className="block truncate text-sm font-semibold text-heading">{profile?.name || 'Member'}</span>
+          <span className="block truncate text-xs text-muted">{profile?.school || 'Beacon Consult'}</span>
         </span>
       </NavLink>
       <button
@@ -105,7 +108,7 @@ export default function Sidebar() {
   return (
     <>
       {/* Mobile top bar */}
-      <header className="sticky top-0 z-30 flex items-center justify-between border-b border-slate-200 bg-cream/95 px-4 py-3 backdrop-blur lg:hidden">
+      <header className="sticky top-0 z-30 flex items-center justify-between border-b border-line bg-bg/95 px-4 py-3 backdrop-blur lg:hidden">
         <button
           type="button"
           className="btn-ghost px-2"
@@ -117,8 +120,8 @@ export default function Sidebar() {
             <path d="M4 6h16M4 12h16M4 18h16" strokeLinecap="round" />
           </svg>
         </button>
-        <span className="font-display text-lg font-bold text-brand-700">Beacon</span>
-        <span className="w-9" />
+        <span className="font-display text-lg font-bold text-brand-700 dark:text-brand-300">Beacon</span>
+        <ThemeToggle />
       </header>
 
       {open && (
@@ -127,12 +130,12 @@ export default function Sidebar() {
 
       {/* Desktop rail + mobile drawer */}
       <aside
-        className={`fixed inset-y-0 left-0 z-50 flex w-56 flex-col border-r border-slate-200 bg-cream transition-transform lg:translate-x-0 ${
+        className={`fixed inset-y-0 left-0 z-50 flex w-56 flex-col border-r border-line bg-bg transition-transform lg:translate-x-0 ${
           open ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
-        <div className="flex items-center justify-between border-b border-slate-200 px-4 py-4">
-          <NavLink to="/portal" className="font-display text-lg font-bold text-brand-700" onClick={() => setOpen(false)}>
+        <div className="flex items-center justify-between border-b border-line px-4 py-4">
+          <NavLink to="/portal" className="font-display text-lg font-bold text-brand-700 dark:text-brand-300" onClick={() => setOpen(false)}>
             Beacon
           </NavLink>
           <button type="button" className="btn-ghost px-2 lg:hidden" aria-label="Close navigation" onClick={() => setOpen(false)}>

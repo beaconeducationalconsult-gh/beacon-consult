@@ -74,7 +74,7 @@ function ProtectedLayout() {
   if (!canUsePortal) return <PendingApproval suspended={profile?.status === 'suspended'} />
 
   return (
-    <div className="min-h-screen bg-cream lg:ml-56">
+    <div className="min-h-screen bg-bg lg:ml-56">
       <Sidebar />
       <main className="mx-auto max-w-5xl px-4 pb-24 pt-6 lg:pt-10">
         <Suspense

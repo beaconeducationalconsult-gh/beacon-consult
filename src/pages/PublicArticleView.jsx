@@ -21,7 +21,7 @@ export default function PublicArticleView() {
   }, [articleId])
 
   return (
-    <div className="min-h-screen bg-cream">
+    <div className="min-h-screen bg-bg">
       <Navbar />
       <main className="mx-auto max-w-3xl px-4 py-12">
         {state.loading && <div className="card h-64 animate-pulse" />}

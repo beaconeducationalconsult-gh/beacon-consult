@@ -36,7 +36,7 @@ export default function Login() {
   }
 
   return (
-    <div className="min-h-screen bg-cream">
+    <div className="min-h-screen bg-bg">
       <Navbar />
       <main className="mx-auto max-w-md px-4 py-14">
         <h1 className="page-title">Sign in</h1>

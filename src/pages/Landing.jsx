@@ -15,16 +15,16 @@ export default function Landing() {
   const status = getAcademicStatus()
 
   return (
-    <div className="min-h-screen bg-cream">
+    <div className="min-h-screen bg-bg">
       <Navbar />
 
       <main>
         <section className="mx-auto max-w-6xl px-4 pb-16 pt-14 sm:pt-20">
           <p className="section-heading">Ghana · NaCCA standards-based curriculum</p>
-          <h1 className="mt-3 max-w-3xl font-display text-4xl font-bold leading-tight text-slate-900 sm:text-5xl">
+          <h1 className="mt-3 max-w-3xl font-display text-4xl font-bold leading-tight text-heading sm:text-5xl">
             Plan your term in an afternoon, not a weekend.
           </h1>
-          <p className="mt-5 max-w-2xl text-lg text-slate-600">
+          <p className="mt-5 max-w-2xl text-lg text-muted">
             Beacon gives teachers in Ghanaian basic schools the whole curriculum in one place —
             schemes, lesson plans and a shared question bank, mapped to the indicators you
             actually teach.
@@ -43,31 +43,31 @@ export default function Landing() {
           </div>
 
           {status.state === 'in-term' && (
-            <p className="mt-6 text-sm text-slate-500">
+            <p className="mt-6 text-sm text-muted">
               <span className="font-semibold text-accent-600">{status.term.label}</span> is in progress —
               started {fmtDate(status.term.start)}, with {status.daysRemaining} days to go.
             </p>
           )}
         </section>
 
-        <section className="border-y border-slate-200 bg-white">
+        <section className="border-y border-line bg-surface">
           <div className="mx-auto grid max-w-6xl gap-6 px-4 py-14 sm:grid-cols-2 lg:grid-cols-3">
             {FEATURES.map((feature) => (
               <div key={feature.title} className="card card-hover p-6">
                 <h2 className="card-title">{feature.title}</h2>
-                <p className="mt-2 text-sm text-slate-600">{feature.body}</p>
+                <p className="mt-2 text-sm text-muted">{feature.body}</p>
               </div>
             ))}
           </div>
         </section>
 
         <section className="mx-auto max-w-6xl px-4 py-14">
-          <h2 className="font-display text-2xl font-bold text-slate-900">The school year at a glance</h2>
+          <h2 className="font-display text-2xl font-bold text-heading">The school year at a glance</h2>
           <div className="mt-6 grid gap-4 sm:grid-cols-3">
             {TERMS.map((term) => (
               <div key={term.term} className="card p-5">
                 <p className="section-heading">{term.label}</p>
-                <p className="mt-2 font-semibold text-slate-800">
+                <p className="mt-2 font-semibold text-heading">
                   {fmtDate(term.start)} — {fmtDate(term.end)}
                 </p>
                 <p className="card-meta mt-2">{term.weeks} weeks</p>
@@ -77,13 +77,13 @@ export default function Landing() {
         </section>
       </main>
 
-      <footer className="border-t border-slate-200 bg-white">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-8 text-sm text-slate-500">
+      <footer className="border-t border-line bg-surface">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-8 text-sm text-muted">
           <p>© {currentYear()} Beacon Educational Consult. Curriculum data from NaCCA.</p>
           <div className="flex gap-4">
-            <Link to="/articles" className="hover:text-slate-800">Articles</Link>
-            <Link to="/quotes" className="hover:text-slate-800">Quotes</Link>
-            <Link to="/calendar" className="hover:text-slate-800">Calendar</Link>
+            <Link to="/articles" className="hover:text-heading">Articles</Link>
+            <Link to="/quotes" className="hover:text-heading">Quotes</Link>
+            <Link to="/calendar" className="hover:text-heading">Calendar</Link>
           </div>
         </div>
       </footer>
