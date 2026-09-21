@@ -1,16 +1,6 @@
-import { readFileSync } from 'node:fs'
-import { resolve } from 'node:path'
 import { describe, expect, it } from 'vitest'
-import {
-  FIREBASE_ENV_BLOCK,
-  FIREBASE_ENV_LIST,
-  FIREBASE_ENV_NAMES,
-  buildInfoUrl,
-  isLocalHost,
-  missingEnvNames,
-  setupNoticeCopy,
-  setupNoticeMode,
-} from './setupGuidance'
+import { FIREBASE_ENV_BLOCK } from './firebaseConfigSource'
+import { buildInfoUrl, isLocalHost, setupNoticeCopy, setupNoticeMode } from './setupGuidance'
 
 /*
  * The setup notice is the first thing a deployment shows when its build had no
@@ -20,44 +10,14 @@ import {
  * any of the six values, and the screen told the person looking at the live URL
  * to `cp .env.example .env.local` — a file that is nowhere near that problem.
  *
- * The `.env.example` check below is the drift guard: the names printed as the
- * thing to paste, the names this module reports as missing, and the names the
- * example file documents all have to be the same six.
+ * `src/lib/firebaseConfigSource.js` owns the names, the paste block and what
+ * counts as missing; this file is only the words a reader sees.
  */
 
+/** The first deploy step's code — the committed config, which needs no dashboard. */
+const COMMITTED_STEP_CODE = 'src/firebaseConfig.js\n  apiKey: …\n  projectId: …'
 const DEPLOY = { mode: 'deploy', missing: ['VITE_FIREBASE_API_KEY', 'VITE_FIREBASE_APP_ID'], origin: 'https://beacon-edu-consult.vercel.app' }
 const LOCAL = { mode: 'local', missing: ['VITE_FIREBASE_API_KEY'] }
-
-describe('missingEnvNames', () => {
-  it('reports all six for an empty config, in .env.example order', () => {
-    expect(missingEnvNames({})).toEqual(FIREBASE_ENV_LIST)
-  })
-
-  it('treats empty and whitespace-only values as missing', () => {
-    expect(missingEnvNames({ apiKey: '', projectId: '   ' })).toEqual(FIREBASE_ENV_LIST)
-  })
-
-  it('leaves out the values that are set', () => {
-    const config = { apiKey: 'AIza-not-a-real-key', projectId: 'beacon-edu-consult-proj' }
-    expect(missingEnvNames(config)).toEqual([
-      'VITE_FIREBASE_AUTH_DOMAIN',
-      'VITE_FIREBASE_STORAGE_BUCKET',
-      'VITE_FIREBASE_MESSAGING_SENDER_ID',
-      'VITE_FIREBASE_APP_ID',
-    ])
-  })
-
-  it('covers every key of firebaseConfig in src/firebase.js', () => {
-    // firebase.js reads the values (its import.meta.env reads must stay literal
-    // for Vite to replace them at build time) and hands the object here, so a
-    // seventh value added there has to be named here or the notice would print
-    // the raw key instead of the env var.
-    const source = readFileSync(resolve(process.cwd(), 'src/firebase.js'), 'utf8')
-    const block = source.split('const firebaseConfig = {')[1].split('}')[0]
-    const keys = [...block.matchAll(/^\s*(\w+):/gm)].map((m) => m[1])
-    expect(keys).toEqual(Object.keys(FIREBASE_ENV_NAMES))
-  })
-})
 
 describe('isLocalHost / setupNoticeMode', () => {
   it('recognises the ways a localhost URL is spelled', () => {
@@ -119,6 +79,11 @@ describe('setupNoticeCopy in deploy mode', () => {
     expect(missingStep.code).not.toContain('VITE_FIREBASE_PROJECT_ID')
   })
 
+  it('names the committed config as the fix that needs no dashboard', () => {
+    expect(text).toContain('src/firebaseConfig.js')
+    expect(copy.steps[0].code).toContain('src/firebaseConfig.js')
+  })
+
   it('gives a check that needs no app: /build-info.json on this deploy', () => {
     expect(text).toContain('https://beacon-edu-consult.vercel.app/build-info.json')
     expect(text).toContain('firebaseConfigured')
@@ -133,9 +98,11 @@ describe('setupNoticeCopy in deploy mode', () => {
   })
 
   it('does not print an empty list when nothing is missing', () => {
+    // The "this build was compiled without: …" step carries the names; with
+    // none to carry it must not appear as an empty block.
     const noMissing = setupNoticeCopy({ mode: 'deploy', origin: 'https://example.com', missing: [] })
     const codes = noMissing.steps.map((s) => s.code).filter(Boolean)
-    expect(codes).toEqual([FIREBASE_ENV_BLOCK, buildInfoUrl('https://example.com')])
+    expect(codes).toEqual([COMMITTED_STEP_CODE, FIREBASE_ENV_BLOCK, buildInfoUrl('https://example.com')])
     expect(codes.some((c) => c.trim() === '')).toBe(false)
   })
 
@@ -161,21 +128,5 @@ describe('setupNoticeCopy in local mode', () => {
 
   it('surfaces which values were not found', () => {
     expect(copy.missing).toEqual(LOCAL.missing)
-  })
-})
-
-describe('the printed values match .env.example', () => {
-  const example = readFileSync(resolve(process.cwd(), '.env.example'), 'utf8')
-
-  it('documents the same six names, in the same order', () => {
-    const names = example
-      .split('\n')
-      .filter((line) => line.startsWith('VITE_'))
-      .map((line) => line.split('=')[0].trim())
-    expect(names).toEqual(FIREBASE_ENV_LIST)
-  })
-
-  it('prints one line per value in the paste block', () => {
-    expect(FIREBASE_ENV_BLOCK.split('\n')).toEqual(FIREBASE_ENV_LIST.map((name) => `${name}=…`))
   })
 })

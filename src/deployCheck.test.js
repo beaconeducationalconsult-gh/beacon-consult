@@ -95,12 +95,16 @@ describe('the deploy checks agree with each other', () => {
   })
 
   it('reads the same six config values the app reads', () => {
-    const fromVite = [...read('vite.config.js').matchAll(/'(VITE_FIREBASE_[A-Z_]+)'/g)].map((m) => m[1])
+    // `src/lib/firebaseConfigSource.js` is where the six names are written down —
+    // the app, the build guard and the notice all read them from there — so the
+    // pre-flight scripts are compared against it rather than against the list
+    // that used to be duplicated in vite.config.js.
+    const fromApp = [...read('src/lib/firebaseConfigSource.js').matchAll(/'(VITE_FIREBASE_[A-Z_]+)'/g)].map((m) => m[1])
     const fromNode = [...node.matchAll(/'(VITE_FIREBASE_[A-Z_]+)'/g)].map((m) => m[1])
-    expect(fromVite.length).toBe(6)
-    expect([...new Set(fromNode)].sort()).toEqual([...new Set(fromVite)].sort())
+    expect(fromApp.length).toBe(6)
+    expect([...new Set(fromNode)].sort()).toEqual([...new Set(fromApp)].sort())
     // And they must be the ones .env.example documents, or a fresh clone gets 1/6.
-    for (const key of fromVite) expect(read('.env.example')).toContain(`${key}=`)
+    for (const key of fromApp) expect(read('.env.example')).toContain(`${key}=`)
   })
 
   it('does not build with a shell command only Unix has', () => {

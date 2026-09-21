@@ -530,31 +530,38 @@ environments it applies to; the failing deployment's **build log** contains the 
 `vite.config.js`); and `GET /build-info.json` on the deploy reports `firebaseConfigured` and
 `missingEnv`.
 
-### The way out: commit `.env.production`
+### The way out: the config lives in a committed file
 
-If the dashboard keeps losing them, this removes it from the loop entirely. Vite loads
-`.env.production` for `vite build` (mode `production`) exactly as it loads `.env.local` for
-`yarn dev`, and the file is **not** gitignored — so committing it puts the six values in the build
-on Vercel with no project setting involved. It is a defensible thing to commit: Firebase's web
-config is public identifiers, shipped in the bundle either way, and the security boundary is the
-rules plus the Authorized Domains list.
+`src/firebaseConfig.js` holds the six values as source, and `src/firebase.js` uses it for
+anything the build environment does not supply — with the environment still winning when it has a
+**non-blank** value, so a deploy can point at a different Firebase project without a code change.
+Every build therefore has a working config: no dashboard state, no encoding, nothing to shadow.
+(An empty `VITE_FIREBASE_*` counts as absent and falls back to the file; the build log names any
+such variable it saw.)
 
-Two traps, both silent:
+This replaced a committed `.env.production`, which was the right idea and still failed twice. Both
+failures are worth knowing because they are silent, and they apply to any `.env` file in this repo:
 
-* **The file must be UTF-8.** A UTF-16 file — which is what PowerShell's `>` redirection and
-  `Copy-Item` from a UTF-16 `.env.local` produce — is not parsed at all: the build runs, finds
-  nothing, and reports the same missing values. A UTF-8 **BOM** is fine (dotenv strips it).
-* **`.env.production` outranks `.env.local`.** Mode files load last, so a committed
-  `.env.production` also supplies production builds on your own machine.
+* **A BOM breaks the first line only.** `Set-Content -Encoding utf8` on Windows PowerShell 5.1
+  writes a UTF-8 BOM, Vite's parser does **not** strip it, so `\ufeffVITE_FIREBASE_API_KEY` is a
+  different key than the one `src/firebase.js` reads: the file yielded five values and lost the API
+  key. Locally that was invisible — `.env.local` happened to supply the missing one — and the
+  deploy, which has no `.env.local`, came up with none. A **UTF-16** file is worse: nothing parses,
+  no error, no warning.
+* **A blank variable in the environment beats the file.** Vite's `loadEnv` lets `process.env` win
+  over `.env` files, so a variable that exists in Vercel with an empty value emptied out the
+  committed one. The dashboard showed six configured variables; the bundle got none.
 
-Verify before pushing, which is the whole point of the exercise:
+Editing the committed values is safe: they are public client identifiers, inlined into the bundle
+either way, and the security boundary is `firestore.rules` plus the Authorized Domains list. The
+project id in it must match `.firebaserc` (`src/firebaseConfig.test.js` fails if they drift).
+
+Verify before pushing, and after deploying:
 
 ```
-yarn build && node -e "console.log(require('./dist/build-info.json').firebaseConfigured)"
+yarn build && node -e "console.log(require('./dist/build-info.json'))"
+curl -s https://<your-domain>/build-info.json      # firebaseConfigured, configSource, projectId
 ```
-
-`true` means Vite read the file. Push, and `/build-info.json` on the deploy should say the same
-within a minute of the build.
 
 ## 🟡 Service worker is production-only
 `registerSW.js` registers only under `import.meta.env.PROD`. **PWA/offline behavior does not

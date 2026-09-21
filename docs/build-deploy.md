@@ -16,7 +16,7 @@ same in PowerShell, Git Bash or a Unix shell:
 ```bash
 git pull --ff-only        # fast-forward to the newest pushed commit
 yarn install              # new dependencies, if the lockfile moved
-yarn test                 # the suite (408 tests, no Python, no browser)
+yarn test                 # the suite (421 tests, no Python, no browser)
 yarn dev                  # http://localhost:5199
 ```
 
@@ -68,11 +68,12 @@ the environment it was built with), or the values were added after the build sta
 machine, `npx vercel env ls` prints the names and their environments, and the failing deployment's
 build log contains the line `Building WITHOUT Firebase config: …`.
 
-If Vercel's settings keep not applying, commit the six values as **`.env.production`** instead:
-Vite reads that file during `vite build`, so the repo carries the config and no project setting is
-involved. Write it as **UTF-8** — a UTF-16 file is ignored silently — and check locally first with
-`yarn build && node -e "console.log(require('./dist/build-info.json').firebaseConfigured)"`.
-`docs/gotchas.md` has the long version.
+Simplest of all: the six values are also committed as source in **`src/firebaseConfig.js`**, and
+`src/firebase.js` uses them for anything the environment does not supply (a non-blank environment
+value still wins). A build therefore always has a working config — no dashboard state, no encoding,
+nothing to shadow. Keep Vercel's variables only if you want a deploy to point somewhere else, and
+delete any of them that are empty: a blank variable counts as absent and falls back to the file,
+and the build log names it. `docs/gotchas.md` has the long version.
 
 **The Vite `VITE_` prefix must stay**, and Vercel's editor says so in a confusing way: it warns
 that *"public prefixes expose values to the browser — if that's safe, change the variable to
@@ -189,8 +190,8 @@ also the fastest way to tell the two silent failures apart: a deploy built witho
 checkout. `make preflight URL=…` is the same script.
 
 `scripts/verify_deploy.py` fetches `/build-info.json` (written by the Vite build: whether the
-six `VITE_FIREBASE_*` values were present, the `bundleHash` of the curriculum it built, and the
-commit), then `/`, `/curriculum/grades.json`, one per-subject schedules file, and `/sw.js`. It
+build ended up with all six Firebase values and which source they came from — `configSource` is
+`env`, `committed` or `mixed` — the `bundleHash` of the curriculum it built, and the commit), then `/`, `/curriculum/grades.json`, one per-subject schedules file, and `/sw.js`. It
 fails loudly on the two silent killers: **a deploy built without Firebase config** (the app
 shows the setup notice instead of the portal, and the build was green) and **a stale curriculum**
 (a deploy whose `bundleHash` is not the one in this checkout). `make check` runs the offline half

@@ -1,3 +1,5 @@
+import { FIREBASE_ENV_BLOCK } from './firebaseConfigSource'
+
 /**
  * The copy behind `src/components/SetupNotice.jsx` — the screen a build shows
  * when the six `VITE_FIREBASE_*` values were not there when it was compiled.
@@ -17,44 +19,6 @@
  * The same failure now also names itself over HTTP, with nothing to click:
  * `GET /build-info.json` on the deploy (`firebaseConfigured`, `missingEnv`).
  */
-
-/**
- * The six values the app needs, keyed by the name it uses inside the app.
- *
- * This is the one place the pairs are written down. `firebase.js` reads the
- * values (its `import.meta.env.VITE_FIREBASE_*` reads must stay literal for
- * Vite's build-time replacement) and passes the result to `missingEnvNames`,
- * so the list of names here cannot drift from the config it describes.
- */
-export const FIREBASE_ENV_NAMES = {
-  apiKey: 'VITE_FIREBASE_API_KEY',
-  authDomain: 'VITE_FIREBASE_AUTH_DOMAIN',
-  projectId: 'VITE_FIREBASE_PROJECT_ID',
-  storageBucket: 'VITE_FIREBASE_STORAGE_BUCKET',
-  messagingSenderId: 'VITE_FIREBASE_MESSAGING_SENDER_ID',
-  appId: 'VITE_FIREBASE_APP_ID',
-}
-
-/** The same six, in the order `.env.example` lists them. */
-export const FIREBASE_ENV_LIST = Object.values(FIREBASE_ENV_NAMES)
-
-/** The six lines as they appear in `.env.example`, for the paste instructions. */
-export const FIREBASE_ENV_BLOCK = FIREBASE_ENV_LIST.map((name) => `${name}=…`).join('\n')
-
-/**
- * Which of the six a config is missing, as env var names.
- *
- * An empty string counts as missing — that is the shape a Vercel variable with
- * no value produces, and the shape `.env.example` has before it is filled in.
- * `VITE_FIREBASE_STORAGE_BUCKET` is the one exception in practice: leaving it
- * empty is a supported state (a project with no Cloud Storage bucket), so it
- * never on its own makes `firebaseConfigured` false — see `firebase.js`.
- */
-export function missingEnvNames(config = {}) {
-  return Object.keys(FIREBASE_ENV_NAMES)
-    .filter((key) => !String(config[key] ?? '').trim())
-    .map((key) => FIREBASE_ENV_NAMES[key])
-}
 
 /**
  * Is this hostname the machine the build was made on?
@@ -102,9 +66,15 @@ function deployCopy({ missing, origin }) {
   const steps = [
     {
       title:
-        'In Vercel, open the project → Settings → Environment Variables. All six names must be ' +
-        'there, spelled exactly as below, each with a value, and each one enabled for ' +
-        'Production (tick Preview as well):',
+        'Fill them into the committed config — src/firebaseConfig.js, one line per value. This is ' +
+        'the source every build can read, so it needs no dashboard step:',
+      code: 'src/firebaseConfig.js\n  apiKey: …\n  projectId: …',
+    },
+    {
+      title:
+        'Or set them in the build environment instead: Vercel → the project whose Domains tab ' +
+        'lists this address → Settings → Environment Variables. All six names, spelled exactly ' +
+        'as below, each with a value, each enabled for Production (tick Preview as well):',
       code: FIREBASE_ENV_BLOCK,
     },
   ]
@@ -133,16 +103,18 @@ function deployCopy({ missing, origin }) {
   return {
     mode: 'deploy',
     lead:
-      'This deployed build was compiled without any of the six VITE_FIREBASE_* values — Vite ' +
-      'inlines them when the build runs, so they have to live in the build environment. A ' +
-      '.env.local on a laptop is not part of a deploy, which is why this build has no project to ' +
-      'talk to. (Working locally instead? The same six values go in .env.local.)',
+      'This deployed build was compiled without any of the six VITE_FIREBASE_* values. Vite ' +
+      'inlines them when the build runs, and a build takes them from two places: the build ' +
+      'environment (Vercel → Settings → Environment Variables) and the committed ' +
+      'src/firebaseConfig.js. Both were empty for this build — a .env.local on a laptop is not ' +
+      'part of a deploy. (Working locally instead? The same six values go in .env.local.)',
     steps,
     missing,
     note:
-      'Keep the VITE_ prefix: Vite exposes build-time values only under that name. These are public ' +
-      'client identifiers — they ship inside the bundle either way — so Vercel\'s "keep this value ' +
-      'private" prompt is optional.',
+      'Keep the VITE_ prefix if you use the environment: Vite exposes build-time values only under ' +
+      'that name. These are public client identifiers — they ship inside the bundle either way — so ' +
+      'Vercel\'s "keep this value private" prompt is optional. An environment value that is empty ' +
+      'counts as absent and falls back to the committed file.',
     curriculum: CURRICULUM_CARD,
     footnote:
       'See docs/build-deploy.md (step 5) for the console walkthrough, and docs/gotchas.md ("Env ' +
@@ -158,6 +130,12 @@ function localCopy({ missing }) {
       code: FIREBASE_ENV_BLOCK,
     },
     { title: 'Restart the dev server — Vite reads env files only at startup:', code: 'yarn dev' },
+    {
+      title:
+        'Or fill them into src/firebaseConfig.js, the committed config every build falls back to ' +
+        '(a blank value there is the same as no value):',
+      code: null,
+    },
   ]
 
   return {

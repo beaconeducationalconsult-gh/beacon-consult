@@ -182,7 +182,7 @@ Two other commands you will use constantly:
 yarn build            # production build into dist/  (also writes dist/build-info.json)
 yarn preview          # serves dist/ on http://localhost:4173
 yarn lint             # ESLint, including the React Compiler rules — must stay clean
-yarn test             # the unit + contract suite (~408 tests, no browser, no Python)
+yarn test             # the unit + contract suite (~421 tests, no browser, no Python)
 ```
 
 **Service workers only exist in `yarn preview`**, never in `yarn dev`. Anything offline-related
@@ -523,9 +523,9 @@ The app is static: Vercel builds `dist/` and serves it. Firebase stays where it 
 ### 6.1 Import the repository
 
 <https://vercel.com/new> → import `beacon-consult` → leave the build settings alone
-(`vercel.json` already carries the SPA rewrite and cache headers) → Deploy. The first deploy will
-be *green and broken* until the environment variables exist — the app shows the setup notice
-instead of the portal, and nothing in the build output mentions it.
+(`vercel.json` already carries the SPA rewrite and cache headers) → Deploy. The values the app needs
+are committed (Phase 6.2 explains), so the first deploy should come up ready to sign in; if it shows
+the setup notice instead, `GET /build-info.json` on it says what the build was missing.
 
 ### 6.2 Set the six environment variables
 
@@ -560,16 +560,23 @@ one request whether the build had the values, and names any that were missing
 site — on a real domain it lists the exact missing names, the Vercel path and the redeploy step
 (Part 15, row 23).
 
-**Set them and the notice is still there?** One of four things, none of them the code: the variables
-are on a *different Vercel project* (the one whose **Domains** tab lists your address is the one that
-matters), they are scoped to **Preview/Development only** (read the **Environments** column), you
-redeployed a **preview** deployment (promoting a preview to production does not rebuild it, so it
-keeps the environment it was built with), or they were added after the build began. `npx vercel env
-ls` prints the names and their environments; the failing deployment's build log contains
-`Building WITHOUT Firebase config: …`. The fallback that removes Vercel from the loop: commit the
-six values as **`.env.production`** — Vite reads it during `vite build`, the values are public
-identifiers, it must be **UTF-8** (UTF-16 is ignored silently), and it outranks `.env.local` for
-production builds. `docs/gotchas.md` has the long version.
+**You do not have to do 6.2 at all.** The six values are also committed as source in
+`src/firebaseConfig.js`, and `src/firebase.js` falls back to them for anything the environment does
+not supply — so a build, in Vercel or on your machine, always has a working config, and no dashboard
+state can break it. A non-blank environment value still wins (that is how you point a deploy at a
+different Firebase project without a code change), and a *blank* one counts as absent and falls back
+to the file. Fill 6.2 in only if you prefer the values in the dashboard; **delete** any variable you
+leave empty, and read the build log if in doubt — it names blank ones and says where a build's config
+came from, as does `configSource` in `/build-info.json`.
+
+If you do set them and the notice is still there: they are on a *different Vercel project* (the one
+whose **Domains** tab lists your address is the one that matters), or scoped to
+**Preview/Development only** (read the **Environments** column), or you redeployed a **preview**
+deployment (promoting a preview does not rebuild it, so it keeps the environment it was built with),
+or they were added after the build began. `npx vercel env ls` prints the names and their
+environments. `docs/gotchas.md` has the long version, including the two silent traps that killed a
+committed `.env.production`: a BOM from PowerShell hides the first line, and a blank variable in the
+environment shadows a file value.
 
 ### 6.3 Set the Production Branch — the one setting everybody misses
 
@@ -922,7 +929,7 @@ already had rules and an index.
 `docs/gotchas.md`, and its verification steps in `docs/verification.md` (19a–19e).
 
 Copy that order — **data → pure logic + tests → page → exports → guards → docs** — for any feature
-you add. It is the reason this codebase has 408 tests and no browser tests: everything worth
+you add. It is the reason this codebase has 421 tests and no browser tests: everything worth
 testing lives outside React.
 
 ---
@@ -1025,7 +1032,7 @@ gone wrong in practice — both are short and worth your time before you touch t
 
 | Suite | Command | Covers |
 |---|---|---|
-| Unit + contract | `yarn test` (408 tests, 23 files) | pure logic (`examPaper`, `generatedDocs`, `profile`, `week`, …), the rules *files* as text (`firestoreRules.test.js`, `storageRules.test.js`), the bundle's integrity (`curriculumBundle.test.js`), the sidebar/router contract, the index contract, the deploy-script contract, the WinAnsi guard |
+| Unit + contract | `yarn test` (421 tests, 25 files) | pure logic (`examPaper`, `generatedDocs`, `profile`, `week`, …), the rules *files* as text (`firestoreRules.test.js`, `storageRules.test.js`), the bundle's integrity (`curriculumBundle.test.js`), the sidebar/router contract, the index contract, the deploy-script contract, the WinAnsi guard |
 | Rules emulator | `yarn test:rules` (95 checks: 81 Firestore + 14 Storage) | real permission decisions: a pending member refused, an un-filtered list denied, a like unable to inflate its tally, uploads capped and owner-only. Needs **Java 21** |
 | The gate | `make check` | `questions lint test check-scripts validate-curriculum inventory bundle-size bundle-check bundle-hash` + `yarn build` |
 | CI | `.github/workflows/ci.yml` | three jobs: **Lint, test, build** · **Firestore rules (emulator)** · **Curriculum data audit** (plus Vercel's own preview-comment check run) |
@@ -1076,7 +1083,7 @@ Each of these cost real time. They are ordered roughly by how likely you are to 
 | 21 | `firebase deploy` ends with `HTTP Error: 400, this index is not necessary` | `firestore.indexes.json` contains an entry with a **single field** — Firestore creates single-field indexes itself | Delete that entry (an unfiltered `orderBy` needs no entry; a filtered + ordered query needs two fields or more) and re-run the deploy — it is idempotent. `src/firestoreIndexes.test.js` fails on one now |
 | 22 | `[W] Unused function: …` on every deploy | A rule helper nothing calls | Remove it, or use it. An always-present warning hides the next, real one; `src/firestoreRules.test.js` now fails on an uncalled function |
 | 23 | The live site shows **Firebase configuration is missing** instead of the portal | The **build** had no `VITE_FIREBASE_*` values — Vite inlines them at build time, so a `.env.local` on your laptop is not part of the deploy, and a value scoped to Preview only is not part of a production build either | `GET <domain>/build-info.json` names the missing values (`firebaseConfigured`, `missingEnv`). Add them in Vercel → Settings → Environment Variables for **Production *and* Preview**, then *Deployments → Redeploy* — a variable change does not rebuild by itself |
-| 24 | …and it is still there after you set them | The variables are on a different Vercel project, or scoped to Preview/Development only, or you redeployed a *preview* deployment (a promoted preview keeps the environment it was built with) | `npx vercel env ls` lists names + environments; the deployment's build log says `Building WITHOUT Firebase config: …`. Last resort: commit `.env.production` (UTF-8) — see `docs/gotchas.md` ("The way out: commit `.env.production`") |
+| 24 | …and it is still there after you set them | The variables are on a different Vercel project, or scoped to Preview/Development only, or you redeployed a *preview* deployment (a promoted preview keeps the environment it was built with) | The values are committed in `src/firebaseConfig.js` and `src/firebase.js` falls back to them, so this should not be reachable — if it is, that file is empty or has a typo, and `/build-info.json` says `configSource` |
 
 The full, longer list — with the reasoning — is `docs/gotchas.md`. It is the most valuable file in
 the repository after this one.

@@ -5,33 +5,34 @@ import { defineConfig, loadEnv } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import babel from '@rolldown/plugin-babel'
-
-/** The six values src/firebase.js reads, in the order .env.example lists them. */
-const FIREBASE_KEYS = [
-  'VITE_FIREBASE_API_KEY',
-  'VITE_FIREBASE_AUTH_DOMAIN',
-  'VITE_FIREBASE_PROJECT_ID',
-  'VITE_FIREBASE_STORAGE_BUCKET',
-  'VITE_FIREBASE_MESSAGING_SENDER_ID',
-  'VITE_FIREBASE_APP_ID',
-]
+import { resolveFirebaseConfig } from './src/lib/firebaseConfigSource.js'
+import { firebaseConfig as committedFirebaseConfig } from './src/firebaseConfig.js'
 
 /*
  * P0-1: Vite embeds the Firebase config at build time, so a build with empty
  * values is green and the deployed app shows the setup notice — a blank app that
  * nothing in the pipeline mentions. Two changes fix that:
  *
- *  1. the warning below, printed where whoever deployed will see it;
+ *  1. the log lines below, printed where whoever deployed will see them;
  *  2. `dist/build-info.json`, served from the deploy, so "did the production
  *     environment get the six values" is answerable with one request instead of
  *     a browser console — `make verify-deploy URL=https://…`.
+ *
+ * Both report what the *bundle* will carry, which is not simply what the
+ * environment holds: `src/firebase.js` falls back to the committed
+ * `src/firebaseConfig.js` for anything blank or absent. So a variable that
+ * exists in Vercel but is empty is reported by name — it used to empty out a
+ * committed value and turn a green build into a setup notice with nothing to
+ * see — and a build whose values came from the repository says so.
  */
 function firebaseConfigGuard(env, command) {
-  const missing = FIREBASE_KEYS.filter((key) => !env[key])
+  const resolved = resolveFirebaseConfig({ env, committed: committedFirebaseConfig })
+  const { missing } = resolved
   const info = {
     firebaseConfigured: missing.length === 0,
     missingEnv: missing,
-    projectId: env.VITE_FIREBASE_PROJECT_ID || null,
+    configSource: resolved.source,
+    projectId: resolved.config.projectId || null,
     bundleHash: null,
     commit: null,
     builtAt: new Date().toISOString(),
@@ -47,15 +48,27 @@ function firebaseConfigGuard(env, command) {
       } catch {
         info.commit = null // no git (a tarball deploy) — not worth failing over
       }
+      const line = '─'.repeat(72)
+      if (command === 'build' && resolved.envBlankNames.length) {
+        console.warn(`\n${line}
+  These build-environment variables are set but EMPTY: ${resolved.envBlankNames.join(', ')}
+  Blank wins over both .env files and the committed config in Vite's loader, so
+  whoever set them has emptied out a value the repository supplies. Give them a
+  value in Vercel → Settings → Environment Variables, or delete them.
+  The build below uses the committed value from src/firebaseConfig.js.
+${line}\n`)
+      }
       if (command === 'build' && missing.length) {
-        const line = '─'.repeat(72)
         console.warn(`\n${line}
   Building WITHOUT Firebase config: ${missing.join(', ')}
   The deployed app will show the setup notice, not the portal.
   Set all six VITE_FIREBASE_* values in Vercel → Settings → Environment
-  Variables, for BOTH Production and Preview, then redeploy. Locally: copy
-  .env.example to .env.local. See docs/build-deploy.md.
+  Variables, for BOTH Production and Preview, then redeploy, or fill them into
+  src/firebaseConfig.js (the committed config every build can read).
+  See docs/build-deploy.md.
 ${line}\n`)
+      } else if (command === 'build') {
+        console.log(`Firebase config: all six values present (source: ${resolved.source}).`)
       }
     },
     generateBundle() {

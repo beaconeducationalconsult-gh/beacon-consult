@@ -6,12 +6,20 @@ import {
 } from 'firebase/firestore'
 import { getAuth } from 'firebase/auth'
 import { getStorage } from 'firebase/storage'
-import { missingEnvNames } from './lib/setupGuidance'
+import { resolveFirebaseConfig } from './lib/firebaseConfigSource'
+import { firebaseConfig as committedConfig } from './firebaseConfig'
 
 // Firebase web config. These are public identifiers, not secrets — but the app
 // cannot reach Firebase without them, and Vite embeds them at BUILD time, so a
-// build with empty values fails at runtime, not at build time. See .env.example.
-const firebaseConfig = {
+// build with empty values fails at runtime, not at build time.
+//
+// Values come from the build environment when they are there and non-blank, and
+// otherwise from the committed `src/firebaseConfig.js`. The fallback is what
+// makes a deploy immune to a blank Vercel variable and to the encoding traps
+// (a BOM, UTF-16) that make a `.env` file silently unreadable. See
+// `src/lib/firebaseConfigSource.js` for the rule and `docs/gotchas.md` for the
+// two real deploys that produced it.
+const envFirebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
   projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
@@ -19,6 +27,9 @@ const firebaseConfig = {
   messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
   appId: import.meta.env.VITE_FIREBASE_APP_ID,
 }
+
+const resolved = resolveFirebaseConfig({ env: envFirebaseConfig, committed: committedConfig })
+const firebaseConfig = resolved.config
 
 /**
  * Whether the six VITE_FIREBASE_* values were supplied at build time.
@@ -36,7 +47,13 @@ export const firebaseConfigured = Boolean(firebaseConfig.apiKey && firebaseConfi
  * the values are public client config, but there is nothing to show of a value
  * that is not there.
  */
-export const missingFirebaseEnv = missingEnvNames(firebaseConfig)
+export const missingFirebaseEnv = resolved.missing
+
+/**
+ * Where this build's values came from: `'env'`, `'committed'` or `'mixed'`.
+ * Carried into `dist/build-info.json` so a deploy can be asked which one it used.
+ */
+export const firebaseConfigSource = resolved.source
 
 if (!firebaseConfigured) {
   console.error(
