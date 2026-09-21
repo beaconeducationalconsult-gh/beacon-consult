@@ -1,4 +1,5 @@
 import EmptyState from './EmptyState'
+import Button from '../ui/Button'
 import { dataErrorMessage } from '../lib/dataError'
 
 /**
@@ -23,18 +24,18 @@ export default function DataError({ what = 'this data', error }) {
       message={`${cause} (${code})`}
       action={
         <div className="flex flex-col items-center gap-3">
-          {hint && <p className="max-w-md text-xs text-slate-400">{hint}</p>}
+          {hint && <p className="max-w-md text-xs text-subtle">{hint}</p>}
           <div className="flex flex-wrap items-center justify-center gap-2">
             {/* The console link creates the missing index; opening it in a new
                 tab keeps the page (and its error) where the reader left it. */}
             {link && (
-              <a className="btn-secondary text-xs" href={link.href} target="_blank" rel="noreferrer">
+              <Button as="a" variant="secondary" size="sm" href={link.href} target="_blank" rel="noreferrer">
                 {link.label}
-              </a>
+              </Button>
             )}
-            <button type="button" className="btn-secondary text-xs" onClick={() => window.location.reload()}>
+            <Button variant="secondary" size="sm" onClick={() => window.location.reload()}>
               Try again
-            </button>
+            </Button>
           </div>
         </div>
       }

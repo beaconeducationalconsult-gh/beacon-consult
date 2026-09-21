@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import { collection, getDocs, limit, query, where } from 'firebase/firestore'
 import { db } from '../firebase'
 import { useCurriculum } from '../hooks/useCurriculum'
@@ -40,12 +40,22 @@ function queriesFor(source, uid) {
 
 /** One search box across curriculum indicators and the shared libraries. */
 export default function Search() {
-  const [term, setTerm] = useState('')
+  const [searchParams] = useSearchParams()
+  const q = searchParams.get('q')
+  const [term, setTerm] = useState(q || '')
+  const [syncedQ, setSyncedQ] = useState(q)
   const [grade, setGrade] = useState('B1')
   const [rows, setRows] = useState(null)
   const { user } = useAuth()
   const uid = user?.uid
   const { indicators, grade: loadedGrade, error: curriculumError } = useCurriculum(grade)
+
+  // Adopt a new ?q= when the top-bar search navigates here. Render-phase state
+  // adjustment (per React docs) — an effect would cascade an extra render.
+  if (q !== syncedQ) {
+    setSyncedQ(q)
+    if (q != null) setTerm(q)
+  }
 
   const needle = term.trim().toLowerCase()
 

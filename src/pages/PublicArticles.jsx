@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { collection, getDocs, query, where } from 'firebase/firestore'
 import { db } from '../firebase'
-import Navbar from '../components/Navbar'
 import { SkeletonList } from '../components/Skeleton'
 import EmptyState from '../components/EmptyState'
 import { fmtDate } from '../lib/academicCalendar'
@@ -28,8 +27,7 @@ export default function PublicArticles() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-cream">
-      <Navbar />
+    <div>
       <main className="mx-auto max-w-3xl px-4 py-12">
         <h1 className="page-title">Articles</h1>
         <p className="page-subtitle">Teaching practice, written by members of the network.</p>

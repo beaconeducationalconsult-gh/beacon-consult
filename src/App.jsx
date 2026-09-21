@@ -1,10 +1,12 @@
-import { Suspense, lazy } from 'react'
+import { Suspense, lazy, useState } from 'react'
 import { Navigate, Outlet, Route, Routes } from 'react-router-dom'
 import { useAuth } from './context/AuthContext'
 import Sidebar from './components/Sidebar'
+import TopBar from './components/TopBar'
+import PublicLayout from './components/PublicLayout'
 import PendingApproval from './components/PendingApproval'
-import OfflineIndicator from './components/OfflineIndicator'
 import { SkeletonList } from './components/Skeleton'
+import { cn } from './ui/cn'
 
 // Public pages — eager (they're the first thing a visitor sees).
 import Landing from './pages/Landing'
@@ -62,6 +64,25 @@ const Members = lazy(() => import('./pages/Members'))
  */
 function ProtectedLayout() {
   const { user, profile, loading, canUsePortal } = useAuth()
+  const [navOpen, setNavOpen] = useState(false)
+  const [collapsed, setCollapsed] = useState(() => {
+    try {
+      return localStorage.getItem('beacon-sidebar') === 'collapsed'
+    } catch {
+      return false
+    }
+  })
+
+  const toggleCollapse = () =>
+    setCollapsed((c) => {
+      const next = !c
+      try {
+        localStorage.setItem('beacon-sidebar', next ? 'collapsed' : 'expanded')
+      } catch {
+        /* storage unavailable — the toggle still works for this session */
+      }
+      return next
+    })
 
   if (loading || (user && profile === undefined)) {
     return (
@@ -75,20 +96,27 @@ function ProtectedLayout() {
   if (!canUsePortal) return <PendingApproval suspended={profile?.status === 'suspended'} />
 
   return (
-    <div className="min-h-screen bg-cream lg:ml-56">
-      <Sidebar />
-      <main className="mx-auto max-w-5xl px-4 pb-24 pt-6 lg:pt-10">
-        <Suspense
-          fallback={
-            <div className="py-8">
-              <SkeletonList rows={3} />
-            </div>
-          }
-        >
-          <Outlet />
-        </Suspense>
-      </main>
-      <OfflineIndicator />
+    <div className="min-h-screen bg-bg">
+      <Sidebar
+        open={navOpen}
+        onClose={() => setNavOpen(false)}
+        collapsed={collapsed}
+        onToggleCollapse={toggleCollapse}
+      />
+      <div className={cn('flex min-h-screen flex-col transition-[margin] duration-200', collapsed ? 'lg:ml-16' : 'lg:ml-64')}>
+        <TopBar onMenu={() => setNavOpen(true)} />
+        <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-6 md:px-6 md:py-8">
+          <Suspense
+            fallback={
+              <div className="py-8">
+                <SkeletonList rows={3} />
+              </div>
+            }
+          >
+            <Outlet />
+          </Suspense>
+        </main>
+      </div>
     </div>
   )
 }
@@ -97,14 +125,16 @@ export default function App() {
   return (
     <Routes>
       {/* ── Public ─────────────────────────────────────────────────────── */}
-      <Route path="/" element={<Landing />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/signup" element={<SignUp />} />
-      <Route path="/vacancies" element={<PublicVacancies />} />
-      <Route path="/quotes" element={<PublicQuotes />} />
-      <Route path="/calendar" element={<PublicCalendar />} />
-      <Route path="/articles" element={<PublicArticles />} />
-      <Route path="/articles/:articleId" element={<PublicArticleView />} />
+      <Route element={<PublicLayout />}>
+        <Route path="/" element={<Landing />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/vacancies" element={<PublicVacancies />} />
+        <Route path="/quotes" element={<PublicQuotes />} />
+        <Route path="/calendar" element={<PublicCalendar />} />
+        <Route path="/articles" element={<PublicArticles />} />
+        <Route path="/articles/:articleId" element={<PublicArticleView />} />
+      </Route>
 
       {/* ── Portal (approved members only) ─────────────────────────────── */}
       <Route path="/portal" element={<ProtectedLayout />}>

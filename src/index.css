@@ -1,33 +1,122 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
-/* ── Design tokens ──────────────────────────────────────────────────────────
-   Tailwind v4 reads @theme and generates both CSS variables and utilities
-   (bg-brand, text-accent, font-display…). Rebranding happens here, not in
-   component class strings. See docs/conventions.md. */
+/* Dark mode is class-based: ThemeProvider toggles `.dark` on <html> and an
+   inline script in index.html applies it before first paint (no flash). */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ── Brand & accent: FULL scales ──────────────────────────────────────────
+   The old theme defined only 50/100/500/600/700/900 while pages used
+   brand-200/300/800, which silently fell back to stock indigo. Every shade is
+   now defined so nothing resolves off-palette. */
 @theme {
   --font-display: "Fraunces", Georgia, "Times New Roman", serif;
   --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
 
-  /* Brand: indigo primary, amber accent, cream surfaces, slate neutrals. */
   --color-brand-50: #eef2ff;
   --color-brand-100: #e0e7ff;
+  --color-brand-200: #c7d2fe;
+  --color-brand-300: #a5b4fc;
+  --color-brand-400: #818cf8;
   --color-brand-500: #6366f1;
   --color-brand-600: #4f46e5;
   --color-brand-700: #4338ca;
+  --color-brand-800: #3730a3;
   --color-brand-900: #312e81;
+  --color-brand-950: #1e1b4b;
 
+  --color-accent-50: #fffbeb;
+  --color-accent-100: #fef3c7;
+  --color-accent-200: #fde68a;
+  --color-accent-300: #fcd34d;
   --color-accent-400: #fbbf24;
   --color-accent-500: #f59e0b;
   --color-accent-600: #d97706;
+  --color-accent-700: #b45309;
+  --color-accent-800: #92400e;
+  --color-accent-900: #78350f;
 
+  /* Semantic status colours — prefer these over raw red / emerald shades in pages. */
+  --color-success-50: #ecfdf5;
+  --color-success-100: #d1fae5;
+  --color-success-500: #10b981;
+  --color-success-600: #059669;
+  --color-success-700: #047857;
+  --color-warning-50: #fffbeb;
+  --color-warning-100: #fef3c7;
+  --color-warning-500: #f59e0b;
+  --color-warning-600: #d97706;
+  --color-warning-700: #b45309;
+  --color-danger-50: #fef2f2;
+  --color-danger-100: #fee2e2;
+  --color-danger-500: #ef4444;
+  --color-danger-600: #dc2626;
+  --color-danger-700: #b91c1c;
+  --color-info-50: #f0f9ff;
+  --color-info-100: #e0f2fe;
+  --color-info-500: #0ea5e9;
+  --color-info-600: #0284c7;
+  --color-info-700: #0369a1;
+
+  /* Legacy fixed tokens still referenced by pages; removed in later phases. */
   --color-cream: #faf6f1;
   --color-cream-dark: #f1ebe3;
   --color-ink: #1c1917;
 
-  /* Semantic aliases — prefer these in new components. */
-  --color-primary: var(--color-brand-600);
-  --color-surface: #ffffff;
+  /* Elevation. Overridden under .dark below (utilities read these vars). */
+  --shadow-card: 0 1px 2px rgb(16 24 40 / 0.05), 0 1px 3px rgb(16 24 40 / 0.06);
+  --shadow-pop: 0 4px 6px -1px rgb(16 24 40 / 0.08), 0 10px 20px -2px rgb(16 24 40 / 0.1);
+}
+
+/* ── Semantic surface & text tokens (the theme-switchable layer) ───────────
+   Raw custom properties are the source of truth; `@theme inline` maps them
+   into the --color-* namespace so utilities (bg-surface, text-muted, …)
+   resolve the RUNTIME value and therefore flip under .dark. */
+:root {
+  --bg: #faf6f1;
+  --surface: #ffffff;
+  --surface-2: #f4efe8;
+  --line: #e7e0d8;
+  --line-2: #e2e8f0;
+  --heading: #0f172a;
+  --text: #1e293b;
+  --muted: #556070;
+  --subtle: #8a94a3;
+  --primary: var(--color-brand-600);
+  --primary-hover: var(--color-brand-700);
+  --on-primary: #ffffff;
+}
+
+.dark {
+  --bg: #0f1218;
+  --surface: #1a1f29;
+  --surface-2: #232936;
+  --line: #262d3a;
+  --line-2: #2c3444;
+  --heading: #f1f5f9;
+  --text: #cbd5e1;
+  --muted: #94a3b8;
+  --subtle: #64748b;
+  --primary: var(--color-brand-400);
+  --primary-hover: var(--color-brand-300);
+  --on-primary: #1e1b4b;
+  --shadow-card: 0 1px 2px rgb(0 0 0 / 0.4);
+  --shadow-pop: 0 8px 24px rgb(0 0 0 / 0.5);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-line-2: var(--line-2);
+  --color-heading: var(--heading);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-subtle: var(--subtle);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-on-primary: var(--on-primary);
 }
 
 @layer base {
@@ -35,76 +124,87 @@
     -webkit-text-size-adjust: 100%;
   }
   body {
-    @apply bg-cream text-slate-800 font-sans antialiased;
+    @apply bg-bg text-text font-sans antialiased;
   }
-  /* Visible, consistent focus for keyboard users everywhere. */
+  /* Visible, consistent focus for keyboard users everywhere, per theme. */
   :focus-visible {
-    @apply outline-2 outline-offset-2 outline-brand-600;
+    @apply outline-2 outline-offset-2 outline-primary;
   }
 }
 
+/* ── Type scale ─────────────────────────────────────────────────────────── */
+@utility text-display {
+  @apply font-display text-3xl font-semibold tracking-tight text-heading md:text-4xl;
+}
+@utility text-title {
+  @apply text-base font-semibold text-heading;
+}
+@utility text-body {
+  @apply text-sm text-text;
+}
+@utility text-meta {
+  @apply text-xs text-muted;
+}
+@utility text-label {
+  @apply text-xs font-semibold uppercase tracking-wide text-muted;
+}
+
+/* ── Composition primitives (theme-aware) ───────────────────────────────── */
 @utility page-title {
-  @apply text-2xl font-bold tracking-tight text-slate-900;
+  @apply text-2xl font-bold tracking-tight text-heading;
 }
 @utility page-subtitle {
-  @apply mt-1 text-sm text-slate-600;
+  @apply mt-1 text-sm text-muted;
 }
 @utility section-heading {
-  @apply text-xs font-semibold uppercase tracking-wider text-slate-500;
+  @apply text-xs font-semibold uppercase tracking-wider text-muted;
 }
 @utility card {
-  @apply rounded-2xl border border-slate-200 bg-white shadow-sm;
+  @apply rounded-2xl border border-line-2 bg-surface shadow-card;
 }
 @utility card-hover {
-  @apply transition-shadow hover:shadow-md;
+  @apply transition-shadow hover:shadow-pop;
 }
 @utility card-title {
-  @apply font-semibold text-slate-900;
+  @apply font-semibold text-heading;
 }
 @utility card-meta {
-  @apply text-xs text-slate-500;
+  @apply text-xs text-muted;
 }
 @utility label-caps {
-  @apply mb-1.5 block text-xs font-semibold uppercase tracking-wide text-slate-600;
+  @apply mb-1.5 block text-xs font-semibold uppercase tracking-wide text-muted;
 }
 @utility input {
-  @apply w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900
-           placeholder:text-slate-400 focus:border-brand-600 focus:outline-none
-           focus:ring-2 focus:ring-brand-600/20 disabled:bg-slate-100 disabled:text-slate-500;
+  @apply w-full rounded-lg border border-line-2 bg-surface px-3 py-2 text-sm text-heading
+           placeholder:text-subtle focus:border-primary focus:outline-none
+           focus:ring-2 focus:ring-primary/20 disabled:bg-surface-2 disabled:text-muted;
 }
 @utility btn {
   @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold
            transition-colors disabled:cursor-not-allowed disabled:opacity-50;
 }
 @utility btn-primary {
-  @apply btn bg-brand-600 text-white hover:bg-brand-700;
+  @apply btn bg-primary text-on-primary hover:bg-primary-hover;
 }
 @utility btn-secondary {
-  @apply btn border border-slate-300 bg-white text-slate-700 hover:bg-slate-50;
+  @apply btn border border-line-2 bg-surface text-text hover:bg-surface-2;
 }
 @utility btn-accent {
   @apply btn bg-accent-500 text-ink hover:bg-accent-400;
 }
 @utility btn-danger {
-  @apply btn bg-red-600 text-white hover:bg-red-700;
+  @apply btn bg-danger-600 text-white hover:bg-danger-700;
 }
 @utility btn-ghost {
-  @apply btn text-slate-600 hover:bg-slate-100 hover:text-slate-900;
+  @apply btn text-muted hover:bg-surface-2 hover:text-heading;
 }
 @utility chip {
-  @apply inline-flex items-center gap-1 rounded-full bg-slate-100 px-2.5 py-0.5
-           text-xs font-medium text-slate-600;
+  @apply inline-flex items-center gap-1 rounded-full bg-surface-2 px-2.5 py-0.5
+           text-xs font-medium text-muted;
 }
 @utility chip-brand {
-  @apply chip bg-brand-50 text-brand-700;
+  @apply chip bg-brand-50 text-brand-700 dark:bg-brand-500/15 dark:text-brand-300;
 }
 @utility link {
-  @apply font-medium text-brand-700 underline-offset-4 hover:underline;
-}
-
-/* The app targets light mode only; keep form controls and scrollbars sane. */
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: light;
-  }
+  @apply font-medium text-primary underline-offset-4 hover:underline;
 }

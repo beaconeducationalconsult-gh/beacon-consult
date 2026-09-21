@@ -80,7 +80,7 @@ export default function BeceMockPage() {
       {packs?.length === 0 && (
         <EmptyState
           title="The served bank has no JHS mathematics yet"
-          body="This page composes from the bundle's starter bank (public/curriculum/questions). Install a bundle that carries it, or import the bank from the question bank page first."
+          message="This page composes from the bundle's starter bank (public/curriculum/questions). Install a bundle that carries it, or import the bank from the question bank page first."
         />
       )}
 
