@@ -1159,10 +1159,13 @@ git push origin arena/01a0af88-beacon-consult
 | `docs/conventions.md` | the coding conventions the linter enforces |
 | `docs/playbooks.md` | procedures for recurring tasks |
 | `docs/TODO.md` | what is done, what is open, and what was decided (the project's memory) |
+| `docs/project-state.md` | the five surfaces (GitHub, Firebase, Vercel, your machine, the sandbox) + your browser, and the 60-second triage |
 | `docs/code-bible.md`, `docs/project-blueprint.md` | the original design documents |
 | `docs/NACCA_QUESTION_BANK.yaml` | the question-bank specification |
 
-`git-dictionary.md` and `project.md` are the owner's files — read them, but do not edit them.
+`docs/git-dictionary.md` and `docs/project.md` are the owner's files — read them, but do not edit
+them. (`docs/project-state.md` is the map of the five places the project lives, and the triage to
+run when something looks wrong.)
 
 ---
 

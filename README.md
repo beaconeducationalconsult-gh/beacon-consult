@@ -25,6 +25,10 @@ project, run the app locally, become the first administrator, publish the rules 
 deploy to Vercel, verify it — then work on the data, the code, and the exports. Written to be
 readable by someone who has never seen the repository.
 
+**[docs/project-state.md](docs/project-state.md)** is the map of the five places this project lives
+(GitHub, Firebase, Vercel, your machine, the sandbox) plus your browser: what each one owns, the one
+check that answers it, the branch model, and a 60-second triage for when something looks wrong.
+
 ## Quick start
 
 ```bash

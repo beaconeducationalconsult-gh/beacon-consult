@@ -184,6 +184,9 @@ node scripts/verify_deploy.mjs -Url https://your-deploy.vercel.app   # Node only
 .\scripts\deploy_check.ps1 -Url https://your-deploy.vercel.app       # the same, from PowerShell
 ```
 
+`docs/project-state.md` is the wider map — every surface, its own check, and what each one has been
+known to break.
+
 Run it **before** telling anyone the deploy is ready, and again after every rules change. It is
 also the fastest way to tell the two silent failures apart: a deploy built without the config
 (the setup notice instead of the portal) and a deploy serving an older curriculum than this
