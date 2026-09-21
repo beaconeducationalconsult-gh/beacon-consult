@@ -1,0 +1,126 @@
+name: CI
+
+# The gate that used to be "whoever remembers to run make check".
+# Steps mirror `make check`; keep the two in sync.
+on:
+  push:
+    branches: ['**']
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  portal:
+    name: Lint, test, build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      # Reads packageManager: yarn@4.9.4 from package.json.
+      - run: corepack enable
+
+      - name: Install
+        run: yarn install --immutable
+
+      - name: Lint
+        run: yarn lint
+
+      - name: Test
+        run: yarn test
+
+      - name: Build
+        run: yarn build
+
+  rules:
+    name: Firestore rules (emulator)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      # The Firestore emulator is a JVM program. The runner image ships JDKs,
+      # but pinning one keeps this job from depending on the image's default.
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - run: corepack enable
+
+      - name: Install
+        run: yarn install --immutable
+
+      # The one check that asks the rules engine instead of reading the rules
+      # file: `yarn test:rules` starts the Firestore emulator (via
+      # firebase-tools, downloaded pinned) and runs tests/rules/ against it.
+      # It cannot run inside `make check`, which is why it has its own job.
+      - name: Ask the emulator for every permission decision
+        id: rules
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          yarn test:rules 2>&1 | tee /tmp/rules.log
+
+      # Vitest annotates each failing test on the check run by itself; this adds
+      # the one thing it does not — the tally — so a red build says how much of
+      # the matrix moved without opening the log.
+      - name: Summarise the failure
+        if: steps.rules.outcome == 'failure'
+        run: |
+          sed -r 's/\x1B\[[0-9;]*[A-Za-z]//g' /tmp/rules.log \
+            | grep -aE 'Test Files|Tests +[0-9]+' | tr -s ' ' | paste -sd' | ' - | cut -c1-300 \
+            | sed 's/^/::error::/'
+          exit 1
+
+  dataset:
+    name: Curriculum data audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+
+      # validate_app_curriculum.py and build_inventory.py are stdlib-only, so
+      # there is nothing to pip install. `make inventory` exits non-zero on a
+      # data *error*; warnings (known gaps) are printed and allowed through.
+      # Static: every script must compile and be able to import its own shim, so
+      # the graveyard of one-shot generators cannot rot further (P2-8).
+      - name: Check the scripts still point at code that exists
+        run: make check-scripts
+
+      - name: Validate the app curriculum bundle
+        run: make validate-curriculum
+
+      # The offline half of scripts/verify_deploy.py: the bundle hash exists and
+      # public/sw.js reads it, so a rebuilt bundle cannot ship with a service
+      # worker that keeps serving the old one (P2-3).
+      - name: Check the service worker still keys off the bundle hash
+        run: make bundle-hash
+
+      # The bundle is committed, so it must match the data it is built from, and
+      # it must not quietly outgrow the budget in scripts/bundle_size_report.py
+      # (P2-6). Both are cheap: a rebuild takes about three seconds.
+      - name: Check the committed bundle matches its sources and its budget
+        run: |
+          make bundle-check
+          make bundle-size
+
+      - name: Rebuild the inventory and check it is current
+        run: |
+          make inventory
+          if ! git diff --quiet -- data/inventory.json; then
+            echo "::error::data/inventory.json is stale — run 'make inventory' and commit the result."
+            git diff --stat -- data/inventory.json
+            exit 1
+          fi

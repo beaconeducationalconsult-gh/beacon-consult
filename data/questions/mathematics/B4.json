@@ -1,19 +1,72 @@
-[
+{
+ "subjectId": "mathematics",
+ "grade": "B4",
+ "note": "Hand-written questions. The generator never writes this file; see scripts/build_question_bank.py for how authored and generated items are merged.",
+ "items": [
   {
-    "indicatorCode": "B4.1.1.1.1",
-    "questions": [
-      {
-        "prompt": "What is the place value of 5 in 5,432?",
-        "options": ["Ones", "Tens", "Hundreds", "Thousands"],
-        "answer": "Thousands",
-        "difficulty": "core"
-      },
-      {
-        "prompt": "Write five thousand four hundred and thirty two in figures.",
-        "options": null,
-        "answer": "5,432",
-        "difficulty": "reinforcement"
-      }
-    ]
+   "id": "B4.1.1.1.1-authored-1",
+   "indicatorCode": "B4.1.1.1.1",
+   "prompt": "What is the place value of 5 in 5,432?",
+   "type": "mcq",
+   "options": [
+    "Thousands",
+    "Ones",
+    "Tens",
+    "Hundreds"
+   ],
+   "answer": "Thousands",
+   "answerLetter": "A",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "authored"
+  },
+  {
+   "id": "B4.1.1.1.1-authored-2",
+   "indicatorCode": "B4.1.1.1.1",
+   "prompt": "Write five thousand four hundred and thirty two in figures.",
+   "type": "short",
+   "options": null,
+   "answer": "5,432",
+   "answerLetter": null,
+   "marks": 3,
+   "difficulty": "reinforcement",
+   "source": "authored"
+  },
+  {
+   "id": "B4.4.1.1.3-authored-1",
+   "indicatorCode": "B4.4.1.1.3",
+   "prompt": "The same data about the number of pupils who walk to school is shown in a pictograph and in a bar graph. Name one thing that is the same in the two graphs and one thing that is different.",
+   "type": "essay",
+   "options": null,
+   "answer": "Same: both show the same number for each group of pupils. Different: the pictograph uses symbols and a key, the bar graph uses bars and a scale.",
+   "answerLetter": null,
+   "marks": 3,
+   "difficulty": "core",
+   "source": "authored"
+  },
+  {
+   "id": "B4.4.1.1.3-authored-2",
+   "indicatorCode": "B4.4.1.1.3",
+   "prompt": "Two bar graphs show the same data. One has its vertical scale starting at 0 and the other starts at 40. Explain why the two graphs look different even though the data are the same.",
+   "type": "essay",
+   "options": null,
+   "answer": "Starting the scale at 40 cuts off the lower part, so the bars for 40 or more pupils all look tall and the differences look bigger than they really are.",
+   "answerLetter": null,
+   "marks": 3,
+   "difficulty": "core",
+   "source": "authored"
+  },
+  {
+   "id": "B4.4.1.1.3-authored-3",
+   "indicatorCode": "B4.4.1.1.3",
+   "prompt": "Two graphs of the same data must always look exactly the same.",
+   "type": "truefalse",
+   "options": null,
+   "answer": "False",
+   "answerLetter": null,
+   "marks": 1,
+   "difficulty": "core",
+   "source": "authored"
   }
-]
+ ]
+}

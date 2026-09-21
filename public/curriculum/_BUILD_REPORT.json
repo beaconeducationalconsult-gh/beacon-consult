@@ -178,7 +178,7 @@
    "indicators": 169,
    "lessons": 0,
    "scheme_subjects": 0,
-   "kb": 135
+   "kb": 140
   },
   {
    "grade": "KG2",
@@ -186,7 +186,7 @@
    "indicators": 170,
    "lessons": 0,
    "scheme_subjects": 0,
-   "kb": 149
+   "kb": 150
   },
   {
    "grade": "B1",
@@ -194,7 +194,7 @@
    "indicators": 287,
    "lessons": 1440,
    "scheme_subjects": 8,
-   "kb": 4045
+   "kb": 4040
   },
   {
    "grade": "B2",
@@ -202,7 +202,7 @@
    "indicators": 249,
    "lessons": 1260,
    "scheme_subjects": 7,
-   "kb": 3504
+   "kb": 3533
   },
   {
    "grade": "B3",
@@ -210,7 +210,7 @@
    "indicators": 276,
    "lessons": 1260,
    "scheme_subjects": 7,
-   "kb": 3583
+   "kb": 3616
   },
   {
    "grade": "B4",
@@ -218,7 +218,7 @@
    "indicators": 517,
    "lessons": 1260,
    "scheme_subjects": 7,
-   "kb": 3775
+   "kb": 3797
   },
   {
    "grade": "B5",
@@ -226,7 +226,7 @@
    "indicators": 590,
    "lessons": 1260,
    "scheme_subjects": 7,
-   "kb": 3868
+   "kb": 3900
   },
   {
    "grade": "B6",
@@ -234,7 +234,7 @@
    "indicators": 572,
    "lessons": 1260,
    "scheme_subjects": 7,
-   "kb": 3807
+   "kb": 3837
   },
   {
    "grade": "B7",
@@ -242,7 +242,7 @@
    "indicators": 454,
    "lessons": 1800,
    "scheme_subjects": 10,
-   "kb": 5279
+   "kb": 5311
   },
   {
    "grade": "B8",
@@ -250,7 +250,7 @@
    "indicators": 379,
    "lessons": 1800,
    "scheme_subjects": 10,
-   "kb": 5295
+   "kb": 5301
   },
   {
    "grade": "B9",
@@ -258,8 +258,9 @@
    "indicators": 377,
    "lessons": 1800,
    "scheme_subjects": 10,
-   "kb": 5304
+   "kb": 5319
   }
  ],
- "totalKb": 38751
+ "totalKb": 39259,
+ "bundleHash": "c10a82bca9b9"
 }

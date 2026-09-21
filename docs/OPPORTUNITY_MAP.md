@@ -9,10 +9,10 @@ Companion to `REPO_ANALYSIS_REPORT.md`. Prepared 2026-09-11.
 
 | Asset | Volume | State |
 |---|---|---|
-| Curriculum database | **3,095 indicators**, B1–B9, 13 subjects, coded `B{grade}.{strand}.{substrand}.{standard}.{indicator}` | Complete, audited against source PDFs |
+| Curriculum database | **4,040 indicators**, KG1–B9, 16 subjects, coded `B{grade}.{strand}.{substrand}.{standard}.{indicator}` | Complete, audited against source PDFs |
 | Written lesson plans | **13,140** (73 grade-subjects × 180 lessons) | Complete, machine-generated from template |
 | Published books | **73 DOCX** (one per grade-subject) | Complete — B1 v1/v2 conflict resolved, grade bands corrected |
-| Source provenance | 24 official NaCCA PDFs + full cross-check audit trail | Strong — this is defensible |
+| Source provenance | 27 official NaCCA PDFs + full cross-check audit trail | Strong — this is defensible |
 | Web application | React/Firebase PWA, 17 collections, ~15 modules | Built, deployed, unfinished in places |
 | Student quiz PWA | Offline-first Dexie app, B7–B9 | Partially built (has a 4-phase roadmap) |
 | **Question bank** | **Zero questions** | ❌ Designed as user-generated; empty |
@@ -72,7 +72,7 @@ budgeted spend rather than out-of-pocket teacher spend).
 
 | Product | Why only you can |
 |---|---|
-| **Curriculum coverage analytics** for schools/chains/districts | Requires the indicator map + scheduling. `SchoolCoverage.jsx` already started. |
+| **Curriculum coverage analytics** for schools/chains/districts | Requires the indicator map + scheduling, which you have. No coverage UI exists yet — it is a build, not an extension of something started. |
 | **Textbook / publisher alignment** | You own the reference key publishers must map to. |
 | **CPD content + NTC accreditation** | 13,140 lessons are ready-made training material; accreditation unlocks institutional budgets. |
 | **Remediation keyed to failure data** | 35,382 kids failed on *specific* indicators; your whole model is indicator-keyed. |

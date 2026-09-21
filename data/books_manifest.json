@@ -1,0 +1,2704 @@
+{
+ "generatedBy": "scripts/build_books_rollout.py",
+ "generator": "seed/build_book_skeleton.py",
+ "what": "Book skeletons: a textbook and a workbook per subject-grade, one lesson per indicator, with every unwritten section marked as an AUTHOR-TODO box. The documents themselves are gitignored build outputs — this manifest is what the repository records about them.",
+ "contentHash": "sha256 over a document's parts, not over its zip container: python-docx does not promise byte-identical archives, so a hash of the file's bytes would change on every run and mean nothing. A changed contentHash means the document's content changed.",
+ "pilot": {
+  "subject": "mathematics",
+  "grade": "B1"
+ },
+ "pairs": 84,
+ "documents": 168,
+ "kilobytes": 7687,
+ "withRevisions": [],
+ "books": [
+  {
+   "subject": "kindergarten",
+   "subjectName": "Kindergarten",
+   "grade": "KG1",
+   "hasSchedule": false,
+   "indicators": 169,
+   "structure": {
+    "chapters": 7,
+    "units": 28,
+    "topics": 28,
+    "lessons": 169
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "kindergarten-textbook-skeleton.docx",
+      "bytes": 64107,
+      "contentHash": "52bbbfd9560d5d8f",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "kindergarten-workbook-skeleton.docx",
+      "bytes": 50191,
+      "contentHash": "b66b3ce67936d157",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "kindergarten",
+   "subjectName": "Kindergarten",
+   "grade": "KG2",
+   "hasSchedule": false,
+   "indicators": 170,
+   "structure": {
+    "chapters": 7,
+    "units": 28,
+    "topics": 28,
+    "lessons": 170
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "kindergarten-textbook-skeleton.docx",
+      "bytes": 65608,
+      "contentHash": "4f73ad4fa4be35ed",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "kindergarten-workbook-skeleton.docx",
+      "bytes": 50172,
+      "contentHash": "8da3fb8d4ccb006b",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "creative-arts",
+   "subjectName": "Creative Arts",
+   "grade": "B1",
+   "hasSchedule": true,
+   "indicators": 42,
+   "structure": {
+    "chapters": 2,
+    "units": 8,
+    "topics": 14,
+    "lessons": 42
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "creative-arts-textbook-skeleton.docx",
+      "bytes": 47689,
+      "contentHash": "da6452dc9cc253c3",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "creative-arts-workbook-skeleton.docx",
+      "bytes": 41391,
+      "contentHash": "4a3a0fa7cbbdf041",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "english-language",
+   "subjectName": "English Language",
+   "grade": "B1",
+   "hasSchedule": true,
+   "indicators": 72,
+   "structure": {
+    "chapters": 5,
+    "units": 30,
+    "topics": 32,
+    "lessons": 72
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "english-language-textbook-skeleton.docx",
+      "bytes": 61711,
+      "contentHash": "51d750849d5f2f6f",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "english-language-workbook-skeleton.docx",
+      "bytes": 45007,
+      "contentHash": "d0e2f021a538d1e2",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "ghanaian-language",
+   "subjectName": "Ghanaian Language",
+   "grade": "B1",
+   "hasSchedule": true,
+   "indicators": 77,
+   "structure": {
+    "chapters": 5,
+    "units": 29,
+    "topics": 31,
+    "lessons": 77
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "ghanaian-language-textbook-skeleton.docx",
+      "bytes": 57341,
+      "contentHash": "1e393546376a4f89",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "ghanaian-language-workbook-skeleton.docx",
+      "bytes": 44933,
+      "contentHash": "50d8215de1298539",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "history",
+   "subjectName": "History",
+   "grade": "B1",
+   "hasSchedule": true,
+   "indicators": 8,
+   "structure": {
+    "chapters": 4,
+    "units": 6,
+    "topics": 6,
+    "lessons": 8
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "history-textbook-skeleton.docx",
+      "bytes": 42898,
+      "contentHash": "be25302810d68ba3",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "history-workbook-skeleton.docx",
+      "bytes": 38946,
+      "contentHash": "4be8a9235c1b1d44",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "mathematics",
+   "subjectName": "Mathematics",
+   "grade": "B1",
+   "hasSchedule": true,
+   "indicators": 24,
+   "structure": {
+    "chapters": 4,
+    "units": 9,
+    "topics": 12,
+    "lessons": 24
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "mathematics-textbook-skeleton.docx",
+      "bytes": 51719,
+      "contentHash": "823d1c387334e1db",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "mathematics-workbook-skeleton.docx",
+      "bytes": 40389,
+      "contentHash": "d7fc810550401a13",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "owop",
+   "subjectName": "Our World Our People",
+   "grade": "B1",
+   "hasSchedule": true,
+   "indicators": 24,
+   "structure": {
+    "chapters": 5,
+    "units": 20,
+    "topics": 23,
+    "lessons": 24
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "owop-textbook-skeleton.docx",
+      "bytes": 48766,
+      "contentHash": "03a5c9bf60143cd0",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "owop-workbook-skeleton.docx",
+      "bytes": 40811,
+      "contentHash": "55fcf0a68e837581",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "rme",
+   "subjectName": "Religious and Moral Education",
+   "grade": "B1",
+   "hasSchedule": true,
+   "indicators": 9,
+   "structure": {
+    "chapters": 4,
+    "units": 5,
+    "topics": 5,
+    "lessons": 9
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "rme-textbook-skeleton.docx",
+      "bytes": 42639,
+      "contentHash": "9f67df0fa426128e",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "rme-workbook-skeleton.docx",
+      "bytes": 38885,
+      "contentHash": "0331109d1d485401",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "science",
+   "subjectName": "Science",
+   "grade": "B1",
+   "hasSchedule": true,
+   "indicators": 31,
+   "structure": {
+    "chapters": 5,
+    "units": 13,
+    "topics": 24,
+    "lessons": 31
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "science-textbook-skeleton.docx",
+      "bytes": 58922,
+      "contentHash": "2285d98c9e950e6b",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "science-workbook-skeleton.docx",
+      "bytes": 41526,
+      "contentHash": "6d0a04aa160c745e",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "creative-arts",
+   "subjectName": "Creative Arts",
+   "grade": "B2",
+   "hasSchedule": true,
+   "indicators": 42,
+   "structure": {
+    "chapters": 2,
+    "units": 8,
+    "topics": 14,
+    "lessons": 42
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "creative-arts-textbook-skeleton.docx",
+      "bytes": 51633,
+      "contentHash": "196ef4f1b31a778e",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "creative-arts-workbook-skeleton.docx",
+      "bytes": 41960,
+      "contentHash": "5955da9ffdb60c51",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "english-language",
+   "subjectName": "English Language",
+   "grade": "B2",
+   "hasSchedule": true,
+   "indicators": 67,
+   "structure": {
+    "chapters": 5,
+    "units": 30,
+    "topics": 33,
+    "lessons": 67
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "english-language-textbook-skeleton.docx",
+      "bytes": 54715,
+      "contentHash": "01b30899fe275a8a",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "english-language-workbook-skeleton.docx",
+      "bytes": 44474,
+      "contentHash": "36ed19a465b1b6a3",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "ghanaian-language",
+   "subjectName": "Ghanaian Language",
+   "grade": "B2",
+   "hasSchedule": true,
+   "indicators": 69,
+   "structure": {
+    "chapters": 5,
+    "units": 28,
+    "topics": 30,
+    "lessons": 69
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "ghanaian-language-textbook-skeleton.docx",
+      "bytes": 49738,
+      "contentHash": "0d0e86e9388a1052",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "ghanaian-language-workbook-skeleton.docx",
+      "bytes": 44217,
+      "contentHash": "1c0575a362b621f1",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "history",
+   "subjectName": "History",
+   "grade": "B2",
+   "hasSchedule": true,
+   "indicators": 4,
+   "structure": {
+    "chapters": 2,
+    "units": 4,
+    "topics": 4,
+    "lessons": 4
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "history-textbook-skeleton.docx",
+      "bytes": 45025,
+      "contentHash": "d5f7f350f92113bf",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "history-workbook-skeleton.docx",
+      "bytes": 38436,
+      "contentHash": "89adbe4c1d08caf8",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "mathematics",
+   "subjectName": "Mathematics",
+   "grade": "B2",
+   "hasSchedule": true,
+   "indicators": 29,
+   "structure": {
+    "chapters": 4,
+    "units": 9,
+    "topics": 15,
+    "lessons": 29
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "mathematics-textbook-skeleton.docx",
+      "bytes": 46941,
+      "contentHash": "1ab0e4d1ee0236d4",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "mathematics-workbook-skeleton.docx",
+      "bytes": 40918,
+      "contentHash": "4df9ca018c1df94a",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "rme",
+   "subjectName": "Religious and Moral Education",
+   "grade": "B2",
+   "hasSchedule": true,
+   "indicators": 13,
+   "structure": {
+    "chapters": 4,
+    "units": 8,
+    "topics": 8,
+    "lessons": 13
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "rme-textbook-skeleton.docx",
+      "bytes": 45089,
+      "contentHash": "2f4ddfde935c52ff",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "rme-workbook-skeleton.docx",
+      "bytes": 39336,
+      "contentHash": "3d4b96c1ab6d4823",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "science",
+   "subjectName": "Science",
+   "grade": "B2",
+   "hasSchedule": true,
+   "indicators": 25,
+   "structure": {
+    "chapters": 5,
+    "units": 12,
+    "topics": 21,
+    "lessons": 25
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "science-textbook-skeleton.docx",
+      "bytes": 46238,
+      "contentHash": "05a740918936eec2",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "science-workbook-skeleton.docx",
+      "bytes": 41110,
+      "contentHash": "8cf6668748e9ad38",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "creative-arts",
+   "subjectName": "Creative Arts",
+   "grade": "B3",
+   "hasSchedule": true,
+   "indicators": 40,
+   "structure": {
+    "chapters": 2,
+    "units": 8,
+    "topics": 14,
+    "lessons": 40
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "creative-arts-textbook-skeleton.docx",
+      "bytes": 51678,
+      "contentHash": "fa40a423a8f407fc",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "creative-arts-workbook-skeleton.docx",
+      "bytes": 41881,
+      "contentHash": "04c042aac7bf2027",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "english-language",
+   "subjectName": "English Language",
+   "grade": "B3",
+   "hasSchedule": true,
+   "indicators": 78,
+   "structure": {
+    "chapters": 5,
+    "units": 35,
+    "topics": 39,
+    "lessons": 78
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "english-language-textbook-skeleton.docx",
+      "bytes": 57464,
+      "contentHash": "d98702abf8514fd8",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "english-language-workbook-skeleton.docx",
+      "bytes": 45680,
+      "contentHash": "8ed2e95d80111ec7",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "ghanaian-language",
+   "subjectName": "Ghanaian Language",
+   "grade": "B3",
+   "hasSchedule": true,
+   "indicators": 73,
+   "structure": {
+    "chapters": 5,
+    "units": 31,
+    "topics": 33,
+    "lessons": 73
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "ghanaian-language-textbook-skeleton.docx",
+      "bytes": 50592,
+      "contentHash": "3cf7af72c76c5706",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "ghanaian-language-workbook-skeleton.docx",
+      "bytes": 44776,
+      "contentHash": "4d12f17177080543",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "history",
+   "subjectName": "History",
+   "grade": "B3",
+   "hasSchedule": true,
+   "indicators": 7,
+   "structure": {
+    "chapters": 2,
+    "units": 5,
+    "topics": 5,
+    "lessons": 7
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "history-textbook-skeleton.docx",
+      "bytes": 43601,
+      "contentHash": "da0d22aecf2f71aa",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "history-workbook-skeleton.docx",
+      "bytes": 38697,
+      "contentHash": "0c19215e8399f1f1",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "mathematics",
+   "subjectName": "Mathematics",
+   "grade": "B3",
+   "hasSchedule": true,
+   "indicators": 39,
+   "structure": {
+    "chapters": 4,
+    "units": 9,
+    "topics": 19,
+    "lessons": 39
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "mathematics-textbook-skeleton.docx",
+      "bytes": 49402,
+      "contentHash": "a9fb7019115ff5e7",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "mathematics-workbook-skeleton.docx",
+      "bytes": 41919,
+      "contentHash": "8758d6ee49934579",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "rme",
+   "subjectName": "Religious and Moral Education",
+   "grade": "B3",
+   "hasSchedule": true,
+   "indicators": 14,
+   "structure": {
+    "chapters": 4,
+    "units": 7,
+    "topics": 7,
+    "lessons": 14
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "rme-textbook-skeleton.docx",
+      "bytes": 45266,
+      "contentHash": "253f00e575896234",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "rme-workbook-skeleton.docx",
+      "bytes": 39348,
+      "contentHash": "ee23f340fa3fed9e",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "science",
+   "subjectName": "Science",
+   "grade": "B3",
+   "hasSchedule": true,
+   "indicators": 25,
+   "structure": {
+    "chapters": 5,
+    "units": 14,
+    "topics": 21,
+    "lessons": 25
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "science-textbook-skeleton.docx",
+      "bytes": 46647,
+      "contentHash": "240b120599d96a6a",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "science-workbook-skeleton.docx",
+      "bytes": 41297,
+      "contentHash": "a8928cbffc0aaa22",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "computing",
+   "subjectName": "Computing",
+   "grade": "B4",
+   "hasSchedule": false,
+   "indicators": 27,
+   "structure": {
+    "chapters": 3,
+    "units": 6,
+    "topics": 7,
+    "lessons": 27
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "computing-textbook-skeleton.docx",
+      "bytes": 44618,
+      "contentHash": "7e3a69db1b0571a9",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "computing-workbook-skeleton.docx",
+      "bytes": 40124,
+      "contentHash": "cbe6fa0bd2023c4f",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "creative-arts",
+   "subjectName": "Creative Arts",
+   "grade": "B4",
+   "hasSchedule": true,
+   "indicators": 47,
+   "structure": {
+    "chapters": 2,
+    "units": 8,
+    "topics": 14,
+    "lessons": 47
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "creative-arts-textbook-skeleton.docx",
+      "bytes": 52122,
+      "contentHash": "15ac9373c94503f9",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "creative-arts-workbook-skeleton.docx",
+      "bytes": 42193,
+      "contentHash": "26bb652e5d0063f5",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "english-language",
+   "subjectName": "English Language",
+   "grade": "B4",
+   "hasSchedule": true,
+   "indicators": 129,
+   "structure": {
+    "chapters": 6,
+    "units": 46,
+    "topics": 62,
+    "lessons": 129
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "english-language-textbook-skeleton.docx",
+      "bytes": 70294,
+      "contentHash": "f7969bbafa5b027c",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "english-language-workbook-skeleton.docx",
+      "bytes": 50289,
+      "contentHash": "eb32ff4eab70d986",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "french",
+   "subjectName": "French",
+   "grade": "B4",
+   "hasSchedule": false,
+   "indicators": 88,
+   "structure": {
+    "chapters": 4,
+    "units": 17,
+    "topics": 65,
+    "lessons": 88
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "french-textbook-skeleton.docx",
+      "bytes": 54357,
+      "contentHash": "1422c76dd9730e9c",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "french-workbook-skeleton.docx",
+      "bytes": 44141,
+      "contentHash": "997580fb4bacc70d",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "ghanaian-language",
+   "subjectName": "Ghanaian Language",
+   "grade": "B4",
+   "hasSchedule": true,
+   "indicators": 83,
+   "structure": {
+    "chapters": 6,
+    "units": 34,
+    "topics": 34,
+    "lessons": 83
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "ghanaian-language-textbook-skeleton.docx",
+      "bytes": 52050,
+      "contentHash": "bb1ac4c0b9056db7",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "ghanaian-language-workbook-skeleton.docx",
+      "bytes": 45521,
+      "contentHash": "d70eb8e1a866f37b",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "history",
+   "subjectName": "History",
+   "grade": "B4",
+   "hasSchedule": true,
+   "indicators": 10,
+   "structure": {
+    "chapters": 5,
+    "units": 7,
+    "topics": 9,
+    "lessons": 10
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "history-textbook-skeleton.docx",
+      "bytes": 45269,
+      "contentHash": "a3ce06f925350165",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "history-workbook-skeleton.docx",
+      "bytes": 39248,
+      "contentHash": "a1684023cb204768",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "mathematics",
+   "subjectName": "Mathematics",
+   "grade": "B4",
+   "hasSchedule": true,
+   "indicators": 71,
+   "structure": {
+    "chapters": 4,
+    "units": 11,
+    "topics": 26,
+    "lessons": 71
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "mathematics-textbook-skeleton.docx",
+      "bytes": 55340,
+      "contentHash": "87c50eb7949d5f10",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "mathematics-workbook-skeleton.docx",
+      "bytes": 44269,
+      "contentHash": "d90262b30e440618",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "owop",
+   "subjectName": "Our World Our People",
+   "grade": "B4",
+   "hasSchedule": false,
+   "indicators": 25,
+   "structure": {
+    "chapters": 5,
+    "units": 17,
+    "topics": 23,
+    "lessons": 25
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "owop-textbook-skeleton.docx",
+      "bytes": 44015,
+      "contentHash": "196fd3542915ca07",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "owop-workbook-skeleton.docx",
+      "bytes": 41048,
+      "contentHash": "a619ce74b3adeaac",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "rme",
+   "subjectName": "Religious and Moral Education",
+   "grade": "B4",
+   "hasSchedule": true,
+   "indicators": 13,
+   "structure": {
+    "chapters": 5,
+    "units": 8,
+    "topics": 9,
+    "lessons": 13
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "rme-textbook-skeleton.docx",
+      "bytes": 45018,
+      "contentHash": "2e123ae5c9079434",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "rme-workbook-skeleton.docx",
+      "bytes": 39342,
+      "contentHash": "7fc36a4c298e8f93",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "science",
+   "subjectName": "Science",
+   "grade": "B4",
+   "hasSchedule": true,
+   "indicators": 24,
+   "structure": {
+    "chapters": 5,
+    "units": 13,
+    "topics": 18,
+    "lessons": 24
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "science-textbook-skeleton.docx",
+      "bytes": 45888,
+      "contentHash": "5edd848b18277369",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "science-workbook-skeleton.docx",
+      "bytes": 40850,
+      "contentHash": "a23a907024b05373",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "computing",
+   "subjectName": "Computing",
+   "grade": "B5",
+   "hasSchedule": false,
+   "indicators": 81,
+   "structure": {
+    "chapters": 6,
+    "units": 17,
+    "topics": 19,
+    "lessons": 81
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "computing-textbook-skeleton.docx",
+      "bytes": 54358,
+      "contentHash": "4d111359d747229b",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "computing-workbook-skeleton.docx",
+      "bytes": 44194,
+      "contentHash": "4e39e5d1c6d4bf3c",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "creative-arts",
+   "subjectName": "Creative Arts",
+   "grade": "B5",
+   "hasSchedule": true,
+   "indicators": 48,
+   "structure": {
+    "chapters": 2,
+    "units": 8,
+    "topics": 14,
+    "lessons": 48
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "creative-arts-textbook-skeleton.docx",
+      "bytes": 52145,
+      "contentHash": "bba1614d2107a32c",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "creative-arts-workbook-skeleton.docx",
+      "bytes": 42126,
+      "contentHash": "2b3f27ee67d4cda0",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "english-language",
+   "subjectName": "English Language",
+   "grade": "B5",
+   "hasSchedule": true,
+   "indicators": 133,
+   "structure": {
+    "chapters": 6,
+    "units": 48,
+    "topics": 63,
+    "lessons": 133
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "english-language-textbook-skeleton.docx",
+      "bytes": 72920,
+      "contentHash": "7dc75893abcdc019",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "english-language-workbook-skeleton.docx",
+      "bytes": 51245,
+      "contentHash": "b865bcb98d86945e",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "french",
+   "subjectName": "French",
+   "grade": "B5",
+   "hasSchedule": false,
+   "indicators": 90,
+   "structure": {
+    "chapters": 4,
+    "units": 17,
+    "topics": 68,
+    "lessons": 90
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "french-textbook-skeleton.docx",
+      "bytes": 53960,
+      "contentHash": "a3bc96233d3c2377",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "french-workbook-skeleton.docx",
+      "bytes": 44317,
+      "contentHash": "106d8af41307ab2b",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "ghanaian-language",
+   "subjectName": "Ghanaian Language",
+   "grade": "B5",
+   "hasSchedule": true,
+   "indicators": 89,
+   "structure": {
+    "chapters": 6,
+    "units": 35,
+    "topics": 35,
+    "lessons": 89
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "ghanaian-language-textbook-skeleton.docx",
+      "bytes": 53022,
+      "contentHash": "d8bd3b2f3bacf754",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "ghanaian-language-workbook-skeleton.docx",
+      "bytes": 45980,
+      "contentHash": "833ba81ce015f922",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "history",
+   "subjectName": "History",
+   "grade": "B5",
+   "hasSchedule": true,
+   "indicators": 13,
+   "structure": {
+    "chapters": 4,
+    "units": 7,
+    "topics": 7,
+    "lessons": 13
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "history-textbook-skeleton.docx",
+      "bytes": 45725,
+      "contentHash": "7958dd15b0d0082b",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "history-workbook-skeleton.docx",
+      "bytes": 39383,
+      "contentHash": "6caeca01544ab2f1",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "mathematics",
+   "subjectName": "Mathematics",
+   "grade": "B5",
+   "hasSchedule": true,
+   "indicators": 67,
+   "structure": {
+    "chapters": 4,
+    "units": 14,
+    "topics": 25,
+    "lessons": 67
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "mathematics-textbook-skeleton.docx",
+      "bytes": 55080,
+      "contentHash": "bef57117633fc6ad",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "mathematics-workbook-skeleton.docx",
+      "bytes": 43715,
+      "contentHash": "7842ca558c487458",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "owop",
+   "subjectName": "Our World Our People",
+   "grade": "B5",
+   "hasSchedule": false,
+   "indicators": 25,
+   "structure": {
+    "chapters": 5,
+    "units": 17,
+    "topics": 25,
+    "lessons": 25
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "owop-textbook-skeleton.docx",
+      "bytes": 43939,
+      "contentHash": "fcf74d503e0ee412",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "owop-workbook-skeleton.docx",
+      "bytes": 41052,
+      "contentHash": "1a1088afa230349b",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "rme",
+   "subjectName": "Religious and Moral Education",
+   "grade": "B5",
+   "hasSchedule": true,
+   "indicators": 15,
+   "structure": {
+    "chapters": 5,
+    "units": 8,
+    "topics": 8,
+    "lessons": 15
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "rme-textbook-skeleton.docx",
+      "bytes": 45700,
+      "contentHash": "bcbc7fa51bb2a765",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "rme-workbook-skeleton.docx",
+      "bytes": 39553,
+      "contentHash": "ad7f6722438c17a3",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "science",
+   "subjectName": "Science",
+   "grade": "B5",
+   "hasSchedule": true,
+   "indicators": 29,
+   "structure": {
+    "chapters": 5,
+    "units": 14,
+    "topics": 23,
+    "lessons": 29
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "science-textbook-skeleton.docx",
+      "bytes": 47493,
+      "contentHash": "4cf71ce0f6c908c2",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "science-workbook-skeleton.docx",
+      "bytes": 41531,
+      "contentHash": "7245d8ed85fccdc1",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "computing",
+   "subjectName": "Computing",
+   "grade": "B6",
+   "hasSchedule": false,
+   "indicators": 98,
+   "structure": {
+    "chapters": 6,
+    "units": 19,
+    "topics": 19,
+    "lessons": 98
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "computing-textbook-skeleton.docx",
+      "bytes": 56426,
+      "contentHash": "11c16d3abf6f08ea",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "computing-workbook-skeleton.docx",
+      "bytes": 45290,
+      "contentHash": "cdf5cc123dfb9b04",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "creative-arts",
+   "subjectName": "Creative Arts",
+   "grade": "B6",
+   "hasSchedule": true,
+   "indicators": 46,
+   "structure": {
+    "chapters": 2,
+    "units": 8,
+    "topics": 14,
+    "lessons": 46
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "creative-arts-textbook-skeleton.docx",
+      "bytes": 51950,
+      "contentHash": "02de9b1b862b094a",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "creative-arts-workbook-skeleton.docx",
+      "bytes": 42067,
+      "contentHash": "237126799875b0a2",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "english-language",
+   "subjectName": "English Language",
+   "grade": "B6",
+   "hasSchedule": true,
+   "indicators": 131,
+   "structure": {
+    "chapters": 6,
+    "units": 48,
+    "topics": 63,
+    "lessons": 131
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "english-language-textbook-skeleton.docx",
+      "bytes": 70853,
+      "contentHash": "473f46a8b6254b87",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "english-language-workbook-skeleton.docx",
+      "bytes": 50606,
+      "contentHash": "e0472539f84b5626",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "french",
+   "subjectName": "French",
+   "grade": "B6",
+   "hasSchedule": false,
+   "indicators": 89,
+   "structure": {
+    "chapters": 4,
+    "units": 17,
+    "topics": 68,
+    "lessons": 89
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "french-textbook-skeleton.docx",
+      "bytes": 53318,
+      "contentHash": "13ea2b9b07de0413",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "french-workbook-skeleton.docx",
+      "bytes": 44242,
+      "contentHash": "24e74c2b4d508801",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "ghanaian-language",
+   "subjectName": "Ghanaian Language",
+   "grade": "B6",
+   "hasSchedule": true,
+   "indicators": 94,
+   "structure": {
+    "chapters": 6,
+    "units": 34,
+    "topics": 35,
+    "lessons": 94
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "ghanaian-language-textbook-skeleton.docx",
+      "bytes": 53298,
+      "contentHash": "e71a2a3b7b9ab5b2",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "ghanaian-language-workbook-skeleton.docx",
+      "bytes": 46076,
+      "contentHash": "5ed6c02f821f4d18",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "history",
+   "subjectName": "History",
+   "grade": "B6",
+   "hasSchedule": true,
+   "indicators": 9,
+   "structure": {
+    "chapters": 4,
+    "units": 6,
+    "topics": 7,
+    "lessons": 9
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "history-textbook-skeleton.docx",
+      "bytes": 44761,
+      "contentHash": "9d775ffddbc0882c",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "history-workbook-skeleton.docx",
+      "bytes": 39025,
+      "contentHash": "b88c63bde8ab8a42",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "mathematics",
+   "subjectName": "Mathematics",
+   "grade": "B6",
+   "hasSchedule": true,
+   "indicators": 42,
+   "structure": {
+    "chapters": 4,
+    "units": 11,
+    "topics": 22,
+    "lessons": 42
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "mathematics-textbook-skeleton.docx",
+      "bytes": 49949,
+      "contentHash": "bae718d0318a6d95",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "mathematics-workbook-skeleton.docx",
+      "bytes": 42074,
+      "contentHash": "818ba3bc6b7f0cce",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "owop",
+   "subjectName": "Our World Our People",
+   "grade": "B6",
+   "hasSchedule": false,
+   "indicators": 24,
+   "structure": {
+    "chapters": 5,
+    "units": 17,
+    "topics": 22,
+    "lessons": 24
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "owop-textbook-skeleton.docx",
+      "bytes": 43696,
+      "contentHash": "63147ed03e619929",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "owop-workbook-skeleton.docx",
+      "bytes": 40842,
+      "contentHash": "d83bcce976e8551b",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "rme",
+   "subjectName": "Religious and Moral Education",
+   "grade": "B6",
+   "hasSchedule": true,
+   "indicators": 13,
+   "structure": {
+    "chapters": 5,
+    "units": 7,
+    "topics": 7,
+    "lessons": 13
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "rme-textbook-skeleton.docx",
+      "bytes": 45301,
+      "contentHash": "fceb20f7193029ab",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "rme-workbook-skeleton.docx",
+      "bytes": 39320,
+      "contentHash": "73d0b249a364eb61",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "science",
+   "subjectName": "Science",
+   "grade": "B6",
+   "hasSchedule": true,
+   "indicators": 26,
+   "structure": {
+    "chapters": 5,
+    "units": 13,
+    "topics": 20,
+    "lessons": 26
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "science-textbook-skeleton.docx",
+      "bytes": 46611,
+      "contentHash": "e94ed624b85f250f",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "science-workbook-skeleton.docx",
+      "bytes": 41117,
+      "contentHash": "82fb65513df9e288",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "career-technology",
+   "subjectName": "Career Technology",
+   "grade": "B7",
+   "hasSchedule": true,
+   "indicators": 43,
+   "structure": {
+    "chapters": 6,
+    "units": 18,
+    "topics": 18,
+    "lessons": 43
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "career-technology-textbook-skeleton.docx",
+      "bytes": 53359,
+      "contentHash": "8ce2a39a63135b6a",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "career-technology-workbook-skeleton.docx",
+      "bytes": 41933,
+      "contentHash": "6ef27916f32588a9",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "computing",
+   "subjectName": "Computing",
+   "grade": "B7",
+   "hasSchedule": true,
+   "indicators": 50,
+   "structure": {
+    "chapters": 4,
+    "units": 14,
+    "topics": 18,
+    "lessons": 50
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "computing-textbook-skeleton.docx",
+      "bytes": 53345,
+      "contentHash": "4f4fce1c4815e702",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "computing-workbook-skeleton.docx",
+      "bytes": 42249,
+      "contentHash": "a28903ad898074f1",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "creative-arts-design",
+   "subjectName": "Creative Arts and Design",
+   "grade": "B7",
+   "hasSchedule": true,
+   "indicators": 33,
+   "structure": {
+    "chapters": 2,
+    "units": 6,
+    "topics": 12,
+    "lessons": 33
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "creative-arts-design-textbook-skeleton.docx",
+      "bytes": 49951,
+      "contentHash": "6a2649abb02aa044",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "creative-arts-design-workbook-skeleton.docx",
+      "bytes": 40973,
+      "contentHash": "546506f91304b775",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "english-language",
+   "subjectName": "English Language",
+   "grade": "B7",
+   "hasSchedule": true,
+   "indicators": 53,
+   "structure": {
+    "chapters": 5,
+    "units": 13,
+    "topics": 23,
+    "lessons": 53
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "english-language-textbook-skeleton.docx",
+      "bytes": 53021,
+      "contentHash": "62ded8ed7b8e7688",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "english-language-workbook-skeleton.docx",
+      "bytes": 43085,
+      "contentHash": "8b7363ed577426af",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "french",
+   "subjectName": "French",
+   "grade": "B7",
+   "hasSchedule": true,
+   "indicators": 64,
+   "structure": {
+    "chapters": 6,
+    "units": 16,
+    "topics": 16,
+    "lessons": 64
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "french-textbook-skeleton.docx",
+      "bytes": 54846,
+      "contentHash": "201ed17a9c68dcf1",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "french-workbook-skeleton.docx",
+      "bytes": 42237,
+      "contentHash": "0354b0707e48d80f",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "ghanaian-language",
+   "subjectName": "Ghanaian Language",
+   "grade": "B7",
+   "hasSchedule": true,
+   "indicators": 48,
+   "structure": {
+    "chapters": 6,
+    "units": 18,
+    "topics": 18,
+    "lessons": 48
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "ghanaian-language-textbook-skeleton.docx",
+      "bytes": 47074,
+      "contentHash": "ef0535864dae14ce",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "ghanaian-language-workbook-skeleton.docx",
+      "bytes": 42474,
+      "contentHash": "8be43c3686748434",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "mathematics",
+   "subjectName": "Mathematics",
+   "grade": "B7",
+   "hasSchedule": true,
+   "indicators": 67,
+   "structure": {
+    "chapters": 4,
+    "units": 12,
+    "topics": 20,
+    "lessons": 67
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "mathematics-textbook-skeleton.docx",
+      "bytes": 58271,
+      "contentHash": "fe21bc5be6c3d7e5",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "mathematics-workbook-skeleton.docx",
+      "bytes": 44130,
+      "contentHash": "87f844d8c3316309",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "rme",
+   "subjectName": "Religious and Moral Education",
+   "grade": "B7",
+   "hasSchedule": true,
+   "indicators": 27,
+   "structure": {
+    "chapters": 6,
+    "units": 8,
+    "topics": 8,
+    "lessons": 27
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "rme-textbook-skeleton.docx",
+      "bytes": 48286,
+      "contentHash": "64b92cafd91ef3a2",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "rme-workbook-skeleton.docx",
+      "bytes": 40525,
+      "contentHash": "20a36d0f99b49d68",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "science",
+   "subjectName": "Science",
+   "grade": "B7",
+   "hasSchedule": true,
+   "indicators": 52,
+   "structure": {
+    "chapters": 5,
+    "units": 19,
+    "topics": 26,
+    "lessons": 52
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "science-textbook-skeleton.docx",
+      "bytes": 53367,
+      "contentHash": "c08f0754748d6f88",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "science-workbook-skeleton.docx",
+      "bytes": 43971,
+      "contentHash": "8579767becc5eab9",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "social-studies",
+   "subjectName": "Social Studies",
+   "grade": "B7",
+   "hasSchedule": true,
+   "indicators": 17,
+   "structure": {
+    "chapters": 6,
+    "units": 12,
+    "topics": 14,
+    "lessons": 17
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "social-studies-textbook-skeleton.docx",
+      "bytes": 47624,
+      "contentHash": "eded8b018cc8893c",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "social-studies-workbook-skeleton.docx",
+      "bytes": 40798,
+      "contentHash": "845203bcca69e9c3",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "career-technology",
+   "subjectName": "Career Technology",
+   "grade": "B8",
+   "hasSchedule": true,
+   "indicators": 42,
+   "structure": {
+    "chapters": 6,
+    "units": 19,
+    "topics": 20,
+    "lessons": 42
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "career-technology-textbook-skeleton.docx",
+      "bytes": 53578,
+      "contentHash": "d00bd1056083ecdf",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "career-technology-workbook-skeleton.docx",
+      "bytes": 42093,
+      "contentHash": "871f15d00a24e761",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "computing",
+   "subjectName": "Computing",
+   "grade": "B8",
+   "hasSchedule": true,
+   "indicators": 37,
+   "structure": {
+    "chapters": 4,
+    "units": 15,
+    "topics": 16,
+    "lessons": 37
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "computing-textbook-skeleton.docx",
+      "bytes": 50964,
+      "contentHash": "adf59e1eee84dfaf",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "computing-workbook-skeleton.docx",
+      "bytes": 41475,
+      "contentHash": "dcf588487cd45992",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "creative-arts-design",
+   "subjectName": "Creative Arts and Design",
+   "grade": "B8",
+   "hasSchedule": true,
+   "indicators": 34,
+   "structure": {
+    "chapters": 2,
+    "units": 6,
+    "topics": 12,
+    "lessons": 34
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "creative-arts-design-textbook-skeleton.docx",
+      "bytes": 50181,
+      "contentHash": "2fc3854ed7a35d10",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "creative-arts-design-workbook-skeleton.docx",
+      "bytes": 40956,
+      "contentHash": "d263551bd7bb24de",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "english-language",
+   "subjectName": "English Language",
+   "grade": "B8",
+   "hasSchedule": true,
+   "indicators": 49,
+   "structure": {
+    "chapters": 5,
+    "units": 12,
+    "topics": 17,
+    "lessons": 49
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "english-language-textbook-skeleton.docx",
+      "bytes": 51979,
+      "contentHash": "c09ea501a02d18b4",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "english-language-workbook-skeleton.docx",
+      "bytes": 42348,
+      "contentHash": "0ddd4b6e92b2db31",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "french",
+   "subjectName": "French",
+   "grade": "B8",
+   "hasSchedule": true,
+   "indicators": 54,
+   "structure": {
+    "chapters": 6,
+    "units": 14,
+    "topics": 14,
+    "lessons": 54
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "french-textbook-skeleton.docx",
+      "bytes": 54609,
+      "contentHash": "56d349f32c2d38d2",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "french-workbook-skeleton.docx",
+      "bytes": 41993,
+      "contentHash": "334c954c86df4073",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "ghanaian-language",
+   "subjectName": "Ghanaian Language",
+   "grade": "B8",
+   "hasSchedule": true,
+   "indicators": 28,
+   "structure": {
+    "chapters": 6,
+    "units": 14,
+    "topics": 15,
+    "lessons": 28
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "ghanaian-language-textbook-skeleton.docx",
+      "bytes": 44207,
+      "contentHash": "818b91a624bcbbde",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "ghanaian-language-workbook-skeleton.docx",
+      "bytes": 40936,
+      "contentHash": "5559d16aae1d6516",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "mathematics",
+   "subjectName": "Mathematics",
+   "grade": "B8",
+   "hasSchedule": true,
+   "indicators": 49,
+   "structure": {
+    "chapters": 4,
+    "units": 12,
+    "topics": 17,
+    "lessons": 49
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "mathematics-textbook-skeleton.docx",
+      "bytes": 54302,
+      "contentHash": "a51fcc1f4b80f754",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "mathematics-workbook-skeleton.docx",
+      "bytes": 43058,
+      "contentHash": "f2b27c333b5b8c54",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "rme",
+   "subjectName": "Religious and Moral Education",
+   "grade": "B8",
+   "hasSchedule": true,
+   "indicators": 22,
+   "structure": {
+    "chapters": 6,
+    "units": 7,
+    "topics": 7,
+    "lessons": 22
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "rme-textbook-skeleton.docx",
+      "bytes": 47639,
+      "contentHash": "14da523018325fa6",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "rme-workbook-skeleton.docx",
+      "bytes": 40179,
+      "contentHash": "d37ad585cf18b450",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "science",
+   "subjectName": "Science",
+   "grade": "B8",
+   "hasSchedule": true,
+   "indicators": 46,
+   "structure": {
+    "chapters": 5,
+    "units": 21,
+    "topics": 29,
+    "lessons": 46
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "science-textbook-skeleton.docx",
+      "bytes": 51266,
+      "contentHash": "b5153f9cee711c64",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "science-workbook-skeleton.docx",
+      "bytes": 43059,
+      "contentHash": "dc76f428b8c5ab96",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "social-studies",
+   "subjectName": "Social Studies",
+   "grade": "B8",
+   "hasSchedule": true,
+   "indicators": 18,
+   "structure": {
+    "chapters": 6,
+    "units": 12,
+    "topics": 14,
+    "lessons": 18
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "social-studies-textbook-skeleton.docx",
+      "bytes": 47379,
+      "contentHash": "8ec669047218a9fa",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "social-studies-workbook-skeleton.docx",
+      "bytes": 40805,
+      "contentHash": "f0032722c61c2479",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "career-technology",
+   "subjectName": "Career Technology",
+   "grade": "B9",
+   "hasSchedule": true,
+   "indicators": 47,
+   "structure": {
+    "chapters": 6,
+    "units": 19,
+    "topics": 21,
+    "lessons": 47
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "career-technology-textbook-skeleton.docx",
+      "bytes": 55448,
+      "contentHash": "f80ee68b13e996cb",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "career-technology-workbook-skeleton.docx",
+      "bytes": 42593,
+      "contentHash": "9eb0228288b43942",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "computing",
+   "subjectName": "Computing",
+   "grade": "B9",
+   "hasSchedule": true,
+   "indicators": 36,
+   "structure": {
+    "chapters": 4,
+    "units": 15,
+    "topics": 16,
+    "lessons": 36
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "computing-textbook-skeleton.docx",
+      "bytes": 50816,
+      "contentHash": "19640cc1c708ce2e",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "computing-workbook-skeleton.docx",
+      "bytes": 41612,
+      "contentHash": "d450011c492faa93",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "creative-arts-design",
+   "subjectName": "Creative Arts and Design",
+   "grade": "B9",
+   "hasSchedule": true,
+   "indicators": 33,
+   "structure": {
+    "chapters": 2,
+    "units": 6,
+    "topics": 12,
+    "lessons": 33
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "creative-arts-design-textbook-skeleton.docx",
+      "bytes": 49893,
+      "contentHash": "df4d5046cdaf540a",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "creative-arts-design-workbook-skeleton.docx",
+      "bytes": 40952,
+      "contentHash": "d5d1121499e16142",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "english-language",
+   "subjectName": "English Language",
+   "grade": "B9",
+   "hasSchedule": true,
+   "indicators": 50,
+   "structure": {
+    "chapters": 5,
+    "units": 12,
+    "topics": 18,
+    "lessons": 50
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "english-language-textbook-skeleton.docx",
+      "bytes": 52512,
+      "contentHash": "a5d15f63eca7a5ed",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "english-language-workbook-skeleton.docx",
+      "bytes": 42781,
+      "contentHash": "51f5b82b035ed4a9",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "french",
+   "subjectName": "French",
+   "grade": "B9",
+   "hasSchedule": true,
+   "indicators": 48,
+   "structure": {
+    "chapters": 7,
+    "units": 13,
+    "topics": 13,
+    "lessons": 48
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "french-textbook-skeleton.docx",
+      "bytes": 53803,
+      "contentHash": "6ccf89f81918df72",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "french-workbook-skeleton.docx",
+      "bytes": 41581,
+      "contentHash": "695441f445e87632",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "ghanaian-language",
+   "subjectName": "Ghanaian Language",
+   "grade": "B9",
+   "hasSchedule": true,
+   "indicators": 28,
+   "structure": {
+    "chapters": 6,
+    "units": 14,
+    "topics": 16,
+    "lessons": 28
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "ghanaian-language-textbook-skeleton.docx",
+      "bytes": 44596,
+      "contentHash": "f8b5397c35105051",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "ghanaian-language-workbook-skeleton.docx",
+      "bytes": 41075,
+      "contentHash": "7114b00cdd11a218",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "mathematics",
+   "subjectName": "Mathematics",
+   "grade": "B9",
+   "hasSchedule": true,
+   "indicators": 43,
+   "structure": {
+    "chapters": 4,
+    "units": 11,
+    "topics": 16,
+    "lessons": 43
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "mathematics-textbook-skeleton.docx",
+      "bytes": 52107,
+      "contentHash": "16c3ef8c8d4eb0f0",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "mathematics-workbook-skeleton.docx",
+      "bytes": 42509,
+      "contentHash": "a932b0d8ceb5c013",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "rme",
+   "subjectName": "Religious and Moral Education",
+   "grade": "B9",
+   "hasSchedule": true,
+   "indicators": 19,
+   "structure": {
+    "chapters": 6,
+    "units": 8,
+    "topics": 8,
+    "lessons": 19
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "rme-textbook-skeleton.docx",
+      "bytes": 46461,
+      "contentHash": "9f1d892211b2c57c",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "rme-workbook-skeleton.docx",
+      "bytes": 39875,
+      "contentHash": "aad2add3f4d5dcc5",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "science",
+   "subjectName": "Science",
+   "grade": "B9",
+   "hasSchedule": true,
+   "indicators": 54,
+   "structure": {
+    "chapters": 5,
+    "units": 20,
+    "topics": 31,
+    "lessons": 54
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "science-textbook-skeleton.docx",
+      "bytes": 53368,
+      "contentHash": "85cf925bd462d5bf",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "science-workbook-skeleton.docx",
+      "bytes": 43786,
+      "contentHash": "b5b1b971873419d4",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  },
+  {
+   "subject": "social-studies",
+   "subjectName": "Social Studies",
+   "grade": "B9",
+   "hasSchedule": true,
+   "indicators": 19,
+   "structure": {
+    "chapters": 6,
+    "units": 11,
+    "topics": 15,
+    "lessons": 19
+   },
+   "documents": {
+    "textbook": [
+     {
+      "file": "social-studies-textbook-skeleton.docx",
+      "bytes": 48770,
+      "contentHash": "9b7e35c3e6979a63",
+      "revision": 1
+     }
+    ],
+    "workbook": [
+     {
+      "file": "social-studies-workbook-skeleton.docx",
+      "bytes": 41249,
+      "contentHash": "2bf0e9be83dbc172",
+      "revision": 1
+     }
+    ]
+   },
+   "revisions": 1
+  }
+ ]
+}

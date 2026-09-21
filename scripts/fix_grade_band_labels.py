@@ -30,8 +30,8 @@ correct bands and never had this defect.
 
 Usage
 -----
-    python3 tools/fix_grade_band_labels.py            # dry run — report only
-    python3 tools/fix_grade_band_labels.py --apply    # do it
+    python3 scripts/fix_grade_band_labels.py            # dry run — report only
+    python3 scripts/fix_grade_band_labels.py --apply    # do it
 """
 from __future__ import annotations
 
@@ -46,7 +46,7 @@ except ImportError:
     sys.exit("python-docx is required:  pip install python-docx")
 
 ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(ROOT / "tools"))
+sys.path.insert(0, str(ROOT / "scripts"))
 
 from _paths import BOOKS  # noqa: E402
 

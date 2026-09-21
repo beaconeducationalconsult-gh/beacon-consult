@@ -12,21 +12,28 @@ Outputs (public/curriculum/, committed — this is portal source data)
     grades.json                 one entry per grade that has data
     <grade>_subjects.json       subjects for the grade, with counts
     <grade>_indicators.json     flat indicators, full hierarchy, rich metadata
-    <grade>_schedules.json      every scheduled lesson: term/week/day + phases
-    <grade>_schemes.json        NEW — scheme rows per subject per term
+    <grade>_schemes.json        scheme rows per subject per term
+    schedules/<grade>-<subj>.json   every scheduled lesson for ONE subject-grade
+                                (term/week/day + phases) — split per subject so a
+                                teacher downloads ~0.5 MB, not the whole grade
 
 Shapes match what useCurriculum.js / buildTree() / ForecastForm already expect,
 so no app changes are needed to read them. See docs/APP_CURRICULUM.md.
 
+`_BUILD_REPORT.json` carries `bundleHash` — a hash of every file written here.
+`public/sw.js` reads it and names its cache after it, so a rebuilt bundle
+invalidates itself in returning browsers without anyone editing a constant.
+
 Usage
 -----
-    python3 tools/build_app_curriculum.py
-    python3 tools/build_app_curriculum.py --grade B4
+    python3 scripts/build_app_curriculum.py
+    python3 scripts/build_app_curriculum.py --grade B4
     python3 scripts/build_app_curriculum.py --out public/curriculum
 """
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import sys
@@ -34,7 +41,7 @@ from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(ROOT / "tools"))
+sys.path.insert(0, str(ROOT / "scripts"))
 
 # Pure-data helpers; the docx import inside generate_schemes is optional.
 from generate_schemes import (  # noqa: E402
@@ -92,6 +99,60 @@ def find_file(name):
 
 def load_json(path):
     return json.loads(Path(path).read_text(encoding="utf-8"))
+
+
+# Audit B works in indicator codes (kindergarten prints K1./K2.); the bundle
+# labels that grade KG1/KG2, taken from the file name.
+AUDIT_GRADE_ALIASES = {"K1": "KG1", "K2": "KG2"}
+
+
+def audited_pairs():
+    """(subjectId, grade) pairs that passed a source cross-check, from data/audit/.
+
+    Two audits check a subject-grade against its source NaCCA PDF, and passing
+    either counts:
+
+    * Audit A — indicator counts compared against the expected counts recorded
+      for each file. It walks data/curriculum/, so it cannot see the copies that
+      live only in data/reference/.
+    * Audit B — every indicator code re-extracted from the PDF and set-compared
+      with the database. It resolves each database through find_data, so it
+      covers the reference-only subjects too (computing B4-B6, french B4-B6,
+      kindergarten KG1/KG2, and B7-B9 everywhere).
+
+    A subject-grade that passed neither has not been cross-checked at all, and
+    the app must say so rather than present it as equal to the rest — see
+    docs/TODO.md P1-1 and docs/curriculum-data.md.
+
+    Read from the audit outputs instead of a hand-kept list so the two cannot
+    drift apart.
+    """
+    out = set()
+    for name in ("audit_a_results.json", "audit_b_results.json"):
+        p = ROOT / "data" / "audit" / name
+        if not p.exists():
+            continue
+        try:
+            rows = load_json(p)
+        except (OSError, ValueError):
+            continue
+        for r in rows if isinstance(rows, list) else []:
+            if not (isinstance(r, dict) and r.get("status") == "PASS"):
+                continue
+            sid = str(r.get("subject") or "").strip().lower()
+            grade = str(r.get("grade") or "").strip().upper()
+            grade = AUDIT_GRADE_ALIASES.get(grade, grade)
+            if sid and grade:
+                out.add((sid, grade))
+    return out
+
+
+def source_dir_name(db_path):
+    """"curriculum" or "reference" — which copy of the DB we actually used."""
+    try:
+        return Path(db_path).parent.name
+    except (TypeError, AttributeError):
+        return ""
 
 
 def db_index():
@@ -171,10 +232,13 @@ def build_indicators(sid, sname, grade, db_path):
 
 
 def namespace_ids(rows, sid):
-    """Scheme rows carry bare indicator codes; the app refs them as `{sid}_{code}`.
+    """Scheme rows carry bare indicator codes; the app refs them by code.
 
-    Matches the convention in src/lib/schemeAuto.js: `indicators` is the text
-    shown in the cell, `indicatorIds` is the set of document references.
+    Matches the convention `src/lib/schemeDocx.js` reads when it renders a
+    scheme: `indicators` is the text shown in the cell, `indicatorCodes` is the
+    list of codes behind it. (`indicatorIds` is a different field — the
+    curriculum-linked array on `lesson_plans` and `questions`, indexed
+    array-contains in firestore.indexes.json.)
     """
     out = []
     for r in rows:
@@ -239,12 +303,29 @@ def main():
     out_dir.mkdir(parents=True, exist_ok=True)
 
     dbs = db_index()
+    # Subject-grades that passed a source cross-check (Audit A or Audit B).
+    # Anything outside this set is served but has never been checked against
+    # its source; it is stamped `verified: false` so the app can say so.
+    audited = audited_pairs()
+    if audited:
+        by_dir = defaultdict(int)
+        for (sid, g), p in dbs.items():
+            if (sid, g) not in audited:
+                by_dir[source_dir_name(p)] += 1
+        if by_dir:
+            unaudited = sum(by_dir.values())
+            print(f"  note: {unaudited} subject-grade(s) failed both source "
+                  f"({dict(by_dir)}) — stamped verified:false")
+    else:
+        print("  note: no audit results readable in data/audit/ — "
+              "every subject-grade will be stamped verified:false")
     # Index lessons by *subject id*, not file key: two file keys (ghanaian,
     # ghanaian_language) resolve to the same subject id, and iterating by key
     # would count B1 Ghanaian Language twice.
     lessons_by_subject = {(SUBJECTS[k][0], g): p for k, g, p in discover()}
 
     grades_out, report = [], []
+    written: list[str] = []  # every payload written, in order — hashed at the end
 
     for grade in GRADES:
         if args.grade and grade != args.grade:
@@ -291,6 +372,12 @@ def main():
                 "sourceTitle": summary.get("sourceTitle")
                                or f"NaCCA {grade} {sname} Curriculum",
                 "sourceUrl": summary.get("sourceUrl") or "",
+                # Whether this subject-grade has been cross-checked against its
+                # official source. False means "present, but not audited" —
+                # the UI says so instead of implying the same standing as the
+                # rest. Derived from the audit output, not a hand-kept list.
+                "verified": (sid, grade) in audited,
+                "source": source_dir_name(db_path),
                 "hasSchedule": has_schedule,
                 "counts": counts or {
                     "strands": 0, "subStrands": 0, "standards": 0, "indicators": 0,
@@ -317,13 +404,26 @@ def main():
                 "subjects": schemes,
             },
         }
-        if schedules:
-            files[f"{g}_schedules.json"] = schedules
+
+        # Schedules are split per subject-grade. The combined per-grade array
+        # was 3.5-4.8 MB, and every screen that needs schedules needs exactly
+        # one subject's worth: ForecastForm pre-fills a scheme for one subject
+        # and term, LessonPlanForm/LessonPlanView look up one indicator,
+        # Progress highlights weeks for one subject. Fetching the grade meant
+        # downloading (and service-worker-caching) nine subjects to use one.
+        sched_dir = out_dir / "schedules"
+        for sid in sorted({l["subjectId"] for l in schedules}):
+            rows = [l for l in schedules if l["subjectId"] == sid]
+            files[f"schedules/{g}-{sid}.json"] = rows
 
         for name, payload in files.items():
-            (out_dir / name).write_text(
+            path = out_dir / name
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(
                 json.dumps(payload, ensure_ascii=False, separators=(",", ":")),
                 encoding="utf-8")
+            written.append(json.dumps(payload, ensure_ascii=False,
+                                      separators=(",", ":")))
 
         grades_out.append({
             "id": grade,
@@ -350,15 +450,23 @@ def main():
     (out_dir / "grades.json").write_text(
         json.dumps(grades_out, ensure_ascii=False, indent=1), encoding="utf-8")
 
-    total_kb = sum(f.stat().st_size for f in out_dir.glob("*.json")) // 1024
+    # The hash covers every payload this run wrote (grades.json excluded — it
+    # is written after, and re-writing it must not look like a data change).
+    payload = "\n".join(written).encode("utf-8")
+    bundle_hash = hashlib.sha256(payload).hexdigest()[:12]
+
+    json_files = sorted(out_dir.rglob("*.json"))
+    total_kb = sum(f.stat().st_size for f in json_files) // 1024
     print(f"\nWrote {len(grades_out)} grades to {out_dir}")
-    print(f"  {len(list(out_dir.glob('*.json')))} files · {total_kb} KB total")
+    print(f"  {len(json_files)} files · {total_kb} KB total · "
+          f"bundleHash {bundle_hash}")
     print(f"  {sum(r['subjects'] for r in report)} subject-grades · "
           f"{sum(r['indicators'] for r in report)} indicators · "
           f"{sum(r['lessons'] for r in report)} scheduled lessons")
 
     (out_dir / "_BUILD_REPORT.json").write_text(json.dumps({
         "grades": grades_out, "detail": report, "totalKb": total_kb,
+        "bundleHash": bundle_hash,
     }, indent=1), encoding="utf-8")
 
 

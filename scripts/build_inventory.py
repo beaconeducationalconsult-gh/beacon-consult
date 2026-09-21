@@ -232,6 +232,7 @@ def read_bundle() -> dict:
         return {"built": False, "grades": [], "pairs": {}, "subjects": {}, "gradeNames": {}, "scheduleGrades": []}
     grades = load(grades_path)
     pairs, subjects, names = {}, collections.defaultdict(list), {}
+    sched_grades = set()
     for g in grades:
         gid = g.get("id")
         if not gid:
@@ -243,15 +244,43 @@ def read_bundle() -> dict:
         for s in load(subj_path):
             pairs[(s["id"], gid)] = s.get("counts", {}).get("indicators", 0)
             subjects[s["id"]].append(gid)
+            # Schedules are split per subject-grade (schedules/<grade>-<id>.json);
+            # the subjects file says which of them exist, so the grade list does
+            # not depend on globbing a directory that may not exist.
+            if s.get("hasSchedule") and (BUNDLE / "schedules" / f"{gid.lower()}-{s['id']}.json").exists():
+                sched_grades.add(gid)
     return {
         "built": True,
         "grades": [g["id"] for g in grades],
         "gradeNames": names,
         "pairs": pairs,
         "subjects": dict(subjects),
-        "scheduleGrades": sorted({p.name.split("_")[0].upper() for p in BUNDLE.glob("*_schedules.json")}, key=grade_sort_key),
+        "scheduleGrades": sorted(sched_grades, key=grade_sort_key),
         "hasQuestions": (BUNDLE / "questions").exists(),
-        "bytes": sum(p.stat().st_size for p in BUNDLE.glob("*.json")),
+        "questions": read_question_counts(),
+        "bytes": sum(p.stat().st_size for p in BUNDLE.rglob("*.json")),
+    }
+
+
+def read_question_counts() -> dict:
+    """The served question bank, if there is one (P1-5).
+
+    Read from the index the builder writes rather than by globbing the subject
+    files, so a bank that is present but inconsistent shows up as such here.
+    """
+    index_path = BUNDLE / "questions" / "_index.json"
+    if not index_path.exists():
+        return {}
+    try:
+        index = json.loads(index_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return {"error": "questions/_index.json is not valid JSON"}
+    totals = index.get("totals") or {}
+    return {
+        "subjectGrades": sum(len(g) for g in (index.get("subjects") or {}).values()),
+        "questions": totals.get("questions"),
+        "indicatorsCovered": totals.get("indicatorsCovered"),
+        "indicatorsInPacks": totals.get("indicatorsInPacks"),
     }
 
 
@@ -369,6 +398,7 @@ def main() -> int:
             "grades": len(l3["grades"]),
             "subjects": len(l3["subjects"]),
             "hasQuestions": l3.get("hasQuestions", False),
+            "questions": l3.get("questions", {}),
             "megabytes": round(l3.get("bytes", 0) / 1e6, 1),
         },
         "reference": {
@@ -503,6 +533,8 @@ def main() -> int:
     if l3["built"] and not l3.get("hasQuestions"):
         legacy.append("public/curriculum/questions/ does not exist, yet the legacy math module "
                       "declares the 'questions' capability")
+    elif l3.get("questions", {}).get("error"):
+        warnings.append(f"question bank: {l3['questions']['error']}")
     if not l3["built"]:
         errors.append("public/curriculum/ is not built — run `make build-curriculum`")
 

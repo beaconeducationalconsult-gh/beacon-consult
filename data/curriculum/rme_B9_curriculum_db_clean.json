@@ -1,7 +1,7 @@
 {
  "B9.1.1.1.1": {
   "strand": "1. GOD, HIS CREATION AND ATTRIBUTES",
-  "sub_strand": "Sub-strand B9.1.1",
+  "sub_strand": "1. THE PURPOSE AND USEFULNESS OF GOD’S CREATION",
   "cs_code": "B9.1.1.1",
   "cs_desc": "Describe and explain the purpose and usefulness of God’s creation",
   "ind_desc": "Identify the purpose and usefulness of God’s creation",
@@ -12,7 +12,7 @@
  },
  "B9.1.1.1.2": {
   "strand": "1. GOD, HIS CREATION AND ATTRIBUTES",
-  "sub_strand": "Sub-strand B9.1.1",
+  "sub_strand": "1. THE PURPOSE AND USEFULNESS OF GOD’S CREATION",
   "cs_code": "B9.1.1.1",
   "cs_desc": "Describe and explain the purpose and usefulness of God’s creation",
   "ind_desc": "Explain how the complex nature of things created by God reveals His nature",
@@ -23,7 +23,7 @@
  },
  "B9.1.2.1.1": {
   "strand": "1. GOD, HIS CREATION AND ATTRIBUTES",
-  "sub_strand": "Sub-strand B9.1.2",
+  "sub_strand": "2. THE ENVIRONMENT",
   "cs_code": "B9.1.2.1",
   "cs_desc": "Explain why it is important to care for the environment and how to do so 4. Discuss how the above human activities destroy the environment",
   "ind_desc": "Describe human activities that destroy the environment",
@@ -34,7 +34,7 @@
  },
  "B9.1.2.1.3": {
   "strand": "1. GOD, HIS CREATION AND ATTRIBUTES",
-  "sub_strand": "Sub-strand B9.1.2",
+  "sub_strand": "2. THE ENVIRONMENT",
   "cs_code": "B9.1.2.1",
   "cs_desc": "Explain why it is important to care for the environment and how to do so 4. Discuss how the above human activities destroy the environment",
   "ind_desc": "Discuss reasons for taking care for the environment",
@@ -45,7 +45,7 @@
  },
  "B9.2.1.1.1": {
   "strand": "2. RELIGIOUS PRACTICES",
-  "sub_strand": "Sub-strand B9.2.1",
+  "sub_strand": "1. RELIGIOUS FESTIVALS",
   "cs_code": "B9.2.1.1",
   "cs_desc": "Understand the relevance of, and the need to participate in, religious festivals",
   "ind_desc": "State the meaning and types of festivals",
@@ -56,7 +56,7 @@
  },
  "B9.2.1.1.2": {
   "strand": "2. RELIGIOUS PRACTICES",
-  "sub_strand": "Sub-strand B9.2.1",
+  "sub_strand": "1. RELIGIOUS FESTIVALS",
   "cs_code": "B9.2.1.1",
   "cs_desc": "Understand the relevance of, and the need to participate in, religious festivals",
   "ind_desc": "Describe the activities in festivals celebrated in the three main religions in Ghana",
@@ -67,7 +67,7 @@
  },
  "B9.2.1.1.3": {
   "strand": "2. RELIGIOUS PRACTICES",
-  "sub_strand": "Sub-strand B9.2.1",
+  "sub_strand": "1. RELIGIOUS FESTIVALS",
   "cs_code": "B9.2.1.1",
   "cs_desc": "Understand the relevance of, and the need to participate in, religious festivals",
   "ind_desc": "Identify and explain the social, religious and moral relevance of festivals in the three main religions and relate them to daily life",
@@ -78,7 +78,7 @@
  },
  "B9.3.1.1.1": {
   "strand": "3. THE FAMILY AND THE COMMUNITY",
-  "sub_strand": "Sub-strand B9.3.1",
+  "sub_strand": "1. RELIGION AND SOCIAL COHESION",
   "cs_code": "B9.3.1.1",
   "cs_desc": "Identify and apply ways people with different religions can co-exist peacefully",
   "ind_desc": "Identify and explain examples of tolerant and intolerant communities",
@@ -89,7 +89,7 @@
  },
  "B9.3.1.1.2": {
   "strand": "3. THE FAMILY AND THE COMMUNITY",
-  "sub_strand": "Sub-strand B9.3.1",
+  "sub_strand": "1. RELIGION AND SOCIAL COHESION",
   "cs_code": "B9.3.1.1",
   "cs_desc": "Identify and apply ways people with different religions can co-exist peacefully",
   "ind_desc": "Explain reasons why religious intolerance occurs and their effects on society and the individual",
@@ -100,7 +100,7 @@
  },
  "B9.3.1.1.3": {
   "strand": "3. THE FAMILY AND THE COMMUNITY",
-  "sub_strand": "Sub-strand B9.3.1",
+  "sub_strand": "1. RELIGION AND SOCIAL COHESION",
   "cs_code": "B9.3.1.1",
   "cs_desc": "Identify and apply ways people with different religions can co-exist peacefully",
   "ind_desc": "Identify and explain ways in which people with diverse religious backgrounds can live peacefully",
@@ -111,7 +111,7 @@
  },
  "B9.4.1.1.1": {
   "strand": "4. RELIGIOUS LEADERS AND PERSONALITIES",
-  "sub_strand": "Sub-strand B9.4.1",
+  "sub_strand": "1. WOMEN IN RELIGION AND LEADERSHIP POSITIONS",
   "cs_code": "B9.4.1.1",
   "cs_desc": "Recognise leadership role of women in society",
   "ind_desc": "Discuss the contributions of key women in the three major religions",
@@ -122,7 +122,7 @@
  },
  "B9.4.1.1.2": {
   "strand": "4. RELIGIOUS LEADERS AND PERSONALITIES",
-  "sub_strand": "Sub-strand B9.4.1",
+  "sub_strand": "1. WOMEN IN RELIGION AND LEADERSHIP POSITIONS",
   "cs_code": "B9.4.1.1",
   "cs_desc": "Recognise leadership role of women in society",
   "ind_desc": "Discuss how to apply the moral lessons from the lives of these women in daily life",
@@ -133,7 +133,7 @@
  },
  "B9.4.1.1.3": {
   "strand": "4. RELIGIOUS LEADERS AND PERSONALITIES",
-  "sub_strand": "Sub-strand B9.4.1",
+  "sub_strand": "1. WOMEN IN RELIGION AND LEADERSHIP POSITIONS",
   "cs_code": "B9.4.1.1",
   "cs_desc": "Recognise leadership role of women in society",
   "ind_desc": "Identify and explain the contributions of women to the development of Ghana",
@@ -144,7 +144,7 @@
  },
  "B9.5.1.1.1": {
   "strand": "5. ETHICS AND MORAL LIFE",
-  "sub_strand": "Sub-strand B9.5.1",
+  "sub_strand": "1. REWARD, PUNISHMENT AND REPENTANCE",
   "cs_code": "B9.5.1.1",
   "cs_desc": "Demonstrate an understanding that good deeds attract reward but bad deeds attract punishment 5. Identify and explain types of rewards for doing a good deed",
   "ind_desc": "Describe the basis for good deeds and reward",
@@ -155,7 +155,7 @@
  },
  "B9.5.1.1.2": {
   "strand": "5. ETHICS AND MORAL LIFE",
-  "sub_strand": "Sub-strand B9.5.1",
+  "sub_strand": "1. REWARD, PUNISHMENT AND REPENTANCE",
   "cs_code": "B9.5.1.1",
   "cs_desc": "Demonstrate an understanding that good deeds attract reward but bad deeds attract punishment 5. Identify and explain types of rewards for doing a good deed",
   "ind_desc": "Identify and explain acts that attract punishment",
@@ -166,7 +166,7 @@
  },
  "B9.5.1.1.3": {
   "strand": "5. ETHICS AND MORAL LIFE",
-  "sub_strand": "Sub-strand B9.5.1",
+  "sub_strand": "1. REWARD, PUNISHMENT AND REPENTANCE",
   "cs_code": "B9.5.1.1",
   "cs_desc": "Demonstrate an understanding that good deeds attract reward but bad deeds attract punishment 5. Identify and explain types of rewards for doing a good deed",
   "ind_desc": "Outline the stages of repentance",
@@ -177,7 +177,7 @@
  },
  "B9.6.1.1.1": {
   "strand": "6. RELIGION AND ECONOMIC LIFE",
-  "sub_strand": "Sub-strand B9.6.1",
+  "sub_strand": "1. TIME AND LEISURE",
   "cs_code": "B9.6.1.1",
   "cs_desc": "Develop skills in managing time profitably",
   "ind_desc": "Explain the meaning of the terms “time”, “leisure” and “idleness”",
@@ -188,7 +188,7 @@
  },
  "B9.6.1.1.2": {
   "strand": "6. RELIGION AND ECONOMIC LIFE",
-  "sub_strand": "Sub-strand B9.6.1",
+  "sub_strand": "1. TIME AND LEISURE",
   "cs_code": "B9.6.1.1",
   "cs_desc": "Develop skills in managing time profitably",
   "ind_desc": "Demonstrate how to plan and use time wisely",
@@ -199,7 +199,7 @@
  },
  "B9.6.4.1.3": {
   "strand": "6. RELIGION AND ECONOMIC LIFE",
-  "sub_strand": "Sub-strand B9.6.4",
+  "sub_strand": "4. TIME AND LEISURE",
   "cs_code": "B9.6.4.1",
   "cs_desc": "Develop skills in managing time profitably.",
   "ind_desc": "Explain the need for leisure 1. Discuss how to use your leisure profitably",

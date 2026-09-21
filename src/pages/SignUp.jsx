@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth'
-import { doc, serverTimestamp, setDoc } from 'firebase/firestore'
-import { auth, db } from '../firebase'
+import { auth } from '../firebase'
+import { authMessage } from '../lib/authError'
+import { createOwnProfile } from '../lib/profile'
 import { useToast } from '../context/ToastContext'
 import Navbar from '../components/Navbar'
 import { GRADES, gradeLabel } from '../lib/grades'
@@ -34,28 +35,25 @@ export default function SignUp() {
       const credential = await createUserWithEmailAndPassword(auth, form.email.trim(), form.password)
       await updateProfile(credential.user, { displayName: form.name.trim() })
 
-      // The profile doc is the authorization source of truth. `status` is forced
-      // to 'pending' — and firestore.rules enforces that it stays that way.
-      await setDoc(doc(db, 'users', credential.user.uid), {
+      // The profile doc is the authorization source of truth, and the rules force
+      // `status: 'pending'` / `role: 'member'` — see src/lib/profile.js.
+      await createOwnProfile(credential.user, {
         name: form.name.trim(),
-        email: form.email.trim(),
         school: form.school.trim(),
         grades: form.grades,
-        status: 'pending',
-        role: 'member',
-        createdAt: serverTimestamp(),
+        email: form.email.trim(),
       })
 
       toast.success('Account created — an administrator will review it shortly.')
       navigate('/portal')
     } catch (err) {
-      const message =
-        err.code === 'auth/email-already-in-use'
-          ? 'That email is already registered. Try signing in instead.'
-          : err.code === 'auth/weak-password'
-            ? 'That password is too weak.'
-            : err.message
-      setError(message)
+      // A refused profile write (rules not published yet, or a suspended account)
+      // lands here with `permission-denied`, and the account itself does exist —
+      // so the message says both things instead of looking like a failed sign-up.
+      setError(authMessage(err))
+      if (err.code === 'permission-denied') {
+        toast.error('Signed in, but your membership could not be saved. See the message below.')
+      }
     } finally {
       setBusy(false)
     }

@@ -1,3 +1,16 @@
+> **Snapshot — prepared before the NCOS kernel app was folded out to `legacy/`.**
+> File names and line numbers below describe the code as it was then; treat them as the
+> reasoning, not as current locations. Status of each finding as of 2026-09-18:
+>
+> | # | Finding | Status |
+> |---|---|---|
+> | 1 | Search/Generator load everything on mount | **Partly fixed** — `Search.jsx` now caps each collection at `limit(100)`; the client-side filtering remains |
+> | 2 | Unbounded/no-pagination question queries | **Open** — `QuestionGenerator.jsx` no longer fetches 1,000 rows, but there is still no pagination anywhere (TODO P2-4) |
+> | 3 | Feed page's independent queries | **Superseded** — `Feed.jsx` and its `RecentPanel` are gone (merged into `Workspace.jsx`) |
+>
+> Kept because the reasoning behind the current architecture is here; see `FINAL ANALYSIS.md`
+> for the priorities drawn from it, and `docs/TODO.md` for what is actually outstanding.
+
 I'll analyze the repository for potential performance issues by examining the codebase structure and key files.Now I'll gather evidence about the repository structure, configuration, and code to identify performance issues.Now let me examine the source structure to understand the code organization:Based on my review of the Beacon Educational Consult codebase, here are the **key performance issues** I've identified:
 
 ## 1. **Excessive Firestore Reads in Search and Generator Pages**

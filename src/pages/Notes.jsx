@@ -4,8 +4,10 @@ import { deleteDoc, doc } from 'firebase/firestore'
 import { db } from '../firebase'
 import { useAuth } from '../context/AuthContext'
 import { useToast } from '../context/ToastContext'
-import { useCollection } from '../hooks/useCollection'
+import { usePagedCollection } from '../hooks/useCollection'
+import LoadMore from '../components/LoadMore'
 import { SkeletonList } from '../components/Skeleton'
+import DataError from '../components/DataError'
 import EmptyState from '../components/EmptyState'
 import ConfirmModal from '../components/ConfirmModal'
 import NotesTabs from '../components/NotesTabs'
@@ -13,14 +15,24 @@ import SubjectIcon from '../components/SubjectIcon'
 import { gradeLabel } from '../lib/grades'
 import { fmtDate } from '../lib/academicCalendar'
 
+/*
+ * Two scoped queries, because the read rule for /notes/ depends on the document
+ * (`visibility`), and Firestore only allows that for a list query it can prove —
+ * see the note in firestore.rules and the test in src/firestoreRules.test.js.
+ * Never list this collection unfiltered: it is denied for every ordinary member.
+ */
+const SHARED = [['visibility', 'in', ['members', 'public']]]
+
 export default function Notes() {
   const { user, isAdmin } = useAuth()
   const toast = useToast()
-  const [scope, setScope] = useState('all')
-  const { rows, loading } = useCollection('notes', { max: 80 })
+  const [scope, setScope] = useState('shared')
+  const {
+    rows, loading, error, hasMore, loadingMore, loadMore, moreError,
+  } = usePagedCollection('notes', {
+    filters: scope === 'mine' ? [['authorId', '==', user.uid]] : SHARED,
+  })
   const [pendingDelete, setPendingDelete] = useState(null)
-
-  const visible = scope === 'mine' ? rows.filter((n) => n.authorId === user.uid) : rows
 
   const remove = async () => {
     try {
@@ -45,24 +57,25 @@ export default function Notes() {
 
       <NotesTabs
         tabs={[
-          { value: 'all', label: 'All', count: rows.length },
-          { value: 'mine', label: 'Mine', count: rows.filter((n) => n.authorId === user.uid).length },
+          { value: 'shared', label: 'Shared' },
+          { value: 'mine', label: 'Mine' },
         ]}
         active={scope}
         onChange={setScope}
       />
 
-      {loading && <SkeletonList rows={3} />}
-      {!loading && visible.length === 0 && (
+      {error && <DataError what="study notes" error={error} />}
+{loading && <SkeletonList rows={3} />}
+      {!loading && !error && rows.length === 0 && (
         <EmptyState
-          title="No notes yet"
+          title={scope === 'mine' ? 'No notes of your own yet' : 'Nothing shared yet'}
           message="Notes are shorter than articles — a summary of a sub-strand, a revision sheet, a worked example."
           action={<Link to="/portal/notes/new" className="btn-primary mt-2">Write a note</Link>}
         />
       )}
 
       <ul className="grid gap-4 sm:grid-cols-2">
-        {visible.map((note) => (
+        {rows.map((note) => (
           <li key={note.id} className="card card-hover p-5">
             <div className="flex items-start gap-3">
               <SubjectIcon subjectId={note.subjectId} name={note.subjectName} />
@@ -84,6 +97,8 @@ export default function Notes() {
           </li>
         ))}
       </ul>
+
+      <LoadMore hasMore={hasMore} loading={loadingMore} error={moreError} onLoad={loadMore} loaded={rows.length} />
 
       <ConfirmModal open={Boolean(pendingDelete)} title="Delete this note?" confirmLabel="Delete" onConfirm={remove} onCancel={() => setPendingDelete(null)} />
     </div>

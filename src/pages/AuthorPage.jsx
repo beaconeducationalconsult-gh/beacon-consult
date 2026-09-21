@@ -1,17 +1,23 @@
 import { Link, useParams } from 'react-router-dom'
 import { useDoc, useCollection } from '../hooks/useCollection'
 import { SkeletonList } from '../components/Skeleton'
+import DataError from '../components/DataError'
 import EmptyState from '../components/EmptyState'
 import { fmtDate } from '../lib/academicCalendar'
 
 /** Public-facing profile of a member, visible to signed-in members. */
 export default function AuthorPage() {
   const { authorId } = useParams()
-  const { row: profile, loading } = useDoc('users', authorId)
-  const { rows: posts } = useCollection('posts', { filters: [['authorId', '==', authorId]], max: 20 })
-  const { rows: plans } = useCollection('lesson_plans', { filters: [['authorId', '==', authorId]], max: 20 })
+  const { row: profile, loading, error } = useDoc('users', authorId)
+  const { rows: posts, error: postsError } = useCollection('posts', {
+    filters: [['authorId', '==', authorId]], sort: 'timestamp', max: 20, ordered: true,
+  })
+  const { rows: plans, error: plansError } = useCollection('lesson_plans', {
+    filters: [['authorId', '==', authorId]], max: 20, ordered: true,
+  })
 
   if (loading) return <SkeletonList rows={3} />
+  if (error) return <DataError what="this member profile" error={error} />
   if (!profile) {
     return <EmptyState title="Member not found" message="This profile may have been removed." />
   }
@@ -45,7 +51,9 @@ export default function AuthorPage() {
       <div className="grid gap-6 lg:grid-cols-2">
         <section>
           <h2 className="section-heading mb-3">Recent posts</h2>
-          {posts.length === 0 ? (
+          {postsError ? (
+            <p className="card p-5 text-sm text-rose-700">Posts could not be loaded ({postsError.code || 'error'}).</p>
+          ) : posts.length === 0 ? (
             <p className="card p-5 text-sm text-slate-500">No posts yet.</p>
           ) : (
             <ul className="space-y-3">
@@ -63,7 +71,9 @@ export default function AuthorPage() {
 
         <section>
           <h2 className="section-heading mb-3">Lesson plans shared</h2>
-          {plans.length === 0 ? (
+          {plansError ? (
+            <p className="card p-5 text-sm text-rose-700">Lesson plans could not be loaded ({plansError.code || 'error'}).</p>
+          ) : plans.length === 0 ? (
             <p className="card p-5 text-sm text-slate-500">No lesson plans shared yet.</p>
           ) : (
             <ul className="space-y-3">

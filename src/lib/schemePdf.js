@@ -2,8 +2,16 @@ import { jsPDF } from 'jspdf'
 import autoTable from 'jspdf-autotable'
 import { gradeLabel } from './grades'
 
-/** Scheme of Learning → PDF (client-side). Landscape A4, mirrors the Word export. */
-export function downloadSchemePdf(scheme, { school, teacher } = {}) {
+/*
+ * The document builders are exported separately from the `download…` wrappers
+ * so the output can be tested without a DOM: `downloadSchemePdf` calls
+ * `doc.save()`, which needs a browser, while `buildSchemePdf` returns the jsPDF
+ * instance. `src/lib/pdfExport.test.js` holds the builders to their invariants
+ * (orientation, page count, the text a teacher would look for).
+ */
+
+/** Scheme of Learning → jsPDF document. Landscape A4, mirrors the Word export. */
+export function buildSchemePdf(scheme, { school, teacher } = {}) {
   const doc = new jsPDF({ orientation: 'landscape', unit: 'pt', format: 'a4' })
   const title = `Scheme of Learning — ${scheme.subjectName || scheme.subjectId}`
   const subtitle = `${gradeLabel(scheme.grade)} · Term ${scheme.term}`
@@ -63,5 +71,10 @@ export function downloadSchemePdf(scheme, { school, teacher } = {}) {
   doc.setTextColor('#94A3B8')
   doc.text('Generated with Beacon Educational Consult', 40, doc.internal.pageSize.getHeight() - 24)
 
-  doc.save(`Scheme_${scheme.subjectId}_${scheme.grade}_T${scheme.term}.pdf`)
+  return doc
+}
+
+/** Scheme of Learning → PDF download (client-side). */
+export function downloadSchemePdf(scheme, meta = {}) {
+  buildSchemePdf(scheme, meta).save(`Scheme_${scheme.subjectId}_${scheme.grade}_T${scheme.term}.pdf`)
 }

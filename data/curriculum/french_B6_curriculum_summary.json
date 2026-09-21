@@ -1,0 +1,43 @@
+{
+ "id": "french",
+ "name": "French",
+ "grade": "B6",
+ "sourceTitle": "NaCCA French Curriculum for Primary Schools (Basic 4-6)",
+ "sourceUrl": "https://nacca.gov.gh/wp-content/uploads/2019/06/FRENCH-B4-B6.pdf",
+ "counts": {
+  "strands": 4,
+  "subStrands": 17,
+  "standards": 68,
+  "indicators": 89
+ },
+ "strands": [
+  {
+   "code": "B6.1",
+   "name": "Définir les aspects de l’identité",
+   "subStrands": 5,
+   "standards": 21,
+   "indicators": 23
+  },
+  {
+   "code": "B6.2",
+   "name": "Parler de son environnement",
+   "subStrands": 2,
+   "standards": 8,
+   "indicators": 13
+  },
+  {
+   "code": "B6.3",
+   "name": "Exprimer ses goûts et ses préférences",
+   "subStrands": 1,
+   "standards": 4,
+   "indicators": 5
+  },
+  {
+   "code": "B6.4",
+   "name": "Les activités",
+   "subStrands": 9,
+   "standards": 35,
+   "indicators": 48
+  }
+ ]
+}

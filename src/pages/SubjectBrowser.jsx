@@ -1,18 +1,49 @@
 import { useMemo, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import { buildTree, isPlaceholder, useCurriculum } from '../hooks/useCurriculum'
 import { SkeletonList } from '../components/Skeleton'
 import EmptyState from '../components/EmptyState'
 import SubjectIcon from '../components/SubjectIcon'
 import { subjectTheme } from '../lib/subjectThemes'
-import { gradeLabel } from '../lib/grades'
+import { GRADES, gradeLabel } from '../lib/grades'
+import { packFiles, warmPack } from '../lib/offlinePack'
+import { modelsFor } from '../lib/teachingModels'
 
-/** Strand → sub-strand → content standard → indicators. Static JSON only. */
+/**
+ * Strand → sub-strand → content standard → indicators. Static JSON only.
+ *
+ * Both ids come from the URL — `/portal/curriculum/B4/mathematics`. The grade
+ * used to be a hard-coded `useState('B1')` while the route param was read as a
+ * subject id, so every link from the grade grid resolved against the wrong
+ * grade and matched no indicators.
+ */
 export default function SubjectBrowser() {
-  const { subjectId } = useParams()
-  const [grade, setGrade] = useState('B1')
+  const { gradeId, subjectId } = useParams()
+  const navigate = useNavigate()
+  const grade = String(gradeId || '').toUpperCase()
   const { loading, subjects, indicators, error } = useCurriculum(grade)
   const [openSub, setOpenSub] = useState(null)
+  /*
+   * Offline pack (P3-2): which files have come down for this subject-grade.
+   *
+   * The state carries the key it belongs to, so switching subject (or grade)
+   * shows the idle button again without an effect writing state on mount — the
+   * stale key simply does not match this page.
+   */
+  const packKey = `${grade}|${subjectId}`
+  const [pack, setPack] = useState({ key: null, state: 'idle', done: 0, total: 1, result: null, label: '' })
+  const idle = { state: 'idle', done: 0, total: 1, result: null, label: '' }
+  const current = pack.key === packKey ? pack : idle
+
+  const saveOffline = async () => {
+    const files = packFiles(grade, subjectId)
+    const update = (changes) => setPack((previous) => ({ key: packKey, ...(previous.key === packKey ? previous : idle), ...changes }))
+    update({ state: 'saving', done: 0, total: files.length, result: null, label: files[0].label })
+    const result = await warmPack(files, {
+      onProgress: ({ file, done }) => update({ state: 'saving', done, label: file.label }),
+    })
+    update({ state: 'done', done: files.length, total: files.length, result, label: '' })
+  }
 
   const subject = subjects.find((s) => s.id === subjectId)
   const tree = useMemo(
@@ -25,36 +56,87 @@ export default function SubjectBrowser() {
     0
   )
 
+  // A subject id that is not in this grade: say so, and offer the way back.
+  const unknownSubject = !loading && !error && subjects.length > 0 && !subject
+
   return (
     <div>
-      <Link to="/portal/curriculum" className="mb-6 inline-flex items-center gap-1 text-sm text-slate-500 hover:text-slate-800">
-        ← All grades
-      </Link>
+      <nav className="mb-6 flex flex-wrap items-center gap-1 text-sm text-slate-500">
+        <Link to="/portal/curriculum" className="hover:text-slate-800">All grades</Link>
+        <span aria-hidden="true">/</span>
+        <Link to={`/portal/curriculum/${grade}`} className="hover:text-slate-800">{gradeLabel(grade)}</Link>
+        <span aria-hidden="true">/</span>
+        <span className="text-slate-800">{subject?.name || subjectId}</span>
+      </nav>
 
       <header className="mb-8 flex flex-wrap items-start gap-4">
         <SubjectIcon subjectId={subjectId} name={subject?.name} size="lg" />
         <div className="min-w-0 flex-1">
           <h1 className="page-title">{subject?.name || subjectId}</h1>
           <p className="page-subtitle">
-            {gradeLabel(grade)} {totalIndicators ? `· ${totalIndicators} indicators` : ''}
+            {gradeLabel(grade)} {totalIndicators ? `· ${totalIndicators} indicators · ${tree.length} strands` : ''}
           </p>
-          {subject?.strandNames?.length ? (
-            <p className="card-meta mt-1">Strands: {subject.strandNames.join(' · ')}</p>
-          ) : null}
         </div>
-        <div>
-          <label className="label-caps" htmlFor="grade-switch">Grade</label>
-          <select id="grade-switch" className="input" value={grade} onChange={(e) => { setGrade(e.target.value); setOpenSub(null) }}>
-            {['KG1', 'KG2', 'B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'B9'].map((g) => (
-              <option key={g} value={g}>{gradeLabel(g)}</option>
-            ))}
-          </select>
+        <div className="flex flex-col items-stretch gap-2 sm:items-end">
+          {/* Teaching models (P3-4) exist for one subject-grade so far; the link
+              only appears where there is something to open. */}
+          {modelsFor(subjectId, grade).length > 0 && (
+            <Link to="/portal/models" className="btn-secondary">Teaching models</Link>
+          )}
+          <div>
+            <label className="label-caps" htmlFor="grade-switch">Grade</label>
+            {/* A subject id rarely exists in every grade, so switching grade
+                lands on that grade's subject list rather than a dead end. */}
+            <select
+              id="grade-switch"
+              className="input"
+              value={GRADES.includes(grade) ? grade : ''}
+              onChange={(e) => navigate(`/portal/curriculum/${e.target.value}`)}
+            >
+              {!GRADES.includes(grade) && <option value="">{gradeLabel(grade)}</option>}
+              {GRADES.map((g) => <option key={g} value={g}>{gradeLabel(g)}</option>)}
+            </select>
+          </div>
+
+          {/* Offline pack (P3-2). Offline browsing already works for anything
+              you have opened; this is for "save it now, before I leave wifi". */}
+          <div className="sm:text-right">
+            <button
+              type="button"
+              className="btn-secondary"
+              onClick={saveOffline}
+              disabled={loading || current.state === 'saving'}
+            >
+              {current.state === 'saving' ? `Saving ${current.done}/${current.total}…` : 'Save for offline'}
+            </button>
+            <p className="card-meta mt-1 max-w-56" aria-live="polite">
+              {current.state === 'idle' && 'Downloads this subject’s indicators, schemes and lesson schedule.'}
+              {current.state === 'saving' && `Fetching ${current.label}…`}
+              {current.state === 'done' && current.result?.complete
+                && `Saved ${current.result.size} — this subject now opens without a connection.`}
+              {current.state === 'done' && !current.result?.complete
+                && `Saved ${current.result?.downloaded} of ${current.result?.files} files (${current.result?.missing
+                  ?.map((m) => m.label)
+                  .join(', ')} unavailable). The rest works offline.`}
+            </p>
+          </div>
         </div>
       </header>
 
       {loading && <SkeletonList rows={4} />}
-      {!loading && error && <EmptyState title="Could not load this grade" message="It may not have extracted curriculum data yet." />}
-      {!loading && !error && tree.length === 0 && (
+      {!loading && error && (
+        <EmptyState title="Could not load this grade" message="The curriculum bundle could not be fetched. Check your connection and reload." />
+      )}
+
+      {unknownSubject && (
+        <EmptyState
+          title={`${subjectId} is not a ${gradeLabel(grade)} subject`}
+          message="This grade does not have that subject. Choose one of its subjects instead."
+          action={<Link to={`/portal/curriculum/${grade}`} className="btn-secondary mt-1">See {gradeLabel(grade)} subjects</Link>}
+        />
+      )}
+
+      {!loading && !error && !unknownSubject && tree.length === 0 && (
         <EmptyState
           title={`No indicators for ${subject?.name || subjectId} in ${gradeLabel(grade)}`}
           message="This subject and grade combination has no extracted indicators yet."

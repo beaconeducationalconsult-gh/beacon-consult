@@ -1,0 +1,36 @@
+{
+ "id": "computing",
+ "name": "Computing",
+ "grade": "B4",
+ "sourceTitle": "NaCCA Computing Curriculum for Primary Schools (Basic 4-6)",
+ "sourceUrl": "https://nacca.gov.gh/wp-content/uploads/2019/04/COMPUTING-B4-B6.pdf",
+ "counts": {
+  "strands": 3,
+  "subStrands": 6,
+  "standards": 7,
+  "indicators": 27
+ },
+ "strands": [
+  {
+   "code": "B4.1",
+   "name": "WORD PROCESSING",
+   "subStrands": 4,
+   "standards": 5,
+   "indicators": 23
+  },
+  {
+   "code": "B4.2",
+   "name": "PRESENTATION",
+   "subStrands": 1,
+   "standards": 1,
+   "indicators": 2
+  },
+  {
+   "code": "B4.3",
+   "name": "WORD PROCESSING",
+   "subStrands": 1,
+   "standards": 1,
+   "indicators": 2
+  }
+ ]
+}

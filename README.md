@@ -18,6 +18,17 @@ Two products share one dataset:
 
 ---
 
+## New to this project?
+
+**[SKILL.md](SKILL.md)** is a start-to-finish build guide: install the tools, create the Firebase
+project, run the app locally, become the first administrator, publish the rules and indexes,
+deploy to Vercel, verify it — then work on the data, the code, and the exports. Written to be
+readable by someone who has never seen the repository.
+
+**[docs/project-state.md](docs/project-state.md)** is the map of the five places this project lives
+(GitHub, Firebase, Vercel, your machine, the sandbox) plus your browser: what each one owns, the one
+check that answers it, the branch model, and a 60-second triage for when something looks wrong.
+
 ## Quick start
 
 ```bash
@@ -33,9 +44,12 @@ Other useful commands:
 |---|---|
 | `yarn build` / `yarn preview` | Production build, then serve it (PWA behaviour only exists here) |
 | `yarn lint` | ESLint incl. the React Compiler rules — must stay clean |
-| `make check` | The pre-deploy gate: lint + curriculum validation + production build |
+| `make check` | The pre-deploy gate: lint + tests + curriculum validation + inventory + build |
+| `yarn test:rules` | The permission matrix against the Firestore + Storage emulators (needs Java 21) — the one check `make check` cannot run; CI runs it in its own job |
+| `make deploy-check URL=…` | Check a live deploy from the outside (Firebase config, curriculum hash, SPA rewrite) — see [verification.md](docs/verification.md) |
 | `make audit` (`make inventory`) | The data audit: regenerate `data/inventory.json`, list every dataset gap |
 | `make build-curriculum` | Rebuild `public/curriculum/` from `data/` after a dataset change |
+| `make books-rollout` / `make books-generate` | Report / build the book skeletons for every served subject-grade (needs `python-docx`); `make books-publish SUBJECT=… GRADE=…` zips one to send a school |
 
 Firestore rules and indexes deploy separately from the app:
 
@@ -52,15 +66,16 @@ Produced by `make inventory` → `data/inventory.json`. Full definition in
 
 | Layer | Path | Contents |
 |---|---|---|
-| **L1 curriculum** | `data/curriculum/` | 75 databases · 73 summaries · **3,095 indicators** · audited against 24 NaCCA source PDFs |
+| **L1 curriculum** | `data/curriculum/` | 84 databases · 84 summaries · **4,040 indicators** · audited against 27 NaCCA source PDFs |
 | **L2 lessons** | `data/lessons/` | **13,140 lesson slots** (73 files, 13 subjects, B1–B9) with a filled teaching template |
 | **L3 bundle** | `public/curriculum/` | **4,040 indicators** across 84 subject-grades / 11 grades — what the portal serves (39.7 MB) |
 
-L3 is larger than L1 by **945 indicators across 9 subject-grades** (computing B4–B6,
-french B4–B6 and kindergarten KG1–KG2 come from the unaudited `data/reference/`
-fallback; `english-language B5` has an L1 summary but no L1 database). For the other
-75 subject-grades the two layers agree exactly. This divergence is tracked, not
-hidden: `make inventory` reports it and `docs/curriculum-data.md` explains it.
+L1 and L3 agree exactly: every one of the 84 served subject-grades comes from the
+audited copy. That took until 2026-09-18 — nine subject-grades (computing and french
+B4–B6, kindergarten KG1/KG2, `english-language B5`) were served from the
+`data/reference/` fallback and had no L1 counterpart;
+`scripts/promote_reference_subjects.py` moved them and gave them summaries.
+`docs/curriculum-data.md` defines the layers and what is left in `data/reference/`.
 
 ---
 
@@ -73,7 +88,7 @@ weekly teaching theory, the academic calendar, and articles set to public.
 
 | Area | What teachers get |
 |---|---|
-| Feed | Posts, likes, quote of the day, term progress, this week's contribution count |
+| Workspace | The home page: network posts and likes, your own contributions, quote of the day, term progress, this week's contribution count, and the term calendar |
 | Curriculum | Every indicator by strand → sub-strand → content standard, KG1–B9 |
 | Schemes of learning | A term scheme seeded from the curriculum schedule, editable per week, exported to Word/PDF |
 | Lesson plans | Indicator-linked plans (objectives, starter, main, plenary, assessment) exported to Word/PDF |

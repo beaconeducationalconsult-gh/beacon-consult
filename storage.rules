@@ -1,0 +1,68 @@
+rules_version = '2';
+
+/*
+ * Beacon Consult — Cloud Storage security rules.
+ *
+ * Storage holds one thing: the documents members generate (lesson plans,
+ * schemes, exam papers, quiz decks, study notes) so the library can hand them
+ * back later. Everything else is denied, including reads.
+ *
+ * Layout — and the only paths these rules allow:
+ *
+ *   generated/{uid}/{timestamp}-{filename}
+ *
+ * The uid in the path IS the permission: a member writes under their own uid and
+ * nowhere else, reads back only what they stored (plus admins). `src/lib/
+ * generatedDocs.js` builds the path; both sides have to agree, which is why the
+ * shape is stated in both files.
+ *
+ * Deploying is a separate step from deploying the app:
+ *   firebase deploy --only storage
+ * A committed-but-undeployed change has no effect in production.
+ */
+
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    // Cross-service lookup, exactly as firestore.rules defines the two roles.
+    // A get() on a missing users/{uid} errors, which evaluates to false, so a
+    // signed-in caller with no profile is denied — which is what we want.
+    function isApproved() {
+      return isSignedIn()
+        && firestore.get(/databases/(default)/documents/users/$(request.auth.uid)).data.status == 'approved';
+    }
+
+    function isAdmin() {
+      return isSignedIn()
+        && firestore.get(/databases/(default)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
+
+    function isApprovedOrAdmin() {
+      return isApproved() || isAdmin();
+    }
+
+    // Members keep their own documents; admins can read any (support, and the
+    // "what did this school actually receive" question).
+    match /generated/{uid}/{file=**} {
+      allow read: if isSignedIn() && (request.auth.uid == uid || isAdmin());
+      // Writes are the member's own folder, and capped — the limit in
+      // src/lib/generatedDocs.js is a courtesy check; this one is the rule.
+      allow create, update: if isApprovedOrAdmin()
+        && request.auth.uid == uid
+        && request.resource.size <= 8 * 1024 * 1024;
+      allow delete: if isSignedIn() && (request.auth.uid == uid || isAdmin());
+      // No listing surprises: a member may enumerate only their own folder.
+      allow list: if isSignedIn() && (request.auth.uid == uid || isAdmin());
+    }
+
+    // Everything else (book covers, avatars, anything added later) is denied
+    // until a rule is written for it on purpose.
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}

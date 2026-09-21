@@ -3,16 +3,565 @@
 Things that will bite you. Verified against the code in this repository — each entry below
 is an **open** issue; when one is fixed, delete it.
 
+## 🔴 A read rule that inspects document fields breaks list queries
+
+Firestore is not a filter. For a `list`, the rules must be provable for **every** document the
+query could return, so a read rule that depends on document data denies the *whole query* — not
+just the documents that fail it. The client then sees `permission-denied` on a page that should
+simply show fewer rows.
+
+This bit us in production. `isApprovedOrAdmin() && (status == 'published' || isOwner(...))` on
+`notes`, `lesson_plans`, `weekly_forecasts` and `lesson_slides` broke every un-filtered list in
+`src/pages/` — **for ordinary members only**. Admins pass every branch, so an admin testing the
+portal sees it working.
+
+A read rule needs one disjunct that holds regardless of the document, and is true for a member:
+`isApprovedOrAdmin()`, `isApproved()` or `isSignedIn()`. `isAdmin()` is document-independent but
+false for a member, so it does not rescue the query. Where a rule genuinely must gate on a field
+(like `articles.visibility == 'public'` for the anonymous public page), the *query* has to carry
+a matching `where(...)` — see `PublicArticles.jsx`.
+
+**`notes`, `lesson_plans` and `weekly_forecasts` gate reads this way again (P2-7, 2026-09-19).**
+Their rule is `isApprovedOrAdmin() && (isAdmin() || isOwner(resource.data.authorId) ||
+resource.data.visibility in ['members', 'public'])`, so `visibility: 'private'` is a real draft.
+That is only safe because every screen lists them through one of two provable queries —
+`where('authorId','==',uid)` (the Mine tab) or `where('visibility','in',['members','public'])`
+(Shared) — including the two queries `Search.jsx` runs per gated collection. Listing any of the
+three un-filtered is denied for every ordinary member.
+
+**Deploy order matters for this pair.** Publish the new rules only after the new build is live:
+an old client whose list page still queries un-filtered will go from "shows everything" to
+`permission-denied`. The composite indexes (`visibility + createdAt`, and the `authorId +
+createdAt` ones the paged lists use) must be deployed too — `firebase deploy --only
+firestore:indexes`, or the console's index page.
+
+`src/firestoreRules.test.js` fails if a collection the client lists un-filtered loses its
+document-independent branch, and if a gated collection stops being scoped — it scans for both
+`useCollection` and `usePagedCollection`.
+
+## 🔴 A Unix-only command inside the build works everywhere except the machine that deploys
+
+`execSync('cat public/curriculum/_BUILD_REPORT.json')` in `vite.config.js` ran fine in this
+container and failed on the Windows checkout — and it **failed silently**, because the call sits
+in a `try/catch` that sets `bundleHash: null`. Every build made there reported `bundle null`, so
+the one check that compares a deploy against this checkout had nothing to compare. The rule: a
+build plugin may only use Node APIs, never a shell command, because the build has to run on the
+deployer's machine too. (Same family: `make` recipes assume a Unix shell; the Windows path is
+`node scripts/…` directly.)
+
+## 🟠 Firebase Storage left the free plan, so the library is optional by design
+
+Since **October 2024** a new Cloud Storage for Firebase bucket requires the pay-as-you-go
+(Blaze) plan — a linked billing account, even at zero usage. A Spark project has no bucket, and
+the console offers none. That makes the document library (P3-3) the one feature that can be
+absent from an otherwise complete deployment, so the app treats it as a state rather than an
+error:
+
+- `probeStorage()` reads a path that cannot exist (`generated/__probe__/__none__`). An enabled
+  bucket answers `storage/object-not-found`; a project without one answers the 404 that
+  `isStorageMissing()` recognises. The answer is cached for the page.
+- `SaveToLibrary` renders one line ("Keeping documents in the portal needs Firebase Storage…")
+  instead of a button that can only fail, and the library page explains itself rather than
+  showing "Nothing saved yet".
+- `isStorageMissing()` must never mistake `storage/object-not-found` for a missing bucket: a
+  healthy bucket answers that way for every path a teacher has not written yet, and reading it as
+  "no Storage" would hide the library everywhere. There is a test for exactly that.
+- A missing bucket has **two** shapes: a bucket name in the config that does not exist (requests
+  404 — `storage/unknown` with a 404 payload) and no bucket name at all
+  (`VITE_FIREBASE_STORAGE_BUCKET` empty, where `getStorage()` still returns an object and the
+  first `ref()` throws `storage/no-default-bucket`). Both are "missing", and the probe has to keep
+  the `ref()` call inside its `try` — otherwise that throw escapes the promise chain entirely.
+
+Turning it on later: upgrade the project to Blaze → **Build → Storage → Get started** →
+`make deploy-storage` → reload. No code change.
+
+## 🔴 Windows PowerShell writes `.env.local` as UTF-16, and the app then has no config
+
+`>` and `Out-File` under Windows PowerShell 5.1 write **UTF-16LE**. A `.env.local` created that
+way looks correct in an editor, but read as UTF-8 it is a string full of NUL bytes: no key
+matches, so the pre-flight reported all six `VITE_FIREBASE_*` values missing on a machine where
+the app runs, and Vite's own `loadEnv` would not have seen them either. `scripts/verify_deploy.mjs`
+now decodes from the bytes (BOM first, then a NUL-byte sniff), accepts `export KEY=…`, strips
+quotes — and when a key is missing it prints the **names** it did find, never the values, so the
+file explains itself. To write one that every tool reads:
+
+```powershell
+Set-Content .env.local -Encoding utf8 -Value @(
+  'VITE_FIREBASE_API_KEY=…', 'VITE_FIREBASE_AUTH_DOMAIN=…' )
+```
+
+## 🔴 One unnecessary index entry fails the whole indexes deploy
+
+`firebase deploy --only firestore:indexes` is all-or-nothing, and Firestore refuses an index it
+does not need:
+
+```
+Error: Request to https://firestore.googleapis.com/v1/projects/<project>/databases/(default)/
+collectionGroups/posts/indexes had HTTP Error: 400, this index is not necessary, configure using
+single field index controls
+```
+
+The offender was `posts | timestamp DESCENDING` — an entry with **one field**. Firestore creates
+and manages single-field indexes itself, so an explicit one is an error, not a duplicate. Because
+the deploy aborts there, *none* of the other indexes is created either, and the app then shows
+empty lists with `failed-precondition`. Two consequences worth keeping:
+
+- **Never add a one-field entry.** Unfiltered `orderBy` needs no entry at all; a filtered +
+  ordered query needs two fields or more. `src/firestoreIndexes.test.js` now fails on a
+  single-field entry and names this error.
+- **The rules in the same command are still published.** `deploy --only
+  firestore:rules,firestore:indexes` uploads the rules before it touches the indexes, so a failure
+  here leaves the rules *new* and the indexes *missing* — a half-deployed project. Re-running the
+  command is safe and idempotent; do that rather than assuming nothing happened.
+
+## 🟠 An unused rule function warns on every deploy
+
+`[W] Unused function: isPro` (plus a pair of "Invalid function name: exists" for the body the
+compiler never resolves) appeared on every `firebase deploy` while `isPro()` sat unused in
+`firestore.rules` — a helper for a paid tier nothing writes yet. Warnings that always appear are
+warnings nobody reads, and the next one would have been real. The function was removed, and
+`src/firestoreRules.test.js` now fails on any declared-but-uncalled function so it cannot come
+back quietly. Restore `isPro()` in the same change that adds the client writing
+`subscriptions/{uid}`.
+
+## 🟠 Signing up before the rules are published strands the account
+
+The sign-up flow is two writes: Firebase Auth creates the account, then Firestore stores
+`users/{uid}` — the membership row that every other rule reads. Publish order matters because of
+the gap between them. With `firestore.rules` unpublished (or published as production-mode defaults,
+which deny everything), the second write is refused: the account exists, is signed in, and has no
+membership. The portal showed that state as *"Awaiting approval"* with a row of dashes — a dead end,
+because an administrator cannot approve a document that does not exist.
+
+The app now recognises it (`profile === null`) and offers the one recovery the rules permit: the
+member creates their **own** row via `createOwnProfile()` — `status:'pending'`, `role:'member'`,
+the only values `users` create accepts from a client (`src/lib/profile.js`). The path that
+avoids all of this is simply the documented order: publish the rules, *then* sign up.
+
+## 🔴 The app and the rules can live in different Firebase projects
+
+They are configured in two files that nothing compared: `.env.local` (Vite — gitignored, per
+machine) and `.firebaserc` (the Firebase CLI — committed). `make deploy-rules` runs
+`firebase deploy` with no `--project`, so it follows `.firebaserc`. Point that at one project while
+the app talks to another and every publish is a **silent no-op on the project that matters** —
+the live database keeps whatever rules it has, which on a new project is test mode (open to
+anyone who has the project id), while the console happily reports a successful deploy to a
+project nobody uses.
+
+Both pre-flight scripts now compare the two and refuse to call it a pass. Fix by making the CLI
+agree with the app, not the other way round:
+
+```powershell
+firebase use <the project id from .env.local>   # writes .firebaserc
+git add .firebaserc && git commit -m "Point the CLI at the live project"
+```
+
+Or pass it explicitly: `firebase deploy --only firestore:rules --project <id>`.
+
+## 🟠 The production domain serves the Production Branch, not the branch you pushed
+
+`beacon-edu-consult.vercel.app` is a **production** URL, and Vercel deploys its Production Branch
+(`main` unless it is changed) there — pushes to `arena/01a0af88-beacon-consult` become *preview*
+deployments under generated URLs. Symptom, and it is a deceptive one: the app boots, `/` serves
+the shell, and `grades.json` — a file that exists in both branches — is byte-identical, so it all
+looks healthy. What is missing is anything added since: `/build-info.json` came back as the shell
+(the rewrite answers every unknown path with `index.html`), `/curriculum/schedules/*` likewise,
+and `sw.js` did not read the bundle hash. Fix: Vercel → Settings → Git → **Production Branch** =
+the deployable branch (or publish to `main`). `scripts/verify_deploy.{py,mjs}` now compare each
+served file with this checkout and call a 200-that-is-the-shell what it is.
+
+## 🟠 A Word style Word cannot resolve renders as body text, silently
+
+`docx` never validates what you hand it. Give a paragraph a `pStyle` naming a style the document
+does not define and Word drops the reference and falls back to Normal — no error, no warning, no
+difference you can see in the `.docx` itself. That is how every section heading in the lesson-plan
+export disappeared: `docxShared.js` exported `H2` as a paragraph *factory*, and callers passed it as
+`heading: H2`, so the style name written into the XML was the source text
+`(text) => new Paragraph({ text, heading: HeadingLevel.HEADING_2 })`.
+
+Two rules, both now enforced by `src/lib/docxExport.test.js` (which unzips the generated file and
+reads its parts):
+
+- **A heading level is a constant, not a function.** `H1`/`H2`/`H3` in `docxShared.js` are
+  `HeadingLevel` values; the section styling lives in `documentStyles()`.
+- **Declare the document's own font and size.** Without `docDefaults` the body font is whatever
+  the *reader's* Word Normal template happens to be, so the same export looks different on two
+  machines.
+
+While you are in there: a footer built as a paragraph at the end of the body prints once, at the
+end — real page furniture belongs in `sections[].footers`. Cell widths need `tblLayout: fixed` or
+Word re-fits the columns to their content and ignores the percentages.
+
+## 🟠 An audit that silently checks nothing
+
+`scripts/audit/*.py` were all written before the data restructure, and each one resolved its
+inputs with `os.path.join(ROOT, name)`. That is an absolute path, so `_compat`'s redirect never
+sees it — `open_compat()` only rewrites **bare** filenames through `find_data()`. The PDFs moved
+to `data/sources/`, the databases to `data/curriculum/` and `data/reference/`, and the scripts
+kept looking in the repository root. Audit B reported `SKIP` for all 76 rows and called it a day;
+Audit A reported 8 "file not found" failures that look exactly like data corruption.
+
+So: **an audit that finds nothing looks the same as an audit that is satisfied.** When a check
+reports all-skip, all-missing or zero rows, suspect the path wiring before the data. All three
+audits resolve through `find_data()` now, and they write into `data/audit/` rather than dropping
+result files in the repository root.
+
+## 🟠 A "content standard" is not always a sentence
+
+P1-1 asked for the empty `cs_desc` fields to be filled *from the PDF*, which assumes the print
+carries a standard to copy. For French B4–B6 it does not: the CONTENT STANDARDS column holds one
+of four skill areas (Compréhension Orale, Production Orale, Compréhension Écrite, Production
+Écrite), and those four are the standard — the SCOPE AND SEQUENCE table lists exactly them, in
+that order, for every sub-strand. French B7–B9 and computing do print a sentence.
+
+So before "filling a missing field from the source", read what the source actually puts in that
+column. The French B4–B6 answer is derivable without touching the PDF geometry: the fourth
+component of the indicator code is the content-standard number, so the number names the skill
+(1→CO, 2→PO, 3→CE, 4→PE). Two traps sit in that document — its body's CS cells are vertically
+aligned to nothing in particular, so geometry-based matching disagrees with the scope table about
+a quarter of the time; and one sub-strand is numbered as if it had a fifth standard
+(`B6.1.2.5.3`), which no rule can name, so the field stays empty rather than guessed.
+
+## 🟠 The same database can exist in two copies, and they drift
+
+`find_data()` searches `data/curriculum/` before `data/reference/`, so for the six subjects that
+exist in both, the *curriculum* copy is what the portal serves and the *reference* copy is inert.
+The copies are not kept in step by anything: the French B7–B9 reference copies carried the
+CORE COMPETENCIES column in `cs_desc` and a fabricated `B7.4.2.3.1` stub record (the four the front
+matter fabricated were deleted from these copies on 2026-09-19 — see the notation-example gotcha
+above), while the served
+copies were clean — so a fix written against the wrong copy changes nothing a teacher sees, and a
+fix against the right one leaves a defect behind in the file someone may later promote.
+
+Check which copy `find_data` resolves (and whether the subject is served from it) before editing,
+then rebuild: `make build-curriculum` writes `public/curriculum/`, which is what the app reads.
+The nine subject-grades that were served from the fallback were promoted into `data/curriculum/`
+on 2026-09-18 (see *Two copies of the same database* below) — so what remains in
+`data/reference/` is inert today, and the fixer scripts resolve their files through `find_data`
+rather than assuming the directory.
+
+## 🟠 A page read top to bottom glues the neighbouring columns onto the row
+
+The eight reference-only subject-grades were extracted by reading each page in order, which is why
+397 indicator descriptions carried the page footer, the competence list of the column beside the
+row, and the table's headings. The tempting fix — a list of phrases to delete — is not a fix: the
+same words appear legitimately inside indicator text (`… discuss and point to things that are safe
+and unsafe to play with.` sits beside a `References / WP / Communication and collaboration`
+panel), and a phrase list cannot tell the two apart.
+
+What works is to read the *print's row* first: the x band of the indicator column comes from the
+page's own vertical rules (`re` operators with `w < 2.5`), then a row runs from its indicator code
+to the next code or the next table heading. A phrase is furniture only when the print sets it
+**outside that row**, and the survivor is read back against the row before anything is written.
+Four traps sit in that geometry, all of them found the hard way:
+
+* **A heading can sit inside the indicator column's band.** `STRAND 4: Les activités` and
+  `INDICATOR AND EXEMPLARS` are centred over the table between two of its rules, so a row-band
+  check that stops only at the next indicator code swallows them — `B5.3.1.4.1` ended
+  `… l'on n'aime pas. STRAND 4: Les activités INDICATOR AND EXEMPLARS`.
+* **A label copied halfway is not a label.** Where the print's line ran out, the extractor left a
+  stub the vocabulary cannot match: `- Creativity and innov`, `… Cultural ide`,
+  `… - Critical thinking -`. Cut a stub only when the print never sets it as a word of its own
+  *and* a label word starts with it — otherwise the rule eats the record's own truncations
+  (`… according to a given att`, where `attribute` is the print's word).
+* **Never delete the extraction's truncations.** The database's clean spelling is usually the
+  better reading (`R ead , use and copy` against `Read, use and copy`), so de-kern the row before
+  comparing and treat a word the extraction cut short as part of the record: report it, never
+  write it away.
+* **De-kerning must not invent words.** Rejoining `R` + `ead` is safe only when the page prints
+  `read` somewhere and does *not* print `R` on its own; without that second half `a` + `long`
+  becomes `along`, and the row stops being a yardstick — which fails silently, because the
+  comparison is on folded text.
+
+The rule, the ladder of reading strengths (`row`/`page` verbatim → `row-order`/`page-order`/
+`document-order` word-by-word → report only) and the residual scan live in
+`scripts/fix_reference_text.py`; the trail is `data/audit/reference_text_fixes.json`.
+
+## 🟠 The print's exemplar rides inside the indicator cell
+
+These prints set a row as `<indicator>` and then, in the same cell, an exemplar
+column — a numbered list of teaching steps behind `1.`, or `Learners are to:`, or
+history's `Enquiry route:`. An extractor that reads to the end of the cell returns
+indicator *plus* exemplar, which is how the databases came to hold
+`… used for Graphic Communication 1. Identify drawing materials, instruments and
+equipment` and `… in Africa Learners are to`. Nothing fails: `ind_desc` is only ever
+rendered, so the artefact reaches every scheme, lesson plan and book.
+
+Two things follow. **`ind_desc` should end where the print's exemplar begins** —
+`scripts/fix_ind_desc_exemplars.py` cuts at the marker, and only when the print's
+own row carries the indicator that would be left behind. And **the lesson files are
+copies, four times over**: `data/lessons/*_lessons_enriched.json` embeds the
+indicator in `ind_desc`, in the `perf_indicator` built from it, and inside the
+`starter` and `main` activity steps the template writes around it — and the
+generated books read the lesson file, not the database. Fix only the database and
+the artefact survives in the documents teachers actually print; the fixer therefore
+carries the same substitution into all four fields (and matches slots by
+`ind_code`, so one indicator's text is never read into another's).
+
+The band is read off the page's own rules, and the rules' own guards can quietly
+throw the right ones away: the career-technology print draws its content-standard
+column edge at x≈59 and its indicator column at 215–577, but the reader's `60 <= x`
+floor dropped that first edge, found only two rules, and fell back to a fixed window
+wide enough to swallow the **core-competencies column** (x 582+) into the indicator
+text. That is why some career-technology `ind_desc` values read
+`… unsafe practices in school Communication and Collaboration (CC) 1. Discuss …`: not
+a bad extraction of the right column, but a bad *band* that included the wrong one.
+Check a band against the page's own text before blaming the extraction, and remember
+that the same band bug can look like a dozen different data defects.
+
+The trap in the other direction: a tail that *mentions* the indicator is not a
+repeat. History's rows carry the whole cell — enquiry route, then a dozen steps that
+naturally name the topic — and cutting at the first marker deletes the only copy of
+that text. The script cuts a tail only when it is short and says the indicator back
+(≥4-word run covering half the indicator); everything else is reported.
+
+## 🟠 A print's heading is a block property, and the print breaks its own words
+
+`scripts/fix_sub_strand_names.py` (P1-12) reads the name a curriculum print sets once per block,
+above its table, and writes it where the record still said `Sub-strand B4.1.1`. Three traps, each
+one measured on the prints:
+
+* **A name is not a row's property.** The heading sits above the whole block, so a record is
+  anchored on its own row when the print carries it, then on its content standard, then on the
+  same block in its grade, and — one step weaker, reported as such — on the same block in another
+  grade of the same print. The CCP prints repeat a block across B7–B9, which is where 10 of the
+  3,665 readings come from.
+* **The same code can be reprinted under a different heading pages later** (english
+  `B6.2.3.1.1` is read under `Word Families` on p192 and `Diphthongs` on p193, five blocks on).
+  A reading whose heading number agrees with the row's own components settles it; a print that
+  numbers by another scheme has no agreeing readings and the whole set speaks. Conflicts that
+  remain are refusals — never merge two names because they are *nearly* the same.
+* **The print kerns words apart.** Headings arrive as `GENE RATION`, `Appreciati n g`,
+  `Organi s ation` and `samaison`, and the page gate must compare *folded* text (`F.blob_in`) or
+  the whole pass refuses itself (that mistake cost 1,353 refusals before the gate was folded).
+  Repairing the words is a **curated table**, each pair applied only after that print's own
+  vocabulary spells the joined word — a general "join the pieces when the print spells the joined
+  word" rule is not safe: the prints also join words of their own (`PhonicsLetter`, `StoryTelling`),
+  and a rule wide enough to fix `Appreciati n g` also invents `RolePlay` and `ceque`. What the
+  print itself sets (`TECHNOLOGY INTHE COMMUNITY` in the computing CCP's own table of contents)
+  stays verbatim.
+* **A code the print dresses up must be folded in the right order.** The rme CCP sets
+  `B7/JHS1 2.2.1.1` — no dot after the class — and a fold that collapses the whitespace
+  *first* lets the class marker's `\d*` eat the strand digit (`JHS12`): the code lands one
+  component short and the row is named from the *neighbouring* block. On the first pass
+  that refused 18 rme blocks as "no heading" and silently named 41 records from the wrong
+  block, which is the worst kind of wrong — a plausible name. Strip the class marker
+  before collapsing the space and the same codes fold correctly.
+
+## 🟠 A print's notation example parses as a record
+
+Every CCP front matter explains the code with a worked example — `Example: B7/JHS1 .4.2.3.1
+ANNOTATION` — and an extractor that walks the whole document turns it into a record whose only
+text is the code restated (`"French Learning Indicator B7.4.2.3.1"`). Four such records were built
+(this session: french B7, ghanaian-language B7, rme B7, science B4 — all inert `data/reference/`
+copies, none served). Two things make them hard to see:
+
+* **the year annotation hides the code.** The english print writes `B7/JHS1 .4.2.3.1`, so a plain
+  code search finds nothing anywhere — and that absence of a body row *is* the evidence. A finder
+  has to tolerate `/\s*JHS\s*\d` and blank space between the parts.
+* **label form proves nothing by itself.** 302 other records are label-form too, and the prints
+  *do* carry their text (the owop B4–B6 print at pp. 18/40/61) — those are a filling job, not a
+  deletion. Dropping on the shape alone would delete real curriculum.
+
+`scripts/drop_front_matter_records.py` (report by default, `--apply` deletes) therefore requires
+all three: label form, **exactly one** occurrence of the code in the print, and that occurrence on
+a page whose line says `Example:`/`ANNOTATION` — plus no body row. Everything else is recorded as a
+placeholder with its reason, and the deleted records are kept verbatim in
+`data/audit/front_matter_records.json`, so a deletion can be undone from the artifact alone.
+
+## 🟠 A pypdf page has an empty ContentStream, and it is falsy
+
+A page that draws no rectangles still has a `ContentStream` object, but `bool()` of it is
+**False** while `len(contents.operations)` is in the hundreds — the object only becomes truthy
+once something has iterated it. So the natural guard
+
+```python
+for op in (contents.operations if contents else []):   # silently reads nothing
+```
+
+skips every page and reports "this page draws no rules". `scripts/fill_label_form_text.py` (and
+the probe that led to it) uses `if contents is not None`; the lesson cost six probing rounds of
+"the rules are there in one script and gone in the next". The same trap waits in anything that
+reads a page's graphics for the first time: assert the operation count, not the truthiness.
+
+Related, for the same reader: **a page can set two tables whose columns are not the same width**
+(the owop B4 print draws 66/228/390/552 in one block and 66/174/322/561 in the next). A column
+band is only meaningful together with the y-span of the rules that drew it, or a line from the
+narrower table below is read as a cell of the wider one above — which is how a read came back
+holding the content standard and the indicator glued together.
+
+## 🟠 Two copies of the same database, and only one of them is audited
+
+`data/reference/` is searched **after** `data/curriculum/` and **silently**, so which copy a tool
+reads depends on where the file happens to live — and nothing fails when they disagree. For a
+year nine subject-grades (computing and french B4–B6, kindergarten KG1/KG2, `english-language B5`)
+existed only in the fallback copy, which meant:
+
+* the portal served them, and said `verified: true`, but **Audit A never looked at them** — it
+  enumerates `data/curriculum/` by filename pattern, so they were invisible rather than failing;
+* their summaries had no `counts` block, so any code assuming `summary["counts"]` raised on exactly
+  those subjects;
+* nothing established which copy a *fix* should write to: `fix_french_content_standards.py` wrote
+  the reference copy of french B7–B9 (correct — that is where the polluted text was, while the
+  served copy was already clean), and the fixer scripts had to be re-pointed through `find_data`
+  when the promotion moved the files they own.
+
+Promotion (`scripts/promote_reference_subjects.py`, 2026-09-18) is the way out: move the files,
+give them summaries derived from their own databases, add their counts to `EXPECTED`, and pin with
+a test that nothing is served from the fallback. Two traps sit in the move itself:
+
+* **Audit A's filename pattern is the gate.** `_(B\d)_` and `^B(\d)\.` codes silently excluded
+  kindergarten (`_KG1_`, `K1.3.2.1.4`): the files would have been "audited" by not being listed.
+  Check the enumerator before trusting it with new data — and note the audit's exit code does not
+  distinguish "no issues" from "no files".
+* **Promotion exposes empty fields, it does not create them.** `B5.6.4.9.1` had carried an empty
+  `cs_desc` since the extraction, and it only surfaced because the file moved under Audit A's nose;
+  the print's own cell reads `B5.6.4.9.1.` (one level *longer* than the standard's code), which is
+  why the earlier column scan could not match it. When a subject-grade becomes visible to an audit
+  for the first time, run the audit *before* celebrating — and keep the print's real defects
+  (blank cells) as named exemptions rather than blanking the rule.
+
 ## 🟠 Committed rules ≠ deployed rules
 Vercel does **not** deploy Firestore rules/indexes. Editing `firestore.rules` and pushing
 changes nothing in production until `firebase deploy --only firestore:rules,firestore:indexes`
 runs. This is the most common "it works locally / on my emulator but 403s in prod" cause.
-(There's no `.firebaserc` — you may need `--project <id>`.)
+`.firebaserc` pins the project (`beacon-edu-consult-proj`); `make deploy-rules`
+runs it. Note that rules pasted into the Firebase console are **not** version-controlled:
+the console and `firestore.rules` can silently disagree, and only the repo file is reviewed.
+
+## 🟠 A Windows checkout carries CRLF, and a `;\n` parser silently matches nothing
+Git for Windows turns LF into CRLF on checkout (`core.autocrlf`), and a test that parses a text
+file with a regex anchored on `\n` then matches **nothing** — not "the wrong thing", nothing.
+`src/firestoreRules.test.js` read `firestore.rules` and looked for `allow …;\n`, so on a Windows
+machine every clause came back as an empty string and 32 checks failed on a file that was
+perfectly correct; CI runs on Linux and never saw it. The read is normalized now
+(`.replace(/\r\n/g, '\n')`) rather than teaching every pattern about `\r\n`, and any new test
+that parses a source file should do the same. Reproduce it anywhere with
+`python3 -c "…"`-style conversion, or by setting `core.autocrlf true` and converting the file —
+the failure mode is worth seeing once.
+
+## 🟠 A rule that matches on the wrong text answers the wrong question
+The question generator fires rules at an indicator by matching its wording, and that is a
+sharp edge worth remembering before writing the next generator: **match the indicator, never
+the content standard.** `cs_desc` is the heading above the indicator and at JHS it shares
+almost all of its vocabulary with indicators it does not describe — matching on both made the
+money rule fire on a data-collection indicator (the word "cost" inside "…taking into
+consideration…") and the rounding rule fire on four-digit addition. The same generator shipped
+a rule with the pattern `cedi`, which matches inside "pre**cedi**ng", and `\bmode\b` was
+missing from the central-tendency rule, so "**Mode**l number quantities…" was asked for a
+median. Two guards came out of it: every pattern that names a word gets `\b` boundaries, and
+`make check` runs `generate_question_bank.py --verify`, which fails if the committed questions
+differ from what the rules produce today — a rule that starts or stops firing cannot reach a
+teacher unnoticed. **The description is lower-cased before matching** (`indicator_text()`),
+so every pattern must be written in lower case: the metric rule shipped with
+`relationship between the units Kilogram` and that branch was dead from the day it was written
+(found 2026-09-20, when a B3 lesson still had no question). A pattern that never fires looks
+exactly like a lesson that needs no question, which is why the coverage report prints per rule
+and the run names the indicators still left.
+
+## 🔴 `matches()` is a full-string match, so a prefix pattern denies everything
+In the rules language `'generated/alice/x.pdf'.matches('^generated/alice/')` is **false**:
+`matches()` anchors the pattern at both ends (RE2 full match), so the pattern has to describe
+the *whole* string — a bare prefix can never satisfy it. This shipped in the document library:
+`generated_documents` create required `storagePath.matches('^generated/' + uid + '/')`, which
+denied every save the client makes, and no static check could see it (the guard is present, it
+is just always false). The emulator suite caught it on its first run — that is what
+`tests/rules/firestore.rules.test.js` is for. The rule now reads
+`storagePath.matches('^generated/' + uid + '/.*')` — a `matches()` pattern has to describe the
+whole string, so end it with `.*` (this is the shape Google's own docs use,
+`contentType.matches('image/.*')`). Only `firestore.rules` used `matches()` — `storage.rules`
+matches on the *path*, a different mechanism, and is unaffected.
+
+## 🟠 The exam paper's PDF font is WinAnsi, and half the maths symbols are not in it
+`questionPaper.js` prints through jsPDF, whose standard 14 fonts are encoded in **WinAnsi**
+(`°`, `²`, `×`, `÷`, `½`, `¢` and `é` are in it; the radical sign `√`, `π`, `≥` and every
+superscript above three are **not**). An unsupported character is not dropped either — jsPDF
+writes the code point's low byte, so `√48` prints as `\0"\x1a48` in the teacher's paper. Nothing
+in the app can see this: the browser renders the bank, the tests pass, the PDF is quietly wrong.
+The existing bank had dodged it by accident — the only non-ASCII characters in it are `°`, `¢`,
+`÷` and `²`, and `r_jhs_circle` writes *Taking pi as 22/7* in words — but the authored surd items
+had to be reworded: "simplify the square root of 48", never `√48`. The guard is
+`src/lib/starterBank.test.js`, which walks every served question (prompt, answer and options) and
+fails on any character outside WinAnsi; if a real radical is ever wanted, a Unicode font has to be
+embedded in `questionPaper.js` first.
 
 ## 🟠 Env vars are required at build time
 `VITE_FIREBASE_*` are embedded at build time. Without a `.env.local` (or the equivalent
 Vercel env vars) the build **succeeds** and the app fails at the first Firebase call. Copy
 `.env.example` → `.env.local`; see [build-deploy.md](build-deploy.md).
+
+The **deployed** flavour of this is the one that bites, and it is a different problem with a
+different fix: a Vercel build gets whatever the *project* has in Settings → Environment
+Variables, so somebody's `.env.local` is irrelevant to it, and a value scoped to *Preview* only
+leaves every production build unconfigured. Two things that make it look mysterious:
+
+* **Vercel does not rebuild because a variable changed.** Add the value, then
+  *Deployments → ⋯ → Redeploy* (uncheck *Use existing Build Cache* if the old build is still
+  being served). Setting it and reloading the domain changes nothing.
+* **The build is green either way.** Nothing in the build log says the deploy cannot reach
+  Firebase, so the first person to find out is a visitor.
+
+Ask the deploy itself, in one request — no browser, no console:
+`GET /build-info.json` answers `firebaseConfigured` and `missingEnv` (the six names). The screen
+a visitor sees now branches on where they are standing, too: `src/lib/setupGuidance.js` gives a
+laptop `.env.local` + `yarn dev` and a deployment the Vercel path, the exact values the build was
+missing, the redeploy step and that URL. Found the hard way on 2026-09-20: the first real deploy
+of the new architecture served the notice to the person who had just published the rules, and the
+notice was telling them to copy a file that exists nowhere near the server.
+
+### "I set the variables and the deploy still shows the notice"
+
+Four causes account for nearly all of it, and they are checked in this order:
+
+1. **The variables are on a different Vercel project.** Whatever is open in the dashboard when you
+   add them is not necessarily the project that serves the domain. The one that matters is the one
+   whose **Domains** tab lists your address; compare that tab, not the project name.
+2. **The Environments column.** A value scoped to *Preview* (or *Development*) only is absent from
+   every production build. Each row shows its environments; edit it if Production is not among
+   them, and check the value is not empty.
+3. **You redeployed a *preview* deployment.** Promoting a preview build to production — or
+   redeploying one — does not rebuild it: it keeps the environment it was built with, which is
+   preview. Redeploy a deployment that is labelled **Production**.
+4. **The values were added after the build started.** See the rebuild rule above.
+
+Checks that do not require trusting the dashboard: `npx vercel env ls` prints every name with the
+environments it applies to; the failing deployment's **build log** contains the line
+`Building WITHOUT Firebase config: …` (printed by the `firebaseConfigGuard` plugin in
+`vite.config.js`); and `GET /build-info.json` on the deploy reports `firebaseConfigured` and
+`missingEnv`.
+
+### The way out: the config lives in a committed file
+
+`src/firebaseConfig.js` holds the six values as source, and `src/firebase.js` uses it for
+anything the build environment does not supply — with the environment still winning when it has a
+**non-blank** value, so a deploy can point at a different Firebase project without a code change.
+Every build therefore has a working config: no dashboard state, no encoding, nothing to shadow.
+(An empty `VITE_FIREBASE_*` counts as absent and falls back to the file; the build log names any
+such variable it saw.)
+
+This replaced a committed `.env.production`, which was the right idea and still failed twice. Both
+failures are worth knowing because they are silent, and they apply to any `.env` file in this repo:
+
+* **A BOM breaks the first line only.** `Set-Content -Encoding utf8` on Windows PowerShell 5.1
+  writes a UTF-8 BOM, Vite's parser does **not** strip it, so `\ufeffVITE_FIREBASE_API_KEY` is a
+  different key than the one `src/firebase.js` reads: the file yielded five values and lost the API
+  key. Locally that was invisible — `.env.local` happened to supply the missing one — and the
+  deploy, which has no `.env.local`, came up with none. A **UTF-16** file is worse: nothing parses,
+  no error, no warning.
+* **A blank variable in the environment beats the file.** Vite's `loadEnv` lets `process.env` win
+  over `.env` files, so a variable that exists in Vercel with an empty value emptied out the
+  committed one. The dashboard showed six configured variables; the bundle got none.
+
+Editing the committed values is safe: they are public client identifiers, inlined into the bundle
+either way, and the security boundary is `firestore.rules` plus the Authorized Domains list. The
+project id in it must match `.firebaserc` (`src/firebaseConfig.test.js` fails if they drift).
+
+Verify before pushing, and after deploying:
+
+```
+yarn build && node -e "console.log(require('./dist/build-info.json'))"
+curl -s https://<your-domain>/build-info.json      # firebaseConfigured, configSource, projectId
+```
 
 ## 🟡 Service worker is production-only
 `registerSW.js` registers only under `import.meta.env.PROD`. **PWA/offline behavior does not
@@ -23,25 +572,33 @@ Running several production builds on the same `localhost` origin can leave an ol
 a blank shell. Unregister it + clear caches in DevTools, then reload. Harmless on the real
 domain.
 
-## 🟡 Slides are browse + export only
-`SlideLessons.jsx` builds a deck from the selected week's scheduled lessons and exports PPTX
-(`lib/lessonSlidesPptx.js`); it can also save decks to `lesson_slides`. There is **no
-authoring form and no deck-view page** — `SlideLessonForm`/`SlideLessonView` do not exist in
-this portal. Don't assume slide creation works end-to-end.
+## 🟡 Note exports flatten rich text, and drop images
+`src/lib/htmlBlocks.js` reads a note's HTML into headings, paragraphs, bullets and numbered
+items for the Word/PDF exporters. Inline markup (`strong`, `em`, links) is **dropped, keeping
+the text** — deliberate: mis-nested runs would corrupt a paragraph, a missing italic does not.
+Inline images (`<img>` from the Tiptap image extension) have no text at all, so they are
+**omitted from both exports**. If notes ever carry diagrams a teacher needs on paper, that is
+the file to extend first.
 
 ## 🟡 The curriculum cache is permanent for the session
 `useCurriculum`/`useSchedules` cache each JSON file in a module-level `Map` that never
 expires. Curriculum only changes on deploy and the service worker revalidates in the
 background, so this is intentional — but it means a hot-fix to a bundle file needs a reload,
-and **bumping `CACHE_VERSION` in `public/sw.js`** is what makes existing installs pick up new
-curriculum, quotes, or shell files.
+and the service worker's cache is named after the bundle hash in
+`curriculum/_BUILD_REPORT.json`, which is what makes existing installs pick up a rebuilt
+bundle. Edit a bundle file by hand and nothing renames the cache — clear site data.
 
 ## ⚪ Minor
 - **The retired NCOS app lives under `legacy/`** and is reference-only — nothing in `src/`
   imports it. `make audit` reports its module manifest in a separate `LEGACY` section; that
   output never fails the audit.
 - **`make audit` is only about data.** Errors mean the portal cannot source part of the
-  dataset; the 8 subject-grades backed only by `data/reference/` are warnings by design.
+  dataset; the 9 subject-grades backed only by `data/reference/` are warnings by design.
+- **The rules suite needs a JVM and the network.** `yarn test:rules` starts the Firestore
+  emulator — a Java program — and downloads a pinned `firebase-tools` plus the emulator jar
+  on its first run, so it cannot be part of `make check` and cannot run in a sandbox with
+  no JVM and a restricted egress (this one: `java` is absent and Debian mirrors, Maven and
+  `storage.googleapis.com` are blocked). CI's `rules` job installs Temurin 21 and runs it.
 - **The dev server runs on port 5199**, and `vite.config.js` needs
   `allowedHosts: ['.e2b.app', 'localhost']` for cloud sandboxes (Vite answers 403
   "Blocked request" otherwise).

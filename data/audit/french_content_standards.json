@@ -1,0 +1,233 @@
+{
+ "source": "data/sources/french_B4-B6.pdf",
+ "rule": {
+  "1": "Compréhension Orale",
+  "2": "Production Orale",
+  "3": "Compréhension Écrite",
+  "4": "Production Écrite"
+ },
+ "scope_blocks_verified": 18,
+ "scope_pages": [
+  18,
+  19,
+  20
+ ],
+ "body_label_counts": {
+  "Compréhension Orale": 61,
+  "Production Orale": 60,
+  "Compréhension Écrite": 59,
+  "Production Écrite": 60
+ },
+ "files": [
+  {
+   "grade": "B4",
+   "filled": 88,
+   "already": 0,
+   "displaced": [
+    {
+     "key": "B4.1.2.2.1",
+     "cs_code": "B4.1.2.2",
+     "was": "Se présenter à quelqu’un Ex.: Deux élèves se présentent en donnant: nom, prénom, nationalité : - Je m’appelle Baba Seidu. Mon nom c’est Seidu et mon prénom c’est Baba. Je suis ghanéen. - Moi, je m’appelle Amina. Je suis ghanéenne"
+    },
+    {
+     "key": "B4.4.1.1.1",
+     "cs_code": "B4.4.1.1",
+     "was": "Écouter/Regarder et comprendre un document audio/audio-visuel sur les mois de l’année  Production Orale Un dialogue, un poème, une chanson, etc. sur les mois de l’année, (sur YouTube/Documents aux CREF, dans la collection ‘Chantez plus fort’, etc.)"
+    },
+    {
+     "key": "B4.4.2.2.1",
+     "cs_code": "B4.4.2.2",
+     "was": "Parler de l’emploi du temps de la journée - Compréhension Écrite Ce que l’on fait à certains moments de la journée (matin, midi, après-midi, soir) Ex. : Je me lève à cinq heures Je me lave à six heures Je mange à six heures et demie, etc. - Des chansons, récitations, etc. sur les horaires (sur internet, fabriquées par le professeur, etc. et en"
+    }
+   ]
+  },
+  {
+   "grade": "B5",
+   "filled": 90,
+   "already": 0,
+   "displaced": [
+    {
+     "key": "B5.4.8.2.2",
+     "cs_code": "B5.4.8.2",
+     "was": "Poser et répondre à des questions sur la position d’une personne ou d’un objet. A l’aide d’une photo de famille. - Critical thinking Exemple : - Cultural identity and global citizenship - Cet homme c’est ton père ? Non c’est mon oncle ? Mon père est à côté de ma mère. Et qui est devant a mère ? C’est moi"
+    }
+   ]
+  },
+  {
+   "grade": "B6",
+   "filled": 88,
+   "already": 0,
+   "displaced": [
+    {
+     "key": "B6.3.1.4.1",
+     "cs_code": "B6.3.1.4",
+     "was": "Dire et écrire les activités que l’on aime faire"
+    }
+   ]
+  }
+ ],
+ "left_empty": [
+  {
+   "code": "B6.1.2.5.3",
+   "cs_code": "B6.1.2.5",
+   "ind_desc": "Remplir une fiche d’identité Ex. A la douane : une fiche d’immigration ou un pas"
+  }
+ ],
+ "b7_b9": {
+  "source": "data/sources/french_CCP_B7-B9.pdf",
+  "recovered": [
+   {
+    "grade": "B7",
+    "cs_code": "B7.1.6.1",
+    "page": 50,
+    "statement": "Comprendre et s’exprimer sur la famille et les liens familiaux",
+    "records": [
+     "B7.1.6.1.1",
+     "B7.1.6.1.2",
+     "B7.1.6.1.3",
+     "B7.1.6.1.4"
+    ],
+    "print_labels_it": null
+   },
+   {
+    "grade": "B7",
+    "cs_code": "B7.2.1.1",
+    "page": 53,
+    "statement": "Comprendre et s’exprimer sur la maison et ses environs",
+    "records": [
+     "B7.2.1.1.1",
+     "B7.2.1.1.2",
+     "B7.2.1.1.3",
+     "B7.2.1.1.4"
+    ],
+    "print_labels_it": null
+   },
+   {
+    "grade": "B7",
+    "cs_code": "B7.4.4.1",
+    "page": 75,
+    "statement": "Comprendre et s’exprimer sur un agenda et les horaires",
+    "records": [
+     "B7.4.4.1.1",
+     "B7.4.4.1.2",
+     "B7.4.4.1.3",
+     "B7.4.4.1.4"
+    ],
+    "print_labels_it": null
+   },
+   {
+    "grade": "B8",
+    "cs_code": "B8.6.1.1",
+    "page": 124,
+    "statement": "Comprendre et s’exprimer sur l’habillement et la mode",
+    "records": [
+     "B8.6.1.1.1",
+     "B8.6.1.1.2",
+     "B8.6.1.1.3",
+     "B8.6.1.1.4"
+    ],
+    "print_labels_it": null
+   },
+   {
+    "grade": "B8",
+    "cs_code": "B8.6.2.1",
+    "page": 127,
+    "statement": "Comprendre et s’exprimer sur les activités sportives",
+    "records": [
+     "B8.6.2.1.1",
+     "B8.6.2.1.2",
+     "B8.6.2.1.3",
+     "B8.6.2.1.4"
+    ],
+    "print_labels_it": null
+   },
+   {
+    "grade": "B8",
+    "cs_code": "B8.8.1.1",
+    "page": 133,
+    "statement": "Comprendre et situer un évènement dans le futur",
+    "records": [
+     "B8.8.1.1.1",
+     "B8.8.1.1.2",
+     "B8.8.1.1.3"
+    ],
+    "print_labels_it": null
+   },
+   {
+    "grade": "B9",
+    "cs_code": "B9.2.3.1",
+    "page": 102,
+    "statement": "Comprendre et s’exprimer sur son pays",
+    "records": [
+     "B9.2.3.1.1"
+    ],
+    "print_labels_it": "B8/JHS2.2.3.1"
+   },
+   {
+    "grade": "B9",
+    "cs_code": "B9.2.5.1",
+    "page": 137,
+    "statement": "Comprendre et s’exprimer sur la protection de l’environnement",
+    "records": [
+     "B9.2.5.1.1",
+     "B9.2.5.1.2",
+     "B9.2.5.1.3",
+     "B9.2.5.1.4"
+    ],
+    "print_labels_it": null
+   },
+   {
+    "grade": "B9",
+    "cs_code": "B9.5.5.1",
+    "page": 140,
+    "statement": "Comprendre et s’exprimer sur comment passer une commande",
+    "records": [
+     "B9.5.5.1.1",
+     "B9.5.5.1.2",
+     "B9.5.5.1.3",
+     "B9.5.5.1.4"
+    ],
+    "print_labels_it": null
+   },
+   {
+    "grade": "B9",
+    "cs_code": "B9.9.4.1",
+    "page": 162,
+    "statement": "Comprendre et donner des conseils et des avertissements",
+    "records": [
+     "B9.9.4.1.1",
+     "B9.9.4.1.2",
+     "B9.9.4.1.3",
+     "B9.9.4.1.4"
+    ],
+    "print_labels_it": null
+   }
+  ],
+  "not_in_print": [
+   {
+    "grade": "B7",
+    "cs_code": "B7.4.2.3",
+    "records": [
+     "B7.4.2.3.1"
+    ]
+   }
+  ],
+  "files": [
+   {
+    "grade": "B7",
+    "filled": 12,
+    "confirmed_by_own_text": 12
+   },
+   {
+    "grade": "B8",
+    "filled": 11,
+    "confirmed_by_own_text": 11
+   },
+   {
+    "grade": "B9",
+    "filled": 13,
+    "confirmed_by_own_text": 12
+   }
+  ]
+ }
+}

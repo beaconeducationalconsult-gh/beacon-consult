@@ -32,7 +32,7 @@ truth for "who am I / am I approved / am I admin".
 - `useQuoteLikes()` → live `{ quoteId: { count, likedBy[] } }` map (one `onSnapshot` on the
   `quote_likes` collection; error-handled so it degrades when unauthenticated)
 - `toggleQuoteLike(quoteId, uid, likes)` → create-on-first-like toggle
-- `topLikedQuotes(quotes, likes, n)` → top-N by count, joined to quote objects (Feed
+- `topLikedQuotes(quotes, likes, n)` → top-N by count, joined to quote objects (workspace
   leaderboard)
 
 ## Document exporters (`src/lib/`)
@@ -43,17 +43,29 @@ All run **client-side** (no server). Heavy ones are `import()`-ed lazily at clic
 |---|---|---|
 | `schemePdf.js` / `schemeDocx.js` | Scheme of learning (PDF / Word) | Schemes |
 | `lessonPlanPdf.js` / `lessonPlanDocx.js` | Lesson plan (PDF / Word) | Lesson plans |
-| `questionPaper.js` | Exam paper (PDF) | Question generator |
+| `questionPaper.js` | Exam paper (PDF) | Question bank, quiz maker, exam builder |
+| `examPaper.js` | *which* questions go on a paper — sections, marks budget, coverage | Exam builder |
 | `quizPptx.js` | Quiz slideshow (PPTX) | Quiz maker |
 | `docxShared.js` | Shared Word-generation helpers | the `*Docx` exporters |
 
 Libraries: `jspdf` + `jspdf-autotable` (PDF), `docx` (Word), `pptxgenjs` (PowerPoint).
 
+Two rules for anything built on `docxShared.js`, both enforced by `src/lib/docxExport.test.js`:
+
+1. **Declare the font and size in `documentStyles()`.** Without document defaults the body font is
+   whatever the *reader's* Word Normal template happens to be.
+2. **Use the real heading levels.** `H1`/`H2`/`H3` are `HeadingLevel` constants — passing a
+   paragraph factory as `heading:` writes a style name Word cannot resolve and the heading renders
+   as body text (see [gotchas.md](gotchas.md)).
+
+The palette (`BRAND.navy`, Calibri, rules under titles, `_` blanks for unfilled fields) mirrors
+`scripts/generate_schemes.py`, so an export and a printed book look like the same product.
+
 ## Pure helpers (`src/lib/`)
 
 - `week.js` — ISO week keys + the `WEEKLY_QUOTA` constant (question-bank target)
 - `academicCalendar.js` — Ghana term calendar; `getAcademicStatus()`, `termProgress()`,
-  `daysUntil()`, `fmtDate()` (drives Feed/Calendar widgets)
+  `daysUntil()`, `fmtDate()` (drives the workspace widgets and `components/TermCalendar.jsx`)
 - `grades.js` — grade id ↔ label helpers (`gradeLabel`)
 - `subjectThemes.js` — per-subject colour theming
 
@@ -61,7 +73,7 @@ Libraries: `jspdf` + `jspdf-autotable` (PDF), `docx` (Word), `pptxgenjs` (PowerP
 
 | Component | Purpose |
 |---|---|
-| `Sidebar.jsx` | Primary nav (fixed desktop / drawer mobile). The nav scrolls; header + user footer stay pinned. |
+| `Sidebar.jsx` | Primary nav (fixed desktop / drawer mobile). Study notes, Quote of the day and Slide lessons are commented out of `LINKS` (pages still routed); header + user footer stay pinned. |
 | `Navbar.jsx` | Public marketing nav (currently unused by pages) |
 | `PendingApproval.jsx` | Shown to unapproved/suspended members by `ProtectedLayout` |
 | `OfflineIndicator.jsx` | Bottom-center pill: offline / syncing / synced (see pwa-offline.md) |
@@ -72,6 +84,9 @@ Libraries: `jspdf` + `jspdf-autotable` (PDF), `docx` (Word), `pptxgenjs` (PowerP
 | `Stepper.jsx` | Multi-step form stepper |
 | `NotesTabs.jsx` | Tab strip used in the notes area |
 | `SubjectIcon.jsx` | Per-subject icon |
+| `SubjectSelect.jsx` | Subject dropdown for a grade; reports load failures and "no subjects" distinctly instead of rendering an empty-looking select |
+| `DataError.jsx` | "Could not load X" block naming the Firestore error, its two likely causes and the repair — used by every data page. The wording lives in `src/lib/dataError.js` (unit-tested, no Firebase), including the **one-click index link** Firestore puts in a `failed-precondition` message, which used to be thrown away |
+| `TermCalendar.jsx` | One term's weeks + scheduled lessons (a section of the Workspace) |
 
 > `RichEditor` and the article views render content with Tailwind `prose` classes, backed by
 > the `@tailwindcss/typography` plugin (registered via `@plugin "@tailwindcss/typography";`

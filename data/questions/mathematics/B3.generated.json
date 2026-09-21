@@ -1,0 +1,1281 @@
+{
+ "subjectId": "mathematics",
+ "grade": "B3",
+ "generatedBy": "scripts/generate_question_bank.py",
+ "items": [
+  {
+   "id": "B3.1.1.1.1-counting-sequence-1",
+   "indicatorCode": "B3.1.1.1.1",
+   "prompt": "Write the number that comes just after 750.",
+   "type": "short",
+   "options": null,
+   "answer": "751",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:counting-sequence"
+  },
+  {
+   "id": "B3.1.1.1.1-counting-sequence-2",
+   "indicatorCode": "B3.1.1.1.1",
+   "prompt": "Write the number that comes just before 750.",
+   "type": "short",
+   "options": null,
+   "answer": "749",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:counting-sequence"
+  },
+  {
+   "id": "B3.1.1.1.1-counting-sequence-3",
+   "indicatorCode": "B3.1.1.1.1",
+   "prompt": "Count on in 25s: 750, 775, 800, 825, ____",
+   "type": "short",
+   "options": null,
+   "answer": "850",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:counting-sequence"
+  },
+  {
+   "id": "B3.1.1.1.2-place-value-1",
+   "indicatorCode": "B3.1.1.1.2",
+   "prompt": "What is the value of the digit 5 in 7,552?",
+   "type": "mcq",
+   "options": [
+    "5,000",
+    "500",
+    "50",
+    "5"
+   ],
+   "answer": "500",
+   "answerLetter": "B",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:place-value"
+  },
+  {
+   "id": "B3.1.1.1.2-place-value-2",
+   "indicatorCode": "B3.1.1.1.2",
+   "prompt": "Write 7,552 in expanded form.",
+   "type": "short",
+   "options": null,
+   "answer": "7 x 1000 + 5 x 100 + 5 x 10 + 2 x 1",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:place-value"
+  },
+  {
+   "id": "B3.1.1.1.3-place-value-1",
+   "indicatorCode": "B3.1.1.1.3",
+   "prompt": "What is the value of the digit 7 in 7,488?",
+   "type": "mcq",
+   "options": [
+    "700",
+    "7",
+    "7,000",
+    "70,000"
+   ],
+   "answer": "7,000",
+   "answerLetter": "C",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:place-value"
+  },
+  {
+   "id": "B3.1.1.1.3-place-value-2",
+   "indicatorCode": "B3.1.1.1.3",
+   "prompt": "Write 7,488 in expanded form.",
+   "type": "short",
+   "options": null,
+   "answer": "7 x 1000 + 4 x 100 + 8 x 10 + 8 x 1",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:place-value"
+  },
+  {
+   "id": "B3.1.1.1.4-compare-order-1",
+   "indicatorCode": "B3.1.1.1.4",
+   "prompt": "Which symbol makes this true?  1,675  ___  3,382",
+   "type": "mcq",
+   "options": [
+    "=",
+    ">",
+    "<"
+   ],
+   "answer": "<",
+   "answerLetter": "C",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:compare-order"
+  },
+  {
+   "id": "B3.1.1.1.4-compare-order-2",
+   "indicatorCode": "B3.1.1.1.4",
+   "prompt": "Arrange in order from smallest to largest: 3,382, 1,675.",
+   "type": "short",
+   "options": null,
+   "answer": "1,675, 3,382",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:compare-order"
+  },
+  {
+   "id": "B3.1.1.2.1-opposite-values-1",
+   "indicatorCode": "B3.1.1.2.1",
+   "prompt": "A car travels 5 km to the east and then 5 km to the west. How far is it from where it started?",
+   "type": "short",
+   "options": null,
+   "answer": "0 km — it is back where it started",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:opposite-values"
+  },
+  {
+   "id": "B3.1.1.2.1-opposite-values-2",
+   "indicatorCode": "B3.1.1.2.1",
+   "prompt": "Which of these describes two opposite values?",
+   "type": "mcq",
+   "options": [
+    "5 steps forward and 5 steps backward",
+    "0 and 1",
+    "5 steps forward and 7 steps forward",
+    "5 and 5"
+   ],
+   "answer": "5 steps forward and 5 steps backward",
+   "answerLetter": "A",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:opposite-values"
+  },
+  {
+   "id": "B3.1.1.2.1-opposite-values-3",
+   "indicatorCode": "B3.1.1.2.1",
+   "prompt": "A lift goes up 5 floors and then down 5 floors. Where is the lift now?",
+   "type": "short",
+   "options": null,
+   "answer": "on the floor where it started",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:opposite-values"
+  },
+  {
+   "id": "B3.1.1.2.2-integers-1",
+   "indicatorCode": "B3.1.1.2.2",
+   "prompt": "The temperature on a cold morning was 8 °C below zero. Which number shows this temperature?",
+   "type": "mcq",
+   "options": [
+    "0 °C",
+    "-8 °C",
+    "8 °C",
+    "-18 °C"
+   ],
+   "answer": "-8 °C",
+   "answerLetter": "B",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:integers"
+  },
+  {
+   "id": "B3.1.1.2.2-integers-2",
+   "indicatorCode": "B3.1.1.2.2",
+   "prompt": "Write the next three numbers in the sequence: 3, 2, 1, ____, ____, ____",
+   "type": "short",
+   "options": null,
+   "answer": "0, -1, -2",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:integers"
+  },
+  {
+   "id": "B3.1.1.2.2-integers-3",
+   "indicatorCode": "B3.1.1.2.2",
+   "prompt": "Work out -5 + 8.",
+   "type": "short",
+   "options": null,
+   "answer": "3",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:integers"
+  },
+  {
+   "id": "B3.1.1.3.1-integers-1",
+   "indicatorCode": "B3.1.1.3.1",
+   "prompt": "The temperature on a cold morning was 5 °C below zero. Which number shows this temperature?",
+   "type": "mcq",
+   "options": [
+    "-15 °C",
+    "-5 °C",
+    "0 °C",
+    "5 °C"
+   ],
+   "answer": "-5 °C",
+   "answerLetter": "B",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:integers"
+  },
+  {
+   "id": "B3.1.1.3.1-integers-2",
+   "indicatorCode": "B3.1.1.3.1",
+   "prompt": "Write the next three numbers in the sequence: 4, 3, 2, ____, ____, ____",
+   "type": "short",
+   "options": null,
+   "answer": "1, 0, -1",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:integers"
+  },
+  {
+   "id": "B3.1.1.3.1-integers-3",
+   "indicatorCode": "B3.1.1.3.1",
+   "prompt": "Work out 4 - 9.",
+   "type": "short",
+   "options": null,
+   "answer": "-5",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:integers"
+  },
+  {
+   "id": "B3.1.2.1.1-add-subtract-within-1",
+   "indicatorCode": "B3.1.2.1.1",
+   "prompt": "Work out 346 + 363.",
+   "type": "short",
+   "options": null,
+   "answer": "709",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:add-subtract-within"
+  },
+  {
+   "id": "B3.1.2.1.1-add-subtract-within-2",
+   "indicatorCode": "B3.1.2.1.1",
+   "prompt": "Work out 709 - 363.",
+   "type": "short",
+   "options": null,
+   "answer": "346",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:add-subtract-within"
+  },
+  {
+   "id": "B3.1.2.1.1-add-subtract-within-3",
+   "indicatorCode": "B3.1.2.1.1",
+   "prompt": "Which of these is the sum of 346 and 363?",
+   "type": "mcq",
+   "options": [
+    "710",
+    "719",
+    "699",
+    "709"
+   ],
+   "answer": "709",
+   "answerLetter": "D",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:add-subtract-within"
+  },
+  {
+   "id": "B3.1.2.2.1-equal-not-equal-1",
+   "indicatorCode": "B3.1.2.2.1",
+   "prompt": "Which of these is true?",
+   "type": "mcq",
+   "options": [
+    "59 + 37 = 100",
+    "59 + 37 = 98",
+    "59 + 37 = 93",
+    "59 + 37 = 96"
+   ],
+   "answer": "59 + 37 = 96",
+   "answerLetter": "D",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:equal-not-equal"
+  },
+  {
+   "id": "B3.1.2.2.1-equal-not-equal-2",
+   "indicatorCode": "B3.1.2.2.1",
+   "prompt": "Is the statement 59 + 37 = 98 true or false?",
+   "type": "mcq",
+   "options": [
+    "True",
+    "False"
+   ],
+   "answer": "False",
+   "answerLetter": "B",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:equal-not-equal"
+  },
+  {
+   "id": "B3.1.2.2.1-equal-not-equal-3",
+   "indicatorCode": "B3.1.2.2.1",
+   "prompt": "Complete the statement: 96 = 59 + ____",
+   "type": "short",
+   "options": null,
+   "answer": "37",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:equal-not-equal"
+  },
+  {
+   "id": "B3.1.2.3.1-addition-1",
+   "indicatorCode": "B3.1.2.3.1",
+   "prompt": "Add: 86 + 9 = ",
+   "type": "short",
+   "options": null,
+   "answer": "95",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:addition"
+  },
+  {
+   "id": "B3.1.2.3.1-subtraction-2",
+   "indicatorCode": "B3.1.2.3.1",
+   "prompt": "Subtract: 77 - 66 = ",
+   "type": "short",
+   "options": null,
+   "answer": "11",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:subtraction"
+  },
+  {
+   "id": "B3.1.2.4.1-add-subtract-within-1",
+   "indicatorCode": "B3.1.2.4.1",
+   "prompt": "Work out 258 + 684.",
+   "type": "short",
+   "options": null,
+   "answer": "942",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:add-subtract-within"
+  },
+  {
+   "id": "B3.1.2.4.1-add-subtract-within-2",
+   "indicatorCode": "B3.1.2.4.1",
+   "prompt": "Work out 942 - 684.",
+   "type": "short",
+   "options": null,
+   "answer": "258",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:add-subtract-within"
+  },
+  {
+   "id": "B3.1.2.4.1-add-subtract-within-3",
+   "indicatorCode": "B3.1.2.4.1",
+   "prompt": "Which of these is the sum of 258 and 684?",
+   "type": "mcq",
+   "options": [
+    "942",
+    "932",
+    "943",
+    "952"
+   ],
+   "answer": "942",
+   "answerLetter": "A",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:add-subtract-within"
+  },
+  {
+   "id": "B3.1.2.4.2-missing-numbers-1",
+   "indicatorCode": "B3.1.2.4.2",
+   "prompt": "Find the missing number: 73 + ____ = 493.",
+   "type": "short",
+   "options": null,
+   "answer": "420",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:missing-numbers"
+  },
+  {
+   "id": "B3.1.2.4.2-missing-numbers-2",
+   "indicatorCode": "B3.1.2.4.2",
+   "prompt": "Find the missing number: ____ - 73 = 420.",
+   "type": "short",
+   "options": null,
+   "answer": "493",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:missing-numbers"
+  },
+  {
+   "id": "B3.1.2.4.2-missing-numbers-3",
+   "indicatorCode": "B3.1.2.4.2",
+   "prompt": "What number goes in the box? 493 = 73 + ?",
+   "type": "mcq",
+   "options": [
+    "421",
+    "419",
+    "430",
+    "420"
+   ],
+   "answer": "420",
+   "answerLetter": "D",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:missing-numbers"
+  },
+  {
+   "id": "B3.1.2.4.3-estimation-1",
+   "indicatorCode": "B3.1.2.4.3",
+   "prompt": "Estimate the sum of 6,967 and 8,668 by rounding each number to the nearest hundred. Give the estimated sum.",
+   "type": "short",
+   "options": null,
+   "answer": "about 15,700  (7,000 + 8,700)",
+   "marks": 3,
+   "difficulty": "core",
+   "source": "generated:estimation"
+  },
+  {
+   "id": "B3.1.2.4.3-estimation-2",
+   "indicatorCode": "B3.1.2.4.3",
+   "prompt": "Estimate the difference between 6,967 and 8,668 by rounding each number to the nearest hundred.",
+   "type": "short",
+   "options": null,
+   "answer": "about 1,700  (8,700 - 7,000)",
+   "marks": 3,
+   "difficulty": "core",
+   "source": "generated:estimation"
+  },
+  {
+   "id": "B3.1.2.4.4-commutativity-1",
+   "indicatorCode": "B3.1.2.4.4",
+   "prompt": "Which of these shows the commutative property of addition?",
+   "type": "mcq",
+   "options": [
+    "50 + 22 = 22 + 50",
+    "50 - 22 = 22 - 50",
+    "50 + 22 = 72",
+    "50 + 22 = 50 + 23"
+   ],
+   "answer": "50 + 22 = 22 + 50",
+   "answerLetter": "A",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:commutativity"
+  },
+  {
+   "id": "B3.1.2.4.4-commutativity-2",
+   "indicatorCode": "B3.1.2.4.4",
+   "prompt": "Work out 50 + 22.",
+   "type": "short",
+   "options": null,
+   "answer": "72",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:commutativity"
+  },
+  {
+   "id": "B3.1.2.4.4-commutativity-3",
+   "indicatorCode": "B3.1.2.4.4",
+   "prompt": "Work out 22 + 50. What does this show about the order of the numbers you add?",
+   "type": "short",
+   "options": null,
+   "answer": "72 — the order does not change the sum",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:commutativity"
+  },
+  {
+   "id": "B3.1.2.5.1-multiplication-1",
+   "indicatorCode": "B3.1.2.5.1",
+   "prompt": "Multiply: 85 x 49 = ",
+   "type": "short",
+   "options": null,
+   "answer": "4,165",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:multiplication"
+  },
+  {
+   "id": "B3.1.2.5.2-multiplication-1",
+   "indicatorCode": "B3.1.2.5.2",
+   "prompt": "Multiply: 187 x 23 = ",
+   "type": "short",
+   "options": null,
+   "answer": "4,301",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:multiplication"
+  },
+  {
+   "id": "B3.1.2.6.1-division-1",
+   "indicatorCode": "B3.1.2.6.1",
+   "prompt": "Divide: 1,080 ÷ 18 = ",
+   "type": "short",
+   "options": null,
+   "answer": "60",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:division"
+  },
+  {
+   "id": "B3.1.2.6.2-division-1",
+   "indicatorCode": "B3.1.2.6.2",
+   "prompt": "Divide: 432 ÷ 4 = ",
+   "type": "short",
+   "options": null,
+   "answer": "108",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:division"
+  },
+  {
+   "id": "B3.1.2.6.3-division-1",
+   "indicatorCode": "B3.1.2.6.3",
+   "prompt": "Divide: 200 ÷ 8 = ",
+   "type": "short",
+   "options": null,
+   "answer": "25",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:division"
+  },
+  {
+   "id": "B3.1.3.1.1-unit-fraction-1",
+   "indicatorCode": "B3.1.3.1.1",
+   "prompt": "A whole is divided into 4 equal parts. What fraction is one part?",
+   "type": "mcq",
+   "options": [
+    "1/10",
+    "1/3",
+    "1/4",
+    "4/1"
+   ],
+   "answer": "1/4",
+   "answerLetter": "C",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:unit-fraction"
+  },
+  {
+   "id": "B3.1.3.1.1-unit-fraction-2",
+   "indicatorCode": "B3.1.3.1.1",
+   "prompt": "What is 1/4 of 20?",
+   "type": "short",
+   "options": null,
+   "answer": "5",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:unit-fraction"
+  },
+  {
+   "id": "B3.1.3.1.1-unit-fraction-3",
+   "indicatorCode": "B3.1.3.1.1",
+   "prompt": "On a number line from 0 to 1 the whole is divided into 4 equal parts. What fraction is reached after counting 1 of the parts?",
+   "type": "short",
+   "options": null,
+   "answer": "1/4",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:unit-fraction"
+  },
+  {
+   "id": "B3.1.3.1.2-unit-fraction-1",
+   "indicatorCode": "B3.1.3.1.2",
+   "prompt": "A whole is divided into 10 equal parts. What fraction is one part?",
+   "type": "mcq",
+   "options": [
+    "10/1",
+    "1/5",
+    "1/10",
+    "1/3"
+   ],
+   "answer": "1/10",
+   "answerLetter": "C",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:unit-fraction"
+  },
+  {
+   "id": "B3.1.3.1.2-unit-fraction-2",
+   "indicatorCode": "B3.1.3.1.2",
+   "prompt": "What is 1/10 of 60?",
+   "type": "short",
+   "options": null,
+   "answer": "6",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:unit-fraction"
+  },
+  {
+   "id": "B3.1.3.1.2-unit-fraction-3",
+   "indicatorCode": "B3.1.3.1.2",
+   "prompt": "On a number line from 0 to 1 the whole is divided into 10 equal parts. What fraction is reached after counting 9 of the parts?",
+   "type": "short",
+   "options": null,
+   "answer": "9/10",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:unit-fraction"
+  },
+  {
+   "id": "B3.1.3.1.3-unit-fraction-1",
+   "indicatorCode": "B3.1.3.1.3",
+   "prompt": "A whole is divided into 4 equal parts. What fraction is one part?",
+   "type": "mcq",
+   "options": [
+    "4/1",
+    "1/10",
+    "1/4",
+    "1/3"
+   ],
+   "answer": "1/4",
+   "answerLetter": "C",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:unit-fraction"
+  },
+  {
+   "id": "B3.1.3.1.3-unit-fraction-2",
+   "indicatorCode": "B3.1.3.1.3",
+   "prompt": "What is 1/4 of 20?",
+   "type": "short",
+   "options": null,
+   "answer": "5",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:unit-fraction"
+  },
+  {
+   "id": "B3.1.3.1.3-unit-fraction-3",
+   "indicatorCode": "B3.1.3.1.3",
+   "prompt": "On a number line from 0 to 1 the whole is divided into 4 equal parts. What fraction is reached after counting 2 of the parts?",
+   "type": "short",
+   "options": null,
+   "answer": "2/4",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:unit-fraction"
+  },
+  {
+   "id": "B3.1.3.1.3-compare-fractions-4",
+   "indicatorCode": "B3.1.3.1.3",
+   "prompt": "Which fraction is greater: 7/8 or 5/8?",
+   "type": "mcq",
+   "options": [
+    "They are the same",
+    "7/8",
+    "5/8"
+   ],
+   "answer": "7/8",
+   "answerLetter": "B",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:compare-fractions"
+  },
+  {
+   "id": "B3.1.4.1.1-money-1",
+   "indicatorCode": "B3.1.4.1.1",
+   "prompt": "A pen costs GH¢4.25. How much do 6 pens cost?",
+   "type": "short",
+   "options": null,
+   "answer": "GH¢25.50",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:money"
+  },
+  {
+   "id": "B3.2.1.1.1-pattern-rules-1",
+   "indicatorCode": "B3.2.1.1.1",
+   "prompt": "Extend the pattern: 7, 13, 19, 25, ____, ____",
+   "type": "short",
+   "options": null,
+   "answer": "31, 37",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:pattern-rules"
+  },
+  {
+   "id": "B3.2.1.1.1-pattern-rules-2",
+   "indicatorCode": "B3.2.1.1.1",
+   "prompt": "The rule for a pattern is 'add 6'. The pattern starts at 7. What is the next element after 25?",
+   "type": "short",
+   "options": null,
+   "answer": "31",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:pattern-rules"
+  },
+  {
+   "id": "B3.2.1.1.1-pattern-rules-3",
+   "indicatorCode": "B3.2.1.1.1",
+   "prompt": "Is 32 the next element of the pattern 7, 13, 19, 25? Explain your answer.",
+   "type": "short",
+   "options": null,
+   "answer": "No. The next element is 31, because each element is 6 more than the one before it.",
+   "marks": 3,
+   "difficulty": "core",
+   "source": "generated:pattern-rules"
+  },
+  {
+   "id": "B3.3.1.1.1-shape-facts-1",
+   "indicatorCode": "B3.3.1.1.1",
+   "prompt": "How many equal sides has a rhombus?",
+   "type": "mcq",
+   "options": [
+    "2",
+    "6",
+    "4",
+    "3"
+   ],
+   "answer": "4",
+   "answerLetter": "C",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:shape-facts"
+  },
+  {
+   "id": "B3.3.1.1.1-shape-facts-2",
+   "indicatorCode": "B3.3.1.1.1",
+   "prompt": "How many vertices has a square?",
+   "type": "mcq",
+   "options": [
+    "3",
+    "8",
+    "4",
+    "5"
+   ],
+   "answer": "4",
+   "answerLetter": "C",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:shape-facts"
+  },
+  {
+   "id": "B3.3.1.1.1-shape-facts-3",
+   "indicatorCode": "B3.3.1.1.1",
+   "prompt": "Which of these shapes is a quadrilateral?",
+   "type": "mcq",
+   "options": [
+    "a triangle",
+    "a hexagon",
+    "a trapezium",
+    "a pentagon"
+   ],
+   "answer": "a trapezium",
+   "answerLetter": "C",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:shape-facts"
+  },
+  {
+   "id": "B3.3.1.1.2-angle-classify-1",
+   "indicatorCode": "B3.3.1.1.2",
+   "prompt": "An angle of 75° is",
+   "type": "mcq",
+   "options": [
+    "a right angle",
+    "an acute angle",
+    "a reflex angle",
+    "an obtuse angle"
+   ],
+   "answer": "an acute angle",
+   "answerLetter": "B",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:angle-classify"
+  },
+  {
+   "id": "B3.3.1.1.2-angle-classify-2",
+   "indicatorCode": "B3.3.1.1.2",
+   "prompt": "Which of these is an acute angle?",
+   "type": "mcq",
+   "options": [
+    "180°",
+    "60°",
+    "120°",
+    "90°"
+   ],
+   "answer": "60°",
+   "answerLetter": "B",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:angle-classify"
+  },
+  {
+   "id": "B3.3.1.1.2-angle-classify-3",
+   "indicatorCode": "B3.3.1.1.2",
+   "prompt": "Which of these is an obtuse angle?",
+   "type": "mcq",
+   "options": [
+    "90°",
+    "45°",
+    "80°",
+    "120°"
+   ],
+   "answer": "120°",
+   "answerLetter": "D",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:angle-classify"
+  },
+  {
+   "id": "B3.3.1.1.3-angle-classify-1",
+   "indicatorCode": "B3.3.1.1.3",
+   "prompt": "A cut-out square corner is used to check whether an angle is",
+   "type": "mcq",
+   "options": [
+    "a straight angle",
+    "an acute angle",
+    "a right angle",
+    "an obtuse angle"
+   ],
+   "answer": "a right angle",
+   "answerLetter": "C",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:angle-classify"
+  },
+  {
+   "id": "B3.3.1.1.3-angle-classify-2",
+   "indicatorCode": "B3.3.1.1.3",
+   "prompt": "Which of these is a right angle?",
+   "type": "mcq",
+   "options": [
+    "90°",
+    "45°",
+    "120°",
+    "180°"
+   ],
+   "answer": "90°",
+   "answerLetter": "A",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:angle-classify"
+  },
+  {
+   "id": "B3.3.1.1.3-angle-classify-3",
+   "indicatorCode": "B3.3.1.1.3",
+   "prompt": "Which of these angles is greater than a right angle?",
+   "type": "mcq",
+   "options": [
+    "90°",
+    "60°",
+    "45°",
+    "120°"
+   ],
+   "answer": "120°",
+   "answerLetter": "D",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:angle-classify"
+  },
+  {
+   "id": "B3.3.1.1.4-quadrilateral-types-1",
+   "indicatorCode": "B3.3.1.1.4",
+   "prompt": "Which name describes a flat shape with 4 straight sides?",
+   "type": "mcq",
+   "options": [
+    "a rectangle",
+    "a rhombus",
+    "a quadrilateral",
+    "a parallelogram"
+   ],
+   "answer": "a quadrilateral",
+   "answerLetter": "C",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:quadrilateral-types"
+  },
+  {
+   "id": "B3.3.1.1.4-quadrilateral-types-2",
+   "indicatorCode": "B3.3.1.1.4",
+   "prompt": "Which of these is NOT a quadrilateral?",
+   "type": "mcq",
+   "options": [
+    "a square",
+    "a triangle",
+    "a trapezium",
+    "a rhombus"
+   ],
+   "answer": "a triangle",
+   "answerLetter": "B",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:quadrilateral-types"
+  },
+  {
+   "id": "B3.3.1.1.4-quadrilateral-types-3",
+   "indicatorCode": "B3.3.1.1.4",
+   "prompt": "Which of these has 4 equal sides and 4 right angles?",
+   "type": "mcq",
+   "options": [
+    "a trapezium",
+    "a parallelogram",
+    "a square",
+    "a rhombus"
+   ],
+   "answer": "a square",
+   "answerLetter": "C",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:quadrilateral-types"
+  },
+  {
+   "id": "B3.3.2.1.1-number-line-move-1",
+   "indicatorCode": "B3.3.2.1.1",
+   "prompt": "Start at 34 on the number line and move 30 steps to the right. At which number do you land?",
+   "type": "short",
+   "options": null,
+   "answer": "64",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:number-line-move"
+  },
+  {
+   "id": "B3.3.2.1.1-number-line-move-2",
+   "indicatorCode": "B3.3.2.1.1",
+   "prompt": "Start at 64 on the number line and move 30 steps to the left. At which number do you land?",
+   "type": "short",
+   "options": null,
+   "answer": "34",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:number-line-move"
+  },
+  {
+   "id": "B3.3.2.1.1-number-line-move-3",
+   "indicatorCode": "B3.3.2.1.1",
+   "prompt": "Which number is 30 steps to the right of 34?",
+   "type": "mcq",
+   "options": [
+    "64",
+    "63",
+    "65",
+    "4"
+   ],
+   "answer": "64",
+   "answerLetter": "A",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:number-line-move"
+  },
+  {
+   "id": "B3.3.3.1.1-metric-conversions-1",
+   "indicatorCode": "B3.3.3.1.1",
+   "prompt": "How many centimetres are there in 5 metres?",
+   "type": "short",
+   "options": null,
+   "answer": "500 cm",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:metric-conversions"
+  },
+  {
+   "id": "B3.3.3.1.1-metric-conversions-2",
+   "indicatorCode": "B3.3.3.1.1",
+   "prompt": "Change 5 m to centimetres.",
+   "type": "short",
+   "options": null,
+   "answer": "500 cm",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:metric-conversions"
+  },
+  {
+   "id": "B3.3.3.1.2-measure-referents-1",
+   "indicatorCode": "B3.3.3.1.2",
+   "prompt": "Which unit would you use to measure the length of your exercise book?",
+   "type": "mcq",
+   "options": [
+    "centimetres",
+    "metres",
+    "litres",
+    "kilograms"
+   ],
+   "answer": "centimetres",
+   "answerLetter": "A",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:measure-referents"
+  },
+  {
+   "id": "B3.3.3.1.2-measure-referents-2",
+   "indicatorCode": "B3.3.3.1.2",
+   "prompt": "Which unit would you use to measure the length of a classroom?",
+   "type": "mcq",
+   "options": [
+    "centimetres",
+    "grams",
+    "metres",
+    "millilitres"
+   ],
+   "answer": "metres",
+   "answerLetter": "C",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:measure-referents"
+  },
+  {
+   "id": "B3.3.3.1.2-measure-referents-3",
+   "indicatorCode": "B3.3.3.1.2",
+   "prompt": "Name something in your school that is about 1 metre long.",
+   "type": "short",
+   "options": null,
+   "answer": "Any sensible referent, e.g. a metre rule, the width of a doorway, the height of a desk.",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:measure-referents"
+  },
+  {
+   "id": "B3.3.3.1.3-perimeter-area-1",
+   "indicatorCode": "B3.3.3.1.3",
+   "prompt": "A rectangle is 20 cm long and 20 cm wide. Find its perimeter.",
+   "type": "short",
+   "options": null,
+   "answer": "80 cm",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:perimeter-area"
+  },
+  {
+   "id": "B3.3.3.1.3-perimeter-area-2",
+   "indicatorCode": "B3.3.3.1.3",
+   "prompt": "A rectangle is 20 cm long and 20 cm wide. Find its area.",
+   "type": "short",
+   "options": null,
+   "answer": "400 cm²",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:perimeter-area"
+  },
+  {
+   "id": "B3.3.3.2.1-metric-conversions-1",
+   "indicatorCode": "B3.3.3.2.1",
+   "prompt": "Change 9000 grams to kilograms.",
+   "type": "short",
+   "options": null,
+   "answer": "9 kg",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:metric-conversions"
+  },
+  {
+   "id": "B3.3.3.2.1-metric-conversions-2",
+   "indicatorCode": "B3.3.3.2.1",
+   "prompt": "How many millilitres are there in 4 litres?",
+   "type": "short",
+   "options": null,
+   "answer": "4000 ml",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:metric-conversions"
+  },
+  {
+   "id": "B3.3.3.2.2-measure-referents-1",
+   "indicatorCode": "B3.3.3.2.2",
+   "prompt": "Which unit would you use to measure the mass of a bag of rice?",
+   "type": "mcq",
+   "options": [
+    "kilograms",
+    "metres",
+    "grams",
+    "litres"
+   ],
+   "answer": "kilograms",
+   "answerLetter": "A",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:measure-referents"
+  },
+  {
+   "id": "B3.3.3.2.2-measure-referents-2",
+   "indicatorCode": "B3.3.3.2.2",
+   "prompt": "Which unit would you use to measure the water in a bucket?",
+   "type": "mcq",
+   "options": [
+    "centimetres",
+    "litres",
+    "kilograms",
+    "grams"
+   ],
+   "answer": "litres",
+   "answerLetter": "B",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:measure-referents"
+  },
+  {
+   "id": "B3.3.3.2.2-measure-referents-3",
+   "indicatorCode": "B3.3.3.2.2",
+   "prompt": "Name something in your school whose mass is about 1 kilogram.",
+   "type": "short",
+   "options": null,
+   "answer": "Any sensible referent, e.g. a bag of sugar, a full water bottle, a textbook.",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:measure-referents"
+  },
+  {
+   "id": "B3.3.3.3.1-time-1",
+   "indicatorCode": "B3.3.3.3.1",
+   "prompt": "A lesson starts at 8:00 and lasts 3 hour(s) 30 minutes. What time does it end?",
+   "type": "short",
+   "options": null,
+   "answer": "11:30",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:time"
+  },
+  {
+   "id": "B3.3.3.3.2-calendar-dates-1",
+   "indicatorCode": "B3.3.3.3.2",
+   "prompt": "Arrange these dates in order, earliest first: 3 March 2020, 28 February 2020, 15 March 2020.",
+   "type": "short",
+   "options": null,
+   "answer": "28 February 2020, 3 March 2020, 15 March 2020",
+   "marks": 3,
+   "difficulty": "core",
+   "source": "generated:calendar-dates"
+  },
+  {
+   "id": "B3.3.3.3.2-calendar-dates-2",
+   "indicatorCode": "B3.3.3.3.2",
+   "prompt": "How many days has April?",
+   "type": "short",
+   "options": null,
+   "answer": "30",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:calendar-dates"
+  },
+  {
+   "id": "B3.3.3.3.2-calendar-dates-3",
+   "indicatorCode": "B3.3.3.3.2",
+   "prompt": "Which of these months has 31 days?",
+   "type": "mcq",
+   "options": [
+    "April",
+    "November",
+    "June",
+    "January"
+   ],
+   "answer": "January",
+   "answerLetter": "D",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:calendar-dates"
+  },
+  {
+   "id": "B3.3.3.3.3-time-units-1",
+   "indicatorCode": "B3.3.3.3.3",
+   "prompt": "How many days are there in 5 weeks?",
+   "type": "short",
+   "options": null,
+   "answer": "35",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:time-units"
+  },
+  {
+   "id": "B3.3.3.3.3-time-units-2",
+   "indicatorCode": "B3.3.3.3.3",
+   "prompt": "How many months are there in 5 years?",
+   "type": "short",
+   "options": null,
+   "answer": "60",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:time-units"
+  },
+  {
+   "id": "B3.3.3.3.3-time-units-3",
+   "indicatorCode": "B3.3.3.3.3",
+   "prompt": "How many minutes are there in 5 hours?",
+   "type": "short",
+   "options": null,
+   "answer": "300",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:time-units"
+  },
+  {
+   "id": "B3.4.1.1.1-data-method-1",
+   "indicatorCode": "B3.4.1.1.1",
+   "prompt": "You want to find out how many pupils in your class walk to school. Which is the best way to collect the data?",
+   "type": "mcq",
+   "options": [
+    "Guess the number",
+    "Read it from a newspaper",
+    "Measure each pupil with a tape",
+    "Ask each pupil and record the answers"
+   ],
+   "answer": "Ask each pupil and record the answers",
+   "answerLetter": "D",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:data-method"
+  },
+  {
+   "id": "B3.4.1.1.1-data-method-2",
+   "indicatorCode": "B3.4.1.1.1",
+   "prompt": "Which is the best way to record how many pupils chose each of four fruits?",
+   "type": "mcq",
+   "options": [
+    "a clock",
+    "a number line",
+    "a protractor",
+    "a tally chart"
+   ],
+   "answer": "a tally chart",
+   "answerLetter": "D",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:data-method"
+  },
+  {
+   "id": "B3.4.1.1.1-data-method-3",
+   "indicatorCode": "B3.4.1.1.1",
+   "prompt": "You want to find out the favourite game of every pupil in your class. Describe how you would collect and record the data.",
+   "type": "short",
+   "options": null,
+   "answer": "Ask every pupil (a survey or questionnaire), then record the answers in a tally chart or a table.",
+   "marks": 3,
+   "difficulty": "core",
+   "source": "generated:data-method"
+  },
+  {
+   "id": "B3.4.1.2.1-tally-pictograph-1",
+   "indicatorCode": "B3.4.1.2.1",
+   "prompt": "In a tally chart, four upright lines with one line drawn across them stand for how many?",
+   "type": "mcq",
+   "options": [
+    "4",
+    "6",
+    "5",
+    "10"
+   ],
+   "answer": "5",
+   "answerLetter": "C",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:tally-pictograph"
+  },
+  {
+   "id": "B3.4.1.2.1-tally-pictograph-2",
+   "indicatorCode": "B3.4.1.2.1",
+   "prompt": "A tally chart shows 2 groups of five marks and 3 single marks. How many items does the chart record?",
+   "type": "short",
+   "options": null,
+   "answer": "13",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:tally-pictograph"
+  },
+  {
+   "id": "B3.4.1.2.1-tally-pictograph-3",
+   "indicatorCode": "B3.4.1.2.1",
+   "prompt": "In a pictograph, one symbol stands for 4 pupils. How many pupils do 3 symbols stand for?",
+   "type": "short",
+   "options": null,
+   "answer": "12",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:tally-pictograph"
+  }
+ ]
+}

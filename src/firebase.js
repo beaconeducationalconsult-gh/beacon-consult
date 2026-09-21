@@ -5,11 +5,21 @@ import {
   persistentMultipleTabManager,
 } from 'firebase/firestore'
 import { getAuth } from 'firebase/auth'
+import { getStorage } from 'firebase/storage'
+import { resolveFirebaseConfig } from './lib/firebaseConfigSource'
+import { firebaseConfig as committedConfig } from './firebaseConfig'
 
 // Firebase web config. These are public identifiers, not secrets — but the app
 // cannot reach Firebase without them, and Vite embeds them at BUILD time, so a
-// build with empty values fails at runtime, not at build time. See .env.example.
-const firebaseConfig = {
+// build with empty values fails at runtime, not at build time.
+//
+// Values come from the build environment when they are there and non-blank, and
+// otherwise from the committed `src/firebaseConfig.js`. The fallback is what
+// makes a deploy immune to a blank Vercel variable and to the encoding traps
+// (a BOM, UTF-16) that make a `.env` file silently unreadable. See
+// `src/lib/firebaseConfigSource.js` for the rule and `docs/gotchas.md` for the
+// two real deploys that produced it.
+const envFirebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
   projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
@@ -18,21 +28,53 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_FIREBASE_APP_ID,
 }
 
-if (!firebaseConfig.apiKey || !firebaseConfig.projectId) {
-  // Loud in the console, because the alternative is an opaque
-  // "auth/invalid-api-key" much later. See docs/gotchas.md.
+const resolved = resolveFirebaseConfig({ env: envFirebaseConfig, committed: committedConfig })
+const firebaseConfig = resolved.config
+
+/**
+ * Whether the six VITE_FIREBASE_* values were supplied at build time.
+ *
+ * When they are not, the app must not call getAuth(): the SDK throws
+ * `auth/invalid-api-key` during module evaluation, which aborts the entry
+ * module and leaves a blank page with nothing to act on. main.jsx checks this
+ * flag and renders SetupNotice instead, so a missing config explains itself.
+ */
+export const firebaseConfigured = Boolean(firebaseConfig.apiKey && firebaseConfig.projectId)
+
+/**
+ * Which of the six values are missing, by env var name — what the setup notice
+ * prints so the reader does not have to guess which one is blank. Names only:
+ * the values are public client config, but there is nothing to show of a value
+ * that is not there.
+ */
+export const missingFirebaseEnv = resolved.missing
+
+/**
+ * Where this build's values came from: `'env'`, `'committed'` or `'mixed'`.
+ * Carried into `dist/build-info.json` so a deploy can be asked which one it used.
+ */
+export const firebaseConfigSource = resolved.source
+
+if (!firebaseConfigured) {
   console.error(
     '[beacon] Firebase config is missing. Copy .env.example to .env.local and fill in ' +
       'the VITE_FIREBASE_* values from the Firebase console, then restart the dev server.'
   )
 }
 
-export const app = initializeApp(firebaseConfig)
+export const app = firebaseConfigured ? initializeApp(firebaseConfig) : null
 
 // Offline-first: reads come from IndexedDB, writes queue when offline and sync
 // on reconnect. Pages need no changes — see docs/pwa-offline.md.
-export const db = initializeFirestore(app, {
-  localCache: persistentLocalCache({ tabManager: persistentMultipleTabManager() }),
-})
+export const db = app
+  ? initializeFirestore(app, {
+      localCache: persistentLocalCache({ tabManager: persistentMultipleTabManager() }),
+    })
+  : null
 
-export const auth = getAuth(app)
+export const auth = app ? getAuth(app) : null
+
+// The document library (P3-3) keeps generated files here. Null in a build with
+// no config, exactly like db and auth, so the library degrades to a message
+// instead of throwing on import. See src/lib/generatedDocs.js and storage.rules.
+export const storage = app ? getStorage(app) : null

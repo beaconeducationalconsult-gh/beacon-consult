@@ -29,20 +29,29 @@ const ICONS = {
 }
 
 const LINKS = [
-  { to: '/portal', label: 'Feed', icon: 'feed', end: true },
+  // The old Feed page is now the Workspace: it also carries My wall and the
+  // Calendar, which both moved into src/pages/Workspace.jsx.
+  { to: '/portal', label: 'Workspace', icon: 'feed', end: true },
   { to: '/portal/curriculum', label: 'Curriculum', icon: 'curriculum' },
   { to: '/portal/forecasts', label: 'Schemes', icon: 'forecasts' },
   { to: '/portal/plans', label: 'Lesson plans', icon: 'plans' },
   { to: '/portal/questions', label: 'Question bank', icon: 'questions' },
-  { to: '/portal/notes', label: 'Study notes', icon: 'notes' },
-  { to: '/portal/wisdom', label: 'Quote of the day', icon: 'wisdom' },
+  { to: '/portal/questions/exam', label: 'Exam builder', icon: 'questions' },
   { to: '/portal/articles', label: 'Articles', icon: 'articles' },
-  { to: '/portal/slides', label: 'Slide lessons', icon: 'slides' },
   { to: '/portal/vacancies', label: 'Vacancies', icon: 'vacancies' },
-  { to: '/portal/wall', label: 'My wall', icon: 'wall' },
   { to: '/portal/search', label: 'Search', icon: 'search' },
+  { to: '/portal/library', label: 'My library', icon: 'wall' },
+  { to: '/portal/models', label: 'Teaching models', icon: 'slides' },
   { to: '/portal/progress', label: 'Progress', icon: 'progress' },
-  { to: '/portal/calendar', label: 'Calendar', icon: 'calendar' },
+
+  // ── Hidden from the side panel, not removed ──────────────────────────────
+  // These pages and routes still work and are still linked from elsewhere; only
+  // the panel entries are commented out. Uncomment a line to show it again.
+  // { to: '/portal/notes', label: 'Study notes', icon: 'notes' },
+  // { to: '/portal/wisdom', label: 'Quote of the day', icon: 'wisdom' },
+  // { to: '/portal/slides', label: 'Slide lessons', icon: 'slides' },
+  // My wall is part of the Workspace now, so it has no entry of its own:
+  // { to: '/portal/wall', label: 'My wall', icon: 'wall' },
 ]
 
 export default function Sidebar() {

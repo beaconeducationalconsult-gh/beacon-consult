@@ -5,6 +5,7 @@ import { db } from '../firebase'
 import { useAuth } from '../context/AuthContext'
 import { useToast } from '../context/ToastContext'
 import { useCurriculum } from '../hooks/useCurriculum'
+import SubjectSelect from '../components/SubjectSelect'
 import { GRADES, gradeLabel } from '../lib/grades'
 import { isoWeekKey } from '../lib/week'
 import IndicatorPicker from '../components/IndicatorPicker'
@@ -39,7 +40,7 @@ export default function QuestionForm() {
   const [loading, setLoading] = useState(editing)
   const [saving, setSaving] = useState(false)
   const [showIndicators, setShowIndicators] = useState(false)
-  const { subjects } = useCurriculum(form.grade)
+  const { subjects, loading: loadingSubjects, error: subjectsError } = useCurriculum(form.grade)
 
   useEffect(() => {
     if (!editing) return
@@ -127,10 +128,16 @@ export default function QuestionForm() {
           </div>
           <div>
             <label className="label-caps" htmlFor="q-subject">Subject</label>
-            <select id="q-subject" className="input" value={form.subjectId} onChange={(e) => setForm({ ...form, subjectId: e.target.value })}>
-              <option value="">Choose…</option>
-              {subjects.map((s) => <option key={s.id} value={s.id}>{s.name}</option>)}
-            </select>
+            <SubjectSelect
+              id="q-subject"
+              className="input"
+              grade={form.grade}
+              subjects={subjects}
+              loading={loadingSubjects}
+              error={subjectsError}
+              value={form.subjectId}
+              onChange={(e) => setForm({ ...form, subjectId: e.target.value })}
+            />
           </div>
           <div>
             <label className="label-caps" htmlFor="q-term">Term</label>

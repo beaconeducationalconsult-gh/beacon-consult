@@ -1,0 +1,64 @@
+{
+ "id": "kindergarten",
+ "name": "Kindergarten",
+ "grade": "KG2",
+ "sourceTitle": "NaCCA Kindergarten Curriculum (KG 1 & 2)",
+ "sourceUrl": "https://nacca.gov.gh/wp-content/uploads/2019/06/KG-Curriculum.pdf",
+ "counts": {
+  "strands": 7,
+  "subStrands": 28,
+  "standards": 28,
+  "indicators": 170
+ },
+ "strands": [
+  {
+   "code": "K2.1",
+   "name": "ALL ABOUT ME",
+   "subStrands": 6,
+   "standards": 6,
+   "indicators": 37
+  },
+  {
+   "code": "K2.2",
+   "name": "MY FAMILY",
+   "subStrands": 4,
+   "standards": 4,
+   "indicators": 25
+  },
+  {
+   "code": "K2.3",
+   "name": "VALUES AND BELIEFS",
+   "subStrands": 4,
+   "standards": 4,
+   "indicators": 21
+  },
+  {
+   "code": "K2.4",
+   "name": "MY LOCAL COMMUNITY",
+   "subStrands": 3,
+   "standards": 3,
+   "indicators": 18
+  },
+  {
+   "code": "K2.5",
+   "name": "MY NATION GHANA",
+   "subStrands": 1,
+   "standards": 1,
+   "indicators": 5
+  },
+  {
+   "code": "K2.6",
+   "name": "ALL AROUND US",
+   "subStrands": 9,
+   "standards": 9,
+   "indicators": 57
+  },
+  {
+   "code": "K2.7",
+   "name": "MY GLOBAL COMMUNITY",
+   "subStrands": 1,
+   "standards": 1,
+   "indicators": 7
+  }
+ ]
+}

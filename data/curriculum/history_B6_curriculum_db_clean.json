@@ -1,7 +1,7 @@
 {
  "B6.3.4.1.1": {
   "strand": "3. EUROPEANS IN GHANA",
-  "sub_strand": "Sub-strand B6.3.4",
+  "sub_strand": "4. Impact Of European Presence",
   "cs_code": "B6.3.4.1",
   "cs_desc": "Show understanding of Political developments under colonial rule, 1874-1957",
   "ind_desc": "Assess the changes that the European presence brought to Ghana",
@@ -12,7 +12,7 @@
  },
  "B6.4.4.1.1": {
   "strand": "4. COLONISATION AND DEVELOPMENTS UNDER COLONIAL RULE IN GHANA",
-  "sub_strand": "Sub-strand B6.4.4",
+  "sub_strand": "4. Political Developments Under Colonial Rule",
   "cs_code": "B6.4.4.1",
   "cs_desc": "Show understanding of Political developments under colonial rule, 1874-1957.",
   "ind_desc": "Describe the features of British colonial rule in Ghana including ‘direct’ and ‘indirect’ rule, 1874 - 1957",
@@ -23,7 +23,7 @@
  },
  "B6.5.2.1.1": {
   "strand": "5. JOURNEY TO INDEPENDENCE",
-  "sub_strand": "Sub-strand B6.5.2",
+  "sub_strand": "2. Formation of Political Parties",
   "cs_code": "B6.5.2.1",
   "cs_desc": "Appreciate the role played by the leadership of political parties in the struggle for independence from 1947 to 1957",
   "ind_desc": "Describe the role played by the leaders of the two major political parties (UGCC and CPP) in the independence struggle in the Gold Coast after the Second World War",
@@ -34,7 +34,7 @@
  },
  "B6.5.4.1.1": {
   "strand": "5. JOURNEY TO INDEPENDENCE",
-  "sub_strand": "Sub-strand B6.5.4",
+  "sub_strand": "4. Ghana Gains Independence",
   "cs_code": "B6.5.4.1",
   "cs_desc": "Demonstrate an understanding of the course of events leading to independence from 1948 to 1957",
   "ind_desc": "Explain post World War II developments in the Gold Coast",
@@ -45,7 +45,7 @@
  },
  "B6.5.4.1.2": {
   "strand": "5. JOURNEY TO INDEPENDENCE",
-  "sub_strand": "Sub-strand B6.5.4",
+  "sub_strand": "4. Ghana Gains Independence",
   "cs_code": "B6.5.4.1",
   "cs_desc": "Demonstrate an understanding of the course of events leading to independence from 1948 to 1957",
   "ind_desc": "Explain how Ghana gained independence through constitutional means",
@@ -56,7 +56,7 @@
  },
  "B6.6.1.1.1": {
   "strand": "6. INDEPENDENT GHANA",
-  "sub_strand": "Sub-strand B6.6.1",
+  "sub_strand": "1. The Republics",
   "cs_code": "B6.6.1.1",
   "cs_desc": "Demonstrate understanding of the Fourth Republic (1992 to date).",
   "ind_desc": "Describe the events leading to the emergence of the Fourth Republic",
@@ -67,7 +67,7 @@
  },
  "B6.6.1.1.2": {
   "strand": "6. INDEPENDENT GHANA",
-  "sub_strand": "Sub-strand B6.6.1",
+  "sub_strand": "1. The Republics",
   "cs_code": "B6.6.1.1",
   "cs_desc": "Demonstrate understanding of the Fourth Republic (1992 to date).",
   "ind_desc": "Identify the political parties that have governed the country under the Fourth Republic Enquiry Route: Which political parties have governed Ghana under the Fourth Republic? 1. Identify the governments that have so far handed over power peacefully through an election. 2. List the parties and their dates of tenure in office in the Fourth Republic 3. Use the internet/resource persons/documentaries/visits t",
@@ -78,7 +78,7 @@
  },
  "B6.6.2.1.1": {
   "strand": "6. INDEPENDENT GHANA",
-  "sub_strand": "Sub-strand B6.6.2",
+  "sub_strand": "2. MILITARY RULE",
   "cs_code": "B6.6.2.1",
   "cs_desc": "Understand that military takeovers interrupted constitutional rule on four occasions since 1966, with some consequences.",
   "ind_desc": "Identify the leaders of the coup d’états and names of their regimes. Exemplification",
@@ -89,7 +89,7 @@
  },
  "B6.6.2.2.2": {
   "strand": "6. INDEPENDENT GHANA",
-  "sub_strand": "Sub-strand B6.6.2",
+  "sub_strand": "2. MILITARY RULE",
   "cs_code": "B6.6.2.2",
   "cs_desc": "Understand that military takeovers interrupted constitutional rule on four occasions since 1966, with some consequences.",
   "ind_desc": "Assess the consequences of military takeovers on Ghana’s development Exemplification",

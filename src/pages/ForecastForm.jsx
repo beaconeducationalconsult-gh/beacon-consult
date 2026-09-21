@@ -5,6 +5,7 @@ import { db } from '../firebase'
 import { useAuth } from '../context/AuthContext'
 import { useToast } from '../context/ToastContext'
 import { useCurriculum, useSchedules } from '../hooks/useCurriculum'
+import SubjectSelect from '../components/SubjectSelect'
 import { GRADES, TERMS, gradeLabel } from '../lib/grades'
 import Stepper from '../components/Stepper'
 
@@ -28,8 +29,8 @@ export default function ForecastForm() {
   const [notes, setNotes] = useState('')
   const [saving, setSaving] = useState(false)
 
-  const { subjects } = useCurriculum(grade)
-  const { lessons, loading: loadingSchedule } = useSchedules(grade)
+  const { subjects, loading: loadingSubjects, error: subjectsError } = useCurriculum(grade)
+  const { lessons, loading: loadingSchedule, error: scheduleError } = useSchedules(grade, subjectId)
 
   // Editing: load the stored scheme instead of the template.
   useEffect(() => {
@@ -150,10 +151,16 @@ export default function ForecastForm() {
             </div>
             <div>
               <label className="label-caps" htmlFor="subject">Subject</label>
-              <select id="subject" className="input" value={subjectId} onChange={(e) => setSubjectId(e.target.value)}>
-                <option value="">Choose…</option>
-                {subjects.map((s) => <option key={s.id} value={s.id}>{s.name}</option>)}
-              </select>
+              <SubjectSelect
+                id="subject"
+                className="input"
+                grade={grade}
+                subjects={subjects}
+                loading={loadingSubjects}
+                error={subjectsError}
+                value={subjectId}
+                onChange={(e) => setSubjectId(e.target.value)}
+              />
             </div>
             <div>
               <label className="label-caps" htmlFor="term">Term</label>
@@ -168,6 +175,7 @@ export default function ForecastForm() {
             <select id="visibility" className="input" value={visibility} onChange={(e) => setVisibility(e.target.value)}>
               <option value="members">Members of the network</option>
               <option value="public">Public</option>
+              <option value="private">Only me (draft)</option>
             </select>
           </div>
 
@@ -179,7 +187,9 @@ export default function ForecastForm() {
           </div>
           {!loadingSchedule && subjectId && templateRows.length === 0 && (
             <p className="text-sm text-amber-700">
-              No curriculum schedule exists for this subject and grade yet — start blank and fill it in yourself.
+              {scheduleError
+                ? 'The curriculum schedule for this grade could not be loaded — check your connection and reload, or start blank.'
+                : 'No curriculum schedule exists for this subject and grade yet — start blank and fill it in yourself.'}
             </p>
           )}
         </div>

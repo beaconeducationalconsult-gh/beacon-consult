@@ -11,12 +11,29 @@ Two data sources:
 > of truth. Every document also carries `authorId`, `authorName`, and server timestamps
 > unless noted.
 
+## `generated_documents/{id}` — the document library (P3-3)
+
+One row per file a member generated and chose to keep. The file itself lives in Cloud Storage;
+this is what the library lists.
+
+| Field | Notes |
+|---|---|
+| `name`, `kind`, `kindLabel` | the filename and which exporter produced it (`lesson_plan`, `scheme`, `question_paper`, `quiz_deck`, `slide_deck`, `note`) |
+| `bytes` | size, shown in the list; uploads are capped at 8 MB |
+| `storagePath` | `generated/{uid}/…` — the rules require this to sit inside the creator's own folder |
+| `storageUrl` | download URL, so opening a document needs no extra round trip |
+| `meta` | what the document was about (`subjectId`, `grade`, `term`, `week`, indicators…) |
+| `authorId`, `authorName` | the owner. Read is owner-or-admin, so the list query filters on `authorId` |
+| `createdAt` | for ordering (index: `authorId` ASC, `createdAt` DESC) |
+
+Deleting a row deletes the file first; a file that is already gone does not strand the row.
+
 ## Firestore collections
 
 | Collection | Purpose | Written by | Rule |
 |---|---|---|---|
 | `users/{uid}` | Member profile & status | `SignUp`, `Profile`, `Members` (admin) | ✅ |
-| `posts/{id}` | Community feed posts | `Feed` | ✅ |
+| `posts/{id}` | Community feed posts | `Workspace` | ✅ |
 | `articles/{id}` | Longform articles (WYSIWYG) | `ArticleForm` | ✅ |
 | `notes/{id}` (+`comments`) | Study notes | `NoteForm`, `NoteView` | ✅ |
 | `weekly_forecasts/{id}` | Schemes of learning | `ForecastForm` | ✅ |
@@ -24,7 +41,7 @@ Two data sources:
 | `questions/{id}` | Question bank | `QuestionForm` | ✅ |
 | `lesson_slides/{id}` (+`comments`) | Slide lessons (exported from schedules) | `SlideLessons` | ✅ |
 | `vacancies/{id}` | Teaching vacancies | `VacancyForm` | ✅ |
-| `progress/{uid}` | Per-member teaching tracker | `Progress`, `Feed` | ✅ |
+| `progress/{uid}` | Per-member teaching tracker | `Progress`, `Workspace` | ✅ |
 | `quote_likes/{quoteId}` | Shared likes on quotes | `useWisdom` | ✅ |
 
 > All collections are enforced by [`firestore.rules`](../firestore.rules) — read
@@ -46,31 +63,34 @@ Key fields: `name`, `status` (`'pending' | 'approved' | 'suspended'`),
 Public ones surface on `/articles` and `PublicArticleView`.
 
 ### `notes/{id}` (+ `comments/{id}`)
-`status` (`'private' | 'pending' | 'published'`), `likes`, `dislikes`, content.
-Private → visible to author/admin only; `published` → network-wide. Approved members may
-like/dislike (rules restrict the diff to `likes` + `dislikes`). Has a `comments`
-subcollection.
+`visibility` (`'members' | 'public' | 'private'`), `status` (`'draft' | 'published'` — written
+by the form, not read by the rules; older notes have neither), `likes`, `likesBy`, content.
+`private` → author/admin only, enforced by the read rule; `members`/`public` → network-wide.
+Has a `comments` subcollection. The like fields diff-limited to `likes` + `likesBy`; no
+note-like UI exists yet.
 
 ### `weekly_forecasts/{id}` — schemes of learning
 `kind: 'scheme'`, `subjectId`, `grade`, `term`, `rows[]` (per-week strand/sub-strand/
 content-standards/indicators/resources/indicatorIds), `notes`,
-`visibility` (`'public' | 'private'`). Public schemes are a shared library; a member can
-clone one as a template (`?from=<id>` in `ForecastForm`).
+`visibility` (`'members' | 'public' | 'private'`). Shared schemes are a library; a member can
+clone one as a template (`?from=<id>` in `ForecastForm`). `private` is a draft only the author
+(and admins) can read — the read rule says so and the list pages query accordingly.
 
 ### `lesson_plans/{id}`
-`visibility` (`'public' | 'private'`), `indicatorIds[]` (for curriculum-linked lookups —
-indexed), plan phases/content. Indexed on `visibility+createdAt`, `authorId+createdAt`,
-and `indicatorIds` (array-contains) combos.
+`visibility` (`'members' | 'public' | 'private'`), `indicatorIds[]` (for curriculum-linked
+lookups — indexed), plan phases/content. Indexed on `visibility+createdAt`,
+`authorId+createdAt`, and `indicatorIds` (array-contains) combos.
 
 ### `questions/{id}` — question bank
 `subjectId`, `grade`, `strandName`, `subStrandName`, `type` (`'mcq' | 'short' | 'essay'`),
 question/options/answer/marks, and **`weekKey`** (ISO week — drives the weekly quota
-reminder on the Feed; indexed `authorId+weekKey`). Consumed by the generators
+reminder on the Workspace home page; indexed `authorId+weekKey`). Consumed by the generators
 (`QuestionGenerator`, `QuizMaker`) and `Search`.
 
 ### `lesson_slides/{id}` (+ `comments`)
-`status` (`'published'` gates public-ish reads within the network). The browse/export page
-exists; there is no authoring form (see [gotchas.md](gotchas.md)).
+`status` (`'published'` gates public-ish reads within the network), and the slides themselves
+as arrays the PPTX exporter reads — the deck view and the authoring form write them back
+(see [features.md](features.md)).
 
 ### `vacancies/{id}`
 `status` (`'published'` is readable **without auth** — powers the public `/vacancies`
@@ -78,12 +98,13 @@ page), `deadline`, school/role details.
 
 ### `progress/{uid}`
 Owner-only (`read,write: request.auth.uid == uid`). Shape: `{ weeks: { '<subjectKey>_T<term>': [...] } }`.
-Feed summarises it into a "subject-weeks taught" banner; `Progress.jsx` is the full tracker.
+The workspace summarises it into a "subject-weeks taught" card; `Progress.jsx` is the full
+broader tracker.
 
 ### `quote_likes/{quoteId}`
 `{ count, likedBy[] }`, created on first like. Members toggle only their own uid; the rule
 enforces `count` moves ±1 in step. Read live across the collection by `useQuoteLikes()`
-(feeds the Quotes page hearts + the Feed "most-loved" leaderboard). Quote ids come from the
+(feeds the Quotes page hearts + the workspace "most-loved" leaderboard). Quote ids come from the
 static `quotes.json` — there is **no** `quotes` document collection.
 
 ## Static JSON (`public/`)
@@ -93,10 +114,10 @@ Per grade **KG1, KG2, B1…B9** (`grades.json` lists them):
 - `<grade>_subjects.json` — subjects for the grade (`id`, `name`, `hasSchedule`, …)
 - `<grade>_indicators.json` — flat indicators (strand → sub-strand → content standard →
   indicator), grouped in memory by `buildTree()` in `useCurriculum.js`
-- `<grade>_schedules.json` — optional day-by-day scheduled lessons (used to pre-fill
-  schemes)
+- `schedules/<grade>-<subject>.json` — day-by-day scheduled lessons, one file per
+  subject-grade (used to pre-fill schemes; the term calendar loads all of a grade's)
 
-Loaded via `useCurriculum(grade)` / `useSchedules(grade)` / `useGrades()` with
+Loaded via `useCurriculum(grade)` / `useSchedules(grade, subjectId)` / `useGrades()` with
 module-level caches. Also **precached by the service worker** for offline use.
 
 ### Quotes — `public/quotes/`
@@ -110,7 +131,9 @@ by local date** (see [pwa-offline.md](pwa-offline.md)).
 
 ## Composite indexes (`firestore.indexes.json`)
 
-Defined for `posts`, `lesson_plans` (4), `weekly_forecasts` (2), `questions`,
-`lesson_slides` (2), `vacancies` (2), `notes` (2). `articles` needs **no composite index**:
-its queries are single-field equality (`where('visibility'/'authorId','==',…)`) with
-client-side sorting, which Firestore's automatic single-field indexes already cover.
+Defined for `posts` (2), `lesson_plans` (4), `weekly_forecasts` (2), `questions` (2),
+`lesson_slides` (2), `vacancies` (2), `notes` (3), `articles` (1) — the last three for the
+`authorId + createdAt`/`visibility + createdAt` shape the member lists and `Search.jsx` use.
+`articles`' public page still needs no index: `where('visibility','==','public')` is covered by
+the automatic single-field index. Every `where(...) + orderBy(...)` pair in `src/` has an index
+here; a missing one shows up as `failed-precondition` in the page's error banner.

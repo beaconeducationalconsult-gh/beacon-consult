@@ -4,6 +4,7 @@ import json, re
 from collections import Counter
 import docx
 from docx.shared import RGBColor
+from pathlib import Path  # noqa: E402  (legacy script)
 
 ROOT = str(Path(__file__).resolve().parents[2])
 WEEKDAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']

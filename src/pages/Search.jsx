@@ -1,18 +1,51 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { collection, getDocs, limit, query } from 'firebase/firestore'
+import { collection, getDocs, limit, query, where } from 'firebase/firestore'
 import { db } from '../firebase'
 import { useCurriculum } from '../hooks/useCurriculum'
+import { useAuth } from '../context/AuthContext'
 import { GRADES, gradeLabel } from '../lib/grades'
 import { SkeletonList } from '../components/Skeleton'
 import EmptyState from '../components/EmptyState'
+
+/*
+ * What Search reads, and how.
+ *
+ * `notes`, `lesson_plans` and `weekly_forecasts` gate reads on the document
+ * (`visibility`), so their list queries must be filtered or Firestore denies
+ * them for every ordinary member — see firestore.rules. Search therefore asks
+ * for the *shared* slice of those three, plus the author's own private ones, and
+ * does not offer drafts written by other people (they are not readable, by
+ * design). The rest still take one unfiltered query.
+ */
+const SOURCES = [
+  { name: 'lesson_plans', scoped: true },
+  { name: 'notes', scoped: true },
+  { name: 'weekly_forecasts', scoped: true },
+  { name: 'questions' },
+  { name: 'articles' },
+  { name: 'vacancies' },
+]
+
+const SHARED = [['visibility', 'in', ['members', 'public']]]
+
+/** Every query a source needs, each one provable against its read rule. */
+function queriesFor(source, uid) {
+  const ref = () => collection(db, source.name)
+  const clause = (c) => query(ref(), ...c, limit(100))
+  if (!source.scoped) return [clause([])]
+  const mine = uid ? [clause([where('authorId', '==', uid)])] : []
+  return [...mine, clause(SHARED.map(([field, op, value]) => where(field, op, value)))]
+}
 
 /** One search box across curriculum indicators and the shared libraries. */
 export default function Search() {
   const [term, setTerm] = useState('')
   const [grade, setGrade] = useState('B1')
   const [rows, setRows] = useState(null)
-  const { indicators, grade: loadedGrade } = useCurriculum(grade)
+  const { user } = useAuth()
+  const uid = user?.uid
+  const { indicators, grade: loadedGrade, error: curriculumError } = useCurriculum(grade)
 
   const needle = term.trim().toLowerCase()
 
@@ -33,14 +66,17 @@ export default function Search() {
     if (needle.length < 2) return undefined
     let active = true
     Promise.all(
-      ['lesson_plans', 'questions', 'notes', 'articles', 'weekly_forecasts', 'vacancies'].map((name) =>
-        getDocs(query(collection(db, name), limit(100))).then((snap) => snap.docs.map((d) => ({ id: d.id, _collection: name, ...d.data() })))
-      )
+      SOURCES.flatMap((source) => queriesFor(source, uid).map((q, i) =>
+        getDocs(q).then((snap) => snap.docs
+          .filter((d, index, all) => all.findIndex((other) => other.id === d.id) === index)
+          .map((d) => ({ id: d.id, _collection: source.name, _scoped: source.scoped, _q: i, ...d.data() })))
+      ))
     )
       .then((groups) => {
         if (!active) return
         const matches = groups
           .flat()
+          .filter((row, index, all) => all.findIndex((other) => other._collection === row._collection && other.id === row.id) === index)
           .filter((row) =>
             [row.title, row.prompt, row.question, row.content, row.summary, row.subjectName, row.role, row.description]
               .filter(Boolean)
@@ -53,7 +89,7 @@ export default function Search() {
     return () => {
       active = false
     }
-  }, [needle])
+  }, [needle, uid])
 
   const linkFor = (row) => {
     switch (row._collection) {
@@ -108,7 +144,12 @@ export default function Search() {
         <div className="mt-6 space-y-8">
           <section>
             <h2 className="section-heading mb-3">Curriculum · {gradeLabel(loadedGrade)}</h2>
-            {curriculumHits.length === 0 ? (
+            {curriculumError ? (
+              <p className="card p-5 text-sm text-rose-700">
+                The {gradeLabel(loadedGrade)} curriculum could not be loaded ({curriculumError.code || 'error'}), so
+                curriculum matches are missing from these results.
+              </p>
+            ) : curriculumHits.length === 0 ? (
               <p className="card p-5 text-sm text-slate-500">No indicators match in this grade. Try another grade.</p>
             ) : (
               <ul className="space-y-2">

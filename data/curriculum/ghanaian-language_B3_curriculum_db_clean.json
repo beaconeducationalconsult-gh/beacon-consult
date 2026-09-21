@@ -1,7 +1,7 @@
 {
  "B3.1.1.1.1": {
   "strand": "1. ORAL LANGUAGE",
-  "sub_strand": "Sub-strand B3.1.1",
+  "sub_strand": "1. Songs",
   "cs_code": "B3.1.1.1",
   "cs_desc": "Demonstrate an understanding of some selected songs by telling what the songs are about",
   "ind_desc": "Sing songs with the correct rhythms and discuss the meaning and moral values of the song",
@@ -12,7 +12,7 @@
  },
  "B3.1.2.1.1": {
   "strand": "1. ORAL LANGUAGE",
-  "sub_strand": "Sub-strand B3.1.2",
+  "sub_strand": "2. Rhymes",
   "cs_code": "B3.1.2.1",
   "cs_desc": "Show an understanding of some rhymes",
   "ind_desc": "Recognise rhyming words",
@@ -23,7 +23,7 @@
  },
  "B3.1.2.1.2": {
   "strand": "1. ORAL LANGUAGE",
-  "sub_strand": "Sub-strand B3.1.2",
+  "sub_strand": "2. Rhymes",
   "cs_code": "B3.1.2.1",
   "cs_desc": "Show an understanding of some rhymes",
   "ind_desc": "Produce own rhyming words",
@@ -34,7 +34,7 @@
  },
  "B3.1.3.1.1": {
   "strand": "1. ORAL LANGUAGE",
-  "sub_strand": "Sub-strand B3.1.3",
+  "sub_strand": "3. Poems",
   "cs_code": "B3.1.3.1",
   "cs_desc": "Demonstrate knowledge of poem recitation with the correct stress and rhythm by listening attentively",
   "ind_desc": "Explore poems and note the words and discuss what the poem is about",
@@ -45,7 +45,7 @@
  },
  "B3.1.4.1.1": {
   "strand": "1. ORAL LANGUAGE",
-  "sub_strand": "Sub-strand B3.1.4",
+  "sub_strand": "4. Listening and Story Telling",
   "cs_code": "B3.1.4.1",
   "cs_desc": "Exhibit knowledge of listening to and reading simple and interesting stories",
   "ind_desc": "Mention some of the key words in a story",
@@ -56,7 +56,7 @@
  },
  "B3.1.4.1.2": {
   "strand": "1. ORAL LANGUAGE",
-  "sub_strand": "Sub-strand B3.1.4",
+  "sub_strand": "4. Listening and Story Telling",
   "cs_code": "B3.1.4.1",
   "cs_desc": "Exhibit knowledge of listening to and reading simple and interesting stories",
   "ind_desc": "Mention issues and morals in a story",
@@ -67,7 +67,7 @@
  },
  "B3.1.4.1.3": {
   "strand": "1. ORAL LANGUAGE",
-  "sub_strand": "Sub-strand B3.1.4",
+  "sub_strand": "4. Listening and Story Telling",
   "cs_code": "B3.1.4.1",
   "cs_desc": "Exhibit knowledge of listening to and reading simple and interesting stories",
   "ind_desc": "Dramatise the story",
@@ -78,7 +78,7 @@
  },
  "B3.1.5.1.1": {
   "strand": "1. ORAL LANGUAGE",
-  "sub_strand": "Sub-strand B3.1.5",
+  "sub_strand": "5. Dramatisation and Role Play",
   "cs_code": "B3.1.5.1",
   "cs_desc": "Perform a sketch of a story heard, told or read",
   "ind_desc": "Give details of characters and costumes for a drama",
@@ -89,7 +89,7 @@
  },
  "B3.1.5.1.2": {
   "strand": "1. ORAL LANGUAGE",
-  "sub_strand": "Sub-strand B3.1.5",
+  "sub_strand": "5. Dramatisation and Role Play",
   "cs_code": "B3.1.5.1",
   "cs_desc": "Perform a sketch of a story heard, told or read",
   "ind_desc": "State opinion and feelings on events and characters in stories",
@@ -100,7 +100,7 @@
  },
  "B3.1.6.1.1": {
   "strand": "1. ORAL LANGUAGE",
-  "sub_strand": "Sub-strand B3.1.6",
+  "sub_strand": "6. Conversation",
   "cs_code": "B3.1.6.1",
   "cs_desc": "Exhibit an understanding of appropriate non-formal forms of greeting and communication",
   "ind_desc": "Discuss and demonstrate non-verbal forms of greeting",
@@ -111,7 +111,7 @@
  },
  "B3.1.6.1.3": {
   "strand": "1. ORAL LANGUAGE",
-  "sub_strand": "Sub-strand B3.1.6",
+  "sub_strand": "6. Conversation",
   "cs_code": "B3.1.6.1",
   "cs_desc": "Exhibit an understanding of appropriate non-formal forms of greeting and communication",
   "ind_desc": "Say why we have non-verbal greetings",
@@ -122,7 +122,7 @@
  },
  "B3.1.7.1.1": {
   "strand": "1. ORAL LANGUAGE",
-  "sub_strand": "Sub-strand B3.1.7",
+  "sub_strand": "7. Talking about Oneself, Family, People and Places",
   "cs_code": "B3.1.7.1",
   "cs_desc": "Apply the use of pronouns appropriately in simple sentences",
   "ind_desc": "Describe one’s self using personal pronouns",
@@ -133,7 +133,7 @@
  },
  "B3.1.7.1.2": {
   "strand": "1. ORAL LANGUAGE",
-  "sub_strand": "Sub-strand B3.1.7",
+  "sub_strand": "7. Talking about Oneself, Family, People and Places",
   "cs_code": "B3.1.7.1",
   "cs_desc": "Apply the use of pronouns appropriately in simple sentences",
   "ind_desc": "Describe the family using the appropriate pronouns",
@@ -144,7 +144,7 @@
  },
  "B3.1.8.1.1": {
   "strand": "1. ORAL LANGUAGE",
-  "sub_strand": "Sub-strand B3.1.8",
+  "sub_strand": "8. Listening Comprehension",
   "cs_code": "B3.1.8.1",
   "cs_desc": "Show an understanding of answering questions from a passage",
   "ind_desc": "Recount what the story is about and answer simple questions on the story",
@@ -155,7 +155,7 @@
  },
  "B3.1.8.1.2": {
   "strand": "1. ORAL LANGUAGE",
-  "sub_strand": "Sub-strand B3.1.8",
+  "sub_strand": "8. Listening Comprehension",
   "cs_code": "B3.1.8.1",
   "cs_desc": "Show an understanding of answering questions from a passage",
   "ind_desc": "Explain the meaning of key words and give simple summary of a short text",
@@ -166,7 +166,7 @@
  },
  "B3.1.9.1.1": {
   "strand": "1. ORAL LANGUAGE",
-  "sub_strand": "Sub-strand B3.1.9",
+  "sub_strand": "9. Asking and Answering Questions",
   "cs_code": "B3.1.9.1",
   "cs_desc": "Demonstrate knowledge on understanding and answering of questions correctly by the use of question words",
   "ind_desc": "Answer questions on, ‘who”, “what”, “where” and” when”",
@@ -177,7 +177,7 @@
  },
  "B3.1.9.1.2": {
   "strand": "1. ORAL LANGUAGE",
-  "sub_strand": "Sub-strand B3.1.9",
+  "sub_strand": "9. Asking and Answering Questions",
   "cs_code": "B3.1.9.1",
   "cs_desc": "Demonstrate knowledge on understanding and answering of questions correctly by the use of question words",
   "ind_desc": "Recognise and tell when to use the question words “how” and “why”",
@@ -188,7 +188,7 @@
  },
  "B3.1.9.1.3": {
   "strand": "1. ORAL LANGUAGE",
-  "sub_strand": "Sub-strand B3.1.9",
+  "sub_strand": "9. Asking and Answering Questions",
   "cs_code": "B3.1.9.1",
   "cs_desc": "Demonstrate knowledge on understanding and answering of questions correctly by the use of question words",
   "ind_desc": "Answer and ask ‘who”, “what”, “where”, “when”, “how” and “why” questions",
@@ -199,7 +199,7 @@
  },
  "B3.1.10.1.1": {
   "strand": "1. ORAL LANGUAGE",
-  "sub_strand": "Sub-strand B3.1.10",
+  "sub_strand": "10. Giving and Following Commands/Instructions",
   "cs_code": "B3.1.10.1",
   "cs_desc": "Exhibit knowledge of understanding and listening attentively to simple instructions and directions and carrying them out",
   "ind_desc": "Understand instructions and carry them out",
@@ -210,7 +210,7 @@
  },
  "B3.1.10.1.2": {
   "strand": "1. ORAL LANGUAGE",
-  "sub_strand": "Sub-strand B3.1.10",
+  "sub_strand": "10. Giving and Following Commands/Instructions",
   "cs_code": "B3.1.10.1",
   "cs_desc": "Exhibit knowledge of understanding and listening attentively to simple instructions and directions and carrying them out",
   "ind_desc": "Understand directions and carry them out",
@@ -221,7 +221,7 @@
  },
  "B3.1.10.1.3": {
   "strand": "1. ORAL LANGUAGE",
-  "sub_strand": "Sub-strand B3.1.10",
+  "sub_strand": "10. Giving and Following Commands/Instructions",
   "cs_code": "B3.1.10.1",
   "cs_desc": "Exhibit knowledge of understanding and listening attentively to simple instructions and directions and carrying them out",
   "ind_desc": "Give directions accurately",
@@ -232,7 +232,7 @@
  },
  "B3.1.11.1.1": {
   "strand": "1. ORAL LANGUAGE",
-  "sub_strand": "Sub-strand B3.1.11",
+  "sub_strand": "11. Presentation",
   "cs_code": "B3.1.11.1",
   "cs_desc": "Demonstrate knowledge on the days of the week and say the time by the hour and minutes",
   "ind_desc": "Say the time by the hour and half hour",
@@ -243,7 +243,7 @@
  },
  "B3.1.11.1.2": {
   "strand": "1. ORAL LANGUAGE",
-  "sub_strand": "Sub-strand B3.1.11",
+  "sub_strand": "11. Presentation",
   "cs_code": "B3.1.11.1",
   "cs_desc": "Demonstrate knowledge on the days of the week and say the time by the hour and minutes",
   "ind_desc": "Say the time by the hour and minutes",
@@ -254,7 +254,7 @@
  },
  "B3.2.3.1.1": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B3.2.3",
+  "sub_strand": "3. Phonological and Phonemic Awareness",
   "cs_code": "B3.2.3.1",
   "cs_desc": "Demonstrate knowledge of listening, recognising and differentiating sounds in spoken words",
   "ind_desc": "Recognise and separate syllables",
@@ -265,7 +265,7 @@
  },
  "B3.2.3.1.2": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B3.2.3",
+  "sub_strand": "3. Phonological and Phonemic Awareness",
   "cs_code": "B3.2.3.1",
   "cs_desc": "Demonstrate knowledge of listening, recognising and differentiating sounds in spoken words",
   "ind_desc": "Add individual sounds in simple one-syllable words to make up new words",
@@ -276,7 +276,7 @@
  },
  "B3.2.3.1.3": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B3.2.3",
+  "sub_strand": "3. Phonological and Phonemic Awareness",
   "cs_code": "B3.2.3.1",
   "cs_desc": "Demonstrate knowledge of listening, recognising and differentiating sounds in spoken words",
   "ind_desc": "Substitute one sound in two-syllable words to make up new words",
@@ -287,7 +287,7 @@
  },
  "B3.2.4.1.1": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B3.2.4",
+  "sub_strand": "4. Phonics: Letter and Sound Knowledge",
   "cs_code": "B3.2.4.1",
   "cs_desc": "Show an understanding of connecting sounds to letters and blending letters into syllables in order to read",
   "ind_desc": "Use alphabetic awareness to decode words",
@@ -298,7 +298,7 @@
  },
  "B3.2.4.1.2": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B3.2.4",
+  "sub_strand": "4. Phonics: Letter and Sound Knowledge",
   "cs_code": "B3.2.4.1",
   "cs_desc": "Show an understanding of connecting sounds to letters and blending letters into syllables in order to read",
   "ind_desc": "Use alphabetic awareness to decode compound words",
@@ -309,7 +309,7 @@
  },
  "B3.2.2.1.3": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B3.2.2",
+  "sub_strand": "2. Phonics: Letter and Sound Knowledge",
   "cs_code": "B3.2.2.1",
   "cs_desc": "Show an understanding of connecting sounds to letters and blending letters into syllables in order to read.",
   "ind_desc": "Read simple short sentences that include compound word",
@@ -320,7 +320,7 @@
  },
  "B3.2.4.2.1": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B3.2.4",
+  "sub_strand": "4. Phonics: Letter and Sound Knowledge",
   "cs_code": "B3.2.4.2",
   "cs_desc": "Recognise and read words with identical sounds.",
   "ind_desc": "Listen and say words with identical sounds from poems",
@@ -331,7 +331,7 @@
  },
  "B3.2.4.2.2": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B3.2.4",
+  "sub_strand": "4. Phonics: Letter and Sound Knowledge",
   "cs_code": "B3.2.4.2",
   "cs_desc": "Recognise and read words with identical sounds.",
   "ind_desc": "Read poems and recognise rhyming words",
@@ -342,7 +342,7 @@
  },
  "B3.2.4.2.3": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B3.2.4",
+  "sub_strand": "4. Phonics: Letter and Sound Knowledge",
   "cs_code": "B3.2.4.2",
   "cs_desc": "Recognise and read words with identical sounds.",
   "ind_desc": "Read two-syllable words",
@@ -353,7 +353,7 @@
  },
  "B3.2.4.2.4": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B3.2.4",
+  "sub_strand": "4. Phonics: Letter and Sound Knowledge",
   "cs_code": "B3.2.4.2",
   "cs_desc": "Recognise and read words with identical sounds.",
   "ind_desc": "Read three-syllable words and segment them into syllables",
@@ -364,7 +364,7 @@
  },
  "B3.2.4.2.5": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B3.2.4",
+  "sub_strand": "4. Phonics: Letter and Sound Knowledge",
   "cs_code": "B3.2.4.2",
   "cs_desc": "Recognise and read words with identical sounds.",
   "ind_desc": "Read one-syllable words with consonant clusters",
@@ -375,7 +375,7 @@
  },
  "B3.2.5.1.1": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B3.2.5",
+  "sub_strand": "5. Vocabulary (Sight and Content Vocabulary)",
   "cs_code": "B3.2.5.1",
   "cs_desc": "Show an understanding of recognising and reading about things in their environment",
   "ind_desc": "Read texts aloud with correct pronunciation and tone",
@@ -386,7 +386,7 @@
  },
  "B3.2.5.1.2": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B3.2.5",
+  "sub_strand": "5. Vocabulary (Sight and Content Vocabulary)",
   "cs_code": "B3.2.5.1",
   "cs_desc": "Show an understanding of recognising and reading about things in their environment",
   "ind_desc": "Play a variety of words and sentence games",
@@ -397,7 +397,7 @@
  },
  "B3.2.6.1.1": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B3.2.6",
+  "sub_strand": "6. Comprehension",
   "cs_code": "B3.2.6.1",
   "cs_desc": "Exhibit knowledge of answering questions based on texts presented",
   "ind_desc": "Answer questions based on passage read to them",
@@ -408,7 +408,7 @@
  },
  "B3.2.6.1.2": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B3.2.6",
+  "sub_strand": "6. Comprehension",
   "cs_code": "B3.2.6.1",
   "cs_desc": "Exhibit knowledge of answering questions based on texts presented",
   "ind_desc": "Answer questions based on passage read by learners",
@@ -419,7 +419,7 @@
  },
  "B3.2.7.1.1": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B3.2.7",
+  "sub_strand": "7. Silent Reading",
   "cs_code": "B3.2.7.1",
   "cs_desc": "Demonstrate knowledge on reading for comprehension",
   "ind_desc": "Read longer sentences",
@@ -430,7 +430,7 @@
  },
  "B3.2.7.1.2": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B3.2.7",
+  "sub_strand": "7. Silent Reading",
   "cs_code": "B3.2.7.1",
   "cs_desc": "Demonstrate knowledge on reading for comprehension",
   "ind_desc": "Read short passages/text",
@@ -441,7 +441,7 @@
  },
  "B3.2.8.1.1": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B3.2.8",
+  "sub_strand": "8. Fluency",
   "cs_code": "B3.2.8.1",
   "cs_desc": "Exhibit knowledge by reading aloud with minimal mistakes",
   "ind_desc": "Read short passages of about six to ten sentences aloud using correct tone",
@@ -452,7 +452,7 @@
  },
  "B3.3.1.1.1": {
   "strand": "3. WRITING",
-  "sub_strand": "Sub-strand B3.3.1",
+  "sub_strand": "1. Penmanship/Handwriting",
   "cs_code": "B3.3.1.1",
   "cs_desc": "Write and practise saying letters or words with which learners have difficulty; copy various sentences, verses and words of songs legibly",
   "ind_desc": "Write letters and words",
@@ -463,7 +463,7 @@
  },
  "B3.3.1.1.2": {
   "strand": "3. WRITING",
-  "sub_strand": "Sub-strand B3.3.1",
+  "sub_strand": "1. Penmanship/Handwriting",
   "cs_code": "B3.3.1.1",
   "cs_desc": "Write and practise saying letters or words with which learners have difficulty; copy various sentences, verses and words of songs legibly",
   "ind_desc": "Copy simple sentences boldly and clearly",
@@ -474,7 +474,7 @@
  },
  "B3.3.3.1.1": {
   "strand": "3. WRITING",
-  "sub_strand": "Sub-strand B3.3.3",
+  "sub_strand": "3. Writing Simple Words/Names of People and Places (Proper Nouns) Labelling Items",
   "cs_code": "B3.3.3.1",
   "cs_desc": "Write simple words/names of people and places (proper nouns)",
   "ind_desc": "Write simple words/names of people and places",
@@ -485,7 +485,7 @@
  },
  "B3.3.3.2.1": {
   "strand": "3. WRITING",
-  "sub_strand": "Sub-strand B3.3.3",
+  "sub_strand": "3. Writing Simple Words/Names of People and Places (Proper Nouns) Labelling Items",
   "cs_code": "B3.3.3.2",
   "cs_desc": "Show understanding of items in the environment/ classroom",
   "ind_desc": "Say and label items in the classroom and in the environment",
@@ -496,7 +496,7 @@
  },
  "B3.3.4.1.1": {
   "strand": "3. WRITING",
-  "sub_strand": "Sub-strand B3.3.4",
+  "sub_strand": "4. Copying/Writing Simple Sentences with Correct Spacing",
   "cs_code": "B3.3.4.1",
   "cs_desc": "Exhibit knowledge of writing simple sentences with correct word spacing",
   "ind_desc": "Write correct sentences with correct spacing from substitution table",
@@ -507,7 +507,7 @@
  },
  "B3.3.4.1.2": {
   "strand": "3. WRITING",
-  "sub_strand": "Sub-strand B3.3.4",
+  "sub_strand": "4. Copying/Writing Simple Sentences with Correct Spacing",
   "cs_code": "B3.3.4.1",
   "cs_desc": "Exhibit knowledge of writing simple sentences with correct word spacing",
   "ind_desc": "Use upper case or lower-case letters correctly in sentences with correct spacing",
@@ -518,7 +518,7 @@
  },
  "B3.5.1.1.1": {
   "strand": "5. WRITING CONVENTIONS/ USAGE",
-  "sub_strand": "Sub-strand B3.5.1",
+  "sub_strand": "1. Integrating Grammar in Written Language (Capitalization)",
   "cs_code": "B3.5.1.1",
   "cs_desc": "Exhibit knowledge of using capital letters appropriately",
   "ind_desc": "Understand the use of capital letters to write proper nouns",
@@ -529,7 +529,7 @@
  },
  "B3.5.1.1.2": {
   "strand": "5. WRITING CONVENTIONS/ USAGE",
-  "sub_strand": "Sub-strand B3.5.1",
+  "sub_strand": "1. Integrating Grammar in Written Language (Capitalization)",
   "cs_code": "B3.5.1.1",
   "cs_desc": "Exhibit knowledge of using capital letters appropriately",
   "ind_desc": "Comprehend the use of capital letters to write sentences",
@@ -540,7 +540,7 @@
  },
  "B3.5.1.1.3": {
   "strand": "5. WRITING CONVENTIONS/ USAGE",
-  "sub_strand": "Sub-strand B3.5.1",
+  "sub_strand": "1. Integrating Grammar in Written Language (Capitalization)",
   "cs_code": "B3.5.1.1",
   "cs_desc": "Exhibit knowledge of using capital letters appropriately",
   "ind_desc": "Understand and use capital letters after sentences and full stops",
@@ -551,7 +551,7 @@
  },
  "B3.5.2.1.1": {
   "strand": "5. WRITING CONVENTIONS/ USAGE",
-  "sub_strand": "Sub-strand B3.5.2",
+  "sub_strand": "2. Integrating Grammar in Written Language (Punctuation)",
   "cs_code": "B3.5.2.1",
   "cs_desc": "Show an understanding of using punctuation marks appropriately",
   "ind_desc": "Understand and use full stops and commas",
@@ -562,7 +562,7 @@
  },
  "B3.5.2.1.2": {
   "strand": "5. WRITING CONVENTIONS/ USAGE",
-  "sub_strand": "Sub-strand B3.5.2",
+  "sub_strand": "2. Integrating Grammar in Written Language (Punctuation)",
   "cs_code": "B3.5.2.1",
   "cs_desc": "Show an understanding of using punctuation marks appropriately",
   "ind_desc": "Understand the use of full stops at the end of sentences",
@@ -573,7 +573,7 @@
  },
  "B3.5.2.1.3": {
   "strand": "5. WRITING CONVENTIONS/ USAGE",
-  "sub_strand": "Sub-strand B3.5.2",
+  "sub_strand": "2. Integrating Grammar in Written Language (Punctuation)",
   "cs_code": "B3.5.2.1",
   "cs_desc": "Show an understanding of using punctuation marks appropriately",
   "ind_desc": "Recognise and use punctuation marks in sentences",
@@ -584,7 +584,7 @@
  },
  "B3.5.3.1.1": {
   "strand": "5. WRITING CONVENTIONS/ USAGE",
-  "sub_strand": "Sub-strand B3.5.3",
+  "sub_strand": "3. Integrating Grammar in Written Language (Use of Action Words)",
   "cs_code": "B3.5.3.1",
   "cs_desc": "Demonstrate knowledge on recognition of action words",
   "ind_desc": "Recognise present continuous action words in sentences",
@@ -595,7 +595,7 @@
  },
  "B3.5.3.1.2": {
   "strand": "5. WRITING CONVENTIONS/ USAGE",
-  "sub_strand": "Sub-strand B3.5.3",
+  "sub_strand": "3. Integrating Grammar in Written Language (Use of Action Words)",
   "cs_code": "B3.5.3.1",
   "cs_desc": "Demonstrate knowledge on recognition of action words",
   "ind_desc": "Write present continuous action words correctly",
@@ -606,7 +606,7 @@
  },
  "B3.5.3.1.3": {
   "strand": "5. WRITING CONVENTIONS/ USAGE",
-  "sub_strand": "Sub-strand B3.5.3",
+  "sub_strand": "3. Integrating Grammar in Written Language (Use of Action Words)",
   "cs_code": "B3.5.3.1",
   "cs_desc": "Demonstrate knowledge on recognition of action words",
   "ind_desc": "Use present continuous action words in simple sentences",
@@ -617,7 +617,7 @@
  },
  "B3.5.4.1.1": {
   "strand": "5. WRITING CONVENTIONS/ USAGE",
-  "sub_strand": "Sub-strand B3.5.4",
+  "sub_strand": "4. Integrating Grammar in Written Language (Use of Qualifying Words)",
   "cs_code": "B3.5.4.1",
   "cs_desc": "Demonstrate knowledge on recognition of qualifying words (adjectives and adverbs)",
   "ind_desc": "Know and use comparative words/adjectives in sentences",
@@ -628,7 +628,7 @@
  },
  "B3.5.4.1.2": {
   "strand": "5. WRITING CONVENTIONS/ USAGE",
-  "sub_strand": "Sub-strand B3.5.4",
+  "sub_strand": "4. Integrating Grammar in Written Language (Use of Qualifying Words)",
   "cs_code": "B3.5.4.1",
   "cs_desc": "Demonstrate knowledge on recognition of qualifying words (adjectives and adverbs)",
   "ind_desc": "Demonstrate knowledge of the use of adverbs",
@@ -639,7 +639,7 @@
  },
  "B3.5.4.1.3": {
   "strand": "5. WRITING CONVENTIONS/ USAGE",
-  "sub_strand": "Sub-strand B3.5.4",
+  "sub_strand": "4. Integrating Grammar in Written Language (Use of Qualifying Words)",
   "cs_code": "B3.5.4.1",
   "cs_desc": "Demonstrate knowledge on recognition of qualifying words (adjectives and adverbs)",
   "ind_desc": "Recognise adverbs from a group of words",
@@ -650,7 +650,7 @@
  },
  "B3.5.5.1.1": {
   "strand": "5. WRITING CONVENTIONS/ USAGE",
-  "sub_strand": "Sub-strand B3.5.5",
+  "sub_strand": "5. Integrating Grammar in Written Language (Use of Postpositions)",
   "cs_code": "B3.5.5.1",
   "cs_desc": "Exhibit knowledge of understanding recognising and using postpositions",
   "ind_desc": "Recognise postpositions in sentences",
@@ -661,7 +661,7 @@
  },
  "B3.5.5.1.2": {
   "strand": "5. WRITING CONVENTIONS/ USAGE",
-  "sub_strand": "Sub-strand B3.5.5",
+  "sub_strand": "5. Integrating Grammar in Written Language (Use of Postpositions)",
   "cs_code": "B3.5.5.1",
   "cs_desc": "Exhibit knowledge of understanding recognising and using postpositions",
   "ind_desc": "Explore the use of postpositions such as above and below in sentences",
@@ -672,7 +672,7 @@
  },
  "B3.5.6.1.1": {
   "strand": "5. WRITING CONVENTIONS/ USAGE",
-  "sub_strand": "Sub-strand B3.5.6",
+  "sub_strand": "6. Integrating Grammar in Written Language (Use of Simple and Compound Sentences)",
   "cs_code": "B3.5.6.1",
   "cs_desc": "Exhibit knowledge of recognising features of compound sentence in writing.",
   "ind_desc": "Recognise conjunctions in compound sentences",
@@ -683,7 +683,7 @@
  },
  "B3.5.6.1.2": {
   "strand": "5. WRITING CONVENTIONS/ USAGE",
-  "sub_strand": "Sub-strand B3.5.6",
+  "sub_strand": "6. Integrating Grammar in Written Language (Use of Simple and Compound Sentences)",
   "cs_code": "B3.5.6.1",
   "cs_desc": "Exhibit knowledge of recognising features of compound sentence in writing.",
   "ind_desc": "Use conjunctions to form compound sentences from simple sentences",
@@ -694,7 +694,7 @@
  },
  "B3.5.6.1.3": {
   "strand": "5. WRITING CONVENTIONS/ USAGE",
-  "sub_strand": "Sub-strand B3.5.6",
+  "sub_strand": "6. Integrating Grammar in Written Language (Use of Simple and Compound Sentences)",
   "cs_code": "B3.5.6.1",
   "cs_desc": "Exhibit knowledge of recognising features of compound sentence in writing.",
   "ind_desc": "Use conjunctions such as but and because in forming compound sentences",
@@ -705,7 +705,7 @@
  },
  "B3.5.7.1.1": {
   "strand": "5. WRITING CONVENTIONS/ USAGE",
-  "sub_strand": "Sub-strand B3.5.7",
+  "sub_strand": "7. Integrating Grammar in Written Language (Spelling)",
   "cs_code": "B3.5.7.1",
   "cs_desc": "Exhibit knowledge of recognising and spelling words correctly",
   "ind_desc": "Write four and five letter words correctly",
@@ -716,7 +716,7 @@
  },
  "B3.5.7.1.2": {
   "strand": "5. WRITING CONVENTIONS/ USAGE",
-  "sub_strand": "Sub-strand B3.5.7",
+  "sub_strand": "7. Integrating Grammar in Written Language (Spelling)",
   "cs_code": "B3.5.7.1",
   "cs_desc": "Exhibit knowledge of recognising and spelling words correctly",
   "ind_desc": "Write five and six letter words correctly",
@@ -727,7 +727,7 @@
  },
  "B3.5.7.1.3": {
   "strand": "5. WRITING CONVENTIONS/ USAGE",
-  "sub_strand": "Sub-strand B3.5.7",
+  "sub_strand": "7. Integrating Grammar in Written Language (Spelling)",
   "cs_code": "B3.5.7.1",
   "cs_desc": "Exhibit knowledge of recognising and spelling words correctly",
   "ind_desc": "Write more than five and six letter words correctly",
@@ -738,7 +738,7 @@
  },
  "B3.6.1.1.1": {
   "strand": "6. EXTENSIVE READING/CHILDREN’S LITERATURE/ LIBRARY",
-  "sub_strand": "Sub-strand B3.6.1",
+  "sub_strand": "1. Building the Love and Culture of Reading",
   "cs_code": "B3.6.1.1",
   "cs_desc": "Demonstrate knowledge by reading short stories with correct intonation",
   "ind_desc": "Read short stories aloud correctly",
@@ -749,7 +749,7 @@
  },
  "B3.6.2.1.1": {
   "strand": "6. EXTENSIVE READING/CHILDREN’S LITERATURE/ LIBRARY",
-  "sub_strand": "Sub-strand B3.6.2",
+  "sub_strand": "2. Read Aloud with Children",
   "cs_code": "B3.6.2.1",
   "cs_desc": "Demonstrate knowledge by reading short stories with correct intonation",
   "ind_desc": "Read short stories aloud correctly",
@@ -760,7 +760,7 @@
  },
  "B3.6.3.1.1": {
   "strand": "6. EXTENSIVE READING/CHILDREN’S LITERATURE/ LIBRARY",
-  "sub_strand": "Sub-strand B3.6.3",
+  "sub_strand": "3. Reading Short Texts/Poems/Narratives/Short Stories and Respond to Them",
   "cs_code": "B3.6.3.1",
   "cs_desc": "Exhibit knowledge of reading passages with understanding",
   "ind_desc": "Read stories with correct intonation",
@@ -771,7 +771,7 @@
  },
  "B3.6.3.1.2": {
   "strand": "6. EXTENSIVE READING/CHILDREN’S LITERATURE/ LIBRARY",
-  "sub_strand": "Sub-strand B3.6.3",
+  "sub_strand": "3. Reading Short Texts/Poems/Narratives/Short Stories and Respond to Them",
   "cs_code": "B3.6.3.1",
   "cs_desc": "Exhibit knowledge of reading passages with understanding",
   "ind_desc": "Say the title and author of the book read",
@@ -782,7 +782,7 @@
  },
  "B3.6.3.1.3": {
   "strand": "6. EXTENSIVE READING/CHILDREN’S LITERATURE/ LIBRARY",
-  "sub_strand": "Sub-strand B3.6.3",
+  "sub_strand": "3. Reading Short Texts/Poems/Narratives/Short Stories and Respond to Them",
   "cs_code": "B3.6.3.1",
   "cs_desc": "Exhibit knowledge of reading passages with understanding",
   "ind_desc": "Discuss and explain the meaning of some words and pictures in the passage",
@@ -793,7 +793,7 @@
  },
  "B3.6.3.1.4": {
   "strand": "6. EXTENSIVE READING/CHILDREN’S LITERATURE/ LIBRARY",
-  "sub_strand": "Sub-strand B3.6.3",
+  "sub_strand": "3. Reading Short Texts/Poems/Narratives/Short Stories and Respond to Them",
   "cs_code": "B3.6.3.1",
   "cs_desc": "Exhibit knowledge of reading passages with understanding",
   "ind_desc": "Answer questions based on a passage read",

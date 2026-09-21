@@ -3,12 +3,13 @@
 from their B1-B3 source PDFs. Grade-scoped to BASIC 1 body slices.
 Ghanaian: all 77 ind_desc + placeholder cs_desc (strand fields keep Twi names).
 Creative Arts: all 42 ind_desc (replaces structural labels) + placeholder cs_desc."""
-# --- resolve bare data filenames against data/ (see tools/_compat.py) ---
+# --- resolve bare data filenames against data/ (see scripts/_compat.py) ---
 import sys as _sys, pathlib as _pathlib
-_sys.path.insert(0, str(_pathlib.Path(__file__).resolve().parents[2] / "tools"))
+_sys.path.insert(0, str(_pathlib.Path(__file__).resolve().parents[1]))
 from _compat import open_compat; open_compat()
 # -----------------------------------------------------------------------
 import json, os, re, shutil, gzip, hashlib
+from pathlib import Path  # noqa: E402  (legacy script)
 
 ROOT = str(Path(__file__).resolve().parents[2])
 CACHE = os.path.join(ROOT, 'pdf_text_cache')

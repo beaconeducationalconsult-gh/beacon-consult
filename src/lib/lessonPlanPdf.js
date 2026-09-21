@@ -1,6 +1,7 @@
 import { jsPDF } from 'jspdf'
 import autoTable from 'jspdf-autotable'
 import { gradeLabel } from './grades'
+import { headingWithProvenance, templateNote } from './lessonTemplate'
 
 const PHASES = [
   ['starter', 'Starter / Introduction'],
@@ -9,7 +10,7 @@ const PHASES = [
 ]
 
 /** Lesson plan → PDF (client-side, A4 portrait), matching the Word export. */
-export function downloadLessonPlanPdf(plan, { school, teacher } = {}) {
+export function buildLessonPlanPdf(plan, { school, teacher } = {}) {
   const doc = new jsPDF({ unit: 'pt', format: 'a4' })
   const margin = 40
   const width = doc.internal.pageSize.getWidth() - margin * 2
@@ -66,19 +67,33 @@ export function downloadLessonPlanPdf(plan, { school, teacher } = {}) {
     y += 8
   }
 
+  // Sections this plan inherited verbatim from the syllabus template are marked,
+  // so a reader can tell the teacher's writing from the printed routine (P1-4).
+  const inherited = plan.inheritedFields || []
+  const heading = (field, title) => headingWithProvenance(field, title, inherited)
+
   const objectives = plan.objectives?.length
     ? plan.objectives
     : [plan.performanceIndicator || plan.indicatorDescription].filter(Boolean)
   section('Learning Objectives', objectives.map((o) => `• ${o}`))
-  if (plan.keywords?.length) section('Key Words', [plan.keywords.join(' · ')])
-  if (plan.rpk) section("Relevant Previous Knowledge", [plan.rpk])
+  if (plan.keywords?.length) section(heading('keywords', 'Key Words'), [plan.keywords.join(' · ')])
+  if (plan.rpk) section(heading('rpk', "Relevant Previous Knowledge"), [plan.rpk])
   for (const [key, label] of PHASES) {
-    if (plan[key]?.length) section(label, plan[key].map((item, i) => `${i + 1}. ${item}`))
+    if (plan[key]?.length) section(heading(key, label), plan[key].map((item, i) => `${i + 1}. ${item}`))
   }
-  if (plan.competencies?.length) section('Core Competencies', [[].concat(plan.competencies).join('; ')])
-  if (plan.resources?.length) section('Teaching & Learning Materials', [[].concat(plan.resources).join('; ')])
-  if (plan.assessment) section('Assessment', [plan.assessment])
+  if (plan.competencies?.length) section(heading('competencies', 'Core Competencies'), [[].concat(plan.competencies).join('; ')])
+  if (plan.resources?.length) section(heading('resources', 'Teaching & Learning Materials'), [[].concat(plan.resources).join('; ')])
+  if (plan.assessment) section(heading('assessment', 'Assessment'), [plan.assessment])
   if (plan.differentiation) section('Differentiation / Support', [plan.differentiation])
+
+  if (inherited.length) {
+    const note = templateNote(inherited)
+    doc.setFontSize(8)
+    doc.setTextColor('#92400E')
+    const lines = doc.splitTextToSize(`Sections marked "teaching template": ${note}`, width)
+    doc.text(lines, margin, y + 6)
+    y += lines.length * 10 + 4
+  }
 
   autoTable(doc, {
     startY: y + 10,
@@ -98,5 +113,10 @@ export function downloadLessonPlanPdf(plan, { school, teacher } = {}) {
   doc.setTextColor('#94A3B8')
   doc.text('Generated with Beacon Educational Consult', margin, doc.internal.pageSize.getHeight() - 24)
 
-  doc.save(`Lesson_Plan_${plan.subjectId}_${plan.grade}_W${plan.week || 1}.pdf`)
+  return doc
+}
+
+/** Lesson plan → PDF download (client-side). */
+export function downloadLessonPlanPdf(plan, meta = {}) {
+  buildLessonPlanPdf(plan, meta).save(`Lesson_Plan_${plan.subjectId}_${plan.grade}_W${plan.week || 1}.pdf`)
 }

@@ -4,8 +4,12 @@ import { gradeLabel } from './grades'
 /**
  * Classroom quiz slideshow (PPTX, client-side).
  * One slide per question, answer revealed on the next slide.
+ *
+ * `buildQuizPptx` returns the deck and `downloadQuizPptx` writes it to a file,
+ * so the slides can be asserted in a test (src/lib/pdfExport.test.js) as well as
+ * downloaded.
  */
-export async function downloadQuizPptx(
+export function buildQuizPptx(
   questions,
   { subjectName, grade, term, title = 'Class Quiz' } = {}
 ) {
@@ -50,5 +54,12 @@ export async function downloadQuizPptx(
     }
   })
 
-  await pptx.writeFile({ fileName: `Quiz_${subjectName || 'quiz'}_${grade || ''}_T${term || ''}.pptx` })
+  return pptx
+}
+
+/** Question selection → quiz slideshow (PPTX download). */
+export async function downloadQuizPptx(questions, meta = {}) {
+  const { subjectName, grade, term } = meta
+  await buildQuizPptx(questions, meta)
+    .writeFile({ fileName: `Quiz_${subjectName || 'quiz'}_${grade || ''}_T${term || ''}.pptx` })
 }

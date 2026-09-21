@@ -1,0 +1,1396 @@
+{
+ "subjectId": "mathematics",
+ "grade": "B6",
+ "generatedBy": "scripts/generate_question_bank.py",
+ "items": [
+  {
+   "id": "B6.1.1.1.1-place-value-parts-1",
+   "indicatorCode": "B6.1.1.1.1",
+   "prompt": "Write the number that has 8 hundred-thousands, 6 ten-thousands, 3 thousands, 8 hundreds, 4 tens, 8 ones.",
+   "type": "short",
+   "options": null,
+   "answer": "863,848",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:place-value-parts"
+  },
+  {
+   "id": "B6.1.1.1.1-place-value-parts-2",
+   "indicatorCode": "B6.1.1.1.1",
+   "prompt": "How many hundred-thousands are there in 863,848?",
+   "type": "short",
+   "options": null,
+   "answer": "8",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:place-value-parts"
+  },
+  {
+   "id": "B6.1.1.1.1-place-value-parts-3",
+   "indicatorCode": "B6.1.1.1.1",
+   "prompt": "Which number has 8 hundred-thousands and 8 ones?",
+   "type": "mcq",
+   "options": [
+    "863,948",
+    "863,847",
+    "863,848",
+    "863,858"
+   ],
+   "answer": "863,848",
+   "answerLetter": "C",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:place-value-parts"
+  },
+  {
+   "id": "B6.1.1.1.2-read-write-numbers-1",
+   "indicatorCode": "B6.1.1.1.2",
+   "prompt": "Write 952,296,173 in words.",
+   "type": "short",
+   "options": null,
+   "answer": "nine hundred and fifty-two million two hundred and ninety-six thousand one hundred and seventy-three",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:read-write-numbers"
+  },
+  {
+   "id": "B6.1.1.1.2-read-write-numbers-2",
+   "indicatorCode": "B6.1.1.1.2",
+   "prompt": "Write 'nine hundred and fifty-two million two hundred and ninety-six thousand one hundred and seventy-three' in figures.",
+   "type": "short",
+   "options": null,
+   "answer": "952,296,173",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:read-write-numbers"
+  },
+  {
+   "id": "B6.1.1.1.3-place-value-1",
+   "indicatorCode": "B6.1.1.1.3",
+   "prompt": "What is the value of the digit 7 in 237,614?",
+   "type": "mcq",
+   "options": [
+    "7,000",
+    "700",
+    "70,000",
+    "7"
+   ],
+   "answer": "7,000",
+   "answerLetter": "A",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:place-value"
+  },
+  {
+   "id": "B6.1.1.1.3-place-value-2",
+   "indicatorCode": "B6.1.1.1.3",
+   "prompt": "Write 237,614 in expanded form.",
+   "type": "short",
+   "options": null,
+   "answer": "2 x 100000 + 3 x 10000 + 7 x 1000 + 6 x 100 + 1 x 10 + 4 x 1",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:place-value"
+  },
+  {
+   "id": "B6.1.1.1.4-compare-order-1",
+   "indicatorCode": "B6.1.1.1.4",
+   "prompt": "Which symbol makes this true?  10,371  ___  91,744",
+   "type": "mcq",
+   "options": [
+    "<",
+    "=",
+    ">"
+   ],
+   "answer": "<",
+   "answerLetter": "A",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:compare-order"
+  },
+  {
+   "id": "B6.1.1.1.4-compare-order-2",
+   "indicatorCode": "B6.1.1.1.4",
+   "prompt": "Arrange in order from smallest to largest: 91,744, 10,371.",
+   "type": "short",
+   "options": null,
+   "answer": "10,371, 91,744",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:compare-order"
+  },
+  {
+   "id": "B6.1.1.1.5-rounding-1",
+   "indicatorCode": "B6.1.1.1.5",
+   "prompt": "Round 50,514 to the nearest thousand.",
+   "type": "mcq",
+   "options": [
+    "52,000",
+    "51,000",
+    "50,000"
+   ],
+   "answer": "51,000",
+   "answerLetter": "B",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:rounding"
+  },
+  {
+   "id": "B6.1.1.1.6-skip-counting-1",
+   "indicatorCode": "B6.1.1.1.6",
+   "prompt": "Skip count: 630,000, 640,000, 650,000, 660,000, ____  —  what is the next number?",
+   "type": "short",
+   "options": null,
+   "answer": "670,000",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:skip-counting"
+  },
+  {
+   "id": "B6.1.1.1.6-skip-counting-2",
+   "indicatorCode": "B6.1.1.1.6",
+   "prompt": "Skip count backwards in 10,000s from 690,000: 690,000, 680,000, ____, ____",
+   "type": "short",
+   "options": null,
+   "answer": "670,000, 660,000",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:skip-counting"
+  },
+  {
+   "id": "B6.1.1.1.6-skip-counting-3",
+   "indicatorCode": "B6.1.1.1.6",
+   "prompt": "Which number is missing? 630,000, 640,000, ____, 660,000",
+   "type": "mcq",
+   "options": [
+    "649,999",
+    "650,001",
+    "660,001",
+    "650,000"
+   ],
+   "answer": "650,000",
+   "answerLetter": "D",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:skip-counting"
+  },
+  {
+   "id": "B6.1.1.2.1-roman-numerals-1",
+   "indicatorCode": "B6.1.1.2.1",
+   "prompt": "Write 75 in Roman numerals.",
+   "type": "short",
+   "options": null,
+   "answer": "LXXV",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:roman-numerals"
+  },
+  {
+   "id": "B6.1.1.2.1-roman-numerals-2",
+   "indicatorCode": "B6.1.1.2.1",
+   "prompt": "Write XIV in Hindu-Arabic (ordinary) numerals.",
+   "type": "short",
+   "options": null,
+   "answer": "14",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:roman-numerals"
+  },
+  {
+   "id": "B6.1.1.2.1-roman-numerals-3",
+   "indicatorCode": "B6.1.1.2.1",
+   "prompt": "Which of these is 90 in Roman numerals?",
+   "type": "mcq",
+   "options": [
+    "XCI",
+    "LXXXIX",
+    "C",
+    "XC"
+   ],
+   "answer": "XC",
+   "answerLetter": "D",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:roman-numerals"
+  },
+  {
+   "id": "B6.1.1.2.2-roman-numerals-1",
+   "indicatorCode": "B6.1.1.2.2",
+   "prompt": "Write 62 in Roman numerals.",
+   "type": "short",
+   "options": null,
+   "answer": "LXII",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:roman-numerals"
+  },
+  {
+   "id": "B6.1.1.2.2-roman-numerals-2",
+   "indicatorCode": "B6.1.1.2.2",
+   "prompt": "Write XI in Hindu-Arabic (ordinary) numerals.",
+   "type": "short",
+   "options": null,
+   "answer": "11",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:roman-numerals"
+  },
+  {
+   "id": "B6.1.1.2.2-roman-numerals-3",
+   "indicatorCode": "B6.1.1.2.2",
+   "prompt": "Which of these is 20 in Roman numerals?",
+   "type": "mcq",
+   "options": [
+    "XXI",
+    "XIX",
+    "XX",
+    "XXX"
+   ],
+   "answer": "XX",
+   "answerLetter": "C",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:roman-numerals"
+  },
+  {
+   "id": "B6.1.1.3.1-hcf-lcm-prime-1",
+   "indicatorCode": "B6.1.1.3.1",
+   "prompt": "Find the HCF of 8 and 14.",
+   "type": "short",
+   "options": null,
+   "answer": "2",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:hcf-lcm-prime"
+  },
+  {
+   "id": "B6.1.1.3.1-hcf-lcm-prime-2",
+   "indicatorCode": "B6.1.1.3.1",
+   "prompt": "Find the LCM of 8 and 14.",
+   "type": "short",
+   "options": null,
+   "answer": "56",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:hcf-lcm-prime"
+  },
+  {
+   "id": "B6.1.1.3.1-hcf-lcm-prime-3",
+   "indicatorCode": "B6.1.1.3.1",
+   "prompt": "Which of these is a common factor of 8 and 14?",
+   "type": "mcq",
+   "options": [
+    "4",
+    "5",
+    "2",
+    "3"
+   ],
+   "answer": "2",
+   "answerLetter": "C",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:hcf-lcm-prime"
+  },
+  {
+   "id": "B6.1.1.4.3-multiplication-1",
+   "indicatorCode": "B6.1.1.4.3",
+   "prompt": "Multiply: 12 x 10 = ",
+   "type": "short",
+   "options": null,
+   "answer": "120",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:multiplication"
+  },
+  {
+   "id": "B6.1.1.6.1-integers-1",
+   "indicatorCode": "B6.1.1.6.1",
+   "prompt": "The temperature on a cold morning was 6 °C below zero. Which number shows this temperature?",
+   "type": "mcq",
+   "options": [
+    "-16 °C",
+    "0 °C",
+    "6 °C",
+    "-6 °C"
+   ],
+   "answer": "-6 °C",
+   "answerLetter": "D",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:integers"
+  },
+  {
+   "id": "B6.1.1.6.1-integers-2",
+   "indicatorCode": "B6.1.1.6.1",
+   "prompt": "Arrange these integers from smallest to largest: 5, -2, 3, 0.",
+   "type": "short",
+   "options": null,
+   "answer": "-2, 0, 3, 5",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:integers"
+  },
+  {
+   "id": "B6.1.1.6.1-integers-3",
+   "indicatorCode": "B6.1.1.6.1",
+   "prompt": "Work out 2 - 9.",
+   "type": "short",
+   "options": null,
+   "answer": "-7",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:integers"
+  },
+  {
+   "id": "B6.1.2.1.1-multiplication-facts-1",
+   "indicatorCode": "B6.1.2.1.1",
+   "prompt": "Work out 5 x 8 = ",
+   "type": "short",
+   "options": null,
+   "answer": "40",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:multiplication-facts"
+  },
+  {
+   "id": "B6.1.2.1.1-multiplication-facts-2",
+   "indicatorCode": "B6.1.2.1.1",
+   "prompt": "What is 5 x 8?",
+   "type": "mcq",
+   "options": [
+    "40",
+    "41",
+    "32",
+    "45"
+   ],
+   "answer": "40",
+   "answerLetter": "A",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:multiplication-facts"
+  },
+  {
+   "id": "B6.1.2.1.1-multiplication-facts-3",
+   "indicatorCode": "B6.1.2.1.1",
+   "prompt": "Which multiplication fact is correct?",
+   "type": "mcq",
+   "options": [
+    "5 x 8 = 41",
+    "5 x 8 = 39",
+    "5 x 8 = 48",
+    "5 x 8 = 40"
+   ],
+   "answer": "5 x 8 = 40",
+   "answerLetter": "D",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:multiplication-facts"
+  },
+  {
+   "id": "B6.1.2.1.1-skip-counting-4",
+   "indicatorCode": "B6.1.2.1.1",
+   "prompt": "Skip count: 110, 121, 132, 143, ____  —  what is the next number?",
+   "type": "short",
+   "options": null,
+   "answer": "154",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:skip-counting"
+  },
+  {
+   "id": "B6.1.2.1.1-division-5",
+   "indicatorCode": "B6.1.2.1.1",
+   "prompt": "Divide: 572 ÷ 22 = ",
+   "type": "short",
+   "options": null,
+   "answer": "26",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:division"
+  },
+  {
+   "id": "B6.1.2.1.2-multiplication-1",
+   "indicatorCode": "B6.1.2.1.2",
+   "prompt": "Multiply: 59 x 11 = ",
+   "type": "short",
+   "options": null,
+   "answer": "649",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:multiplication"
+  },
+  {
+   "id": "B6.1.2.2.1-multiplication-1",
+   "indicatorCode": "B6.1.2.2.1",
+   "prompt": "Multiply: 291 x 30 = ",
+   "type": "short",
+   "options": null,
+   "answer": "8,730",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:multiplication"
+  },
+  {
+   "id": "B6.1.2.3.1-division-facts-1",
+   "indicatorCode": "B6.1.2.3.1",
+   "prompt": "What is 42 ÷ 6?",
+   "type": "mcq",
+   "options": [
+    "7",
+    "36",
+    "6",
+    "8"
+   ],
+   "answer": "7",
+   "answerLetter": "A",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:division-facts"
+  },
+  {
+   "id": "B6.1.2.3.1-division-facts-2",
+   "indicatorCode": "B6.1.2.3.1",
+   "prompt": "Work out 42 ÷ 6 = ",
+   "type": "short",
+   "options": null,
+   "answer": "7",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:division-facts"
+  },
+  {
+   "id": "B6.1.2.3.1-division-facts-3",
+   "indicatorCode": "B6.1.2.3.1",
+   "prompt": "42 oranges are shared equally among 6 children. How many oranges does each child get?",
+   "type": "short",
+   "options": null,
+   "answer": "7",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:division-facts"
+  },
+  {
+   "id": "B6.1.2.3.1-division-4",
+   "indicatorCode": "B6.1.2.3.1",
+   "prompt": "Divide: 99 ÷ 9 = ",
+   "type": "short",
+   "options": null,
+   "answer": "11",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:division"
+  },
+  {
+   "id": "B6.1.2.4.1-division-1",
+   "indicatorCode": "B6.1.2.4.1",
+   "prompt": "Divide: 549 ÷ 9 = ",
+   "type": "short",
+   "options": null,
+   "answer": "61",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:division"
+  },
+  {
+   "id": "B6.1.2.5.1-multi-step-problems-1",
+   "indicatorCode": "B6.1.2.5.1",
+   "prompt": "A trader bought 8 crates of 19 eggs each and sold 121 eggs. How many eggs are left?",
+   "type": "short",
+   "options": null,
+   "answer": "31",
+   "marks": 3,
+   "difficulty": "core",
+   "source": "generated:multi-step-problems"
+  },
+  {
+   "id": "B6.1.2.5.1-multi-step-problems-2",
+   "indicatorCode": "B6.1.2.5.1",
+   "prompt": "A school bought 5 boxes of pencils with 4 pencils in each box. The pencils were shared equally among 5 classes. How many pencils did each class get?",
+   "type": "short",
+   "options": null,
+   "answer": "4",
+   "marks": 3,
+   "difficulty": "core",
+   "source": "generated:multi-step-problems"
+  },
+  {
+   "id": "B6.1.2.5.1-multi-step-problems-3",
+   "indicatorCode": "B6.1.2.5.1",
+   "prompt": "Kofi had GH¢73.00. He bought 4 books at GH¢4.00 each and 3 pens at GH¢3.00 each. How much money had he left?",
+   "type": "short",
+   "options": null,
+   "answer": "GH¢48.00",
+   "marks": 3,
+   "difficulty": "core",
+   "source": "generated:multi-step-problems"
+  },
+  {
+   "id": "B6.1.2.6.2-integer-stories-1",
+   "indicatorCode": "B6.1.2.6.2",
+   "prompt": "The temperature at dawn was -18 °C. By midday it had risen by 8 °C. What was the temperature at midday?",
+   "type": "short",
+   "options": null,
+   "answer": "-10 °C",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:integer-stories"
+  },
+  {
+   "id": "B6.1.2.6.2-integer-stories-2",
+   "indicatorCode": "B6.1.2.6.2",
+   "prompt": "A diver is 18 m below sea level and then rises 8 m. At what depth is the diver now?",
+   "type": "short",
+   "options": null,
+   "answer": "10 m below sea level",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:integer-stories"
+  },
+  {
+   "id": "B6.1.2.6.2-integer-stories-3",
+   "indicatorCode": "B6.1.2.6.2",
+   "prompt": "Which sum gives -18?",
+   "type": "mcq",
+   "options": [
+    "18 - 8 + 1",
+    "-18 + 8",
+    "-26 + 8",
+    "-26"
+   ],
+   "answer": "-26 + 8",
+   "answerLetter": "C",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:integer-stories"
+  },
+  {
+   "id": "B6.1.3.1.1-decimals-1",
+   "indicatorCode": "B6.1.3.1.1",
+   "prompt": "Write 82.1 as a fraction in its simplest form.",
+   "type": "short",
+   "options": null,
+   "answer": "821/10",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:decimals"
+  },
+  {
+   "id": "B6.1.3.1.1-percentage-2",
+   "indicatorCode": "B6.1.3.1.1",
+   "prompt": "What is 50% of 200?",
+   "type": "short",
+   "options": null,
+   "answer": "100",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:percentage"
+  },
+  {
+   "id": "B6.1.3.1.2-fraction-add-sub-1",
+   "indicatorCode": "B6.1.3.1.2",
+   "prompt": "Work out 2/2 + 1/3, leaving your answer in its simplest form.",
+   "type": "short",
+   "options": null,
+   "answer": "1 1/3",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:fraction-add-sub"
+  },
+  {
+   "id": "B6.1.3.1.2-fraction-add-sub-2",
+   "indicatorCode": "B6.1.3.1.2",
+   "prompt": "Work out 2/2 - 1/3, leaving your answer in its simplest form.",
+   "type": "short",
+   "options": null,
+   "answer": "2/3",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:fraction-add-sub"
+  },
+  {
+   "id": "B6.1.3.1.2-fraction-add-sub-3",
+   "indicatorCode": "B6.1.3.1.2",
+   "prompt": "Work out 1 2/2 + 1/3, leaving your answer as a mixed number.",
+   "type": "short",
+   "options": null,
+   "answer": "2 1/3",
+   "marks": 3,
+   "difficulty": "core",
+   "source": "generated:fraction-add-sub"
+  },
+  {
+   "id": "B6.1.3.1.3-fraction-times-whole-1",
+   "indicatorCode": "B6.1.3.1.3",
+   "prompt": "Work out 4 x 7/8. Give your answer in its simplest form.",
+   "type": "short",
+   "options": null,
+   "answer": "3 1/2",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:fraction-times-whole"
+  },
+  {
+   "id": "B6.1.3.1.3-fraction-times-whole-2",
+   "indicatorCode": "B6.1.3.1.3",
+   "prompt": "What is 7/8 of 24?",
+   "type": "short",
+   "options": null,
+   "answer": "21",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:fraction-times-whole"
+  },
+  {
+   "id": "B6.1.3.1.3-fraction-times-whole-3",
+   "indicatorCode": "B6.1.3.1.3",
+   "prompt": "Which of these is 7/8 of 8?",
+   "type": "mcq",
+   "options": [
+    "10",
+    "8",
+    "9",
+    "7"
+   ],
+   "answer": "7",
+   "answerLetter": "D",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:fraction-times-whole"
+  },
+  {
+   "id": "B6.1.4.1.1-ratio-primary-1",
+   "indicatorCode": "B6.1.4.1.1",
+   "prompt": "Express the ratio 36 : 20 in its simplest form.",
+   "type": "short",
+   "options": null,
+   "answer": "9 : 5",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:ratio-primary"
+  },
+  {
+   "id": "B6.1.4.1.1-ratio-primary-2",
+   "indicatorCode": "B6.1.4.1.1",
+   "prompt": "A drawing uses a scale of 1 : 200. A wall measures 5 cm on the drawing. How long is the wall in reality? Give your answer in metres.",
+   "type": "short",
+   "options": null,
+   "answer": "5 x 200 = 1,000 cm = 10 m",
+   "marks": 3,
+   "difficulty": "core",
+   "source": "generated:ratio-primary"
+  },
+  {
+   "id": "B6.1.4.1.1-ratio-primary-3",
+   "indicatorCode": "B6.1.4.1.1",
+   "prompt": "The ratio of boys to girls in a class is 4 : 5. There are 24 boys. How many girls are there?",
+   "type": "short",
+   "options": null,
+   "answer": "30 girls",
+   "marks": 3,
+   "difficulty": "core",
+   "source": "generated:ratio-primary"
+  },
+  {
+   "id": "B6.1.4.1.2-ratio-primary-1",
+   "indicatorCode": "B6.1.4.1.2",
+   "prompt": "Express the ratio 18 : 14 in its simplest form.",
+   "type": "short",
+   "options": null,
+   "answer": "9 : 7",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:ratio-primary"
+  },
+  {
+   "id": "B6.1.4.1.2-ratio-primary-2",
+   "indicatorCode": "B6.1.4.1.2",
+   "prompt": "A drawing uses a scale of 1 : 200. A wall measures 5 cm on the drawing. How long is the wall in reality? Give your answer in metres.",
+   "type": "short",
+   "options": null,
+   "answer": "5 x 200 = 1,000 cm = 10 m",
+   "marks": 3,
+   "difficulty": "core",
+   "source": "generated:ratio-primary"
+  },
+  {
+   "id": "B6.1.4.1.2-ratio-primary-3",
+   "indicatorCode": "B6.1.4.1.2",
+   "prompt": "The ratio of boys to girls in a class is 3 : 4. There are 15 boys. How many girls are there?",
+   "type": "short",
+   "options": null,
+   "answer": "20 girls",
+   "marks": 3,
+   "difficulty": "core",
+   "source": "generated:ratio-primary"
+  },
+  {
+   "id": "B6.1.4.2.1-ratio-primary-1",
+   "indicatorCode": "B6.1.4.2.1",
+   "prompt": "Express the ratio 21 : 18 in its simplest form.",
+   "type": "short",
+   "options": null,
+   "answer": "7 : 6",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:ratio-primary"
+  },
+  {
+   "id": "B6.1.4.2.1-ratio-primary-2",
+   "indicatorCode": "B6.1.4.2.1",
+   "prompt": "A drawing uses a scale of 1 : 200. A wall measures 5 cm on the drawing. How long is the wall in reality? Give your answer in metres.",
+   "type": "short",
+   "options": null,
+   "answer": "5 x 200 = 1,000 cm = 10 m",
+   "marks": 3,
+   "difficulty": "core",
+   "source": "generated:ratio-primary"
+  },
+  {
+   "id": "B6.1.4.2.1-ratio-primary-3",
+   "indicatorCode": "B6.1.4.2.1",
+   "prompt": "The ratio of boys to girls in a class is 2 : 4. There are 4 boys. How many girls are there?",
+   "type": "short",
+   "options": null,
+   "answer": "8 girls",
+   "marks": 3,
+   "difficulty": "core",
+   "source": "generated:ratio-primary"
+  },
+  {
+   "id": "B6.1.4.2.3-ratio-primary-1",
+   "indicatorCode": "B6.1.4.2.3",
+   "prompt": "Express the ratio 40 : 25 in its simplest form.",
+   "type": "short",
+   "options": null,
+   "answer": "8 : 5",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:ratio-primary"
+  },
+  {
+   "id": "B6.1.4.2.3-ratio-primary-2",
+   "indicatorCode": "B6.1.4.2.3",
+   "prompt": "A drawing uses a scale of 1 : 200. A wall measures 5 cm on the drawing. How long is the wall in reality? Give your answer in metres.",
+   "type": "short",
+   "options": null,
+   "answer": "5 x 200 = 1,000 cm = 10 m",
+   "marks": 3,
+   "difficulty": "core",
+   "source": "generated:ratio-primary"
+  },
+  {
+   "id": "B6.1.4.2.3-ratio-primary-3",
+   "indicatorCode": "B6.1.4.2.3",
+   "prompt": "The ratio of boys to girls in a class is 5 : 3. There are 15 boys. How many girls are there?",
+   "type": "short",
+   "options": null,
+   "answer": "9 girls",
+   "marks": 3,
+   "difficulty": "core",
+   "source": "generated:ratio-primary"
+  },
+  {
+   "id": "B6.2.1.1.7-pattern-rules-1",
+   "indicatorCode": "B6.2.1.1.7",
+   "prompt": "Extend the pattern: 18, 43, 68, 93, ____, ____",
+   "type": "short",
+   "options": null,
+   "answer": "118, 143",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:pattern-rules"
+  },
+  {
+   "id": "B6.2.1.1.7-pattern-rules-2",
+   "indicatorCode": "B6.2.1.1.7",
+   "prompt": "The rule for a pattern is 'add 25'. The pattern starts at 18. What is the next element after 93?",
+   "type": "short",
+   "options": null,
+   "answer": "118",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:pattern-rules"
+  },
+  {
+   "id": "B6.2.1.1.7-pattern-rules-3",
+   "indicatorCode": "B6.2.1.1.7",
+   "prompt": "Is 119 the next element of the pattern 18, 43, 68, 93? Explain your answer.",
+   "type": "short",
+   "options": null,
+   "answer": "No. The next element is 118, because each element is 25 more than the one before it.",
+   "marks": 3,
+   "difficulty": "core",
+   "source": "generated:pattern-rules"
+  },
+  {
+   "id": "B6.2.1.1.8-tables-patterns-1",
+   "indicatorCode": "B6.2.1.1.8",
+   "prompt": "A pattern is shown in a table: x = 1: y = 3, x = 3: y = 7, x = 4: y = 9, x = 5: y = 11. Which value of y is missing?",
+   "type": "short",
+   "options": null,
+   "answer": "y = 5",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:tables-patterns"
+  },
+  {
+   "id": "B6.2.1.1.8-tables-patterns-2",
+   "indicatorCode": "B6.2.1.1.8",
+   "prompt": "A pattern is shown in a table: x = 1: y = 3, x = 2: y = 5, x = 3: y = 7, x = 4: y = 9, x = 5: y = 11. What is the value of y when x = 6?",
+   "type": "short",
+   "options": null,
+   "answer": "y = 13",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:tables-patterns"
+  },
+  {
+   "id": "B6.2.1.1.8-tables-patterns-3",
+   "indicatorCode": "B6.2.1.1.8",
+   "prompt": "In this table x = 1: y = 3, x = 2: y = 5, x = 3: y = 7, x = 4: y = 9, x = 5: y = 13, one value is wrong. Which value is wrong, and what should it be?",
+   "type": "short",
+   "options": null,
+   "answer": "x = 5 should give y = 11, not 13.",
+   "marks": 3,
+   "difficulty": "core",
+   "source": "generated:tables-patterns"
+  },
+  {
+   "id": "B6.2.2.1.1-expression-phrases-1",
+   "indicatorCode": "B6.2.2.1.1",
+   "prompt": "Write an expression for 'a number n increased by 10'.",
+   "type": "short",
+   "options": null,
+   "answer": "n + 10",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:expression-phrases"
+  },
+  {
+   "id": "B6.2.2.1.1-expression-phrases-2",
+   "indicatorCode": "B6.2.2.1.1",
+   "prompt": "Write an expression for '10 more than a number y'.",
+   "type": "short",
+   "options": null,
+   "answer": "y + 10",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:expression-phrases"
+  },
+  {
+   "id": "B6.2.2.1.1-expression-phrases-3",
+   "indicatorCode": "B6.2.2.1.1",
+   "prompt": "Which of these is an algebraic expression?",
+   "type": "mcq",
+   "options": [
+    "10 + 11",
+    "10",
+    "n + 10",
+    "12 - 1"
+   ],
+   "answer": "n + 10",
+   "answerLetter": "C",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:expression-phrases"
+  },
+  {
+   "id": "B6.2.3.1.2-problem-to-equation-1",
+   "indicatorCode": "B6.2.3.1.2",
+   "prompt": "Adjoa had some mangoes. She sold 3 of them and had 34 left. Let m be the number of mangoes she had at first. Write an equation and solve it.",
+   "type": "short",
+   "options": null,
+   "answer": "m - 3 = 34, so m = 37",
+   "marks": 3,
+   "difficulty": "core",
+   "source": "generated:problem-to-equation"
+  },
+  {
+   "id": "B6.2.3.1.2-problem-to-equation-2",
+   "indicatorCode": "B6.2.3.1.2",
+   "prompt": "A number is increased by 3 and the result is 34. Let n be the number. Write an equation and solve it.",
+   "type": "short",
+   "options": null,
+   "answer": "n + 3 = 34, so n = 31",
+   "marks": 3,
+   "difficulty": "core",
+   "source": "generated:problem-to-equation"
+  },
+  {
+   "id": "B6.2.3.1.2-problem-to-equation-3",
+   "indicatorCode": "B6.2.3.1.2",
+   "prompt": "Kwame has y pens. He buys 3 more and now has 34 pens. Write an equation for y and solve it.",
+   "type": "short",
+   "options": null,
+   "answer": "y + 3 = 34, so y = 31",
+   "marks": 3,
+   "difficulty": "core",
+   "source": "generated:problem-to-equation"
+  },
+  {
+   "id": "B6.2.3.1.3-equations-write-1",
+   "indicatorCode": "B6.2.3.1.3",
+   "prompt": "A number increased by 3 gives 23. Write this as an equation using n for the unknown number.",
+   "type": "short",
+   "options": null,
+   "answer": "n + 3 = 23",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:equations-write"
+  },
+  {
+   "id": "B6.2.3.1.3-equations-write-2",
+   "indicatorCode": "B6.2.3.1.3",
+   "prompt": "Adjoa had some oranges. She sold 3 of them and had 20 left. Write an equation using r for the number of oranges she had at first.",
+   "type": "short",
+   "options": null,
+   "answer": "r - 3 = 20",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:equations-write"
+  },
+  {
+   "id": "B6.2.3.1.3-equations-write-3",
+   "indicatorCode": "B6.2.3.1.3",
+   "prompt": "Write a word problem that the equation n + 8 = 28 could describe.",
+   "type": "short",
+   "options": null,
+   "answer": "Any sensible problem, e.g. 'a number plus ... equals ...'. The problem must name the unknown the equation solves.",
+   "marks": 3,
+   "difficulty": "core",
+   "source": "generated:equations-write"
+  },
+  {
+   "id": "B6.3.1.1.1-shape-facts-1",
+   "indicatorCode": "B6.3.1.1.1",
+   "prompt": "How many faces has a triangular prism?",
+   "type": "mcq",
+   "options": [
+    "6",
+    "5",
+    "4",
+    "8"
+   ],
+   "answer": "5",
+   "answerLetter": "B",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:shape-facts"
+  },
+  {
+   "id": "B6.3.1.1.1-shape-facts-2",
+   "indicatorCode": "B6.3.1.1.1",
+   "prompt": "How many edges has a cube?",
+   "type": "mcq",
+   "options": [
+    "8",
+    "6",
+    "12",
+    "9"
+   ],
+   "answer": "12",
+   "answerLetter": "C",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:shape-facts"
+  },
+  {
+   "id": "B6.3.1.1.1-shape-facts-3",
+   "indicatorCode": "B6.3.1.1.1",
+   "prompt": "A net of a cube is made up of how many squares?",
+   "type": "mcq",
+   "options": [
+    "6",
+    "8",
+    "4",
+    "12"
+   ],
+   "answer": "6",
+   "answerLetter": "A",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:shape-facts"
+  },
+  {
+   "id": "B6.3.1.1.2-shape-facts-1",
+   "indicatorCode": "B6.3.1.1.2",
+   "prompt": "How many faces has a triangular prism?",
+   "type": "mcq",
+   "options": [
+    "5",
+    "6",
+    "4",
+    "8"
+   ],
+   "answer": "5",
+   "answerLetter": "A",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:shape-facts"
+  },
+  {
+   "id": "B6.3.1.1.2-shape-facts-2",
+   "indicatorCode": "B6.3.1.1.2",
+   "prompt": "How many edges has a cube?",
+   "type": "mcq",
+   "options": [
+    "8",
+    "6",
+    "12",
+    "9"
+   ],
+   "answer": "12",
+   "answerLetter": "C",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:shape-facts"
+  },
+  {
+   "id": "B6.3.1.1.2-shape-facts-3",
+   "indicatorCode": "B6.3.1.1.2",
+   "prompt": "A net of a cube is made up of how many squares?",
+   "type": "mcq",
+   "options": [
+    "4",
+    "8",
+    "6",
+    "12"
+   ],
+   "answer": "6",
+   "answerLetter": "C",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:shape-facts"
+  },
+  {
+   "id": "B6.3.3.5.1-cardinal-directions-1",
+   "indicatorCode": "B6.3.3.5.1",
+   "prompt": "Which direction lies halfway between North and East?",
+   "type": "mcq",
+   "options": [
+    "South-West",
+    "South-East",
+    "North-West",
+    "North-East"
+   ],
+   "answer": "North-East",
+   "answerLetter": "D",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:cardinal-directions"
+  },
+  {
+   "id": "B6.3.3.5.1-cardinal-directions-2",
+   "indicatorCode": "B6.3.3.5.1",
+   "prompt": "Which direction is opposite to South-East?",
+   "type": "short",
+   "options": null,
+   "answer": "North-West",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:cardinal-directions"
+  },
+  {
+   "id": "B6.3.3.5.1-cardinal-directions-3",
+   "indicatorCode": "B6.3.3.5.1",
+   "prompt": "You are facing West and you turn 45° clockwise. Which direction are you facing now?",
+   "type": "mcq",
+   "options": [
+    "North-West",
+    "North",
+    "South-West",
+    "South"
+   ],
+   "answer": "North-West",
+   "answerLetter": "A",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:cardinal-directions"
+  },
+  {
+   "id": "B6.3.3.5.2-reflection-coordinates-1",
+   "indicatorCode": "B6.3.3.5.2",
+   "prompt": "A point is at (5, 4). It is reflected in the y-axis. What are the coordinates of its image?",
+   "type": "short",
+   "options": null,
+   "answer": "(-5, 4)",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:reflection-coordinates"
+  },
+  {
+   "id": "B6.3.3.5.2-reflection-coordinates-2",
+   "indicatorCode": "B6.3.3.5.2",
+   "prompt": "A point is at (5, 4). It is reflected in the x-axis. What are the coordinates of its image?",
+   "type": "short",
+   "options": null,
+   "answer": "(5, -4)",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:reflection-coordinates"
+  },
+  {
+   "id": "B6.3.3.5.2-reflection-coordinates-3",
+   "indicatorCode": "B6.3.3.5.2",
+   "prompt": "A triangle has a vertex at (5, 4). The triangle is translated 5 units to the right and 1 unit up. What are the coordinates of the image of that vertex?",
+   "type": "short",
+   "options": null,
+   "answer": "(10, 5)",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:reflection-coordinates"
+  },
+  {
+   "id": "B6.4.1.1.1-graph-attributes-1",
+   "indicatorCode": "B6.4.1.1.1",
+   "prompt": "Which of these must every line graph have?",
+   "type": "mcq",
+   "options": [
+    "a compass",
+    "a tally chart",
+    "a protractor",
+    "a title, labelled axes and a suitable scale"
+   ],
+   "answer": "a title, labelled axes and a suitable scale",
+   "answerLetter": "D",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:graph-attributes"
+  },
+  {
+   "id": "B6.4.1.1.1-graph-attributes-2",
+   "indicatorCode": "B6.4.1.1.1",
+   "prompt": "Which set of data is best shown with a line graph?",
+   "type": "mcq",
+   "options": [
+    "the favourite colour of each pupil",
+    "the number of pupils in each class",
+    "the temperature recorded every hour of a day",
+    "the types of fruit sold in a shop"
+   ],
+   "answer": "the temperature recorded every hour of a day",
+   "answerLetter": "C",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:graph-attributes"
+  },
+  {
+   "id": "B6.4.1.1.1-graph-attributes-3",
+   "indicatorCode": "B6.4.1.1.1",
+   "prompt": "A table of values goes from 0 to 60. Which interval is most suitable for the vertical axis?",
+   "type": "mcq",
+   "options": [
+    "1,000",
+    "1",
+    "100",
+    "10"
+   ],
+   "answer": "10",
+   "answerLetter": "D",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:graph-attributes"
+  },
+  {
+   "id": "B6.4.1.1.2-graph-attributes-1",
+   "indicatorCode": "B6.4.1.1.2",
+   "prompt": "Which of these must every line graph have?",
+   "type": "mcq",
+   "options": [
+    "a tally chart",
+    "a compass",
+    "a protractor",
+    "a title, labelled axes and a suitable scale"
+   ],
+   "answer": "a title, labelled axes and a suitable scale",
+   "answerLetter": "D",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:graph-attributes"
+  },
+  {
+   "id": "B6.4.1.1.2-graph-attributes-2",
+   "indicatorCode": "B6.4.1.1.2",
+   "prompt": "A table shows the number of pupils in each of five classes. Is this continuous data or discrete data? Explain your answer.",
+   "type": "short",
+   "options": null,
+   "answer": "Discrete — the number of pupils is counted, not measured, so the points should not be joined with a line.",
+   "marks": 3,
+   "difficulty": "core",
+   "source": "generated:graph-attributes"
+  },
+  {
+   "id": "B6.4.1.1.2-graph-attributes-3",
+   "indicatorCode": "B6.4.1.1.2",
+   "prompt": "A table of values goes from 0 to 60. Which interval is most suitable for the vertical axis?",
+   "type": "mcq",
+   "options": [
+    "1",
+    "10",
+    "1,000",
+    "100"
+   ],
+   "answer": "10",
+   "answerLetter": "B",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:graph-attributes"
+  },
+  {
+   "id": "B6.4.1.1.3-graph-from-table-1",
+   "indicatorCode": "B6.4.1.1.3",
+   "prompt": "A table of values reads week 1: 25, week 2: 31, week 3: 40, week 4: 46, week 5: 53. These points are plotted and joined with a line. What is the value at week 4?",
+   "type": "short",
+   "options": null,
+   "answer": "46",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:graph-from-table"
+  },
+  {
+   "id": "B6.4.1.1.3-graph-from-table-2",
+   "indicatorCode": "B6.4.1.1.3",
+   "prompt": "A table of values reads week 1: 25, week 2: 31, week 3: 40, week 4: 46, week 5: 53. What is the increase from week 1 to week 5?",
+   "type": "short",
+   "options": null,
+   "answer": "28",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:graph-from-table"
+  },
+  {
+   "id": "B6.4.1.1.3-graph-from-table-3",
+   "indicatorCode": "B6.4.1.1.3",
+   "prompt": "A table of values reads week 1: 25, week 2: 31, week 3: 40, week 4: 46, week 5: 53. What is the total of all five values?",
+   "type": "short",
+   "options": null,
+   "answer": "195",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:graph-from-table"
+  },
+  {
+   "id": "B6.4.1.2.1-data-method-1",
+   "indicatorCode": "B6.4.1.2.1",
+   "prompt": "You want to find out how many pupils in your class walk to school. Which is the best way to collect the data?",
+   "type": "mcq",
+   "options": [
+    "Guess the number",
+    "Measure each pupil with a tape",
+    "Read it from a newspaper",
+    "Ask each pupil and record the answers"
+   ],
+   "answer": "Ask each pupil and record the answers",
+   "answerLetter": "D",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:data-method"
+  },
+  {
+   "id": "B6.4.1.2.1-data-method-2",
+   "indicatorCode": "B6.4.1.2.1",
+   "prompt": "Which is the best way to record how many pupils chose each of four fruits?",
+   "type": "mcq",
+   "options": [
+    "a number line",
+    "a clock",
+    "a protractor",
+    "a tally chart"
+   ],
+   "answer": "a tally chart",
+   "answerLetter": "D",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:data-method"
+  },
+  {
+   "id": "B6.4.1.2.1-data-method-3",
+   "indicatorCode": "B6.4.1.2.1",
+   "prompt": "You want to find out the favourite game of every pupil in your class. Describe how you would collect and record the data.",
+   "type": "short",
+   "options": null,
+   "answer": "Ask every pupil (a survey or questionnaire), then record the answers in a tally chart or a table.",
+   "marks": 3,
+   "difficulty": "core",
+   "source": "generated:data-method"
+  },
+  {
+   "id": "B6.4.2.2.1-probability-primary-1",
+   "indicatorCode": "B6.4.2.2.1",
+   "prompt": "A bag has 4 red balls and 1 blue balls. One ball is taken out without looking. What is the probability that it is blue?",
+   "type": "mcq",
+   "options": [
+    "1/4",
+    "1/2",
+    "4/5",
+    "1/5"
+   ],
+   "answer": "1/5",
+   "answerLetter": "D",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:probability-primary"
+  },
+  {
+   "id": "B6.4.2.2.1-probability-primary-2",
+   "indicatorCode": "B6.4.2.2.1",
+   "prompt": "List all the possible outcomes when a fair coin is tossed twice.",
+   "type": "short",
+   "options": null,
+   "answer": "HH, HT, TH, TT",
+   "marks": 3,
+   "difficulty": "core",
+   "source": "generated:probability-primary"
+  },
+  {
+   "id": "B6.4.2.2.1-probability-primary-3",
+   "indicatorCode": "B6.4.2.2.1",
+   "prompt": "Classify each of these as impossible, possible or certain: (a) it rains tomorrow (b) a stone thrown into the air falls back down.",
+   "type": "short",
+   "options": null,
+   "answer": "(a) possible  (b) certain",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:probability-primary"
+  },
+  {
+   "id": "B6.4.2.2.2-probability-primary-1",
+   "indicatorCode": "B6.4.2.2.2",
+   "prompt": "A bag has 4 red balls and 3 blue balls. One ball is taken out without looking. What is the probability that it is blue?",
+   "type": "mcq",
+   "options": [
+    "3/4",
+    "3/7",
+    "4/7",
+    "1/2"
+   ],
+   "answer": "3/7",
+   "answerLetter": "B",
+   "marks": 1,
+   "difficulty": "core",
+   "source": "generated:probability-primary"
+  },
+  {
+   "id": "B6.4.2.2.2-probability-primary-2",
+   "indicatorCode": "B6.4.2.2.2",
+   "prompt": "List all the possible outcomes when a fair coin is tossed twice.",
+   "type": "short",
+   "options": null,
+   "answer": "HH, HT, TH, TT",
+   "marks": 3,
+   "difficulty": "core",
+   "source": "generated:probability-primary"
+  },
+  {
+   "id": "B6.4.2.2.2-probability-primary-3",
+   "indicatorCode": "B6.4.2.2.2",
+   "prompt": "Classify each of these as impossible, possible or certain: (a) it rains tomorrow (b) a stone thrown into the air falls back down.",
+   "type": "short",
+   "options": null,
+   "answer": "(a) possible  (b) certain",
+   "marks": 2,
+   "difficulty": "core",
+   "source": "generated:probability-primary"
+  }
+ ]
+}

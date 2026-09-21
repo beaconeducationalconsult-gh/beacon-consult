@@ -32,9 +32,9 @@ Requires: python-docx  (pip install python-docx)
 
 Usage
 -----
-    python3 tools/generate_records_of_work.py
-    python3 tools/generate_records_of_work.py --grade B4
-    python3 tools/generate_records_of_work.py --per-term
+    python3 scripts/generate_records_of_work.py
+    python3 scripts/generate_records_of_work.py --grade B4
+    python3 scripts/generate_records_of_work.py --per-term
 """
 from __future__ import annotations
 
@@ -45,7 +45,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(ROOT / "tools"))
+sys.path.insert(0, str(ROOT / "scripts"))
 
 from generate_schemes import (  # noqa: E402
     DAY_ORDER,
@@ -55,6 +55,8 @@ from generate_schemes import (  # noqa: E402
     cell_text,
     discover,
     field,
+    lesson_indicator_codes,
+    resolve_subject,
     set_widths,
     shade,
     styled,
@@ -150,16 +152,22 @@ def build_rows(lessons, term):
         for l in sorted(by_week[week],
                         key=lambda x: DAY_ORDER.index(x["day"])
                         if x.get("day") in DAY_ORDER else 99):
+            ind_codes = lesson_indicator_codes(l)
             rows.append({
                 "kind": "day",
                 "week": week,
                 "day": l.get("day", ""),
                 "lessonNum": l.get("lesson_num"),
-                "indicatorId": f"{SUBJECTS_KEY}_{l.get('ind_code', '')}",
+                # A lesson may cover several indicators; the code column lists
+                # them all (a single string, so the ledger cell is unchanged),
+                # while indicatorId stays a single reference — an id must be one
+                # value. See lesson_indicator_codes().
+                "indicatorId": f"{SUBJECTS_KEY}_{ind_codes[0] if ind_codes else ''}",
+                "indicatorCodes": ind_codes,
                 "strand": clean(l.get("strand_name")),
                 "subStrand": clean(l.get("sub_strand")),
                 "contentStandardCode": l.get("cs_code", ""),
-                "indicatorCode": l.get("ind_code", ""),
+                "indicatorCode": ", ".join(ind_codes),
                 "outcome": outcome(l),
                 "activities": activities(l),
                 "resources": trunc(l.get("resources"), 110),
@@ -324,7 +332,13 @@ def main():
     if args.grade:
         entries = [e for e in entries if e[1] == args.grade]
     if args.subject:
-        entries = [e for e in entries if e[0] == args.subject]
+        matching = resolve_subject(args.subject)
+        if not matching:
+            sys.exit(f"Unknown subject '{args.subject}'.\n"
+                     f"  lesson-file keys: " + ", ".join(sorted(SUBJECTS))
+                     + "\n  portal subject ids: "
+                     + ", ".join(sorted({v[0] for v in SUBJECTS.values()})))
+        entries = [e for e in entries if e[0] in matching]
     if not entries:
         sys.exit("No matching lesson files.")
 
@@ -340,12 +354,20 @@ def main():
         terms_rows = {t: build_rows(lessons, t)
                       for t in sorted({l["term"] for l in lessons})}
         # Attach the indicator description by code (rows only carry codes).
-        desc_by_code = {l.get("ind_code"): clean(l.get("ind_desc"))
-                        for l in lessons}
+        # A description is only attributable when the lesson carries exactly one
+        # code — with several, the same text would be printed under each code.
+        desc_by_code = {}
+        for l in lessons:
+            codes = lesson_indicator_codes(l)
+            if len(codes) == 1:
+                desc_by_code[codes[0]] = clean(l.get("ind_desc"))
         for rows in terms_rows.values():
             for r in rows:
                 if r["kind"] == "day":
-                    r["indicatorText"] = desc_by_code.get(r["indicatorCode"], "")
+                    r["indicatorText"] = "; ".join(
+                        text for text in
+                        (desc_by_code.get(c, "") for c in r.get("indicatorCodes", []))
+                        if text)
 
         safe = subject_name.replace(" ", "_").replace("&", "and")
         docx_path = DOCX_OUT / f"Record_of_Work_{safe}_Basic{grade[1:]}.docx"

@@ -6,9 +6,13 @@ import { useAuth } from '../context/AuthContext'
 import { useToast } from '../context/ToastContext'
 import { useCollection } from '../hooks/useCollection'
 import { useCurriculum, useSchedules } from '../hooks/useCurriculum'
+import SubjectSelect from '../components/SubjectSelect'
 import { GRADES, TERMS, gradeLabel } from '../lib/grades'
-import { downloadLessonSlidesPptx } from '../lib/lessonSlidesPptx'
+import { buildLessonSlidesPptx, downloadLessonSlidesPptx } from '../lib/lessonSlidesPptx'
+import SaveToLibrary from '../components/SaveToLibrary'
+import { suggestFilename } from '../lib/generatedDocs'
 import { SkeletonList } from '../components/Skeleton'
+import DataError from '../components/DataError'
 import EmptyState from '../components/EmptyState'
 
 /** Turn a week's scheduled lessons into a presentation deck. */
@@ -20,9 +24,9 @@ export default function SlideLessons() {
   const [term, setTerm] = useState(1)
   const [week, setWeek] = useState(1)
   const [busy, setBusy] = useState(false)
-  const { subjects } = useCurriculum(grade)
-  const { lessons } = useSchedules(grade)
-  const { rows: decks, loading } = useCollection('lesson_slides', { max: 40 })
+  const { subjects, loading: loadingSubjects, error: subjectsError } = useCurriculum(grade)
+  const { lessons } = useSchedules(grade, subjectId)
+  const { rows: decks, loading, error } = useCollection('lesson_slides', { max: 40, ordered: true })
 
   const buildDeck = () => {
     const subjectName = subjects.find((s) => s.id === subjectId)?.name || subjectId
@@ -117,10 +121,16 @@ export default function SlideLessons() {
           </div>
           <div>
             <label className="label-caps" htmlFor="s-subject">Subject</label>
-            <select id="s-subject" className="input" value={subjectId} onChange={(e) => setSubjectId(e.target.value)}>
-              <option value="">Choose…</option>
-              {subjects.map((s) => <option key={s.id} value={s.id}>{s.name}</option>)}
-            </select>
+            <SubjectSelect
+              id="s-subject"
+              className="input"
+              grade={grade}
+              subjects={subjects}
+              loading={loadingSubjects}
+              error={subjectsError}
+              value={subjectId}
+              onChange={(e) => setSubjectId(e.target.value)}
+            />
           </div>
           <div>
             <label className="label-caps" htmlFor="s-term">Term</label>
@@ -143,15 +153,18 @@ export default function SlideLessons() {
       </div>
 
       <h2 className="section-heading mb-3 mt-8">Saved decks</h2>
-      {loading && <SkeletonList rows={2} />}
-      {!loading && decks.length === 0 && (
+      {error && <DataError what="slide decks" error={error} />}
+{loading && <SkeletonList rows={2} />}
+      {!loading && !error && decks.length === 0 && (
         <EmptyState title="No decks saved yet" message="Build one above and save it so colleagues can use it too." />
       )}
       <ul className="space-y-3">
         {decks.map((deck) => (
           <li key={deck.id} className="card flex flex-wrap items-center justify-between gap-3 p-5">
             <div>
-              <p className="card-title">{deck.subjectName} · {gradeLabel(deck.grade)}</p>
+              <Link to={`/portal/slides/${deck.id}`} className="card-title hover:underline">
+                {deck.subjectName} · {gradeLabel(deck.grade)}
+              </Link>
               <p className="card-meta">
                 Term {deck.term}, week {deck.week} · {deck.slides?.length || 0} slides · {deck.authorName}
               </p>
@@ -160,6 +173,13 @@ export default function SlideLessons() {
               <button type="button" className="btn-secondary px-3 py-1.5 text-xs" onClick={() => downloadLessonSlidesPptx(deck, { school: profile?.school })}>
                 Download
               </button>
+              <SaveToLibrary
+                label="Save"
+                kind="slide_deck"
+                filename={suggestFilename('slide_deck', { subjectId: deck.subjectId, subjectName: deck.subjectName, grade: deck.grade, term: deck.term, week: deck.week }, 'pptx')}
+                meta={{ subjectId: deck.subjectId, subjectName: deck.subjectName, grade: deck.grade, term: deck.term, week: deck.week, slides: deck.slides?.length }}
+                build={() => buildLessonSlidesPptx(deck, { school: profile?.school }).write({ outputType: 'blob' })}
+              />
               {deck.authorId === user.uid && (
                 <button type="button" className="btn-ghost px-3 py-1.5 text-xs" onClick={() => remove(deck.id)}>Delete</button>
               )}

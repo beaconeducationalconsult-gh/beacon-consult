@@ -17,8 +17,9 @@ import PublicArticles from './pages/PublicArticles'
 import PublicArticleView from './pages/PublicArticleView'
 
 // Portal pages — lazy so the public landing stays small.
-const Feed = lazy(() => import('./pages/Feed'))
+const Workspace = lazy(() => import('./pages/Workspace'))
 const Curriculum = lazy(() => import('./pages/Curriculum'))
+const GradeSubjects = lazy(() => import('./pages/GradeSubjects'))
 const SubjectBrowser = lazy(() => import('./pages/SubjectBrowser'))
 const Wisdom = lazy(() => import('./pages/Wisdom'))
 const Articles = lazy(() => import('./pages/Articles'))
@@ -31,20 +32,23 @@ const LessonPlans = lazy(() => import('./pages/LessonPlans'))
 const LessonPlanForm = lazy(() => import('./pages/LessonPlanForm'))
 const LessonPlanView = lazy(() => import('./pages/LessonPlanView'))
 const QuestionBank = lazy(() => import('./pages/QuestionBank'))
+const ExamBuilder = lazy(() => import('./pages/ExamBuilder'))
 const QuestionForm = lazy(() => import('./pages/QuestionForm'))
 const QuestionGenerator = lazy(() => import('./pages/QuestionGenerator'))
 const QuizMaker = lazy(() => import('./pages/QuizMaker'))
 const Notes = lazy(() => import('./pages/Notes'))
 const NoteForm = lazy(() => import('./pages/NoteForm'))
 const NoteView = lazy(() => import('./pages/NoteView'))
-const MyWall = lazy(() => import('./pages/MyWall'))
 const AuthorPage = lazy(() => import('./pages/AuthorPage'))
 const Vacancies = lazy(() => import('./pages/Vacancies'))
 const VacancyForm = lazy(() => import('./pages/VacancyForm'))
 const SlideLessons = lazy(() => import('./pages/SlideLessons'))
+const SlideLessonView = lazy(() => import('./pages/SlideLessonView'))
+const SlideLessonForm = lazy(() => import('./pages/SlideLessonForm'))
+const DocumentLibrary = lazy(() => import('./pages/DocumentLibrary'))
+const Models = lazy(() => import('./pages/Models'))
 const Search = lazy(() => import('./pages/Search'))
 const Progress = lazy(() => import('./pages/Progress'))
-const CalendarPage = lazy(() => import('./pages/Calendar'))
 const Profile = lazy(() => import('./pages/Profile'))
 const Members = lazy(() => import('./pages/Members'))
 
@@ -103,9 +107,10 @@ export default function App() {
 
       {/* ── Portal (approved members only) ─────────────────────────────── */}
       <Route path="/portal" element={<ProtectedLayout />}>
-        <Route index element={<Feed />} />
+        <Route index element={<Workspace />} />
         <Route path="curriculum" element={<Curriculum />} />
-        <Route path="curriculum/:subjectId" element={<SubjectBrowser />} />
+        <Route path="curriculum/:gradeId" element={<GradeSubjects />} />
+        <Route path="curriculum/:gradeId/:subjectId" element={<SubjectBrowser />} />
         <Route path="wisdom" element={<Wisdom />} />
 
         <Route path="articles" element={<Articles />} />
@@ -125,6 +130,7 @@ export default function App() {
 
         <Route path="questions" element={<QuestionBank />} />
         <Route path="questions/new" element={<QuestionForm />} />
+        <Route path="questions/exam" element={<ExamBuilder />} />
         <Route path="questions/generate" element={<QuestionGenerator />} />
         <Route path="questions/quiz" element={<QuizMaker />} />
         <Route path="questions/:questionId/edit" element={<QuestionForm />} />
@@ -138,13 +144,21 @@ export default function App() {
         <Route path="vacancies/new" element={<VacancyForm />} />
         <Route path="vacancies/:vacancyId/edit" element={<VacancyForm />} />
 
-        <Route path="slides" element={<SlideLessons />} />
+        <Route path="library" element={<DocumentLibrary />} />
 
-        <Route path="wall" element={<MyWall />} />
+        <Route path="models" element={<Models />} />
+        <Route path="models/:modelId" element={<Models />} />
+
+        <Route path="slides" element={<SlideLessons />} />
+        <Route path="slides/:deckId" element={<SlideLessonView />} />
+        <Route path="slides/:deckId/edit" element={<SlideLessonForm />} />
+
+        {/* Folded into the workspace: /portal and /portal/wall are one page now. */}
+        <Route path="wall" element={<Navigate to="/portal" replace />} />
         <Route path="authors/:authorId" element={<AuthorPage />} />
         <Route path="search" element={<Search />} />
         <Route path="progress" element={<Progress />} />
-        <Route path="calendar" element={<CalendarPage />} />
+        <Route path="calendar" element={<Navigate to="/portal" replace />} />
         <Route path="profile" element={<Profile />} />
         <Route path="members" element={<Members />} />
       </Route>

@@ -1,0 +1,10 @@
+# The served curriculum bundle and the lesson layer are *build outputs that are
+# committed on purpose*: Vercel deploys the repository, and an offline-first PWA
+# whose files are the product should not have to fetch its own content at build
+# time. They are regenerated wholesale (`make build-curriculum`,
+# `make build-questions`, `scripts/*_lessons*.py`), so GitHub is told they are
+# generated: their diffs collapse in review, and they stay out of language stats.
+# See "Does the bundle belong in git?" in docs/curriculum-data.md (P2-6).
+public/curriculum/** linguist-generated=true
+data/lessons/**      linguist-generated=true
+data/audit/**        linguist-generated=true

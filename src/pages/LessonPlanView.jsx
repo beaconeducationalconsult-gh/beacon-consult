@@ -4,9 +4,12 @@ import { useDoc } from '../hooks/useCollection'
 import { useAuth } from '../context/AuthContext'
 import { useToast } from '../context/ToastContext'
 import { SkeletonList } from '../components/Skeleton'
+import DataError from '../components/DataError'
 import EmptyState from '../components/EmptyState'
 import { downloadLessonPlanDocx } from '../lib/lessonPlanDocx'
-import { downloadLessonPlanPdf } from '../lib/lessonPlanPdf'
+import { buildLessonPlanPdf, downloadLessonPlanPdf } from '../lib/lessonPlanPdf'
+import SaveToLibrary from '../components/SaveToLibrary'
+import { suggestFilename } from '../lib/generatedDocs'
 import { useSchedules } from '../hooks/useCurriculum'
 import { gradeLabel } from '../lib/grades'
 
@@ -28,13 +31,20 @@ function Section({ heading, children }) {
 
 export default function LessonPlanView() {
   const { planId } = useParams()
-  const { row: plan, loading } = useDoc('lesson_plans', planId)
+  const { row: plan, loading, error } = useDoc('lesson_plans', planId)
   const { user, profile, isAdmin } = useAuth()
   const toast = useToast()
   const [busy, setBusy] = useState(null)
-  const { lessons } = useSchedules(plan?.grade)
+  // The planned subject's schedule. `subjectId` is always written by the form;
+  // the indicator ids (`<subjectId>_<code>`) are the fallback for plans saved
+  // before it was, so the term/day lookup does not silently go blank.
+  const planSubject = plan?.subjectId
+    || String((plan?.indicatorIds || [])[0] || '').split('_')[0]
+    || null
+  const { lessons } = useSchedules(plan?.grade, planSubject)
 
   if (loading) return <SkeletonList rows={2} />
+  if (error) return <DataError what="this lesson plan" error={error} />
   if (!plan) {
     return (
       <EmptyState
@@ -47,6 +57,11 @@ export default function LessonPlanView() {
 
   const canEdit = plan.authorId === user.uid || isAdmin
   const meta = { school: profile?.school, teacher: profile?.name }
+  // What the library records beside the file (P3-3), so the list is searchable.
+  const libraryMeta = {
+    subjectId: plan.subjectId, subjectName: plan.subjectName, grade: plan.grade,
+    term: plan.term, week: plan.week, indicatorCodes: plan.indicatorCodes || [],
+  }
 
   // Where this indicator sits in the term's schedule — handy before class.
   const scheduled = (lessons || []).filter((lesson) =>
@@ -95,6 +110,21 @@ export default function LessonPlanView() {
           <button type="button" className="btn-accent" onClick={() => exportAs('pdf')} disabled={busy}>
             {busy === 'pdf' ? 'Preparing…' : 'PDF'}
           </button>
+          {/* Keep the file itself, not just the record (P3-3). Built lazily:
+              the Word export only runs if a teacher presses this. */}
+          <SaveToLibrary
+            kind="lesson_plan"
+            filename={suggestFilename('lesson_plan', libraryMeta, 'docx')}
+            meta={libraryMeta}
+            build={() => downloadLessonPlanDocx(plan, meta)}
+          />
+          <SaveToLibrary
+            label="Save PDF"
+            kind="lesson_plan"
+            filename={suggestFilename('lesson_plan', libraryMeta, 'pdf')}
+            meta={libraryMeta}
+            build={() => buildLessonPlanPdf(plan, meta).output('blob')}
+          />
           {canEdit && <Link to={`/portal/plans/${plan.id}/edit`} className="btn-primary">Edit</Link>}
         </div>
       </header>

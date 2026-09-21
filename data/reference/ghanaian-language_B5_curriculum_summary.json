@@ -1,57 +1,57 @@
 {
-  "id": "ghanaian-language",
-  "name": "Ghanaian Language",
-  "grade": "B5",
-  "sourceTitle": "NaCCA Ghanaian Language Curriculum B4-B6",
-  "sourceUrl": "https://nacca.gov.gh/wp-content/uploads/2019/06/GHANAIAN-LANGUAGE-B4-B6.pdf",
-  "counts": {
-    "strands": 6,
-    "subStrands": 35,
-    "standards": 35,
-    "indicators": 88
+ "id": "ghanaian-language",
+ "name": "Ghanaian Language",
+ "grade": "B5",
+ "sourceTitle": "NaCCA Ghanaian Language Curriculum B4-B6",
+ "sourceUrl": "https://nacca.gov.gh/wp-content/uploads/2019/06/GHANAIAN-LANGUAGE-B4-B6.pdf",
+ "counts": {
+  "strands": 6,
+  "subStrands": 35,
+  "standards": 35,
+  "indicators": 88
+ },
+ "strands": [
+  {
+   "code": "B5.1",
+   "name": "Oral Language (Listening and Speaking)",
+   "subStrands": 9,
+   "standards": 9,
+   "indicators": 19
   },
-  "strands": [
-    {
-      "code": "B5.1",
-      "name": "B5.1",
-      "subStrands": 9,
-      "standards": 9,
-      "indicators": 19
-    },
-    {
-      "code": "B5.2",
-      "name": "B5.2",
-      "subStrands": 6,
-      "standards": 6,
-      "indicators": 12
-    },
-    {
-      "code": "B5.3",
-      "name": "B5.3",
-      "subStrands": 1,
-      "standards": 1,
-      "indicators": 5
-    },
-    {
-      "code": "B5.4",
-      "name": "B5.4",
-      "subStrands": 8,
-      "standards": 8,
-      "indicators": 23
-    },
-    {
-      "code": "B5.5",
-      "name": "B5.5",
-      "subStrands": 8,
-      "standards": 8,
-      "indicators": 19
-    },
-    {
-      "code": "B5.6",
-      "name": "B5.6",
-      "subStrands": 3,
-      "standards": 3,
-      "indicators": 10
-    }
-  ]
+  {
+   "code": "B5.2",
+   "name": "Reading",
+   "subStrands": 6,
+   "standards": 6,
+   "indicators": 12
+  },
+  {
+   "code": "B5.3",
+   "name": "Writing",
+   "subStrands": 1,
+   "standards": 1,
+   "indicators": 5
+  },
+  {
+   "code": "B5.4",
+   "name": "Composition Writing",
+   "subStrands": 8,
+   "standards": 8,
+   "indicators": 23
+  },
+  {
+   "code": "B5.5",
+   "name": "Writing Conventions/ Usage",
+   "subStrands": 8,
+   "standards": 8,
+   "indicators": 19
+  },
+  {
+   "code": "B5.6",
+   "name": "Extensive Reading/Children Literature/Library",
+   "subStrands": 3,
+   "standards": 3,
+   "indicators": 10
+  }
+ ]
 }

@@ -3,12 +3,13 @@
 creative-arts-design, french) with authentic NaCCA CCP text from their PDFs.
 Uses the /JHSn-aware code matcher. Social Studies has no grade sections - the whole
 PDF is used (codes self-identify the grade)."""
-# --- resolve bare data filenames against data/ (see tools/_compat.py) ---
+# --- resolve bare data filenames against data/ (see scripts/_compat.py) ---
 import sys as _sys, pathlib as _pathlib
-_sys.path.insert(0, str(_pathlib.Path(__file__).resolve().parents[2] / "tools"))
+_sys.path.insert(0, str(_pathlib.Path(__file__).resolve().parents[1]))
 from _compat import open_compat; open_compat()
 # -----------------------------------------------------------------------
 import json, os, re, shutil, gzip, hashlib
+from pathlib import Path  # noqa: E402  (legacy script)
 
 ROOT = str(Path(__file__).resolve().parents[2])
 CACHE = os.path.join(ROOT, 'pdf_text_cache')

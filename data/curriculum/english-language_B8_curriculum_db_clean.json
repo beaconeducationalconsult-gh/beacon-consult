@@ -1,7 +1,7 @@
 {
  "B8.1.1.1.1": {
   "strand": "1. ORAL LANGUAGE (LISTENING AND SPEAKING)",
-  "sub_strand": "Sub-strand B8.1.1",
+  "sub_strand": "1. CONVERSATION/EVERYDAY DISCOURSE",
   "cs_code": "B8.1.1.1",
   "cs_desc": "Demonstrate use of appropriate language orally in specific situations",
   "ind_desc": "Use appropriate register in everyday communication (informal and formal) with diverse partners on grade-level topics/texts/issues",
@@ -12,7 +12,7 @@
  },
  "B8.1.1.1.2": {
   "strand": "1. ORAL LANGUAGE (LISTENING AND SPEAKING)",
-  "sub_strand": "Sub-strand B8.1.1",
+  "sub_strand": "1. CONVERSATION/EVERYDAY DISCOURSE",
   "cs_code": "B8.1.1.1",
   "cs_desc": "Demonstrate use of appropriate language orally in specific situations",
   "ind_desc": "Ask and respond to specific questions with elaboration by making comments that contribute to texts, issues or topics under discussion",
@@ -23,7 +23,7 @@
  },
  "B8.1.1.1.3": {
   "strand": "1. ORAL LANGUAGE (LISTENING AND SPEAKING)",
-  "sub_strand": "Sub-strand B8.1.1",
+  "sub_strand": "1. CONVERSATION/EVERYDAY DISCOURSE",
   "cs_code": "B8.1.1.1",
   "cs_desc": "Demonstrate use of appropriate language orally in specific situations",
   "ind_desc": "Use appropriate language orally to describe familiar places and events",
@@ -34,7 +34,7 @@
  },
  "B8.1.1.1.4": {
   "strand": "1. ORAL LANGUAGE (LISTENING AND SPEAKING)",
-  "sub_strand": "Sub-strand B8.1.1",
+  "sub_strand": "1. CONVERSATION/EVERYDAY DISCOURSE",
   "cs_code": "B8.1.1.1",
   "cs_desc": "Demonstrate use of appropriate language orally in specific situations",
   "ind_desc": "Listen to and give accurate directions of complex routes to different locations",
@@ -45,7 +45,7 @@
  },
  "B8.1.1.1.5": {
   "strand": "1. ORAL LANGUAGE (LISTENING AND SPEAKING)",
-  "sub_strand": "Sub-strand B8.1.1",
+  "sub_strand": "1. CONVERSATION/EVERYDAY DISCOURSE",
   "cs_code": "B8.1.1.1",
   "cs_desc": "Demonstrate use of appropriate language orally in specific situations",
   "ind_desc": "Demonstrate appropriate turn taking for effective oral communication",
@@ -56,7 +56,7 @@
  },
  "B8.1.2.1.1": {
   "strand": "1. ORAL LANGUAGE (LISTENING AND SPEAKING)",
-  "sub_strand": "Sub-strand B8.1.2",
+  "sub_strand": "2. LISTENING COMPREHENSION",
   "cs_code": "B8.1.2.1",
   "cs_desc": "Demonstrate the ability to listen to extended reading and identify key information",
   "ind_desc": "Listen to a level -appropriate dialogue/discussion by more than one speaker attentively and identify key information",
@@ -67,7 +67,7 @@
  },
  "B8.1.2.1.2": {
   "strand": "1. ORAL LANGUAGE (LISTENING AND SPEAKING)",
-  "sub_strand": "Sub-strand B8.1.2",
+  "sub_strand": "2. LISTENING COMPREHENSION",
   "cs_code": "B8.1.2.1",
   "cs_desc": "Demonstrate the ability to listen to extended reading and identify key information",
   "ind_desc": "Listen to and discuss ideas and share opinions from a level-appropriate text",
@@ -78,7 +78,7 @@
  },
  "B8.1.3.1.1": {
   "strand": "1. ORAL LANGUAGE (LISTENING AND SPEAKING)",
-  "sub_strand": "Sub-strand B8.1.3",
+  "sub_strand": "3. ENGLISH SOUNDS",
   "cs_code": "B8.1.3.1",
   "cs_desc": "Articulate English speech sounds to develop confidence and skills in listening and speaking",
   "ind_desc": "Produce consonant sounds in context (plosives)",
@@ -89,7 +89,7 @@
  },
  "B8.1.3.1.2": {
   "strand": "1. ORAL LANGUAGE (LISTENING AND SPEAKING)",
-  "sub_strand": "Sub-strand B8.1.3",
+  "sub_strand": "3. ENGLISH SOUNDS",
   "cs_code": "B8.1.3.1",
   "cs_desc": "Articulate English speech sounds to develop confidence and skills in listening and speaking",
   "ind_desc": "Produce consonant sounds (fricatives) in context",
@@ -100,7 +100,7 @@
  },
  "B8.1.3.1.3": {
   "strand": "1. ORAL LANGUAGE (LISTENING AND SPEAKING)",
-  "sub_strand": "Sub-strand B8.1.3",
+  "sub_strand": "3. ENGLISH SOUNDS",
   "cs_code": "B8.1.3.1",
   "cs_desc": "Articulate English speech sounds to develop confidence and skills in listening and speaking",
   "ind_desc": "Produce consonant sounds (nasals and affricates) in context",
@@ -111,7 +111,7 @@
  },
  "B8.2.1.1.1": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B8.2.1",
+  "sub_strand": "1. COMPREHENSION",
   "cs_code": "B8.2.1.1",
   "cs_desc": "Demonstrate increasing confidence and enjoyment in independent reading",
   "ind_desc": "Use Monitoring and mental visualisation to engage and understand non-fictional texts",
@@ -122,7 +122,7 @@
  },
  "B8.2.1.1.2": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B8.2.1",
+  "sub_strand": "1. COMPREHENSION",
   "cs_code": "B8.2.1.1",
   "cs_desc": "Demonstrate increasing confidence and enjoyment in independent reading",
   "ind_desc": "Use prediction to assess and improve engagement and understanding of non-fiction texts",
@@ -133,7 +133,7 @@
  },
  "B8.2.1.1.3": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B8.2.1",
+  "sub_strand": "1. COMPREHENSION",
   "cs_code": "B8.2.1.1",
   "cs_desc": "Demonstrate increasing confidence and enjoyment in independent reading",
   "ind_desc": "Generate and answer questions to increase confidence and independent reading through a variety of non- fiction texts",
@@ -144,7 +144,7 @@
  },
  "B8.2.1.2.1": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B8.2.1",
+  "sub_strand": "1. COMPREHENSION",
   "cs_code": "B8.2.1.2",
   "cs_desc": "Read, comprehend, interpret texts",
   "ind_desc": "Identify the main text features of non-fiction texts",
@@ -155,7 +155,7 @@
  },
  "B8.2.1.2.2": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B8.2.1",
+  "sub_strand": "1. COMPREHENSION",
   "cs_code": "B8.2.1.2",
   "cs_desc": "Read, comprehend, interpret texts",
   "ind_desc": "Use contextual clues (topic sentence, vocabulary knowledge, cohesive devices, text features) to analyse text",
@@ -166,7 +166,7 @@
  },
  "B8.2.1.2.3": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B8.2.1",
+  "sub_strand": "1. COMPREHENSION",
   "cs_code": "B8.2.1.2",
   "cs_desc": "Read, comprehend, interpret texts",
   "ind_desc": "Read silently and answer more complex comprehension questions on texts /passages",
@@ -177,7 +177,7 @@
  },
  "B8.2.1.2.4": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B8.2.1",
+  "sub_strand": "1. COMPREHENSION",
   "cs_code": "B8.2.1.2",
   "cs_desc": "Read, comprehend, interpret texts",
   "ind_desc": "Provide evidence and show mastery to support understanding of texts",
@@ -188,7 +188,7 @@
  },
  "B8.2.1.2.5": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B8.2.1",
+  "sub_strand": "1. COMPREHENSION",
   "cs_code": "B8.2.1.2",
   "cs_desc": "Read, comprehend, interpret texts",
   "ind_desc": "Generate simple themes from a text and apply to different situations",
@@ -199,7 +199,7 @@
  },
  "B8.2.1.2.6": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B8.2.1",
+  "sub_strand": "1. COMPREHENSION",
   "cs_code": "B8.2.1.2",
   "cs_desc": "Read, comprehend, interpret texts",
   "ind_desc": "Examine the connections between a text and other points of view",
@@ -210,7 +210,7 @@
  },
  "B8.2.1.2.7": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B8.2.1",
+  "sub_strand": "1. COMPREHENSION",
   "cs_code": "B8.2.1.2",
   "cs_desc": "Read, comprehend, interpret texts",
   "ind_desc": "Use derivation to expand vocabulary to new contexts (historical, cultural, political)",
@@ -221,7 +221,7 @@
  },
  "B8.2.1.2.8": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B8.2.1",
+  "sub_strand": "1. COMPREHENSION",
   "cs_code": "B8.2.1.2",
   "cs_desc": "Read, comprehend, interpret texts",
   "ind_desc": "Integrate appropriate grade level vocabulary in different contexts",
@@ -232,7 +232,7 @@
  },
  "B8.2.2.1.1": {
   "strand": "2. READING",
-  "sub_strand": "Sub-strand B8.2.2",
+  "sub_strand": "2. COMPREHENSION",
   "cs_code": "B8.2.2.1",
   "cs_desc": "Cite the textual evidence that supports an analysis of a text to determine the central idea and provide an objective summary",
   "ind_desc": "Determine the central idea in paragraphs and analyse to identify supporting ideas",
@@ -243,7 +243,7 @@
  },
  "B8.3.1.1.1": {
   "strand": "3. GRAMMAR AND GRAMMAR USAGE",
-  "sub_strand": "Sub-strand B8.3.1",
+  "sub_strand": "1. GRAMMAR",
   "cs_code": "B8.3.1.1",
   "cs_desc": "Apply the knowledge of word classes and their functions in Communication",
   "ind_desc": "Use an increasing range of singular and plural forms of compound nouns correctly and appropriately in sentences",
@@ -254,7 +254,7 @@
  },
  "B8.3.1.1.2": {
   "strand": "3. GRAMMAR AND GRAMMAR USAGE",
-  "sub_strand": "Sub-strand B8.3.1",
+  "sub_strand": "1. GRAMMAR",
   "cs_code": "B8.3.1.1",
   "cs_desc": "Apply the knowledge of word classes and their functions in Communication",
   "ind_desc": "Demonstrate use of relative pronouns (who/whom, which/that, whose) correctly in speaking and writing",
@@ -265,7 +265,7 @@
  },
  "B8.3.1.1.3": {
   "strand": "3. GRAMMAR AND GRAMMAR USAGE",
-  "sub_strand": "Sub-strand B8.3.1",
+  "sub_strand": "1. GRAMMAR",
   "cs_code": "B8.3.1.1",
   "cs_desc": "Apply the knowledge of word classes and their functions in Communication",
   "ind_desc": "Demonstrate command of the use of adjectives in discourse",
@@ -276,7 +276,7 @@
  },
  "B8.3.1.1.4": {
   "strand": "3. GRAMMAR AND GRAMMAR USAGE",
-  "sub_strand": "Sub-strand B8.3.1",
+  "sub_strand": "1. GRAMMAR",
   "cs_code": "B8.3.1.1",
   "cs_desc": "Apply the knowledge of word classes and their functions in Communication",
   "ind_desc": "Use verb forms correctly when talking about future events Future Time 1. Use the future form of verbs to talk/write about future events. o simple future– I will wash my clothes. o future progressive – We shall be doing the dishes. o future perfect – They will have washed their clothes. o future perfect progressive – He will have been washing his clothes.",
@@ -287,7 +287,7 @@
  },
  "B8.3.1.1.5": {
   "strand": "3. GRAMMAR AND GRAMMAR USAGE",
-  "sub_strand": "Sub-strand B8.3.1",
+  "sub_strand": "1. GRAMMAR",
   "cs_code": "B8.3.1.1",
   "cs_desc": "Apply the knowledge of word classes and their functions in Communication",
   "ind_desc": "Demonstrate command of the knowledge of adverbs",
@@ -298,7 +298,7 @@
  },
  "B8.3.1.1.6": {
   "strand": "3. GRAMMAR AND GRAMMAR USAGE",
-  "sub_strand": "Sub-strand B8.3.1",
+  "sub_strand": "1. GRAMMAR",
   "cs_code": "B8.3.1.1",
   "cs_desc": "Apply the knowledge of word classes and their functions in Communication",
   "ind_desc": "Demonstrate command of use of prepositions in speaking and writing",
@@ -309,7 +309,7 @@
  },
  "B8.3.1.5.2": {
   "strand": "3. GRAMMAR AND GRAMMAR USAGE",
-  "sub_strand": "Sub-strand B8.3.1",
+  "sub_strand": "1. GRAMMAR",
   "cs_code": "B8.3.1.5",
   "cs_desc": "Demonstrate command of the use of reported speech.",
   "ind_desc": "Demonstrate command of the use of reported speech",
@@ -320,7 +320,7 @@
  },
  "B8.3.1.6.1": {
   "strand": "3. GRAMMAR AND GRAMMAR USAGE",
-  "sub_strand": "Sub-strand B8.3.1",
+  "sub_strand": "1. GRAMMAR",
   "cs_code": "B8.3.1.6",
   "cs_desc": "Show understanding and use of question tags in communication",
   "ind_desc": "Demonstrate command of question tags",
@@ -331,7 +331,7 @@
  },
  "B8.3.2.1.1": {
   "strand": "3. GRAMMAR AND GRAMMAR USAGE",
-  "sub_strand": "Sub-strand B8.3.2",
+  "sub_strand": "2. PUNCTUATION AND CAPITALISATION",
   "cs_code": "B8.3.2.1",
   "cs_desc": "Demonstrate mastery of capitalisation and punctuation in communication",
   "ind_desc": "Use punctuation marks (colon, semi-colon, apostrophe) in context",
@@ -342,7 +342,7 @@
  },
  "B8.3.3.1.1": {
   "strand": "3. GRAMMAR AND GRAMMAR USAGE",
-  "sub_strand": "Sub-strand B8.3.3",
+  "sub_strand": "3. VOCABULARY",
   "cs_code": "B8.3.3.1",
   "cs_desc": "Demonstrate appropriate use of vocabulary in communication",
   "ind_desc": "Use vocabulary appropriately in speaking and writing",
@@ -353,7 +353,7 @@
  },
  "B8.4.1.1.1": {
   "strand": "4. WRITING",
-  "sub_strand": "Sub-strand B8.4.1",
+  "sub_strand": "1. PRODUCTION AND DISTRIBUTION OF WRITING",
   "cs_code": "B8.4.1.1",
   "cs_desc": "Develop, organise and express ideas coherently and cohesively in writing",
   "ind_desc": "Demonstrate understanding of how different sentences relate within a paragraph using appropriate cohesive devices (e.g., connectors, pronouns, repetition of vocabulary or grammatical structures)",
@@ -364,7 +364,7 @@
  },
  "B8.4.1.2.1": {
   "strand": "4. WRITING",
-  "sub_strand": "Sub-strand B8.4.1",
+  "sub_strand": "1. PRODUCTION AND DISTRIBUTION OF WRITING",
   "cs_code": "B8.4.1.2",
   "cs_desc": "Create different paragraphs within a composition on a given topic",
   "ind_desc": "Record and use different techniques to capture the reader’s attention in introductory paragraphs",
@@ -375,7 +375,7 @@
  },
  "B8.4.2.1.1": {
   "strand": "4. WRITING",
-  "sub_strand": "Sub-strand B8.4.2",
+  "sub_strand": "2. TEXT TYPES AND PURPOSES",
   "cs_code": "B8.4.2.1",
   "cs_desc": "Use a process approach to compose descriptive, narrative/ imaginative, informational, persuasive and argumentative texts",
   "ind_desc": "Write personal narratives using effective techniques incorporating descriptive details and logical event sequences",
@@ -386,7 +386,7 @@
  },
  "B8.4.2.1.2": {
   "strand": "4. WRITING",
-  "sub_strand": "Sub-strand B8.4.2",
+  "sub_strand": "2. TEXT TYPES AND PURPOSES",
   "cs_code": "B8.4.2.1",
   "cs_desc": "Use a process approach to compose descriptive, narrative/ imaginative, informational, persuasive and argumentative texts",
   "ind_desc": "Use precise words phrases and sensory language to convey a vivid mental picture of places and events",
@@ -397,7 +397,7 @@
  },
  "B8.4.2.1.3": {
   "strand": "4. WRITING",
-  "sub_strand": "Sub-strand B8.4.2",
+  "sub_strand": "2. TEXT TYPES AND PURPOSES",
   "cs_code": "B8.4.2.1",
   "cs_desc": "Use a process approach to compose descriptive, narrative/ imaginative, informational, persuasive and argumentative texts",
   "ind_desc": "Create shorter transactional texts to convince an audience to accept an opinion",
@@ -408,7 +408,7 @@
  },
  "B8.4.2.1.4": {
   "strand": "4. WRITING",
-  "sub_strand": "Sub-strand B8.4.2",
+  "sub_strand": "2. TEXT TYPES AND PURPOSES",
   "cs_code": "B8.4.2.1",
   "cs_desc": "Use a process approach to compose descriptive, narrative/ imaginative, informational, persuasive and argumentative texts",
   "ind_desc": "Compose paragraphs that identify an issue, give details about it and suggest solutions",
@@ -419,7 +419,7 @@
  },
  "B8.4.2.2.1": {
   "strand": "4. WRITING",
-  "sub_strand": "Sub-strand B8.4.2",
+  "sub_strand": "2. TEXT TYPES AND PURPOSES",
   "cs_code": "B8.4.2.2",
   "cs_desc": "Apply writing skills to specific life situations",
   "ind_desc": "Compose formal writing (business letters, email) on given topics using the appropriate format",
@@ -430,7 +430,7 @@
  },
  "B8.4.2.2.2": {
   "strand": "4. WRITING",
-  "sub_strand": "Sub-strand B8.4.2",
+  "sub_strand": "2. TEXT TYPES AND PURPOSES",
   "cs_code": "B8.4.2.2",
   "cs_desc": "Apply writing skills to specific life situations",
   "ind_desc": "Compose notes, brochures and flyers for different purposes and audiences",
@@ -441,7 +441,7 @@
  },
  "B8.4.2.2.3": {
   "strand": "4. WRITING",
-  "sub_strand": "Sub-strand B8.4.2",
+  "sub_strand": "2. TEXT TYPES AND PURPOSES",
   "cs_code": "B8.4.2.2",
   "cs_desc": "Apply writing skills to specific life situations",
   "ind_desc": "Write articles on given issues for publication in school magazines",
@@ -452,7 +452,7 @@
  },
  "B8.4.2.2.4": {
   "strand": "4. WRITING",
-  "sub_strand": "Sub-strand B8.4.2",
+  "sub_strand": "2. TEXT TYPES AND PURPOSES",
   "cs_code": "B8.4.2.2",
   "cs_desc": "Apply writing skills to specific life situations",
   "ind_desc": "Create dialogues among multiple interlocutors on different themes",
@@ -463,7 +463,7 @@
  },
  "B8.4.2.2.5": {
   "strand": "4. WRITING",
-  "sub_strand": "Sub-strand B8.4.2",
+  "sub_strand": "2. TEXT TYPES AND PURPOSES",
   "cs_code": "B8.4.2.2",
   "cs_desc": "Apply writing skills to specific life situations",
   "ind_desc": "Compose speeches for different purposes and occasions",
@@ -474,7 +474,7 @@
  },
  "B8.4.3.1.1": {
   "strand": "4. WRITING",
-  "sub_strand": "Sub-strand B8.4.3",
+  "sub_strand": "3. BUILDING AND PRESENT KNOWLEDGE",
   "cs_code": "B8.4.3.1",
   "cs_desc": "Research to build and present knowledge",
   "ind_desc": "Use information from non-text sources (figures, tables graphs, and maps) to support ideas in writing",
@@ -485,7 +485,7 @@
  },
  "B8.5.1.1.1": {
   "strand": "5. LITERATURE",
-  "sub_strand": "Sub-strand B8.5.1",
+  "sub_strand": "1. NARRATIVE, DRAMA AND POETRY",
   "cs_code": "B8.5.1.1",
   "cs_desc": "Demonstrate understanding of how various elements of literary genres contribute to meaning",
   "ind_desc": "Analyse the types of characters in texts",
@@ -496,7 +496,7 @@
  },
  "B8.5.1.1.2": {
   "strand": "5. LITERATURE",
-  "sub_strand": "Sub-strand B8.5.1",
+  "sub_strand": "1. NARRATIVE, DRAMA AND POETRY",
   "cs_code": "B8.5.1.1",
   "cs_desc": "Demonstrate understanding of how various elements of literary genres contribute to meaning",
   "ind_desc": "Examine the features of different types of poems",
@@ -507,7 +507,7 @@
  },
  "B8.5.1.1.3": {
   "strand": "5. LITERATURE",
-  "sub_strand": "Sub-strand B8.5.1",
+  "sub_strand": "1. NARRATIVE, DRAMA AND POETRY",
   "cs_code": "B8.5.1.1",
   "cs_desc": "Demonstrate understanding of how various elements of literary genres contribute to meaning",
   "ind_desc": "Examine how monologues and dialogues are used to convey characters in narratives and play scripts (drama)",
@@ -518,7 +518,7 @@
  },
  "B8.5.1.1.4": {
   "strand": "5. LITERATURE",
-  "sub_strand": "Sub-strand B8.5.1",
+  "sub_strand": "1. NARRATIVE, DRAMA AND POETRY",
   "cs_code": "B8.5.1.1",
   "cs_desc": "Demonstrate understanding of how various elements of literary genres contribute to meaning",
   "ind_desc": "Use literary devices (euphemism, hyperbole, onomatopoeia, etc.) in texts",
@@ -529,7 +529,7 @@
  },
  "B8.5.1.1.5": {
   "strand": "5. LITERATURE",
-  "sub_strand": "Sub-strand B8.5.1",
+  "sub_strand": "1. NARRATIVE, DRAMA AND POETRY",
   "cs_code": "B8.5.1.1",
   "cs_desc": "Demonstrate understanding of how various elements of literary genres contribute to meaning",
   "ind_desc": "Analyse the sequence of events in film/media, narratives and play scripts (drama)",

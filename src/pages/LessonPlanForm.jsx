@@ -5,9 +5,11 @@ import { db } from '../firebase'
 import { useAuth } from '../context/AuthContext'
 import { useToast } from '../context/ToastContext'
 import { useCurriculum, useSchedules } from '../hooks/useCurriculum'
+import SubjectSelect from '../components/SubjectSelect'
 import { GRADES, TERMS, gradeLabel } from '../lib/grades'
 import Stepper from '../components/Stepper'
 import IndicatorPicker from '../components/IndicatorPicker'
+import { templateFields, templateNote } from '../lib/lessonTemplate'
 
 const STEPS = ['Class & indicators', 'Lesson content', 'Review & save']
 
@@ -83,8 +85,8 @@ export default function LessonPlanForm() {
   const [saving, setSaving] = useState(false)
   const [prefilling, setPrefilling] = useState(false)
 
-  const { subjects, indicators } = useCurriculum(form.grade)
-  const { lessons } = useSchedules(form.grade)
+  const { subjects, indicators, loading: loadingSubjects, error: subjectsError } = useCurriculum(form.grade)
+  const { lessons } = useSchedules(form.grade, form.subjectId)
 
   // Deep link from the curriculum browser: ?indicator=B1.1.1.1.1&grade=B5
   // Resolved during render (React's documented "adjust state when a prop
@@ -120,11 +122,28 @@ export default function LessonPlanForm() {
   }, [editing, planId])
 
   /** Pull the curriculum row for the first chosen indicator into the plan. */
+  /*
+   * Pull the curriculum row for the first chosen indicator into the plan.
+   *
+   * Part of what arrives was never written for this lesson: the measurement
+   * (`src/lib/lessonTemplate.js`) shows rpk, plenary, assessment, competencies,
+   * resources and keywords are one value across a subject-grade's whole year.
+   * The plan records which sections it inherited, so the exports can label them
+   * instead of passing the template off as the teacher's own wording (P1-4).
+   */
   const prefillFromCurriculum = () => {
     const first = form.indicatorIds[0]
     if (!first) return toast.error('Choose an indicator first.')
     setPrefilling(true)
     const scheduled = lessons.find((lesson) => [lesson.indicatorCode, lesson.code].includes(first.code))
+    const templated = templateFields(lessons)
+    // Only the sections this prefill actually supplied: a field the teacher had
+    // already written stays theirs, whatever the template says.
+    const inherited = templated.filter((field) => {
+      const current = form[field]
+      const empty = Array.isArray(current) ? current.length === 0 : !current
+      return empty && scheduled?.[field]
+    })
     setForm((current) => ({
       ...current,
       strandName: first.strandName || scheduled?.strandName || '',
@@ -142,9 +161,14 @@ export default function LessonPlanForm() {
       plenary: current.plenary.length ? current.plenary : [].concat(scheduled?.plenary || []),
       rpk: current.rpk || scheduled?.rpk || '',
       assessment: current.assessment || scheduled?.assessment || '',
+      templatedFields: templated,
+      prefilledFrom: scheduled ? 'curriculum-schedule' : 'curriculum-indicator',
+      inheritedFields: inherited,
     }))
     setPrefilling(false)
-    toast.success('Filled from the curriculum — edit anything you like.')
+    toast.success(inherited.length
+      ? `Filled from the curriculum. ${templateNote(inherited)}`
+      : 'Filled from the curriculum — edit anything you like.')
   }
 
   const subjectName = useMemo(
@@ -209,10 +233,16 @@ export default function LessonPlanForm() {
             </div>
             <div>
               <label className="label-caps" htmlFor="subject">Subject</label>
-              <select id="subject" className="input" value={form.subjectId} onChange={(e) => setForm({ ...form, subjectId: e.target.value, indicatorIds: [] })}>
-                <option value="">Choose…</option>
-                {subjects.map((s) => <option key={s.id} value={s.id}>{s.name}</option>)}
-              </select>
+              <SubjectSelect
+                id="subject"
+                className="input"
+                grade={form.grade}
+                subjects={subjects}
+                loading={loadingSubjects}
+                error={subjectsError}
+                value={form.subjectId}
+                onChange={(e) => setForm({ ...form, subjectId: e.target.value, indicatorIds: [] })}
+              />
             </div>
             <div>
               <label className="label-caps" htmlFor="term">Term</label>
@@ -242,6 +272,12 @@ export default function LessonPlanForm() {
             </button>
             <p className="card-meta">Uses the indicator, plus the scheduled lesson content if the grade has a schedule.</p>
           </div>
+
+          {form.inheritedFields?.length > 0 && (
+            <p className="rounded-lg bg-amber-50 p-3 text-sm text-amber-800">
+              {templateNote(form.inheritedFields)} Edit anything you like — the plan is yours once saved.
+            </p>
+          )}
 
           <div className="flex justify-end">
             <button type="button" className="btn-primary" onClick={() => setStep(1)} disabled={form.indicatorIds.length === 0}>
@@ -325,6 +361,7 @@ export default function LessonPlanForm() {
             <select id="plan-visibility" className="input" value={form.visibility} onChange={(e) => setForm({ ...form, visibility: e.target.value })}>
               <option value="members">Members of the network</option>
               <option value="public">Public</option>
+              <option value="private">Only me (draft)</option>
             </select>
           </div>
           <div className="flex justify-between">

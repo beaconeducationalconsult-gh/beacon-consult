@@ -10,23 +10,23 @@ this project — including several that were in `README.md` and `docs/TODO.md`.
 
 | Layer | Path | What it is | Size |
 |---|---|---|---|
-| **L1 — curriculum** | `data/curriculum/*_curriculum_db_clean.json` + `*_curriculum_summary.json` | The audited extraction from the NaCCA source PDFs. One record per indicator, keyed by indicator code. | 75 DB files · 73 summaries · **3,095 indicators** · 75 subject-grades (plus `english-language B5`, which exists only as a summary) |
+| **L1 — curriculum** | `data/curriculum/*_curriculum_db_clean.json` + `*_curriculum_summary.json` | The audited extraction from the NaCCA source PDFs. One record per indicator, keyed by indicator code. | 84 DB files · 84 summaries · **4,040 indicators** · 84 subject-grades |
 | **L2 — lessons** | `data/lessons/*_lessons_enriched.json` | The teaching template (starter / main / plenary / rpk / assessment) filled for every lesson slot in the school year. | 73 files · **13,140 lesson slots** · 13 subjects · 9 grades |
 | **L3 — bundle** | `public/curriculum/*.json` | The static JSON the portal fetches at runtime. The only layer a teacher ever touches. | 84 subject-grades · **4,040 indicators** · 11 grades · 39.7 MB |
-| (ref) **reference** | `data/reference/` | A second, partly-divergent copy of L1 that `scripts/_paths.py` searches as a silent fallback. | 84 DB files · 75 summaries (8 malformed) |
+| (ref) **reference** | `data/reference/` | Older, partly-divergent copies of L1 subjects — searched by `scripts/_paths.py` only when a file is missing from `data/curriculum/`. Nothing served comes from here any more. | 75 DB files · 74 summaries |
 
 ```
 NaCCA PDFs (24, data/sources/)
       │  scripts/ingest/, scripts/build/build_clean_curriculum_db.py
       ▼
-L1  curriculum DBs + summaries ......... 3,095 indicators, audited (data/audit/)
+L1  curriculum DBs + summaries ......... 4,040 indicators, audited (data/audit/)
       │  scripts/build/lessons/  →  the teaching template
       ▼
 L2  enriched lessons ................... 13,140 lesson slots (3 terms × 12 weeks × 5 days × 73 subject-grades)
       │  scripts/build_app_curriculum.py
       ▼
-L3  app bundle ......................... 4,040 indicators (data/reference/ supplies 8 subject-grades
-                                          that L1 does not have)
+L3  app bundle ......................... 4,040 indicators (all of them from L1, since the
+                                          2026-09-18 promotion)
 
       scripts/generate_schemes.py, scripts/generate_records_of_work.py
       └──► the sellable Word books (regenerated on demand; not committed)
@@ -34,26 +34,51 @@ L3  app bundle ......................... 4,040 indicators (data/reference/ suppl
 
 ## Why the three layers have different totals
 
-**L1 is 3,095 indicators; L3 is 4,040.** The difference is not rounding — it is 945
-indicators across 9 subject-grades that the app serves but the audited layer does not
-contain. For the other 75 subject-grades the two layers agree exactly (3,095 = 3,095):
+**L1 and L3 are both 4,040 indicators, and that is new.** Until 2026-09-18 they were
+3,095 and 4,040: nine subject-grades (computing and french B4–B6, kindergarten
+KG1/KG2, `english-language B5` — 945 indicators) were served by the portal while the
+audited layer had no database for them, eight of them living only in
+`data/reference/` and `english-language B5` having a summary with no database at all.
+`scripts/promote_reference_subjects.py` moved all nine into `data/curriculum/`,
+together with summaries carrying a `counts` block, and Audit A's `EXPECTED` table
+gained their rows. L1 is now 84 subject-grades / 84 databases / 84 summaries, and
+every served subject comes from the audited copy (`source: 'curriculum'`).
 
-| Subject-grade | L3 indicators | Where it comes from |
-|---|---|---|
-| computing B4 / B5 / B6 | 27 / 81 / 98 | `data/reference/` only |
-| french B4 / B5 / B6 | 88 / 90 / 89 | `data/reference/` only |
-| kindergarten KG1 / KG2 | 169 / 170 | `data/reference/` only (KG codes use `K1`/`K2`, normalised to `KG1`/`KG2`) |
-| english-language B5 | 133 | L1 has the summary, not the database |
+`data/reference/` still exists and is still read — but only when a file is missing
+from `data/curriculum/`, which for curriculum data no longer happens. What lives
+there now: older extractions of subjects that have a better copy in L1 (english, and
+the french B7–B9 databases whose `cs_desc` repair lives there), and the drifted
+creative-arts B4–B6 / social-studies B7–B9 copies (the rest is tracked in the inventory,
+not a defect of anything served; the four fabricated records these copies carried were
+deleted on 2026-09-19 — TODO P1-10).
 
-The reverse also happens: **L1 has databases with no summary** —
-`english-language B4` (129 indicators), `mathematics B1` (24), `science B1` (31) —
-so those pairs have no source URL and no counts block.
+**Some records restated their code instead of carrying its text**, and the ones the prints back
+have been filled: 302 records were label-form, 74 of them served (`owop_B4`/`B5`/`B6`, 25/25/24) and
+228 in `data/reference/`. `scripts/fill_label_form_text.py` read the print's own cells for them and
+wrote **793 fields across 269 records** — the served three subject-grades now carry the standard's
+sentence, the indicator's sentence, and the strand / sub-strand names the print sets, and Audit A
+prints `placeholder=0` for all 84 subject-grades. Two fields are left as labels on purpose (the
+print's own row pairs `owop_B6.4.4.1.1` with `B6.4.6.1`); everything written, with the page it was
+read from, is in `data/audit/label_form_text.json`. The one shape that *was* fabrication — a record built from a print's front-matter
+notation example — was removed on 2026-09-19: four records, all in the reference layer
+(TODO P1-10).
+
+**The sub-strand names came from the print as well.** 3,679 served indicators carried
+`Sub-strand B4.1.1` where the curriculum sets a name once per block, above the table;
+`scripts/fix_sub_strand_names.py` (P1-12, 2026-09-19) read the heading for **3,665 of
+them** — 3,612 from the record's own row, 43 from its content standard, 10 from the same
+block read elsewhere in the print — and wrote them into the databases *and* into the
+11,652 lesson rows of `data/lessons/` that carried the code, because the scheme of
+learning prints the lesson's own `sub_strand`. 14 blocks are refused (the print itself
+names them two ways) and keep the code, as do their 48 schedule rows and 3 scheme cells.
+The reads, the refusals and the 1,105 curated word repairs (the prints kern words apart:
+`GENE RATION`, `Appreciati n g`) are in `data/audit/sub_strand_names.json`.
 
 Any statement of the form "this project has N indicators" must name the layer.
 The defensible sentences are:
 
-* "**3,095** indicators are in the audited extraction (`data/curriculum/`)."
-* "**4,040** indicators are served by the portal (`public/curriculum/`); 945 of them (9 subject-grades) have no counterpart in the audited layer — 8 come from `data/reference/`, 1 (`english-language B5`) has a summary but no database."
+* "**4,040** indicators are in the audited extraction (`data/curriculum/`) — 84 subject-grades, all 84 also served."
+* "**4,040** indicators are served by the portal (`public/curriculum/`), and every one of them comes from the audited copy."
 * "**13,140** lesson slots across 13 subjects and 9 grades have a filled teaching template (`data/lessons/`)."
 
 ## L1 — curriculum
@@ -65,7 +90,34 @@ The defensible sentences are:
   constants, not per-indicator content.** In `mathematics_B4` all 71 records share
   one `resources` string, one `keywords` string and one `assessment` string
   (1 distinct value each). They are derived labels (`{subject, grade, band}`), not
-  authored per indicator. Do not present them as per-indicator enrichment.
+  authored per indicator. Do not present them as per-indicator enrichment. The
+  eight reference-only subject-grades and the six drifted reference copies were the
+  last records with an empty `keywords`; they carry the same derived tag since
+  2026-09-18 (`scripts/fix_reference_text.py`).
+* **`cs_desc` is the content standard the indicator belongs to, and what it holds
+  depends on the print** — the two shapes are not interchangeable:
+  * French and computing **B7–B9** print a sentence (*"Comprendre les salutations,
+    saluer et prendre congé"*), and `cs_desc` carries it.
+  * French **B4–B6** prints no sentence at all. Its CONTENT STANDARDS column holds
+    one of four skill areas, and the SCOPE AND SEQUENCE table (pp. xviii–xx) lists
+    exactly those four — in this order — for every sub-strand. The front matter
+    (p. xvii) makes the fourth component of an indicator code the content-standard
+    number, so the standard *is* that number:
+
+    | 4th component | content standard |
+    |---|---|
+    | 1 | Compréhension Orale |
+    | 2 | Production Orale |
+    | 3 | Compréhension Écrite |
+    | 4 | Production Écrite |
+
+    `scripts/fix_french_content_standards.py` wrote those labels (266 records) and
+    stripped the neighbouring CORE COMPETENCIES column out of the eleven B7–B9
+    standards that had it glued in front of the statement (36 records). One record
+    is left empty on purpose — `B6.1.2.5.3`, where the print numbers a fifth
+    content standard inside a four-standard sub-strand. The run is recorded in
+    `data/audit/french_content_standards.json`, including the five values it
+    replaced.
 * Summaries (`*_curriculum_summary.json`) carry `counts`, `strands[]`,
   `sourceTitle`, `sourceUrl`, `extraction_method`, `extraction_date`.
 * Audit trail: `data/audit/` (76/76 databases PASS; the mathematics B1 PDF
@@ -86,7 +138,8 @@ the full lesson skeleton: `rpk`, `starter[]`, `main[]`, `plenary[]`, `assessment
 `competencies`, `resources`, `keywords`, `perf_indicator`, `session_title`.
 
 **How bespoke is it?** Measured as *distinct values ÷ lesson slots* across all
-13,140 slots:
+13,140 slots, and per subject-grade by `scripts/audit/audit_d_l2_template.py`
+(`make audit-l2`; the numbers below are its output in `data/audit/l2_template.json`):
 
 | Field | Distinct / slots | Reading |
 |---|---|---|
@@ -99,6 +152,13 @@ the full lesson skeleton: `rpk`, `starter[]`, `main[]`, `plenary[]`, `assessment
 | `plenary` | 0.7% | **per-subject constant** |
 | `rpk` | 0.6% | **per-subject constant** |
 
+Per subject-grade the picture is sharper still: `rpk` is a single value in **70 of
+the 73** subject-grades that have lessons, `plenary` in **60**, `assessment` in
+**67**, `competencies` in **67**, `resources` in **66**, `keywords` in **66** —
+while `starter` (median **156** distinct values in a subject-grade's 180 slots),
+`main` (**60**), `perf_indicator`/`ind_desc` (**42**) and `session_title` (**21**)
+are content, not repetition.
+
 So: L2 is a **template applied across the year with per-lesson `starter`/`main`
 content**, not 13,140 hand-written lesson plans. That is a perfectly good product —
 the generated books are real and usable — but the distinction matters when selling
@@ -106,10 +166,95 @@ it, when deciding what to generate in the browser, and when planning authoring w
 The honest headline is *"13,140 scheduled lesson slots with a filled teaching
 template"*, not *"13,140 authored lesson plans"*.
 
-`ind_desc` also carries a source-extraction artefact in a small number of records
-(58 of 13,140 = 0.4%), where a sentence is repeated:
-`"...used for Graphic Communication 1. Identify drawing materials, instruments and equipment"`.
-Safe to render, worth cleaning at the source.
+**And the product now says so** (P1-4, 2026-09-19). `src/lib/lessonTemplate.js` makes
+the same measurement from the loaded schedule: the fields that hold one value across a
+subject-grade's lessons are its *routine* fields. When a teacher fills a lesson plan
+from the curriculum, the plan records which sections it inherited
+(`inheritedFields`, plus `prefilledFrom`) and the form says so out loud. Both exports
+then label exactly those headings — `Relevant Previous Knowledge (teaching template)`
+— with a line explaining the marker, so a printed plan never passes the syllabus'
+printed routine off as the teacher's own wording. Starter and main activities are
+never labelled, because the measurement shows they are the lesson's own.
+
+`ind_desc` also carried the print's exemplar tail in some records. Every one of
+these prints sets its rows as `<indicator>` followed by the exemplar column in the
+same cell — a numbered list of teaching steps (`1. In groups, discuss ways of
+maintaining personal hygiene`), `Learners are to:`, `Enquiry route:` — and several
+extractions read past the end of the indicator into it. Two shapes were visible in
+every generated document:
+
+* a duplicated echo: `Describe ways of maintaining personal hygiene 1. In groups,
+  discuss ways of maintaining personal hygiene`
+* a dangling introduction: `Study some visual artworks … in Africa Learners are to`
+
+`scripts/fix_ind_desc_exemplars.py` (report by default, `--apply` writes, trail in
+`data/audit/ind_desc_exemplars.json`) took those tails back off on 2026-09-18: **242
+records in 8 databases** (239 dangling intros, 3 repeats). It never invents text —
+the new value is always a prefix of the old one — and it cuts only when the print's
+own row carries the indicator that would be left behind, recording the reading's
+strength (`ratio`) and the pages it checked per record.
+
+**The lesson layer is a copy, and it edits that too.** `data/lessons/` embeds the
+indicator in four fields — `ind_desc`, the `perf_indicator` built from it, and the
+`starter`/`main` activity steps the template writes around it — and the generated
+books read the lesson file, not the database. So the same substitution runs there,
+matched slot by slot on `ind_code` (never across records): **980 slots in 8 lesson
+files**, `ind_desc` 980, `perf_indicator` 980, `starter` 805, `main` 805. A source
+fix that stopped at the database would have left the artefact in the documents
+teachers print.
+
+**The neighbouring column was the other half of the same defect.** These prints set
+the competence labels (`Communication and Collaboration (CC)`) and their `CC 8.2: …`
+lines in a column *beside* the indicator, and some extractions copied those into
+`ind_desc` too. Rerunning the cleanup on 2026-09-18 (after the reader's band was
+corrected — see the gotcha) took them out of **27 records in 11 databases**: 25 lost
+just the competence text, and two (computing B9 `B9.1.2.1.1` and `B9.2.4.1.1`) turned
+out to hold *nothing but* that column, so their indicator was restored from the
+print's own row — `Evaluate problems in the community that can be solved with
+technology` and `Perform data filtering, sorting and validation`. Each removed span
+is verified twice: the print prints it in the side column, and the record's own row
+does not read it as part of the indicator. Four records were refused (creative-arts
+B7–B9 `…1.3.1.1` and mathematics B3 `B3.1.2.5.1`) because the reader cannot confirm
+which row the text belongs to; they are listed in the artefact as unbacked.
+
+What it deliberately did *not* touch:
+
+* **151 records whose tail is exemplar content the indicator does not repeat**
+  (`Discuss food hygiene 1. Explain what is meant by food hygiene`, history's whole
+  `Enquiry route:` blocks). Cutting those deletes a sentence that no other field
+  holds; that is a decision about the data, not a cleanup, so they are listed in the
+  artefact instead.
+* **20 records the print does not back** (down from 32: the anchored read above
+  resolved twelve of them) — the rest are rows whose code the print sets in a form
+  the reader does not match (`B5 1.1.1.3` without the dot after the grade, or a row
+  that moved between grades) and one kindergarten record whose print is not
+  registered. They are listed in the artefact with `verified: false` and the reason,
+  and are the remaining work under P1-6.
+
+**The creative-arts "mismatches" were a reader bug, and it is fixed (2026-09-19).**
+Ten creative-arts B5/B6 records were carried in the artefact as mismatches — the
+database read `Explore to generate ideas by studying visual artworks …` where the
+print supposedly set `Study some visual artworks …`. They were not mismatches.
+Two faults in the verifier together hid the fact:
+
+1. **It compared against the wrong row.** `printed_head()` searched a whole page for
+   the text in front of *any* exemplar marker, and a page carries several rows, so a
+   record could be graded against the row above it. It now reads **the record's own
+   row** first (`printed_lead()`), anchored on the record's code — the same anchor
+   `row_lead()` has always used for records that hold no indicator at all. The
+   artefact records which reads were anchored (`rowAnchored`).
+2. **It could not see the print's de-kerning.** These PDFs break `Learners` into
+   `L earners`, so a marker search that looked for the word missed the row's own
+   exemplar intro — and, worse, then latched onto a *later* numbered step. Both the
+   marker search (`marker_span()`, which now searches a de-kerned copy and takes the
+   earliest marker, mapping positions back) and the row read repair it.
+
+With both fixed, twelve creative-arts records and one career-technology record had
+their dangling `Learners are to` tail taken off with the print's own row confirming
+it verbatim (ratio 1.0) — the very records that were reported as mismatches. The
+database never disagreed with the print; the reader did. No verified cut was lost:
+the change is +1 verified, −0, and the remaining **20 unbacked records** are listed
+in the artefact with the reason the reader gives.
 
 ## L3 — bundle
 
@@ -119,44 +264,295 @@ Built by `scripts/build_app_curriculum.py`; validated by
 | File | Purpose |
 |---|---|
 | `grades.json` | one entry per grade: subject count, indicator count, whether schedules exist |
-| `<grade>_subjects.json` | subjects for a grade + counts |
+| `<grade>_subjects.json` | subjects for a grade + counts, `sourceUrl`, and the `verified`/`source` provenance pair |
 | `<grade>_indicators.json` | flat indicators, full hierarchy, the only file the generator reads |
-| `<grade>_schedules.json` | every scheduled lesson: term/week/day + phases (largest files, 3–5 MB each) |
+| `schedules/<grade>-<subject>.json` | every scheduled lesson for one subject-grade: term/week/day + phases (~0.4–0.6 MB each) |
 | `<grade>_schemes.json` | scheme rows per subject per term |
+| `questions/_index.json` | what the question bank holds, per subject-grade, with coverage totals |
+| `questions/<subject>/<grade>.json` | the questions for one subject-grade (authored first, then generated) |
+
+### The question bank
+
+The bank is the one part of the bundle the app **writes into Firestore** rather than reads
+directly: `QuestionBank` shows the index, and importing a subject-grade copies its items into
+`questions/` documents so they can be edited, deleted, printed or used for slides like any
+hand-written question (`src/lib/starterBank.js`). Nothing is imported automatically.
+
+Two scripts, split so that generating data and validating it never happen in the same run:
+
+| Script | Does |
+|---|---|
+| `scripts/generate_question_bank.py` | writes `data/questions/<subject>/<grade>.generated.json` from **rules** — report by default, `--apply` writes, `--verify` fails if the committed files have drifted (this is what `make check` runs) |
+| `scripts/build_question_bank.py` | merges authored + generated, validates both against the served indicators, writes the bundle — report by default, `--apply` writes |
+
+* **Authored files are never touched by the generator**: `data/questions/<subject>/<grade>.json`
+  is hand-written (it holds the two original mathematics B4 questions, migrated to the current
+  shape), and an id shared with a generated item is a hard error rather than an overwrite.
+* **Every item carries its provenance** — `source: "authored"` or `"generated:<rule>"` — and the
+  generated copy keeps it into Firestore as `source`, with the item's own id as `starterBankId`.
+  A teacher can always see which questions a machine wrote and which rule produced them.
+* **A generated item is correct by construction.** Each rule states its numbers in the prompt and
+  the script computes the answer (`r_place_value`, `r_round`, `r_hcf`, `r_lcm`, `r_jhs_pythagoras`,
+  …); the reviewer checks the rule, not 376 items. Rules follow the indicator's own wording for the
+  number range ("up to 10,000", "four-digit numbers", "more than 1,000,000,000") and only fire
+  where the wording matches, so an indicator no rule matches gets no questions rather than a
+  padded one.
+* **The relations and algebra gap is the interesting one.** The exam builder's coverage line names
+  what a term schedules and nothing in the bank asks about, and for B7 mathematics that line read
+  57% — the gaps were *Patterns and Relations*, *Algebraic Expressions* and *Shape and Space*. Five
+  JHS rules now answer them (`jhs-sequences`, `jhs-table-of-values`, `jhs-algebra-simplify`,
+  `jhs-algebra-expand`, `jhs-gradient`), which lifted B7's term-1 coverage to 70% — and each one is
+  scoped to its own lesson: a sequence question does not answer "locate points on the number plane"
+  (that is `jhs-table-of-values`), and collecting like terms does not answer "remove brackets"
+  (that is `jhs-algebra-expand`). Both splits exist because the first draft got them wrong.
+* **Two grade bands, because the vocabulary is shared and the answers are not.** The primary rules
+  (B2–B6) are arithmetic over primary wording; the JHS rules (B7–B9) were written for JHS wording,
+  where "multiply" usually means binomials. Every rule declares its band, and a shared rule carries
+  a `veto` for the wording that would make it misfire (rounding must not answer an indicator about
+  decimal places). Where the syllabus wants a construction — bisect an angle, draw a net, plot a
+  locus — there is deliberately no rule: that is classroom work, not a generated arithmetic answer.
+  Those indicators are covered by hand instead (see the authored bank below), as essay questions
+  whose marking scheme names the construction steps.
+* **Coverage is printed and indexed, not assumed**: today **1,081 questions (173 authored, 908
+  generated), 407 of 407 indicators — 100% of mathematics B2–B9**, against 4,040 indicators served
+  overall. Per grade: B2 82 (29/29), B3 100 (39/39), B4 187 (71/71), B5 175 (67/67), B6 115 (42/42),
+  B7 176 (67/67), B8 131 (49/49), B9 115 (43/43); every term's schedule reads 100% too. Three
+  passes of primary rules closed B2–B6 (`nonstandard-units`, `unit-fraction`, `place-value-parts`,
+  `problem-to-equation`, `reflection-coordinates`, `likelihood`, `graph-attributes`, … — the run
+  prints them per grade); the last five indicators no rule could answer — compare two graphs of
+  the same data, represent a pattern visually, conduct a probability experiment, design a
+  questionnaire — are hand-written like the JHS ones, as are the long-answer items the primary
+  pools had none of (a rule can compute an answer, but "describe the rule in words" is a marking
+  scheme, not a formula).
+* **The indicators a rule cannot reach are authored, not skipped.** `data/questions/mathematics/
+  B{2,3,4,5,6,7,8,9}.json` hold 173 hand-written items (the generator never writes those files), and
+  they cover every indicator the rules leave empty: **B4 71/71, B5 67/67, B6 42/42, B7 67/67,
+  B8 49/49, B9 43/43 — 100% of each term's schedule too**, so both a primary and a JHS so an end-of-term paper for any of the three years has a question for
+  every indicator it schedules. A few lessons genuinely are classroom work — bisect an angle,
+  construct a locus, draw an inscribed circle — and those are written as `essay` questions
+  ("construct … and state …") with the construction steps in the marking scheme, which is also
+  what gives the paper's Section C something to print: before this the bank held only mcq and
+  short items, so every composed paper omitted Section C. Items carry `source: "authored"` and
+  ids `<code>-authored-<n>`, and the merge refuses an id clash rather than overwriting.
+* **Rules read the indicator, never the content standard.** `ind_desc` is the sentence a teacher
+  teaches; `cs_desc` is the heading above it, and at JHS it shares nearly all of its vocabulary
+  with indicators it does not describe — matching on it produced money questions on a
+  data-collection indicator (the word "cost" inside "…taking into consideration…"). Word boundaries
+  matter for the same reason: "cedi" is inside "preceding", "mode" inside "Model".
+* **`--verify` makes the committed bank a check, not a snapshot.** `make check` regenerates every
+  file in memory and fails if one differs by a character, so a rule that starts or stops firing
+  cannot reach a teacher unnoticed.
+* The build fails on an orphan (`indicatorCode` not served for that subject in that grade), an MCQ
+  whose answer is not among its options, a repeated option, a missing prompt/answer/marks, or a
+  duplicate id. `scripts/validate_app_curriculum.py` re-checks the committed bank against the
+  served indicators, so `make check` fails if the two ever drift apart.
+
+```bash
+make generate-questions            # report: what the rules would write
+make build-questions               # report: merge + validate + coverage
+make questions                     # report: validate what is committed
+```
+
+### The subjects that missed the extraction pass
+
+`computing`, `french` and `kindergarten` were extracted separately (into `data/reference/`,
+which is why they missed the pass that produced everything else) and were **promoted into
+`data/curriculum/` on 2026-09-18** by `scripts/promote_reference_subjects.py` — see the layer
+note above. Their source PDFs are all in `data/sources/`
+(`computing_B4-B6.pdf`, `french_B4-B6.pdf`, `kindergarten_KG1-KG2.pdf`) and
+`scripts/fix_reference_structure.py` re-derives the data from them — run it with no arguments to
+see what would change, `--apply` to write; it resolves its files through `find_data`, so it
+follows each database to whichever layer holds it. It exists because the labels, not the content, were
+wrong: computing's and kindergarten's strands read `"Strand 1"`, french's held a *sub-strand*
+name one level too low, and one kindergarten indicator was a restatement of its own code. The
+script also fills descriptions that are stubs, and refuses to guess when a heading is ambiguous.
+`scripts/fix_french_content_standards.py` completed the french half of the field work on
+2026-09-18 — see the `cs_desc` note under *L1 — curriculum* above.
+
+`scripts/fix_reference_text.py` (report by default, `--apply` writes, trail in
+`data/audit/reference_text_fixes.json`) closed the rest of that list on 2026-09-18:
+
+| field | before | after |
+|---|---|---|
+| `keywords` | empty in all 812 records | the audited convention `{subject}, {grade}, {band}` |
+| `ind_desc` | 397 records carried the print's furniture — the page footer in 118, the reference codes in 166 (`LL2`, `(CC)`, `N3.1`), the competence labels of the column next door in 54, plus the table headings, the row markers the extractor read past and one cell label | the indicator's own text, and only that |
+| KG `cs_desc` | 13 empty, 7 truncated, 21 carrying the sentence plus the heading next door, 5 holding indicator-column text | the sentence the print sets in the standard's own column |
+
+The deletion rule is "the print sets it *outside* the record's own row" — the print is read twice,
+once for the record's row and once for everything else on the page — so a description that
+legitimately names a competence keeps it; a label the extraction copied only halfway
+(`… - Creativity and innov`) and text belonging to another record's row are cut too, each only as
+far as the print says so. What survives is then read back against the print and graded
+(`row`/`page` verbatim, `row-order`/`page-order`/`document-order` word-by-word, both recorded per
+record in the trail — 383 of the 397 are verbatim, 14 word-by-word); a survivor the print does not
+carry is reported and never written, and no record was left in that state. Two print
+defects are left standing and reported rather than papered over: `K1.3.2.1`'s content-standard cell
+is blank in the KG print (its five records stay empty), and `K2.5.1.1`'s five records held
+indicator-column text, which the print's own sentence replaced — the displaced values are kept in
+the trail. Reference copies of subjects audited elsewhere (creative-arts B4–B6, social-studies
+B7–B9) got the same keyword tag, read off the curriculum copy of the same name — their *records*
+are a stale extraction and the fixers still report rather than rewrite them. They are out of
+scope for every served number: `find_data` resolves to `data/curriculum/`, and the promotion
+(2026-09-18) means nothing served comes from `data/reference/` any more.
+
+### Which subject-grades have been cross-checked
+
+`verified` on every served subject means "an audit has checked this against its source PDF", and
+the build stamps it from `data/audit/` rather than a hand-kept list. Two audits qualify:
+
+| | what it checks | what it can see |
+|---|---|---|
+| Audit A (`audit_a_databases.py`) | indicator counts against the expected count recorded per file | only `data/curriculum/` |
+| Audit B (`audit_b_pdf_crosscheck.py`) | every code re-extracted from the PDF, set-compared with the database | both copies, via `find_data` |
+| Audit C (`audit_c_lessons.py`) | the L2 layer: 180-slot grid, required fields, codes present in the database; and the generated `Basic1_*` documents, if they are here | `data/lessons/` + `data/curriculum/`; the documents are build outputs, so an absent one is `MISSING`, not a defect |
+| Audit D (`audit_d_l2_template.py`, `make audit-l2`) | what L2 *is*: how many distinct values each field takes inside one subject-grade, field by field | `data/lessons/`; writes `data/audit/l2_template.json`, changes no data |
+
+Audit A used to see only the 75 databases in `data/curriculum/` — which is why Audit B exists as
+a second route to the same claim. Since the promotion it enumerates **all 84**, kindergarten's
+`_KG1_`/`K1.3.2.1.4` shape included, and prints 84 PASS (4,040 indicators). The flag stays a
+guard against a new subject-grade arriving un-cross-checked: a test in
+`src/curriculumBundle.test.js` fails if one does, and it also pins that the promoted nine pass
+*both* audits.
+
+### Provenance on every served subject
+
+Each entry in `<grade>_subjects.json` carries two fields the build derives rather than
+hand-maintains, so they cannot drift:
+
+- **`source`** — which copy of the database the subject actually came from,
+  `curriculum` (the audited set in `data/curriculum/`) or `reference` (the fallback copy in
+  `data/reference/`, reached by the `DB_SEARCH` fallback in `scripts/_paths.py`). Every served
+  subject is `curriculum` since the 2026-09-18 promotion, and a test pins that — if a subject
+  ever falls back to `reference` again it is a data-layout decision, not an accident.
+- **`verified`** — whether the subject-grade has a PASS row in *either* audit
+  (`audit_a_results.json` or `audit_b_results.json`). Both compare the data against the
+  official NaCCA PDFs — Audit A by indicator counts, Audit B by re-extracting every code —
+  so this means "cross-checked against its source", not merely "loaded successfully". The
+  union is what let the reference-only subjects claim it before the promotion: they existed
+  only in `data/reference/`, where Audit A never looked, but Audit B resolves each database
+  through `find_data()` and so saw both copies.
+
+All 84 served subject-grades are `verified: true`. The flag stays a guard rather than
+decoration: a subject-grade that passes neither audit fails a test in
+`src/curriculumBundle.test.js`, and `GradeSubjects`/`SubjectSelect` would label it
+"unverified" in the UI. See TODO P1-1 (done 2026-09-18 — the promotion is what closed it).
 
 Notes and known gaps:
 
 * **11 grades (KG1–B9); 9 have schedules (B1–B9)** — KG1/KG2 are indicators and
   schemes only: they have no lessons in L2, so no schedules in L3.
-* **The bundle is 39.7 MB** and is committed to git, so Vercel re-uploads it on every
-  deploy. `b9_schedules.json` alone is 4.85 MB.
-* **There is no `questions/` directory** even though `MathModule` declares the
-  `questions` capability and requests `/curriculum/questions/math/<grade>.json`.
+* **The bundle is 38.6 MB** and is committed to git, so Vercel re-uploads it on every
+  deploy. Schedules are the bulk of it and are **split per subject-grade**
+  (`schedules/b9-mathematics.json`, ~0.5 MB) so no screen downloads a whole grade;
+  `useGradeSchedules()` pulls every subject's file for the one screen that shows them
+  all (the term calendar).
+* **The question bank is a fifth file family** — `questions/_index.json` plus
+  `questions/<subject>/<grade>.json` (P1-5, 2026-09-19). See *The question bank* under
+  *L3 — bundle*.
 * The bundle's `extra` field is empty for every indicator in every grade, so
   subject-specific callouts render as `n/a`.
 
-## The `data/reference/` problem
+### When a dropdown is empty
 
-`scripts/_paths.py` documents `data/reference/` as "a second, partly-divergent copy"
-and searches it **silently** as a fallback (`DB_SEARCH = [CURRICULUM, REFERENCE]`).
-Consequences that are live today:
+**No build step, and no Python, is involved in serving this layer.** The 44 files
+in `public/curriculum/` are committed to git and served verbatim by Vite in dev
+and copied into `dist/` by `yarn build`. The generators only re-derive them from
+the NaCCA sources when the *data* changes — never on `yarn dev`.
 
-1. 8 app-bundle subject-grades are served from an unaudited copy with no L1
-   counterpart (table above).
-2. 8 reference summaries are malformed (no `counts` block), so any code path that
-   assumes `summary["counts"]` will raise on them — `build_inventory.py` skips and
-   reports them for exactly this reason.
-3. A file missing from `data/curriculum/` is *not* an error anywhere: the build
-   quietly serves the other copy. Data diverging between the two is invisible.
+So an empty **grade** dropdown is impossible (that list is the static `GRADES`
+array in `src/lib/grades.js`), and an empty **subject** dropdown means the fetch
+of `<grade>_subjects.json` failed. `SubjectSelect` now reports that failure on
+screen instead of rendering a silent "Choose…". Check, in order:
 
-**Decision required (see `docs/TODO.md`, item L1-4):** either promote the reference
-pairs into `data/curriculum/` after audit, or delete `data/reference/` and make the
-missing pairs an explicit, loud failure. Both are fine; the silent fallback is not.
+1. **Browser console / Network tab** — look for the `/curriculum/…_subjects.json`
+   request. A 404 or a `net::ERR_FAILED` names the cause directly.
+2. **A stale service worker.** The worker caches curriculum JSON
+   stale-while-revalidate, so a copy cached by an older build is served *before*
+   the network answers. Name its cache after the bundle hash is automatic — the
+   worker reads `bundleHash` from `curriculum/_BUILD_REPORT.json`, so a rebuilt
+   bundle renames the cache and the old one is dropped on activate — but a
+   *hand-edited* file (not a rebuild) keeps the same hash. Clear site data for
+   that. This only exists in `yarn build && yarn preview`, never dev.
+3. **Serving from a sub-path.** `/curriculum/…` resolves against
+   `import.meta.env.BASE_URL`, so a deploy under `/app/` works — but only if Vite
+   was *built* with that `base`. `vite.config.js` sets no `base`, so a sub-path
+   deploy needs `--base=/app/` (see `docs/build-deploy.md`).
+4. **A stale checkout.** `git status` should show all 44 files present under
+   `public/curriculum/`; a branch that predates the portal rebuild will not have
+   them.
+
+### Does the bundle belong in git?
+
+**Yes — decided 2026-09-19 (P2-6), with guard rails rather than a move.** The numbers:
+
+| | |
+|---|---|
+| `public/curriculum/` | 114 files · **39.6 MB** (~34 MB of it the 73 schedule files, 5.5 MB the grade files, 55 KB the question bank) |
+| working tree, tracked | 143 MB (`data/lessons/` 33 MB, `data/curriculum/` 3.5 MB, `public/curriculum/` 39 MB) |
+| `.git` | ~56 MB; 13 commits have touched the bundle since 2026-09-17 |
+
+The reasons it stays:
+
+1. **Vercel deploys the repository.** The bundle is what the app serves; if it were not in the
+   repo, every build would need a credential and a network hop to a release artefact, and a failed
+   fetch would deploy a portal that boots with no curriculum.
+2. **It is deterministic, so it does not churn.** `make bundle-check` rebuilds the whole bundle
+   from `data/` and requires the tree to be unchanged — every payload file comes out byte-for-byte
+   identical and `bundleHash` is stable, so a commit only touches the files whose *data* changed.
+3. **39 MB is not a clone problem**; the review problem is real but is about *noise*, and that is
+   handled by marking the regenerated files generated (`.gitattributes` → `linguist-generated`),
+   so GitHub collapses their diffs and keeps them out of language stats.
+
+The guard rails that make this a decision rather than a default:
+
+* `make bundle-size` (`scripts/bundle_size_report.py`) prints the size by directory, the largest
+  files, the comparison with the last commit, and **fails above `BUNDLE_BUDGET_MB` (80 MB)**.
+* `make bundle-check` fails when the committed bundle no longer matches the committed data.
+* Both run in `make check` and in CI.
+
+**When to revisit:** if the served bundle passes the budget with curriculum to spare, or if
+schedules begin to be regenerated more often than the data changes, move `public/curriculum/` to a
+GitHub release artefact and add a `make fetch-bundle` step to the build (Vercel build command
+`make fetch-bundle && yarn build`). The budget failure message says so.
+
+## The `data/reference/` fallback
+
+`scripts/_paths.py` searches `data/reference/` **silently** after `data/curriculum/`
+(`DB_SEARCH = [CURRICULUM, REFERENCE]`), so a file missing from L1 is not an error anywhere:
+the build quietly serves the other copy. The three live consequences became one, and it is
+dormant rather than harmless:
+
+1. ~~8 app-bundle subject-grades are served from an unaudited copy with no L1 counterpart.~~
+   **Closed 2026-09-18** — the nine were promoted, so every served subject now comes from L1
+   (`source: 'curriculum'` for all 84).
+2. ~~8 reference summaries are malformed (no `counts` block), so any code path that assumes
+   `summary["counts"]` raises.~~ **Closed 2026-09-18** — the promoted summaries were rewritten
+   with counts derived from their databases, and `build_inventory.py` now reports zero
+   malformed summary files.
+3. **Still true:** a file that goes missing from `data/curriculum/` is *not* an error: the build
+   serves the `reference` copy instead, and data diverging between the two is invisible. The
+   copies that remain there are older extractions, so this is exactly the shape of bug that hid
+   the drifted creative-arts/social-studies copies.
+
+**Decided:** promote after audit (done). The open question is the one left behind — whether
+`data/reference/` should keep its silent-fallback role at all, now that nothing served depends on
+it, or whether `find_data` should fail loudly and the remaining copies be deleted. See
+`docs/TODO.md`.
 
 ## Invariants to keep
 
-1. An indicator belongs to exactly one subject-grade; indicator codes are unique
-   within a grade (`validate_app_curriculum.py` enforces this).
+1. An indicator belongs to exactly one subject-grade. Uniqueness is **two-tier**,
+   and conflating the tiers is a trap:
+
+   | Key | Shape | Unique within | Enforced by |
+   |---|---|---|---|
+   | `id` | `<subjectId>_<code>`, e.g. `mathematics_B4.1.1.1.1` | the whole grade (517/517 in B4) | `validate_app_curriculum.py`, `src/curriculumBundle.test.js` |
+   | `code` | `B4.1.1.1.1` — carries **no subject namespace** | one subject-grade only | `src/curriculumBundle.test.js` |
+
+   `B4.1.1.1.1` legitimately exists in all ten B4 subjects, so a bare `code` is
+   **not** a grade-wide key. Anything keyed on one must also carry the subject,
+   or use `id`. (`indicatorDocId` in `src/hooks/useCollection.js` keys on the
+   bare code; it is currently exported but unused — scope it before adopting it.)
 2. Every indicator carries numeric `strandNumber` / `subStrandNumber` — the UI sorts
    numerically and silently mis-orders text-numbered strands.
 3. Every bundle subject id matches a subject id in L1 (or is listed in

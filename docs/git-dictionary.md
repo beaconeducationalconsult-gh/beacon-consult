@@ -238,3 +238,24 @@ git commit --help
 ```
 
 Both open detailed documentation for a specific command.
+
+
+
+
+
+
+
+Step 1 — See where you actually stand
+git status
+git branch --show-current
+git fetch origin
+git branch -a
+
+
+This tells you what branch you're on locally, whether you have uncommitted changes, and what branches/commits exist on the remote.
+
+Step 2 — Commit your local additions
+
+Whatever branch you're on, get your local work into a commit first (nothing else should happen until this is safe):
+git add .
+git commit -m "Describe your local additions"

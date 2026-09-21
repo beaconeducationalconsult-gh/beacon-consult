@@ -6,6 +6,7 @@ import { useAuth } from '../context/AuthContext'
 import { useToast } from '../context/ToastContext'
 import { useCollection } from '../hooks/useCollection'
 import { SkeletonList } from '../components/Skeleton'
+import DataError from '../components/DataError'
 import EmptyState from '../components/EmptyState'
 import ConfirmModal from '../components/ConfirmModal'
 import NotesTabs from '../components/NotesTabs'
@@ -15,7 +16,7 @@ export default function Vacancies() {
   const { user, isAdmin } = useAuth()
   const toast = useToast()
   const [scope, setScope] = useState('all')
-  const { rows, loading } = useCollection('vacancies', { max: 60 })
+  const { rows, loading, error } = useCollection('vacancies', { max: 60, ordered: true })
   const [pendingDelete, setPendingDelete] = useState(null)
 
   const mine = rows.filter((v) => v.authorId === user.uid)
@@ -64,8 +65,9 @@ export default function Vacancies() {
         onChange={setScope}
       />
 
-      {loading && <SkeletonList rows={3} />}
-      {!loading && visible.length === 0 && (
+      {error && <DataError what="vacancies" error={error} />}
+{loading && <SkeletonList rows={3} />}
+      {!loading && !error && visible.length === 0 && (
         <EmptyState
           title="No vacancies here"
           message="Post an opening and it becomes visible to teachers across the network — and on the public site once published."

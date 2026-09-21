@@ -1,21 +1,39 @@
 import { Document, Packer, Paragraph } from 'docx'
-import { H2, para, table, titleBlock, brandedFooter, labelValue, BRAND } from './docxShared'
+import {
+  H2,
+  CONTENT_WIDTH,
+  para,
+  table,
+  fill,
+  metaLine,
+  titleBlock,
+  documentStyles,
+  brandedFooter,
+} from './docxShared'
 import { gradeLabel } from './grades'
 
 /**
  * Scheme of Learning → .docx  (client-side, no server)
- * Mirrors the structure of the printed scheme books.
+ *
+ * Mirrors the structure of the printed scheme books: a ruled title block, the
+ * school's own details, then one wide landscape table of the term's weeks.
  */
 export async function downloadSchemeDocx(scheme, { school, teacher } = {}) {
+  const subject = scheme.subjectName || scheme.subjectId || ''
+
   const children = [
     ...titleBlock(
-      `Scheme of Learning — ${scheme.subjectName || scheme.subjectId}`,
-      `${gradeLabel(scheme.grade)} · Term ${scheme.term}`
+      `SCHEME OF LEARNING — ${subject.toUpperCase()}`,
+      [gradeLabel(scheme.grade).toUpperCase(), `TERM ${scheme.term}`].filter(Boolean).join('  ·  ')
     ),
-    ...(school ? [labelValue('School', school)] : []),
-    ...(teacher ? [labelValue('Teacher', teacher)] : []),
-    labelValue('Prepared', new Date().toLocaleDateString('en-GB')),
-    para(''),
+    metaLine([
+      ['School', fill(school)],
+      ['Teacher', fill(teacher)],
+    ]),
+    metaLine([
+      ['Prepared', new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })],
+      ['Term', scheme.term || '—'],
+    ]),
 
     new Paragraph({ text: 'Weekly Plan', heading: H2 }),
     table(
@@ -27,7 +45,8 @@ export async function downloadSchemeDocx(scheme, { school, teacher } = {}) {
         row.indicators || (row.indicatorCodes || []).join(', ') || '',
         row.resources || '',
       ]),
-      [5, 22, 26, 32, 15]
+      [5, 22, 26, 32, 15],
+      { contentWidth: CONTENT_WIDTH.landscape }
     ),
   ]
 
@@ -35,12 +54,22 @@ export async function downloadSchemeDocx(scheme, { school, teacher } = {}) {
     children.push(new Paragraph({ text: 'Notes', heading: H2 }), para(scheme.notes))
   }
 
-  children.push(brandedFooter())
-
   const doc = new Document({
-    creator: BRAND.name,
-    title: `Scheme of Learning — ${scheme.subjectName || scheme.subjectId} ${scheme.grade}`,
-    sections: [{ properties: { page: { size: { orientation: 'landscape' } } }, children }],
+    creator: 'Beacon Educational Consult',
+    title: `Scheme of Learning — ${subject} ${scheme.grade}`,
+    styles: documentStyles(),
+    sections: [
+      {
+        properties: {
+          page: {
+            size: { width: 11906, height: 16838, orientation: 'landscape' },
+            margin: { top: 1080, right: 1080, bottom: 1080, left: 1080 },
+          },
+        },
+        footers: { default: brandedFooter({ tabPosition: CONTENT_WIDTH.landscape }) },
+        children,
+      },
+    ],
   })
 
   return Packer.toBlob(doc)

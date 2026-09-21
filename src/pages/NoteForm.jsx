@@ -5,6 +5,7 @@ import { db } from '../firebase'
 import { useAuth } from '../context/AuthContext'
 import { useToast } from '../context/ToastContext'
 import { useCurriculum } from '../hooks/useCurriculum'
+import SubjectSelect from '../components/SubjectSelect'
 import RichEditor from '../components/RichEditor'
 import { GRADES, gradeLabel } from '../lib/grades'
 
@@ -19,7 +20,7 @@ export default function NoteForm() {
   const [form, setForm] = useState(empty)
   const [loading, setLoading] = useState(editing)
   const [saving, setSaving] = useState(false)
-  const { subjects } = useCurriculum(form.grade)
+  const { subjects, loading: loadingSubjects, error: subjectsError } = useCurriculum(form.grade)
 
   useEffect(() => {
     if (!editing) return
@@ -38,6 +39,11 @@ export default function NoteForm() {
     setSaving(true)
     const payload = {
       ...form,
+      // `visibility: 'private'` is what the rules enforce (author only). `status`
+      // is the human word for the same choice, and is what a future
+      // status-filtered list would read — it cannot gate reads today, because
+      // notes written before it existed have no such field.
+      status: form.visibility === 'private' ? 'draft' : 'published',
       subjectName: subjects.find((s) => s.id === form.subjectId)?.name || form.subjectId,
       updatedAt: serverTimestamp(),
     }
@@ -90,16 +96,23 @@ export default function NoteForm() {
           </div>
           <div>
             <label className="label-caps" htmlFor="note-subject">Subject</label>
-            <select id="note-subject" className="input" value={form.subjectId} onChange={(e) => setForm({ ...form, subjectId: e.target.value })}>
-              <option value="">Choose…</option>
-              {subjects.map((s) => <option key={s.id} value={s.id}>{s.name}</option>)}
-            </select>
+            <SubjectSelect
+              id="note-subject"
+              className="input"
+              grade={form.grade}
+              subjects={subjects}
+              loading={loadingSubjects}
+              error={subjectsError}
+              value={form.subjectId}
+              onChange={(e) => setForm({ ...form, subjectId: e.target.value })}
+            />
           </div>
           <div>
             <label className="label-caps" htmlFor="note-visibility">Who can see it</label>
             <select id="note-visibility" className="input" value={form.visibility} onChange={(e) => setForm({ ...form, visibility: e.target.value })}>
-              <option value="members">Members</option>
+              <option value="members">Members of the network</option>
               <option value="public">Public</option>
+              <option value="private">Only me (draft)</option>
             </select>
           </div>
         </div>

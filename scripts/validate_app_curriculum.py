@@ -5,7 +5,7 @@ Checks the invariants the React app relies on. A failure here means the app
 renders empty lists, orphaned indicator chips, or a scheme that silently
 collapses to nothing.
 
-    python3 tools/validate_app_curriculum.py
+    python3 scripts/validate_app_curriculum.py
 """
 from __future__ import annotations
 
@@ -30,6 +30,63 @@ def load(name):
     except json.JSONDecodeError as e:
         errors.append(f"{name}: invalid JSON ({e})")
         return None
+
+
+def validate_questions():
+    """The served question bank (P1-5), when the bundle carries one.
+
+    The same checks `scripts/build_question_bank.py` makes before writing, applied
+    to what is actually committed: an index that agrees with the files, and every
+    question hanging off a served indicator of its own subject.
+    """
+    index_path = CURR / "questions" / "_index.json"
+    if not index_path.exists():
+        warnings.append("no question bank in the bundle (public/curriculum/questions/) — "
+                        "the quiz and paper flows open empty; see P1-5")
+        return
+
+    index = load("questions/_index.json") or {}
+    served = {}
+    for name in CURR.glob("*_indicators.json"):
+        for row in json.loads(name.read_text(encoding="utf-8")):
+            served[(row.get("subjectId"), row["code"])] = row
+
+    total = 0
+    for subject, grades in (index.get("subjects") or {}).items():
+        for grade, counts in grades.items():
+            payload = load(f"questions/{subject}/{grade}.json")
+            if payload is None:
+                errors.append(f"questions/{subject}/{grade}.json is listed in the index but missing")
+                continue
+            items = payload.get("items") or []
+            total += len(items)
+            if len(items) != counts.get("questions"):
+                errors.append(f"questions/{subject}/{grade}.json holds {len(items)} questions "
+                              f"but the index says {counts.get('questions')}")
+
+            covered = set()
+            for item in items:
+                code = item.get("indicatorCode")
+                record = served.get((subject, code))
+                if record is None:
+                    errors.append(f"questions/{subject}/{grade}.json: {code} is not a served "
+                                  f"{subject} indicator")
+                    continue
+                covered.add(code)
+                if item.get("type") == "mcq":
+                    options = [str(o) for o in item.get("options") or []]
+                    if len(options) < 2 or str(item.get("answer")) not in options:
+                        errors.append(f"questions/{subject}/{grade}.json: {item.get('id')} has no "
+                                      f"answer among its options")
+            if len(covered) != counts.get("coveredIndicators"):
+                errors.append(f"questions/{subject}/{grade}.json covers {len(covered)} indicators "
+                              f"but the index says {counts.get('coveredIndicators')}")
+
+    if index.get("totals", {}).get("questions") not in (None, total):
+        errors.append(f"question index totals say {index['totals']['questions']} but the files "
+                      f"hold {total}")
+    print(f"  question bank: {total} questions across "
+          f"{sum(len(g) for g in (index.get('subjects') or {}).values())} subject-grade file(s)")
 
 
 def main():
@@ -84,12 +141,25 @@ def main():
                 errors.append(f"{tag}/{s['id']}: counts.indicators="
                               f"{s['counts']['indicators']} but {actual} present")
 
-        # --- schedules (absent for grades with no scheduled lessons, e.g. KG)
-        expects_schedules = any(s["hasSchedule"] for s in subjects)
-        sched = load(f"{gl}_schedules.json") if expects_schedules else None
-        if expects_schedules and sched is None:
-            errors.append(f"{tag}: subjects declare schedules but {gl}_schedules.json is missing")
-        lessons = sched or []
+        # --- schedules: one file per subject-grade, only where hasSchedule.
+        # useSchedules(grade, subjectId) fetches exactly one of these; a file
+        # the subjects file does not declare is dead weight the app never asks
+        # for, and a declared one that is missing renders an empty planner.
+        lessons = []
+        for s in subjects:
+            name = f"schedules/{gl}-{s['id']}.json"
+            # Not every subject is scheduled, and a subject that is not has no
+            # file at all — only a *declared* schedule may be missing.
+            rows = load(name) if (CURR / name).exists() else None
+            if s["hasSchedule"]:
+                if not rows:
+                    errors.append(f"{tag}/{s['id']}: hasSchedule=true but {name} "
+                                  f"is missing or empty")
+                else:
+                    lessons.extend(rows)
+            elif rows:
+                errors.append(f"{tag}/{s['id']}: hasSchedule=false but {name} "
+                              f"holds {len(rows)} lessons")
         if lessons:
             bad_ref = {l["indicatorId"] for l in lessons} - ind_ids
             if bad_ref:
@@ -99,12 +169,6 @@ def main():
             if sched_subj - subj_ids:
                 errors.append(f"{tag}: schedules reference undeclared subjects "
                               f"{sorted(sched_subj - subj_ids)}")
-            for s in subjects:
-                has = sum(1 for l in lessons if l["subjectId"] == s["id"])
-                if s["hasSchedule"] and not has:
-                    errors.append(f"{tag}/{s['id']}: hasSchedule=true but 0 lessons")
-                if not s["hasSchedule"] and has:
-                    errors.append(f"{tag}/{s['id']}: hasSchedule=false but {has} lessons")
 
         # --- schemes
         weeks = schemes.get("teachingWeeksPerTerm")
@@ -142,6 +206,8 @@ def main():
               f"{len(lessons):5} lessons · "
               f"{sum(len(v) for t in (schemes.get('subjects') or {}).values() for v in t.values()):3} "
               f"scheme rows")
+
+    validate_questions()
 
     print(f"\nTotals: {total_ind} indicators · {total_lessons} scheduled lessons · "
           f"{total_scheme_rows} scheme rows")

@@ -4,24 +4,33 @@ import { deleteDoc, doc } from 'firebase/firestore'
 import { db } from '../firebase'
 import { useAuth } from '../context/AuthContext'
 import { useToast } from '../context/ToastContext'
-import { useCollection } from '../hooks/useCollection'
+import { usePagedCollection } from '../hooks/useCollection'
+import LoadMore from '../components/LoadMore'
 import { SkeletonList } from '../components/Skeleton'
+import DataError from '../components/DataError'
 import EmptyState from '../components/EmptyState'
 import ConfirmModal from '../components/ConfirmModal'
 import NotesTabs from '../components/NotesTabs'
 import SubjectIcon from '../components/SubjectIcon'
 import { gradeLabel } from '../lib/grades'
 
+/*
+ * Shared = readable by the network. A plan saved with `visibility: 'private'`
+ * is author-only, which is why this list cannot be one unfiltered query — see
+ * the read rule for /lesson_plans/ and src/firestoreRules.test.js.
+ */
+const SHARED = [['visibility', 'in', ['members', 'public']]]
+
 export default function LessonPlans() {
   const { user, isAdmin } = useAuth()
   const toast = useToast()
   const [scope, setScope] = useState('mine')
-  const { rows, loading } = useCollection('lesson_plans', { max: 80 })
+  const {
+    rows, loading, error, hasMore, loadingMore, loadMore, moreError,
+  } = usePagedCollection('lesson_plans', {
+    filters: scope === 'mine' ? [['authorId', '==', user.uid]] : SHARED,
+  })
   const [pendingDelete, setPendingDelete] = useState(null)
-
-  const mine = rows.filter((r) => r.authorId === user.uid)
-  const shared = rows.filter((r) => r.authorId !== user.uid)
-  const visible = scope === 'mine' ? mine : scope === 'shared' ? shared : rows
 
   const remove = async () => {
     try {
@@ -49,16 +58,16 @@ export default function LessonPlans() {
 
       <NotesTabs
         tabs={[
-          { value: 'mine', label: 'Mine', count: mine.length },
-          { value: 'shared', label: 'Shared with me', count: shared.length },
-          { value: 'all', label: 'All', count: rows.length },
+          { value: 'mine', label: 'Mine' },
+          { value: 'shared', label: 'Shared' },
         ]}
         active={scope}
         onChange={setScope}
       />
 
-      {loading && <SkeletonList rows={3} />}
-      {!loading && visible.length === 0 && (
+      {error && <DataError what="lesson plans" error={error} />}
+{loading && <SkeletonList rows={3} />}
+      {!loading && !error && rows.length === 0 && (
         <EmptyState
           title={scope === 'mine' ? 'No plans yet' : 'Nothing shared here yet'}
           message="Open the curriculum browser and choose an indicator to build a plan around it."
@@ -67,7 +76,7 @@ export default function LessonPlans() {
       )}
 
       <ul className="grid gap-4 sm:grid-cols-2">
-        {visible.map((plan) => (
+        {rows.map((plan) => (
           <li key={plan.id} className="card card-hover p-5">
             <div className="flex items-start gap-3">
               <SubjectIcon subjectId={plan.subjectId} name={plan.subjectName} />
@@ -91,6 +100,8 @@ export default function LessonPlans() {
           </li>
         ))}
       </ul>
+
+      <LoadMore hasMore={hasMore} loading={loadingMore} error={moreError} onLoad={loadMore} loaded={rows.length} />
 
       <ConfirmModal
         open={Boolean(pendingDelete)}

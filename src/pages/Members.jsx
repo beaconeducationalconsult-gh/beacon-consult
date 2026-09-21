@@ -5,6 +5,7 @@ import { useAuth } from '../context/AuthContext'
 import { useToast } from '../context/ToastContext'
 import { useCollection } from '../hooks/useCollection'
 import { SkeletonList } from '../components/Skeleton'
+import DataError from '../components/DataError'
 import EmptyState from '../components/EmptyState'
 import NotesTabs from '../components/NotesTabs'
 import ConfirmModal from '../components/ConfirmModal'
@@ -21,7 +22,7 @@ export default function Members() {
   const { user, isAdmin } = useAuth()
   const toast = useToast()
   const [scope, setScope] = useState('pending')
-  const { rows, loading } = useCollection('users', { max: 200, sort: 'createdAt' })
+  const { rows, loading, error } = useCollection('users', { max: 200, sort: 'createdAt', ordered: true })
   const [pendingAction, setPendingAction] = useState(null)
 
   if (!isAdmin) {
@@ -69,8 +70,9 @@ export default function Members() {
         onChange={setScope}
       />
 
-      {loading && <SkeletonList rows={4} />}
-      {!loading && visible.length === 0 && (
+      {error && <DataError what="members" error={error} />}
+{loading && <SkeletonList rows={4} />}
+      {!loading && !error && visible.length === 0 && (
         <EmptyState title="Nothing to review" message="New sign-ups appear here for approval." />
       )}
 
