@@ -509,6 +509,53 @@ missing, the redeploy step and that URL. Found the hard way on 2026-09-20: the f
 of the new architecture served the notice to the person who had just published the rules, and the
 notice was telling them to copy a file that exists nowhere near the server.
 
+### "I set the variables and the deploy still shows the notice"
+
+Four causes account for nearly all of it, and they are checked in this order:
+
+1. **The variables are on a different Vercel project.** Whatever is open in the dashboard when you
+   add them is not necessarily the project that serves the domain. The one that matters is the one
+   whose **Domains** tab lists your address; compare that tab, not the project name.
+2. **The Environments column.** A value scoped to *Preview* (or *Development*) only is absent from
+   every production build. Each row shows its environments; edit it if Production is not among
+   them, and check the value is not empty.
+3. **You redeployed a *preview* deployment.** Promoting a preview build to production — or
+   redeploying one — does not rebuild it: it keeps the environment it was built with, which is
+   preview. Redeploy a deployment that is labelled **Production**.
+4. **The values were added after the build started.** See the rebuild rule above.
+
+Checks that do not require trusting the dashboard: `npx vercel env ls` prints every name with the
+environments it applies to; the failing deployment's **build log** contains the line
+`Building WITHOUT Firebase config: …` (printed by the `firebaseConfigGuard` plugin in
+`vite.config.js`); and `GET /build-info.json` on the deploy reports `firebaseConfigured` and
+`missingEnv`.
+
+### The way out: commit `.env.production`
+
+If the dashboard keeps losing them, this removes it from the loop entirely. Vite loads
+`.env.production` for `vite build` (mode `production`) exactly as it loads `.env.local` for
+`yarn dev`, and the file is **not** gitignored — so committing it puts the six values in the build
+on Vercel with no project setting involved. It is a defensible thing to commit: Firebase's web
+config is public identifiers, shipped in the bundle either way, and the security boundary is the
+rules plus the Authorized Domains list.
+
+Two traps, both silent:
+
+* **The file must be UTF-8.** A UTF-16 file — which is what PowerShell's `>` redirection and
+  `Copy-Item` from a UTF-16 `.env.local` produce — is not parsed at all: the build runs, finds
+  nothing, and reports the same missing values. A UTF-8 **BOM** is fine (dotenv strips it).
+* **`.env.production` outranks `.env.local`.** Mode files load last, so a committed
+  `.env.production` also supplies production builds on your own machine.
+
+Verify before pushing, which is the whole point of the exercise:
+
+```
+yarn build && node -e "console.log(require('./dist/build-info.json').firebaseConfigured)"
+```
+
+`true` means Vite read the file. Push, and `/build-info.json` on the deploy should say the same
+within a minute of the build.
+
 ## 🟡 Service worker is production-only
 `registerSW.js` registers only under `import.meta.env.PROD`. **PWA/offline behavior does not
 exist in `yarn dev`** — always verify with `yarn build && yarn preview`.

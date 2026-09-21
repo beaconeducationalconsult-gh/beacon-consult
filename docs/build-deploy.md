@@ -60,6 +60,20 @@ notice prints the Vercel path, the names the build was missing and the redeploy 
 `GET /build-info.json` on the deploy says the same thing in one request (`firebaseConfigured`,
 `missingEnv`) — ask it before asking a browser.
 
+**Still showing the notice after setting them?** It is one of four things: the variables are on a
+*different Vercel project* (the project whose **Domains** tab lists your domain is the one that
+serves it), they are scoped to **Preview/Development only** (look at the Environments column), you
+redeployed a **preview** deployment (promoting one to production does not rebuild it, so it keeps
+the environment it was built with), or the values were added after the build started. From your
+machine, `npx vercel env ls` prints the names and their environments, and the failing deployment's
+build log contains the line `Building WITHOUT Firebase config: …`.
+
+If Vercel's settings keep not applying, commit the six values as **`.env.production`** instead:
+Vite reads that file during `vite build`, so the repo carries the config and no project setting is
+involved. Write it as **UTF-8** — a UTF-16 file is ignored silently — and check locally first with
+`yarn build && node -e "console.log(require('./dist/build-info.json').firebaseConfigured)"`.
+`docs/gotchas.md` has the long version.
+
 **The Vite `VITE_` prefix must stay**, and Vercel's editor says so in a confusing way: it warns
 that *"public prefixes expose values to the browser — if that's safe, change the variable to
 Config."* It is safe, and it is the point. Vite only exposes variables named `VITE_…` to client

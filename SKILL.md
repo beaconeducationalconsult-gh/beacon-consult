@@ -487,7 +487,7 @@ the same commands are `make deploy-rules` and `make deploy-storage`.
 Expect `✔ Deploy complete!` and a list of the files it compiled. Indexes take a minute or two to
 build in the background — the console shows them as *Building*.
 
-Three things you may meet here, all covered in Part 15 (rows 21–23):
+Four things you may meet here, all covered in Part 15 (rows 21–24):
 
 - `HTTP Error: 400, this index is not necessary` — an entry in `firestore.indexes.json` with a
   single field. It aborts the **whole** indexes deploy, so nothing else gets created either;
@@ -559,6 +559,17 @@ one request whether the build had the values, and names any that were missing
 (`firebaseConfigured`, `missingEnv`). The notice prints the same answer to whoever opens the
 site — on a real domain it lists the exact missing names, the Vercel path and the redeploy step
 (Part 15, row 23).
+
+**Set them and the notice is still there?** One of four things, none of them the code: the variables
+are on a *different Vercel project* (the one whose **Domains** tab lists your address is the one that
+matters), they are scoped to **Preview/Development only** (read the **Environments** column), you
+redeployed a **preview** deployment (promoting a preview to production does not rebuild it, so it
+keeps the environment it was built with), or they were added after the build began. `npx vercel env
+ls` prints the names and their environments; the failing deployment's build log contains
+`Building WITHOUT Firebase config: …`. The fallback that removes Vercel from the loop: commit the
+six values as **`.env.production`** — Vite reads it during `vite build`, the values are public
+identifiers, it must be **UTF-8** (UTF-16 is ignored silently), and it outranks `.env.local` for
+production builds. `docs/gotchas.md` has the long version.
 
 ### 6.3 Set the Production Branch — the one setting everybody misses
 
@@ -1065,6 +1076,7 @@ Each of these cost real time. They are ordered roughly by how likely you are to 
 | 21 | `firebase deploy` ends with `HTTP Error: 400, this index is not necessary` | `firestore.indexes.json` contains an entry with a **single field** — Firestore creates single-field indexes itself | Delete that entry (an unfiltered `orderBy` needs no entry; a filtered + ordered query needs two fields or more) and re-run the deploy — it is idempotent. `src/firestoreIndexes.test.js` fails on one now |
 | 22 | `[W] Unused function: …` on every deploy | A rule helper nothing calls | Remove it, or use it. An always-present warning hides the next, real one; `src/firestoreRules.test.js` now fails on an uncalled function |
 | 23 | The live site shows **Firebase configuration is missing** instead of the portal | The **build** had no `VITE_FIREBASE_*` values — Vite inlines them at build time, so a `.env.local` on your laptop is not part of the deploy, and a value scoped to Preview only is not part of a production build either | `GET <domain>/build-info.json` names the missing values (`firebaseConfigured`, `missingEnv`). Add them in Vercel → Settings → Environment Variables for **Production *and* Preview**, then *Deployments → Redeploy* — a variable change does not rebuild by itself |
+| 24 | …and it is still there after you set them | The variables are on a different Vercel project, or scoped to Preview/Development only, or you redeployed a *preview* deployment (a promoted preview keeps the environment it was built with) | `npx vercel env ls` lists names + environments; the deployment's build log says `Building WITHOUT Firebase config: …`. Last resort: commit `.env.production` (UTF-8) — see `docs/gotchas.md` ("The way out: commit `.env.production`") |
 
 The full, longer list — with the reasoning — is `docs/gotchas.md`. It is the most valuable file in
 the repository after this one.
