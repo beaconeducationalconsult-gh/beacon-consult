@@ -124,6 +124,32 @@ scheme — and the scope line reads **100%** for every term of every year, so a 
 whole of the term it was set for, at its full length (a 50-mark B5 paper composes 50, five of
 them essays in Section C).
 
+### BECE mock — `/portal/questions/bece`
+`BeceMockPage.jsx`. Where the exam builder composes *a* paper from whatever a teacher has,
+this page composes **the** paper: WAEC's BECE mathematics format — **Paper 1**, 40 compulsory
+objectives (1 hour, 40 marks), **Paper 2**, six structured questions of 15 marks, answer four
+(1 hour, 60 marks) — drawn from the whole served JHS bank at once (B7–B9, the years the exam
+examines), so a B9 teacher prints a full 100-mark mock without selecting anything.
+`src/lib/becePaper.js` composes; nothing is selected and nothing is written to Firestore.
+
+- **Paper 1** reads the three years round-robin, each year's MCQs ordered one-per-indicator
+  first, so the paper is balanced across B7/B8/B9 and no indicator is asked twice before any is
+  asked once (the real bank composes 40 with a 14/13/13 spread and 40 distinct indicators).
+- **Paper 2's questions are composed the way the real ones are printed** — the bank's items are
+  1–5 marks, so a 15-mark question is a small set of parts, (a), (b), (c)…, whose marks add to
+  exactly 15, taken from one strand of one grade (spilling into a neighbouring sub-strand before
+  anything else), chosen round-robin across the grades, easiest part first, no item used twice
+  anywhere in the mock. What the sitting **counts** is kept apart from what the sheet prints:
+  six × 15 = 90 printed, 4 × 15 = 60 counted — the difference between a paper and a total.
+- **Honesty is the same shape as the exam builder's**: when the pool runs short, the page names
+  it ("the JHS bank holds N objective questions — 30 short…", "composes 4 of the 6 structured
+  questions…") rather than padding with the wrong type or printing a 13-mark question as if it
+  were 15.
+- `src/lib/becePdf.js` prints the sitting in the house style: rubrics, Paper 1's option tables,
+  Paper 2's lettered parts with marks in the margin, and the teacher copy's marking scheme for
+  both papers — student copy, teacher copy, and the teacher copy offered to My library
+  (`<SaveToLibrary>`), like every other page that downloads a document.
+
 **Starter bank (P1-5).** The bundle ships **1,081 practice questions for mathematics B2–B9 —
 a question for every indicator the syllabus schedules, in every year, and 100% of every term's
 scope** — see *The question bank* in
