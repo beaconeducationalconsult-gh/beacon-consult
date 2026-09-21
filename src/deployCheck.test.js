@@ -76,6 +76,19 @@ describe('the deploy checks agree with each other', () => {
     }
   })
 
+  it('treats an absent .env.local as the committed config, in both implementations', () => {
+    // P0-1 moved the six values into source, so a fresh clone has no .env.local
+    // and still builds a complete app. The pre-flight must say so — and must
+    // still run the .firebaserc cross-check, which is where a wrong project
+    // hides. Before this, the Node script failed the whole run on the missing
+    // file while the Python script skipped the cross-check silently: the two
+    // disagreed, on the exact machine state a fresh clone has.
+    for (const [name, source] of [['verify_deploy.py', python], ['verify_deploy.mjs', node]]) {
+      expect(source, `${name} does not know the committed config`).toContain('firebaseConfig.js')
+      expect(source, `${name} does not fall back when the file is absent`).toMatch(/absent/)
+    }
+  })
+
   it('reads a file the rewrite swallowed as the shell, not as a pass', () => {
     // The bug this guards: every path the deploy does not have answers 200 with
     // index.html, which used to count as a served file.
@@ -218,5 +231,20 @@ describe('the .env.local reader understands what Windows writes', () => {
     const output = run(Buffer.from(KEYS.map((key) => `${key}=`).join('\n'), 'utf8'))
     expect(output).toContain('set but empty')
     expect(output).not.toContain('does not define')
+  })
+
+  it('runs green with no .env.local at all, via the committed config', () => {
+    // The deploy machine's normal state since P0-1: no override file. The run
+    // must come back clean, name the committed config as the source, and still
+    // resolve the project from it — the .firebaserc cross-check included.
+    const dir = mkdtempSync(join(tmpdir(), 'beacon-env-'))
+    const output = execFileSync(process.execPath, [script, '-SkipBuild', '-EnvFile', join(dir, 'absent.env')],
+      { cwd: rootDir, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] })
+    const pinned = JSON.parse(readFileSync(new URL('../.firebaserc', import.meta.url), 'utf8'))
+      .projects.default
+    expect(output).toContain('the committed config (src/firebaseConfig.js) supplies the six values')
+    expect(output).toContain(`.firebaserc pins the same project the app uses (${pinned})`)
+    expect(output).not.toContain('.env.local is missing')
+    expect(output).not.toContain('problem(s)')
   })
 })

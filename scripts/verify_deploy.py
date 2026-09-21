@@ -142,6 +142,20 @@ def local_bundle_hash() -> str | None:
         return None
 
 
+def committed_project_id() -> str | None:
+    """The project id in the committed config — the base every build has since
+    P0-1 moved the six values into `src/firebaseConfig.js`. The values are
+    public client identifiers, so reading the file is safe; a regex rather than
+    an import, because this script runs outside any virtualenv. `None` when the
+    file is absent or has no readable projectId."""
+    try:
+        text = (ROOT / "src" / "firebaseConfig.js").read_text(encoding="utf-8")
+    except OSError:
+        return None
+    match = re.search(r"projectId\s*:\s*[\"']([^\"']+)[\"']", text)
+    return match.group(1) if match else None
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -157,7 +171,10 @@ def main() -> int:
     # configured in two different files: `.env.local` (Vite, gitignored) and
     # `.firebaserc` (the CLI, committed). `firebase deploy` follows `.firebaserc`,
     # so a mismatch publishes the rules to a project the app never talks to — and
-    # leaves the live one on whatever rules it has.
+    # leaves the live one on whatever rules it has. Since P0-1 the six values are
+    # also committed source (`src/firebaseConfig.js`), so an absent `.env.local`
+    # is the normal case — and the project comes from there, which keeps the
+    # cross-check running on the fresh clone where a wrong `.firebaserc` hides.
     env_path = ROOT / ".env.local"
     app_project = None
     if env_path.exists():
@@ -167,6 +184,15 @@ def main() -> int:
         if missing_env:
             problems.append(f".env.local does not define: {', '.join(missing_env)} "
                             f"(read as {encoding})")
+    else:
+        app_project = committed_project_id()
+        if app_project:
+            notes.append(f".env.local is absent — the committed config (src/firebaseConfig.js) "
+                         f"supplies the six values (project {app_project})")
+        else:
+            problems.append(".env.local is missing and the committed config "
+                            "(src/firebaseConfig.js) could not be read — copy .env.example to "
+                            ".env.local and fill in the six VITE_FIREBASE_* values")
     pinned = pinned_project()
     if not pinned:
         notes.append(".firebaserc has no default project — `firebase deploy` needs --project")
@@ -187,6 +213,11 @@ def main() -> int:
         problems.append("public/sw.js no longer names its cache after the bundle hash")
 
     if not args.url or args.offline_check:
+        # The Node peer prints each check as it runs it; this exit prints what
+        # it collected. Before the notes printed here, the .firebaserc
+        # cross-check ran but its answer was invisible on a clean run.
+        for line in notes:
+            print(f"  ok  {line}")
         for line in problems:
             print(f"  x {line}")
         if problems:
@@ -227,8 +258,9 @@ def main() -> int:
             notes.append(f"commit {remote.get('commit')}, built {remote.get('builtAt')}")
             if remote.get("projectId") and app_project and remote["projectId"] != app_project:
                 problems.append(f"the deploy was built for project `{remote['projectId']}`, but this "
-                                f"checkout's .env.local configures `{app_project}` — the deployment "
-                                "and your local app are talking to different Firebase projects")
+                                f"checkout configures `{app_project}` (.env.local or the committed "
+                                "config) — the deployment and your local app are talking to "
+                                "different Firebase projects")
 
     status, body = get(f"{base}/")
     if status != 200 or b'id="root"' not in body:
