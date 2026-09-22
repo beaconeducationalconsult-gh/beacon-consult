@@ -32,13 +32,18 @@
     "Correct 30-question test numbering and 45 subparts",
     "Expected structured-question marks",
     "Separate teacher keys",
-    "24 embedded maps and 24 valid PNGs"
+    "24 embedded maps and 24 valid PNGs",
+    "All 12 embedded B4 illustrations match standalone PNG hashes"
   ],
   "review_limits": [
     "No full Word pagination render",
     "No independent teacher or scientific sign-off",
     "B4 mapping interpretations require teacher confirmation",
     "Tests draw on weekly banks and are not secure unseen papers",
-    "Visual spot checks covered B4 Week 10 and B5 Week 12 maps"
-  ]
+    "All 12 revised B4 illustrated maps visually inspected; B5 maps remain original text-based maps"
+  ],
+  "illustrated_maps": {
+    "B4_Science": 12,
+    "B5_Science": 0
+  }
 }

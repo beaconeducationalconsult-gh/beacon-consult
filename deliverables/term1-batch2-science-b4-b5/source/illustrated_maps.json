@@ -1,0 +1,117 @@
+{
+  "grade": 4,
+  "subject": "Science",
+  "weeks": [
+    {
+      "week": 1,
+      "path": "B4/Science/Mind-maps/B4_Science_Week_01.png",
+      "size": [
+        1264,
+        843
+      ],
+      "sha256": "b182bc3881a214788a7524442f03057a7c5639a7a6da0dc17c8fd8c39f616bd5"
+    },
+    {
+      "week": 2,
+      "path": "B4/Science/Mind-maps/B4_Science_Week_02.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "f4fd2fde46a5721d8f3aa2199c72ee0871ec59996e7ae7e9293b70e0e5996247"
+    },
+    {
+      "week": 3,
+      "path": "B4/Science/Mind-maps/B4_Science_Week_03.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "43ea5a2049c3fed207e0a5a5fa9833dc759e3fabf8f0dc13c2c245ec00bb9d9c"
+    },
+    {
+      "week": 4,
+      "path": "B4/Science/Mind-maps/B4_Science_Week_04.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "ad27e6573dabe742198e26f16663d90edfa0d06e0eb410394264ee8d1f9c5c7b"
+    },
+    {
+      "week": 5,
+      "path": "B4/Science/Mind-maps/B4_Science_Week_05.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "f8396b768e6249a68395c63c90f1980731b82ed765791977875690283b7be7de"
+    },
+    {
+      "week": 6,
+      "path": "B4/Science/Mind-maps/B4_Science_Week_06.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "dc067a60b469ecdb5f62088812d73e61b43000fa9049837b2ccbb5a1c233f503"
+    },
+    {
+      "week": 7,
+      "path": "B4/Science/Mind-maps/B4_Science_Week_07.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "38f8782e829cb25a4024b1d566126c5960d38be761e4924858fcc72c0655e849"
+    },
+    {
+      "week": 8,
+      "path": "B4/Science/Mind-maps/B4_Science_Week_08.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "1fd7c3b0cd730adee55a465d0778805127aa4ddbea6fa812595aa548d7e740af"
+    },
+    {
+      "week": 9,
+      "path": "B4/Science/Mind-maps/B4_Science_Week_09.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "1e565fa85fa38791b4a847920a50101a47aabaa937b936344bee9e6b47701217"
+    },
+    {
+      "week": 10,
+      "path": "B4/Science/Mind-maps/B4_Science_Week_10.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "ca8eaa6be83d50606489a40d73d0756ae47727ce2ef75399a8ee14140fed29f1"
+    },
+    {
+      "week": 11,
+      "path": "B4/Science/Mind-maps/B4_Science_Week_11.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "fd411c1b58ae841847898a46a564c1d17e55ccb9ee85b4f9b7a55c61442fb9b5"
+    },
+    {
+      "week": 12,
+      "path": "B4/Science/Mind-maps/B4_Science_Week_12.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "d12736bd9bdeb13a5dd0c0076a2aeb04b8777b77a95867244b294cf5f3bb7b25"
+    }
+  ],
+  "status": "AI-generated illustrations with editorial corrections; teacher-review draft",
+  "provenance": "Week 1 approved preview; Weeks 2\u201311 generated for their topics; Week 12 composed from approved common-bean artwork.",
+  "review": "All twelve visually inspected; corrected insect leg count, separation diagram, hub label, plant captions and germination layout. No independent scientific sign-off."
+}

@@ -46,8 +46,17 @@ for p in OUT.rglob('*.docx'):
         assert 'MCQ answers and explanations' not in text
 assert embedded==24
 for p in OUT.rglob('*.png'):
-    im=Image.open(p);assert im.size==(2200,1800);im.verify()
-report={'batch':2,'scope':'Science B4 and B5, Weeks 1–12 and both tests; overall original request still incomplete','word_documents':9,'weekly_units':24,'new_weekly_units_since_batch_1':22,'week_1_units_reincluded':2,'standalone_mindmaps':24,'embedded_mindmaps':embedded,'weekly_mcqs':480,'weekly_three_part_questions':240,'test_papers':4,'test_mcqs':60,'test_three_part_questions':60,'total_mcqs':540,'total_three_part_questions':300,'total_structured_subparts':900,'answer_position_distribution':dict(balance),'checks_passed':['DOCX ZIP integrity','Required weekly and test counts','Four distinct MCQ alternatives and one keyed answer','MCQ key letters match options','No duplicated MCQ stems within a weekly bank','No duplicate MCQ items within a test paper','Test source weeks within declared scope','Correct 30-question test numbering and 45 subparts','Expected structured-question marks','Separate teacher keys','24 embedded maps and 24 valid PNGs'],'review_limits':['No full Word pagination render','No independent teacher or scientific sign-off','B4 mapping interpretations require teacher confirmation','Tests draw on weekly banks and are not secure unseen papers','Visual spot checks covered B4 Week 10 and B5 Week 12 maps']}
+    im=Image.open(p);assert im.size in ((2200,1800),(1264,843),(1536,1024));im.verify()
+report={'batch':2,'scope':'Science B4 and B5, Weeks 1–12 and both tests; overall original request still incomplete','word_documents':9,'weekly_units':24,'new_weekly_units_since_batch_1':22,'week_1_units_reincluded':2,'standalone_mindmaps':24,'embedded_mindmaps':embedded,'weekly_mcqs':480,'weekly_three_part_questions':240,'test_papers':4,'test_mcqs':60,'test_three_part_questions':60,'total_mcqs':540,'total_three_part_questions':300,'total_structured_subparts':900,'answer_position_distribution':dict(balance),'checks_passed':['DOCX ZIP integrity','Required weekly and test counts','Four distinct MCQ alternatives and one keyed answer','MCQ key letters match options','No duplicated MCQ stems within a weekly bank','No duplicate MCQ items within a test paper','Test source weeks within declared scope','Correct 30-question test numbering and 45 subparts','Expected structured-question marks','Separate teacher keys','24 embedded maps and 24 valid PNGs'],'review_limits':['No full Word pagination render','No independent teacher or scientific sign-off','B4 mapping interpretations require teacher confirmation','Tests draw on weekly banks and are not secure unseen papers','All 12 revised B4 illustrated maps visually inspected; B5 maps remain original text-based maps']}
+manifest=json.loads((ROOT/'source/illustrated_maps.json').read_text())
+book=Document(OUT/'B4/Science/B4_Science_Weekly_Lessons_W01-W12.docx')
+for item,shape in zip(manifest['weeks'],book.inline_shapes):
+    data=(OUT/item['path']).read_bytes()
+    assert hashlib.sha256(data).hexdigest()==item['sha256']
+    rid=shape._inline.graphic.graphicData.pic.blipFill.blip.embed
+    assert book.part.related_parts[rid].blob==data
+report['illustrated_maps']={'B4_Science':12,'B5_Science':0}
+report['checks_passed'].append('All 12 embedded B4 illustrations match standalone PNG hashes')
 (OUT/'QUALITY_CHECKS.json').write_text(json.dumps(report,indent=2,ensure_ascii=False),encoding='utf-8')
 (OUT/'SOURCE_CROSSWALK.json').write_text((ROOT/'source/source_crosswalk.json').read_text(),encoding='utf-8')
 (OUT/'FILE_MANIFEST.txt').write_text('\n'.join(f'{p.relative_to(OUT)} | {p.stat().st_size:,} bytes' for p in sorted(OUT.rglob('*')) if p.is_file() and p.name!='FILE_MANIFEST.txt')+'\n',encoding='utf-8')

@@ -19,11 +19,16 @@
   ],
   "note": "Teacher-review drafts; full original request incomplete.",
   "illustrated_map_revision": {
-    "status": "Two style previews only; existing maps not yet replaced in full packs",
-    "folder": "illustrated-map-previews",
-    "examples": [
-      "B4 Science Week 1 animal classification",
-      "B5 Science Week 12 bean and maize germination"
-    ]
+    "status": "B4 Science Weeks 1\u201312 integrated into Batch 2 Word book and ZIP",
+    "complete": [
+      "B4 Science Weeks 1\u201312 in Batch 2"
+    ],
+    "pending": [
+      "B5 Science full illustrated rollout",
+      "Other grades and subjects illustrated rollout"
+    ],
+    "preview_folder": "illustrated-map-previews",
+    "older_batch_note": "Batch 1 unchanged; use Batch 2 for illustrated B4 Science",
+    "review": "AI-generated illustrations with editorial corrections; teacher-review drafts"
   }
 }

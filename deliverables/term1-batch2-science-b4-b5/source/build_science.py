@@ -63,7 +63,10 @@ def build_grade(g):
     for w in range(1,13):
         m=LESSONS[(g,w)];qs=mcq_bank(g,w);es=weekly_essays(m)
         path=folder/'Mind-maps'/f'B{g}_Science_Week_{w:02d}.png'
-        layout.mindmap(path,m['title'],g,'Science',w,[(c['answer'],c['fact']+'.') for c in m['cards']],f'Sequence: BASIC {g} Science p{m["page"]}. See source crosswalk for code interpretations. Teacher-review draft.')
+        if g == 4 and (ROOT/'source/illustrated_maps.json').exists():
+            assert path.exists(), f'Missing reviewed illustration: {path}'
+        else:
+            layout.mindmap(path,m['title'],g,'Science',w,[(c['answer'],c['fact']+'.') for c in m['cards']],f'Sequence: BASIC {g} Science p{m["page"]}. See source crosswalk for code interpretations. Teacher-review draft.')
         d.add_page_break();d.add_heading(f'Week {w} — {m["title"]}',1)
         para(d,f'Scheme reference: {m["source_codes"]}. Reference used: {m["codes"]}. {m["mapping_note"]}')
         d.add_heading('Learning outcomes',2)
@@ -132,8 +135,15 @@ def guide():
     d.add_heading('Safety and review',1)
     para(d,'Practical activities are low-risk or model-based. Never drink classroom-treated water, look directly at the Sun, taste experimental seeds, handle unknown chemicals, or collect hazardous waste. Heating, disinfection, gases and fire equipment are adult-controlled or represented only by diagrams. Follow school safety guidance. Recorded results must be actual observations, not invented values.')
     para(d,'Automated checks verify DOCX package integrity, counts, four distinct options and one keyed answer, map embedding, and test numbering. They do not independently validate every scientific statement, teaching suitability, accessibility or Word pagination. See QUALITY_CHECKS.json for the exact check results. All documents remain teacher-review drafts.')
+    if (ROOT/'source/illustrated_maps.json').exists():
+        d.add_heading('Illustrated-map revision — B4 Science',1)
+        para(d,'B4 Science Weeks 1–12 have illustrated maps embedded in Word and supplied as PNGs. B5 maps remain text-based pending revision. Batch 1 is unchanged. AI-generated artwork with editorial corrections requires teacher review.')
     save(d,OUT/'START_HERE_Batch_2_Science_B4_B5.docx')
     (OUT/'README.txt').write_text('BATCH 2 — SCIENCE B4 AND B5\n\nIncludes Weeks 1–12, both tests, separate answers and 24 mind-maps. Week 1 is repeated from Batch 1 for self-contained books.\n\nNine Word documents. Open START_HERE_Batch_2_Science_B4_B5.docx.\n\nOutstanding overall: Science B6–B8 later weeks and both tests; Computing B4–B8 later weeks and both tests.\n\nTeacher-review drafts. Read source crosswalk and safety notes before use.\n',encoding='utf-8')
+
+    if (ROOT/'source/illustrated_maps.json').exists():
+        with (OUT/'README.txt').open('a',encoding='utf-8') as f:
+            f.write('\nILLUSTRATED REVISION\n'+'B4 Science Weeks 1–12 have illustrated maps embedded in Word and supplied as PNGs. B5 maps remain text-based pending revision. Batch 1 is unchanged. AI-generated artwork with editorial corrections requires teacher review.'+'\n')
 
 if __name__=='__main__':
     for g in (4,5):build_grade(g);print(f'Science B{g} complete: 12 weeks, 2 tests, answers.',flush=True)
