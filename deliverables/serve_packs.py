@@ -4,7 +4,7 @@ from pathlib import Path
 from urllib.parse import unquote,urlsplit
 import argparse
 ROOT=Path(__file__).resolve().parent
-BATCHES={'term1-batch1','term1-batch2-science-b4-b5'}
+BATCHES={'term1-batch1','term1-batch2-science-b4-b5','illustrated-map-previews'}
 class Handler(SimpleHTTPRequestHandler):
     def __init__(self,*args,**kwargs):super().__init__(*args,directory=str(ROOT),**kwargs)
     def send_head(self):

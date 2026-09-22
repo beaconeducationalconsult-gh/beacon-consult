@@ -17,5 +17,13 @@
     "Science B6-B8 Weeks 2 onward and both tests",
     "Computing B4-B8 Weeks 2 onward and both tests"
   ],
-  "note": "Teacher-review drafts; full original request incomplete."
+  "note": "Teacher-review drafts; full original request incomplete.",
+  "illustrated_map_revision": {
+    "status": "Two style previews only; existing maps not yet replaced in full packs",
+    "folder": "illustrated-map-previews",
+    "examples": [
+      "B4 Science Week 1 animal classification",
+      "B5 Science Week 12 bean and maize germination"
+    ]
+  }
 }
