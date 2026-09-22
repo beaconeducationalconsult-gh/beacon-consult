@@ -14,6 +14,7 @@ import { suggestFilename } from '../lib/generatedDocs'
 import { SkeletonList } from '../components/Skeleton'
 import DataError from '../components/DataError'
 import EmptyState from '../components/EmptyState'
+import { PageHeader } from '../ui'
 
 /** Turn a week's scheduled lessons into a presentation deck. */
 export default function SlideLessons() {
@@ -103,13 +104,10 @@ export default function SlideLessons() {
 
   return (
     <div>
-      <header className="mb-6">
-        <h1 className="page-title">Slide lessons</h1>
-        <p className="page-subtitle">
-          Build a presentation from the week's scheduled lessons. Useful for revision and for sharing
-          with colleagues who teach the same class.
-        </p>
-      </header>
+      <PageHeader
+        title="Slide lessons"
+        subtitle="Build a presentation from the week's scheduled lessons. Useful for revision and for sharing with colleagues who teach the same class."
+      />
 
       <div className="card space-y-5 p-6">
         <div className="grid gap-4 sm:grid-cols-4">

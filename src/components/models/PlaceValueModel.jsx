@@ -71,7 +71,7 @@ export default function PlaceValueModel() {
               value={digit}
               onChange={(event) => setDigit(index, Number(event.target.value))}
             />
-            <p className="mt-1 text-center text-xs text-slate-500">
+            <p className="mt-1 text-center text-xs text-muted">
               value: {(digit * COLUMNS[index][1]).toLocaleString()}
             </p>
           </div>
@@ -79,14 +79,14 @@ export default function PlaceValueModel() {
       </div>
 
       <div className="mt-4 grid gap-3 sm:grid-cols-3">
-        <div className="rounded-lg bg-slate-50 p-3">
+        <div className="rounded-lg bg-surface-2 p-3">
           <p className="label-caps">Number</p>
-          <p className="text-2xl font-semibold text-slate-900">{number.toLocaleString()}</p>
+          <p className="text-2xl font-semibold text-heading">{number.toLocaleString()}</p>
         </div>
-        <div className="rounded-lg bg-slate-50 p-3 sm:col-span-2">
+        <div className="rounded-lg bg-surface-2 p-3 sm:col-span-2">
           <p className="label-caps">Expanded form</p>
-          <p className="text-lg text-slate-800">{expanded}</p>
-          <p className="mt-1 text-sm text-slate-600">In words: {inWords(number)}</p>
+          <p className="text-lg text-heading">{expanded}</p>
+          <p className="mt-1 text-sm text-text">In words: {inWords(number)}</p>
         </div>
       </div>
     </div>

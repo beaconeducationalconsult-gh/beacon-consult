@@ -111,7 +111,7 @@ export default function QuestionForm() {
                 type="button"
                 aria-pressed={form.type === value}
                 onClick={() => setForm({ ...form, type: value })}
-                className={`rounded-full px-3 py-1.5 text-xs font-semibold ${form.type === value ? 'bg-brand-600 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}
+                className={`rounded-full px-3 py-1.5 text-xs font-semibold ${form.type === value ? 'bg-brand-600 text-white' : 'bg-surface-2 text-muted hover:bg-line'}`}
               >
                 {label}
               </button>
@@ -162,8 +162,8 @@ export default function QuestionForm() {
             <div className="space-y-2">
               {form.options.map((option, index) => (
                 <div key={index} className="flex items-center gap-2">
-                  <span className="w-4 text-sm font-semibold text-slate-500">{String.fromCharCode(65 + index)}</span>
-                  <input className="input" value={option} onChange={(e) => setOption(index, e.target.value)} placeholder={`Option ${String.fromCharCode(65 + index)}`} />
+                  <span className="w-4 text-sm font-semibold text-muted">{String.fromCharCode(65 + index)}</span>
+                  <input className="input" value={option} onChange={(e) => setOption(index, e.target.value)} aria-label={`Option ${String.fromCharCode(65 + index)}`} placeholder={`Option ${String.fromCharCode(65 + index)}`} />
                 </div>
               ))}
             </div>

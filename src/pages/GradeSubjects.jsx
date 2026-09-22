@@ -39,7 +39,7 @@ export default function GradeSubjects() {
     <div>
       <Link
         to="/portal/curriculum"
-        className="mb-6 inline-flex items-center gap-1 text-sm text-slate-500 hover:text-slate-800"
+        className="mb-6 inline-flex items-center gap-1 text-sm text-muted hover:text-heading"
       >
         ← All grades
       </Link>
@@ -53,7 +53,7 @@ export default function GradeSubjects() {
               : 'Pick a subject to browse its strands, sub-strands and indicators.'}
           </p>
           {unverified.length > 0 && (
-            <p className="mt-2 text-xs text-amber-700">
+            <p className="mt-2 text-xs text-warning-700 dark:text-warning-500">
               {unverified.length === 1 ? 'One subject here has' : `${unverified.length} subjects here have`} not
               been cross-checked against the official NaCCA PDF yet, so treat the wording of
               {unverified.length === 1 ? ' its' : ' their'} indicators as provisional.
@@ -98,7 +98,7 @@ export default function GradeSubjects() {
                   )}
                     {!subject.hasSchedule && <span className="card-meta mt-1 block">No schedule</span>}
                     {subject.verified === false && (
-                      <span className="mt-1 block text-xs text-amber-700">Unverified source</span>
+                      <span className="mt-1 block text-xs text-warning-700 dark:text-warning-500">Unverified source</span>
                     )}
                 </span>
               </Link>

@@ -10,6 +10,7 @@ import DataError from '../components/DataError'
 import EmptyState from '../components/EmptyState'
 import ConfirmModal from '../components/ConfirmModal'
 import NotesTabs from '../components/NotesTabs'
+import { PageHeader } from '../ui'
 import { fmtDate } from '../lib/academicCalendar'
 
 export default function Articles() {
@@ -34,13 +35,11 @@ export default function Articles() {
 
   return (
     <div>
-      <header className="mb-6 flex flex-wrap items-end justify-between gap-3">
-        <div>
-          <h1 className="page-title">Articles</h1>
-          <p className="page-subtitle">Longer pieces on teaching practice. Public articles appear on the website.</p>
-        </div>
-        <Link to="/portal/articles/new" className="btn-primary">New article</Link>
-      </header>
+      <PageHeader
+        title="Articles"
+        subtitle="Longer pieces on teaching practice. Public articles appear on the website."
+        actions={<Link to="/portal/articles/new" className="btn-primary">New article</Link>}
+      />
 
       <NotesTabs
         tabs={[
@@ -71,7 +70,7 @@ export default function Articles() {
                   {article.authorName} · {fmtDate(article.createdAt)}
                   {article.visibility === 'public' && ' · public'}
                 </p>
-                {article.excerpt && <p className="mt-2 line-clamp-2 text-sm text-slate-600">{article.excerpt}</p>}
+                {article.excerpt && <p className="mt-2 line-clamp-2 text-sm text-text">{article.excerpt}</p>}
               </div>
               {(article.authorId === user.uid || isAdmin) && (
                 <div className="flex shrink-0 gap-2">

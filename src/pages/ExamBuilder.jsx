@@ -307,8 +307,8 @@ export default function ExamBuilder() {
 
       {paper && (
         <>
-          <div className="card mb-5 flex flex-wrap items-center justify-between gap-3 border-brand-200 bg-brand-50 p-4">
-            <p className="text-sm text-brand-800">
+          <div className="card mb-5 flex flex-wrap items-center justify-between gap-3 border-brand-200 bg-brand-50 p-4 dark:border-brand-500/30 dark:bg-brand-500/15">
+            <p className="text-sm text-brand-800 dark:text-brand-200">
               <span className="font-semibold">{paper.questions.length}</span> questions ·{' '}
               <span className="font-semibold">{paper.totalMarks}</span> marks of {paper.targetMarks} asked
               {paper.targetMarks - paper.totalMarks > 0 && (
@@ -342,8 +342,8 @@ export default function ExamBuilder() {
           </div>
 
           {paper.omitted.length > 0 && (
-            <div className="card mb-5 border-amber-200 bg-amber-50 p-4">
-              <p className="card-meta text-amber-800">
+            <div className="card mb-5 border-warning-500/30 bg-warning-50 dark:bg-warning-500/15 p-4">
+              <p className="card-meta text-warning-700 dark:text-warning-500">
                 {paper.omitted.map((section) => (
                   <span key={section.id} className="block">
                     <span className="font-semibold">{section.label} is not on this paper:</span>{' '}
@@ -369,9 +369,9 @@ export default function ExamBuilder() {
               ) : (
                 <ol className="space-y-3">
                   {section.questions.map((question, index) => (
-                    <li key={question.id} className="flex items-start justify-between gap-4 border-b border-slate-100 pb-3 last:border-0">
+                    <li key={question.id} className="flex items-start justify-between gap-4 border-b border-line pb-3 last:border-0">
                       <div>
-                        <p className="text-sm text-slate-800">
+                        <p className="text-sm text-heading">
                           <span className="font-semibold">{section.id}{index + 1}.</span> {question.prompt}
                         </p>
                         {question.options?.length > 0 && (

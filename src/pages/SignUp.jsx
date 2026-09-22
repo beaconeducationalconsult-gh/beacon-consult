@@ -91,7 +91,7 @@ export default function SignUp() {
                   aria-pressed={form.grades.includes(grade)}
                   onClick={() => toggleGrade(grade)}
                   className={`rounded-full px-3 py-1.5 text-xs font-semibold transition-colors ${
-                    form.grades.includes(grade) ? 'bg-brand-600 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                    form.grades.includes(grade) ? 'bg-brand-600 text-white' : 'bg-surface-2 text-muted hover:bg-line'
                   }`}
                 >
                   {gradeLabel(grade)}
@@ -111,13 +111,13 @@ export default function SignUp() {
             </div>
           </div>
 
-          {error && <p className="rounded-lg bg-red-50 px-3 py-2 text-sm text-red-700">{error}</p>}
+          {error && <p className="rounded-lg bg-danger-50 px-3 py-2 text-sm text-danger-700 dark:bg-danger-500/15 dark:text-danger-500">{error}</p>}
 
           <button type="submit" className="btn-primary w-full" disabled={busy}>
             {busy ? 'Creating account…' : 'Create account'}
           </button>
 
-          <p className="text-center text-sm text-slate-500">
+          <p className="text-center text-sm text-muted">
             Already a member?{' '}
             <Link to="/login" className="link">
               Sign in

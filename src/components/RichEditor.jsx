@@ -16,7 +16,7 @@ function ToolbarButton({ onClick, active, label, children }) {
       title={label}
       aria-pressed={Boolean(active)}
       className={`rounded px-2 py-1 text-xs font-semibold transition-colors ${
-        active ? 'bg-brand-600 text-white' : 'text-slate-600 hover:bg-slate-200'
+        active ? 'bg-brand-600 text-white' : 'text-muted hover:bg-line'
       }`}
     >
       {children}
@@ -37,7 +37,7 @@ export default function RichEditor({ value = '', onChange, placeholder = 'Write‚
     ],
     content: value,
     onUpdate: ({ editor: instance }) => onChange?.(instance.getHTML()),
-    editorProps: { attributes: { class: 'prose prose-slate max-w-none focus:outline-none min-h-[16rem] px-4 py-3' } },
+    editorProps: { attributes: { class: 'prose prose-slate dark:prose-invert max-w-none focus:outline-none min-h-[16rem] px-4 py-3' } },
   })
 
   // Keep the editor in step when the parent loads a document after mount.
@@ -58,7 +58,7 @@ export default function RichEditor({ value = '', onChange, placeholder = 'Write‚
 
   return (
     <div className="card overflow-hidden">
-      <div className="flex flex-wrap items-center gap-1 border-b border-slate-200 bg-slate-50 px-2 py-1.5">
+      <div className="flex flex-wrap items-center gap-1 border-b border-line-2 bg-surface-2 px-2 py-1.5">
         <ToolbarButton label="Bold" active={editor.isActive('bold')} onClick={() => editor.chain().focus().toggleBold().run()}>
           B
         </ToolbarButton>
@@ -68,14 +68,14 @@ export default function RichEditor({ value = '', onChange, placeholder = 'Write‚
         <ToolbarButton label="Underline" active={editor.isActive('underline')} onClick={() => editor.chain().focus().toggleUnderline().run()}>
           <u>U</u>
         </ToolbarButton>
-        <span className="mx-1 h-4 w-px bg-slate-300" />
+        <span className="mx-1 h-4 w-px bg-line-2" />
         <ToolbarButton label="Heading 2" active={editor.isActive('heading', { level: 2 })} onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}>
           H2
         </ToolbarButton>
         <ToolbarButton label="Heading 3" active={editor.isActive('heading', { level: 3 })} onClick={() => editor.chain().focus().toggleHeading({ level: 3 }).run()}>
           H3
         </ToolbarButton>
-        <span className="mx-1 h-4 w-px bg-slate-300" />
+        <span className="mx-1 h-4 w-px bg-line-2" />
         <ToolbarButton label="Bullet list" active={editor.isActive('bulletList')} onClick={() => editor.chain().focus().toggleBulletList().run()}>
           ‚Ä¢‚Ä¢
         </ToolbarButton>
@@ -85,7 +85,7 @@ export default function RichEditor({ value = '', onChange, placeholder = 'Write‚
         <ToolbarButton label="Quote" active={editor.isActive('blockquote')} onClick={() => editor.chain().focus().toggleBlockquote().run()}>
           ‚ùù
         </ToolbarButton>
-        <span className="mx-1 h-4 w-px bg-slate-300" />
+        <span className="mx-1 h-4 w-px bg-line-2" />
         <ToolbarButton label="Align left" active={editor.isActive({ textAlign: 'left' })} onClick={() => editor.chain().focus().setTextAlign('left').run()}>
           ‚Øá
         </ToolbarButton>
@@ -103,7 +103,7 @@ export default function RichEditor({ value = '', onChange, placeholder = 'Write‚
         </ToolbarButton>
       </div>
       <EditorContent editor={editor} />
-      <div className="border-t border-slate-100 px-4 py-1.5 text-right text-xs text-slate-400">
+      <div className="border-t border-line px-4 py-1.5 text-right text-xs text-subtle">
         {characters} / {limit}
       </div>
     </div>

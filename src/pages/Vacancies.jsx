@@ -10,6 +10,7 @@ import DataError from '../components/DataError'
 import EmptyState from '../components/EmptyState'
 import ConfirmModal from '../components/ConfirmModal'
 import NotesTabs from '../components/NotesTabs'
+import { PageHeader, Badge } from '../ui'
 import { fmtDate, daysUntil } from '../lib/academicCalendar'
 
 export default function Vacancies() {
@@ -44,16 +45,16 @@ export default function Vacancies() {
 
   return (
     <div>
-      <header className="mb-6 flex flex-wrap items-end justify-between gap-3">
-        <div>
-          <h1 className="page-title">Vacancies</h1>
-          <p className="page-subtitle">Teaching openings. Published vacancies appear on the public website.</p>
-        </div>
-        <div className="flex gap-2">
-          <Link to="/vacancies" className="btn-secondary">View public page ↗</Link>
-          <Link to="/portal/vacancies/new" className="btn-primary">New vacancy</Link>
-        </div>
-      </header>
+      <PageHeader
+        title="Vacancies"
+        subtitle="Teaching openings. Published vacancies appear on the public website."
+        actions={
+          <>
+            <Link to="/vacancies" className="btn-secondary">View public page ↗</Link>
+            <Link to="/portal/vacancies/new" className="btn-primary">New vacancy</Link>
+          </>
+        }
+      />
 
       <NotesTabs
         tabs={[
@@ -87,13 +88,13 @@ export default function Vacancies() {
                   <p className="card-meta">{vacancy.school}</p>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className={`chip ${vacancy.status === 'published' ? 'bg-emerald-50 text-emerald-700' : 'bg-slate-100 text-slate-600'}`}>
+                  <Badge tone={vacancy.status === 'published' ? 'success' : 'neutral'}>
                     {vacancy.status}
-                  </span>
+                  </Badge>
                   {closing != null && <span className="chip">{closing < 0 ? 'closed' : `${closing}d left`}</span>}
                 </div>
               </div>
-              {vacancy.description && <p className="mt-3 text-sm text-slate-600">{vacancy.description}</p>}
+              {vacancy.description && <p className="mt-3 text-sm text-text">{vacancy.description}</p>}
               <p className="card-meta mt-2">
                 {vacancy.subject} {vacancy.grade && `· ${vacancy.grade}`} {vacancy.deadline && `· closes ${fmtDate(vacancy.deadline)}`}
               </p>

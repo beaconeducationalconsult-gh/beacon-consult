@@ -42,7 +42,7 @@ function QuoteCard() {
   return (
     <div className="card border-l-4 border-l-accent-500 p-5">
       <p className="section-heading">Quote of the day</p>
-      <p className="mt-2 font-display text-lg leading-snug text-slate-900">“{quote.text}”</p>
+      <p className="mt-2 font-display text-lg leading-snug text-heading">“{quote.text}”</p>
       <p className="card-meta mt-2">— {quote.author} · {likes[quote.id]?.count || 0} likes</p>
     </div>
   )
@@ -54,7 +54,7 @@ function TermProgressCard({ progress }) {
     return (
       <div className="card p-5">
         <p className="section-heading">School year</p>
-        <p className="mt-2 text-sm text-slate-600">
+        <p className="mt-2 text-sm text-text">
           {status.state === 'before-term'
             ? `${status.term.label} begins in ${status.daysUntilStart} day(s).`
             : 'Between terms — enjoy the break.'}
@@ -66,10 +66,10 @@ function TermProgressCard({ progress }) {
   return (
     <div className="card p-5">
       <p className="section-heading">{status.term.label} progress</p>
-      <p className="mt-2 text-sm text-slate-600">
+      <p className="mt-2 text-sm text-text">
         Week {termWeek(status.term) ?? '—'} of {status.term.weeks} · {status.daysRemaining} days left
       </p>
-      <div className="mt-3 h-2 overflow-hidden rounded-full bg-slate-100">
+      <div className="mt-3 h-2 overflow-hidden rounded-full bg-surface-2">
         <div className="h-full rounded-full bg-brand-500" style={{ width: `${pct}%` }} />
       </div>
       {progress ? (
@@ -102,7 +102,7 @@ function QuotaCard() {
   return (
     <div className="card p-5">
       <p className="section-heading">This week's contributions</p>
-      <p className="mt-2 text-sm text-slate-600">
+      <p className="mt-2 text-sm text-text">
         {count == null ? '—' : count} of {WEEKLY_QUOTA} questions added to the bank
       </p>
       <Link to="/portal/questions/new" className="btn-secondary mt-3 w-full text-xs">
@@ -123,9 +123,9 @@ function Leaderboard() {
       <ol className="mt-3 space-y-2">
         {top.map((quote, index) => (
           <li key={quote.id} className="flex gap-3 text-sm">
-            <span className="font-mono text-xs text-slate-400">{index + 1}</span>
+            <span className="font-mono text-xs text-subtle">{index + 1}</span>
             <span className="min-w-0 flex-1">
-              <span className="line-clamp-2 text-slate-700">“{quote.text}”</span>
+              <span className="line-clamp-2 text-text">“{quote.text}”</span>
               <span className="card-meta">— {quote.author} · {quote.likes} likes</span>
             </span>
           </li>
@@ -159,13 +159,13 @@ function ContributionsSection({ collection, label, to, all, uid }) {
       </div>
       {loading && <SkeletonList rows={1} />}
       {!loading && error && (
-        <p className="card-meta mt-2 text-rose-700">Could not load your {label.toLowerCase()} ({error.code || 'error'}).</p>
+        <p className="card-meta mt-2 text-danger-600 dark:text-danger-500">Could not load your {label.toLowerCase()} ({error.code || 'error'}).</p>
       )}
       {!loading && !error && rows.length === 0 && <p className="card-meta mt-2">Nothing here yet.</p>}
       <ul className="mt-3 space-y-2">
         {rows.slice(0, 5).map((row) => (
           <li key={row.id} className="text-sm">
-            <Link to={to(row.id)} className="text-slate-700 hover:text-brand-700 hover:underline">
+            <Link to={to(row.id)} className="text-text hover:text-brand-700 dark:hover:text-brand-300 hover:underline">
               {row.title || row.prompt || row.subjectName || (row.indicatorCodes || [])[0] || 'Untitled'}
             </Link>
             <span className="card-meta ml-2">{fmtDate(row.createdAt)}</span>
@@ -263,7 +263,7 @@ export default function Workspace() {
         </header>
 
         {profile?.status === 'pending' && (
-          <p className="card mb-6 border-l-4 border-l-amber-500 p-4 text-sm text-amber-800">
+          <p className="card mb-6 border-l-4 border-l-warning-500 p-4 text-sm text-warning-700 dark:text-warning-500">
             Your account is still awaiting approval, so contributions may be limited until an administrator approves you.
           </p>
         )}
@@ -303,26 +303,26 @@ export default function Workspace() {
                       </Link>
                       <div className="min-w-0 flex-1">
                         <p className="text-sm">
-                          <Link to={`/portal/authors/${post.authorId}`} className="font-semibold text-slate-800 hover:underline">
+                          <Link to={`/portal/authors/${post.authorId}`} className="font-semibold text-heading hover:underline">
                             {post.authorName || 'Member'}
                           </Link>
                           <span className="card-meta ml-2">{fmtDate(post.timestamp)}</span>
                         </p>
-                        <p className="mt-2 whitespace-pre-wrap text-sm text-slate-700">{post.content}</p>
+                        <p className="mt-2 whitespace-pre-wrap text-sm text-text">{post.content}</p>
 
                         <div className="mt-3 flex items-center gap-4">
                           <button
                             type="button"
                             onClick={() => toggleLike(post)}
                             aria-pressed={liked}
-                            className={`inline-flex items-center gap-1.5 text-xs font-semibold ${liked ? 'text-brand-700' : 'text-slate-500 hover:text-slate-800'}`}
+                            className={`inline-flex items-center gap-1.5 text-xs font-semibold ${liked ? 'text-brand-700 dark:text-brand-300' : 'text-muted hover:text-heading'}`}
                           >
                             <svg viewBox="0 0 24 24" className="h-4 w-4" fill={liked ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="1.75">
                               <path d="M7 10v10H4V10h3Zm3 10V9.5L13 4l.7.4a2 2 0 0 1 .9 2.3L14 9h4.2a2 2 0 0 1 1.9 2.6l-1.6 6A2 2 0 0 1 16.6 20H10Z" />
                             </svg>
                             {post.likesCount || 0}
                           </button>
-                          <Link to={`/portal/authors/${post.authorId}`} className="text-xs font-semibold text-slate-500 hover:text-slate-800">
+                          <Link to={`/portal/authors/${post.authorId}`} className="text-xs font-semibold text-muted hover:text-heading">
                             View author
                           </Link>
                         </div>

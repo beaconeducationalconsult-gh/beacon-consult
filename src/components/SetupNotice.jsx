@@ -36,11 +36,12 @@ export default function SetupNotice() {
 
         <div className="card mt-6 p-5">
           <h2 className="card-title">{copy.mode === 'deploy' ? 'Set them on Vercel, then re-deploy' : 'Add the six values'}</h2>
-          <ol className="mt-3 space-y-3 text-sm text-slate-700">
+          <ol className="mt-3 space-y-3 text-sm text-text">
             {copy.steps.map((step, index) => (
               <li key={step.title}>
                 <span className="font-semibold">{index + 1}.</span> {step.title}
                 {step.code ? (
+                  // Terminal-style code block: stays dark in both themes on purpose.
                   <pre className="mt-1 overflow-x-auto rounded-md bg-slate-900 px-3 py-2 font-mono text-xs text-slate-100">
                     {step.code}
                   </pre>
@@ -53,7 +54,7 @@ export default function SetupNotice() {
 
         <div className="card mt-4 p-5">
           <h2 className="card-title">{copy.curriculum.title}</h2>
-          <p className="mt-2 text-sm text-slate-700">{copy.curriculum.body}</p>
+          <p className="mt-2 text-sm text-text">{copy.curriculum.body}</p>
         </div>
 
         <p className="card-meta mt-6">{copy.footnote}</p>

@@ -81,7 +81,7 @@ function ProfileForm({ profile }) {
                   type="button"
                   aria-pressed={form.grades.includes(grade)}
                   onClick={() => toggleGrade(grade)}
-                  className={`rounded-full px-3 py-1.5 text-xs font-semibold ${form.grades.includes(grade) ? 'bg-brand-600 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}
+                  className={`rounded-full px-3 py-1.5 text-xs font-semibold ${form.grades.includes(grade) ? 'bg-brand-600 text-white' : 'bg-surface-2 text-muted hover:bg-line'}`}
                 >
                   {gradeLabel(grade)}
                 </button>
@@ -96,25 +96,25 @@ function ProfileForm({ profile }) {
         <aside className="card p-6">
           <p className="section-heading">Account</p>
           <dl className="mt-3 space-y-2 text-sm">
-            <div className="flex justify-between border-b border-slate-100 pb-2">
-              <dt className="text-slate-500">Email</dt>
-              <dd className="font-medium text-slate-800">{profile.email || user?.email}</dd>
+            <div className="flex justify-between border-b border-line pb-2">
+              <dt className="text-muted">Email</dt>
+              <dd className="font-medium text-heading">{profile.email || user?.email}</dd>
             </div>
-            <div className="flex justify-between border-b border-slate-100 pb-2">
-              <dt className="text-slate-500">Status</dt>
+            <div className="flex justify-between border-b border-line pb-2">
+              <dt className="text-muted">Status</dt>
               <dd>
-                <span className={`chip ${profile.status === 'approved' ? 'bg-emerald-50 text-emerald-700' : profile?.status === 'suspended' ? 'bg-red-50 text-red-700' : 'bg-amber-50 text-amber-700'}`}>
+                <span className={`chip ${profile.status === 'approved' ? 'bg-success-50 text-success-700 dark:bg-success-500/15 dark:text-success-500' : profile?.status === 'suspended' ? 'bg-danger-50 text-danger-700 dark:bg-danger-500/15 dark:text-danger-500' : 'bg-warning-50 text-warning-700 dark:bg-warning-500/15 dark:text-warning-500'}`}>
                   {profile.status || 'pending'}
                 </span>
               </dd>
             </div>
-            <div className="flex justify-between border-b border-slate-100 pb-2">
-              <dt className="text-slate-500">Role</dt>
-              <dd className="font-medium text-slate-800">{profile.role || 'member'}</dd>
+            <div className="flex justify-between border-b border-line pb-2">
+              <dt className="text-muted">Role</dt>
+              <dd className="font-medium text-heading">{profile.role || 'member'}</dd>
             </div>
             <div className="flex justify-between">
-              <dt className="text-slate-500">Member since</dt>
-              <dd className="font-medium text-slate-800">{fmtDate(profile.createdAt)}</dd>
+              <dt className="text-muted">Member since</dt>
+              <dd className="font-medium text-heading">{fmtDate(profile.createdAt)}</dd>
             </div>
           </dl>
           <p className="card-meta mt-4">

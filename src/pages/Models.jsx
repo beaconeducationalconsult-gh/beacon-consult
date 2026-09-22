@@ -86,7 +86,7 @@ export default function Models() {
               <Link
                 key={model.id}
                 to={`/portal/models/${model.id}`}
-                className={`chip ${model.id === selected.id ? 'chip-brand' : 'bg-white'}`}
+                className={model.id === selected.id ? 'chip-brand' : 'chip bg-surface'}
               >
                 {model.title}
               </Link>
@@ -105,15 +105,15 @@ export default function Models() {
 
             <SelectedModel />
 
-            <div className="mt-5 border-t border-slate-200 pt-4">
+            <div className="mt-5 border-t border-line-2 pt-4">
               <p className="label-caps mb-2">Indicators this model teaches</p>
               <ul className="space-y-2">
                 {selected.indicators.map((indicator) => (
                   <li key={indicator.code} className="text-sm">
-                    <span className="font-mono text-xs text-brand-700">{indicator.code}</span>{' '}
-                    <span className="text-slate-700">{indicator.description}</span>
+                    <span className="font-mono text-xs text-brand-700 dark:text-brand-300">{indicator.code}</span>{' '}
+                    <span className="text-text">{indicator.description}</span>
                     {!indicator.served && (
-                      <span className="ml-1 text-xs text-amber-700">
+                      <span className="ml-1 text-xs text-warning-700 dark:text-warning-500">
                         (not in the served curriculum — the catalogue needs fixing)
                       </span>
                     )}

@@ -4,6 +4,7 @@ import { useAuth } from '../context/AuthContext'
 import { SkeletonList } from '../components/Skeleton'
 import DataError from '../components/DataError'
 import EmptyState from '../components/EmptyState'
+import { BackLink, Badge } from '../ui'
 import { fmtDate } from '../lib/academicCalendar'
 
 export default function ArticleView() {
@@ -27,12 +28,12 @@ export default function ArticleView() {
 
   return (
     <article>
-      <Link to="/portal/articles" className="mb-6 inline-block text-sm text-slate-500 hover:text-slate-800">← Articles</Link>
+      <BackLink to="/portal/articles" className="mb-6">Articles</BackLink>
 
       <header className="mb-6">
         <div className="flex flex-wrap items-center gap-2">
           <span className="chip-brand">{article.category || 'General'}</span>
-          {article.visibility === 'public' && <span className="chip bg-emerald-50 text-emerald-700">public</span>}
+          {article.visibility === 'public' && <Badge tone="success">public</Badge>}
         </div>
         <h1 className="mt-3 page-title text-3xl">{article.title}</h1>
         <p className="page-subtitle">
@@ -49,7 +50,7 @@ export default function ArticleView() {
       </header>
 
       <div className="card p-8">
-        <div className="prose prose-slate max-w-none" dangerouslySetInnerHTML={{ __html: article.content || '' }} />
+        <div className="prose prose-slate dark:prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: article.content || '' }} />
       </div>
     </article>
   )

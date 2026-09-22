@@ -11,13 +11,13 @@ export default function PublicCalendar() {
         <p className="page-subtitle">{ACADEMIC_YEAR} school year · Ghana basic education</p>
 
         {status.state === 'in-term' && (
-          <div className="card mt-8 border-l-4 border-l-emerald-500 p-6">
+          <div className="card mt-8 border-l-4 border-l-success-500 p-6">
             <p className="section-heading">Currently in session</p>
-            <p className="mt-1 font-semibold text-slate-800">
+            <p className="mt-1 font-semibold text-heading">
               {status.term.label} — {status.daysRemaining} days remaining
             </p>
-            <div className="mt-3 h-2 overflow-hidden rounded-full bg-slate-100">
-              <div className="h-full rounded-full bg-emerald-500" style={{ width: `${Math.round(termProgress(status.term) * 100)}%` }} />
+            <div className="mt-3 h-2 overflow-hidden rounded-full bg-surface-2">
+              <div className="h-full rounded-full bg-success-500" style={{ width: `${Math.round(termProgress(status.term) * 100)}%` }} />
             </div>
           </div>
         )}
@@ -31,11 +31,11 @@ export default function PublicCalendar() {
                   <h2 className="card-title text-lg">{term.label}</h2>
                   <span className="chip">{term.weeks} weeks</span>
                 </div>
-                <p className="mt-2 text-sm text-slate-700">
+                <p className="mt-2 text-sm text-text">
                   {fmtDate(term.start)} — {fmtDate(term.end)}
                 </p>
                 <p className="card-meta mt-1">{term.note}</p>
-                <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-slate-100">
+                <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-surface-2">
                   <div className="h-full rounded-full bg-brand-500" style={{ width: `${Math.round(progress * 100)}%` }} />
                 </div>
               </li>

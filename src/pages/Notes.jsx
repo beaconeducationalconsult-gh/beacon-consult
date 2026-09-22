@@ -12,6 +12,7 @@ import EmptyState from '../components/EmptyState'
 import ConfirmModal from '../components/ConfirmModal'
 import NotesTabs from '../components/NotesTabs'
 import SubjectIcon from '../components/SubjectIcon'
+import { PageHeader } from '../ui'
 import { gradeLabel } from '../lib/grades'
 import { fmtDate } from '../lib/academicCalendar'
 
@@ -47,13 +48,11 @@ export default function Notes() {
 
   return (
     <div>
-      <header className="mb-6 flex flex-wrap items-end justify-between gap-3">
-        <div>
-          <h1 className="page-title">Study notes</h1>
-          <p className="page-subtitle">Lesson notes and revision summaries, shared with the network.</p>
-        </div>
-        <Link to="/portal/notes/new" className="btn-primary">New note</Link>
-      </header>
+      <PageHeader
+        title="Study notes"
+        subtitle="Lesson notes and revision summaries, shared with the network."
+        actions={<Link to="/portal/notes/new" className="btn-primary">New note</Link>}
+      />
 
       <NotesTabs
         tabs={[
@@ -85,7 +84,7 @@ export default function Notes() {
                   {note.subjectName || note.subjectId} {note.grade ? `· ${gradeLabel(note.grade)}` : ''}
                 </p>
                 <p className="card-meta mt-1">{note.authorName} · {fmtDate(note.createdAt)}</p>
-                {note.summary && <p className="mt-2 line-clamp-2 text-sm text-slate-600">{note.summary}</p>}
+                {note.summary && <p className="mt-2 line-clamp-2 text-sm text-text">{note.summary}</p>}
                 {(note.authorId === user.uid || isAdmin) && (
                   <div className="mt-3 flex gap-2">
                     <Link to={`/portal/notes/${note.id}/edit`} className="btn-secondary px-3 py-1.5 text-xs">Edit</Link>

@@ -13,20 +13,20 @@ export default function Stepper({ steps, current = 0, onStep }) {
                 state === 'current'
                   ? 'bg-brand-600 text-white'
                   : state === 'done'
-                    ? 'bg-brand-50 text-brand-700'
-                    : 'bg-slate-100 text-slate-500'
+                    ? 'bg-brand-50 text-brand-700 dark:bg-brand-500/15 dark:text-brand-300'
+                    : 'bg-surface-2 text-muted'
               }`}
             >
               <span
                 className={`grid h-5 w-5 place-items-center rounded-full text-[10px] ${
-                  state === 'current' ? 'bg-white/20' : 'bg-white'
+                  state === 'current' ? 'bg-white/20' : 'bg-surface'
                 }`}
               >
                 {state === 'done' ? '✓' : index + 1}
               </span>
               {step}
             </button>
-            {index < steps.length - 1 && <span className="text-slate-300">→</span>}
+            {index < steps.length - 1 && <span className="text-subtle">→</span>}
           </li>
         )
       })}

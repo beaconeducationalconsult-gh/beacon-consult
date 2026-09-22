@@ -9,6 +9,7 @@ import EmptyState from '../components/EmptyState'
 import { downloadLessonPlanDocx } from '../lib/lessonPlanDocx'
 import { buildLessonPlanPdf, downloadLessonPlanPdf } from '../lib/lessonPlanPdf'
 import SaveToLibrary from '../components/SaveToLibrary'
+import { BackLink } from '../ui'
 import { suggestFilename } from '../lib/generatedDocs'
 import { useSchedules } from '../hooks/useCurriculum'
 import { gradeLabel } from '../lib/grades'
@@ -24,7 +25,7 @@ function Section({ heading, children }) {
   return (
     <section className="mt-6">
       <h2 className="section-heading">{heading}</h2>
-      <div className="mt-2 text-sm text-slate-700">{children}</div>
+      <div className="mt-2 text-sm text-text">{children}</div>
     </section>
   )
 }
@@ -92,7 +93,7 @@ export default function LessonPlanView() {
 
   return (
     <div>
-      <Link to="/portal/plans" className="mb-6 inline-block text-sm text-slate-500 hover:text-slate-800">← Lesson plans</Link>
+      <BackLink to="/portal/plans" className="mb-6">Lesson plans</BackLink>
 
       <header className="mb-6 flex flex-wrap items-start justify-between gap-4">
         <div>

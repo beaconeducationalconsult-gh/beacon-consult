@@ -25,10 +25,10 @@ export default function PublicQuotes() {
           <>
             {daily && (
               <blockquote className="card mt-8 border-l-4 border-l-accent-500 p-8">
-                <p className="font-display text-2xl leading-snug text-slate-900">“{daily.text}”</p>
-                <footer className="mt-4 text-sm text-slate-500">
+                <p className="font-display text-2xl leading-snug text-heading">“{daily.text}”</p>
+                <footer className="mt-4 text-sm text-muted">
                   — {daily.author}
-                  {daily.meaning && <span className="mt-2 block italic text-slate-600">{daily.meaning}</span>}
+                  {daily.meaning && <span className="mt-2 block italic text-text">{daily.meaning}</span>}
                 </footer>
                 <p className="card-meta mt-4">{likes[daily.id]?.count || 0} teachers like this</p>
               </blockquote>
@@ -37,10 +37,10 @@ export default function PublicQuotes() {
             {weekly && (
               <section className="card mt-6 p-6">
                 <p className="section-heading">Theory of the week</p>
-                <h2 className="mt-2 font-display text-xl font-bold text-slate-900">{weekly.title}</h2>
+                <h2 className="mt-2 font-display text-xl font-bold text-heading">{weekly.title}</h2>
                 <p className="card-meta">{weekly.theorist}</p>
-                <p className="mt-3 text-sm text-slate-600">{weekly.definition}</p>
-                <p className="mt-3 rounded-lg bg-accent-500/10 p-3 text-sm text-slate-700">
+                <p className="mt-3 text-sm text-text">{weekly.definition}</p>
+                <p className="mt-3 rounded-lg bg-accent-500/10 p-3 text-sm text-text">
                   <span className="font-semibold">In your classroom: </span>
                   {weekly.classroom}
                 </p>
@@ -48,11 +48,11 @@ export default function PublicQuotes() {
             )}
 
             <div className="mt-10 flex flex-wrap gap-2">
-              <button type="button" onClick={() => setTag(null)} className={`chip ${!tag ? 'bg-brand-600 text-white' : 'hover:bg-slate-200'}`}>
+              <button type="button" onClick={() => setTag(null)} className={!tag ? 'chip bg-brand-600 text-white' : 'chip hover:bg-surface-2'}>
                 All
               </button>
               {tags.map((t) => (
-                <button key={t} type="button" onClick={() => setTag(t)} className={`chip ${tag === t ? 'bg-brand-600 text-white' : 'hover:bg-slate-200'}`}>
+                <button key={t} type="button" onClick={() => setTag(t)} className={tag === t ? 'chip bg-brand-600 text-white' : 'chip hover:bg-surface-2'}>
                   {t}
                 </button>
               ))}
@@ -61,7 +61,7 @@ export default function PublicQuotes() {
             <ul className="mt-4 space-y-3">
               {visible.map((quote) => (
                 <li key={quote.id} className="card p-5">
-                  <p className="text-slate-800">“{quote.text}”</p>
+                  <p className="text-text">“{quote.text}”</p>
                   <p className="card-meta mt-2">
                     — {quote.author} · {likes[quote.id]?.count || 0} likes
                   </p>

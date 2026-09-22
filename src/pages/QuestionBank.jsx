@@ -15,6 +15,7 @@ import { GRADES, gradeLabel } from '../lib/grades'
 import { isoWeekKey } from '../lib/week'
 import { buildQuestionPaper, downloadQuestionPaper } from '../lib/questionPaper'
 import SaveToLibrary from '../components/SaveToLibrary'
+import { PageHeader } from '../ui'
 import { suggestFilename } from '../lib/generatedDocs'
 import { loadStarterIndex, loadStarterPack, starterToFirestore } from '../lib/starterBank'
 
@@ -150,17 +151,17 @@ export default function QuestionBank() {
 
   return (
     <div>
-      <header className="mb-6 flex flex-wrap items-end justify-between gap-3">
-        <div>
-          <h1 className="page-title">Question bank</h1>
-          <p className="page-subtitle">Author questions once, then build exam papers and slideshows from them.</p>
-        </div>
-        <div className="flex flex-wrap gap-2">
-          <Link to="/portal/questions/generate" className="btn-secondary">Generate</Link>
-          <Link to="/portal/questions/quiz" className="btn-secondary">Quiz slides</Link>
-          <Link to="/portal/questions/new" className="btn-primary">New question</Link>
-        </div>
-      </header>
+      <PageHeader
+        title="Question bank"
+        subtitle="Author questions once, then build exam papers and slideshows from them."
+        actions={
+          <>
+            <Link to="/portal/questions/generate" className="btn-secondary">Generate</Link>
+            <Link to="/portal/questions/quiz" className="btn-secondary">Quiz slides</Link>
+            <Link to="/portal/questions/new" className="btn-primary">New question</Link>
+          </>
+        }
+      />
 
       {/* Starter bank (P1-5) — the bundle's practice questions, imported on demand. */}
       <div className="card mb-4 p-4">
@@ -179,7 +180,7 @@ export default function QuestionBank() {
         </div>
 
         {starter.open && (
-          <div className="mt-4 border-t border-slate-200 pt-4">
+          <div className="mt-4 border-t border-line pt-4">
             {starter.loading && <p className="card-meta">Loading…</p>}
             {!starter.loading && starter.index === null && (
               <p className="card-meta">The starter bank could not be loaded. Check your connection and try again.</p>
@@ -248,8 +249,8 @@ export default function QuestionBank() {
       </div>
 
       {selected.length > 0 && (
-        <div className="card mb-4 flex flex-wrap items-center justify-between gap-3 border-brand-200 bg-brand-50 p-4">
-          <p className="text-sm text-brand-800">
+        <div className="card mb-4 flex flex-wrap items-center justify-between gap-3 border-brand-200 bg-brand-50 p-4 dark:border-brand-500/30 dark:bg-brand-500/15">
+          <p className="text-sm text-brand-800 dark:text-brand-200">
             <span className="font-semibold">{selected.length}</span> selected · {totalMarks} marks
           </p>
           <div className="flex gap-2">
@@ -282,7 +283,7 @@ export default function QuestionBank() {
             <div className="flex items-start gap-3">
               <input
                 type="checkbox"
-                className="mt-1 h-4 w-4 rounded border-slate-300 text-brand-600"
+                className="mt-1 h-4 w-4 rounded border-line-2 text-brand-600"
                 checked={selected.includes(question.id)}
                 onChange={() => toggle(question)}
                 aria-label="Select question for the exam paper"
@@ -295,16 +296,16 @@ export default function QuestionBank() {
                   <span className="card-meta">{question.marks || 1} mark(s)</span>
                   {question.weekKey && <span className="card-meta">week {question.weekKey}</span>}
                 </div>
-                <p className="mt-2 text-sm text-slate-800">{question.prompt || question.question}</p>
+                <p className="mt-2 text-sm text-text">{question.prompt || question.question}</p>
                 {question.options?.length > 0 && (
-                  <ol className="mt-2 space-y-1 text-sm text-slate-600">
+                  <ol className="mt-2 space-y-1 text-sm text-muted">
                     {question.options.map((option, index) => (
                       <li key={index}>{String.fromCharCode(65 + index)}. {option}</li>
                     ))}
                   </ol>
                 )}
                 {question.answer && (
-                  <p className="mt-2 rounded-lg bg-emerald-50 px-3 py-2 text-xs text-emerald-800">
+                  <p className="mt-2 rounded-lg bg-success-50 px-3 py-2 text-xs text-success-700 dark:bg-success-500/15 dark:text-success-500">
                     <span className="font-semibold">Answer: </span>{question.answer}
                   </p>
                 )}
@@ -312,8 +313,8 @@ export default function QuestionBank() {
                   <span className="card-meta">{question.authorName}</span>
                   {(question.authorId === user.uid || isAdmin) && (
                     <>
-                      <Link to={`/portal/questions/${question.id}/edit`} className="text-xs font-semibold text-brand-700 hover:underline">Edit</Link>
-                      <button type="button" className="text-xs font-semibold text-red-600 hover:underline" onClick={() => setPendingDelete(question)}>Delete</button>
+                      <Link to={`/portal/questions/${question.id}/edit`} className="text-xs font-semibold text-brand-700 hover:underline dark:text-brand-300">Edit</Link>
+                      <button type="button" className="text-xs font-semibold text-danger-600 hover:underline dark:text-danger-500" onClick={() => setPendingDelete(question)}>Delete</button>
                     </>
                   )}
                 </div>

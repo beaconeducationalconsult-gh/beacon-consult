@@ -7,6 +7,7 @@ import { SkeletonList } from '../components/Skeleton'
 import DataError from '../components/DataError'
 import EmptyState from '../components/EmptyState'
 import ConfirmModal from '../components/ConfirmModal'
+import { PageHeader } from '../ui'
 import { storage } from '../firebase'
 import { deleteStoredDocument, openStoredDocument, probeStorage, storageFailureMessage } from '../lib/generatedDocs'
 
@@ -78,13 +79,10 @@ export default function DocumentLibrary() {
 
   return (
     <div>
-      <header className="mb-6">
-        <h1 className="page-title">My library</h1>
-        <p className="page-subtitle">
-          Documents you generated, kept so you can open them again without rebuilding them. Only
-          you can see this folder — they are stored under your own account.
-        </p>
-      </header>
+      <PageHeader
+        title="My library"
+        subtitle="Documents you generated, kept so you can open them again without rebuilding them. Only you can see this folder — they are stored under your own account."
+      />
 
       {!storage && (
         <EmptyState

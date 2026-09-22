@@ -22,7 +22,7 @@ export default function NumberLineModel() {
   const marker = (value, onChange, label, colour) => (
     <div>
       <label className="label-caps" htmlFor={`nl-${label}`}>
-        {label}: <span className="text-slate-900">{value.toLocaleString()}</span>
+        {label}: <span className="text-heading">{value.toLocaleString()}</span>
       </label>
       <input
         id={`nl-${label}`}
@@ -46,11 +46,11 @@ export default function NumberLineModel() {
       </div>
 
       <div className="relative mt-4 h-16">
-        <div className="absolute top-6 h-0.5 w-full bg-slate-300" />
+        <div className="absolute top-6 h-0.5 w-full bg-line-2" />
         {Array.from({ length: 11 }, (_, i) => (
           <div key={i} className="absolute top-4 text-center" style={{ left: percent(i * (CEILING / 10)) }}>
-            <div className="mx-auto h-3 w-px bg-slate-400" />
-            <span className="text-[10px] text-slate-500">{((i * CEILING) / 10).toLocaleString()}</span>
+            <div className="mx-auto h-3 w-px bg-subtle" />
+            <span className="text-[10px] text-muted">{((i * CEILING) / 10).toLocaleString()}</span>
           </div>
         ))}
         {[{ v: a, c: '#4f46e5', label: 'A' }, { v: b, c: '#f59e0b', label: 'B' }].map(({ v, c, label }) => (
@@ -64,26 +64,26 @@ export default function NumberLineModel() {
       </div>
 
       <div className="mt-4 grid gap-3 sm:grid-cols-3">
-        <div className="rounded-lg bg-slate-50 p-3">
+        <div className="rounded-lg bg-surface-2 p-3">
           <p className="label-caps">Comparison</p>
-          <p className="text-xl font-semibold text-slate-900">
+          <p className="text-xl font-semibold text-heading">
             {a.toLocaleString()} {symbol} {b.toLocaleString()}
           </p>
-          <p className="text-xs text-slate-500">
+          <p className="text-xs text-muted">
             {symbol === '=' ? 'The two numbers are equal.' : `A is ${Math.abs(a - b).toLocaleString()} ${a > b ? 'more' : 'less'} than B.`}
           </p>
         </div>
-        <div className="rounded-lg bg-slate-50 p-3">
+        <div className="rounded-lg bg-surface-2 p-3">
           <p className="label-caps">A rounded</p>
-          <p className="text-sm text-slate-700">
+          <p className="text-sm text-text">
             nearest ten: {toNearest(a, 10).toLocaleString()}<br />
             nearest hundred: {toNearest(a, 100).toLocaleString()}<br />
             nearest thousand: {toNearest(a, 1000).toLocaleString()}
           </p>
         </div>
-        <div className="rounded-lg bg-slate-50 p-3">
+        <div className="rounded-lg bg-surface-2 p-3">
           <p className="label-caps">B rounded</p>
-          <p className="text-sm text-slate-700">
+          <p className="text-sm text-text">
             nearest ten: {toNearest(b, 10).toLocaleString()}<br />
             nearest hundred: {toNearest(b, 100).toLocaleString()}<br />
             nearest thousand: {toNearest(b, 1000).toLocaleString()}

@@ -186,7 +186,7 @@ export default function ForecastForm() {
             <button type="button" className="btn-secondary" onClick={startBlank}>Start blank</button>
           </div>
           {!loadingSchedule && subjectId && templateRows.length === 0 && (
-            <p className="text-sm text-amber-700">
+            <p className="text-sm text-warning-700 dark:text-warning-500">
               {scheduleError
                 ? 'The curriculum schedule for this grade could not be loaded — check your connection and reload, or start blank.'
                 : 'No curriculum schedule exists for this subject and grade yet — start blank and fill it in yourself.'}
@@ -223,7 +223,7 @@ export default function ForecastForm() {
         <div className="space-y-4">
           <div className="card p-6">
             <p className="section-heading">Summary</p>
-            <p className="mt-2 text-sm text-slate-700">
+            <p className="mt-2 text-sm text-text">
               {subjects.find((s) => s.id === subjectId)?.name || subjectId} · {gradeLabel(grade)} · Term {term} · {rows.length} weeks
             </p>
             <div className="mt-4">

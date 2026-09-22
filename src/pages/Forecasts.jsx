@@ -12,6 +12,7 @@ import EmptyState from '../components/EmptyState'
 import ConfirmModal from '../components/ConfirmModal'
 import NotesTabs from '../components/NotesTabs'
 import SubjectIcon from '../components/SubjectIcon'
+import { PageHeader } from '../ui'
 import { gradeLabel } from '../lib/grades'
 
 /* Shared = readable by the network; `private` is author-only (rules-enforced). */
@@ -41,13 +42,11 @@ export default function Forecasts() {
 
   return (
     <div>
-      <header className="mb-6 flex flex-wrap items-end justify-between gap-3">
-        <div>
-          <h1 className="page-title">Schemes of learning</h1>
-          <p className="page-subtitle">Term schemes built from the curriculum schedule, exportable to Word and PDF.</p>
-        </div>
-        <Link to="/portal/forecasts/new" className="btn-primary">New scheme</Link>
-      </header>
+      <PageHeader
+        title="Schemes of learning"
+        subtitle="Term schemes built from the curriculum schedule, exportable to Word and PDF."
+        actions={<Link to="/portal/forecasts/new" className="btn-primary">New scheme</Link>}
+      />
 
       <NotesTabs
         tabs={[

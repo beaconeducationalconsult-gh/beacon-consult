@@ -15,6 +15,7 @@ import { fmtDate } from '../lib/academicCalendar'
 import { downloadNoteDocx } from '../lib/noteDocx'
 import { buildNotePdf, downloadNotePdf } from '../lib/notePdf'
 import SaveToLibrary from '../components/SaveToLibrary'
+import { BackLink } from '../ui'
 import { suggestFilename } from '../lib/generatedDocs'
 
 /** A note plus its comment thread (subcollection `comments`). */
@@ -112,7 +113,7 @@ export default function NoteView() {
 
   return (
     <div>
-      <Link to="/portal/notes" className="mb-6 inline-block text-sm text-slate-500 hover:text-slate-800">← Study notes</Link>
+      <BackLink to="/portal/notes" className="mb-6">Study notes</BackLink>
 
       <header className="mb-6">
         <h1 className="page-title text-3xl">{note.title}</h1>
@@ -144,10 +145,10 @@ export default function NoteView() {
         </div>
       </header>
 
-      {note.summary && <p className="card mb-4 p-4 text-sm text-slate-600">{note.summary}</p>}
+      {note.summary && <p className="card mb-4 p-4 text-sm text-text">{note.summary}</p>}
 
       <article className="card p-8">
-        <div className="prose prose-slate max-w-none" dangerouslySetInnerHTML={{ __html: note.content || '' }} />
+        <div className="prose prose-slate dark:prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: note.content || '' }} />
       </article>
 
       <section className="mt-8">
@@ -171,18 +172,18 @@ export default function NoteView() {
         </form>
 
         {comments === null && <SkeletonList rows={2} />}
-        {comments?.length === 0 && <p className="mt-4 text-sm text-slate-500">No comments yet — start the conversation.</p>}
+        {comments?.length === 0 && <p className="mt-4 text-sm text-muted">No comments yet — start the conversation.</p>}
 
         <ul className="mt-4 space-y-3">
           {comments?.map((comment) => (
             <li key={comment.id} className="card p-4">
               <p className="card-meta">
-                <span className="font-semibold text-slate-700">{comment.authorName}</span> ·{' '}
+                <span className="font-semibold text-heading">{comment.authorName}</span> ·{' '}
                 {fmtDate(comment.createdAt)}
               </p>
-              <p className="mt-2 text-sm text-slate-700">{comment.text}</p>
+              <p className="mt-2 text-sm text-text">{comment.text}</p>
               {(comment.authorId === user.uid || isAdmin) && (
-                <button type="button" className="mt-2 text-xs font-semibold text-red-600 hover:underline" onClick={() => removeComment(comment.id)}>
+                <button type="button" className="mt-2 text-xs font-semibold text-danger-600 hover:underline dark:text-danger-500" onClick={() => removeComment(comment.id)}>
                   Delete
                 </button>
               )}

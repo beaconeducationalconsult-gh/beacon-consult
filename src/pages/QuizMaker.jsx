@@ -117,7 +117,7 @@ export default function QuizMaker() {
             build={() => buildQuestionPaper(chosen, quizOptions()).output('blob')}
           />
         </div>
-        <p className="w-full text-sm text-slate-600 sm:w-auto">
+        <p className="w-full text-sm text-text sm:w-auto">
           <span className="font-semibold">{chosen.length}</span> selected · {totalMarks} marks
         </p>
       </div>
@@ -137,13 +137,13 @@ export default function QuizMaker() {
           <li key={question.id} className="card flex items-start gap-3 p-4">
             <input
               type="checkbox"
-              className="mt-1 h-4 w-4 rounded border-slate-300 text-brand-600"
+              className="mt-1 h-4 w-4 rounded border-line-2 text-brand-600"
               checked={selected.includes(question.id)}
               onChange={() => toggle(question.id)}
               aria-label="Include in quiz"
             />
             <div className="min-w-0 flex-1">
-              <p className="text-sm text-slate-800">{question.prompt || question.question}</p>
+              <p className="text-sm text-heading">{question.prompt || question.question}</p>
               <p className="card-meta mt-1">
                 {question.subjectName || question.subjectId} · {gradeLabel(question.grade)} · {question.marks || 1} mark(s)
                 {question.answer ? ' · has answer' : ''}

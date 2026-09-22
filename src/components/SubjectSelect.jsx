@@ -43,18 +43,18 @@ export default function SubjectSelect({
         </select>
 
         {failed && (
-          <p role="alert" className="mt-1 text-xs text-amber-700">
+          <p role="alert" className="mt-1 text-xs text-warning-700 dark:text-warning-500">
             Could not load the {label ? `${label} ` : ''}subject list. Check your connection,
             then reload.
           </p>
         )}
 
         {empty && (
-          <p className="mt-1 text-xs text-slate-500">No subjects are listed for this grade.</p>
+          <p className="mt-1 text-xs text-muted">No subjects are listed for this grade.</p>
         )}
 
         {!failed && selected?.verified === false && (
-          <p className="mt-1 text-xs text-amber-700">
+          <p className="mt-1 text-xs text-warning-700 dark:text-warning-500">
             {selected.name} has not been cross-checked against the official NaCCA PDF yet.
             The indicators are from the published curriculum, but treat their wording as
             provisional.

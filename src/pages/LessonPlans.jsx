@@ -12,6 +12,7 @@ import EmptyState from '../components/EmptyState'
 import ConfirmModal from '../components/ConfirmModal'
 import NotesTabs from '../components/NotesTabs'
 import SubjectIcon from '../components/SubjectIcon'
+import { PageHeader } from '../ui'
 import { gradeLabel } from '../lib/grades'
 
 /*
@@ -45,16 +46,16 @@ export default function LessonPlans() {
 
   return (
     <div>
-      <header className="mb-6 flex flex-wrap items-end justify-between gap-3">
-        <div>
-          <h1 className="page-title">Lesson plans</h1>
-          <p className="page-subtitle">Indicator-linked plans you can export to Word or PDF.</p>
-        </div>
-        <div className="flex gap-2">
-          <Link to="/portal/curriculum" className="btn-secondary">Start from curriculum</Link>
-          <Link to="/portal/plans/new" className="btn-primary">New plan</Link>
-        </div>
-      </header>
+      <PageHeader
+        title="Lesson plans"
+        subtitle="Indicator-linked plans you can export to Word or PDF."
+        actions={
+          <>
+            <Link to="/portal/curriculum" className="btn-secondary">Start from curriculum</Link>
+            <Link to="/portal/plans/new" className="btn-primary">New plan</Link>
+          </>
+        }
+      />
 
       <NotesTabs
         tabs={[
@@ -87,7 +88,7 @@ export default function LessonPlans() {
                 <p className="card-meta truncate">
                   {plan.subjectName || plan.subjectId} · {gradeLabel(plan.grade)} · Term {plan.term}, week {plan.week}
                 </p>
-                {plan.indicatorDescription && <p className="mt-2 line-clamp-2 text-sm text-slate-600">{plan.indicatorDescription}</p>}
+                {plan.indicatorDescription && <p className="mt-2 line-clamp-2 text-sm text-text">{plan.indicatorDescription}</p>}
                 <p className="card-meta mt-2">{plan.authorName}</p>
                 {(plan.authorId === user.uid || isAdmin) && (
                   <div className="mt-3 flex gap-2">

@@ -9,6 +9,7 @@ import SubjectSelect from '../components/SubjectSelect'
 import { GRADES, TERMS, gradeLabel } from '../lib/grades'
 import { buildLessonSlidesPptx, downloadLessonSlidesPptx } from '../lib/lessonSlidesPptx'
 import SaveToLibrary from '../components/SaveToLibrary'
+import { BackLink } from '../ui'
 import { suggestFilename } from '../lib/generatedDocs'
 
 const emptySlide = () => ({
@@ -128,7 +129,7 @@ export default function SlideLessonForm() {
 
   return (
     <form onSubmit={save}>
-      <Link to={`/portal/slides/${deck.id}`} className="mb-6 inline-block text-sm text-slate-500 hover:text-slate-800">← Back to the deck</Link>
+      <BackLink to={`/portal/slides/${deck.id}`} className="mb-6">Back to the deck</BackLink>
 
       <header className="mb-6">
         <h1 className="page-title">Edit deck</h1>
@@ -191,7 +192,7 @@ export default function SlideLessonForm() {
               <button type="button" className="btn-ghost px-2 py-1 text-xs" onClick={() => move(index, 1)} disabled={index === (deck.slides?.length || 0) - 1}>↓</button>
               <button
                 type="button"
-                className="btn-ghost px-2 py-1 text-xs text-red-600"
+                className="btn-ghost px-2 py-1 text-xs text-danger-600 dark:text-danger-500"
                 onClick={() => setDeck((c) => ({ ...c, slides: c.slides.filter((_, i) => i !== index) }))}
               >
                 Remove

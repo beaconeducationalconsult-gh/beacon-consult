@@ -28,7 +28,7 @@ export default function FractionStripModel() {
           onChange={(event) => onChange({ ...value, numerator: Math.max(0, Math.min(value.denominator, Number(event.target.value))) })}
           aria-label={`${label} numerator`}
         />
-        <span className="text-slate-500">/</span>
+        <span className="text-muted">/</span>
         <select
           className="input w-20 py-1"
           value={value.denominator}
@@ -41,11 +41,11 @@ export default function FractionStripModel() {
           {DENOMINATORS.map((d) => <option key={d} value={d}>{d}</option>)}
         </select>
       </div>
-      <div className="flex h-12 w-full overflow-hidden rounded border border-slate-300">
+      <div className="flex h-12 w-full overflow-hidden rounded border border-line-2">
         {Array.from({ length: value.denominator }, (_, i) => (
           <div
             key={i}
-            className="flex-1 border-r border-slate-300 last:border-r-0"
+            className="flex-1 border-r border-line-2 last:border-r-0"
             style={{ backgroundColor: i < value.numerator ? colour : 'white' }}
           />
         ))}
@@ -71,28 +71,28 @@ export default function FractionStripModel() {
       {strip(right, setRight, 'Strip B', '#f59e0b')}
 
       <div className="grid gap-3 sm:grid-cols-3">
-        <div className="rounded-lg bg-slate-50 p-3">
+        <div className="rounded-lg bg-surface-2 p-3">
           <p className="label-caps">Which is more?</p>
-          <p className="text-xl font-semibold text-slate-900">
+          <p className="text-xl font-semibold text-heading">
             {left.numerator}/{left.denominator} {equal ? '=' : leftBigger ? '>' : '<'} {right.numerator}/{right.denominator}
           </p>
         </div>
-        <div className="rounded-lg bg-slate-50 p-3">
+        <div className="rounded-lg bg-surface-2 p-3">
           <p className="label-caps">Simplest form</p>
-          <p className="text-sm text-slate-700">
+          <p className="text-sm text-text">
             A = {simplify(left)} · B = {simplify(right)}
           </p>
         </div>
-        <div className="rounded-lg bg-slate-50 p-3">
+        <div className="rounded-lg bg-surface-2 p-3">
           <p className="label-caps">As decimals</p>
-          <p className="text-sm text-slate-700">
+          <p className="text-sm text-text">
             A = {(left.numerator / left.denominator).toFixed(2)} · B = {(right.numerator / right.denominator).toFixed(2)}
           </p>
         </div>
       </div>
 
       {equal && left.numerator !== right.numerator && (
-        <p className="text-sm text-emerald-700">
+        <p className="text-sm text-success-600 dark:text-success-500">
           A and B are equivalent: {simplify(left)} and {simplify(right)} name the same amount.
         </p>
       )}

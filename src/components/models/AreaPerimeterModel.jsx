@@ -41,7 +41,7 @@ export default function AreaPerimeterModel() {
 
       <div className="mt-4 flex flex-wrap items-start gap-6">
         <div
-          className="relative rounded border-t-2 border-l-2 border-brand-600 bg-brand-50"
+          className="relative rounded border-t-2 border-l-2 border-brand-600 bg-brand-50 dark:bg-brand-500/20"
           style={{ width: width * UNIT, height: height * UNIT }}
           role="img"
           aria-label={`Rectangle ${width} cm by ${height} cm`}
@@ -49,7 +49,7 @@ export default function AreaPerimeterModel() {
           {Array.from({ length: width * height }, (_, i) => (
             <span
               key={i}
-              className="absolute border-r border-b border-brand-200"
+              className="absolute border-r border-b border-brand-200 dark:border-brand-500/30"
               style={{
                 width: UNIT, height: UNIT,
                 left: (i % width) * UNIT,
@@ -62,19 +62,19 @@ export default function AreaPerimeterModel() {
         <dl className="space-y-2 text-sm">
           <div>
             <dt className="label-caps">Perimeter</dt>
-            <dd className="text-lg text-slate-900">
+            <dd className="text-lg text-heading">
               2 × ({width} + {height}) = <strong>{perimeter} cm</strong>
             </dd>
           </div>
           <div>
             <dt className="label-caps">Area</dt>
-            <dd className="text-lg text-slate-900">
+            <dd className="text-lg text-heading">
               {width} × {height} = <strong>{area} square units</strong>
             </dd>
           </div>
           <div>
             <dt className="label-caps">Counted, not multiplied</dt>
-            <dd className="text-slate-600">
+            <dd className="text-text">
               {width} rows of {height}… that is {area} squares — the same as multiplying, which is
               the formula the class is deriving.
             </dd>
@@ -82,21 +82,21 @@ export default function AreaPerimeterModel() {
         </dl>
       </div>
 
-      <div className="mt-4 rounded-lg bg-slate-50 p-3">
+      <div className="mt-4 rounded-lg bg-surface-2 p-3">
         <p className="label-caps mb-2">Rectangles with a perimeter of {perimeter} cm</p>
-        <div className="flex flex-wrap gap-2 text-sm text-slate-700">
+        <div className="flex flex-wrap gap-2 text-sm text-text">
           {samePerimeter.map(({ width: w, height: h }) => (
             <button
               key={w}
               type="button"
-              className={`chip ${w === width ? 'chip-brand' : 'bg-white'}`}
+              className={w === width ? 'chip-brand' : 'chip bg-surface'}
               onClick={() => { setWidth(w); setHeight(h) }}
             >
               {w} × {h} = {w * h} sq units
             </button>
           ))}
         </div>
-        <p className="mt-2 text-xs text-slate-500">
+        <p className="mt-2 text-xs text-muted">
           Every rectangle here uses the same fence. The square holds the most area.
         </p>
       </div>

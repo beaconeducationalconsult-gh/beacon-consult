@@ -61,12 +61,12 @@ export default function SubjectBrowser() {
 
   return (
     <div>
-      <nav className="mb-6 flex flex-wrap items-center gap-1 text-sm text-slate-500">
-        <Link to="/portal/curriculum" className="hover:text-slate-800">All grades</Link>
+      <nav className="mb-6 flex flex-wrap items-center gap-1 text-sm text-muted">
+        <Link to="/portal/curriculum" className="hover:text-heading">All grades</Link>
         <span aria-hidden="true">/</span>
-        <Link to={`/portal/curriculum/${grade}`} className="hover:text-slate-800">{gradeLabel(grade)}</Link>
+        <Link to={`/portal/curriculum/${grade}`} className="hover:text-heading">{gradeLabel(grade)}</Link>
         <span aria-hidden="true">/</span>
-        <span className="text-slate-800">{subject?.name || subjectId}</span>
+        <span className="text-heading">{subject?.name || subjectId}</span>
       </nav>
 
       <header className="mb-8 flex flex-wrap items-start gap-4">
@@ -146,14 +146,14 @@ export default function SubjectBrowser() {
       <div className="space-y-4">
         {tree.map((strand) => (
           <section key={strand.name} className="card overflow-hidden">
-            <div className={`border-b border-slate-100 px-5 py-4 ${subjectTheme(subjectId).bg}`}>
+            <div className={`border-b border-line px-5 py-4 ${subjectTheme(subjectId).bg}`}>
               <h2 className={`font-semibold ${subjectTheme(subjectId).text}`}>
                 {strand.number ? `${strand.number}. ` : ''}{strand.name}
               </h2>
               <p className="card-meta mt-0.5">{strand.subStrands.length} sub-strand(s)</p>
             </div>
 
-            <ul className="divide-y divide-slate-100">
+            <ul className="divide-y divide-line">
               {strand.subStrands.map((sub) => {
                 const isOpen = openSub === `${strand.name}|${sub.name}`
                 const count = sub.standards.reduce((n, std) => n + std.indicators.length, 0)
@@ -163,34 +163,34 @@ export default function SubjectBrowser() {
                       type="button"
                       aria-expanded={isOpen}
                       onClick={() => setOpenSub(isOpen ? null : `${strand.name}|${sub.name}`)}
-                      className="flex w-full items-center justify-between gap-3 px-5 py-3 text-left hover:bg-slate-50"
+                      className="flex w-full items-center justify-between gap-3 px-5 py-3 text-left hover:bg-surface-2"
                     >
                       <span className="min-w-0">
-                        <span className="block text-sm font-medium text-slate-800">{sub.name}</span>
+                        <span className="block text-sm font-medium text-heading">{sub.name}</span>
                         <span className="card-meta">{sub.standards.length} content standard(s) · {count} indicator(s)</span>
                       </span>
-                      <span className="text-slate-400">{isOpen ? '−' : '+'}</span>
+                      <span className="text-subtle">{isOpen ? '−' : '+'}</span>
                     </button>
 
                     {isOpen && (
-                      <div className="space-y-4 bg-slate-50/60 px-5 pb-5 pt-2">
+                      <div className="space-y-4 bg-surface-2/60 px-5 pb-5 pt-2">
                         {sub.standards.map((standard) => (
                           <div key={standard.code}>
-                            <p className="text-xs font-semibold text-slate-500">{standard.code}</p>
+                            <p className="text-xs font-semibold text-muted">{standard.code}</p>
                             {standard.description && (
-                              <p className="mt-0.5 text-sm text-slate-700">{standard.description}</p>
+                              <p className="mt-0.5 text-sm text-text">{standard.description}</p>
                             )}
                             <ul className="mt-2 space-y-2">
                               {standard.indicators.map((indicator) => (
-                                <li key={indicator.id || indicator.code} className="rounded-lg border border-slate-200 bg-white p-3">
+                                <li key={indicator.id || indicator.code} className="rounded-lg border border-line-2 bg-surface p-3">
                                   <div className="flex flex-wrap items-center gap-2">
-                                    <span className="font-mono text-xs font-semibold text-brand-700">{indicator.code}</span>
-                                    {isPlaceholder(indicator.description) && <span className="chip bg-amber-50 text-amber-700">placeholder</span>}
+                                    <span className="font-mono text-xs font-semibold text-brand-700 dark:text-brand-300">{indicator.code}</span>
+                                    {isPlaceholder(indicator.description) && <span className="chip bg-warning-50 text-warning-700 dark:bg-warning-500/15 dark:text-warning-500">placeholder</span>}
                                   </div>
-                                  <p className="mt-1 text-sm text-slate-700">{indicator.description}</p>
+                                  <p className="mt-1 text-sm text-text">{indicator.description}</p>
                                   <Link
                                     to={`/portal/plans/new?indicator=${encodeURIComponent(indicator.code)}&grade=${grade}`}
-                                    className="mt-2 inline-block text-xs font-semibold text-brand-700 hover:underline"
+                                    className="mt-2 inline-block text-xs font-semibold text-brand-700 dark:text-brand-300 hover:underline"
                                   >
                                     Plan a lesson on this →
                                   </Link>

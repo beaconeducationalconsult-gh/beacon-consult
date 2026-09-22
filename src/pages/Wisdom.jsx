@@ -35,17 +35,17 @@ export default function Wisdom() {
       {daily && (
         <blockquote className="card border-l-4 border-l-accent-500 p-8">
           <p className="section-heading">Today</p>
-          <p className="mt-2 font-display text-2xl leading-snug text-slate-900">“{daily.text}”</p>
-          <footer className="mt-4 text-sm text-slate-500">
+          <p className="mt-2 font-display text-2xl leading-snug text-heading">“{daily.text}”</p>
+          <footer className="mt-4 text-sm text-muted">
             — {daily.author}
-            {daily.meaning && <span className="mt-2 block italic text-slate-600">{daily.meaning}</span>}
+            {daily.meaning && <span className="mt-2 block italic text-text">{daily.meaning}</span>}
           </footer>
           <button
             type="button"
             onClick={() => like(daily)}
             aria-pressed={Boolean(likes[daily.id]?.likedBy?.includes(user.uid))}
             className={`mt-5 inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-xs font-semibold ${
-              likes[daily.id]?.likedBy?.includes(user.uid) ? 'bg-brand-600 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+              likes[daily.id]?.likedBy?.includes(user.uid) ? 'bg-brand-600 text-white' : 'bg-surface-2 text-muted hover:bg-line'
             }`}
           >
             ♥ {likes[daily.id]?.count || 0}
@@ -53,11 +53,11 @@ export default function Wisdom() {
         </blockquote>
       )}
 
-      <div className="mt-8 flex gap-1 border-b border-slate-200" role="tablist">
-        <button type="button" role="tab" aria-selected={tab === 'quotes'} onClick={() => setTab('quotes')} className={`-mb-px border-b-2 px-4 py-2.5 text-sm font-semibold ${tab === 'quotes' ? 'border-brand-600 text-brand-700' : 'border-transparent text-slate-500'}`}>
+      <div className="mt-8 flex gap-1 border-b border-line-2" role="tablist">
+        <button type="button" role="tab" aria-selected={tab === 'quotes'} onClick={() => setTab('quotes')} className={`-mb-px border-b-2 px-4 py-2.5 text-sm font-semibold ${tab === 'quotes' ? 'border-brand-600 text-brand-700 dark:text-brand-300' : 'border-transparent text-muted'}`}>
           Quotes & proverbs
         </button>
-        <button type="button" role="tab" aria-selected={tab === 'theories'} onClick={() => setTab('theories')} className={`-mb-px border-b-2 px-4 py-2.5 text-sm font-semibold ${tab === 'theories' ? 'border-brand-600 text-brand-700' : 'border-transparent text-slate-500'}`}>
+        <button type="button" role="tab" aria-selected={tab === 'theories'} onClick={() => setTab('theories')} className={`-mb-px border-b-2 px-4 py-2.5 text-sm font-semibold ${tab === 'theories' ? 'border-brand-600 text-brand-700 dark:text-brand-300' : 'border-transparent text-muted'}`}>
           Teaching theories
         </button>
       </div>
@@ -65,9 +65,9 @@ export default function Wisdom() {
       {tab === 'quotes' ? (
         <>
           <div className="mt-4 flex flex-wrap gap-2">
-            <button type="button" onClick={() => setTag(null)} className={`chip ${!tag ? 'bg-brand-600 text-white' : 'hover:bg-slate-200'}`}>All</button>
+            <button type="button" onClick={() => setTag(null)} className={`chip ${!tag ? 'bg-brand-600 text-white' : 'hover:bg-line'}`}>All</button>
             {tags.map((t) => (
-              <button key={t} type="button" onClick={() => setTag(t)} className={`chip ${tag === t ? 'bg-brand-600 text-white' : 'hover:bg-slate-200'}`}>{t}</button>
+              <button key={t} type="button" onClick={() => setTag(t)} className={`chip ${tag === t ? 'bg-brand-600 text-white' : 'hover:bg-line'}`}>{t}</button>
             ))}
           </div>
           <ul className="mt-4 space-y-3">
@@ -76,7 +76,7 @@ export default function Wisdom() {
               return (
                 <li key={quote.id} className="card flex items-start justify-between gap-4 p-5">
                   <div className="min-w-0">
-                    <p className="text-slate-800">“{quote.text}”</p>
+                    <p className="text-heading">“{quote.text}”</p>
                     <p className="card-meta mt-2">— {quote.author}</p>
                     {quote.meaning && <p className="card-meta mt-1 italic">{quote.meaning}</p>}
                   </div>
@@ -84,7 +84,7 @@ export default function Wisdom() {
                     type="button"
                     onClick={() => like(quote)}
                     aria-pressed={liked}
-                    className={`shrink-0 rounded-full px-3 py-1.5 text-xs font-semibold ${liked ? 'bg-brand-600 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}
+                    className={`shrink-0 rounded-full px-3 py-1.5 text-xs font-semibold ${liked ? 'bg-brand-600 text-white' : 'bg-surface-2 text-muted hover:bg-line'}`}
                   >
                     ♥ {likes[quote.id]?.count || 0}
                   </button>
@@ -100,7 +100,7 @@ export default function Wisdom() {
               <p className="section-heading">This week</p>
               <h2 className="mt-1 card-title text-lg">{weekly.title}</h2>
               <p className="card-meta">{weekly.theorist}</p>
-              <p className="mt-2 text-sm text-slate-600">{weekly.definition}</p>
+              <p className="mt-2 text-sm text-text">{weekly.definition}</p>
             </li>
           )}
           {theories.map((theory) => (
@@ -110,8 +110,8 @@ export default function Wisdom() {
                 <span className="chip">{theory.category}</span>
               </div>
               <p className="card-meta mt-1">{theory.theorist}</p>
-              <p className="mt-3 text-sm text-slate-600">{theory.definition}</p>
-              <p className="mt-3 rounded-lg bg-accent-500/10 p-3 text-sm text-slate-700">
+              <p className="mt-3 text-sm text-text">{theory.definition}</p>
+              <p className="mt-3 rounded-lg bg-accent-500/10 p-3 text-sm text-text">
                 <span className="font-semibold">In your classroom: </span>
                 {theory.classroom}
               </p>

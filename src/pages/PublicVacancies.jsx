@@ -3,6 +3,7 @@ import { collection, getDocs, query, where } from 'firebase/firestore'
 import { db } from '../firebase'
 import { SkeletonList } from '../components/Skeleton'
 import EmptyState from '../components/EmptyState'
+import { Badge } from '../ui'
 import { fmtDate, daysUntil } from '../lib/academicCalendar'
 
 /** Public: `vacancies` where status == 'published' is readable without auth. */
@@ -49,21 +50,21 @@ export default function PublicVacancies() {
                     <p className="card-meta mt-1">{vacancy.school || vacancy.schoolName}</p>
                   </div>
                   {closing != null && (
-                    <span className={`chip ${closing < 0 ? 'bg-slate-100 text-slate-500' : closing <= 7 ? 'bg-red-50 text-red-700' : 'bg-emerald-50 text-emerald-700'}`}>
+                    <Badge tone={closing < 0 ? 'neutral' : closing <= 7 ? 'danger' : 'success'}>
                       {closing < 0 ? 'Closed' : closing === 0 ? 'Closes today' : `${closing} days left`}
-                    </span>
+                    </Badge>
                   )}
                 </div>
-                {vacancy.description && <p className="mt-4 text-sm text-slate-600">{vacancy.description}</p>}
-                <dl className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-xs text-slate-500">
+                {vacancy.description && <p className="mt-4 text-sm text-text">{vacancy.description}</p>}
+                <dl className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-xs text-muted">
                   {vacancy.grade && <div><dt className="inline font-semibold">Grade: </dt><dd className="inline">{vacancy.grade}</dd></div>}
                   {vacancy.subject && <div><dt className="inline font-semibold">Subject: </dt><dd className="inline">{vacancy.subject}</dd></div>}
                   {vacancy.deadline && <div><dt className="inline font-semibold">Deadline: </dt><dd className="inline">{fmtDate(vacancy.deadline)}</dd></div>}
                 </dl>
                 {vacancy.contact && (
                   <p className="mt-4 text-sm">
-                    <span className="font-semibold text-slate-700">How to apply: </span>
-                    <span className="text-slate-600">{vacancy.contact}</span>
+                    <span className="font-semibold text-heading">How to apply: </span>
+                    <span className="text-text">{vacancy.contact}</span>
                   </p>
                 )}
               </article>

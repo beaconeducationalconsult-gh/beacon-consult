@@ -45,7 +45,7 @@ export default function PublicArticles() {
             <article key={article.id} className="card card-hover p-6">
               <Link to={`/articles/${article.id}`} className="block">
                 <h2 className="card-title text-lg">{article.title}</h2>
-                {article.excerpt && <p className="mt-2 text-sm text-slate-600">{article.excerpt}</p>}
+                {article.excerpt && <p className="mt-2 text-sm text-text">{article.excerpt}</p>}
                 <p className="card-meta mt-3">
                   {article.authorName || 'Beacon member'} · {fmtDate(article.createdAt)}
                   {article.category ? ` · ${article.category}` : ''}

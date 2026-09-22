@@ -12,9 +12,9 @@ import ConfirmModal from '../components/ConfirmModal'
 import { fmtDate } from '../lib/academicCalendar'
 
 const STATUSES = [
-  ['pending', 'Pending', 'bg-amber-50 text-amber-700'],
-  ['approved', 'Approved', 'bg-emerald-50 text-emerald-700'],
-  ['suspended', 'Suspended', 'bg-red-50 text-red-700'],
+  ['pending', 'Pending', 'bg-warning-50 text-warning-700 dark:bg-warning-500/15 dark:text-warning-500'],
+  ['approved', 'Approved', 'bg-success-50 text-success-700 dark:bg-success-500/15 dark:text-success-500'],
+  ['suspended', 'Suspended', 'bg-danger-50 text-danger-700 dark:bg-danger-500/15 dark:text-danger-500'],
 ]
 
 /** Admin only — ProtectedLayout redirects members away from the role gate. */
@@ -83,7 +83,7 @@ export default function Members() {
               <div className="min-w-0">
                 <p className="card-title">
                   {member.name || 'Unnamed member'}
-                  {member.role === 'admin' && <span className="chip bg-amber-50 text-amber-700 ml-2">admin</span>}
+                  {member.role === 'admin' && <span className="chip bg-warning-50 text-warning-700 dark:bg-warning-500/15 dark:text-warning-500 ml-2">admin</span>}
                 </p>
                 <p className="card-meta">{member.email} · {member.school || 'school not given'}</p>
                 <p className="card-meta mt-1">

@@ -147,7 +147,7 @@ export default function Search() {
       </div>
 
       {needle.length < 2 && (
-        <p className="mt-6 text-sm text-slate-500">Type at least two characters to search.</p>
+        <p className="mt-6 text-sm text-muted">Type at least two characters to search.</p>
       )}
 
       {needle.length >= 2 && (
@@ -155,18 +155,18 @@ export default function Search() {
           <section>
             <h2 className="section-heading mb-3">Curriculum · {gradeLabel(loadedGrade)}</h2>
             {curriculumError ? (
-              <p className="card p-5 text-sm text-rose-700">
+              <p className="card p-5 text-sm text-danger-600 dark:text-danger-500">
                 The {gradeLabel(loadedGrade)} curriculum could not be loaded ({curriculumError.code || 'error'}), so
                 curriculum matches are missing from these results.
               </p>
             ) : curriculumHits.length === 0 ? (
-              <p className="card p-5 text-sm text-slate-500">No indicators match in this grade. Try another grade.</p>
+              <p className="card p-5 text-sm text-muted">No indicators match in this grade. Try another grade.</p>
             ) : (
               <ul className="space-y-2">
                 {curriculumHits.map((indicator) => (
                   <li key={indicator.id || indicator.code} className="card p-4">
-                    <p className="font-mono text-xs font-semibold text-brand-700">{indicator.code}</p>
-                    <p className="mt-1 text-sm text-slate-700">{indicator.description}</p>
+                    <p className="font-mono text-xs font-semibold text-brand-700 dark:text-brand-300">{indicator.code}</p>
+                    <p className="mt-1 text-sm text-text">{indicator.description}</p>
                     <p className="card-meta mt-1">{indicator.strandName} · {indicator.subStrandName}</p>
                     <Link to={`/portal/plans/new?indicator=${encodeURIComponent(indicator.code)}&grade=${loadedGrade}`} className="link mt-2 inline-block text-xs">
                       Plan a lesson →
@@ -190,7 +190,7 @@ export default function Search() {
                     <span className="chip">{labelFor(row)}</span>
                     {row.authorName && <span className="card-meta">{row.authorName}</span>}
                   </div>
-                  <Link to={linkFor(row)} className="mt-2 block text-sm font-medium text-slate-800 hover:underline">
+                  <Link to={linkFor(row)} className="mt-2 block text-sm font-medium text-heading hover:underline">
                     {row.title || row.prompt || row.question || row.role || row.subjectName || 'Untitled'}
                   </Link>
                 </li>

@@ -28,7 +28,7 @@ export default function FactorArrayModel() {
   return (
     <div>
       <label className="label-caps" htmlFor="fa-count">
-        Counters: <span className="text-slate-900">{count}</span>
+        Counters: <span className="text-heading">{count}</span>
       </label>
       <input
         id="fa-count"
@@ -42,7 +42,7 @@ export default function FactorArrayModel() {
 
       <div className="mt-4 flex flex-wrap items-start gap-6">
         <div
-          className="grid gap-1 rounded-lg bg-slate-50 p-3"
+          className="grid gap-1 rounded-lg bg-surface-2 p-3"
           style={{ gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))` }}
           role="img"
           aria-label={`${count} counters arranged as ${rows} rows of ${cols}`}

@@ -94,16 +94,16 @@ export default function Progress() {
       </div>
 
       {!subjectId ? (
-        <p className="card p-6 text-sm text-slate-500">Choose a subject to start ticking off weeks.</p>
+        <p className="card p-6 text-sm text-muted">Choose a subject to start ticking off weeks.</p>
       ) : loading ? (
         <div className="card h-40 animate-pulse" />
       ) : (
         <div className="card p-6">
           <div className="flex items-center justify-between">
             <p className="section-heading">Weeks taught</p>
-            <p className="text-sm font-semibold text-slate-700">{weeks.length}{scheduledWeeks.length ? ` / ${scheduledWeeks.length} scheduled` : ' weeks'}</p>
+            <p className="text-sm font-semibold text-text">{weeks.length}{scheduledWeeks.length ? ` / ${scheduledWeeks.length} scheduled` : ' weeks'}</p>
           </div>
-          <div className="mt-3 h-2 overflow-hidden rounded-full bg-slate-100">
+          <div className="mt-3 h-2 overflow-hidden rounded-full bg-surface-2">
             <div className="h-full rounded-full bg-brand-500 transition-all" style={{ width: `${completion}%` }} />
           </div>
 
@@ -118,7 +118,7 @@ export default function Progress() {
                   aria-pressed={done}
                   onClick={() => toggleWeek(week)}
                   className={`rounded-lg border px-2 py-3 text-sm font-semibold transition-colors ${
-                    done ? 'border-brand-600 bg-brand-600 text-white' : scheduled ? 'border-brand-200 bg-white text-slate-600' : 'border-slate-200 bg-slate-50 text-slate-400'
+                    done ? 'border-brand-600 bg-brand-600 text-white' : scheduled ? 'border-brand-200 bg-surface text-text' : 'border-line-2 bg-surface-2 text-subtle'
                   }`}
                 >
                   Wk {week}

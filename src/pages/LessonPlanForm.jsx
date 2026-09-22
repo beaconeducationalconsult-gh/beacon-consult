@@ -43,7 +43,7 @@ function ListField({ label, hint, value, onChange, rows = 4 }) {
   return (
     <div>
       <label className="label-caps">{label}</label>
-      {hint && <p className="mb-1 text-xs text-slate-500">{hint}</p>}
+      {hint && <p className="mb-1 text-xs text-muted">{hint}</p>}
       <textarea
         key={initial}
         rows={rows}
@@ -60,7 +60,7 @@ function ChipsField({ label, hint, value, onChange }) {
   return (
     <div>
       <label className="label-caps">{label}</label>
-      {hint && <p className="mb-1 text-xs text-slate-500">{hint}</p>}
+      {hint && <p className="mb-1 text-xs text-muted">{hint}</p>}
       <input
         key={initial}
         className="input"
@@ -274,7 +274,7 @@ export default function LessonPlanForm() {
           </div>
 
           {form.inheritedFields?.length > 0 && (
-            <p className="rounded-lg bg-amber-50 p-3 text-sm text-amber-800">
+            <p className="rounded-lg bg-warning-50 p-3 text-sm text-warning-700 dark:bg-warning-500/15 dark:text-warning-500">
               {templateNote(form.inheritedFields)} Edit anything you like — the plan is yours once saved.
             </p>
           )}
@@ -330,7 +330,7 @@ export default function LessonPlanForm() {
         <div className="card space-y-4 p-6">
           <div>
             <p className="section-heading">Class</p>
-            <p className="mt-1 text-sm text-slate-700">
+            <p className="mt-1 text-sm text-text">
               {subjectName} · {gradeLabel(form.grade)} · Term {form.term}, week {form.week} · {form.durationMinutes} minutes
             </p>
           </div>
@@ -338,17 +338,17 @@ export default function LessonPlanForm() {
             <p className="section-heading">Indicators</p>
             <ul className="mt-1 space-y-1">
               {form.indicatorIds.map((item) => (
-                <li key={item.indicatorId} className="text-sm text-slate-700">
-                  <span className="font-mono text-xs text-brand-700">{item.code}</span> — {item.description}
+                <li key={item.indicatorId} className="text-sm text-text">
+                  <span className="font-mono text-xs text-brand-700 dark:text-brand-300">{item.code}</span> — {item.description}
                 </li>
               ))}
             </ul>
           </div>
           <dl className="grid grid-cols-2 gap-3 text-sm sm:grid-cols-4">
             {[['Objectives', form.objectives.length], ['Starter steps', form.starter.length], ['Main steps', form.main.length], ['Plenary steps', form.plenary.length]].map(([label, count]) => (
-              <div key={label} className="rounded-lg bg-slate-50 p-3">
+              <div key={label} className="rounded-lg bg-surface-2 p-3">
                 <dt className="card-meta">{label}</dt>
-                <dd className="font-semibold text-slate-800">{count}</dd>
+                <dd className="font-semibold text-heading">{count}</dd>
               </div>
             ))}
           </dl>

@@ -62,7 +62,7 @@ export default function IndicatorPicker({ grade, subjectId, selected = [], onCha
   // "No indicators match that search." Say which one it is.
   if (error) {
     return (
-      <p role="alert" className="rounded-lg border border-amber-200 bg-amber-50 p-3 text-sm text-amber-800">
+      <p role="alert" className="rounded-lg border border-warning-500/30 bg-warning-50 p-3 text-sm text-warning-700 dark:bg-warning-500/15 dark:text-warning-500">
         Could not load the {gradeLabel(grade)} indicators. Check your connection, then reopen this form.
       </p>
     )
@@ -73,10 +73,10 @@ export default function IndicatorPicker({ grade, subjectId, selected = [], onCha
       {selected.length > 0 && (
         <ul className="mb-3 space-y-2">
           {selected.map((item) => (
-            <li key={item.indicatorId} className="flex items-start justify-between gap-3 rounded-lg bg-brand-50 p-3">
+            <li key={item.indicatorId} className="flex items-start justify-between gap-3 rounded-lg bg-brand-50 p-3 dark:bg-brand-500/15">
               <span className="min-w-0">
-                <span className="block font-mono text-xs font-semibold text-brand-700">{item.code}</span>
-                <span className="block text-sm text-slate-700">{item.description}</span>
+                <span className="block font-mono text-xs font-semibold text-brand-700 dark:text-brand-300">{item.code}</span>
+                <span className="block text-sm text-text">{item.description}</span>
               </span>
               <button
                 type="button"
@@ -98,8 +98,8 @@ export default function IndicatorPicker({ grade, subjectId, selected = [], onCha
         onChange={(e) => setSearch(e.target.value)}
       />
 
-      <div className="mt-3 max-h-80 space-y-1 overflow-y-auto rounded-lg border border-slate-200 p-2">
-        {strands.length === 0 && <p className="p-3 text-sm text-slate-500">No indicators match that search.</p>}
+      <div className="mt-3 max-h-80 space-y-1 overflow-y-auto rounded-lg border border-line-2 p-2">
+        {strands.length === 0 && <p className="p-3 text-sm text-muted">No indicators match that search.</p>}
         {strands.map(([strand, items]) => {
           const open = expandedStrand === strand || Boolean(search.trim())
           return (
@@ -108,7 +108,7 @@ export default function IndicatorPicker({ grade, subjectId, selected = [], onCha
                 type="button"
                 aria-expanded={open}
                 onClick={() => setExpandedStrand(open ? null : strand)}
-                className="flex w-full items-center justify-between rounded px-3 py-2 text-left text-sm font-medium text-slate-700 hover:bg-slate-50"
+                className="flex w-full items-center justify-between rounded px-3 py-2 text-left text-sm font-medium text-text hover:bg-surface-2"
               >
                 {strand}
                 <span className="card-meta">{items.length}</span>
@@ -122,7 +122,7 @@ export default function IndicatorPicker({ grade, subjectId, selected = [], onCha
                         onClick={() => toggle(row)}
                         aria-pressed={isSelected(row)}
                         className={`w-full rounded px-3 py-2 text-left text-sm transition-colors ${
-                          isSelected(row) ? 'bg-brand-50 text-brand-800' : 'hover:bg-slate-50 text-slate-600'
+                          isSelected(row) ? 'bg-brand-50 text-brand-800 dark:bg-brand-500/15 dark:text-brand-200' : 'hover:bg-surface-2 text-text'
                         }`}
                       >
                         <span className="font-mono text-xs">{row.code}</span>

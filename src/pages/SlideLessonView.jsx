@@ -15,6 +15,7 @@ import { gradeLabel } from '../lib/grades'
 import { fmtDate } from '../lib/academicCalendar'
 import { buildLessonSlidesPptx, downloadLessonSlidesPptx } from '../lib/lessonSlidesPptx'
 import SaveToLibrary from '../components/SaveToLibrary'
+import { BackLink } from '../ui'
 import { suggestFilename } from '../lib/generatedDocs'
 
 /**
@@ -124,7 +125,7 @@ export default function SlideLessonView() {
 
   return (
     <div>
-      <Link to="/portal/slides" className="mb-6 inline-block text-sm text-slate-500 hover:text-slate-800">← Slide lessons</Link>
+      <BackLink to="/portal/slides" className="mb-6">Slide lessons</BackLink>
 
       <header className="mb-6">
         <h1 className="page-title text-3xl">{deck.subjectName || deck.subjectId} — {gradeLabel(deck.grade)}</h1>
@@ -157,7 +158,7 @@ export default function SlideLessonView() {
             {slide.objectives?.length > 0 && (
               <div className="mt-3">
                 <p className="label-caps">Objectives</p>
-                <ul className="mt-1 list-disc pl-5 text-sm text-slate-700">
+                <ul className="mt-1 list-disc pl-5 text-sm text-text">
                   {slide.objectives.map((line, i) => <li key={i}>{line}</li>)}
                 </ul>
               </div>
@@ -165,13 +166,13 @@ export default function SlideLessonView() {
             {slide.steps?.length > 0 && (
               <div className="mt-3">
                 <p className="label-caps">Activities</p>
-                <ol className="mt-1 list-decimal pl-5 text-sm text-slate-700">
+                <ol className="mt-1 list-decimal pl-5 text-sm text-text">
                   {slide.steps.map((line, i) => <li key={i}>{line}</li>)}
                 </ol>
               </div>
             )}
             {slide.assessment && (
-              <p className="mt-3 text-sm italic text-amber-700">Check: {slide.assessment}</p>
+              <p className="mt-3 text-sm italic text-warning-700 dark:text-warning-500">Check: {slide.assessment}</p>
             )}
             {slide.keywords?.length > 0 && (
               <p className="card-meta mt-3">{slide.keywords.join(' · ')}</p>
@@ -203,16 +204,16 @@ export default function SlideLessonView() {
         </form>
 
         {comments === null && <SkeletonList rows={2} />}
-        {comments?.length === 0 && <p className="mt-4 text-sm text-slate-500">No comments yet.</p>}
+        {comments?.length === 0 && <p className="mt-4 text-sm text-muted">No comments yet.</p>}
         <ul className="mt-4 space-y-3">
           {comments?.map((comment) => (
             <li key={comment.id} className="card p-4">
               <p className="card-meta">
-                <span className="font-semibold text-slate-700">{comment.authorName}</span> · {fmtDate(comment.createdAt)}
+                <span className="font-semibold text-heading">{comment.authorName}</span> · {fmtDate(comment.createdAt)}
               </p>
-              <p className="mt-2 text-sm text-slate-700">{comment.text}</p>
+              <p className="mt-2 text-sm text-text">{comment.text}</p>
               {(comment.authorId === user.uid || isAdmin) && (
-                <button type="button" className="mt-2 text-xs font-semibold text-red-600 hover:underline" onClick={() => removeComment(comment.id)}>
+                <button type="button" className="mt-2 text-xs font-semibold text-danger-600 hover:underline dark:text-danger-500" onClick={() => removeComment(comment.id)}>
                   Delete
                 </button>
               )}

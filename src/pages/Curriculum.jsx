@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { useGrades } from '../hooks/useCurriculum'
 import { SkeletonGrid } from '../components/Skeleton'
 import EmptyState from '../components/EmptyState'
+import { PageHeader } from '../ui'
 import { gradeLabel, gradeBand } from '../lib/grades'
 
 /** Grade grid. Pure static reads — works offline, no Firestore. */
@@ -10,13 +11,10 @@ export default function Curriculum() {
 
   return (
     <div>
-      <header className="mb-8">
-        <h1 className="page-title">Curriculum</h1>
-        <p className="page-subtitle">
-          The NaCCA standards-based curriculum, KG1 to Basic 9. Pick a grade to browse its subjects
-          and indicators.
-        </p>
-      </header>
+      <PageHeader
+        title="Curriculum"
+        subtitle="The NaCCA standards-based curriculum, KG1 to Basic 9. Pick a grade to browse its subjects and indicators."
+      />
 
       {loading && <SkeletonGrid items={6} />}
       {!loading && error && (

@@ -9,6 +9,7 @@ import EmptyState from '../components/EmptyState'
 import { downloadSchemeDocx } from '../lib/schemeDocx'
 import { buildSchemePdf, downloadSchemePdf } from '../lib/schemePdf'
 import SaveToLibrary from '../components/SaveToLibrary'
+import { BackLink } from '../ui'
 import { suggestFilename } from '../lib/generatedDocs'
 import { gradeLabel } from '../lib/grades'
 
@@ -62,7 +63,7 @@ export default function ForecastView() {
 
   return (
     <div>
-      <Link to="/portal/forecasts" className="mb-6 inline-block text-sm text-slate-500 hover:text-slate-800">← Schemes</Link>
+      <BackLink to="/portal/forecasts" className="mb-6">Schemes</BackLink>
 
       <header className="mb-6 flex flex-wrap items-start justify-between gap-4">
         <div>
@@ -99,7 +100,7 @@ export default function ForecastView() {
 
       <div className="card overflow-x-auto">
         <table className="w-full min-w-[46rem] text-sm">
-          <thead className="bg-slate-50 text-left text-xs uppercase tracking-wide text-slate-500">
+          <thead className="bg-surface-2 text-left text-xs uppercase tracking-wide text-muted">
             <tr>
               <th className="px-4 py-3">Wk</th>
               <th className="px-4 py-3">Strand / Sub-strand</th>
@@ -108,23 +109,23 @@ export default function ForecastView() {
               <th className="px-4 py-3">Resources</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-slate-100">
+          <tbody className="divide-y divide-line">
             {(scheme.rows || []).map((row, index) => (
               <tr key={index} className="align-top">
-                <td className="px-4 py-3 font-semibold text-slate-700">{row.week ?? index + 1}</td>
+                <td className="px-4 py-3 font-semibold text-text">{row.week ?? index + 1}</td>
                 <td className="px-4 py-3">
-                  <p className="font-medium text-slate-800">{row.strandName}</p>
+                  <p className="font-medium text-heading">{row.strandName}</p>
                   <p className="card-meta">{row.subStrandName}</p>
                 </td>
-                <td className="px-4 py-3 text-slate-600">{row.contentStandard || row.contentStandardDescription}</td>
+                <td className="px-4 py-3 text-text">{row.contentStandard || row.contentStandardDescription}</td>
                 <td className="px-4 py-3">
                   <ul className="space-y-1">
                     {(row.indicatorCodes || []).map((code) => (
-                      <li key={code} className="font-mono text-xs text-brand-700">{code}</li>
+                      <li key={code} className="font-mono text-xs text-brand-700 dark:text-brand-300">{code}</li>
                     ))}
                   </ul>
                 </td>
-                <td className="px-4 py-3 text-slate-600">{row.resources}</td>
+                <td className="px-4 py-3 text-text">{row.resources}</td>
               </tr>
             ))}
           </tbody>
@@ -134,7 +135,7 @@ export default function ForecastView() {
       {scheme.notes && (
         <div className="card mt-4 p-5">
           <p className="section-heading">Notes</p>
-          <p className="mt-2 text-sm text-slate-600">{scheme.notes}</p>
+          <p className="mt-2 text-sm text-text">{scheme.notes}</p>
         </div>
       )}
     </div>

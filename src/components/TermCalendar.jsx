@@ -56,8 +56,8 @@ export default function TermCalendar() {
         {selected && (
           <div className="sm:col-span-2">
             <p className="label-caps">Dates</p>
-            <p className="text-sm text-slate-700">{fmtDate(selected.start)} — {fmtDate(selected.end)}</p>
-            <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-slate-100">
+            <p className="text-sm text-text">{fmtDate(selected.start)} — {fmtDate(selected.end)}</p>
+            <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-surface-2">
               <div className="h-full rounded-full bg-brand-500" style={{ width: `${Math.round(termProgress(selected) * 100)}%` }} />
             </div>
           </div>
@@ -94,8 +94,8 @@ export default function TermCalendar() {
                 {scheduled.length > 0 && (
                   <ul className="mt-3 space-y-1">
                     {scheduled.slice(0, 12).map((lesson, index) => (
-                      <li key={index} className="text-sm text-slate-600">
-                        <span className="font-mono text-xs text-brand-700">{lesson.indicatorCode || lesson.code}</span>{' '}
+                      <li key={index} className="text-sm text-text">
+                        <span className="font-mono text-xs text-brand-700 dark:text-brand-300">{lesson.indicatorCode || lesson.code}</span>{' '}
                         {lesson.sessionTitle || lesson.indicatorDescription}
                         {lesson.subjectName && <span className="card-meta"> · {lesson.subjectName}</span>}
                       </li>

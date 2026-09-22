@@ -3,6 +3,7 @@ import { useDoc, useCollection } from '../hooks/useCollection'
 import { SkeletonList } from '../components/Skeleton'
 import DataError from '../components/DataError'
 import EmptyState from '../components/EmptyState'
+import { Avatar } from '../ui'
 import { fmtDate } from '../lib/academicCalendar'
 
 /** Public-facing profile of a member, visible to signed-in members. */
@@ -25,9 +26,7 @@ export default function AuthorPage() {
   return (
     <div>
       <header className="card mb-6 flex flex-wrap items-center gap-4 p-6">
-        <span className="grid h-16 w-16 place-items-center rounded-full bg-brand-600 text-xl font-bold text-white">
-          {(profile.name || '?').slice(0, 1).toUpperCase()}
-        </span>
+        <Avatar name={profile.name} size="lg" />
         <div className="min-w-0 flex-1">
           <h1 className="page-title">{profile.name}</h1>
           <p className="page-subtitle">{profile.school || 'Beacon network'}</p>
@@ -39,11 +38,11 @@ export default function AuthorPage() {
         <dl className="flex gap-6 text-center">
           <div>
             <dt className="card-meta">Posts</dt>
-            <dd className="text-lg font-bold text-slate-800">{posts.length}</dd>
+            <dd className="text-lg font-bold text-heading">{posts.length}</dd>
           </div>
           <div>
             <dt className="card-meta">Plans</dt>
-            <dd className="text-lg font-bold text-slate-800">{plans.length}</dd>
+            <dd className="text-lg font-bold text-heading">{plans.length}</dd>
           </div>
         </dl>
       </header>
@@ -52,14 +51,14 @@ export default function AuthorPage() {
         <section>
           <h2 className="section-heading mb-3">Recent posts</h2>
           {postsError ? (
-            <p className="card p-5 text-sm text-rose-700">Posts could not be loaded ({postsError.code || 'error'}).</p>
+            <p className="card p-5 text-sm text-danger-600 dark:text-danger-500">Posts could not be loaded ({postsError.code || 'error'}).</p>
           ) : posts.length === 0 ? (
-            <p className="card p-5 text-sm text-slate-500">No posts yet.</p>
+            <p className="card p-5 text-sm text-muted">No posts yet.</p>
           ) : (
             <ul className="space-y-3">
               {posts.map((post) => (
                 <li key={post.id} className="card p-4">
-                  <p className="text-sm text-slate-700">{post.content}</p>
+                  <p className="text-sm text-text">{post.content}</p>
                   <p className="card-meta mt-2">
                     {fmtDate(post.timestamp)} · {post.likesCount || 0} likes
                   </p>
@@ -72,14 +71,14 @@ export default function AuthorPage() {
         <section>
           <h2 className="section-heading mb-3">Lesson plans shared</h2>
           {plansError ? (
-            <p className="card p-5 text-sm text-rose-700">Lesson plans could not be loaded ({plansError.code || 'error'}).</p>
+            <p className="card p-5 text-sm text-danger-600 dark:text-danger-500">Lesson plans could not be loaded ({plansError.code || 'error'}).</p>
           ) : plans.length === 0 ? (
-            <p className="card p-5 text-sm text-slate-500">No lesson plans shared yet.</p>
+            <p className="card p-5 text-sm text-muted">No lesson plans shared yet.</p>
           ) : (
             <ul className="space-y-3">
               {plans.map((plan) => (
                 <li key={plan.id} className="card p-4">
-                  <Link to={`/portal/plans/${plan.id}`} className="text-sm font-medium text-slate-800 hover:underline">
+                  <Link to={`/portal/plans/${plan.id}`} className="text-sm font-medium text-heading hover:underline">
                     {(plan.indicatorCodes || [])[0] || plan.subjectName}
                   </Link>
                   <p className="card-meta mt-1">{plan.subjectName} · {plan.grade} · week {plan.week}</p>
