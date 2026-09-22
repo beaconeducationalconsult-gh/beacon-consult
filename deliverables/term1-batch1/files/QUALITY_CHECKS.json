@@ -1,0 +1,24 @@
+{
+  "edition": "Rebuilt after download failure; not byte-identical to previous archive",
+  "scope": "PARTIAL: Maths B4–B8 Weeks 1–12 and both tests; Science/Computing B4–B8 Week 1 only",
+  "word_documents": 41,
+  "weekly_units": 70,
+  "mindmaps": 70,
+  "embedded_mindmaps": 70,
+  "mathematics_tests": 10,
+  "weekly_mcqs": 1400,
+  "weekly_three_part_questions": 700,
+  "test_mcqs": 150,
+  "test_three_part_questions": 150,
+  "total_mcqs": 1550,
+  "total_three_part_questions": 850,
+  "independently_recomputed_numeric_answers": 1409,
+  "answer_position_distribution": {
+    "C": 397,
+    "A": 393,
+    "B": 361,
+    "D": 399
+  },
+  "checks": "DOCX integrity; counts; four distinct alternatives; one keyed answer; embedded images; test numbering; partial independent numeric recomputation; image integrity.",
+  "limits": "Not independently teacher-certified; no full Word pagination render; later Science/Computing weeks and all their tests outstanding."
+}

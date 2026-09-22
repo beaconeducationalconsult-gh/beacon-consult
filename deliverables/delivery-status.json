@@ -1,0 +1,21 @@
+{
+  "batches": [
+    {
+      "id": 1,
+      "folder": "term1-batch1"
+    },
+    {
+      "id": 2,
+      "folder": "term1-batch2-science-b4-b5"
+    }
+  ],
+  "complete_sequences": [
+    "Mathematics B4-B8 Weeks 1-12 with both tests",
+    "Science B4-B5 Weeks 1-12 with both tests"
+  ],
+  "remaining": [
+    "Science B6-B8 Weeks 2 onward and both tests",
+    "Computing B4-B8 Weeks 2 onward and both tests"
+  ],
+  "note": "Teacher-review drafts; full original request incomplete."
+}

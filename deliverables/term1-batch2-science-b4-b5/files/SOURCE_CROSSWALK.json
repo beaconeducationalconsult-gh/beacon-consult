@@ -1,0 +1,218 @@
+[
+  {
+    "title": "Classifying insects, birds, mammals and reptiles",
+    "codes": "B4.1.1.1.1",
+    "page": 24,
+    "week": 1,
+    "grade": 4,
+    "mapping_note": "Matches the supplied Week 1 indicator.",
+    "source_codes": "B4.1.1.1.1"
+  },
+  {
+    "grade": 4,
+    "week": 2,
+    "title": "Animal life processes: movement, nutrition and reproduction",
+    "codes": "B4.1.1.1.2",
+    "source_codes": "B4.1.1.1.2",
+    "mapping_note": "Direct indicator match; feeding categories provide supporting vocabulary.",
+    "page": 24
+  },
+  {
+    "grade": 4,
+    "week": 3,
+    "title": "Plant forms: trees, shrubs, climbers and creepers",
+    "codes": "B4.1.1.2.2",
+    "source_codes": "B4.1.1.1.3",
+    "mapping_note": "Source suffix is absent in local curriculum; plant-form description is taken from B4.1.1.2.2 within the scheduled living-things block.",
+    "page": 24
+  },
+  {
+    "grade": 4,
+    "week": 4,
+    "title": "Comparing the physical features of animal groups",
+    "codes": "B4.1.1.2.3",
+    "source_codes": "B4.1.1.1.4",
+    "mapping_note": "Source suffix is absent locally; use the animal-feature description under B4.1.1.2.3. Includes amphibians as named in that description.",
+    "page": 24
+  },
+  {
+    "grade": 4,
+    "week": 5,
+    "title": "Materials and observable properties",
+    "codes": "Supporting material-property concepts; compare B5.1.2.1.1",
+    "source_codes": "B4.1.2.1.1",
+    "mapping_note": "The cited B4 indicator is absent locally. This introductory properties unit is an explicit editorial interpretation of the scheduled Materials block; confirm with the school.",
+    "page": 24
+  },
+  {
+    "grade": 4,
+    "week": 6,
+    "title": "Liquid mixtures and simple separation",
+    "codes": "B4.1.2.2.1",
+    "source_codes": "B4.1.2.1.2",
+    "mapping_note": "The source suffix is absent locally; liquid–liquid mixture description B4.1.2.2.1 is used within the scheduled Materials block.",
+    "page": 24
+  },
+  {
+    "grade": 4,
+    "week": 7,
+    "title": "Cyclic movements and repeating patterns",
+    "codes": "B4.2.1.1.1",
+    "source_codes": "B4.2.1.1.1",
+    "mapping_note": "Direct indicator match. Classroom models support the idea of recurrence rather than claiming every cycle has the same duration.",
+    "page": 24
+  },
+  {
+    "grade": 4,
+    "week": 8,
+    "title": "Objects in the daytime and nighttime sky",
+    "codes": "B4.2.1.2.1",
+    "source_codes": "B4.2.1.1.2",
+    "mapping_note": "Source suffix is absent locally; sky-object description B4.2.1.2.1 is used within the scheduled Earth Science block.",
+    "page": 24
+  },
+  {
+    "grade": 4,
+    "week": 9,
+    "title": "Evaporation, transpiration and evapotranspiration",
+    "codes": "B4.2.1.3.1",
+    "source_codes": "B4.2.1.1.3",
+    "mapping_note": "Source suffix is absent locally; evapotranspiration description B4.2.1.3.1 supplies the scheduled Earth Science lesson.",
+    "page": 24
+  },
+  {
+    "grade": 4,
+    "week": 10,
+    "title": "Making water safer and preventing recontamination",
+    "codes": "B4.2.1.5.1",
+    "source_codes": "B4.2.1.1.4",
+    "mapping_note": "Source suffix is absent locally; safe-water description B4.2.1.5.1 supplies this Earth Science lesson. This is education, not a guarantee that a classroom treatment produces potable water.",
+    "page": 24
+  },
+  {
+    "grade": 4,
+    "week": 11,
+    "title": "Plant parts and their functions",
+    "codes": "B4.2.2.1.1",
+    "source_codes": "B4.2.2.1.1",
+    "mapping_note": "Direct indicator match; function vocabulary supports observation and labelling.",
+    "page": 24
+  },
+  {
+    "grade": 4,
+    "week": 12,
+    "title": "Seeds and germination",
+    "codes": "B4.2.2.1.2",
+    "source_codes": "B4.2.2.1.2",
+    "mapping_note": "Direct indicator match. Germination conditions are distinguished from the later needs of an established green seedling.",
+    "page": 24
+  },
+  {
+    "title": "Growth, sensitivity, respiration and excretion",
+    "codes": "B5.1.1.1.1",
+    "page": 26,
+    "week": 1,
+    "grade": 5,
+    "mapping_note": "Matches the supplied Week 1 indicator.",
+    "source_codes": "B5.1.1.1.1"
+  },
+  {
+    "grade": 5,
+    "week": 2,
+    "title": "Living, dead and never-alive things",
+    "codes": "B5.1.1.2.1",
+    "source_codes": "B5.1.1.2.1",
+    "mapping_note": "Direct indicator match; dormant seeds are distinguished from dead material.",
+    "page": 26
+  },
+  {
+    "grade": 5,
+    "week": 3,
+    "title": "Classifying materials and justifying their uses",
+    "codes": "B5.1.2.1.1",
+    "source_codes": "B5.1.2.1.1",
+    "mapping_note": "Direct indicator match. Core property explanations and practice are shared with B4’s introductory editorial unit; B5 activity demands justified comparisons.",
+    "page": 26
+  },
+  {
+    "grade": 5,
+    "week": 4,
+    "title": "Reversible and irreversible changes",
+    "codes": "B5.1.2.2.1",
+    "source_codes": "B5.1.2.2.1",
+    "mapping_note": "Direct indicator match. Reversibility is discussed under ordinary classroom conditions; not every irreversible change is chemical.",
+    "page": 26
+  },
+  {
+    "grade": 5,
+    "week": 5,
+    "title": "Forming and separating mixtures",
+    "codes": "B5.1.2.3.1",
+    "source_codes": "B5.1.2.3.1",
+    "mapping_note": "Direct indicator match; separation is selected according to component properties.",
+    "page": 26
+  },
+  {
+    "grade": 5,
+    "week": 6,
+    "title": "How day and night are formed",
+    "codes": "B5.2.1.1.1",
+    "source_codes": "B5.2.1.1.1",
+    "mapping_note": "Direct indicator match; model limitations are explicitly taught.",
+    "page": 26
+  },
+  {
+    "grade": 5,
+    "week": 7,
+    "title": "Benefits of the Sun to Earth",
+    "codes": "B5.2.1.2.1",
+    "source_codes": "B5.2.1.2.1",
+    "mapping_note": "Direct indicator match; solar benefits are taught alongside safe exposure.",
+    "page": 26
+  },
+  {
+    "grade": 5,
+    "week": 8,
+    "title": "Evaporation, condensation and cloud formation",
+    "codes": "B5.2.1.3.1–2",
+    "source_codes": "B5.2.1.3.1–2",
+    "mapping_note": "Direct indicator match; clouds are tiny droplets or ice crystals, not simply invisible water vapour.",
+    "page": 26
+  },
+  {
+    "grade": 5,
+    "week": 9,
+    "title": "Carbon dioxide: uses and effects",
+    "codes": "B5.2.1.4.1",
+    "source_codes": "B5.2.1.4.1",
+    "mapping_note": "Direct indicator match; distinguish carbon dioxide from carbon monoxide and avoid unsafe gas demonstrations.",
+    "page": 26
+  },
+  {
+    "grade": 5,
+    "week": 10,
+    "title": "Protecting water and keeping air cleaner",
+    "codes": "B5.2.1.5.1–2",
+    "source_codes": "B5.2.1.5.1–2",
+    "mapping_note": "Direct indicator match; community actions are taught without unsafe field sampling.",
+    "page": 26
+  },
+  {
+    "grade": 5,
+    "week": 11,
+    "title": "How plant structures suit their functions",
+    "codes": "B5.2.2.1.1",
+    "source_codes": "B5.2.2.1.1",
+    "mapping_note": "Direct indicator match; this grade emphasises structure–function relationships rather than labels alone.",
+    "page": 26
+  },
+  {
+    "grade": 5,
+    "week": 12,
+    "title": "Comparing bean and maize germination",
+    "codes": "B5.2.2.1.2",
+    "source_codes": "B5.2.2.1.2",
+    "mapping_note": "Direct indicator match. Common bean and maize observations are used without generalising to every bean species or every germination pattern.",
+    "page": 26
+  }
+]

@@ -1,0 +1,44 @@
+{
+  "batch": 2,
+  "scope": "Science B4 and B5, Weeks 1–12 and both tests; overall original request still incomplete",
+  "word_documents": 9,
+  "weekly_units": 24,
+  "new_weekly_units_since_batch_1": 22,
+  "week_1_units_reincluded": 2,
+  "standalone_mindmaps": 24,
+  "embedded_mindmaps": 24,
+  "weekly_mcqs": 480,
+  "weekly_three_part_questions": 240,
+  "test_papers": 4,
+  "test_mcqs": 60,
+  "test_three_part_questions": 60,
+  "total_mcqs": 540,
+  "total_three_part_questions": 300,
+  "total_structured_subparts": 900,
+  "answer_position_distribution": {
+    "B": 146,
+    "D": 134,
+    "C": 139,
+    "A": 121
+  },
+  "checks_passed": [
+    "DOCX ZIP integrity",
+    "Required weekly and test counts",
+    "Four distinct MCQ alternatives and one keyed answer",
+    "MCQ key letters match options",
+    "No duplicated MCQ stems within a weekly bank",
+    "No duplicate MCQ items within a test paper",
+    "Test source weeks within declared scope",
+    "Correct 30-question test numbering and 45 subparts",
+    "Expected structured-question marks",
+    "Separate teacher keys",
+    "24 embedded maps and 24 valid PNGs"
+  ],
+  "review_limits": [
+    "No full Word pagination render",
+    "No independent teacher or scientific sign-off",
+    "B4 mapping interpretations require teacher confirmation",
+    "Tests draw on weekly banks and are not secure unseen papers",
+    "Visual spot checks covered B4 Week 10 and B5 Week 12 maps"
+  ]
+}
