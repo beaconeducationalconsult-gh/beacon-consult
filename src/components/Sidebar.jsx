@@ -45,6 +45,7 @@ const GROUPS = [
       { to: '/portal/plans', label: 'Lesson plans', icon: 'plans' },
       { to: '/portal/questions', label: 'Question bank', icon: 'questions' },
       { to: '/portal/questions/exam', label: 'Exam builder', icon: 'questions' },
+      { to: '/portal/questions/bece', label: 'BECE mock (Maths)', icon: 'questions' },
       { to: '/portal/models', label: 'Teaching models', icon: 'slides' },
     ],
   },

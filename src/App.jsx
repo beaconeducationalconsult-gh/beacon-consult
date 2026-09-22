@@ -35,6 +35,7 @@ const LessonPlanForm = lazy(() => import('./pages/LessonPlanForm'))
 const LessonPlanView = lazy(() => import('./pages/LessonPlanView'))
 const QuestionBank = lazy(() => import('./pages/QuestionBank'))
 const ExamBuilder = lazy(() => import('./pages/ExamBuilder'))
+const BeceMockPage = lazy(() => import('./pages/BeceMockPage'))
 const QuestionForm = lazy(() => import('./pages/QuestionForm'))
 const QuestionGenerator = lazy(() => import('./pages/QuestionGenerator'))
 const QuizMaker = lazy(() => import('./pages/QuizMaker'))
@@ -161,6 +162,7 @@ export default function App() {
         <Route path="questions" element={<QuestionBank />} />
         <Route path="questions/new" element={<QuestionForm />} />
         <Route path="questions/exam" element={<ExamBuilder />} />
+        <Route path="questions/bece" element={<BeceMockPage />} />
         <Route path="questions/generate" element={<QuestionGenerator />} />
         <Route path="questions/quiz" element={<QuizMaker />} />
         <Route path="questions/:questionId/edit" element={<QuestionForm />} />

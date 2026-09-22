@@ -1,4 +1,4 @@
-.PHONY: install inventory audit audit-l2 check check-scripts bundle-size bundle-check books-rollout books-generate books-publish deploy-storage questions build-questions generate-questions bundle-hash verify-deploy deploy-check preflight dev build lint test test-rules preview deploy-rules books book-skeleton boot-check list-modules build-curriculum validate-curriculum generate-schemes generate-records package-books
+.PHONY: install inventory audit audit-l2 check check-scripts bundle-size bundle-check books-rollout books-generate books-publish deploy-storage questions build-questions generate-questions bundle-hash verify-deploy deploy-check preflight dev build lint test test-rules preview deploy-rules books book-skeleton build-curriculum validate-curriculum generate-schemes generate-records package-books
 
 # ── Frontend (React + Vite + Yarn 4) ────────────────────────────────────────
 # The portal lives at the repository root. Node 22+ and Yarn 4 are required:
@@ -93,11 +93,10 @@ inventory:
 	PYTHONPATH=. python scripts/build_inventory.py
 
 # ── Kernel / module health (retired NCOS app — reference only) ──────────────
-boot-check:
-	PYTHONPATH=. python tools/ncosctl.py boot-check
-
-list-modules:
-	PYTHONPATH=. python tools/ncosctl.py list-modules
+# The old `boot-check` / `list-modules` targets died with the 2026-09-17 fold-out:
+# they called `tools/ncosctl.py`, which moved to `legacy/tools/` with the app it
+# drives (and nothing in the portal imports it — see docs/TODO.md's retirement
+# note). `make audit`'s LEGACY block is the kernel-vs-dataset reference now.
 
 # ── Curriculum bundle (public/curriculum/) ──────────────────────────────────
 # Builds the per-grade static JSON bundle the portal reads offline.

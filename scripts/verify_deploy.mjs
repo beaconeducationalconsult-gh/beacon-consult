@@ -17,7 +17,9 @@
  * What it proves, in the order the answers matter:
  *
  *   1. the checkout is what will be built  (branch, HEAD, uncommitted work)
- *   2. the local Firebase config is complete (.env.local, six VITE_FIREBASE_*)
+ *   2. the local Firebase config resolves   (an absent .env.local is the normal
+ *      case since the six values became committed source — src/firebaseConfig.js
+ *      is the base; an override file that exists must be complete)
  *   3. a build carries it                  (dist/build-info.json)
  *   4. **the deploy** has it               (GET /build-info.json — Vercel has its
  *                                           own variables; a green local build
@@ -163,13 +165,38 @@ function readEnvFile(path) {
   return { env, encoding, lines: lines.filter((line) => line.trim()).length }
 }
 
+/**
+ * The project id the committed config carries — the base every build has since
+ * P0-1 moved the six values into `src/firebaseConfig.js`. The values are public
+ * client identifiers, so reading the file is safe; a regex rather than an
+ * import, because this script must run with nothing but Node. `null` when the
+ * file is absent or has no readable projectId.
+ */
+function committedConfigProjectId() {
+  try {
+    const text = readFileSync(join(ROOT, 'src', 'firebaseConfig.js'), 'utf8')
+    return text.match(/projectId\s*:\s*['"]([^'"]+)['"]/)?.[1] || null
+  } catch {
+    return null
+  }
+}
+
 step('2. The local Firebase config (.env.local)')
 // `-EnvFile` exists so the reader can be pointed at a fixture; the deploy
 // machine always wants the default.
 const envPath = value('-EnvFile') || value('--env-file') || join(ROOT, '.env.local')
 const env = {}
+const committedProjectId = committedConfigProjectId()
 if (!existsSync(envPath)) {
-  bad('.env.local is missing — copy .env.example to .env.local and fill in the six values from the Firebase console (Project settings → Your apps → Web app)')
+  // Since P0-1 moved the six values into committed source, `.env.local` is an
+  // optional override: a fresh clone has none and still builds a complete app
+  // (dist/build-info.json says `configSource: "committed"`). Only a checkout
+  // that has lost the committed config too is actually broken.
+  if (committedProjectId) {
+    ok(`.env.local is absent — the committed config (src/firebaseConfig.js) supplies the six values (project ${committedProjectId})`)
+  } else {
+    bad('.env.local is missing and the committed config (src/firebaseConfig.js) could not be read — copy .env.example to .env.local and fill in the six values from the Firebase console (Project settings → Your apps → Web app)')
+  }
 } else {
   const parsed = readEnvFile(envPath)
   const { encoding, lines } = parsed
@@ -199,9 +226,11 @@ if (!existsSync(envPath)) {
  * follows `.firebaserc`: point that at one project while the app talks to
  * another and every publish is a no-op on the project that matters, while the
  * live one keeps whatever rules it has — an open test-mode database, if the
- * project is new.
+ * project is new. The app's project comes from `.env.local` when the override
+ * file exists, else from the committed config — so the cross-check runs on a
+ * fresh clone too, which is exactly where a wrong `.firebaserc` would hide.
  */
-const projectInPlay = env.VITE_FIREBASE_PROJECT_ID
+const projectInPlay = env.VITE_FIREBASE_PROJECT_ID || committedProjectId
 let pinnedProject = null
 try {
   pinnedProject = JSON.parse(readFileSync(join(ROOT, '.firebaserc'), 'utf8'))?.projects?.default || null
@@ -281,9 +310,9 @@ if (!URL_ARG) {
         bad(`the deploy was built WITHOUT Firebase config (missing: ${(remote.missingEnv || []).join(', ')}) — set all six VITE_FIREBASE_* values in Vercel → Settings → Environment Variables for BOTH Production and Preview, then redeploy`)
       }
       if (remote.projectId && projectInPlay && remote.projectId !== projectInPlay) {
-        bad(`the deploy was built for project \`${remote.projectId}\`, but this checkout's .env.local `
-          + `configures \`${projectInPlay}\` — the deployment and your local app are talking to `
-          + 'different Firebase projects')
+        bad(`the deploy was built for project \`${remote.projectId}\`, but this checkout `
+          + `configures \`${projectInPlay}\` (.env.local or the committed config) — the deployment `
+          + 'and your local app are talking to different Firebase projects')
       }
       if (remote.bundleHash && local?.bundleHash && remote.bundleHash !== local.bundleHash) {
         bad(`the deploy serves curriculum ${remote.bundleHash} but this checkout builds ${local.bundleHash} — the curriculum changed since the last deploy`)
