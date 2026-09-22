@@ -143,6 +143,15 @@ is what the step is actually testing.
 | 19d | Drop a question, then export **student** and **teacher** PDFs | The paper recomposes without it, and both PDFs download — the teacher copy carries the marking scheme | Composition is pure, so the preview cannot disagree with the PDF |
 | 19e | **Save to library**, then open **My library** *(needs Storage — skip if the project has no bucket; the page says why)* | The paper is there and opens | `generated_documents` + Storage, the same path as 26a |
 
+### The BECE mock (P3-6 — the newest page)
+
+| # | Step | Passes when | Why |
+|---|---|---|---|
+| 20a | `/portal/questions/bece` — nothing to select | The composition card appears on its own: Paper 1 **40 questions · 40 marks**, Paper 2 **6 of 15 marks · answer 4**, total **100** | The page composes from the whole served JHS bank — no grade, term or subject picker, because the BECE examines B7–B9 together |
+| 20b | Open **Paper 2 as composed** | Every question's parts sum to exactly 15, lettered (a), (b)… easiest first, and no prompt appears twice anywhere in the mock | A 15-mark question is composed from the bank's 1–5-mark items; a reused item would print the same question against itself |
+| 20c | Export **student** and **teacher** PDFs | Paper 1's rubric says answer ALL; Paper 2's says answer four, with marks in the margin; the teacher copy carries the marking scheme for both papers | The sitting counts 4 × 15 = 60 of the 90 the sheet prints — the rubric is where a teacher would notice if that ever drifted |
+| 20d | **Save to library** *(needs Storage — same caveat as 19e)* | The mock is in My library and opens | Same path as 26a |
+
 ### Notes, progress, calendar
 
 | # | Step | Passes when | Why |
