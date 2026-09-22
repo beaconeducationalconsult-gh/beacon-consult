@@ -33,17 +33,17 @@
     "Expected structured-question marks",
     "Separate teacher keys",
     "24 embedded maps and 24 valid PNGs",
-    "All 12 embedded B4 illustrations match standalone PNG hashes"
+    "All 24 embedded illustrations match standalone PNG hashes and fit image bounds"
   ],
   "review_limits": [
     "No full Word pagination render",
     "No independent teacher or scientific sign-off",
     "B4 mapping interpretations require teacher confirmation",
     "Tests draw on weekly banks and are not secure unseen papers",
-    "All 12 revised B4 illustrated maps visually inspected; B5 maps remain original text-based maps"
+    "All 24 B4/B5 illustrated maps visually inspected; no independent sign-off"
   ],
   "illustrated_maps": {
     "B4_Science": 12,
-    "B5_Science": 0
+    "B5_Science": 12
   }
 }

@@ -7,6 +7,12 @@ import build as layout
 sys.path.insert(0,str(Path(__file__).resolve().parent))
 from content import LESSONS
 from docx.shared import Inches
+from PIL import Image
+
+def map_width(path):
+    with Image.open(path) as image:
+        return Inches(min(6.9, 7 * image.width / image.height))
+
 OUT=ROOT/'files';OUT.mkdir(exist_ok=True)
 records=[]
 
@@ -63,7 +69,7 @@ def build_grade(g):
     for w in range(1,13):
         m=LESSONS[(g,w)];qs=mcq_bank(g,w);es=weekly_essays(m)
         path=folder/'Mind-maps'/f'B{g}_Science_Week_{w:02d}.png'
-        if g == 4 and (ROOT/'source/illustrated_maps.json').exists():
+        if (ROOT/'source'/('illustrated_maps.json' if g==4 else 'illustrated_maps_b5.json')).exists():
             assert path.exists(), f'Missing reviewed illustration: {path}'
         else:
             layout.mindmap(path,m['title'],g,'Science',w,[(c['answer'],c['fact']+'.') for c in m['cards']],f'Sequence: BASIC {g} Science p{m["page"]}. See source crosswalk for code interpretations. Teacher-review draft.')
@@ -84,7 +90,7 @@ def build_grade(g):
         d.add_heading('Study notes',1)
         for c in m['cards']:d.add_heading(c['answer'],2);para(d,c['fact']+'.');para(d,c['reason'])
         para(d,'Independent study: reconstruct the map from memory, give a fresh example for three branches and answer one explanation question without copying the notes. Correct errors after discussing the reason with a teacher or partner.')
-        d.add_page_break();d.add_heading(f'Week {w} — Visual mind-map',1);d.add_picture(str(path),width=Inches(6.9));para(d,'Read each branch, explain the link to the central topic, and add your own example. The separate high-resolution PNG supports projection or larger printing. Concept-map connections do not imply every process occurs in a single linear order.')
+        d.add_page_break();d.add_heading(f'Week {w} — Visual mind-map',1);d.add_picture(str(path),width=map_width(path));para(d,'Read each branch, explain the link to the central topic, and add your own example. The separate high-resolution PNG supports projection or larger printing. Concept-map connections do not imply every process occurs in a single linear order.')
         d.add_page_break();d.add_heading(f'Week {w} — Practice and assessment',1);layout.put_mcq(d,qs);put_week_essays(d,es)
         k.add_page_break();k.add_heading(f'Week {w} — Answers',1);put_key(k,qs,es)
         records.append(dict(grade=g,subject='Science',week=w,title=m['title'],mcq=qs,essays=es,map=str(path.relative_to(OUT))))
@@ -136,14 +142,14 @@ def guide():
     para(d,'Practical activities are low-risk or model-based. Never drink classroom-treated water, look directly at the Sun, taste experimental seeds, handle unknown chemicals, or collect hazardous waste. Heating, disinfection, gases and fire equipment are adult-controlled or represented only by diagrams. Follow school safety guidance. Recorded results must be actual observations, not invented values.')
     para(d,'Automated checks verify DOCX package integrity, counts, four distinct options and one keyed answer, map embedding, and test numbering. They do not independently validate every scientific statement, teaching suitability, accessibility or Word pagination. See QUALITY_CHECKS.json for the exact check results. All documents remain teacher-review drafts.')
     if (ROOT/'source/illustrated_maps.json').exists():
-        d.add_heading('Illustrated-map revision — B4 Science',1)
-        para(d,'B4 Science Weeks 1–12 have illustrated maps embedded in Word and supplied as PNGs. B5 maps remain text-based pending revision. Batch 1 is unchanged. AI-generated artwork with editorial corrections requires teacher review.')
+        d.add_heading('Illustrated-map revision — B4 and B5 Science',1)
+        para(d,'B4 and B5 Science Weeks 1–12 have illustrated maps embedded in Word and supplied as PNGs. Batch 1 is unchanged. AI-generated artwork with editorial corrections requires teacher review.')
     save(d,OUT/'START_HERE_Batch_2_Science_B4_B5.docx')
     (OUT/'README.txt').write_text('BATCH 2 — SCIENCE B4 AND B5\n\nIncludes Weeks 1–12, both tests, separate answers and 24 mind-maps. Week 1 is repeated from Batch 1 for self-contained books.\n\nNine Word documents. Open START_HERE_Batch_2_Science_B4_B5.docx.\n\nOutstanding overall: Science B6–B8 later weeks and both tests; Computing B4–B8 later weeks and both tests.\n\nTeacher-review drafts. Read source crosswalk and safety notes before use.\n',encoding='utf-8')
 
     if (ROOT/'source/illustrated_maps.json').exists():
         with (OUT/'README.txt').open('a',encoding='utf-8') as f:
-            f.write('\nILLUSTRATED REVISION\n'+'B4 Science Weeks 1–12 have illustrated maps embedded in Word and supplied as PNGs. B5 maps remain text-based pending revision. Batch 1 is unchanged. AI-generated artwork with editorial corrections requires teacher review.'+'\n')
+            f.write('\nILLUSTRATED REVISION\n'+'B4 and B5 Science Weeks 1–12 have illustrated maps embedded in Word and supplied as PNGs. Batch 1 is unchanged. AI-generated artwork with editorial corrections requires teacher review.'+'\n')
 
 if __name__=='__main__':
     for g in (4,5):build_grade(g);print(f'Science B{g} complete: 12 weeks, 2 tests, answers.',flush=True)

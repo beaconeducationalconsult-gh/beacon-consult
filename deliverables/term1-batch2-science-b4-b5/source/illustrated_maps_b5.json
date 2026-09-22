@@ -1,0 +1,117 @@
+{
+  "grade": 5,
+  "subject": "Science",
+  "weeks": [
+    {
+      "week": 1,
+      "path": "B5/Science/Mind-maps/B5_Science_Week_01.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "86cb4a5c80f00b785d3bf327ef574c838ed0cfb1d56f47472a9c26e1695b5cf0"
+    },
+    {
+      "week": 2,
+      "path": "B5/Science/Mind-maps/B5_Science_Week_02.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "a411081fcef69ff4a3f7e45e87b58fd214623fedd89c51d33a1c98e0ce6e1345"
+    },
+    {
+      "week": 3,
+      "path": "B5/Science/Mind-maps/B5_Science_Week_03.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "4ad4a6d6d5ac8f44829a528433d8c762f635431c30d64f7ff0a6132b02b748aa"
+    },
+    {
+      "week": 4,
+      "path": "B5/Science/Mind-maps/B5_Science_Week_04.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "aacf3dceafed8d9f798437344c5ed0cf4435b6454b596bffc49031c4dc88f475"
+    },
+    {
+      "week": 5,
+      "path": "B5/Science/Mind-maps/B5_Science_Week_05.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "c91976af8c7962b890b67524fe6f72d1f9fd88705ac426eea4757a0ff73bec50"
+    },
+    {
+      "week": 6,
+      "path": "B5/Science/Mind-maps/B5_Science_Week_06.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "sha256": "1f2694dd1b4d319d232dea96a9945cbeb16f8b72a75d46b8c847c05f241d1dda"
+    },
+    {
+      "week": 7,
+      "path": "B5/Science/Mind-maps/B5_Science_Week_07.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "268b19617218e0a6875fad786068dd37cae6edb4067aa6ce198f62c9c8f7b15d"
+    },
+    {
+      "week": 8,
+      "path": "B5/Science/Mind-maps/B5_Science_Week_08.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "006e9b4bfceb3543896ef50af04ce557b39df5b99f6f8b09f9c3f866dd5b6522"
+    },
+    {
+      "week": 9,
+      "path": "B5/Science/Mind-maps/B5_Science_Week_09.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "5b9ab1b0807c806b80e95addf696d9f8dc896006d8ad15669cfd98fcaae0ca47"
+    },
+    {
+      "week": 10,
+      "path": "B5/Science/Mind-maps/B5_Science_Week_10.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "b30f04c7cc474f9ba7bd5bdd7f732ae7fa85859d4be65afba5642ec6aaa83ba0"
+    },
+    {
+      "week": 11,
+      "path": "B5/Science/Mind-maps/B5_Science_Week_11.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "b8ef7984bb984941664f837ad5f3d78755b7421d76dabff794fe6ed55f1a16de"
+    },
+    {
+      "week": 12,
+      "path": "B5/Science/Mind-maps/B5_Science_Week_12.png",
+      "size": [
+        1264,
+        843
+      ],
+      "sha256": "10ff4c07ea4329173179502b8e6101fca9ac73ea2fc172b2679f250a3bd233f9"
+    }
+  ],
+  "status": "AI-generated illustrations with editorial corrections; teacher-review draft",
+  "provenance": "Weeks 1\u201310 generated for B5 topics; Week 11 reuses reviewed plant-parts artwork with B5 heading; Week 12 is the approved B5 bean/maize preview.",
+  "review": "All twelve visually inspected. No independent scientific sign-off."
+}

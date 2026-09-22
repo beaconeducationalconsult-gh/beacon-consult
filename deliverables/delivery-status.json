@@ -19,16 +19,16 @@
   ],
   "note": "Teacher-review drafts; full original request incomplete.",
   "illustrated_map_revision": {
-    "status": "B4 Science Weeks 1\u201312 integrated into Batch 2 Word book and ZIP",
+    "status": "B4 and B5 Science Weeks 1\u201312 integrated into Batch 2 Word books and ZIP",
     "complete": [
-      "B4 Science Weeks 1\u201312 in Batch 2"
+      "B4 Science Weeks 1\u201312 in Batch 2",
+      "B5 Science Weeks 1\u201312 in Batch 2"
     ],
     "pending": [
-      "B5 Science full illustrated rollout",
       "Other grades and subjects illustrated rollout"
     ],
     "preview_folder": "illustrated-map-previews",
-    "older_batch_note": "Batch 1 unchanged; use Batch 2 for illustrated B4 Science",
+    "older_batch_note": "Batch 1 unchanged; use Batch 2 for illustrated B4 and B5 Science",
     "review": "AI-generated illustrations with editorial corrections; teacher-review drafts"
   }
 }
