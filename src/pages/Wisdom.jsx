@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react'
 import { useAuth } from '../context/AuthContext'
 import { useToast } from '../context/ToastContext'
 import { useQuotes, useTheories, useQuoteLikes, toggleQuoteLike, quoteOfTheDay, theoryOfTheWeek } from '../hooks/useWisdom'
+import { Tabs } from '../ui'
 
 export default function Wisdom() {
   const { user } = useAuth()
@@ -44,23 +45,25 @@ export default function Wisdom() {
             type="button"
             onClick={() => like(daily)}
             aria-pressed={Boolean(likes[daily.id]?.likedBy?.includes(user.uid))}
+            aria-label={`${likes[daily.id]?.likedBy?.includes(user.uid) ? 'Unlike' : 'Like'} today's quote (${likes[daily.id]?.count || 0} likes)`}
             className={`mt-5 inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-xs font-semibold ${
               likes[daily.id]?.likedBy?.includes(user.uid) ? 'bg-brand-600 text-white' : 'bg-surface-2 text-muted hover:bg-line'
             }`}
           >
-            ♥ {likes[daily.id]?.count || 0}
+            <span aria-hidden="true">♥</span> {likes[daily.id]?.count || 0}
           </button>
         </blockquote>
       )}
 
-      <div className="mt-8 flex gap-1 border-b border-line-2" role="tablist">
-        <button type="button" role="tab" aria-selected={tab === 'quotes'} onClick={() => setTab('quotes')} className={`-mb-px border-b-2 px-4 py-2.5 text-sm font-semibold ${tab === 'quotes' ? 'border-brand-600 text-brand-700 dark:text-brand-300' : 'border-transparent text-muted'}`}>
-          Quotes & proverbs
-        </button>
-        <button type="button" role="tab" aria-selected={tab === 'theories'} onClick={() => setTab('theories')} className={`-mb-px border-b-2 px-4 py-2.5 text-sm font-semibold ${tab === 'theories' ? 'border-brand-600 text-brand-700 dark:text-brand-300' : 'border-transparent text-muted'}`}>
-          Teaching theories
-        </button>
-      </div>
+      <Tabs
+        className="mt-8"
+        tabs={[
+          { value: 'quotes', label: 'Quotes & proverbs' },
+          { value: 'theories', label: 'Teaching theories' },
+        ]}
+        active={tab}
+        onChange={setTab}
+      />
 
       {tab === 'quotes' ? (
         <>
@@ -84,9 +87,10 @@ export default function Wisdom() {
                     type="button"
                     onClick={() => like(quote)}
                     aria-pressed={liked}
+                    aria-label={`${liked ? 'Unlike' : 'Like'} quote by ${quote.author} (${likes[quote.id]?.count || 0} likes)`}
                     className={`shrink-0 rounded-full px-3 py-1.5 text-xs font-semibold ${liked ? 'bg-brand-600 text-white' : 'bg-surface-2 text-muted hover:bg-line'}`}
                   >
-                    ♥ {likes[quote.id]?.count || 0}
+                    <span aria-hidden="true">♥</span> {likes[quote.id]?.count || 0}
                   </button>
                 </li>
               )

@@ -175,12 +175,14 @@ export default function QuestionGenerator() {
             <textarea
               rows={2}
               className="input mt-3"
+              aria-label={`Question ${index + 1} prompt`}
               value={draft.prompt}
               onChange={(e) => updateDraft(index, { prompt: e.target.value })}
             />
             <input
               className="input mt-2"
               placeholder="Answer / marking notes"
+              aria-label={`Question ${index + 1} answer and marking notes`}
               value={draft.answer}
               onChange={(e) => updateDraft(index, { answer: e.target.value })}
             />

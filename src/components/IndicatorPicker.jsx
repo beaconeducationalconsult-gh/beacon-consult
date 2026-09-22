@@ -94,6 +94,7 @@ export default function IndicatorPicker({ grade, subjectId, selected = [], onCha
         type="search"
         className="input"
         placeholder={`Search ${gradeLabel(grade)} indicators by code, strand or text…`}
+        aria-label={`Search ${gradeLabel(grade)} indicators by code, strand or text`}
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />

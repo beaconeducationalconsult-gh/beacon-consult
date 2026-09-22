@@ -138,6 +138,7 @@ export default function Search() {
           autoFocus
           className="input min-w-56 flex-1"
           placeholder="Search indicators, plans, questions, notes…"
+          aria-label="Search indicators, plans, questions and notes"
           value={term}
           onChange={(e) => setTerm(e.target.value)}
         />

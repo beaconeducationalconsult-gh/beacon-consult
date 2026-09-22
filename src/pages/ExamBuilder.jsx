@@ -59,7 +59,7 @@ export default function ExamBuilder() {
   // need another composite index, and a teacher building a paper can page for
   // the questions they want anyway.
   const {
-    rows: myQuestions, loading: loadingMine, hasMore, loadingMore, loadMore,
+    rows: myQuestions, loading: loadingMine, hasMore, loadingMore, loadMore, moreError,
   } = usePagedCollection('questions', { pageSize: 50 })
 
   const mine = useMemo(
@@ -300,8 +300,8 @@ export default function ExamBuilder() {
           )}
         </div>
 
-        {subjectId && hasMore && (
-          <LoadMore onClick={loadMore} loading={loadingMore} label="Load more of your questions" />
+        {subjectId && (
+          <LoadMore hasMore={hasMore} loading={loadingMore} error={moreError} onLoad={loadMore} loaded={myQuestions.length} />
         )}
       </div>
 

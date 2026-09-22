@@ -9,7 +9,7 @@ import SubjectSelect from '../components/SubjectSelect'
 import { GRADES, TERMS, gradeLabel } from '../lib/grades'
 import { buildLessonSlidesPptx, downloadLessonSlidesPptx } from '../lib/lessonSlidesPptx'
 import SaveToLibrary from '../components/SaveToLibrary'
-import { BackLink } from '../ui'
+import { BackLink, IconButton } from '../ui'
 import { suggestFilename } from '../lib/generatedDocs'
 
 const emptySlide = () => ({
@@ -188,8 +188,16 @@ export default function SlideLessonForm() {
           <div className="flex items-center justify-between">
             <p className="label-caps">Slide {index + 1}</p>
             <div className="flex gap-2">
-              <button type="button" className="btn-ghost px-2 py-1 text-xs" onClick={() => move(index, -1)} disabled={index === 0}>↑</button>
-              <button type="button" className="btn-ghost px-2 py-1 text-xs" onClick={() => move(index, 1)} disabled={index === (deck.slides?.length || 0) - 1}>↓</button>
+              <IconButton size="sm" label={`Move slide ${index + 1} up`} onClick={() => move(index, -1)} disabled={index === 0}>
+                <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" className="h-4 w-4">
+                  <path d="M10 15V5m0 0-4 4m4-4 4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </IconButton>
+              <IconButton size="sm" label={`Move slide ${index + 1} down`} onClick={() => move(index, 1)} disabled={index === (deck.slides?.length || 0) - 1}>
+                <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" className="h-4 w-4">
+                  <path d="M10 5v10m0 0 4-4m-4 4-4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </IconButton>
               <button
                 type="button"
                 className="btn-ghost px-2 py-1 text-xs text-danger-600 dark:text-danger-500"

@@ -26,7 +26,7 @@ export default function Stepper({ steps, current = 0, onStep }) {
               </span>
               {step}
             </button>
-            {index < steps.length - 1 && <span className="text-subtle">→</span>}
+            {index < steps.length - 1 && <span className="text-subtle" aria-hidden="true">→</span>}
           </li>
         )
       })}

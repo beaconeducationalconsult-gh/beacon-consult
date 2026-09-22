@@ -286,7 +286,7 @@ export default function QuestionBank() {
                 className="mt-1 h-4 w-4 rounded border-line-2 text-brand-600"
                 checked={selected.includes(question.id)}
                 onChange={() => toggle(question)}
-                aria-label="Select question for the exam paper"
+                aria-label={`Select "${question.prompt || question.question || question.id}" for the exam paper`}
               />
               <div className="min-w-0 flex-1">
                 <div className="flex flex-wrap items-center gap-2">

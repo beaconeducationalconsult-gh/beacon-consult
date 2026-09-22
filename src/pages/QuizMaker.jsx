@@ -140,7 +140,7 @@ export default function QuizMaker() {
               className="mt-1 h-4 w-4 rounded border-line-2 text-brand-600"
               checked={selected.includes(question.id)}
               onChange={() => toggle(question.id)}
-              aria-label="Include in quiz"
+              aria-label={`Include "${question.prompt || question.question || question.id}" in quiz`}
             />
             <div className="min-w-0 flex-1">
               <p className="text-sm text-heading">{question.prompt || question.question}</p>

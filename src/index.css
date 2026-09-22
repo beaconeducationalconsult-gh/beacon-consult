@@ -208,3 +208,21 @@
 @utility link {
   @apply font-medium text-primary underline-offset-4 hover:underline;
 }
+
+/* ── Reduced motion ────────────────────────────────────────────────────────
+   Users who ask their OS to minimise motion get no transforms, near-instant
+   transitions, and no decorative animations. Applied last so it wins over the
+   utility/component motion above. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .card-hover:hover {
+    box-shadow: var(--shadow-card);
+  }
+}

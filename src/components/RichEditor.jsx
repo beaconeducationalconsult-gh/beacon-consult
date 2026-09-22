@@ -25,7 +25,7 @@ function ToolbarButton({ onClick, active, label, children }) {
 }
 
 /** Outputs HTML — that is what `articles.content` stores. See docs/data-model.md. */
-export default function RichEditor({ value = '', onChange, placeholder = 'Write…', limit = 20000 }) {
+export default function RichEditor({ value = '', onChange, placeholder = 'Write…', label, limit = 20000 }) {
   const editor = useEditor({
     extensions: [
       StarterKit.configure({ heading: { levels: [2, 3] } }),
@@ -37,7 +37,14 @@ export default function RichEditor({ value = '', onChange, placeholder = 'Write�
     ],
     content: value,
     onUpdate: ({ editor: instance }) => onChange?.(instance.getHTML()),
-    editorProps: { attributes: { class: 'prose prose-slate dark:prose-invert max-w-none focus:outline-none min-h-[16rem] px-4 py-3' } },
+    editorProps: {
+      attributes: {
+        class: 'prose prose-slate dark:prose-invert max-w-none focus:outline-none min-h-[16rem] px-4 py-3',
+        role: 'textbox',
+        'aria-multiline': 'true',
+        'aria-label': label || placeholder,
+      },
+    },
   })
 
   // Keep the editor in step when the parent loads a document after mount.

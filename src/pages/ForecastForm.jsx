@@ -204,12 +204,12 @@ export default function ForecastForm() {
                 <button type="button" className="btn-ghost px-2 py-1 text-xs" onClick={() => removeRow(index)}>Remove</button>
               </div>
               <div className="grid gap-3 sm:grid-cols-2">
-                <input className="input" placeholder="Strand" value={row.strandName || ''} onChange={(e) => updateRow(index, { strandName: e.target.value })} />
-                <input className="input" placeholder="Sub-strand" value={row.subStrandName || ''} onChange={(e) => updateRow(index, { subStrandName: e.target.value })} />
+                <input className="input" placeholder="Strand" aria-label={`Week ${row.week} strand`} value={row.strandName || ''} onChange={(e) => updateRow(index, { strandName: e.target.value })} />
+                <input className="input" placeholder="Sub-strand" aria-label={`Week ${row.week} sub-strand`} value={row.subStrandName || ''} onChange={(e) => updateRow(index, { subStrandName: e.target.value })} />
               </div>
-              <input className="input mt-3" placeholder="Content standard" value={row.contentStandard || ''} onChange={(e) => updateRow(index, { contentStandard: e.target.value })} />
-              <input className="input mt-3 font-mono text-xs" placeholder="Indicator codes, comma separated" value={row.indicators ?? (row.indicatorCodes || []).join(', ')} onChange={(e) => updateRow(index, { indicators: e.target.value })} />
-              <input className="input mt-3" placeholder="Teaching & learning materials" value={row.resources || ''} onChange={(e) => updateRow(index, { resources: e.target.value })} />
+              <input className="input mt-3" placeholder="Content standard" aria-label={`Week ${row.week} content standard`} value={row.contentStandard || ''} onChange={(e) => updateRow(index, { contentStandard: e.target.value })} />
+              <input className="input mt-3 font-mono text-xs" placeholder="Indicator codes, comma separated" aria-label={`Week ${row.week} indicator codes, comma separated`} value={row.indicators ?? (row.indicatorCodes || []).join(', ')} onChange={(e) => updateRow(index, { indicators: e.target.value })} />
+              <input className="input mt-3" placeholder="Teaching & learning materials" aria-label={`Week ${row.week} teaching and learning materials`} value={row.resources || ''} onChange={(e) => updateRow(index, { resources: e.target.value })} />
             </div>
           ))}
           <div className="flex flex-wrap gap-3">
